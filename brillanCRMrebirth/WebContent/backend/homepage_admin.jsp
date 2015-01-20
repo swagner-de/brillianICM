@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<%@ page import="org.dhbw.imbit11.ApplicationConstants"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.ArrayList"%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title><%=ApplicationConstants.PAGETITLE_ADMIN%></title>
+<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="images/favicons/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="images/favicons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+<link type="text/css" rel="stylesheet" href="css/master.css" />
+<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="js/master.js"></script>
+</head>
+<body class="easyui-layout">
+	<div class="north" data-options="region:'north',border:false">
+		<div class="div-header window">
+			<a id="logout" class="easyui-linkbutton" data-options="plain:true"
+				onclick="window.location.href='LogoutUser'"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
+			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
+		</div>
+	</div>
+	<div class="center" data-options="region:'center'">
+		<h4>Lecturers</h4>
+		<table id="students" class="easyui-datagrid" style="width: 600px"
+			data-options="fitColumns:true,singleSelect:true">
+			<thead>
+				<tr>
+					<th data-options="field:'firstname',width:100,resizable:false">Firstname</th>
+					<th data-options="field:'lastname',width:100,resizable:false">Lastname</th>
+					<th data-options="field:'email',width:100,resizable:false">Email</th>
+					<th data-options="field:'delete',width:63,resizable:false"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+					if(request.getAttribute("professors")!=null){
+					@SuppressWarnings("unchecked")
+					ArrayList<ArrayList<String>> professors = (ArrayList<ArrayList<String>>)request.getAttribute("professors");
+					
+					java.util.ArrayList<java.util.ArrayList<String>> professors2 = professors;
+					if (professors.isEmpty()){
+						out.println("<p style='color: red'>There are currently no lecturers.</p>");
+					}
+					else{
+					}
+					for(java.util.ArrayList<String> row : professors){
+					out.println("<tr><td>");
+					out.println(row.get(0));
+					out.println("</td><td>");
+					out.println(row.get(1));
+					out.println("</td><td>");
+					out.println(row.get(2));
+					out.println("</td><td>");
+					out.println("<form action=\""+ application.getContextPath()+"/DeleteProfessor\" method=\"post\"><input class=\"deleteProfessor\" type=\"submit\" "+
+					"value=\"Delete\" hidden=\"hidden\"/><a class=\"easyui-linkbutton\" onclick=\"$(this).parent().parent().find('.deleteProfessor').trigger('click');\">Delete</a><input type=\"text\" name=\"delete_professor\" value=\""+ row.get(2) +"\" style=\"display:none\"/></form>");
+					out.println("</td></tr>");
+					}
+				}else{
+					out.println("<p style='color: red'>There are currently no professors.</p>");
+				}
+				%>
+			</tbody>
+		</table>
+		<br /><br />
+		<div>
+			<h4>New Lecturer</h4>
+			<form action="CreateUser" method="post">
+				<input type="text" name="role" maxlength="50" value="professor" style="display: none"/>				
+				<div class="formLabel">title</div>
+				<select name="gender" id="gender" size="1" required>
+					<option value="" disabled="disabled" selected="selected">Please select</option>
+					<option value="m">Mr.</option>
+					<option value="f">Mrs.</option>
+				</select><br /><br />
+				<div class="formLabel">first name</div>
+				<input type="text" name="firstname" maxlength="50" value="${firstname}" required /><br /><br />
+				<div class="formLabel">last name</div>
+				<input type="text" name="lastname" maxlength="50" value="${lastname}" required/><br /><br />
+				<div class="formLabel">email</div>
+				<input type="email" name="email" maxlength="50" value="${email}" required/><br /><br />
+				<div class="formLabel">password</div>
+				<input type="password" name="password" maxlength="50" required/><br /><br />
+				<div class="formLabel">repeat password</div>
+				<input type="password" name="password_repeat" maxlength="50" required /><br /><br />
+				<input id="createUser" type="submit" value="Create now!" hidden="hidden"></input>
+				<a class="easyui-linkbutton" onclick="$('#createUser').trigger('click')">Create Lecturer</a>
+				<p style="color: green">${success}</p>
+				<p style="color: red">${error}</p>
+			</form>
+		</div>
+		<div>
+			<h4>Change Password.</h4>
+			<form action="ResetPassword" method="post">				
+				<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
+				<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
+				<div class="formLabel">Password:</div>
+				<input type="password" name="password" maxlength="50"/><br /><br />
+				<div class="formLabel">Repeat Password:</div>
+				<input type="password" name="password_repeat" maxlength="50" /><br /><br />
+				<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
+				<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+			</form>
+		</div>
+		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('body').show();
+	$('#imprint').bind('click', function() {
+		showImprint();
+	});
+</script>
+</html>
