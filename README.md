@@ -2,6 +2,6 @@
 
 Wer ist wer mit seinem nickname?
 
-- sceiler - Yi mIn
+- sceiler - Yi Min
 - Illuminae - Erik
 - bensteUEM - Benedict
