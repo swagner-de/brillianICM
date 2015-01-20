@@ -1,1 +1,1 @@
-# brilliantCRM
+# brillianCRM
