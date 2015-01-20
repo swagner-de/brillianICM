@@ -6,3 +6,4 @@ Wer ist wer mit seinem nickname?
 - Illuminae - Erik
 - bensteUEM - Benedict
 - Sunacni - Frederik
+- oibchr - Oli
