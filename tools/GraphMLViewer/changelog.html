@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-US">
+<head>
+<title>yFiles GraphMLViewer 1.6 - Changelog</title>
+
+  <style type="text/css">
+
+    /*
+     * CSS1 stylesheet for DocBook-generated yFiles Developer's Guide.
+     */
+
+    a {
+      color: #AA5522;
+      font-weight: bold;
+    }
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
+    a:active,
+    a:focus,
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul ul a {
+      color: #AA5522;
+      font-weight: normal;
+    }
+
+    pre.programlisting,
+    pre.screen {
+      background: #E8E8E8;
+      border: 2px solid #C8C8C8;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    tt.code {
+      color: #0000C0;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    tt.classname {
+      color: #B000B0;
+      font-weight: bold;
+    }
+
+    body.book {
+    }
+
+    h1,
+    h4,
+    h5,
+    h6 {
+      font-family: sans-serif;
+    }
+
+    p {
+      padding-bottom: 0px;
+      padding-top: 0px;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    h2 {
+      font-size: 120%;
+      color: #4079EA;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    h3 {
+      font-size: 110%;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      font-size: 12px;
+      background-color: #FFFFFF;
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      color: #000000;
+      text-align: justify;
+    }
+
+    div.navheader {
+      background-color: #A4B9EA;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: -12px;
+      margin-right: -12px;
+      margin-top: -12px;
+    }
+    div.navheader hr {
+      color: #A4B9EA;
+      border: none;
+      height: 0px;
+    }
+    div.navfooter {
+      background-color: #A4B9EA;
+      border-top-style: solid;
+      border-top-width: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: -12px;
+      margin-right: -12px;
+      margin-bottom: -12px;
+    }
+    div.navfooter hr {
+      color: #A4B9EA;
+      border: none;
+      height: 0px;
+    }
+
+    div.bibliography,
+    div.colophon,
+    div.glossary,
+    div.index,
+    div.part,
+    div.preface,
+    div.refentry,
+    div.reference {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    div.index div.index {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    div.appendix,
+    div.book,
+    div.chapter,
+    div.legalnotice {
+    }
+
+    div.highlights {
+      background: #F8F8F8;
+      border: 2px solid #C8C8C8;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    div.apiexcerpt,
+    div.example,
+    div.figure,
+    div.striped,
+    div.table {
+      padding-top: 4px;
+      padding-bottom: 0px;
+    }
+
+    div.striped table,
+    div.table table {
+      border-collapse: collapse;
+      border: 1px solid white;
+      vertical-align: baseline;
+      font-size: 100%;
+      margin-top: 1px;
+    }
+    div.striped table thead th,
+    div.table table thead th {
+      background-color: #A4B9EA;
+      border: 1px solid white;
+      color: #000000;
+    }
+    /*
+    div.striped table tbody tr.evenrow, div.table table tbody td {
+    */
+    div.striped table tbody tr.evenrow td {
+      vertical-align: baseline;
+      border: 1px solid white;
+    }
+    div.striped table tbody tr.evenrow td,
+    div.table table tbody td {
+    /*
+      background-color: #D3DAEA;
+    */
+      background-color: #E3EEFE;
+      vertical-align: baseline;
+      color: #000000;
+      border: 1px solid white;
+      padding:1px 4px 1px 4px;
+    }
+
+    td div.mediaobject {
+      background-color: #FFFFFF;
+    }
+
+    div.figure div.informaltable td {
+      font-size: 10px;
+      padding-left: 1px;
+      padding-right: 1px;
+      text-align: center;
+    }
+
+    table.copyright {
+      font-size: 90%;
+      font-style: italic;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    span.java_lineComment {
+      color: #005000;
+    }
+    span.java_blockComment {
+      color: #005000;
+    }
+    span.java_stringLiteral {
+      color: #99006B;
+    }
+    span.java_numericLiteral {
+      color: #780000;
+    }
+    span.java_keyword {
+      color: #000099;
+      font-weight: bold;
+    }
+    span.java_methodCall {
+      color: black;
+      font-weight: bold;
+    }
+
+		ul {
+			list-style:disc;
+			margin-top:0%;
+			margin-bottom:0%;
+		}
+
+
+  </style>
+
+
+
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="language" content="en">
+  <meta http-equiv="reply-to" content="support@yWorks.com">
+  <meta name="audience" content="all">
+  <meta name="classification" content="software">
+  <meta name="copyright" content="Copyright &copy; 2002-2012 yWorks. All Rights Reserved.">
+  <meta name="distribution" content="global">
+  <meta name="publisher" content="yWorks, http://www.yWorks.com">
+  <meta name="rating" content="Safe For Kids">
+</head>
+
+<body>
+
+<div id="outercontainer">
+
+<h1>yFiles GraphMLViewer 1.6 Changelog</h1>
+
+<h2>GraphMLViewer 1.6 changes since 1.5</h2>
+
+<div class="standardtext">
+  <ul>
+    <li>BPMN 2.0 symbols</li>
+  </ul>
+</div>
+
+<h2>GraphMLViewer 1.5 changes since 1.4</h2>
+
+<div class="standardtext">
+  <ul>
+    <li>More symbols</li>
+  </ul>
+</div>
+
+<h2>GraphMLViewer 1.4 changes since 1.3</h2>
+
+<div class="standardtext">
+  <ul>
+    <li>Support for Entity Relationship diagrams</li>
+  </ul>
+</div>
+
+<h2>GraphMLViewer 1.3 changes since 1.2</h2>
+
+<div class="standardtext">
+  <ul>
+    <li>More symbols</li>
+    <li>Improved text handling</li>
+  </ul>
+</div>
+
+<h2>GraphMLViewer 1.2 changes since 1.1</h2>
+
+<div class="standardtext">
+  <ul>
+    <li>Support for BPMN symbols</li>
+    <li>Improved text handling</li>
+  </ul>
+</div>
+
+<h2>GraphMLViewer 1.1 changes since 1.0</h2>
+
+<div class="standardtext">
+  <ul>
+    <li>Support for table and swimlane nodes</li>
+    <li>Support for flowchart symbols</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
+
+

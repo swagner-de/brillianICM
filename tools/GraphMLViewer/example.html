@@ -1,0 +1,74 @@
+<html>
+<body>
+
+<!-- Add reference to GraphMLViewer.js.
+Note that Internet Explorer does not support empty script tags (i.e. <script/>) -->
+<script type="text/javascript" language="javascript" src="GraphMLViewer.js"></script>
+
+<h1>GraphMLViewer example page</h1>
+This is a little example page which demonstrates how to embed the GraphMLViewer
+into a web page using different setups.
+<h2>One large image</h2>
+
+<script type="text/javascript" language="javascript">
+<!--
+
+    // The default parameters are used here
+
+    if (!RunPlayer(
+        "graphURL", "examplegraphs/example1.graphml"
+        )) {
+        document.write("Cannot start GraphMLViewer!");
+    }
+//-->
+</script>
+First example: graph displayed in a large window with default settings.
+<h2>Two images in a table</h2>
+<table>
+  <tr>
+    <td>
+<script type="text/javascript" language="javascript">
+<!--
+    if (!RunPlayer(
+        "width", "95%",
+        "height", "300",  //Internet Explorer may interpret relative sizes in tables as 0
+        "graphURL", "examplegraphs/example2.graphml",
+        "overview", "true",
+        "toolbar", "false",
+        "tooltips", "true",
+        "movable", "true",
+        "links", "true",
+        "linksInNewWindow", "true",
+        "viewport", "full"
+        )) {
+        document.write("Cannot start GraphMLViewer!");
+    }
+//-->
+</script>
+Small image which shows the full graph and allows to move the graph.
+</td>
+    <td>
+<script type="text/javascript" language="javascript">
+<!--
+      if (!RunPlayer(
+        "width", "95%",
+        "height", "300",
+        "graphURL", "examplegraphs/example2.graphml",
+        "movable", "false",
+        "overview", "true",
+        "toolbar", "false",
+        "tooltips", "false",
+        "links", "false",
+        "viewport", "80,250,350,300"
+        )) {
+        document.write("Cannot start GraphMLViewer!");
+    }
+//-->
+</script>
+Small image which shows  a subset of the graph and does not allow moving the graph.</td>
+  </tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,580 @@
+<html>
+<head>
+
+
+  <style type="text/css">
+    /*
+     * CSS1 stylesheet for DocBook-generated yFiles Developer's Guide.
+     */
+
+    a {
+      color: #AA5522;
+      font-weight: bold;
+    }
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
+    a:active,
+    a:focus,
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul ul a {
+      color: #AA5522;
+      font-weight: normal;
+    }
+
+    pre.programlisting,
+    pre.screen {
+      background: #E8E8E8;
+      border: 2px solid #C8C8C8;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    tt.code {
+      color: #0000C0;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    tt.classname {
+      color: #B000B0;
+      font-weight: bold;
+    }
+
+    body.book {
+    }
+
+    h1,
+    h4,
+    h5,
+    h6 {
+      font-family: sans-serif;
+    }
+
+    p {
+      padding-bottom: 0px;
+      padding-top: 0px;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    h2 {
+      font-size: 120%;
+      color: #4079EA;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    h3 {
+      font-size: 110%;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      font-size: 12px;
+      background-color: #FFFFFF;
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      color: #000000;
+      text-align: justify;
+    }
+
+    div.navheader {
+      background-color: #A4B9EA;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: -12px;
+      margin-right: -12px;
+      margin-top: -12px;
+    }
+    div.navheader hr {
+      color: #A4B9EA;
+      border: none;
+      height: 0px;
+    }
+    div.navfooter {
+      background-color: #A4B9EA;
+      border-top-style: solid;
+      border-top-width: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: -12px;
+      margin-right: -12px;
+      margin-bottom: -12px;
+    }
+    div.navfooter hr {
+      color: #A4B9EA;
+      border: none;
+      height: 0px;
+    }
+
+    div.bibliography,
+    div.colophon,
+    div.glossary,
+    div.index,
+    div.part,
+    div.preface,
+    div.refentry,
+    div.reference {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    div.index div.index {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    div.appendix,
+    div.book,
+    div.chapter,
+    div.legalnotice {
+    }
+
+    div.highlights {
+      background: #F8F8F8;
+      border: 2px solid #C8C8C8;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    div.apiexcerpt,
+    div.example,
+    div.figure,
+    div.striped,
+    div.table {
+      padding-top: 4px;
+      padding-bottom: 0px;
+    }
+
+    div.striped table,
+    div.table table {
+      border-collapse: collapse;
+      border: 1px solid white;
+      vertical-align: baseline;
+      font-size: 100%;
+      margin-top: 1px;
+    }
+    div.striped table thead th,
+    div.table table thead th {
+      background-color: #A4B9EA;
+      border: 1px solid white;
+      color: #000000;
+    }
+    /*
+    div.striped table tbody tr.evenrow, div.table table tbody td {
+    */
+    div.striped table tbody tr.evenrow td {
+      vertical-align: baseline;
+      border: 1px solid white;
+    }
+    div.striped table tbody tr.evenrow td,
+    div.table table tbody td {
+    /*
+      background-color: #D3DAEA;
+    */
+      background-color: #E3EEFE;
+      vertical-align: baseline;
+      color: #000000;
+      border: 1px solid white;
+      padding:1px 4px 1px 4px;
+    }
+
+    td div.mediaobject {
+      background-color: #FFFFFF;
+    }
+
+    div.figure div.informaltable td {
+      font-size: 10px;
+      padding-left: 1px;
+      padding-right: 1px;
+      text-align: center;
+    }
+
+    table.copyright {
+      font-size: 90%;
+      font-style: italic;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    span.java_lineComment {
+      color: #005000;
+    }
+    span.java_blockComment {
+      color: #005000;
+    }
+    span.java_stringLiteral {
+      color: #99006B;
+    }
+    span.java_numericLiteral {
+      color: #780000;
+    }
+    span.java_keyword {
+      color: #000099;
+      font-weight: bold;
+    }
+    span.java_methodCall {
+      color: black;
+      font-weight: bold;
+    }
+
+		ul {
+			list-style:disc;
+			margin-top:0%;
+			margin-bottom:0%;
+		}
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+<h1>Anleitung f&uuml;r den GraphMLViewer 1.6</h1>
+
+<h2>Benutzung und Konfiguration</h2>
+Um den GraphMLViewer optimal nutzen zu k&ouml;nnen, ist es n&ouml;tig, die Datei GraphMLViewer.js zu referenzieren. Diese
+Javascript Datei enth&auml;lt die notwendigen Funktionen zum Starten des Viewers und zur Versionskontrolle.
+Eine aufrufende HTML-Seite kann folgenderma&szlig;en aussehen:
+<pre class="programlisting">
+&lt;html>
+&lt;body>
+&lt;!-- Einbinden der Javascript-Datei GraphMLViewer.js -->
+&lt;script type="text/javascript" language="javascript" src="GraphMLViewer.js">&lt;/script>
+
+&lt;script language="javascript" type="text/javascript">
+&lt;!--
+
+// Viewer starten
+if (!RunPlayer(
+    "width", "100%",
+    "height", "100%",
+    "graphUrl", "yEdViewer.graphml",
+    "overview", "true",
+    "toolbar", "true",
+    "tooltips", "true",
+    "movable", "true",
+    "links", "true",
+    "linksInNewWindow", "true",
+    "viewport", "full"
+    )) {
+  // RunPlayer() gibt false zurueck: der Flash Player is entweder zu alt oder nicht installiert:
+  // Versuche, einen aktuellen Player zu installieren
+  if (!InstallFlashUpdate("width", "100%", "height", "100%")) {
+    // Flash Player ist auch dafuer zu alt oder nicht intalliert
+    // Hier kann ein alternativer Inhalt platziert werden.
+    document.write('Adobe Flash Player Version 9.0.38 oder h&ouml;her wird ben&ouml;tigt. '
+        + '&lt;a href=http://www.adobe.com/go/getflash/>Get Flash&lt;/a>');
+  }
+}
+//-->
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</pre>
+<h3>Einbinden in komplexere HTML Seiten</h3>
+Um den Viewer in eine komplexere HTML Seite zu integrieren, kann der Inhalt des &lt;body> Elements
+(also der <code>&lt;script></code> Teil) an die entsprechende Stelle kopiert werden. Breite und H&ouml;he
+k&ouml;nnen &uuml;ber die Parameter <code>width</code> und <code>height</code> angepasst werden.
+
+<h3>Konfigurieren des Viewers</h3>
+Der Aufruf des Viewers erfolgt mit der Methode RunPlayer(). Die Methode gibt true zur&uuml;ck, wenn der Viewer gestartet
+wurde, und false, falls das nicht m&ouml;glich war (Flash Player ist nicht installiert oder zu alt). Der Viewer kann &uuml;ber
+folgende Parameter konfiguriert werden, welche, wie im Beispiel oben gezeigt, der Funktion RunPlayer()
+&uuml;ber Komma getrennt als Name-Wert Paare &uuml;bergeben werden.
+
+<a name="parameterlist"></a>
+<div class="table">
+<table border="1px" >
+  <tr>
+    <th>Name</th><th>Bedeutung</th><th>Zul&auml;ssige Werte</th><th>Standard</th>
+  </tr>
+  <tr>
+    <td colspan="4" align="center">Notwendige Parameter</td>
+  </tr>
+  <tr>
+    <td>width</td><td>Die Breite des Viewers (in % oder absolut)</td><td>Gr&ouml;&szlig;enangabe</td><td>100%</td>
+  </tr>
+  <tr>
+    <td>height</td><td>Die H&ouml;he des Viewers (in % oder absolut)</td><td>Gr&ouml;&szlig;enangabe</td><td>100%</td>
+  </tr>
+  <tr>
+    <td>graphUrl</td><td>Die URL der darzustellenden GraphML Datei</td><td>Zeichenkette</td><td>-</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center">Optionale Parameter</td>
+  </tr>
+  <tr>
+    <td>overview</td><td>Bestimmt, ob ein &Uuml;bersichtsfenster angezeigt wird.
+    "true" zeigt das Fenster an.</td><td>true, false</td><td>false</td>
+  </tr>
+  <tr>
+    <td>toolbar</td><td>Bestimmt, ob eine Werkzeugleiste angezeigt wird. "true" zeigt die Werkzeugleiste an,
+    sofern das Ver&auml;ndern der Ansicht erlaubt ist (movable).</td><td>true, false</td><td>false</td>
+  </tr>
+  <tr>
+    <td>movable</td><td>Bestimmt, ob der Betrachter den angezeigten Ausschnitt ver&auml;ndern (verschieben, vergr&ouml;&szlig;ern)
+    kann.
+    "true" l&auml;&szlig;t das Verschieben des Ausschnittes zu.</td><td>true, false</td><td>false</td>
+  </tr>
+  <tr>
+    <td>scrollbars</td><td>Bestimmt, ob bei einem beweglichen Diagramm Rollbalken erscheinen, wenn das Diagramm
+    gr&ouml;&szlig;er als der sichtbare Ausschnitt ist. Mit "true" werden Rollbalken angezeigt.</td><td>true, false</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>tooltips</td><td>Bestimmt, ob Tooltips angezeigt werden. "true" zeigt Tooltips an.</td><td>true, false</td><td>false</td>
+  </tr>
+  <tr>
+    <td>links</td><td>Bestimmt, ob der Betrachter zu Verkn&uuml;pfungen (Weblinks) navigieren kann.
+    "true" erlaubt die Navigation.</td><td>true, false</td><td>false</td>
+  </tr>
+  <tr>
+    <td>linksInNewWindow</td><td>Bestimmt, beim Navigieren zu Verkn&uuml;pfungen (Weblinks)diese in einem neuen Fenster
+    ge&ouml;ffnet werden. "true" &ouml;ffnet die Verkn&uuml;pfungen in einem neuen Fenster.</td><td>true, false</td><td>true</td>
+  </tr>
+  <tr>
+    <td>viewport</td><td>Der darzustellende Ausschnitt des Diagramms. Zul&auml;ssig sind die Werte "full", wobei das
+    gesamte Diagramm angezeigt wird, oder durch Komma (,) getrennte Koordinaten der Reihenfolge links, oben,
+    Breite, H&ouml;he. Die Koordinaten definieren welcher Teil des Diagramms angezeigt wird, z.B. "-100,-100,200,200"</td>
+    <td>"full" oder vier durch Komma getrennte Zahlen</td><td>full</td>
+  </tr>
+</table>
+</div>
+
+<h3>Automatisches Update des Flash Players</h3>
+
+Die Datei GraphMLViewer.js stellt dar&uuml;ber hinaus noch die Funktion
+InstallFlashUpdate("width", "100%", "height", "100%") bereit. Diese Funktion installiert die aktuelle Version des
+Flash Players. Die Parameter "width" und "height" geben die Gr&ouml;&szlig;e des Install-Fensters an. Die Funktion gibt
+den Wert false zur&uuml;ck, falls eine Installation nicht m&ouml;glich war (zum automatischen Update wird ein Flash Player
+der Version 6 oder h&ouml;her ben&ouml;tigt). Sollten Sie kein automatisches Update w&uuml;nschen, k&ouml;nnen Sie einfach auf den
+Aufruf der Funktion InstallFlashUpdate() verzichten.
+<pre class="programlisting">
+&lt;html>
+&lt;body>
+&lt;script type="text/javascript" language="javascript" src="GraphMLViewer.js">&lt;/script>
+
+&lt;script language="javascript" type="text/javascript">
+&lt;!--
+
+if (!RunPlayer(
+   ...
+    )) {
+  document.write('Adobe Flash Player Version 9.0.38 oder h&ouml;her wird ben&ouml;tigt. '
+      + '&lt;a href=http://www.adobe.com/go/getflash/>Get Flash&lt;/a>');
+}
+//-->
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</pre>
+
+<h3>Anpassen der Datei GraphMLViewer.js</h3>
+
+Wie bereits beschrieben stellt die Datei GraphMLViewer.js die notwendigen Funktionen zum Aufruf des Flash Players
+und zum Laden des GraphMLViewers zur Verf&uuml;gung. In der Regel ist ein Anpassen dieser Datei nicht notwendig. Sollten
+Sie dennoch Anpassungen vornehmen, m&uuml;ssen die folgenden Voraussetzungen gewahrt bleiben:
+<ul>
+  <li>Eine Javascript-Methode <code>GetUrl()</code>, die die URL des aktuellen Dokuments zur&uuml;ckgibt, muss vorhanden sein.</li>
+  <li>Eine Javascript-Methode <code>LoadGraphML(url)</code>, die eine GraphML-Datei von der angegebenen URL l&auml;dt und
+    deren Inhalt als String zur&uuml;ckgibt, muss vorhanden sein.</li>
+  <li>Dem Viewer muss der Zugriff auf diese Methoden erlaubt werden, indem beim Aufruf des Flash Players der Parameter
+  <code>"allowScriptAccess"</code> auf <code>"always"</code> gesetzt wird.</li>
+</ul>
+
+<h2>Ben&ouml;tigte Dateien</h2>
+
+<h3>Download des GraphMLViewers von www.yworks.com</h3>
+Beim Download des GraphMLViewers von der yWorks Webseite erh&auml;lt man ein zip-Archiv, welches neben der Dokumentation
+die folgenden Dateien enth&auml;lt:
+  <ul>
+    <li><b>example.html:</b> eine HTML Seite, die den Viewer aufruft.</li>
+    <li><b>examplegraphs/example1.graphml:</b>Beispieldiagramm im GraphML-Format.</li>
+    <li><b>examplegraphs/example2.graphml:</b>Beispieldiagramm im GraphML-Format.</li>
+    <li><b>GraphMLViewer.js:</b> Javascript-Datei, die den Flash Player startet.</li>
+    <li><b>GraphMLViewer.swf:</b> Der eigentliche Viewer. Diese Datei ist nur auf dem lokalen Rechner lauff&auml;hig.</li>
+    <li><b>crossdomain.xml:</b> Eine sog. Crossdomain-Policy-Datei, die dem Viewer den Zugriff auf die
+    GraphML-Datei erlaubt.</li>
+  </ul>
+
+<h3>Export aus yEd</h3>
+<p>
+  yEd erzeugt beim Exportieren mit der Option "HTML Flash Viewer" eine HTML Seite, in der das exportierte Diagramm
+  mit Hilfe des GraphMLViewer angezeigt wird. Dazu speichert yEd folgende Dateien ab:
+  <ul>
+    <li><b>[dateiname].html:</b> eine HTML Seite, die den Viewer aufruft.</li>
+    <li><b>[dateiname].graphml:</b> das exportierte Diagramm im GraphML-Format.</li>
+    <li><b>GraphMLViewer.js:</b> Javascript-Datei, die den Flash Player startet.</li>
+    <li><b>GraphMLViewer.swf:</b> Der eigentliche Viewer. Diese Datei ist nur auf dem lokalen Rechner lauff&auml;hig.</li>
+    <li><b>crossdomain.xml:</b> Eine sog. Crossdomain-Policy-Datei, die dem Viewer den Zugriff auf die
+    GraphML-Datei erlaubt.</li>
+  </ul>
+</p>
+<p>
+  yEd exportiert die notwendigen Dateien so, dass sie ohne weitere Anpassungen durch &ouml;ffnen der HTML-Datei
+  betrachtet werden k&ouml;nnen.
+</p>
+
+<h2>Voransicht auf dem lokalen Rechner</h2>
+
+<p>
+  Um den GraphMLViewer in eine HTML Seite zu integrieren, so dass die Seite lokal auf dem Rechner betrachtet werden
+  kann (Voransicht), werden die folgenden Dateien ben&ouml;tigt:
+  <ul>
+    <li>[myPage].html: Ihre HTML-Seite</li>
+    <li>[diagram].graphml: Das darzustellende Diagramm</li>
+    <li>GraphMLViewer.js: Javascript-Datei zum Aufruf des Viewers</li>
+    <li>GraphMLViewer.swf: Flash-Datei des Viewers</li>
+  </ul>
+</p>
+
+<h3>Anpassen der Verzeichnisse</h3>
+
+<p>
+  Wenn Sie nicht alle Dateien in einem Verzeichnis haben wollen, k&ouml;nnen Sie selbstverst&auml;ndlich die
+  Verzeichnisstruktur anpassen:
+  <ul>
+    <li>GraphML-Dateien: der graphUrl-Parameter der RunPlayer-Funktion ist entsprechend anzupassen. Dabei gelten die
+      normalen Regeln zum Referenzieren in HTML: Wenn sie eine relative URL angeben (empfohlen), ist diese relativ
+      zur HTML-Datei</li>
+    <li><b>GraphMLViewer.js</b>: passen Sie das <code>src</code> Attribut des <code>script</code> Tags, mit dem Sie
+  die Datei einbinden (<code>&lt;script type="text/javascript" language="javascript" src="GraphMLViewer.js">&lt;/script></code>)
+  entsprechend an. Diese Datei ben&ouml;tigen Sie &uuml;brigens nur einmal.</li>
+    <li><b>GraphMLViewer.swf</b>: Die Zeile <code>var url = "GraphMLViewer.swf";</code> in der Funktion
+      <code>RunPlayer()</code> in der Datei muss entsprechend ge&auml;ndert werden. Eine relative URL ist auch hier wieder
+    relativ zur aufrufenden HTML-Datei.</li>
+  </ul>
+</p>
+
+<h2>Benutzung auf einem Webserver</h2>
+
+<p>
+  Um die erstellten Webseiten auf einen Webserver hochzuladen, stellen Sie die notwendigen Dateien wie oben
+  beschrieben zusammen. Laden Sie diese Dateien auf Ihren Webserver hoch, mit folgenden Ausnahmen:
+  <ul>
+    <li>Die Datei <b>GraphMLViewer.swf</b> wird auf einem Webserver nicht ben&ouml;tigt und mu&szlig; deswegen
+    <b>nicht</b> mit hochgeladen werden.</li>
+    <li><b>crossdomain.xml:</b> Wenn es Ihre Zugriffsrechte erlauben, sollte diese Datei in das Basisverzeichnis
+     der Web-Dom&auml;ne geladen werden (/crossdomain.xml, z.B. wenn die HTML-Datei auf www.foo.com/subfolder/viewer.html liegt,
+     sollte crossdomain.xml unter www.foo.com/crossdomain.xml liegen).  Existiert bereits
+      eine solche Datei, dann f&uuml;gen Sie das Element <code>&lt;allow-access-from domain="www.yworks.com"/></code>
+      der Liste <code>&lt;cross-domain-policy></code> hinzu. Der Zweck dieser Datei ist im n&auml;chsten Abschnitt
+      ausf&uuml;hrlich beschrieben.
+     </li>
+  </ul>
+  Der eigentliche Viewer (die Shockwave Flash Datei, GraphMLViewer.swf), der in der Web-Umgebung geladen wird,
+  wird auf der yWorks Website (www.yworks.com) bereitgehalten.
+</p>
+
+<h3>Flash Player Sicherheit</h3>
+
+<p>
+Da der eigentliche Viewer auf der yWorks Website bereitgehalten wird, muss dem Viewer explizit der Zugriff
+auf die GraphML-Datei gestattet werden. Ohne weitere Konfiguration erlaubt der Flash Player SWF-Dateien
+von Dom&auml;ne A (hier: www.yworks.com) nicht, auf Daten aus der Dom&auml;ne B (z.B. your.domain.com) zuzugreifen. Dom&auml;ne B
+kann dies aber gestatten, indem sie eine bestimmte Datei bereith&auml;lt, die Crossdomain-Policy-Datei, crossdomain.xml.
+Standardm&auml;&szlig;ig versucht der Flash Player diese aus dem Basis-Verzeichnis der Dom&auml;ne zu laden, die den Zugriff
+gestatten soll. Zum Beispiel: die HTML-Seite liegt auf http://your.domain.com/de/graphen.html, der Graph liegt auf
+http://your.domain.com/de/graphs/example.graphml. Dann versucht der Flash Player die Datei
+http://your.domain.com/crossdomain.xml zu laden.
+</p>
+<p>
+  Um dem auf der yWorks-Webseite bereitgehaltenen Viewer Zugriff auf die GraphML-Datei zu gestatten, ist es
+  also notwendig, die beigelegte Datei crossdomain.xml in das Basis-Verzeichnis der Dom&auml;ne zu legen.
+</p>
+<p>
+  Da Autoren von Webseiten nicht unbedingt Zugriff auf dieses Verzeichnis haben, versucht der GraphMLViewer
+  zus&auml;tzlich die crossdomain-Datei aus dem Verzeichnis, in dem auch das GraphML liegt, zu laden. Ab Flash Player 10
+  ist dies nur noch zul&auml;ssig, wenn eine sog. Meta-Policy existiert, die das Anlegen solcher Dateien erlaubt.
+</p>
+<p>
+  Weitere Informationen &uuml;ber dieses Thema finden Sie auf diesen Seiten:
+  <ul>
+    <li><a href="http://www.adobe.com/devnet/flashplayer/articles/fplayer9_security_05.html#_Special_Considerations_for">
+       Special considerations for users of hosted services</a></li>
+    <li><a href="http://www.adobe.com/devnet/flashplayer/articles/fplayer10_security_changes.html">
+      Understanding the security changes in Flash Player 10</a></li>
+  </ul>
+
+</p>
+<p>
+  Um diese Probleme zu umgehen, l&auml;dt der GraphMLViewer die GraphML-Datei &uuml;ber das externe Javascript, falls
+  das direkte Laden aus den obengenannten Gr&uuml;nden fehlschl&auml;gt. Es ist also nicht zwingend notwendig,
+  eine crossdomain-Datei anzulegen. Allerdings ist das Laden &uuml;ber Javascript etwas langsamer als das direkte Laden.
+</p>
+
+<h2>GraphMLViewer ohne Javascript benutzen</h2>
+<p>
+GraphMLViewer kann auch ganz ohne Javascript verwendet werden. In diesem Fall ist es allerdings zwingend erforderlich,
+die Datei <code>crossdomain.xml</code> in das Basisverzeichnis der Dom&auml;ne zu legen, da sowohl das Nachladen aus dem
+Verzeichnis, in dem das Diagramm liegt, als auch das Laden des Diagramms &uuml;ber Javascript von Javascript abh&auml;ngig sind.
+Au&szlig;erdem muss die URL, von der die SWF-Datei geladen wird, von Hand angepasst werden. Beachten Sie
+dar&uuml;ber hinaus, dass Zoomen per Mausrad auf Macintosh Rechnern ohne Javascript nicht funktioniert.
+</p>
+<pre class="programlisting">
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+  id="GraphMLViewer" width="@WIDTH@" height="@HEIGHT@"
+  codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+  &lt;param name="movie" value="@VIEWERURL@" />
+  &lt;param name="quality" value="high" />
+  &lt;param name="bgcolor" value="#ffffff" />
+  &lt;param name="allowScriptAccess" value="always" />
+  &lt;param name="FlashVars" value="graphUrl=@GRAPHURL@&overview=@OVERVIEW@&toolbar=@TOOLBAR@&tooltips=@TOOLTIPS@&
+                                    &movable=@MOVABLE@&scrollbars=@SCROLLBARS@&links=@LINKS@&linksInNewWindow=@WINDOW@&
+                                    &viewport=@VIEWPORT@"/>
+  &lt;embed src="@VIEWERURL@" quality="high" bgcolor="#ffffff"' +
+            width="@WIDTH@" height="@HEIGHT@" name="GraphMLViewer" align="middle"' +
+            play="true"
+            loop="false"
+            allowScriptAccess="always"
+            type="application/x-shockwave-flash"
+            pluginspage="http://www.adobe.com/go/getflashplayer"
+            FlashVars="graphUrl=@GRAPHURL@&overview=@OVERVIEW@&toolbar=@TOOLBAR@&tooltips=@TOOLTIPS@&
+                      &movable=@MOVABLE@&scrollbars=@SCROLLBARS@&links=@LINKS@&linksInNewWindow=@WINDOW@&
+                      &viewport=@VIEWPORT@">
+   &lt;/embed>
+&lt;/object>
+</pre>
+<p>
+Im obigen Listing sind f&uuml;r die anzupassenden Parameter Platzhalter eingef&uuml;gt, die wie nachfolgend beschrieben zu
+ersetzen sind. Da die meisten Parameter doppelt anzugeben sind (Internet Explorer und Mozilla / Firefox benutzen eine
+unterschiedliche Syntax), bietet sich die Suchen und Ersetzen-Funktion Ihres Editors hierf&uuml;r an.
+<ul>
+  <li><b>@VIEWERURL@</b>: Die URL, unter der die SWF-Datei geladen wird. Dieser Parameter unterscheidet sich, je nachdem,
+  ob die Datei auf dem lokalen Dateisystem betrachtet wird, oder auf einem Webserver liegt. F&uuml;r das lokale Dateisystem
+  ist der Ort, an dem die mitgelieferte SWF-Datei liegt anzugeben (<code>GraphMLViewer.swf</code>, wenn der Viewer im
+  gleichen Verzeichnis wie die HTML-Datei liegt).<br/>
+  Vor dem Ver&ouml;ffentlichen auf einem Webserver ist diese URL zu &auml;ndern in<br/>
+  <code>http://www.yworks.com/products/graphmlviewer/1.0.1/GraphMLViewer.swf</code>.
+  </li>
+  <li><b>@WIDTH@, @HEIGHT@</b>: Breite und H&ouml;he des Diagramms in % oder absolut.</li>
+  <li><b>@GRAPHURL@</b>: entspricht dem Parameter <code>graphUrl</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@OVERVIEW@</b>: entspricht dem Parameter <code>overview</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@TOOLBAR@</b>: entspricht dem Parameter <code>toolbar</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@MOVABLE@</b>: entspricht dem Parameter <code>movable</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@SCROLLBARS@</b>: entspricht dem Parameter <code>scrollbars</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@TOOLTIPS@</b>: entspricht dem Parameter <code>tooltips</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@LINKS@</b>: entspricht dem Parameter <code>links</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@WINDOW@</b>: entspricht dem Parameter <code>linksInNewWindow</code> (<a href="#parameterlist">siehe oben</a>)</li>
+  <li><b>@VIEWPORT@</b>: entspricht dem Parameter <code>viewport</code> (<a href="#parameterlist">siehe oben</a>)</li>
+</ul>
+</p>
+</body>
+</html>
