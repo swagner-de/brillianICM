@@ -53,7 +53,7 @@
 					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
 					<input type="text" name="role" maxlength="50" value="student" style="display: none"/>
 					<div class="formlabel">Old Password:</div>
-					<input type="password" id="oldpassword" name="oldpassword" value="${password}" maxlength="50" <br /><br />
+					<input type="password" id="oldpassword" name="oldpassword" maxlength="50" <br /><br />
 					<!--  Password check -->
 					<div class="formLabel">Password:</div>
 					<input type="password" name="password" maxlength="50"/><br /><br />
