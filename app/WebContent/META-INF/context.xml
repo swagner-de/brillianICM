@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/brillianCRM-3.1.1benste">
+<Context path="/brillianCRM-2.0.1benste">
 
     <!-- maxActive: Maximum number of dB connections in pool. 
          -->
@@ -26,7 +26,7 @@
         maxActive="5" maxIdle="3" maxWait="10000" 
         username="root" password="wibi12c" 
         driverClassName="com.mysql.jdbc.Driver" 
-        url="jdbc:mysql://localhost/cake" 
+        url="jdbc:mysql://localhost/cake2" 
         logAbandoned="true" removeAbandoned="true" 
         removeAbandonedTimeout="60" type="javax.sql.DataSource" />
         

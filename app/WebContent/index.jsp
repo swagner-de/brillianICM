@@ -30,7 +30,7 @@ th,td {
 </style>
 </head>
 <body>
-	<div style="margin-top: 25%">
+	<div style="margin-top: 0">
 		<table style="width: 90%; margin: auto;">
 			<tr>
 				<td valign="top" align="center"><a href="contentquery.jsp">
