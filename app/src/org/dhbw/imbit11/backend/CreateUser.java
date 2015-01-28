@@ -197,12 +197,8 @@ import javax.servlet.http.HttpServletResponse;
         if(email.contains("+"))
         	{
         	email.replaceAll("+", "%2B");
-        	msgBody += email;
         	}
-        else
-        {
         msgBody += email;
-        }
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
         msgBody += "\n\nGreetings, \n" +
