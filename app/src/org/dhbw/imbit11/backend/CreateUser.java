@@ -189,13 +189,20 @@ import javax.servlet.http.HttpServletResponse;
 		return url;
 	}
 	
-
+	// Sends an email with a link to confirm the adress is valid
 	protected void sendConfirmationMail(String email, String firstname, String lastname, String unverifiedEmail, HttpServletRequest request){
         
-
         String msgBody = "Dear "+ firstname + " " + lastname + "\n Please confirm your registration by clicking on the following link: \n" 
-        + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";       
+        + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
+        if(email.contains("+"))
+        	{
+        	email.replaceAll("+", "%2B");
+        	msgBody += email;
+        	}
+        else
+        {
         msgBody += email;
+        }
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
         msgBody += "\n\nGreetings, \n" +
