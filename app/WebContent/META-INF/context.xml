@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/app">
+<Context path="/brillianCRM-3.1.1benste">
 
     <!-- maxActive: Maximum number of dB connections in pool. 
          -->
