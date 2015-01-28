@@ -78,9 +78,9 @@ th,td {
 				</a></td>
 				<td><a href="https://sceiler.de/manager"><br>Tomcat
 						Manager<br> </a></td>
+				<td><a href="XMLEditor.jsp">XML Editor</a></td>
 				<td></td>
-				<td></td>
-			<tr>
+			</tr>
 		</table>
 	</div>
 	<div align="right" style="margin-top: 35%">
