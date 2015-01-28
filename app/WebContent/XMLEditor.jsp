@@ -4,9 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>XML Editor aller</title>
+<script src="js/xmlJavascriptFunc.js"></script>
 </head>
 <body>
-test testt test
-</body>
+<script>
+var xmlDoc = loadXMLDoc("WEB-INF/classes/org/dhbw/imbit11/masterfile.xml");
+x=xmlDoc.getElementsByTagName("title");
+for (i=0;i<x.length;i++)
+  { 
+  document.write(x[i].childNodes[0].nodeValue);
+  document.write("<br>");
+  }
+
+</script>
+</body>test test
 </html>
