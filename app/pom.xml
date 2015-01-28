@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dhbw-mannheim</groupId>
   <artifactId>brillianCRM</artifactId>
-  <version>3.1-benste</version>
+  <version>3.1.1benste</version>
   <packaging>war</packaging>
   
 <dependencies>
