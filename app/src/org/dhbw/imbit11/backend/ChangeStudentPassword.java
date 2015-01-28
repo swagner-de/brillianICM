@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet({"/ChangeStudentPassword"})
+
+// This class is responsible to handle a password change request
+// The frontend page is homepage_student.jsp where user enteres old and new password to update
+
  public class ChangeStudentPassword extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
  	
@@ -29,7 +33,7 @@ import javax.servlet.annotation.WebServlet;
 		// create a UsernamePasswordToken using the
 		// and password provided by the user. Username is provided by form automatically.
 				
-		UsernamePasswordToken token = new PasswordToken(username, password);
+		UsernamePasswordToken token = new PasswordToken(username, oldpassword);
 		
 		String password = request.getParameter("password");
 		String password_repeat = request.getParameter("password_repeat");
@@ -85,8 +89,9 @@ import javax.servlet.annotation.WebServlet;
 				}
 				
 			
-				} else {
-					request.setAttribute("error", "Your two entered Passwords do not match");
+			} else {
+				
+				request.setAttribute("error", "Your two entered Passwords do not match");
 			}
 		
 		} catch (UnknownAccountException ex) {
@@ -108,10 +113,10 @@ import javax.servlet.annotation.WebServlet;
 				"Fatal Error! Please try again later.");
 	}
 	
-		// forward the request and response to the view
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+	// forward the request and response to the view
+	RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 
-		dispatcher.forward(request, response);   	
+	dispatcher.forward(request, response);   	
 	}   	  	    
 
 }
