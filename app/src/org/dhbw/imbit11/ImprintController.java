@@ -26,8 +26,7 @@ public class ImprintController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private RequestDispatcher jsp;
 	
-	/*
-	 * (non-Javadoc)
+	/**
 	 * Information of the "Impressum" brillianCRM is saved to the Object jsp after Servlet config
 	 * is placed into service and Servlet Context Object created
 	 * @author Mary
@@ -37,8 +36,7 @@ public class ImprintController extends HttpServlet {
 		jsp = context.getRequestDispatcher("/frontend/imprint.jsp");
 	}
 	
-	/*
-	 * (non-Javadoc)
+	/**
 	 * Method allows Servlet to handle a get request
 	 * Format of the response is HTML with UTF-8 Encoding
 	 * Server-side information of the About brillianCRM is saved to response
@@ -54,8 +52,7 @@ public class ImprintController extends HttpServlet {
 		jsp.include(request, response);
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * Method allows servlet to handle post requests, so client can send data
 	 * of unlimited length to web server
 	 * Server-side information of the About brillianCRM is saved to response
