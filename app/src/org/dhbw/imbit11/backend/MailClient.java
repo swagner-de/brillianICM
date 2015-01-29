@@ -13,30 +13,36 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServlet;
 
 /**
- * Einloggen auf MailClient des brillianCRM mit dem Username kirby@mknipf.de und Passwort imbit2011B
- * Properties des Client werden festgelegt
- * Erfolgreiches Einloggen MailClient: Neue Email wird erzeugt mit FROM kirby@mknipf.de und TO Emailadresse aus der Variable toEmail
- * Subject aus Variable subject und Textinhalt aus der Varibale content
- * -> Absenden der Email
- * Einloggen nicht erfolgreich: Exception
- * @author Mary
+ * General Class which provides mail sending functionality
+ * Usage with sendMail function as documented.
  * 
- * @version 2.0
+ * @author benste
+ * 
+ * @version 2.1
  */
 public class MailClient extends HttpServlet
 {
 	 static final long serialVersionUID = 1L;
 	 
+	 	/**
+	 	 * Function which sends a specified email with the installed mail system.
+	 	 *
+	 	 * 
+	 	 * @param toEmail recipient email address
+	 	 * @param subject subject of the email
+	 	 * @param content text of the mail
+	 	 */
+	
 		public void sendMail(String toEmail, String subject, String content) {
-	 
-			final String username = "kirby@mknipf.de";
-			final String password = "imbit2011B";
+			 //TODO use context params to read email settings
+			final String username = "no-reply@brillianCRM.com";
+			final String password = "wibi12c";
 	 
 			Properties props = new Properties();
 			props.put("mail.smtp.auth", "true");
 			props.put("mail.smtp.starttls.enable", "true");
-			props.put("mail.smtp.host", "mail.mknipf.de");
-			props.put("mail.smtp.port", "25");
+			props.put("mail.smtp.host", "smpt.1und1.de");
+			props.put("mail.smtp.port", "587");
 	 
 			Session session = Session.getInstance(props,
 			  new javax.mail.Authenticator() {
@@ -48,7 +54,7 @@ public class MailClient extends HttpServlet
 			try {
 	 
 				Message message = new MimeMessage(session);
-				message.setFrom(new InternetAddress("kirby@mknipf.de"));
+				message.setFrom(new InternetAddress(username));
 				message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(toEmail));
 				message.setSubject(subject);
@@ -67,26 +73,4 @@ public class MailClient extends HttpServlet
 				//System.out.println("Sending email failed, message could not be sent.");
 		}
 		}
-
-/**
-  @Override
-  protected void doGet(HttpServletRequest request, 
-  HttpServletResponse response) throws ServletException, IOException
-  {
-       processRequest(request, response);
-  } 
-
-  @Override
-  protected void doPost(HttpServletRequest request, 
-  HttpServletResponse response)  throws ServletException, IOException
-  {
-       processRequest(request, response);
-  }
-
-  @Override
-  public String getServletInfo()
-  {
-       return "Short description";
-  }*/
-
 }
