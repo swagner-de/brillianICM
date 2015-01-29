@@ -10,8 +10,11 @@ import javax.servlet.annotation.WebServlet;
 
 @WebServlet({"/ChangeStudentPassword"})
 
-// This class is responsible to handle a password change request
-// The frontend page is homepage_student.jsp where user enteres old and new password to update
+/** This class is responsible to handle a password change request
+* The frontend page is homepage_student.jsp where user enteres old and new password to update
+* @author Oliver Becher
+* @version 0.1
+*/
 
  public class ChangeStudentPassword extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
@@ -25,10 +28,10 @@ import javax.servlet.annotation.WebServlet;
 		
 		String url="/backend/homepage_student.jsp";
 		
-		// see /login.jsp for these form fields
+		// see homepage_student.jsp for these form fields
 		
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String password = request.getParameter("oldpassword");
 		
 		// create a UsernamePasswordToken using the
 		// and password provided by the user. Username is provided by form automatically.
@@ -84,8 +87,8 @@ import javax.servlet.annotation.WebServlet;
 					request.setAttribute("status", "Email was sent.");
 				}
 				catch(SQLException e){
-						//System.out.println("Update of Password in DB failed.");
-						e.printStackTrace();
+					//System.out.println("Update of Password in DB failed.");
+					e.printStackTrace();
 				}
 				
 			
