@@ -32,7 +32,7 @@ import javax.servlet.annotation.WebServlet;
 		 * @param String username
 		 * @param String oldpassword
 		 * @param String password
-		 * @param String repeat_password
+		 * @param String password_repeat
 		 */
 		
 		// see homepage_student.jsp for these form fields
