@@ -28,10 +28,17 @@ import javax.servlet.annotation.WebServlet;
 		
 		String url="/backend/homepage_student.jsp";
 		
+		/** Required parameters
+		 * @param String username
+		 * @param String oldpassword
+		 * @param String password
+		 * @param String repeat_password
+		 */
+		
 		// see homepage_student.jsp for these form fields
 		
 		String username = request.getParameter("username");
-		String password = request.getParameter("oldpassword");
+		String oldpassword = request.getParameter("oldpassword");
 		
 		// create a UsernamePasswordToken using the
 		// and password provided by the user. Username is provided by form automatically.
@@ -81,7 +88,7 @@ import javax.servlet.annotation.WebServlet;
 				UserRealm realm = new UserRealm();
 				
 				try{
-					realm.updatePassword(email, hashedPassword);
+					realm.updatePassword(username, hashedPassword);
 					// is the request necessary?
 					// request 
 					request.setAttribute("status", "Email was sent.");
