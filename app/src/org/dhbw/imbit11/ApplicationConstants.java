@@ -1,5 +1,10 @@
 package org.dhbw.imbit11;
 
+/**
+ * Interface contains labels of the main page and pagetitels for the brillianCRM Game
+ * @author Mary
+ *
+ */
 public interface ApplicationConstants {
 	
 	public static  String PANEL_WEST_TITLE = "Navigation";
