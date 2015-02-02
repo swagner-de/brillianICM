@@ -44,7 +44,6 @@ public class MainController extends HttpServlet {
 	 * Server-side information of grid view and labels of Mainpage of brillianCRM is saved to response
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -58,12 +57,9 @@ public class MainController extends HttpServlet {
 	 * Method allows servlet to handle post requests, so client can send data
 	 * of unlimited length to web server
 	 * Server-side information of Mainpage of a certain user identified by mail address is saved to response
-	 * @param request - contains the request of a client
+	 * @param request - contains the request of a client must contain username/ userid
 	 * @param response - contains the response of the servlet
-	 * @param userid - contains E-Mail of player
-	 * @param username - contains the username of a player (login page)
 	 * @author Mary
-	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
