@@ -14,6 +14,7 @@ import org.dhbw.imbit11.backend.UserRealm;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+@WebServlet({ "/Event", "/event.xml" })
 
 /**
  * @author Erik
@@ -23,7 +24,7 @@ import java.util.ArrayList;
  *	zurück
  * 
  */
-@WebServlet({ "/Event", "/event.xml" })
+
 public class Event extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

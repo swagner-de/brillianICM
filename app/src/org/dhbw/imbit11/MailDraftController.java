@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet({ "/MailDraft" })
 /**
  * Class contains the doGet and doPost methods for responding with the content of the Frontend
  * "MailDraft" with the grid view and labels to a clients response
@@ -19,7 +20,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @version 2.0
  */
-@WebServlet({ "/MailDraft" })
 public class MailDraftController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
