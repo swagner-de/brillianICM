@@ -41,7 +41,6 @@ public class LocationController extends HttpServlet {
 	 * Server-side information of the layout of the Location panel of brillianCRM is saved to response
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -58,7 +57,6 @@ public class LocationController extends HttpServlet {
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * @author Mary
-	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

@@ -39,9 +39,8 @@ public class MailDraftController extends HttpServlet {
 	 * Method allows Servlet to handle a get request
 	 * Format of the response is HTML with UTF-8 Encoding
 	 * Server-side information of grid view and labels of ingame-MailDraft of brillianCRM is saved to response
-	 * @param {object} request - contains the request of a client
-	 * @param {object} response - contains the response of the servlet
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -55,10 +54,9 @@ public class MailDraftController extends HttpServlet {
 	 * Method allows servlet to handle post requests, so client can send data
 	 * of unlimited length to web server
 	 * Server-side information of grid view and labels of ingame-MailDraft brillianCRM is saved to response
-	 * @param {object} request - contains the request of a client
-	 * @param {object} response - contains the response of the servlet
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
 	 * @author Mary
-	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
