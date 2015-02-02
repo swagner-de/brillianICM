@@ -39,7 +39,7 @@ String url = "/Professor";
 		// get the userid of the current user
 		
 		String email = request.getParameter("delete_email");
-		//System.out.println("Zu löschende User-Email ist " + email);		
+		//System.out.println("Zu loeschende User-Email ist " + email);		
 		UserRealm realm = new UserRealm();
 		try{
 			 realm.deleteUser(email);
