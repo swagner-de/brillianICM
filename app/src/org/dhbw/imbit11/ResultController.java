@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet({ "/Result" })
 /**
  * Class contains the doGet and doPost methods for responding with the content of the Frontend
  * "Result" with the grid view, labels, results of the game and possibility to restart the game
@@ -20,7 +21,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @version 2.0
  */
-@WebServlet({ "/Result" })
 public class ResultController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -41,8 +41,8 @@ public class ResultController extends HttpServlet {
 	 * Format of the response is HTML with UTF-8 Encoding
 	 * Server-side information of grid view, labels, results of game and restart option
 	 * of brillianCRM is saved to response
-	 * @param {object} request - contains the request of a client
-	 * @param {object} response - contains the response of the servlet
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,8 +58,8 @@ public class ResultController extends HttpServlet {
 	 * of unlimited length to web server
 	 * Server-side information of grid view, labels, results and restart option of
 	 * brillianCRM is saved to response
-	 * @param {object} request - contains the request of a client
-	 * @param {object} response - contains the response of the servlet
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
 	 * @author Mary
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
