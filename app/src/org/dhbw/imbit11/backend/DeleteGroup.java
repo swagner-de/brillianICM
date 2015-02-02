@@ -39,7 +39,7 @@ import javax.servlet.http.HttpServletResponse;
 		// get the userid of the current user
 		
 		String group_id = request.getParameter("group_id");
-		//System.out.println("Zu löschende Group_ID ist " + group_id);		
+		//System.out.println("Zu loeschende Group_ID ist " + group_id);		
 		UserRealm realm = new UserRealm();
 		try{
 			 realm.deleteGroup(group_id);
