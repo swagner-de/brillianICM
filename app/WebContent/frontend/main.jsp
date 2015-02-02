@@ -39,7 +39,8 @@
 			<a id="help" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a>
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 			<a id="change_password" onclick="window.open('<%out.print(application.getContextPath());%>/ChangeStudentPassword','_blank')" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.CHANGE_PW_BUTTON_TEXT%></a>
-			<!--<a id="audio" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.AUDIO_BUTTON_TEXT%></a>  -->
+			<!-- Uncomment button for muting audio to test the functionality -->
+			<a id="audio" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.AUDIO_BUTTON_TEXT%></a>
 			<div class="welcome"></div>
 		</div>
 	</div>	
