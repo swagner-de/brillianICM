@@ -41,6 +41,10 @@
 			<a id="change_password" onclick="window.open('<%out.print(application.getContextPath());%>/ChangeStudentPassword','_blank')" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.CHANGE_PW_BUTTON_TEXT%></a>
 			<!-- Uncomment button for muting audio to test the functionality -->
 			<a id="audio" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.AUDIO_BUTTON_TEXT%></a>
+			<form action="ChangeLvl">
+				<input type="text" name="lvl" size="7">
+				<input type="submit" value="GO GO POWER RANGERS!">
+			</form>
 			<div class="welcome"></div>
 		</div>
 	</div>	
