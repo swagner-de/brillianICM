@@ -46,7 +46,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>ChangeLvl</servlet-name>
-		<servlet-class>org.dhbw.imbit11.ChangeLvl</servlet-class>
+		<servlet-class>org.dhbw.imbit11.backend.ChangeLvl</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ChangeLvl</servlet-name>
