@@ -125,7 +125,7 @@ realmA.credentialsMatcher = $passwordMatcher
 
 	<context-param>
 		<param-name>domain</param-name>
-		<param-value>sceiler.de:443</param-value>
+		<param-value>https://ec2-54-149-157-182.us-west-2.compute.amazonaws.com</param-value>
 	</context-param>
 <!--  
 	<security-constraint>
