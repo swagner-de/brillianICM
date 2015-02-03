@@ -34,4 +34,16 @@ Die verwendeten Icons wurden von <a href="http://www.freepik.com" title="Freepik
 <a href="http://www.flaticon.com/free-icon/businessmen-having-a-group-conference_31171" title="Flaticon" target="_blank" >Businessmen having a group conference</a>,
 <a href="http://www.flaticon.com/free-icon/man-in-office-desk-with-computer_11296" title="Flaticon" target="_blank" >Man in office desk with computer</a> und 
 <a href="http://www.flaticon.com/free-icon/cocktail-cup_8066" title="Flaticon" target="_blank" >Cocktail cup</a>.
+
+<hr />
+
+<%
+/* Read brillianCRM version from path of servlet. */
+ServletContext sc = getServletContext();
+String scRealPath = sc.getRealPath("/");
+String[] scRealPathSplit = scRealPath.split("##",2);
+String versionID = scRealPathSplit[1];
+%>
+<p align="right"> Version: <%= versionID %> </p>
+
 </div>
