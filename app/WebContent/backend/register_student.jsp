@@ -58,7 +58,8 @@
 		 	<input type="email" name="email" maxlength="50" value="${email}" placeholder="Email" required/><br />
 			<input type="password" name="password" maxlength="50" placeholder="Password" required/><br />
 		 	<input type="password" name="password_repeat" maxlength="50" placeholder="Repeat Password" required/><br />
-			<input style="display:none" id="registrationButton" type="submit" value="Register now!"></input><a class= "easyui-linkbutton studentRegisterButton" onclick="$('#registrationButton').trigger('click')">Register now!</a>
+			<input style="display:none" id="registrationButton" type="submit" value="Register now!"></input>
+			<a class= "easyui-linkbutton studentRegisterButton" onclick="$('#registrationButton').trigger('click')">Register now!</a>
 		</form>
 	</div>
 	<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
