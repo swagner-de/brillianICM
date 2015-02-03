@@ -526,49 +526,36 @@
 			<br /> Kind regards, <br /> Thomas </content>
 		<attachment/>
 		<nextevent href="l201e000" />
-	</event>
+	</event> 
+	// Laura: Änderung des Spielinhaltes, 5 Projektmanagementphasen statt 4, detailiertere weniger Bausteine für die Phasen erstellt // 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
 		<description>Please assign the work packages to each phase of the Work Breakdown Structure </description>
 		<column>Project Initiation</column>
+		<column>Project Definition</column>
 		<column>Project Planning</column>
 		<column>Project Execution</column>
 		<column>Project Closing</column>
-		<option column="2" rank="6" finfo="Arbeitspakete/Change_Management.pdf" fdesc="Work Package Description: Change Management">Change Management</option>
-		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration">Data Migration</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Risk_Analysis.pdf" fdesc="Work Package Description: Risk Analysis">Risk Analysis</option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Identify_work_packages.pdf" fdesc="Work Package Description: Identification of Work Packages">Identification of Work Packages </option>
-		<option column="2" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
-		<option column="3" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
-		<option column="4" rank="2" finfo="Arbeitspakete/Lesson_learned.pdf" fdesc="Work Package Description: Lesson Learned">Lesson Learned</option>
-		<option column="1" rank="3" finfo="Arbeitspakete/Staffing.pdf" fdesc="Work Package Description: Staffing">Staffing</option>
-		<option column="2" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
-		<option column="3" rank="6" finfo="Arbeitspakete/Implementation_Live_System.pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
-		<option column="1" rank="8" finfo="Arbeitspakete/Budget_Planning.pdf" fdesc="Work Package Description: Budget Planning">Budget Planning </option>
-		<option column="2" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
-		<option column="1" rank="1" finfo="Arbeitspakete/Project_Charter.pdf" fdesc="Work Package Description: Project Charter">Project Charter </option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Approval.pdf" fdesc="Work Package Description: Approval">Approval</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Create_Work_Breakdown_Structure.pdf" fdesc="Work Package Description: Create Work Breakdown Structure">Create Work Breakdown Structure </option>
-		<option column="3" rank="5" finfo="Arbeitspakete/Testing.pdf" fdesc="Work Package Description: Testing">Testing</option>
-		<option column="2" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
-		<option column="3" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
-		<option column="1" rank="4" finfo="Arbeitspakete/Stakeholder_Analysis.pdf" fdesc="Work Package Description: Stakeholder Analysis">Stakeholder Analysis </option>
-		<option column="3" rank="4" finfo="Arbeitspakete/Implementation_(test environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
-		<option column="2" rank="5" finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination Mobile Devices </option>
-		<option column="1" rank="2" finfo="Arbeitspakete/Requirements_Specification.pdf" fdesc="Work Package Description: Requirements Specification">Requirements Specification </option>
-		<option column="3" rank="8" finfo="Arbeitspakete/Roll-Out.pdf" fdesc="Work Package Description: Roll-Out">Roll-Out</option>
-		<option column="2" rank="1" finfo="Arbeitspakete/Kick_Off_Meeting.pdf" fdesc="Work Package Description: Kick-Off Meeting">Kick-Off Meeting</option>
-		<option column="1" rank="7" finfo="Arbeitspakete/Resource_Allocation.pdf" fdesc="Work Package Description: Resource Allocation">Resource Allocation</option>
-		<option column="2" rank="10" finfo="Arbeitspakete/Process_Analysis.pdf" fdesc="Work Package Description: Sales Process Analysis">Sales Process Analysis</option>
-		<option column="3" rank="1" finfo="Arbeitspakete/Development_in_India.pdf" fdesc="Work Package Description: Development in India">Development in India </option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Detailed_Time_Planning.pdf" fdesc="Work Package Description: Detailed Time Planning">Detailed Time Planning </option>
-		<option column="2" rank="12" finfo="Arbeitspakete/Target_State_Analysis.pdf" fdesc="Work Package Description: Target State Analysis">Target State Analysis </option>
-		<option column="2" rank="17" finfo="Arbeitspakete/Functional_Requirements.pdf" fdesc="Work Package Description: Functional Requirements">Functional Requirements </option>
-		<option column="2" rank="16" finfo="Arbeitspakete/Creation_of_Migration_Concept.pdf" fdesc="Work Package Description: Creation of Migration Concept"> Creation of Migration Concept </option>
-		<option column="2" rank="7" finfo="Arbeitspakete/Actual_State_Analysis.pdf" fdesc="Work Package Description: Actual State Analysis">Actual State Analysis </option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Milestone_Planning.pdf" fdesc="Work Package Description: Milestone Planning">Milestone Planning</option>
-		<option column="2" rank="13" finfo="Arbeitspakete/Design_Customer_Relationship_Strategy.pdf" fdesc="Work Package Description: Design Customer Relationship Strategy and Structure">Design Customer Relationship Strategy and Structure</option>
-		<option column="2" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Project_Charter.pdf" fdesc="Work Package Description: Project Charter">Project Charter</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Define_Responsibilities.pdf" fdesc="Work Package Description: Define Responsibilities">Define Responsibilities</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Brainstorming.pdf" fdesc="Work Package Description: Brainstorming">Brainstorming</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Preliminary_Targets.pdf" fdesc="Work Package Description: Preliminary Targets">Preliminary Targets</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Define_Targets.pdf" fdesc="Work Package Description: Define Targets">Define Targets</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Feasability_Evaluation.pdf" fdesc="Work Package Description: Feasability Evaluation">Feasability Evaluation</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Cost_Estimation.pdf" fdesc="Work Package Description: Cost Estimation">Cost Estimation</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Project_Structure_Plan.pdf" fdesc="Work Package Description: Project Structure Plan">Project Structure Plan</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Stakeholder_Analysis.pdf" fdesc="Work Package Description: Stakeholder Analysis">Stakeholder Analysis</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Risk_Analysis.pdf" fdesc="Work Package Description: Risk Analysis">Risk Analysis</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Define_Strategies_and_Measures.pdf" fdesc="Work Package Description: Define Strategies and Measures">Define Strategies and Measures</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Scheduling.pdf" fdesc="Work Package Description: Scheduling">Scheduling</option>
+		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Schedule.pdf" fdesc="Work Package Description: Management of Schedule">Management of Schedule</option>
+		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Resources.pdf" fdesc="Work Package Description: Management of Resources">Management of Resources</option>
+		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Costs.pdf" fdesc="Work Package Description: Management of Costs">Management of Costs</option>
+		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Risks.pdf" fdesc="Work Package Description: Management of Risks">Management of Risks</option>
+		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Quality.pdf" fdesc="Work Package Description: Management of Quality">Management of Quality</option>
+		<option column="5" rank="6" finfo="Arbeitspakete/Final_Project_Report.pdf" fdesc="Work Package Description: Final Project Report">Final Project Report</option>
+		<option column="5" rank="6" finfo="Arbeitspakete/Post_Cost_Analysis.pdf" fdesc="Work Package Description: Post Cost Analysis">Post Cost Analysis</option>
+		<option column="5" rank="6" finfo="Arbeitspakete/Lessons_Learned.pdf" fdesc="Work Package Description: Lessons Learned">Lessons Learned</option>
 		<nextevent href="l202e000" />
 	</event>
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1" id="l202e000" element="0" level="202">
