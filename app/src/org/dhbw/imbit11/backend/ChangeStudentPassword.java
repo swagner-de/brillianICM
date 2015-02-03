@@ -43,7 +43,7 @@ import javax.servlet.annotation.WebServlet;
 		// create a UsernamePasswordToken using the
 		// and password provided by the user. Username is provided by form automatically.
 				
-		UsernamePasswordToken token = new PasswordToken(username, oldpassword);
+		UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
 		
 		String password = request.getParameter("password");
 		String password_repeat = request.getParameter("password_repeat");
