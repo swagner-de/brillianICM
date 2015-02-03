@@ -527,7 +527,7 @@
 		<attachment/>
 		<nextevent href="l201e000" />
 	</event> 
-	// Laura: Änderung des Spielinhaltes, 5 Projektmanagementphasen statt 4, detailiertere weniger Bausteine für die Phasen erstellt // 
+	<!-- Laura: Änderung des Spielinhaltes, 5 Projektmanagementphasen statt 4, detailiertere weniger Bausteine für die Phasen erstellt, geändert nach DIN 69901-5 --> 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
 		<description>Please assign the work packages to each phase of the Work Breakdown Structure </description>
