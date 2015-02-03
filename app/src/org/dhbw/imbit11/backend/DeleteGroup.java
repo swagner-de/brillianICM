@@ -10,33 +10,48 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet({"/DeleteGroup"})
+
+/**
+ * When a professor deletes a group this class is invoked
+ * @author Mary
+ *
+ */
  public class DeleteGroup extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
-    /* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
-	 */
+    /**
+     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
+     */
 	public DeleteGroup() {
 		super();
 	}   	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * in the doPost method
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * @exception IOException
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doPost(request, response);
 	}  	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Method selects the groupid of the professor and deletes the UserRealm object of the
+	 * chosen group and forwards the request and response to URL of the professor view
+	 * Failure: exception thrown
+	 * @param request - contains the request of the user (has to be a professor/ admin)
+	 * @param response - contains the answer of the servlet
+	 * @exception IOException
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String url = "/Professor";
 		
 		
-		// get the userid of the current user
+		// get the groupid of the current user
 		
 		String group_id = request.getParameter("group_id");
 		//System.out.println("Zu loeschende Group_ID ist " + group_id);		
