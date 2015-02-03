@@ -10,7 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet({"/CreateUser"})
 /**
  * Contains the doPost and doGet methods to get the parameters from the register_student.jsp
  * Assigns user to groups
@@ -27,7 +26,6 @@ import javax.servlet.http.HttpServletResponse;
    /**
     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
     */
-
 	public CreateUser() {
 		super();
 	}
@@ -117,7 +115,7 @@ import javax.servlet.http.HttpServletResponse;
 			if (email != null && !email.equals("") && firstname != null
 					&& !firstname.equals("") && lastname != null
 					&& !lastname.equals("") && password != null
-					&& !password.equals("")) {
+					&& !password.equals("") && !email.contains("+")){
 
 				if (password.equals(password_repeat)) {
 					// submitting query to create a new student user
@@ -161,7 +159,7 @@ import javax.servlet.http.HttpServletResponse;
 
 			} else {
 				request.setAttribute("status",
-						"You have to fill in every field before submitting.");
+						"You have to fill in every field before submitting. /n Please do not use a +-sign in your mail adress.");
 			}
 
 		} catch (SQLException e) {
@@ -335,5 +333,4 @@ import javax.servlet.http.HttpServletResponse;
 			return groupid;
 		return groupid % 10 + calculateChecksum(groupid / 10);
 	}
-
-}
+ }
