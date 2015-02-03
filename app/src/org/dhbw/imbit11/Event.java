@@ -18,10 +18,7 @@ import java.util.ArrayList;
 /**
  * @author Erik
  * Servlet implementation class Event
- * Nimmt die Anfrage vom Front-End entgegen,	ruft den	
- *	EventExtractor auf und sendet die Antwort an das Frontend	
- *	zurück
- * 
+ * Accepts front-end request and calls the EventExtractor and sends the response back to the front-end 
  */
 @WebServlet({ "/Event", "/event.xml" })
 public class Event extends HttpServlet {
