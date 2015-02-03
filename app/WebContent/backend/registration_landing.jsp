@@ -39,7 +39,7 @@
 	</div>
 <div class="center" data-options="region:'center'">
 <h3>Welcome to brillianCRM</h3>
-<p>Your registration was successful</p>
+<p>Your registration was successful.</p>
 <p>At the moment your account is still inactive. You will shortly receive an email from us with an activation link. 
 Once activated your account using this link you can start your CRM project.</p>
 <div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
