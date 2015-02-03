@@ -47,7 +47,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * This method extracts the Parameters sent by register_student.jsp, checks several conditions and creates a new
 	 *  student user
 	 *  this method expects the groupid to be encoded ( first two digits: checksum; remaining digits: groupID*23)
-	 *  Safes parameters so they don´t have to be reentered by failure
+	 *  Safes parameters so they don't have to be reentered by failure
 	 * 	Verifies if e-Mail and gender is entered, if password equals the password_repeat and changes role of user
 	 *  If the registration was successful the user is redirected to a landing page
 	 *  if not, the form is called again and an error/status message is displayed
@@ -156,7 +156,7 @@ import javax.servlet.http.HttpServletResponse;
 	
 	/**
 	 * Assignment of a user to a group, when groupid exists creating user for this certain group
-	 * if group doesn´t exist error message and exception by failure
+	 * if group doesn't exist error message and exception by failure
 	 * @param request - contains the request of the client
 	 * @param realm - UserRealm object (was created after the parameters where send by user)
 	 * @param email - contains the e-Mail of the new user

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet({"/ConfirmRegistration"})
 
 /**
- * Class contains the doGet methode for the confirmation mail,
+ * Class contains the doGet method for the confirmation mail,
  * where the e-Mail of a user is verified
  * @author Mary
  *
@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
    static final long serialVersionUID = 1L;
      	
 	/**
-	 * Client´s response is direct to path saved in the dispatcher object
+	 * Client's response is direct to path saved in the dispatcher object
 	 * and the response forward to the view
 	 * Path directs to the Registration complete site
 	 * From the response object the e-Mail and the unverified e-Mail

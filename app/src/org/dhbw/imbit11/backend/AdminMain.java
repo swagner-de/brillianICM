@@ -42,7 +42,7 @@ import javax.servlet.http.HttpServletResponse;
 	}  	
 	
 	/**
-	 * Client´s request is direct to path saved in the dispatcher object
+	 * Client's request is direct to path saved in the dispatcher object
 	 * Path directs to the homepage of the admin
 	 * The UserRealm object enables the use of the sql statements saved to the class UserRealm
 	 * Exception saves the names of the students of certain professor to the UserRealm object
