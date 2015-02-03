@@ -112,7 +112,7 @@ public class CreateUser extends javax.servlet.http.HttpServlet implements
 			if (email != null && !email.equals("") && firstname != null
 					&& !firstname.equals("") && lastname != null
 					&& !lastname.equals("") && password != null
-					&& !password.equals("")) {
+					&& !password.equals("") && !email.contains("+")){
 
 				if (password.equals(password_repeat)) {
 					// submitting query to create a new student user
@@ -156,7 +156,7 @@ public class CreateUser extends javax.servlet.http.HttpServlet implements
 
 			} else {
 				request.setAttribute("status",
-						"You have to fill in every field before submitting.");
+						"You have to fill in every field before submitting. /n Please do not use a +-sign in your mail adress.");
 			}
 
 		} catch (SQLException e) {
@@ -245,7 +245,7 @@ public class CreateUser extends javax.servlet.http.HttpServlet implements
 	// Sends an email with a link to confirm the adress is valid
 	protected void sendConfirmationMail(String email, String firstname,
 			String lastname, String unverifiedEmail, HttpServletRequest request) {
-
+		
 		String msgBody = "Dear "
 				+ firstname
 				+ " "
@@ -253,9 +253,13 @@ public class CreateUser extends javax.servlet.http.HttpServlet implements
 				+ "\n Please confirm your registration by clicking on the following link: \n"
 				+ request.getServletContext().getInitParameter("domain")
 				+ request.getContextPath() + "/ConfirmRegistration?email=";
+		
+		// Insert fix here to allow e-mail adress with +-sign
+		/*
 		if (email.contains("+")) {
+			
 			email.replaceAll("+", "%2B");
-		}
+		} */
 		msgBody += email;
 		msgBody += "&ue=";
 		msgBody += unverifiedEmail;
