@@ -3,7 +3,8 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	<display-name>app</display-name>
+	<!-- WebApp_ID is NOT related to the version ID it is the servlet version to be used -->
+	<display-name>2.0.1benste</display-name>
 
 	<!-- Backend Servlets start here -->
 
@@ -17,7 +18,7 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- Servlets und Mapping - Sönke :-) hier könnten evtl einige Fehler entstehen -->
+	<!-- Servlets und Mapping-->
 
 	<servlet>
 		<servlet-name>uploadfile</servlet-name>
@@ -124,7 +125,7 @@ realmA.credentialsMatcher = $passwordMatcher
 
 	<context-param>
 		<param-name>domain</param-name>
-		<param-value>localhost:8080</param-value>
+		<param-value>sceiler.de:443</param-value>
 	</context-param>
 <!--  
 	<security-constraint>

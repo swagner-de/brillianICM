@@ -24,7 +24,15 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
+/**
+ * 
+ * @author Erik
+ * Je nach Anfrage werden entweder ein Node oder mehrere
+ * Nodes aus dem Spielbaum als Zeichenkette zurückgegeben.
+ * Hierzu generiert die Klasse das XPath für die jeweilige
+ * Anfrage und sendet diese an den Spielbaum.
+ * 
+ */
 public class EventExtractor {
 
 	String node = "Node not found.";
