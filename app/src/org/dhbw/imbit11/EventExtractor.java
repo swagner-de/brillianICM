@@ -27,10 +27,9 @@ import org.xml.sax.SAXException;
 /**
  * 
  * @author Erik
- * Je nach Anfrage werden entweder ein Node oder mehrere
- * Nodes aus dem Spielbaum als Zeichenkette zurückgegeben.
- * Hierzu generiert die Klasse das XPath für die jeweilige
- * Anfrage und sendet diese an den Spielbaum.
+ * Depending on the request one ore more nodes of the game tree  are returned as a string
+ * For this purpose the class generates a XPath for the particular request and
+ * sends it to the game tree
  * 
  */
 public class EventExtractor {

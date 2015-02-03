@@ -14,16 +14,16 @@ import org.dhbw.imbit11.backend.UserRealm;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+@WebServlet({ "/Event", "/event.xml" })
 
 /**
  * @author Erik
  * Servlet implementation class Event
- * Nimmt die Anfrage vom Front-End entgegen,	ruft den	
- *	EventExtractor auf und sendet die Antwort an das Frontend	
- *	zurück
+ * Gets the request front-end, calls the	
+ * EventExtractor and sends the answer to the front end
  * 
  */
-@WebServlet({ "/Event", "/event.xml" })
+
 public class Event extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
