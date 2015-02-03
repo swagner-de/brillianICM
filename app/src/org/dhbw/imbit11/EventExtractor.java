@@ -25,7 +25,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 /**
- * 
  * @author Erik
  * Depending on the request one ore more nodes of the game tree  are returned as a string
  * For this purpose the class generates a XPath for the particular request and
