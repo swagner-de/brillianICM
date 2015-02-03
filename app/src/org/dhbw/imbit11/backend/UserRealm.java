@@ -16,9 +16,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
  
 
-/*
+/**
  * Main class that provides functions to interact with the user database containing tables for users, user progress and groups
+ * @author unknown
  * 
+ * @version 1.0
+ *
  */
 public class UserRealm extends JdbcRealm {
 

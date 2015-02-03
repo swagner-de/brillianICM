@@ -12,6 +12,17 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServlet;
 
+/**
+ * Einloggen auf MailClient des brillianCRM mit dem Username kirby@mknipf.de und Passwort imbit2011B
+ * Properties des Client werden festgelegt
+ * Erfolgreiches Einloggen MailClient: Neue Email wird erzeugt mit FROM kirby@mknipf.de und TO Emailadresse aus der Variable toEmail
+ * Subject aus Variable subject und Textinhalt aus der Varibale content
+ * -> Absenden der Email
+ * Einloggen nicht erfolgreich: Exception
+ * @author Mary
+ * 
+ * @version 2.0
+ */
 public class MailClient extends HttpServlet
 {
 	 static final long serialVersionUID = 1L;
