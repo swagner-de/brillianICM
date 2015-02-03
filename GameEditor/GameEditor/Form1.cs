@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
-using System.Linq;
+using System.IO;
 
 namespace GameEditor
 {
@@ -37,6 +37,10 @@ namespace GameEditor
             {
                 XElement rootElement = XElement.Load(ofd.FileName);
                 txtBoxOut.Text = GetOutline(0, rootElement);
+                using (StreamWriter sw = new StreamWriter("result.txt"))
+                {
+                    sw.WriteLine(GetOutline(0, rootElement));
+                }
             }
             else
             {
@@ -66,6 +70,10 @@ namespace GameEditor
             if (element.Attribute("id") != null)
             {
                 result = result.AppendLine(new string(' ', indentLevel * 2) + element.Attribute("id").Value);
+                foreach (var item in element.Descendants())
+                {
+                    result = result.AppendLine(new string(' ', indentLevel * 2) + item.Value);
+                }
             }
 
             foreach (XElement childElement in element.Elements())

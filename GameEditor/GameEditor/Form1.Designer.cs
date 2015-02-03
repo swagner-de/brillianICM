@@ -48,7 +48,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1026, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1318, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,7 +92,7 @@
             // 
             this.btnTempLoadXml.Location = new System.Drawing.Point(12, 63);
             this.btnTempLoadXml.Name = "btnTempLoadXml";
-            this.btnTempLoadXml.Size = new System.Drawing.Size(169, 102);
+            this.btnTempLoadXml.Size = new System.Drawing.Size(169, 55);
             this.btnTempLoadXml.TabIndex = 1;
             this.btnTempLoadXml.Text = "button1";
             this.btnTempLoadXml.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // 
             this.btnTempExit.Location = new System.Drawing.Point(197, 63);
             this.btnTempExit.Name = "btnTempExit";
-            this.btnTempExit.Size = new System.Drawing.Size(163, 102);
+            this.btnTempExit.Size = new System.Drawing.Size(163, 55);
             this.btnTempExit.TabIndex = 2;
             this.btnTempExit.Text = "button2";
             this.btnTempExit.UseVisualStyleBackColor = true;
@@ -110,18 +110,18 @@
             // 
             // txtBoxOut
             // 
-            this.txtBoxOut.Location = new System.Drawing.Point(387, 63);
+            this.txtBoxOut.Location = new System.Drawing.Point(12, 124);
             this.txtBoxOut.Multiline = true;
             this.txtBoxOut.Name = "txtBoxOut";
             this.txtBoxOut.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtBoxOut.Size = new System.Drawing.Size(627, 573);
+            this.txtBoxOut.Size = new System.Drawing.Size(1294, 458);
             this.txtBoxOut.TabIndex = 3;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 712);
+            this.ClientSize = new System.Drawing.Size(1318, 712);
             this.Controls.Add(this.txtBoxOut);
             this.Controls.Add(this.btnTempExit);
             this.Controls.Add(this.btnTempLoadXml);
