@@ -637,8 +637,7 @@ window.mobilecheck = function() {
 function showPdf(pdfPath){
 	if(window.mobilecheck = true)
 		{
-		$('a#someID').attr({target: '_blank', 
-            href  : 'pdfPath'});
+		window.open('pdfPath','_blank');
 		}
 	else
 		{
