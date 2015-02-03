@@ -536,26 +536,26 @@
 		<column>Project Planning</column>
 		<column>Project Execution</column>
 		<column>Project Closing</column>
-		<option column="1" rank="6" finfo="Arbeitspakete/Project_Charter.pdf" fdesc="Work Package Description: Project Charter">Project Charter</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Define_Responsibilities.pdf" fdesc="Work Package Description: Define Responsibilities">Define Responsibilities</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Brainstorming.pdf" fdesc="Work Package Description: Brainstorming">Brainstorming</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Preliminary_Targets.pdf" fdesc="Work Package Description: Preliminary Targets">Preliminary Targets</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Define_Targets.pdf" fdesc="Work Package Description: Define Targets">Define Targets</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Feasability_Evaluation.pdf" fdesc="Work Package Description: Feasability Evaluation">Feasability Evaluation</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Cost_Estimation.pdf" fdesc="Work Package Description: Cost Estimation">Cost Estimation</option>
-		<option column="3" rank="6" finfo="Arbeitspakete/Project_Structure_Plan.pdf" fdesc="Work Package Description: Project Structure Plan">Project Structure Plan</option>
-		<option column="3" rank="6" finfo="Arbeitspakete/Stakeholder_Analysis.pdf" fdesc="Work Package Description: Stakeholder Analysis">Stakeholder Analysis</option>
-		<option column="3" rank="6" finfo="Arbeitspakete/Risk_Analysis.pdf" fdesc="Work Package Description: Risk Analysis">Risk Analysis</option>
-		<option column="3" rank="6" finfo="Arbeitspakete/Define_Strategies_and_Measures.pdf" fdesc="Work Package Description: Define Strategies and Measures">Define Strategies and Measures</option>
-		<option column="3" rank="6" finfo="Arbeitspakete/Scheduling.pdf" fdesc="Work Package Description: Scheduling">Scheduling</option>
-		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Schedule.pdf" fdesc="Work Package Description: Management of Schedule">Management of Schedule</option>
-		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Resources.pdf" fdesc="Work Package Description: Management of Resources">Management of Resources</option>
-		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Costs.pdf" fdesc="Work Package Description: Management of Costs">Management of Costs</option>
-		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Risks.pdf" fdesc="Work Package Description: Management of Risks">Management of Risks</option>
-		<option column="4" rank="6" finfo="Arbeitspakete/Management_of_Quality.pdf" fdesc="Work Package Description: Management of Quality">Management of Quality</option>
-		<option column="5" rank="6" finfo="Arbeitspakete/Final_Project_Report.pdf" fdesc="Work Package Description: Final Project Report">Final Project Report</option>
-		<option column="5" rank="6" finfo="Arbeitspakete/Post_Cost_Analysis.pdf" fdesc="Work Package Description: Post Cost Analysis">Post Cost Analysis</option>
-		<option column="5" rank="6" finfo="Arbeitspakete/Lessons_Learned.pdf" fdesc="Work Package Description: Lessons Learned">Lessons Learned</option>
+		<option column="4" rank="4" finfo="Arbeitspakete/Management_of_Risks.pdf" fdesc="Work Package Description: Management of Risks">Management of Risks</option>
+		<option column="5" rank="3" finfo="Arbeitspakete/Lessons_Learned.pdf" fdesc="Work Package Description: Lessons Learned">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Risk_Analysis.pdf" fdesc="Work Package Description: Risk Analysis">Risk Analysis</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Define_Responsibilities.pdf" fdesc="Work Package Description: Define Responsibilities">Define Responsibilities</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Management_of_Schedule.pdf" fdesc="Work Package Description: Management of Schedule">Management of Schedule</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Cost_Estimation.pdf" fdesc="Work Package Description: Cost Estimation">Cost Estimation</option>
+		<option column="5" rank="1" finfo="Arbeitspakete/Final_Project_Report.pdf" fdesc="Work Package Description: Final Project Report">Final Project Report</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Brainstorming.pdf" fdesc="Work Package Description: Brainstorming">Brainstorming</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Project_Structure_Plan.pdf" fdesc="Work Package Description: Project Structure Plan">Project Structure Plan</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Management_of_Costs.pdf" fdesc="Work Package Description: Management of Costs">Management of Costs</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Preliminary_Targets.pdf" fdesc="Work Package Description: Preliminary Targets">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Scheduling.pdf" fdesc="Work Package Description: Scheduling">Scheduling</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Define_Targets.pdf" fdesc="Work Package Description: Define Targets">Define Targets</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Define_Strategies_and_Measures.pdf" fdesc="Work Package Description: Define Strategies and Measures">Define Strategies and Measures</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Feasability_Evaluation.pdf" fdesc="Work Package Description: Feasability Evaluation">Feasability Evaluation</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Management_of_Resources.pdf" fdesc="Work Package Description: Management of Resources">Management of Resources</option>
+		<option column="5" rank="2" finfo="Arbeitspakete/Post_Cost_Analysis.pdf" fdesc="Work Package Description: Post Cost Analysis">Post Cost Analysis</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Stakeholder_Analysis.pdf" fdesc="Work Package Description: Stakeholder Analysis">Stakeholder Analysis</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Project_Charter.pdf" fdesc="Work Package Description: Project Charter">Project Charter</option>
+		<option column="4" rank="5" finfo="Arbeitspakete/Management_of_Quality.pdf" fdesc="Work Package Description: Management of Quality">Management of Quality</option>
 		<nextevent href="l202e000" />
 	</event>
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1" id="l202e000" element="0" level="202">
