@@ -43,6 +43,7 @@ ServletContext sc = getServletContext();
 String scRealPath = sc.getRealPath("/");
 String[] scRealPathSplit = scRealPath.split("##",2);
 String versionID = scRealPathSplit[1];
+versionID = versionID.substring(0, versionID.length()-1);
 %>
 <p align="right"> Version: <%= versionID %> </p>
 
