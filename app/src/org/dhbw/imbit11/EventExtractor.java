@@ -26,8 +26,10 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 /**
  * @author Erik
- * Depending on the request, one or multiple nodes are returned as a string. Therefore the class generates the XPath for the respective
- * request and sends it to the game tree. 
+ * Depending on the request one ore more nodes of the game tree  are returned as a string
+ * For this purpose the class generates a XPath for the particular request and
+ * sends it to the game tree
+ * 
  */
 public class EventExtractor {
 
