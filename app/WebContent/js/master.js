@@ -643,7 +643,8 @@ window.mobilecheck = function() {
 //Get mobile check value. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
 //If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
 function showPdf(pdfPath){
-	if(window.mobilecheck = true)
+	
+	if(window.mobilecheck() == true)
 		{
 		window.open('pdfPath','_blank');
 		}
