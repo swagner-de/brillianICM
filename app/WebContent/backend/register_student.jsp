@@ -36,7 +36,7 @@
 		<div class="div-header window">
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>			
 		</div>
-	</div>
+</div>
 
 <div class="center studentHomepage" data-options="region:'center'">
 	<div class="studentRegisterContainer">
