@@ -13,7 +13,6 @@ import javax.servlet.annotation.WebServlet;
 /** This class is responsible to handle a password change request
 * The frontend page is homepage_student.jsp where user enteres old and new password to update
 * @author Oliver Becher
-* @version 0.2
 */
 
  public class ChangeStudentPassword extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
