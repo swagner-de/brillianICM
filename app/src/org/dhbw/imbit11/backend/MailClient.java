@@ -35,14 +35,14 @@ public class MailClient extends HttpServlet
 	
 		public void sendMail(String toEmail, String subject, String content) {
 			 //TODO use context params to read email settings
-			final String username = "no-reply@brillianCRM.com";
-			final String password = "wibi12c";
+			final String username = getServletContext().getInitParameter("mailuser");
+			final String password = getServletContext().getInitParameter("mailpw");
 	 
 			Properties props = new Properties();
 			props.put("mail.smtp.auth", "true");
 			props.put("mail.smtp.starttls.enable", "true");
-			props.put("mail.smtp.host", "smtp.1und1.de");
-			props.put("mail.smtp.port", "587");
+			props.put("mail.smtp.host", getServletContext().getInitParameter("mailserver"));
+			props.put("mail.smtp.port", getServletContext().getInitParameter("mailport"));
 	 
 			Session session = Session.getInstance(props,
 			  new javax.mail.Authenticator() {
