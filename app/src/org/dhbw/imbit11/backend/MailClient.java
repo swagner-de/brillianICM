@@ -39,8 +39,8 @@ public class MailClient extends HttpServlet
 			final String password = getServletContext().getInitParameter("mailpw");
 	 
 			Properties props = new Properties();
-			props.put("mail.smtp.auth", "true");
-			props.put("mail.smtp.starttls.enable", "true");
+			props.put("mail.smtp.auth", getServletContext().getInitParameter("smtpauth"));
+			props.put("mail.smtp.starttls.enable", getServletContext().getInitParameter("smtptls"));
 			props.put("mail.smtp.host", getServletContext().getInitParameter("mailserver"));
 			props.put("mail.smtp.port", getServletContext().getInitParameter("mailport"));
 	 

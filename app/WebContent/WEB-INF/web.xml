@@ -153,6 +153,19 @@ realmA.credentialsMatcher = $passwordMatcher
 		<param-name>mailpw</param-name>
 		<param-value>wibi12c</param-value>
 	</context-param>
+	
+	<context-param>
+		<description>Setting for SMTP authentification</description>
+		<param-name>smtpauth</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>Setting for SMTP TLS</description>
+		<param-name>smtptls</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
 <!--  
 	<security-constraint>
 		<web-resource-collection>
