@@ -34,8 +34,6 @@
 <body class="easyui-layout">
 <div class="north" data-options="region:'north',border:false">
 		<div class="div-header window">
-			<a id="logout" class="easyui-linkbutton" data-options="plain:true"
-				onclick="window.location.href='LogoutUser'"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>			
 		</div>
 	</div>
