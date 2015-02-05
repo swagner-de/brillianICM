@@ -42,7 +42,7 @@
 			<!-- Uncomment button for muting audio to test the functionality -->
 			<a id="audio" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.AUDIO_BUTTON_TEXT%></a>
 			<!-- Possibly wrong -->
-			<form action="\<%=request.getContextPath()%>/ChangeLvl">
+			<form action="\<%=application.getContextPath()%>/ChangeLvl">
 				<input type="text" name="lvl" size="7">
 				<input type="text" name="userid" value=>
 				<input type="submit" value="GO GO POWER RANGERS!">
