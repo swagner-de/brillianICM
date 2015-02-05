@@ -20,8 +20,8 @@ import javax.servlet.annotation.WebServlet;
    static final long serialVersionUID = 1L;
  	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String url="/backend/homepage_student.jsp";
 		doPost(request, response);
-		  String url="/backend/homepage_student.jsp";
 	}  	
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
