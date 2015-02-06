@@ -30,10 +30,11 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+
+@WebServlet("/NodeViewer")
 /**
  * Servlet implementation class NodeViewer
  */
-@WebServlet("/NodeViewer")
 public class NodeViewer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

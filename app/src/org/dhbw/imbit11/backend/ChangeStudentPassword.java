@@ -1,12 +1,19 @@
 package org.dhbw.imbit11.backend;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 
 @WebServlet({"/ChangeStudentPassword"})
 
@@ -43,7 +50,7 @@ import javax.servlet.annotation.WebServlet;
 		// create a UsernamePasswordToken using the
 		// and password provided by the user. Username is provided by form automatically.
 				
-		UsernamePasswordToken token = new PasswordToken(username, oldpassword);
+		UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
 		
 		String password = request.getParameter("password");
 		String password_repeat = request.getParameter("password_repeat");
