@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>CAKE - Development Konsole</title>
+<title>BrillianCRM Rebirth - Development Konsole</title>
 <style type="text/css">
 a,p {
 	color: blue;
@@ -74,12 +74,13 @@ th,td {
 				</a></td>
 			</tr>
 			<tr style="color: #aaa;">
-				<td><a href="http://sceiler.de/phpmyadmin/"><br>PHPmyAdmin
+				<td><a href="/apidocs">JavaDoc</a></td>
+				<td><a href="http://ec2-54-149-157-182.us-west-2.compute.amazonaws.com/phpmyadmin/"><br>PHPmyAdmin
 				</a></td>
-				<td><a href="https://sceiler.de/manager"><br>Tomcat
+				<td><a href="/manager"><br>Tomcat
 						Manager<br> </a></td>
 				<td><a href="XMLEditor.jsp">XML Editor</a></td>
-				<td></td>
+				
 			</tr>
 		</table>
 	</div>
