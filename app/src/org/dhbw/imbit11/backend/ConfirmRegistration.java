@@ -33,7 +33,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * gives out an error
 	 * @param response - contains the response of the servlet
 	 * @param request - contains the request of a client
-	 * @exception IOException
+	 * @exception IOException - shows line of code in which error occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
