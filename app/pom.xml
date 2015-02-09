@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dhbw-mannheim</groupId>
 	<artifactId>brillianCRM</artifactId>
-	<version>2.0.4benste_a2</version>
+	<version>2.0.4benste_a3</version>
 	<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->
 
 	<dependencies>
@@ -22,14 +22,14 @@
 			<artifactId>shiro-web</artifactId>
 			<version>1.2.3</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
-		</dependency> -->
-		<!-- For some reason the old version is needed ...  -->
-		<dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> 
-			<version>2.4</version> <scope>provided</scope> </dependency>
+		</dependency>
+		<!-- Removed old Servlet which does not support annotation for test with 
+			2.0.4_a3 @benste <dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> 
+			<version>2.4</version> <scope>provided</scope> </dependency> -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
