@@ -668,7 +668,7 @@
 		</content>
 		<attachment />
 		<nextevent href="l289e000" />
-	<!-- Da das Spiel zum Kritischen Pfad geändert wurde, musste Mail geändert werden -->	
+	<!-- Theresa: Da das Spiel zum Kritischen Pfad geändert wurde, musste Mail geändert werden -->	
 	</event>
 	<event level="289" element="0" id="l289e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
 		<from>Priya Williams</from>
@@ -679,7 +679,7 @@
 			<br /> I started with some samples which I left on your desk. <br />
 			<br /> Kind regards, <br />Priya Williams </content>
 		<nextevent href="l290e000" />
-	<!-- Wahl zwischen verschiedenen eingezeichneten kritischen Pfaden, Bilder neu eingefügt -->	
+	<!-- Theresa: Wahl zwischen verschiedenen eingezeichneten kritischen Pfaden, Bilder neu eingefügt -->	
 	</event>
 	<event level="290" element="0" id="l290e000" eventtype="4" imcost="0" imqual="0" imtime="0" loc="3">
 		<title>Gantt-Diagramm</title>
@@ -687,7 +687,7 @@
 		<option href="l291e001" img="content8fehler1.png"> Option 1 </option>
 		<option href="l291e002" img="content8richtigerpfad.png"> Option 2 </option>
 		<option href="l291e002" img="content8fehler2.png"> Option 3 </option>
-	<!-- Mail an neues Spiel angepasst -->	
+	<!-- Theresa: Mail an neues Spiel angepasst -->	
 	</event>
 	<event level="291" element="0" id="l291e001" eventtype="3" imcost="+5" imqual="+7" imtime="+9" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -696,7 +696,7 @@
 		<content>Thank you %prename% for dealing with the Gantt-diagram. I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
 		<option href="l340e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
-	<!-- Mail an neues Spiel angepasst -->		
+	<!-- Theresa: Mail an neues Spiel angepasst -->		
 	</event>
 	<event level="291" element="0" id="l291e002" eventtype="3" imcost="-7" imqual="-9" imtime="-13" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
