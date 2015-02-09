@@ -51,7 +51,7 @@ import javax.servlet.http.HttpServletResponse;
 	 *  if not, the form is called again and an error/status message is displayed
 	 *  @param request - contains the request of a client
 	 *  @param response - contains the response of the servlet
-	 *  @exception IOException
+	 *  @exception IOException - signals that IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -304,6 +304,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * This method resolves the groupID entered out of the encrypted groupid
 	 * ( first two digits: checksum of remaining digits; remaining digits: groupID*23)
 	 * @param encryptedgroupid - contains the encrypted groupid of a certain user
+	 * @param groupid - contains an Integer, that is positioned in 3rd spot of encryptedgroupid
 	 * @return resolved - resolved groupid
 	 */
 	protected String resolveGroupid(String encryptedgroupid) {

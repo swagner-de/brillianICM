@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet({"/DeleteUser"})
 
 /**
- * 
+ * When a User is deleted this class is invoked
  * @author Mary
  *
  */
@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * in the doPost method
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException
+	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -44,7 +44,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * Failure: exception thrown
 	 * @param request - contains the request of the user (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
-	 * @exception IOException
+	 * @exception IOException - Shows line of code in which the error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
