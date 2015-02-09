@@ -1629,8 +1629,8 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Your Phone rings – Vance Veba is calling!</title>
 		<bgimg>role9pic3.png</bgimg>
-		<content> Mhh.. Well.. Yes, why not. We never had time to talk in person yet. Let’s go for drinks. </content>
-		<option href="l532e000">Great! Let's meet 8 o'clock at the bar. See you there! </option>
+		<content> Mhh... Well... Yes, why not. We never had time to talk in person yet. Let’s go for some drinks. </content>
+		<option href="l532e000">Great! Let's meet at 8 o'clock. See you there! </option>
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l532e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1651,9 +1651,9 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> You are walking up to Vance. </content>
-		<option href="l542e000">Hey, Vance! My Man! How are you doing? Let’s get boozed up! What do you want? </option>
-		<option href="l542e000">Hi, Vance! Hope you haven’t been waiting for long. Everything good? What can I order you? </option>
-		<option href="l542e000">Hello Mr.Veba! How are you doing? Hope you haven’t been waiting long. What can I order you? </option>
+		<option href="l542e000">Hey Vance! My man! How are you doing? Let’s get boozed up! What do you want? </option>
+		<option href="l542e000">Hi Vance! Hope you haven’t been waiting long. Everything good? What can I order for you? </option>
+		<option href="l542e000">Hello Mr.Veba! How are you? I hope you haven’t been waiting long. What can I order for you? </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l542e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1661,31 +1661,32 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> Hello, %gender% %surname%. I’m fine. I’ll have a beer. Thanks. </content>
-		<option href="l543e000"> You can call me %prename%. </option>
-		<option href="l543e000">Nice to meet you! </option>
+		<content>Hello, %gender% %surname%. I’m fine. I’ll have a beer. Thanks. </content>
+		<option href="l544e000">Eh! Don’t be so stuck up! Bartender, 2 shots of Jägermeister! We have to celebrate. </option>
+		<option href="l544e000">Good choice I'll have one too. Bartender, 2 pints of Paulaner, please. </option>
+		<option href="l544e000">Ok.. well.. bartender, I'll have a pint of water and a beer for the gentleman. </option>
 	</event>
 	<!-- Dialogelement -->
-	<event level="800" element="0" id="l543e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
+	<!-- event level="800" element="0" id="l543e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
 		<partner>Vance Veba (Consultant brillianCRM)</partner>
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> It's a pleasure. </content>
-		<option href="l544e000">Eh! Don’t be so stuck up! Bartender, 2 shots of Jäger! We have to celebrate. </option>
-		<option href="l544e000">Good choice I have one too. Bartender, 2 pints of Paulaner, please. </option>
-		<option href="l544e000">Ok.. well.. bartender, I have a pint of water and a beer for the gentleman. </option>
-	</event>
+		<option href="l544e000">Eh! Don’t be so stuck up! Bartender, 2 shots of Jägermeister! We have to celebrate. </option>
+		<option href="l544e000">Good choice I'll have one too. Bartender, 2 pints of Paulaner, please. </option>
+		<option href="l544e000">Ok.. well.. bartender, I'll have a pint of water and a beer for the gentleman. </option>
+	</event-->
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l544e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
 		<partner>Vance Veba (Consultant brillianCRM)</partner>
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> Alright.. </content>
+		<content> Alright... </content>
 		<option href="l545e000"> Tell me Vance, where are you from originally, you don’t look very Texan? </option>
-		<option href="l545e001">Finally I am meet our best programmer, how did you end up in the IT sector? </option>
-		<option href="l545e002">I heard you are our best IT geek. What do you do in your freetime, beside playing video games? </option>
+		<option href="l545e001">Finally I meet our best programmer, how did you end up in the IT sector? </option>
+		<option href="l545e002">I heard you are our best IT geek. What do you do in your freetime, besides playing video games? </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l545e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1694,7 +1695,7 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> That’s right. I come from New York. The best city ever! </content>
-		<option href="l550e000">Alright beside that.. Have you seen the football game yesterday? </option>
+		<option href="l550e000">Alright besides that.. Have you seen the football game yesterday? </option>
 		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1703,9 +1704,9 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> In high school I found my talent in programming. Since then I was really into programming games and later studied Computer Science in Virgina </content>
-		<option href="l550e000">Alright, let's not talk about work for now.. Have you seen the football game yesterday? </option>
-		<option href="l550e000">Interesting, but let's not talk about work for now.. Are you into sports? I had a blast at last nights football match. </option>
+		<content> In highschool I discovered my talent in programming. Since then I really was into programming games and later studied Computer Science in Virgina. </content>
+		<option href="l550e000">Alright, sounds cool... Have you seen the football game yesterday? </option>
+		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="2" id="l545e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1713,9 +1714,9 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> Thanks.. I don’t really have much time for playing games. </content>
-		<option href="l550e000">Alright beside that.. Have you seen the football game yesterday? </option>
-		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
+		<content> Thanks... I don’t really have much time for playing games. </content>
+		<option href="l550e000">What a shame. Have you seen the football game yesterday? </option>
+		<option href="l550e000">Oh ok. Are you into sports? I had a blast at last nights football match. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l550e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1723,10 +1724,10 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> No, I don’t really watch sports. I was fishing yesterday. </content>
+		<content> I didn't see the game. I was fishing yesterday. </content>
 		<option href="l552e000">Oh man, that sucks. The Cowboys smashed the Giants yesterday! Let’s watch the next one together! </option>
-		<option href="l552e000">Sounds boring to me. Anyway let’s talk business now. </option>
-		<option href="l551e002">That’s cool. I’m really into fishing as well. Really calmes me down. What’s your favorite spot? </option>
+		<option href="l552e000">Sounds boring to me. Anyway let’s talk about business now. </option>
+		<option href="l551e002">That’s cool. I’m really into fishing as well. It calmes me down. What’s your favorite spot? </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="2" id="l551e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1737,7 +1738,7 @@
 		<content> Yes, me too. Most of the time I go the spot at the Colorado River, right next to the city park. </content>
 		<option href="l552e000">Sounds great. Haven’t heard about that one. We should go there after work at some point. </option>
 		<option href="l552e001">I always go to the Turkey Creek spot. I think it’s much better. </option>
-		<option href="l552e002">I don’t know that one but if you won’t mind I would join you some time. </option>
+		<option href="l552e002">I don’t know that one but I would really like to join you some time. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l552e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1745,7 +1746,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> I will let you know. Why did you want to talk to me anyway? </content>
+		<content> I will let you know. Anyway, why did you want to talk to me? </content>
 		<option href="l554e000">I heard that you want to leave the company. What's the problem? </option>
 		<option href="l553e000">The PAS offer of course... </option>
 	</event>
@@ -1756,7 +1757,7 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> The Management treats us like dumb coding machines. All we have to do is coding as fast as we can. No one talks with us about the project and what we think about it. </content>
-		<option href="l556e000">But that's your job? </option>
+		<option href="l556e000">But isn't that your job? </option>
 		<option href="l556e000">I guess that is your field of expertise. What else could you contribute? </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1765,8 +1766,8 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> It is, but we have good ideas, too. But no one cares about that. </content>
-		<option href="l557e000">Alright, next time I will invite you to the next steering comitee meeting. </option>
+		<content> It is, but we have good ideas, too. And no one cares about that. </content>
+		<option href="l557e000">Alright, I will invite you to the next steering comitee meeting. </option>
 		<option href="l557e001">Please, talk to the IT boss then. He is your representative in the strategy meetings. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1785,7 +1786,7 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> It was great talking to you but I really have to go now, my family is waiting for me. <br /> I will continue to work on this project together with you. <br /> I am happy that you will give the developers the chance to contribute. </content>
-		<option href="l513e000">Continue.. </option>
+		<option href="l513e000">Continue... </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="1" id="l557e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1803,8 +1804,8 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> Mhh.. I guess I will give this project another chance then </content>
-		<option href="l514e000"> Continue.. </option>
+		<content> Mhh... I guess I will give this project another chance then. </content>
+		<option href="l514e000"> Continue... </option>
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l514e000" eventtype="13" imcost="-10" imqual="0" imtime="0" loc="5">
@@ -1824,7 +1825,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> Maybe.. Why did you want to talk so urgently? I can’t stay too long. </content>
+		<content> Maybe... Why did you want to talk so urgently? I can’t stay too long. </content>
 		<option href="l553e000">I need you to stay on the project. Your are our best man! </option>
 		<option href="l553e000">Ok. Let's come to the point. Don't take the PAS offer. We will pay much more! </option>
 	</event>
@@ -1835,7 +1836,7 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> Sorry my decision is final. I will leave next week. We can't work together. </content>
-		<option href="l555e000">Continue.. </option>
+		<option href="l555e000">Continue... </option>
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l555e000" eventtype="13" imcost="0" imqual="-10" imtime="0" loc="5">
@@ -1850,11 +1851,11 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> Yes, let’s do that. I guess wanted to talk me about my PAS offer? </content>
-		<option href="l590e000">That's correct. What's on your mind? Why do you want to leave? </option>
-		<option href="l590e000">Why don't you feel valued? I don't get it. </option>
+		<option href="l554e000">That's correct. What's on your mind? Why do you want to leave? </option>
+		<option href="l554e000">Why don't you feel valued? I don't get it. </option>
 	</event>
 	<!-- Dialogelement -->
-	<event level="800" element="0" id="l590e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
+	<!--  event level="800" element="0" id="l590e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
 		<partner>Vance Veba (Consultant brillianCRM)</partner>
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
@@ -1862,7 +1863,7 @@
 		<content> Yes, let’s do that. I guess wanted to talk me about my PAS offer? </content>
 		<option href="l554e000">That's correct. What's on your mind? Why do you want to leave? </option>
 		<option href="l554e000">Why don't you feel valued? I don't get it. </option>
-	</event>
+	</event-->
 	<event level="600" element="0" id="l501e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -1876,7 +1877,7 @@
 		<bgimg>role7pic1.png</bgimg>
 		<date>2014-06-22 15:03:12</date>
 		<title>You already called for your assistant to talk things through. </title>
-		<content>Hi Boss, you called me in?</content>
+		<content>Hi boss, you called me in?</content>
 		<option href="l504e000">Hi, we need to talk.</option>
 		<option href="l503e000">Hi, good to see you. How's your day going so far? </option>
 		<option href="l504e001">Hi, that's right. There seems to be something wrong... </option>
@@ -1887,7 +1888,7 @@
 		<bgimg>role7pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
-		<content>Really well, thanks for asking</content>
+		<content>Really well, thanks for asking.</content>
 		<option href="l504e000">I’m afraid this’ll change in a minute.</option>
 		<option href="l504e002">Glad to hear that. There seems to be something wrong... </option>
 		<option href="l504e001">Good. Let’s talk about the piece you did for Thomas. </option>
@@ -1900,7 +1901,7 @@
 		<content>O...kay?</content>
 		<option href="l505e000">You screwed up the GUI piece for Thomas.</option>
 		<option href="l505e000">Apparently, your work for Thomas was sub-par. </option>
-		<option href="l505e000">Was there anything wrong with the GUI piece? </option>
+		<option href="l504e001">Was there anything wrong with the GUI piece? </option>
 		<option href="l504e001">I’m exaggerating – relax. It’s about the GUI piece... </option>
 	</event>
 	<event level="600" element="1" id="l504e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1921,7 +1922,7 @@
 		<title>You give feedback to your assistant </title>
 		<content>Okay. What would that be? </content>
 		<option href="l504e001">Does the requirement list ring a bell?</option>
-		<option href="l505e002">The GUI requirement list. Nothing to be too concerned about </option>
+		<option href="l505e002">The GUI requirement list. Nothing to be too concerned about. </option>
 	</event>
 	<event level="600" element="0" id="l505e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
@@ -1962,14 +1963,14 @@
 		<title>You give feedback to your assistant </title>
 		<content>Well, okay. If that’s what both of you think.</content>
 		<option href="l507e000">I don’t want to hear anything like this in the future. </option>
-		<option href="l507e000">This time things went well, but please be more careful in the future. </option>
+		<option href="l507e000">This time things went well, but please be more carefully in the future. </option>
 	</event>
 	<event level="600" element="1" id="l506e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
-		<content>Now that you say it. Yes, I was in a real hurry and just wanted to get it done. I probably should’ve spent a few more minutes before sending it out. I’ll be more careful in the future. </content>
+		<content>Now that you say it. Yes, I was in a real hurry and just wanted to get it done. I probably should’ve spent a few more minutes before sending it out. I’ll be more carefully in the future. </content>
 		<option href="l507e001">I’m glad you see it the same way.</option>
 	</event>
 	<event level="600" element="2" id="l506e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1993,7 +1994,7 @@
 		<bgimg>role7pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
-		<content>Okay, Boss. Won’t happen again...</content>
+		<content>Okay, boss. Won’t happen again...</content>
 		<option href="l330e000">Good. That’ll be it.</option>
 	</event>
 	<event level="600" element="1" id="l507e001" eventtype="3" imcost="0" imqual="+2" imtime="0" loc="4">
@@ -2012,12 +2013,13 @@
 		<content>Is that it for now or do you need anything else? </content>
 		<option href="l330e000">That’ll be it, thank you.</option>
 	</event>
+	<!-- Falsche Referenz? l570e000 statt 330? -->
 	<event level="700" element="0" id="l570e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
-		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am and we talked business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. Whatcha think? Can you throw some analytics capabilities in the mix? </content>
+		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am and we talked business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. What do you think? Can you throw some analytics capabilities in the mix? </content>
 		<option href="l571e000">Sure, shouldn’t be any trouble.</option>
 		<option href="l571e001">As you know, we’re pretty late in the project. </option>
 		<option href="l571e002">This late in the project? I wouldn’t think so. </option>
@@ -2029,6 +2031,7 @@
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Great! I knew I could count on you. I’ll run my ideas by Jessica. </content>
 		<option href="l580e000">Okay, good.</option>
+		<option href="l580e000">Great.</option>
 	</event>
 	<event level="700" element="1" id="l571e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
@@ -2047,7 +2050,7 @@
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>I know you’re concerned about your project, but it’d be a real benefit for my department... </content>
 		<option href="l572e002">It’s out of scope. Sorry, but no. </option>
-		<option href="l572e001">Well, we could file a change request. </option>
+		<option href="l572e001">Well, we could make a change request. </option>
 	</event>
 	<event level="700" element="1" id="l572e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
@@ -2072,6 +2075,7 @@
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Frankly, that wasn’t the answer I expected to hear. But well, it’s your project... I gotta run, next meeting up ahead. Bye. </content>
 		<option href="l580e002">Goodbye.</option>
+		<option href="l581e002">I'm sorry. See you.</option>
 	</event>
 	<event level="700" element="0" id="l580e000" eventtype="1" imcost="-9" imqual="0" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
