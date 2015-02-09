@@ -2146,7 +2146,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
-		<content>Good Morning, %gender% %surname%. Let’s get right down to business, shall we? Time is money, as they say. </content>
+		<content>Good Morning, %gender% %surname%. Let’s get right down to business. Time is money, as they say. </content>
 		<option href="l601e001">I would’ve preferred some smalltalk. </option>
 		<option href="l601e002">Sure.</option>
 	</event>
@@ -2157,7 +2157,7 @@
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>What’s the matter? Aren’t you awake yet? ... So, I heard that you’re in big trouble without additional funds. Convince me. Why should I approve them? </content>
 		<option href="l602e000">As you said, we depend on this budget. </option>
-		<option href="l602e001">Without the funds, the underlying project is in danger. </option>
+		<option href="l602e001">Without the funds, the project is in danger. </option>
 		<option href="l602e002">The scope expansion brings vast benefits for your company. </option>
 	</event>
 	<event level="700" element="2" id="l601e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2167,7 +2167,7 @@
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Good. So, I heard that you’re in big trouble without additional funds. Convince me. Why should I approve them? </content>
 		<option href="l602e000">As you said, we depend on this budget. </option>
-		<option href="l602e001">Without the funds, the underlying project is in danger. </option>
+		<option href="l602e001">Without the funds, the project is in danger. </option>
 		<option href="l602e002">The scope expansion brings vast benefits for your company. </option>
 	</event>
 	<event level="700" element="0" id="l602e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2175,9 +2175,9 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
-		<content>That is entirely your problem. I do want the project to succeed. But: I want this done without any additional money. You won’t see another dime from Concrete Machinery. </content>
-		<option href="l605e003">Okay. This will mean the end of our project. </option>
-		<option href="l603e001">Listen, we’ve completed two thirds. It wouldn’t be wise to endanger this. </option>
+		<content>That is entirely your problem. I do want the project to succeed. But: I want this done without any additional money. You won’t see another Cent from Concrete Machinery. </content>
+		<option href="l605e003">Okay, this will mean the end of our project. </option>
+		<option href="l603e001">Listen, we’ve completed two thirds. It wouldn’t be wise to endanger the whole project. </option>
 		<option href="l603e002">How about I make some concessions? </option>
 		<option href="l603e003">You’re obviously bluffing. Be constructive. </option>
 	</event>
@@ -2186,8 +2186,8 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
-		<content>I am aware of that. And I do want the project to succeed. But: I want this done without any additional money. You won’t see another dime from Concrete Machinery. </content>
-		<option href="l605e003">Okay. This will mean the end of our project. </option>
+		<content>I am aware of that. And I do want the project to succeed. But: I want this done without any additional money. You won’t see another Cent from Concrete Machinery. </content>
+		<option href="l605e003">Okay, this will mean the end of our project. </option>
 		<option href="l603e001">Listen, we’ve completed two thirds. It wouldn’t be wise to endanger this. </option>
 		<option href="l603e002">How about I make some concessions? </option>
 		<option href="l603e003">You’re obviously bluffing. Be constructive. </option>
@@ -2197,7 +2197,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
-		<content>That is entirely your problem. I do want the project to succeed. But: I want this done without any additional money. You won’t see another dime from Concrete Machinery. </content>
+		<content>That is entirely your problem. I do want the project to succeed. But: I want this done without any additional money. You won’t see another Cent from Concrete Machinery. </content>
 		<option href="l605e003">Okay. This will mean the end of our project. </option>
 		<option href="l603e004">Listen, we’ve completed two thirds. It wouldn’t be wise to endanger this. </option>
 		<option href="l603e002">How about I make some concessions? </option>
@@ -2226,7 +2226,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
-		<content>Bluffing?! YOU are obviously misjudging... </content>
+		<content>Bluffing?! You are obviously misjudging... </content>
 		<option href="l604e003">Just give us the funds we need. </option>
 		<option href="l603e002">I’m sorry. How about I make some concessions? </option>
 	</event>
@@ -2329,7 +2329,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
-		<content>What’s the matter? Aren’t you awake yet? ... So, I heard that you plan on expanding the project and need additional funds for that. Convince me. Why should I approve them? </content>
+		<content>What’s the matter? Aren’t you awake yet? ... So, I heard that you plan on expanding the project and funds. Convince me. Why should I approve them? </content>
 		<option href="l602e010">As you said, additional budget is the requirement. </option>
 		<option href="l602e011">Without the funds, the scope expansion will not happen </option>
 		<option href="l602e012">The scope expansion brings vast benefits for your company. </option>
@@ -2339,7 +2339,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
-		<content>Good. So, I heard that you plan on expanding the project and need additional funds for that. Convince me. Why should I approve them? </content>
+		<content>Good. So, I heard that you plan on expanding the project and funds. Convince me. Why should I approve them? </content>
 		<option href="l602e010">As you said, additional budget is the requirement. </option>
 		<option href="l602e011">Without the funds, the scope expansion will not happen </option>
 		<option href="l602e012">The scope expansion brings vast benefits for your company. </option>
@@ -2349,7 +2349,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
-		<content>Although personally I don’t see the need for those additional features, I do want the project to succeed. But: Why can’t you do this without additional money. You won’t see another dime from Concrete Machinery. </content>
+		<content>Although personally I don’t see the need for those additional features, I do want the project to succeed. But: Why can’t you do this without additional money. You won’t see another Cent from Concrete Machinery. </content>
 		<option href="l605e013">Okay. This will mean there won't be a scope expansion. </option>
 		<option href="l603e011">Listen, the additional budget will be put to great use. </option>
 		<option href="l603e012">How about I make some concessions? </option>
@@ -2360,7 +2360,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
-		<content>I am aware of that. And I do want the project to succeed. But: Why shouldn't you do this without additional money? You won’t see another dime from Concrete Machinery. </content>
+		<content>I am aware of that. And I do want the project to succeed. But: Why shouldn't you do this without additional money? You won’t see another Cent from Concrete Machinery. </content>
 		<option href="l605e013">Okay. This will mean there won't be a scope expansion. </option>
 		<option href="l603e011">Listen, the additional budget will be put to great use. </option>
 		<option href="l603e012">How about I make some concessions? </option>
@@ -2371,7 +2371,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
-		<content>I am aware of that. And I do want the project to succeed. But: I want this done without additional money. You won’t see another dime from Concrete Machinery. </content>
+		<content>I am aware of that. And I do want the project to succeed. But: I want this done without additional money. You won’t see another Cent from Concrete Machinery. </content>
 		<option href="l605e013">Okay. This will mean there won't be a scope expansion. </option>
 		<option href="l603e014">Listen, the additional budget will be put to great use. </option>
 		<option href="l603e012">How about I make some concessions? </option>
@@ -2400,7 +2400,7 @@
 		<bgimg>role5pic3.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
-		<content>Bluffing?! YOU are obviously misjudging... </content>
+		<content>Bluffing?! You are obviously misjudging... </content>
 		<option href="l604e013">Just give us the funds we need. </option>
 		<option href="l603e012">I’m sorry. How about I make some concessions? </option>
 	</event>
@@ -2516,9 +2516,9 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
-		<content>Well, I’m worried it’s not...how do I put this... I think it’s not really what we need. Our sales operations are going great and we have had the company grow ever since we got out of the financial crisis... </content>
-		<option href="l613e000">So you think you’re successful enough already? </option>
-		<option href="l613e000">So you think our product is rubbish? </option>
+		<content>Well, I’m worried it’s not...how do I put this... I think it’s not really what we need. Our sales operations are going great and we have had the company grow ever, since we got out of the financial crisis... </content>
+		<option href="l613e000">So you’re successful enough already? </option>
+		<option href="l613e000">So our product is rubbish? </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l613e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2526,7 +2526,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic2.png</bgimg>
-		<content>I’ve been told you are an open person. So, frankly, yes, that’s what I think. I can’t really understand why our company puts so much time and money into this new system. </content>
+		<content>I’ve been told you are an open person. So yes, that’s what I think. I can’t really understand why our company puts so much time and money into this new system. </content>
 		<option href="l614e000">But don’t you see how we’re making your life even easier? </option>
 		<option href="l614e001">So what would you have me do? </option>
 	</event>
@@ -2537,7 +2537,7 @@
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic2.png</bgimg>
 		<content>All I’m seeing right now is that I’ll have to go to IT classes and learn a new system when instead we could be with my clients, selling our products! </content>
-		<option href="l615e000">I see. It seems you and your leadership have different perceptions of our product. </option>
+		<option href="l615e000">I see. Seem you and your leadership have different perceptions of our product. </option>
 		<option href="l615e001">But after you’ve learned it, you’ll be more successful, don’t you think? </option>
 	</event>
 	<!-- Dialogelement -->
@@ -2592,7 +2592,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
-		<content> Thanks. Nice to know someone at least listens. I’ll wait how that turns out. See you around, %prename%. <br />
+		<content> Thanks. Nice to know someone who at least listen. I’ll wait how that turns out. See you around, %prename%. <br />
 		</content>
 		<option href="l617e000">Bye, J.J.</option>
 	</event>
@@ -2681,7 +2681,7 @@
 	<event level="800" element="0" id="l624e000" eventtype="4" imcost="+10" imqual="0" imtime="-10" loc="3">
 		<title>Dealing with the Sales Team...</title>
 		<description>What would you like to suggest to B.R. to get everyone in the Sales Team on board? </description>
-		<option href="l625e000"> Provide B.R. with extensive marketing material to share with his team so that they will be better informed about the benefits this project brings for them. <br /> Minor cost effects, but also little benefit to be expected. </option>
+		<option href="l625e000"> Provide B.R. with extensive marketing material to share with his team so that they will be better informed about the benefits of this project. <br /> Minor cost effects, but also little benefit to be expected. </option>
 		<option href="l625e001"> Offer B.R. to bring his whole team together for a day and do an extensive live-demo to prove the benefits of the new system. Gain the ability to directly address all their concerns and show how your software solves them. <br /> Somewhat expensive, but promising. </option>
 		<option href="l625e002"> Make it a two-day event to ensure that everyone in Concrete Machinery’s sales teams will feel comfortable with the software. Additionally, bring in Thomas, your CEO. If he can’t convince the sellers, no one can. <br /> An expensive option, but one, that is almost certain to succeed. </option>
 	</event>
@@ -2804,7 +2804,7 @@
 		<title>Steering Committee</title>
 		<bgimg>role5pic3.png</bgimg>
 		<content> We’re still lacking details here... </content>
-		<option href="l630e003">Mrs. Eberle, my job is project manager. I fix problems, when they occur. And I did. I assure you, the project will be completed to everyone’s satisfaction. </option>
+		<option href="l630e003">Mrs. Eberle, my job is project manager. I fix problems, when they occur and I did. I assure you, the project will be completed to everyone’s satisfaction. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="3" id="l630e003" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2858,8 +2858,8 @@
 		<date>2014-08-11 17:21:34</date>
 		<subject>Visa expiration</subject>
 		<content> Good morning %gender% %surname% <br />
-			<br /> several visas for our German technical consultants are expiring soon. <br />
-			<br /> The intial visas were issued for 6 months. <br /> We didn't have that issue on our scope, so now instant measures are required. <br />
+			<br /> several visa for our German technical consultants are expiring soon. <br />
+			<br /> The intial visa were issued for 6 months. <br /> We didn't have that issue on our scope, so now instant measures are required. <br />
 			<br /> Please call Ms. Wilcox at the Department of Labor. She's in charge for visa extension for foreigners. <br />
 			<br /> Best regards, <br />
 			<br /> Priya Williams <br />
@@ -2871,14 +2871,14 @@
 		<date>1871-04-16 18:00:00</date>
 		<title>Compliance </title>
 		<content>You immediately call the DoL to resolve the matter. "Department of Labor, you're talking to Ms. Wilcox, how may I help you?" </content>
-		<option href="l666e601">Good Morning Ms. Wilcox, this is %gender% %surname% speaking. The working visas of my colleagues are going to expire in a few weeks and we need to extend the visa. I thought maybe you can help us with the procedure. </option>
+		<option href="l666e601">Good Morning Ms. Wilcox, this is %gender% %surname% speaking. The working visa of my colleagues are going to expire in a few weeks and we need to extend the visa. I thought maybe you can help us with the procedure. </option>
 		<option href="l666e601"> Hello Ms. Wilcox. I am %gender% %surname%. I urgently need to extend the working visas of my colleagues. Maybe you can help me? </option>
 	</event>
 	<event level="800" element="1" id="l666e601" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Government official at Department of Labor</partner>
 		<date>1871-04-16 18:00:00</date>
 		<title>Compliance </title>
-		<content>Of course I can help you %gender% %surname%. Of what nationality are your colleagues? So that I can search for the formal procedure to extend the working visas. </content>
+		<content>Of course I can help you %gender% %surname%. Of what nationality are your colleagues? So that I can search for the formal procedure to extend the working visa. </content>
 		<option href="l666e602"> The colleagues in question are German. </option>
 		<option href="l666e603"> German. Did I tell you that it is urgent? </option>
 	</event>
@@ -2907,7 +2907,7 @@
 		<title>Compliance </title>
 		<content> I am sorry there is no other way to get the extension faster. Don't worry. If you follow the steps like I told you, everything will be fine. You are in the US and the efficiency of our public authorities is the world's benchmark. </content>
 		<option href="l609e000"> Ok. I will follow the steps as you told me and hope that the extension will be granted in time. Have a good day and thank you for your help. </option>
-		<option href="l666e611"> Is all this bureaucracy necessary? Come on, they're German. I think there is a way to get the visas easier. </option>
+		<option href="l666e611"> Is all this bureaucracy necessary? Come on, they're German. I think there is a way to get the visa easier. </option>
 		<option href="l666e611"> Thank you very much but I worry that my colleagues won't get the extension in time. Let me be frank - is there something like a donation bank account for the Department of Labor? </option>
 	</event>
 	<event level="800" element="11" id="l666e611" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2924,7 +2924,7 @@
 		<partner>Government official at Department of Labor</partner>
 		<date>1871-04-16 18:00:00</date>
 		<title>Compliance </title>
-		<content> Sir, may I inform you that my parents are from Mexico. This conversation is hereby finished. I told you the procedure. Follow it or I will take care that your colleagues will be expelled from the US as soon as their visas are expired. </content>
+		<content> Sir, may I inform you that my parents are from Mexico. This conversation is hereby finished. I told you the procedure. Follow it or I will take care that your colleagues will be expelled from the US as soon as their visa are expired. </content>
 		<option href="l609e000"> Hang up phone </option>
 	</event>
 	<event level="800" element="14" id="l666e614" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2938,7 +2938,7 @@
 		<partner>Government official at Department of Labor</partner>
 		<date>1871-04-16 18:00:00</date>
 		<title>Compliance </title>
-		<content> Sir, what you just did is attempted bribery. General Federal Bribery Statute punishes attempted bribery with a maximum of 15 years in prison in the US. I will inform my supervisor about this conversation and we will consider to take legal measures. This conversation is hereby finished. I told you the procedure. Follow it or I will take care that your colleagues will be expelled from the US as soon as their visas are expired. </content>
+		<content> Sir, what you just did is attempted bribery. General Federal Bribery Statute punishes attempted bribery with a maximum of 15 years in prison in the US. I will inform my supervisor about this conversation and we will consider to take legal measures. This conversation is hereby finished. I told you the procedure. Follow it or I will take care that your colleagues will be expelled from the US as soon as their visa are expired. </content>
 		<option href="l609e000"> Hang up phone </option>
 	</event>
 	<event level="700" element="0" id="l730e003" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2963,7 +2963,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
-		<content> Hello Everyone, Welcome to our third Steering Committee Meeting. Once again I am glad that you all found the time to attend this meeting and that we are together right now. The reason why I called you in today is to discuss the events that happened over the last couple of weeks. As some of you might know, we dealt with a possible expansion of the project scope. Shortly after our last meeting, Mr. Stylus has reached out to %gender% %surname% to discuss a expansion of the project scope to incorporate analytical components </content>
+		<content> Hello Everyone, Welcome to our third Steering Committee Meeting. Once again I am glad that you all found the time to attend this meeting. The reason why I called you in today is to discuss the events of the last couple of weeks. As some of you might know, we dealt with a possible expansion of the project scope. Shortly after our last meeting, Mr. Stylus has reached out to %gender% %surname% to discuss a expansion of the project scope to incorporate analytical components </content>
 		<option href="l730e781"> %gender% %surname%, can you please quickly summarize the outcome of your discussion? </option>
 	</event>
 	<event level="700" element="1" id="l730e781" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2979,7 +2979,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
-		<content> Hello Everyone, Welcome to our third Steering Committee Meeting. Once again I am glad that you all found the time to attend this meeting and that we are together right now. The reason why I called you in today is to discuss the events that happened over the last couple of weeks. As some of you might know, we dealt with a possible expansion of the project scope. Shortly after our last meeting, Mr. Stylus has reached out to %gender% %surname% to discuss a expansion of the project scope to incorporate analytical components </content>
+		<content> Hello Everyone, Welcome to our third Steering Committee Meeting. Once again I am glad that you all found the time to attend this meeting. The reason why I called you in today is to discuss the events of the last couple of weeks. As some of you might know, we dealt with a possible expansion of the project scope. Shortly after our last meeting, Mr. Stylus has reached out to %gender% %surname% to discuss a expansion of the project scope to incorporate analytical components </content>
 		<option href="l730e791">%gender% %surname%, can you please quickly summarize the outcome of your discussion? </option>
 	</event>
 	<event level="700" element="1" id="l730e791" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2995,7 +2995,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
-		<content> Hello Everyone, Welcome to our third Steering Committee Meeting. Once again I am glad that you all found the time to attend this meeting and that we are together right now. The reason why I called you in today is to discuss the events that happened over the last couple of weeks. As some of you might know, we dealt with a possible expansion of the project scope. Shortly after our last meeting, Mr. Stylus has reached out to %gender% %surname% to discuss a expansion of the project scope to incorporate analytical components </content>
+		<content> Hello Everyone, Welcome to our third Steering Committee Meeting. Once again I am glad that you all found the time to attend this meeting. The reason why I called you in today is to discuss the events of the last couple of weeks. As some of you might know, we dealt with a possible expansion of the project scope. Shortly after our last meeting, Mr. Stylus has reached out to %gender% %surname% to discuss a expansion of the project scope to incorporate analytical components </content>
 		<option href="l730e761"> %gender% %surname%, can you please quickly summarize the outcome of your discussion? </option>
 	</event>
 	<event level="700" element="1" id="l730e761" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
