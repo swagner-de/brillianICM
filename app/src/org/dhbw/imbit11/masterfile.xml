@@ -28,7 +28,7 @@
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
-		<content>Hello %prename%, good to talk to you! Did you already receive my emails with the basic information about CRM?I hope you had a good flight and I am glad that you accepted this job offer. We chose you because of your long-term international project experience. This is a huge project for our company. This is why you have to put all efforts into bringing it to a successful end. You will find out about all the necessary details as soon as you arrive at the client's site in Houston. The customer's project manager, Miss Oaks, will pick you up at the airport. I wish you all the best for the project. I don't think that I have to remind you of this project's importance and that it is also a huge opportunity for you and your career. So, don't disappoint me! </content>
+		<content>Hello %prename%, good to talk to you! Did you already receive my emails with the basic information about CRM? I hope you had a good flight, and I am glad that you accepted this job offer. We chose you because of your long-term international project experience. This is a huge project for our company, which is why you need to focus your efforts toward the success of the project. You will find out about all the necessary details as soon as you arrive at the client's site in Houston. The customer's project manager, Miss Oaks, will pick you up at the airport. I wish you all the best for the project. I don't think that I have to remind you of this project's importance and that it is also a huge opportunity for you and your career. So, don't disappoint me! </content>
 		<option href="l002e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
 	</event>
@@ -37,10 +37,10 @@
 		<date>2014-01-02 09:21:34</date>
 		<title>Pick up by client</title>
 		<content>Hi %prename%, my name is Jessica Oaks. But you can call me Jessie. I am the project leader at Concrete Machinery. Did you have a pleasant flight? </content>
-		<option href="l003e001">Hi, nice to meet you. Yes, it was a great flight and I am looking forward to finally starting the project! </option>
+		<option href="l003e001">Hi, nice to meet you. Yes, it was a great flight, and I am looking forward to finally starting the project! </option>
 		<option href="l003e002">Hello Miss Oaks. Yes, the flight was okay. </option>
-		<option href="l003e003">Hi Jessie, the flight was okay but they only served American food. I did not like that at all! </option>
-		<option href="l003e004">Pleasant? It was horrible. I could not get any sleep, as I am so nervous about the project! </option>
+		<option href="l003e003">Hi Jessie, the flight was okay, but they only served American food. It wasn't to my taste. </option>
+		<option href="l003e004">Pleasant? It was horrible. I could not get any sleep, because I am so nervous about the project! </option>
 		<bgimg>role3pic7.png</bgimg>
 	</event>
 	<event level="3" element="1" id="l003e001" eventtype="3" imcost="+2" imqual="+4" imtime="+2" loc="1">
@@ -71,7 +71,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 13:21:34</date>
 		<title>Pick up by client</title>
-		<content>I thought that you have great experience with such projects. I hope there will be no reason to be nervous about. Let's drive to the office to start with the project! </content>
+		<content>I thought you are experienced in this type of project work. I hope there will be no cause for nerves. Let's drive to the office to start with the project! </content>
 		<option href="l004e000">Next</option>
 		<bgimg>role3pic7.png</bgimg>
 	</event>
@@ -79,7 +79,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 14:21:34</date>
 		<title>Arrival at the office</title>
-		<content>Welcome at Concrete Machinery! This is going to be your office for the next 9 months. I already placed some paperwork on your table. You will need an assistant to help you with the administrative work. These are the three possible candidates: </content>
+		<content>Welcome to Concrete Machinery! This is going to be your office for the next 9 months. I already placed some paperwork on your table. You will need an assistant to help you with the administrative work. These are the three possible candidates: </content>
 		<option href="l005e000">Next</option>
 		<bgimg>role3pic2.png</bgimg>
 	</event>
@@ -133,7 +133,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
-		<content>You may connect your computer to our network now and use the Internet. I have already sent you an email containing the project charter. </content>
+		<content>You may connect your computer to our network now and use the internet. I have already sent you an email containing the project charter. </content>
 		<option href="l011e000">Next</option>
 		<bgimg>loc3a.png</bgimg>
 	</event>
@@ -141,7 +141,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
-		<content>You may connect your computer to our network now and use the Internet. I have already sent you an email containing the project charter. </content>
+		<content>You may connect your computer to our network now and use the internet. I have already sent you an email containing the project charter. </content>
 		<option href="l011e001">Next</option>
 		<bgimg>loc3a.png</bgimg>
 	</event>
@@ -150,7 +150,7 @@
 		<to>%prename% %surname%</to>
 		<subject>Project charter</subject>
 		<date>2014-01-03 14:21:00</date>
-		<content> Dear %prename%, <br /> enclosed kindly find the project charter and you are enthroned as the Project Manager. Please print it out and sign the copy. With your signature you officially accept the terms of the project. <br />
+		<content> Dear %prename%, <br /> enclosed kindly find the project charter, and you are enstated as the Project Manager. Please print it out and sign the copy. With your signature, you officially accept the terms of the project. <br />
 			<br /> BR, <br /> Jessie </content>
 		<attachment href="project_charter1.pdf">Project charter1</attachment>
 		<nextevent href="l012e000" />
@@ -169,7 +169,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 12:21:34</date>
 		<title>Problem with assistant</title>
-		<content>Hello %prename%, unfortunately there is a problem with the assistant you have chosen before. Seems like there was a better offer by another company and your assistant decided to leave our company. From now on your new assistant will be Priya Williams. I hope that you can manage this unexpected situation. </content>
+		<content>Hello %prename%, unfortunately there is a problem with the assistant you have chosen. Seems like there was a better offer by another company, and your assistant decided to leave our company. From now on, your new assistant will be Priya Williams. I hope that you can manage this unexpected situation. </content>
 		<option href="l012e000">Next</option>
 		<bgimg/>
 	</event>
@@ -243,7 +243,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 09:21:00</date>
 		<subject>Important! Risk Analysis</subject>
-		<content> Dear %prename%, <br /> did you already think about the tools of project management? For example the Risk Analysis is very important for this project and needs to be done as quickly as possible! <br /> Keep in mind how the risk matrix is arranged – Please find an example in the attachment section. <br />
+		<content> Dear %prename%, <br /> Did you already think about the tools of project management? For example the Risk Analysis is very important for this project and needs to be done as quickly as possible! <br /> Keep in mind how the risk matrix is arranged – Please find an example in the attachment section. <br />
 			<br />
 			<br /> Please perform the Risk Analysis and check your mail afterwards. <br />
 			<br /> Kind regards, <br /> Thomas <br />
@@ -266,7 +266,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 10:21:00</date>
 		<subject>Re: Important! Risk Analysis</subject>
-		<content> Dear %prename%, <br /> thanks for your Risk Analysis. <br /> After taking a look at it I noticed that you made some mistakes. Please take a look at the correct matrix in the attachment section. <br />
+		<content> Dear %prename%, <br /> Thanks for your Risk Analysis. <br /> After taking a look at it, I noticed that you made some mistakes. Please take a look at the correct matrix in the attachment section. <br />
 			<br /> After identifying the possible risks, please also make sure to provide necessary measures for them. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
@@ -279,7 +279,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 10:55:00</date>
 		<subject>Re: Important! Risk Analysis</subject>
-		<content> Dear %prename%, <br /> thanks for your Risk Analysis. You did a great job on that one! <br /> After identifying the possible risks, please also make sure to provide necessary measures for them. <br />
+		<content> Dear %prename%, <br /> Thanks for your Risk Analysis. You did a great job on that one! <br /> After identifying the possible risks, please also make sure to provide necessary measures for them. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="Solution.pdf">Final risk matrix</attachment>
@@ -291,10 +291,10 @@
 		<description> Dear %prename%, <br /> Please choose the right measurements for the major risks “Project is out of scope” , “Budget is out of scope”! <br /> Kind regards, <br /> Thomas Zimmermann <br />
 			<br />
 		</description>
-		<option href="l025e000" > Measurements for “Project is out of scope” , “Budget is out of scope”. <br /> Plan every process and activity of the project in detail! <br /> Make sure that the goals and activities are in line with the objectives of the project. Everything in project management relies on the communication within the team. Our communication strategy focuses on relaying the project's objectives and goals. <br /> Regarding time concerns we will implement enough time buffer within the project schedule and provide a well structured project plan. </option>
+		<option href="l025e000" > Measurements for “Project is out of scope” , “Budget is out of scope”. <br /> Plan every process and activity of the project in detail! <br /> Make sure that the goals and activities are in line with the objectives of the project. Everything in project management relies on the communication within the team. Our communication strategy focuses on relaying the project's objectives and goals. <br /> Regarding time concerns, we will implement enough time buffer within the project schedule and provide a well structured project plan. </option>
 		<option href="l025e001" > Measurements for “Project is out of scope” , “Budget is out of scope”. <br /> We don’t need to plan every process in detail. <br /> We shouldn`t spend too much time on planning and scheduling. To effectively set proper goals for our team, we need to make sure that the goals are in line with the objectives of the project. <br /> Communication takes too much time and it is not very important, because everybody knows the project and their responsibilities. Take only a short view on the project. <br />
 		</option>
-		<option href="l025e001" > Measurements for “Project is out of scope” , “Budget is out of scope”. <br /> We must plan every process in detail. <br /> We rather have to spend a lot of time on planning and scheduling the easy execution. This includes to effectively set goals for our team for each milestone and activity. <br /> Communication takes too much time and is not needed at all since the goals, milestones and activities are clearly defined from the beginning by the project manager. Only the monthly status should be reported to the project manager. <br />
+		<option href="l025e001" > Measurements for “Project is out of scope” , “Budget is out of scope”. <br /> We must plan every process in detail. <br /> We rather have to spend a lot of time on planning and scheduling the easy execution. This includes effectively setting goals for our team for each milestone and activity. <br /> Communication takes too much time and is not needed at all since the goals, milestones and activities are clearly defined from the beginning by the project manager. Only the monthly status should be reported to the project manager. <br />
 		</option>
 	</event>
 	<!-- Mail -->
@@ -303,7 +303,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 11:27:00</date>
 		<subject>Re: Important! Risk Analysis Measurements</subject>
-		<content> Dear %prename%, <br /> Great job! I think you are really the perfect Project Manager for this project. <br /> All measures are right! Keep this work up. <br /> Kind regards, <br /> Thomas <br />
+		<content> Dear %prename%, <br /> Great job! I think you are really the perfect Project Manager for this project. <br /> All measures are right! Keep it up. <br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment />
 		<nextevent href="l030e000" />
@@ -314,8 +314,8 @@
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 11:27:00</date>
 		<subject>Re: Important! Risk Analysis</subject>
-		<content> Dear %prename%, <br /> I think you should review your decision. The measures are good but there are some measures missing. I completed them for you. Please check them below. <br />
-			<br /> Use an agile project management approach such as Scrum. This enables us to adapt to new requirements easily and to encourage frequent, regular communication with the customer. Regarding time concerns we should implement enough time buffers within the project schedule and provide a well structured project plan as well as a precise Budget Plan. <br />
+		<content> Dear %prename%, <br /> I think you should review your decision. The measures are good, but there are some measures missing. I completed them for you. Please check them below. <br />
+			<br /> Use an agile project management approach such as Scrum. This enables us to adapt to new requirements easily and to encourage frequent, regular communication with the customer. Regarding time concerns, we should implement enough time buffers within the project schedule and provide a well structured project plan as well as a precise budget plan. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment />
@@ -328,9 +328,9 @@
 		<date>2014-01-07 12:44:00</date>
 		<subject>Important! Stakeholder Analysis</subject>
 		<content> Dear %prename%, <br />
-			<br /> another tool for project management is the Stakeholder Analysis. It is very important for this project as well and needs to be done as quickly as possible! <br /> Keep in mind how the stakeholder matrix is arranged – Please find an example in the attachment section. <br />
+			<br /> Another tool for project management is a stakeholder analysis. A stakeholder analysis would offer useful insight into this project and should be done as soon as possible. <br /> Keep in mind how the stakeholder matrix is arranged – Please find an example in the attachment section. <br />
 			<br />
-			<br /> Please perform the Stakeholder Analysis. <br />
+			<br /> Please perform the stakeholder analysis. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="GenericStakeholderMatrix.pdf">Example of a generic stakeholder matrix </attachment>
@@ -339,7 +339,7 @@
 	<!-- Auswahl mit Bild -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="5" id="l031e000" element="0" level="31">
 		<title>Auswahl mit Bild</title>
-		<description> Please select an appropiate Stakeholder Analysis matrix which will fit your project best. <br />
+		<description> Please select an appropiate stakeholder analysis matrix which will fit your project best. <br />
 		</description>
 		<option href="l032e000" img="content5pic1.png"> Stakeholder Analysis 1. </option>
 		<option href="l032e001" img="content5pic3.png"> Stakeholder Analysis 2. </option>
@@ -352,7 +352,7 @@
 		<date>2014-01-07 12:53:00</date>
 		<subject>Re: Important! Stakeholder Analysis</subject>
 		<content> Dear %prename%, <br />
-			<br /> thanks for your Stakeholder Analysis. <br /> After taking a look at it I noticed that you made some mistakes. Please take a look at the correct matrix in the attachment section. <br />
+			<br /> Thanks for your stakeholder analysis. <br /> After taking a look at it I noticed that you made some mistakes. Please take a look at the correct matrix in the attachment section. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="StakeSol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
@@ -365,7 +365,7 @@
 		<date>2014-01-07 12:57:00</date>
 		<subject>Re: Important! Stakeholder Analysis</subject>
 		<content> Dear %prename%, <br />
-			<br /> thanks for your Stakeholder Analysis. You did a great job on that one! <br />
+			<br /> Thanks for your stakeholder analysis. You did a great job on that one! <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="StakeSol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
@@ -380,7 +380,7 @@
 		<partner>Priya Williams, (Project Assistant Concrete Machinery)</partner>
 		<date>2014-01-21 08:45:00</date>
 		<title>Kick-off reminder</title>
-		<content>Hey %prename%, the kick-off meeting will start at 9 o' clock. I just wanted to remind you! </content>
+		<content>Hey %prename%, The kick-off meeting will start at 9 o' clock. I just wanted to remind you! </content>
 		<option href="l067e000">Next</option>
 		<bgimg>role7pic2.png</bgimg>
 	</event>
@@ -418,7 +418,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:11:34</date>
 		<title>kick-off meeting</title>
-		<content>Seems like you are not very passionate about the project. Well, you should be though! It is really important for our company. </content>
+		<content>Seems like you are not very passionate about the project. You should be though! It is really important for our company. </content>
 		<option href="l073e000">Next</option>
 	</event>
 	<event level="72" element="2" id="l072e002" eventtype="3" imcost="+3" imqual="+5" imtime="+3" loc="3">
@@ -437,7 +437,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:34:00</date>
 		<title>kick-off introduction</title>
-		<content>Hello everyone! I am very happy to welcome you to the project's kick-off meeting. We all know why we are here but we don't know each other, yet. So I would suggest to start with a short personal introduction. </content>
+		<content>Hello everyone! I am very happy to welcome you to the project's kick-off meeting. We all know why we are here, but we don't know each other, yet. So I would suggest to start with a short personal introduction. </content>
 		<option href="l075e000">Next</option>
 		<bgimg>role3pic6.png</bgimg>
 	</event>
@@ -445,7 +445,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-0014-21 09:36:32</date>
 		<title>Introduction round</title>
-		<content>May I introduce myself. My name is Jessie Oaks. I am the project leader at Concrete Machinery. I am convinced that the project will bring great benefit to our company! I am also happy to welcome %prename%, the responsible Project Manager of brillianCRM.</content>
+		<content>May I introduce myself? My name is Jessie Oaks. I am the project leader at Concrete Machinery. I am convinced that the project will be very beneficial to our company! I am also happy to welcome %prename%, the responsible project manager of brillianCRM.</content>
 		<option href="l076e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
 	</event>
@@ -453,7 +453,7 @@
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<date>2014-01-21 09:43:34</date>
 		<title>Introduction round</title>
-		<content>Hello everyone, my name is Gundula Eberle. I am the CFO of Concrete Machinery. In contrast to Jessica I am not so sure that the amount of money and time invested in the project will pay off eventually, but we will see. </content>
+		<content>Hello everyone, my name is Gundula Eberle. I am the CFO of Concrete Machinery. In contrast to Jessica, I am not so sure that the amount of money and time invested in the project will pay off eventually, but we will see. </content>
 		<option href="l077e000">Next</option>
 		<bgimg>role5pic1.png</bgimg>
 	</event>
@@ -461,7 +461,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<date>2014-01-21 09:46:54</date>
 		<title>Introduction round</title>
-		<content>Hi, my name is Billy Ray Stylus. I am the Head of Sales at Concrete Machinery. As long as it will help me to make my quota, you have my full support for the project! </content>
+		<content>Hi, my name is Billy Ray Stylus. I am the head of sales at Concrete Machinery. As long as it will help me make my quota, you have my full support for the project! </content>
 		<option href="l078e000">Next</option>
 		<bgimg>role4pic1.png</bgimg>
 	</event>
@@ -469,7 +469,7 @@
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-07 09:52:37</date>
 		<title>Introduction round</title>
-		<content>Hello ladies and gentlemen. My name is Thomas Zimmermann and I am the CEO of brillianCRM. I personally agree with Miss Oaks. I think that this project is very important and I can guarantee that we are the best possible partner for it. </content>
+		<content>Hello ladies and gentlemen. My name is Thomas Zimmermann, and I am the CEO of brillianCRM. I personally agree with Miss Oaks. I think that this project is very important, and I can guarantee that we are the best possible partner for it. </content>
 		<option href="l080e000">Next</option>
 		<bgimg>role1pic1.png</bgimg>
 	</event>
@@ -477,7 +477,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:59:58</date>
 		<title>Introduction round</title>
-		<content>Great. I think that we will be able to bring the project to a successful end together. So, now that we all know each other let us look at a short kick-off presentation! </content>
+		<content>Great. I think that, together, we will be able to bring the project to a successful end. So, now that we all know each other, let us look at a short kick-off presentation! </content>
 		<option href="l081e000">Next</option>
 	</event>
 	<event level="81" element="0" id="l081e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="3">
@@ -520,8 +520,8 @@
 		<date>2014-02-15 10:21:00</date>
 		<subject>Mixed up Work Breakdown Structure</subject>
 		<content> Hello %prename%, <br />
-			<br /> How are you doing? <br /> I hope everything is going great. The Kick-Off meeting for sure went very well. Thank you for the good work and your detailed preparation! <br />
-			<br />Priya Williams has sent me the Work Breakdown Structure with the work packages that have to be done during our project. Unfortunately, the tasks are mixed up. As we need the Work Breakdown Structure for further planning, please go to your office in order to complete your task. <br />
+			<br /> How are you doing? <br /> I hope everything is going great. The kick-off meeting went very well. Thank you for the good work and your detailed preparation! <br />
+			<br />Priya Williams has sent me the work breakdown structure with the work packages that have to be done during our project. Unfortunately, the tasks are mixed up. As we need the work breakdown structure for further planning, please go to the office and sort it out. <br />
 			<br /> Thank you very much. <br />
 			<br /> Kind regards, <br /> Thomas </content>
 		<attachment/>
@@ -529,7 +529,7 @@
 	</event>
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
-		<description>Please assign the work packages to each phase of the Work Breakdown Structure </description>
+		<description>Please assign the work packages to each phase of the work breakdown structure </description>
 		<column>Project Initiation</column>
 		<column>Project Planning</column>
 		<column>Project Execution</column>
@@ -575,7 +575,7 @@
 		<from>Thomas Zimmermann </from>
 		<to>%prename% %surname%</to>
 		<date>2014-02-15 14:21:00</date>
-		<subject>Thank You for the Work Break Down Structure</subject>
+		<subject>Thank You for the work breakdown structure</subject>
 		<content> Hello %prename%, <br />
 			<br /> I have received your corrected work breakdown structure and it looks very good. I hope it didn’t take too much time. <br />
 			<br /> The work breakdown structure is also stored on your desktop.<br />
@@ -590,7 +590,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-02-16 12:21:00</date>
 		<subject>Important! Resource and Budget Planning</subject>
-		<content> Hello %prename%, <br /> A project is a collaborative process, frequently involving research or design that is carefully planned to achieve a particular aim. A well planned project saves time, money and also evaluates unforeseen problems that may occur in the given activity. A plan is a guide that will help you as a Project Manager. <br /> Planning allows you to find the critical path. It allows you to balance the costs, schedule and resources to be most effective. It allows you to set milestones and effectively track the progress. <br />
+		<content> Hello %prename%, <br /> A project is a collaborative process, frequently involving research or design that is carefully planned to achieve a particular aim. A well planned project saves time, money and also evaluates unforeseen problems that may occur in the given activity. A plan is a guide that will help you as a project manager. <br /> Planning allows you to find the critical path. It allows you to balance the costs, schedule and resources to be most effective. It allows you to set milestones and effectively track the progress. <br />
 			<br /> It is now the time to plan the budget for our CRM Project. In the following activity you need to calculate the resources for every phase of the project. Please note the amount for each phase on a piece of paper in order to calculate the final amount of costs for the project. <br />
 			<br /> Good luck and kind regards, <br /> Thomas <br />
 		</content>
@@ -677,7 +677,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-02-16 16:21:00</date>
 		<subject>Re: Important! Resource and Budget Planning</subject>
-		<content> Dear %prename%, <br /> great job! I think you are really the perfect Project Manager for this project. <br /> All calculations are right! Keep this work up. <br /> Kind regards, <br /> Thomas <br />
+		<content> Dear %prename%, <br /> Great job! I think you are really the perfect project manager for this project. <br /> All calculations are correct! Keep this work up. <br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment />
 		<nextevent href="l289e000" />
@@ -687,7 +687,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-02-17 10:21:00</date>
 		<subject>Gantt-diagram</subject>
-		<content>Dear %prename%, <br /> enclosed please find another important document for the project, the Gantt-diagram that I have compiled for you. Please go trough this document carefully and identify the critical path of the project! <br />
+		<content>Dear %prename%, <br /> Enclosed please find another important document for the project, the gantt-diagram that I have compiled for you. Please go trough this document carefully and identify the critical path of the project! <br />
 			<br /> The Gantt-diagram is also stored on your desktop. <br />
 			<br /> Kind regards, <br />Priya Williams </content>
 		<attachment href="project.pdf">Project charts</attachment>
@@ -695,16 +695,16 @@
 	</event>
 	<event level="290" element="0" id="l290e000" eventtype="4" imcost="0" imqual="0" imtime="0" loc="3">
 		<title>Critical Path</title>
-		<description>What is the critical path of the Gantt-diagram </description>
+		<description>What is the critical path of the gantt-diagram? </description>
 		<option href="l291e001"> The critical path is the red path including staffing and testing. </option>
 		<option href="l291e002"> There is no critical path </option>
-		<option href="l291e002">The critical path is the blue path including stakeholderanalysis and data migration. </option>
+		<option href="l291e002">The critical path is the blue path including stakeholder analysis and data migration. </option>
 	</event>
 	<event level="291" element="0" id="l291e001" eventtype="3" imcost="+5" imqual="+7" imtime="+9" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
-		<content>Thank you %prename% for dealing with the Gantt-diagram. You seem to understand the importance of this document. I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
+		<content>Thank you %prename% for dealing with the gantt-diagram. You seem to understand the importance of this document. I think we are doing fine with the project. The next important milestone will be our first steering committee meeting. </content>
 		<option href="l340e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
 	</event>
@@ -712,7 +712,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
-		<content>Thank you %prename% for dealing with the Gantt-diagram. You should imform yourself about the importance of this document once more in order to identify the critical path. Nevertheless, I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
+		<content>Thank you %prename% for dealing with the gantt-diagram. You should imform yourself about the importance of this document once more in order to identify the critical path. Nevertheless, I think we are doing fine with the project. The next important milestone will be our first steering committee meeting. </content>
 		<option href="l292e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
 	</event>
@@ -870,7 +870,7 @@
 		<bgimg>role2pic1.png</bgimg>
 		<content>I assure you, we are working as hard as we can. But maybe a few additional hands would not hurt... </content>
 		<option href="l310e001">In that case, I will give you the budget to hire a few more people. </option>
-		<option href="l311e002">I could send over a few experts from Germany if you think that’s helpful. </option>
+		<option href="l311e002">I could send over a few experts from Germany, if you think that’s helpful. </option>
 		<option href="l310e002">I am afraid our budget allows no further hands. </option>
 		<option href="l310e000">I don’t think so. You created a problem, you will fix it yourself. Even if that means extra hours for your team. Goodbye! </option>
 	</event>
@@ -898,7 +898,7 @@
 		<content>Yes, I think that would be a big help for us. </content>
 		<option href="l311e000">Ok, I’ll see that it gets done. </option>
 		<option href="l311e002">Or would you prefer if we send someone over? </option>
-		<option href="l311e001">Ok,I’ll get it done, but I hope this does not happen again. </option>
+		<option href="l311e001">Ok, I’ll get it done, but I hope this does not happen again. </option>
 		<option href="l311e001">Ok, that’s fine, but I hope next time you turn to me with your problems earlier. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -946,7 +946,7 @@
 		<content>Well, I guess that would be even better. </content>
 		<option href="l312e001">Ok, I’ll see that it gets done. </option>
 		<option href="l312e001">I see. I will make that happen. </option>
-		<option href="l312e002">Ok,I’ll get it done, but I hope this never happens again. </option>
+		<option href="l312e002">Ok, I’ll get it done, but I hope this never happens again. </option>
 		<option href="l312e002">Ok, that’s fine, but I hope next time you turn to me with your problems earlier. </option>
 	</event>
 	<!-- l311e003 ENDPUNKT: deutlicher Zeitverzug -->
@@ -957,9 +957,9 @@
 		<date>2014-06-09 16:25:14</date>
 		<content> Dear %gender% %surname%, <br />
 			<br /> I followed up on our colleagues’ activities in India. The results are not what I expected. <br />
-			<br /> We are drastically behind the schedule. Looks like we should have taken a closer look into the progress of the Indian team. They are not even close to finish everything they had in scope for this section of the project. <br />
+			<br /> We are drastically behind the schedule. Looks like we should have taken a closer look into the progress of the Indian team. They are not even close to finishing everything they had in scope for this section of the project. <br />
 			<br /> I took the time to read a little bit about the Indian culture in order to avoid further complications due to cultural differences. What I found out: <br />
-			<br /> In India, it is critical not to lose face in front of others. This may be why Avi told us that everything was going according to plan. It think that he was afraid of telling us the truth and losing face. <br />
+			<br /> In India, it is critical not to lose face in front of others. This may be why Avi told us that everything was going according to plan. I think that he was afraid of telling us the truth and losing face. <br />
 			<br /> My suggestion is that we talk to Ms. Oaks on how to fix this and from now on have a closer look on our colleagues in India. <br />
 			<br /> Regards, <br />
 			<br /> Priya Williams </content>
@@ -974,7 +974,7 @@
 		<date>2014-06-09 16:25:14</date>
 		<content> Dear %gender% %surname%, <br />
 			<br /> I followed up on our colleagues’ activities in India. The results are close to our expectations. <br />
-			<br /> We are not in schedule but very close to it. Of course hiring new colleagues also strained our budget a little. We will to manage this closely in the future. <br />
+			<br /> We are not in schedule but very close to it. Of course hiring new colleagues also strained our budget a little. We will need to manage this closely in the future. <br />
 			<br /> From my point of view, this is an acceptable state but maybe we can discuss with Ms. Oaks on how to fix our budget problems. <br />
 			<br /> Regards, <br />
 			<br /> Priya Williams </content>
@@ -1029,10 +1029,10 @@
 		<date>2014-06-10 10:21:00</date>
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
-			<br /> Hope you are doing well? <br />
+			<br /> Hope you are doing well. <br />
 			<br /> I have followed up on your email with our Indian colleagues. Seems like things are a little bit out of hand. It appears that our colleagues are significantly behind schedule. <br /> I propose the following to fix this problem: <br />
 		</content>
-		<option href="l317e000">Our Indian colleagues will work overtime to fix the problem. Obviously without additional compensation – they created the problem, they should fix it. </option>
+		<option href="l317e000">Our Indian colleagues will work overtime to fix the problem. Obviously without additional compensation. They created the problem: they should fix it. </option>
 		<option href="l315e000">We will hire additional staff. I will follow up with a proposition later today. </option>
 		<option href="l315e001">Maybe you, Mrs. Eberle and I can come to an agreement to reduce the project scope. That would enable our colleagues to meet the schedule. Obviously we would reduce our charges accordingly. </option>
 		<content>
@@ -1046,12 +1046,12 @@
 		<date>2014-06-10 11:21:00</date>
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
-			<br /> Hope you are doing well? <br />
+			<br /> Hope you are doing well. <br />
 			<br /> I have followed up on your email with our Indian colleagues. Seems like things are a little bit out of hand. As you know, our colleagues in India worked overtime to fix a problem with their schedule. Unfortunately, this measure backfired and quality has suffered: <br /> * The system crashes frequently <br /> * Not all required data fields have been implemented <br />
 			<br /> I propose the following to fix this problem: <br />
 		</content>
 		<option href="l317e005">We have the know-how needed to deal with these issues in Germany. We will send over experts to solve the issue. </option>
-		<option href="l317e006">We will pay a bonus to our Indian employees to increase motivation. We will monitor them more tightly and thereby get things back on track. </option>
+		<option href="l317e006">We will pay a bonus to our Indian employees to increase motivation. We will monitor them more closely and thereby get things back on track. </option>
 		<option href="l317e007">We will hire new resources in India to increase our team’s capacity. </option>
 		<content>
 			<br /> I am very sorry for the inconvenience created and hope we will find a solution that makes everyone happy. <br />
@@ -1064,7 +1064,7 @@
 		<date>2014-06-10 15:21:00</date>
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
-			<br /> Hope you are doing well? <br />
+			<br /> Hope you are doing well. <br />
 			<br /> I have followed up on your email with our Indian colleagues. Seems like their work got slightly delayed. As you know, we have hired additional resources in India to counter the delay. <br /> In the light of our new situation, I propose the following: <br />
 		</content>
 		<option href="l317e008">Let’s further increase our Indian team. The situation has already improved since hiring the new colleagues and can be improved further! </option>
@@ -1081,11 +1081,11 @@
 		<date>2014-06-10 16:35:00</date>
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
-			<br /> Hope you are doing well? <br />
+			<br /> Hope you are doing well. <br />
 			<br /> I have followed up on your email with our Indian colleagues. Seems like things are slightly out of hand. Our Indian colleagues had problems meeting the schedule, so we sent over experts from Germany. We are back on schedule now, but the cost of sending our experts on assignment was significant. <br />
 			<br /> I propose the following action: <br />
 		</content>
-		<option href="l317e011">Let’s remove our German colleagues from the project again. The time problems are fixed for now and we do not want further cost increases. </option>
+		<option href="l317e011">Let’s remove our German colleagues from the project again. The time problems are fixed for now, and we do not want further cost increases. </option>
 		<option href="l317e012">Let’s send our experts back to Germany and decrease the Indian team size. Since we are back on schedule, Avi should be doing fine from now on even with a smaller team. </option>
 		<option href="l317e013">Since everything worked so well with our experts, let’s keep them on the project and provide further support to our colleagues in India. This way we can ensure the time and quality goals will be met. </option>
 		<content>
@@ -1096,7 +1096,7 @@
 	<event level="600" element="0" id="l315e000" eventtype="4" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>You have the choice...</title>
 		<description>Please choose how many people you would like to add to your project team. </description>
-		<option href="l317e001"> Hire 10 Indian IT specialists! <br /> They work hard at much lower cost than their Germany colleagues. </option>
+		<option href="l317e001"> Hire 10 Indian IT specialists! <br /> They work hard at much lower cost than their German colleagues. </option>
 		<option href="l317e002"> Hire 10 German CRM experts! <br /> They may be more expensive, but they will get the job done! </option>
 		<option href="l317e003"> Hire 5 Indian IT specialists and 5 German CRM experts! <br /> Combine the best of both options to make sure the project goes well. </option>
 	</event>
@@ -1107,8 +1107,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Can you please propose modules that might be taken out of scope for this release? <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Can you please propose modules that might be taken out of scope for this release? <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l316e000" />
@@ -1136,7 +1136,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1149,8 +1149,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1162,7 +1162,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1175,8 +1175,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1188,8 +1188,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1201,8 +1201,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1214,8 +1214,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1227,8 +1227,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1240,8 +1240,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1253,8 +1253,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1266,8 +1266,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1279,8 +1279,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1292,8 +1292,8 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your mail. I was surprised to hear that things developed this fastly, but I’m glad you already came up with a back-up plan. <br />
-			<br /> I agree to your suggestion. Please take all necessary steps. <br />
+			<br /> Thank you for your mail. I was surprised to hear that things developed this quickly, but I’m glad you already came up with a back-up plan. <br />
+			<br /> I agree with your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
 		<nextevent href="l501e000" />
@@ -1310,7 +1310,7 @@
 		<date>2014-08-25 17:21:34</date>
 		<subject>Feedback on current Status</subject>
 		<content> Hello %gender% %surname% , <br />
-			<br /> Thank you again for the extensive conversation last Thursday. I think it was good that we had this discussion and that we could clarify all these little issues we had. I am very positive about our progress by now and I feel that we are back on track with all of our tasks. I also talked to your assistant on Friday. I appreciate that you invest so much time in informing me about the situation. We should try to keep this close contact from now on. As I already mentioned I am very satisfied with the progress of my team. We will conclude the implementation soon, so that we can finally rollout the last components and complete the employee training. The implementation has been quite satisfying so far. There are some minor bugs concerning the customer data. The issuing of invoices does not function perfectly so far. In some cases the address is not generated correctly. Most likely it has something to do with the design of the underlying database. But apart from that, the implementation runs very good and we are about to finish soon. Let me know if you want to discuss the issue again. If not we will hear us soon! <br />
+			<br /> Thank you again for the extensive conversation last Thursday. I think it was good that we had this discussion and that we could clarify all the little issues we had. I am very positive about our progress up to now, and I feel that we are back on track with all of our tasks. I also talked to your assistant on Friday. I appreciate that you invest so much time in informing me about the situation. We should try to keep close contact from now on. As I already mentioned, I am very satisfied with the progress of my team. We will conclude the implementation soon, so that we can finally rollout the last components and complete the employee training. The implementation has been quite satisfying so far. There are some minor bugs concerning the customer data. The issuing of invoices has not been functioning properly. In some cases the address is not generated correctly. Most likely it has something to do with the design of the underlying database. But apart from that, the implementation runs very good and we are about to finish soon. Let me know if you want to discuss the issue again. I will keep you posted. <br />
 			<br /> Kind regards <br />
 			<br />Avi </content>
 		<attachment href="" />
@@ -1338,7 +1338,7 @@
 	<!-- Prioritäten setzen -->
 	<!-- Benachrichtigung -->
 	<event level="600" element="0" id="l330e000" eventtype="13" imcost="+10" imqual="0" imtime="-10" loc="4">
-		<content> In 30 minutes is your meeting with the steering comitee. You will present the current status of the project. Better be prepared! </content>
+		<content> Your meeting with the steering comitee is in 30 minutes. You will present the current status of the project. Better be prepared! </content>
 		<bgimg>loc3a.PNG</bgimg>
 		<nextevent href="l331e000" />
 	</event>
@@ -1349,12 +1349,12 @@
 		<title> Your Assistant comes into your office.</title>
 		<bgimg>role7pic2.png</bgimg>
 		<content> %gender% %surname%! <br />
-			<br /> Sorry to interrupt you but it is important. <br />
-			<br /> PAS is on the brink to steal our best developer – Vance Veba! They offered him a better paid job and a prized package of PAS stocks. He is a very proud fellow. He has just said to me that it is not about the money, he likes his current job as well but doesn’t feels valued for his hard work. The only one who can change his mind is the project leader – YOU! Do something and hurry up or we lose him. <br />
+			<br /> Sorry to interrupt you, but it is important. <br />
+			<br /> PAS is on the brink to steal our best developer – Vance Veba! They offered him a better paid job and a prized package of PAS stocks. He is a very proud fellow. He has just said to me that it is not about the money, he likes his current job as well but doesn’t feel valued for his hard work. The only one who can change his mind is the project leader – YOU! Do something and hurry up, or we will lose him. <br />
 			<br />
 		</content>
 		<option href="l331e001">Chill out my friend. I will call Vance and invite him for some drinks later tonight. </option>
-		<option href="l331e001">It’s always the same with these PAS suckers! No way they steal our best man. I don’t have time right now. Call him and tell him that he will get a pay raise of 50k! This will keep him at our firm. </option>
+		<option href="l331e001">It’s always the same with these PAS suckers! No way are they going to steal our best man. I don’t have time right now. Call him and tell him that he will get a pay raise of 50k! That will be an offer he cannot easily refuse. </option>
 		<option href="l331e001">Vance who? Never heard of this guy. He can’t be that important. Let him go, I have more important things to do. </option>
 		<option href="l331e001">Damn, not now! We can’t lose him but I don’t have time right now. I will visit him after the next meeting and tell how important he is to us and that he deserves more acknowledgements of such. </option>
 	</event>
@@ -1378,10 +1378,10 @@
 			<br /> Let me get straight to the point. Our database server supplier has just called. They still didn’t receive the payment for the servers you ordered. We agreed that you should have done it 2 days ago. If they don’t receive the money today we will lose the cashback! This is big money and this project costs a lot already! Get this fixed quickly! <br />
 			<br />
 		</content>
-		<option href="l332e001">Hello Mrs. Eberle, I wish you a good day as well. I don’t have any time left. I need to be in an imporant meeting in 10 minutes. I talk to the suppliers tomorrow. </option>
-		<option href="l332e002">You don’t beat around the bush, Gundel. I like that. I will transfer the money immediately by myself. I hope that satisfies you. </option>
+		<option href="l332e001">Hello Mrs. Eberle, I wish you a good day as well. I don’t have any time left. I need to be in an imporant meeting in 10 minutes. I will talk to the suppliers tomorrow. </option>
+		<option href="l332e002">You don’t beat around the bush, Gundula. I like that. I will transfer the money immediately by myself. I hope that satisfies you. </option>
 		<option href="l332e006">Sorry, I don’t have any time right now. I will deal with this tomorrow. </option>
-		<option href="l332e004">Mrs. Eberle. Don’t worry. We work with these suppliers for ages. They wouldn’t upset a good customer just because of one day. I this is just a misunderstanding. </option>
+		<option href="l332e004">Mrs. Eberle. Don’t worry. We have worked with these suppliers for ages. They wouldn’t upset a good customer just because of one day. I think this is just a misunderstanding. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="1" id="l332e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1394,7 +1394,7 @@
 		</content>
 		<option href="l332e005">Ok you are right. I will take care of the payment immediately. Sorry for the invoncenience. </option>
 		<option href="l332e007">I take full responsibility. Talk to you tomorrow, got to go. </option>
-		<option href="l332e006">I got it! Let me think about. I call you later </option>
+		<option href="l332e006">I got it! Let me think about. I will call you later </option>
 		<option href="l332e007">There is nothing I can do for you right now. I will take care of it as soon as possible. Thanks for letting me know. Cheerio! </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1403,7 +1403,7 @@
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
 		<bgimg>role5pic1.png</bgimg>
-		<content> Good! I count on you,%prename% %surname% <br />
+		<content> Good! I am counting on you,%prename% %surname% <br />
 			<br />
 		</content>
 		<option href="l332e006">Okay! </option>
@@ -1437,8 +1437,8 @@
 		<date>2014-07-04 17:21:34</date>
 		<subject>Contact CTO</subject>
 		<content> Hello %gender% %surname%, <br />
-			<br /> hope everything is going well on your side. <br />
-			<br /> I know you have to be in the steering comitee meeting in a couple of minutes but I’m afraid I come to you with a very urgent topic. There is a change in plan. The prototype development will be executed earlier than planned. That mean we need our new CRM database up and running by the end of next week. <br />
+			<br /> Hope everything is going well on your side. <br />
+			<br /> I know you have to be in the steering comitee meeting in a couple of minutes, but I’m afraid I come to you with a very urgent topic. There is a change in plan. The prototype development will be executed earlier than planned. That means we need our new CRM database up and running by the end of next week. <br />
 			<br /> Please contact our CTO via email, he has to give the green light to the database guys, otherwise they won’t set it up. <br />
 			<br /> Be quick, it’s his last day before he goes on vacation! <br />
 			<br /> Kind regards, <br />
@@ -1452,7 +1452,7 @@
 		<description>Please choose an appropiate reaction!</description>
 		<option href="l630e000">This is an important task and has to be done asap. I will contact the CTO and explain to him the change in plan. No delay is expected. </option>
 		<option href="l630e100">This can wait until tomorrow. I need to prepare for the meeting now. </option>
-		<option href="l630e100"> I will answer him that I don’t have any time and that he should do it on his own. I hope he can figure it out. </option>
+		<option href="l630e100"> I will tell him that I don’t have any time and that he should do it on his own. I hope he can figure it out. </option>
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="600" element="7" id="l332e007" eventtype="13" imcost="0" imqual="0" imtime="-5" loc="4">
@@ -1461,7 +1461,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="500" element="0" id="l340e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="3">
-		<content>This is the first Steering Committee! You are moderating it. Hope you are prepared. </content>
+		<content>This is the first steering committee! You are moderating it. Hope you are prepared. </content>
 		<bgimg>content3pic3.png</bgimg>
 		<nextevent href="l340e001" />
 	</event>
@@ -1472,7 +1472,7 @@
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
 		<content> Hello everyone! <br />
-			<br /> Welcome to our first steering Committee Meeting. I am glad that you all found the time to attend this meeting and that we are together right now. As this is our first Steering Committee Meeting I will quickly remind us of the purposes and goals of this Meeting and explain the agenda for this and the upcoming Steering Committee Meetings. During our Steering Committee Meeting all key managers of the project come together and control the realization of the project at the strategic level. This is where we verify the project’s coherence with established aims, and if the project keeps established frames such as range, costs and deadlines. All high-level decisions for the project should be discussed and approved during these meetings. This is our first Steering Committee Meeting and from now on we will meet every month and in urgencies also in between. I am glad that everyone is here and that we have Avi on the phone. </content>
+			<br /> Welcome to our first steering committee meeting. I am glad that you all found the time to attend this meeting and that we are together right now. As this is our first steering committee meeting, I will quickly remind us all of the purposes and goals of this meeting and explain the agenda for this and the upcoming steering committee meetings. During our steering committee meeting all key managers of the project come together and control the realization of the project at the strategic level. This is where we verify the project’s coherence with established aims, and if the project keeps established frames such as range, cost and deadlines. All high-level decisions for the project should be discussed and approved during these meetings. This is our first steering committee meeting and from now on we will meet every month as well as in urgent cases that arise. I am glad that everyone is here and that we have Avi on the phone. </content>
 		<option href="l340e002">Avi, can you hear us? </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1490,17 +1490,17 @@
 		<date>2014-08-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic10.png</bgimg>
-		<content> Ok, well let’s go over the agenda quickly. In the following meetings we will start going over the minutes of the previous meeting, to remind us again of what has happened until then and to obtain everyone’s approval. As our last meeting was the Kick-off Meeting, we won’t go over the minutes today. Following we will discuss the Action List we composed in the last meeting. Afterwards I will give a status report on the project, presenting what has been achieved since the last meeting, announcing the upcoming tasks and illustrating any issues. We continue by discussing the current issues and decide on how to handle potential problems and how to proceed. After that there is time to announce and discuss any other subjects that you want to discuss with the Steering Committee. So that was the agenda. Are there any questions? </content>
+		<content> Ok, well let’s go over the agenda quickly. In the following meetings we will start going over the minutes of the previous meeting, to remind us again of what has happened until then and to obtain everyone’s approval. As our last meeting was the kick-off meeting, we won’t go over the minutes today. Following, we will discuss the actions list we composed in the last meeting. Afterwards I will give a status report on the project, presenting what has been achieved since the last meeting, announcing the upcoming tasks and illustrating any issues. We continue by discussing the current issues and decide on how to handle potential problems and how to proceed. After that, there is time to announce and discuss any other subjects that you want to discuss with the steering committee. So that was the agenda. Are there any questions? </content>
 		<option href="l340e004">Next</option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="500" element="4" id="l340e004" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
-		<partner>Gundla Eberle</partner>
+		<partner>Gundula Eberle</partner>
 		<date>2014-08-05 10:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role5pic1.png</bgimg>
 		<content>Is there any possibility that we can meet more often than every month if it is necessary? </content>
-		<option href="l340e005">Yes of course there is. If there are any major decisions to make immediately I will organize a Meeting as soon as possible. If any of you has any problems or concerns please inform me about it! </option>
+		<option href="l340e005">Yes of course there is. If there are any major decisions to be made immediately, I will organize a meeting as soon as possible. If any of you has any problems or concerns please inform me about it! </option>
 		<option href="l340e006">No, that is strictly forbidden. We will just meet once month. Apart from that I think we all are pretty busy so that we won’t have time for more meetings. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1509,7 +1509,7 @@
 		<date>2014-08-05 10:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic14.png</bgimg>
-		<content>So if there are no more questions, let’s start for today. Here we have the Action List from the Kick-Off Meeting, which contains the tasks for the planning phase. The tasks mainly concern the project management team and I am happy to say that we could complete all tasks. I will refer to the task again in the Status Report. </content>
+		<content>So if there are no more questions, let’s start for today. Here we have the actions list from the kick-off meeting, which contains the tasks for the planning phase. The tasks mainly concern the project management team and I am happy to say that we could complete all tasks. I will refer to the task again in the status report. </content>
 		<option href="l340e007">Next</option>
 	</event>
 	<!-- Dialogelement -->
@@ -1518,7 +1518,7 @@
 		<date>2014-08-06 11:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic14.png</bgimg>
-		<content>So if there are no more questions, let’s start for today. Here we have the Action List from the Kick-Off Meeting, which contains the tasks for the planning phase. The tasks mainly concern the project management team and I am happy to say that we could complete all tasks. I will refer to the task again in the Status Report. </content>
+		<content>So if there are no more questions, let’s start for today. Here we have the actions list from the kick-off meeting, which contains the tasks for the planning phase. The tasks mainly concern the project management team and I am happy to say that we could complete all tasks. I will refer to the tasks again in the status report. </content>
 		<option href="l340e007">Next</option>
 	</event>
 	<!-- Dialogelement -->
@@ -1527,7 +1527,7 @@
 		<date>2014-08-06 12:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic12.png</bgimg>
-		<content>So let’s come to the Project Status Report. We just concluded the planning phase of the project, which is about 20% of the project work. Until now there are no problems concerning our schedule, budget or the quality. </content>
+		<content>So let’s come to the project status report. We just concluded the planning phase of the project, which is about 20% of the project work. Up until now, there are no problems concerning schedule, budget or quality. </content>
 		<option href="l340e008">Next</option>
 	</event>
 	<!-- Dialogelement -->
@@ -1536,7 +1536,7 @@
 		<date>2014-08-06 09:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic13.png</bgimg>
-		<content>Our main achievement from the last months is the actual state and the target state analysis. During several meetings with Concrete Mashinery we discussed their current situation. Following we did a target state analysis, including the migration concept and so on. </content>
+		<content>Our main achievement from the last months is the actual state and the target state analysis. During several meetings with Concrete Mashinery we discussed their current situation. Following, we did a target state analysis, including the migration concept and so on. </content>
 		<option href="l340e009">Next</option>
 	</event>
 	<!-- Dialogelement -->
@@ -1545,7 +1545,7 @@
 		<date>2014-08-06 10:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic13.png</bgimg>
-		<content>With that the planning phase is completed and we can start the execution phase. I am happy to announce that we already have a detailed migrationconcept so that we can now go on with the Development and the Data Migration which will take some weeks’ time. After that we will go over to the Implementation and Testing. </content>
+		<content>With that the planning phase is completed and we can start the execution phase. I am happy to announce that we already have a detailed migrationconcept so that we can now go on with development and data migration which will take some weeks time. After that we will go over to implementation and testing. </content>
 		<option href="l340e010">Next</option>
 	</event>
 	<!-- Dialogelement -->
@@ -1554,7 +1554,7 @@
 		<date>2014-08-06 11:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
-		<content>As there are currently no issues to discuss, this was it from my side. Are there any questions or is there anything you want to discuss? </content>
+		<content>As there are currently no issues to discuss, that was all from my side. Are there any questions, or is there anything you want to discuss? </content>
 		<option href="l340e011">Next</option>
 	</event>
 	<!-- Dialogelement -->
@@ -1563,7 +1563,7 @@
 		<date>2014-08-06 12:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role3pic1.png</bgimg>
-		<content>Thanks for the presentation! I am glad to hear that everything goes so well until now. Also from our side there are no issues or problems. I think this cooperation is very productive so far and I feel positive about the project. </content>
+		<content>Thanks for the presentation! I am glad to hear that everything is going so well. Also, from our side, there are no issues or problems. I feel that this cooperation has been very productive so far, and I have a positive outlook for the project. </content>
 		<option href="l340e012">Thanks Jessica! </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1572,7 +1572,7 @@
 		<date>2014-08-06 13:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role1pic1.png</bgimg>
-		<content>This is nice to hear Jessica. BrillanCRM is also very happy to work together with you and we think our cooperation will be successful! </content>
+		<content>That is nice to hear, Jessica. BrillanCRM is also very happy to work together with you, and we think our cooperation will be successful! </content>
 		<option href="l340e013">Right, Thomas! </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1581,7 +1581,7 @@
 		<date>2014-08-06 14:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
-		<content>Well, thanks everyone for coming! Our next meeting will be the 03rd July, but you are always welcome to contact me if there is anything to discuss! See you then! </content>
+		<content>Well, thanks everyone for coming! Our next meeting will be the 3rd July, but you are always welcome to contact me, if there is anything to discuss! See you then! </content>
 		<option href="l340e014">Next</option>
 	</event>
 	<!-- Benachrichtigung -->
@@ -1610,7 +1610,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l532e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
-		<content> Take a taxi to the bar downtown and meet Vance. It's your chance to convince him to keep on working for the project. </content>
+		<content> Take a taxi to the bar downtown and meet Vance. It's your chance to convince him to keep working for the project. </content>
 		<bgimg>loc1a.png</bgimg>
 		<nextevent href="l540e000" />
 	</event>
@@ -1649,8 +1649,8 @@
 		<bgimg>role9pic2.png</bgimg>
 		<content> It's a pleasure. </content>
 		<option href="l544e000">Eh! Don’t be so stuck up! Bartender, 2 shots of Jäger! We have to celebrate. </option>
-		<option href="l544e000">Good choice I have one too. Bartender, 2 pints of Paulaner, please. </option>
-		<option href="l544e000">Ok.. well.. bartender, I have a pint of water and a beer for the gentleman. </option>
+		<option href="l544e000">Good choice, I'll have one too. Bartender, 2 pints of Paulaner, please. </option>
+		<option href="l544e000">Ok.. well.. bartender, I'll have a glass of water - and a beer for the gentleman. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l544e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1659,7 +1659,7 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> Alright.. </content>
-		<option href="l545e000"> Tell me Vance, where are you from originally, you don’t look very Texan? </option>
+		<option href="l545e000"> Tell me Vance, where are you from originally? You don’t look very Texan. </option>
 		<option href="l545e001">Finally I am meet our best programmer, how did you end up in the IT sector? </option>
 		<option href="l545e002">I heard you are our best IT geek. What do you do in your freetime, beside playing video games? </option>
 	</event>
@@ -1671,7 +1671,7 @@
 		<bgimg>role9pic2.png</bgimg>
 		<content> That’s right. I come from New York. The best city ever! </content>
 		<option href="l550e000">Alright beside that.. Have you seen the football game yesterday? </option>
-		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
+		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football game. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="1" id="l545e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1679,9 +1679,9 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> In high school I found my talent in programming. Since then I was really into programming games and later studied Computer Science in Virgina </content>
+		<content> In high school I found my talent in programming. Since then, I was really into programming games and later studied Computer Science at Virgina Tech. </content>
 		<option href="l550e000">Alright, let's not talk about work for now.. Have you seen the football game yesterday? </option>
-		<option href="l550e000">Interesting, but let's not talk about work for now.. Are you into sports? I had a blast at last nights football match. </option>
+		<option href="l550e000">Interesting, but let's not talk about work for now.. Are you into sports? I had a blast at last nights football game. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="2" id="l545e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1691,7 +1691,7 @@
 		<bgimg>role9pic2.png</bgimg>
 		<content> Thanks.. I don’t really have much time for playing games. </content>
 		<option href="l550e000">Alright beside that.. Have you seen the football game yesterday? </option>
-		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
+		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football game. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l550e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1702,7 +1702,7 @@
 		<content> No, I don’t really watch sports. I was fishing yesterday. </content>
 		<option href="l552e000">Oh man, that sucks. The Cowboys smashed the Giants yesterday! Let’s watch the next one together! </option>
 		<option href="l552e000">Sounds boring to me. Anyway let’s talk business now. </option>
-		<option href="l551e002">That’s cool. I’m really into fishing as well. Really calmes me down. What’s your favorite spot? </option>
+		<option href="l551e002">That’s cool. I’m really into fishing as well. Really calmes me down. Where’s your favorite spot? </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="2" id="l551e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1710,10 +1710,10 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> Yes, me too. Most of the time I go the spot at the Colorado River, right next to the city park. </content>
+		<content> Yes, me too. Most of the time I go to Eisenhower Park Pond. It is on my way home from work. </content>
 		<option href="l552e000">Sounds great. Haven’t heard about that one. We should go there after work at some point. </option>
-		<option href="l552e001">I always go to the Turkey Creek spot. I think it’s much better. </option>
-		<option href="l552e002">I don’t know that one but if you won’t mind I would join you some time. </option>
+		<option href="l552e001">I always go to Bane Park Lake. I think it’s much better. </option>
+		<option href="l552e002">I don’t know that one, but if you won’t mind I would like to join you some time. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l552e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="5">
@@ -1731,7 +1731,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> The Management treats us like dumb coding machines. All we have to do is coding as fast as we can. No one talks with us about the project and what we think about it. </content>
+		<content> The Management treats us like dumb coding machines. All they want us to do is code as fast as we can. No one talks with us about the project and what we think about it. </content>
 		<option href="l556e000">But that's your job? </option>
 		<option href="l556e000">I guess that is your field of expertise. What else could you contribute? </option>
 	</event>
@@ -1741,8 +1741,8 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> It is, but we have good ideas, too. But no one cares about that. </content>
-		<option href="l557e000">Alright, next time I will invite you to the next steering comitee meeting. </option>
+		<content> It is, but we have good ideas, too. But, no one cares about that. </content>
+		<option href="l557e000">Alright, next time, I will invite you to the next steering comitee meeting. </option>
 		<option href="l557e001">Please, talk to the IT boss then. He is your representative in the strategy meetings. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1760,7 +1760,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
-		<content> It was great talking to you but I really have to go now, my family is waiting for me. <br /> I will continue to work on this project together with you. <br /> I am happy that you will give the developers the chance to contribute. </content>
+		<content> It was great talking to you, but I really have to go now, my family is waiting for me. <br /> I will continue to work on this project together with you. <br /> I am happy that you will give the developers the chance to contribute. </content>
 		<option href="l513e000">Continue.. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1770,7 +1770,7 @@
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
 		<content> That doesn't work. We need a faster way. </content>
-		<option href="l515e000">Sorry, but that are the rules. Listen, I will raise your pay by 50.000$ because you are really important to us. Let us continue to work together. </option>
+		<option href="l515e000">Sorry, but that are the rules. Listen, I will raise your pay by $50,000 because you are really important to us. Let us continue to work together. </option>
 		<option href="l557e000">Alright, next time I will invite you to the next steering comitee meeting. </option>
 	</event>
 	<!-- Dialogelement -->
@@ -1784,7 +1784,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l514e000" eventtype="13" imcost="-10" imqual="0" imtime="0" loc="5">
-		<content> You reached your goal and Vance stays on the project. That means the software will have the planned anticipated quality but due to the pay raise the costs will increase. </content>
+		<content> You reached your goal and Vance stays on the project. That means the software will have the planned anticipated quality, but due to the pay raise the costs will increase. </content>
 		<bgimg>loc2a.png</bgimg>
 		<nextevent href="l665e600" />
 	</event>
@@ -1815,7 +1815,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l555e000" eventtype="13" imcost="0" imqual="-10" imtime="0" loc="5">
-		<content> Vance stands up and leaves. You haven't been doing a great impression. This will have a big impact on the quality of the project. </content>
+		<content> Vance stands up and leaves. You haven't been making the best impression. This will have a big impact on the quality of the project. </content>
 		<bgimg>loc2a.png</bgimg>
 		<nextevent href="l665e600" />
 	</event>
@@ -1844,7 +1844,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-06-16 17:21:34</date>
 		<subject>Feedback</subject>
-		<content> Hi %prename%, <br /> Good the India-crisis is finally averted! I think we can live with the consequences. <br /> On a similar matter: Priya Williams put together a requirement list I needed for Avi to construct the GUI and frankly, it didn’t quite cut it... As this concerns your assistant, I didn’t want to do this over your head. So the two of you should sit together and talk this through. Mainly some feedback towards how thoroughly important pieces of work need to be done. Some really important requirements were missing and others weren’t precise enough. I fixed it MYSELF because we lacked the time, but that’s obviously not how I want to spend my time. So no consequences this time, but it's something that should be communicated. <br /> Talk to you soon, <br /> Thomas </content>
+		<content> Hi %prename%, <br /> Good the India-crisis is finally averted! I think we can live with the consequences. <br /> On a similar matter: Priya Williams put together a requirement list I needed for Avi to construct the GUI and frankly, it didn’t quite cut it... As this concerns your assistant, I didn’t want to do this over your head. So the two of you should sit together and talk this through. Mainly some feedback on thoroughness with key tasks. Some really important requirements were missing and others weren’t precise enough. I fixed it MYSELF because we lacked the time, but that’s obviously not how I want to spend my time. So no consequences this time, but it's something that should be communicated. <br /> Talk to you soon, <br /> Thomas </content>
 		<nextevent href="l502e000" />
 	</event>
 	<event level="600" element="0" id="l502e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1884,11 +1884,11 @@
 		<bgimg>role7pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
-		<content>Oh, that. I wasn’t aware that you’re involved. I delivered it to Thomas just a few days ago. What about it? </content>
+		<content>Oh, that. I wasn’t aware that you were involved. I delivered it to Thomas just a few days ago. What about it? </content>
 		<option href="l505e000">Well, frankly he told me it was bad work.</option>
 		<option href="l505e001">In fact he asked me to give you some feedback. Is that okay with you? </option>
 		<option href="l505e000">He wasn’t satisfied at all. </option>
-		<option href="l504e002">First of all: Everything was okay in the end. </option>
+		<option href="l504e002">First of all: everything was okay in the end. </option>
 	</event>
 	<event level="600" element="2" id="l504e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
@@ -1897,7 +1897,7 @@
 		<title>You give feedback to your assistant </title>
 		<content>Okay. What would that be? </content>
 		<option href="l504e001">Does the requirement list ring a bell?</option>
-		<option href="l505e002">The GUI requirement list. Nothing to be too concerned about </option>
+		<option href="l505e002">The GUI requirement list. Nothing to be too concerned about. </option>
 	</event>
 	<event level="600" element="0" id="l505e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
@@ -1992,8 +1992,8 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
-		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am and we talked business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. Whatcha think? Can you throw some analytics capabilities in the mix? </content>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
+		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am and we talked business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. Whatcha think? Can you throw some analytic capabilities in the mix? </content>
 		<option href="l571e000">Sure, shouldn’t be any trouble.</option>
 		<option href="l571e001">As you know, we’re pretty late in the project. </option>
 		<option href="l571e002">This late in the project? I wouldn’t think so. </option>
@@ -2002,7 +2002,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Great! I knew I could count on you. I’ll run my ideas by Jessica. </content>
 		<option href="l580e000">Okay, good.</option>
 	</event>
@@ -2010,7 +2010,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Yeah, of course I’m aware of that. But you know how they say: Where there's a will there's a way, right? </content>
 		<option href="l572e001">If it’s important to you, we could set up a change request. </option>
 		<option href="l572e002">Listen, this is definitely out of scope. </option>
@@ -2020,7 +2020,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
 		<content>I know you’re concerned about your project, but it’d be a real benefit for my department... </content>
 		<option href="l572e002">It’s out of scope. Sorry, but no. </option>
 		<option href="l572e001">Well, we could file a change request. </option>
@@ -2029,7 +2029,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
 		<content>The formal way, huh? Can’t we just have a gentleman’s agreement on that? </content>
 		<option href="l573e001">I’m sorry, but I have to cover the risks for the project. </option>
 	</event>
@@ -2037,7 +2037,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Well, okay. How would that work? </content>
 		<option href="l580e001">Let me talk to Thomas and get back to you. We’ll find a way. </option>
 	</event>
@@ -2045,7 +2045,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
-		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
+		<title>After the steering committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Frankly, that wasn’t the answer I expected to hear. But well, it’s your project... I gotta run, next meeting up ahead. Bye. </content>
 		<option href="l580e002">Goodbye.</option>
 	</event>
@@ -2073,7 +2073,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-07-06 08:21:56</date>
 		<subject>Missed Opportunity</subject>
-		<content> Hi %prename%, <br /> I just arrived back in Hamburg just to have B.R. calling me. <br /> He was really gloomy and kept telling me how much he would’ve liked some analytical components in the CRM. <br /> I would’ve wished for you to check in with me first. Although I agree with you that this is out of scope, I suppose we could’ve made more out of that situation. There was potential business in this. <br /> I know you did what you deemed best for the project, so no hard feelings. <br /> Just make sure you finish the whole thing well. <br /> Hang in there, <br /> Thomas </content>
+		<content> Hi %prename%, <br /> I just arrived back in Hamburg just to have B.R. calling me. <br /> He was really gloomy and kept telling me how much he would’ve liked some analytical components in the CRM. <br /> I would’ve wished for you to check in with me first. Although I agree with you that this is out of scope, I suppose we could’ve made more out of that situation. There was potential business in this. <br /> I know you did what you deemed best for the project, so no hard feelings. <br /> Just make sure you finish well. <br /> Hang in there, <br /> Thomas </content>
 		<nextevent href="l581e102" />
 	</event>
 	<event level="700" element="0" id="l581e000" eventtype="1" imcost="0" imqual="+7" imtime="0" loc="">
