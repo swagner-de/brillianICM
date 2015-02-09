@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Sends the verification e-Mail to a new user
  * Resolves groupid and calculates checksum
  * 
- * @author Mary & benste
+ * @author Mary und Benste
  *
  */
  public class CreateUser extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
@@ -304,7 +304,6 @@ import javax.servlet.http.HttpServletResponse;
 	 * This method resolves the groupID entered out of the encrypted groupid
 	 * ( first two digits: checksum of remaining digits; remaining digits: groupID*23)
 	 * @param encryptedgroupid - contains the encrypted groupid of a certain user
-	 * @param groupid - contains an Integer, that is positioned in 3rd spot of encryptedgroupid
 	 * @return resolved - resolved groupid
 	 */
 	protected String resolveGroupid(String encryptedgroupid) {
@@ -326,7 +325,7 @@ import javax.servlet.http.HttpServletResponse;
 	
 	/**
 	 * Method to calculate a checksum for the entered int
-	 * @param groupid
+	 * @param groupid - contains the group id as an integer
 	 * @return ckecksum
 	 */
 	protected int calculateChecksum(int groupid) {
