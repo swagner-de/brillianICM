@@ -32,38 +32,36 @@
 </head>
 
 <body class="easyui-layout">
-<div class="north" data-options="region:'north',border:false">
-		<div class="div-header window">
-			<a id="logout" class="easyui-linkbutton" data-options="plain:true"
-				onclick="window.location.href='LogoutUser'"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
-			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>			
-		</div>
+	<div class="north" data-options="region:'north',border:false">
+			<div class="div-header window">
+				<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>			
+			</div>
 	</div>
 
-<div class="center studentHomepage" data-options="region:'center'">
-	<div class="studentRegisterContainer">
-		<h3>Welcome to brillianCRM</h3>
-		<p>Please fill in the form below and hit the send button to register:</p>
-		<p style="color:red">${status}</p>
-		<form action="CreateUser" method="post">
-			<input type="text" name="role" maxlength="50" value="student" style="display:none"/> 
-		 	<input type="text" name="groupnumber" maxlength="50" value="${groupnumber}" style="display:none"/> <!-- Needed to post the groupnumber -->
-			<select class="registerGender" name="gender" id="gender" size="1" required>
-		    	<option value="" disabled="disabled" selected="selected">Please select</option>
-		    	<option value="m">Mr.</option>
-		    	<option value="f">Mrs.</option>
-			</select><br/>
-		 	<input type="text" name="firstname" maxlength="50" value="${firstname}" placeholder="First Name" required/><br />
-		 	<input type="text" name="lastname" maxlength="50" value="${lastname}" placeholder="Last Name" required/><br />
-		 	<input type="email" name="email" maxlength="50" value="${email}" placeholder="Email" required/><br />
-			<input type="password" name="password" maxlength="50" placeholder="Password" required/><br />
-		 	<input type="password" name="password_repeat" maxlength="50" placeholder="Repeat Password" required/><br />
-			<input style="display:none" id="registrationButton" type="submit" value="Register now!"></input>
-			<a class= "easyui-linkbutton studentRegisterButton" onclick="$('#registrationButton').trigger('click')">Register now!</a>
-		</form>
+	<div class="center studentHomepage" data-options="region:'center'">
+		<div class="studentRegisterContainer">
+			<h3>Welcome to brillianCRM</h3>
+			<p>Please fill in the form below and hit the send button to register:</p>
+			<p style="color:red">${status}</p>
+			<form action="CreateUser" method="post">
+				<input type="text" name="role" maxlength="50" value="student" style="display:none"/> 
+			 	<input type="text" name="groupnumber" maxlength="50" value="${groupnumber}" style="display:none"/> <!-- Needed to post the groupnumber -->
+				<select class="registerGender" name="gender" id="gender" size="1" required>
+			    	<option value="" disabled="disabled" selected="selected">Please select</option>
+			    	<option value="m">Mr.</option>
+			    	<option value="f">Mrs.</option>
+				</select><br/>
+			 	<input type="text" name="firstname" maxlength="50" value="${firstname}" placeholder="First Name" required/><br />
+			 	<input type="text" name="lastname" maxlength="50" value="${lastname}" placeholder="Last Name" required/><br />
+			 	<input type="email" name="email" maxlength="50" value="${email}" placeholder="Email" required/><br />
+				<input type="password" name="password" maxlength="50" placeholder="Password" required/><br />
+			 	<input type="password" name="password_repeat" maxlength="50" placeholder="Repeat Password" required/><br />
+				<input style="display:none" id="registrationButton" type="submit" value="Register now!"></input>
+				<a class= "easyui-linkbutton studentRegisterButton" onclick="$('#registrationButton').trigger('click')">Register now!</a>
+			</form>
+		</div>
+		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 	</div>
-	<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
-</div>
 </body>
 <script type="text/javascript">
 		$('body').show();

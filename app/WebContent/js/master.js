@@ -24,6 +24,7 @@
 		var mainLocationButton = $('.mainLocationButton');
 		var eventContainer = $('.mainEventContainerLaptop');
 		
+		// Anzeige der Elemente auf der rechten Seite
 		if(level >= 12){
 			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
 			$('.projektCharterButton').show();
@@ -39,7 +40,7 @@
 			$('.ganttButton').show();
 		}
 		
-		//Wir nur beim ersten Mal zu Beginn des Spiels ausgeführt
+		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt
 		if (firstFlag == false){			
 			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
@@ -65,6 +66,7 @@
 			}
 		}
 		
+		//Highlights Mail Button upon arrival of a new mail
 		if(eventtype == '1' || eventtype == '2'){
 			addHighlightMail();
 		}
@@ -75,6 +77,7 @@
 		//Show the 'New Mail' button only when a MailDraft-Event happens
 		newMailDisabled = true;
 		if(eventtype == 2){
+			addBlinkerMailNew();
 			newMailDisabled = false;
 		}
 		
@@ -209,6 +212,7 @@ function loadMail (from, to, date, subject, content, attachment, attachmentHref)
 	}
 }
 
+//Herunterladen der neuen MailDraft
 function loadMailDraft () {
 	var window = $('.mainEventContainerLaptop');
 	//MailDraft Event Values from XML
@@ -245,6 +249,7 @@ function loadMailDraft () {
 	});	
 }
 
+//Herunterladen des neuen Dialogs
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
@@ -276,6 +281,7 @@ function loadDialog () {
 	});	
 	showDialog();
 }
+
 
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
@@ -412,6 +418,7 @@ function loadAllocation () {
         onDragLeave:function(e,source){
             $(source).draggable('options').cursor='not-allowed';
             $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
             $(this).removeClass('elementHighlight');
         },
         onDrop:function(e,source){
@@ -515,7 +522,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addHighlightMailNew();
+				addBlinkerMailNew();
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -575,6 +582,7 @@ function showLaptop () {
 	});
 }
 
+//Zeigt den Tab NewMail zum Verfassen eines MailDraft an
 function showNewMailTab () {
 	var tag = 'MailDraft';
 	if (tabsContainer.tabs('exists', 'New Mail')){
@@ -635,7 +643,8 @@ window.mobilecheck = function() {
 //Get mobile check value. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
 //If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
 function showPdf(pdfPath){
-	if(window.mobilecheck = true)
+	
+	if(window.mobilecheck() == true)
 		{
 		window.open('pdfPath','_blank');
 		}
@@ -683,6 +692,7 @@ function showPdf(pdfPath){
 }
 
 //Do we need this? How is a MailDraft saved?
+//I guess it is not saved!
 function showMailNotification (){
 	var from = $xml.find('from').text();
 	var href = $xml.find('nextevent').attr('href');
@@ -700,6 +710,7 @@ function showNotification () {
 	$('.mainLocationButton').removeClass('menu-active');
 }
 
+// Veränderung der TCQ IMAGES auf der Seite
 function setTCQImages (imtime, imcost, imqual) {
 	
 	var id = $xml.find('event').attr('id');
@@ -795,7 +806,8 @@ function setTCQImages (imtime, imcost, imqual) {
 		},1000);
 	}	
 }
-	
+
+// Lädt jeweils die aktuelle Zeitleiste der Projektphasen
 function setLevelImage (level) {
 	var imgUrlkl = '';
 	var imgUrlgr = '';
@@ -832,6 +844,7 @@ function setLevelImage (level) {
 	$('.ProjectTimeline').find('.fancybox').find('img').attr("src", "images/" + imgUrlkl + ".png");
 }
 
+// Veränderung der TCQ WERTE
 function updateTCQValues (imtime, imcost, imqual) {
 	try {
 		if(imtime.charAt(0) == '+'){
@@ -936,13 +949,16 @@ function hideEventContainer (container){
 	container.window({modal:false,closed:true,closable:false});
 }
 
+// Zeigt an, dass eine neue Mail gekommen ist
 function showMsg (title, msg) {
 	$.messager.show({
 		title: title,
+		timeout:3000,
 		msg: msg
 	});
 }
 
+// Adds Highlight to button (Location Button) referred to with current Id
 function addHighlight (button, id) {
 	$.each(button, function(){
 		if($(this).attr('id') == id){
@@ -951,6 +967,7 @@ function addHighlight (button, id) {
 	});	
 }
 
+//Removes Highlight from the button (Location Button) referred to with current Id
 function removeHighlight (button, id) {	
 	$.each(button, function(){
 		if($(this).attr('id') == id){
@@ -959,21 +976,48 @@ function removeHighlight (button, id) {
 	});
 }
 
+// Adds Highlight to Mail Button
 function addHighlightMail () {
 	$('.mainMailButton').addClass('elementHighlight');
-	
 }
 
+// Removes Highlight from Mail Button
 function removeHighlightMail () {	
 	$('.mainMailButton').removeClass('elementHighlight');
 }
 
+/* TEMPORARY DISABLED FOR TROUBLESHOOTING AS IT IS THE ONLY FUNCTION WITH AN ERROR
+ * //TODO laluz
+// Adds Blinker to NewMail (MailDraft) Button
+function addBlinkerMailNew(selector){
+    $('.tabs-tool').find('.l-btn').('.elementBlinker').animate({opacity:0}, 50, "linear", function(){
+    	$(this).delay(800);
+    	$(this).animate({opacity:1}, 50, function(){
+        addBlinkerMailNew(this);
+        });
+        $(this).delay(800);
+    });
+}
+*/
+
+/*
+function addBlinkerMailNew() {
+	for(var times=0; times <=5; times++) {
+    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeOut(500);
+    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeIn(500);
+	}
+	addHighlightMailNew();
+}
+*/
+
+// Adds Highlight to NewMail (MailDraft) Button
 function addHighlightMailNew () {
-	//$('.tabs-tool').find('.l-btn').addClass('elementHighlight');
+	$('.tabs-tool').find('.l-btn').addClass('elementHighlight');
 }
 
+//Removes Highlight from NewMail (MailDraft) Button
 function removeHighlightMailNew () {	
-	//$('.tabs-tool').find('.l-btn').removeClass('elementHighlight');
+	$('.tabs-tool').find('.l-btn').removeClass('elementHighlight');
 }
 
 //Shows the fullscreen transition window
@@ -1008,6 +1052,7 @@ function showTransition (text, imageUrl, duration, href) {
 	});
 }
 
+// Final Screen showing result of user
 function showResult () {
 	var tag = 'Result';
 	var container = $('.mainEventContainerResult');
@@ -1047,14 +1092,18 @@ function saveGame (userid, gamePath, imtime, imcost, imqual) {
 	});	
 }
 
+// Shows that a screen is loading
 function showLoading () {	
 	var text = '';
 	var imageUrl = 'images/Gruppenfotos/Gruppenfoto_FINAL.png';
 	var imageUrl2 = 'images/Gruppenfotos/Logo_Ladescreen.png';	
-	var duration = 3000;
+	var duration = 1000;
 	
 	var window = $('.loadingScreen');
 	var imageContainer = $('.loadingScreenImageContainer');
+	
+	// Hier wird die Audio-Datei abgespielt 
+	// (Vielleicht kann man hier noch einen Filter einbauen??)
 	var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
 	audioElement.play();

@@ -21,10 +21,12 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+
+@WebServlet("/FileViewer")
+
 /**
  * Servlet implementation class FileViewer
  */
-@WebServlet("/FileViewer")
 public class FileViewer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static File masterfile;
