@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <events>
 	<!-- HIER BEGINNT CONTENT 1 -->
 	<!-- Startwerte auf jeweils 71 gesetzt, um mit grünen Werten zu beginnen -->
@@ -584,7 +584,7 @@
 		<attachment />
 		<nextevent href="l204e000" />
 	</event>
-	<!-- Auswahl mit Bild -->
+	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="5" id="l204e000" element="0" level="204">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of costs and note your decision on a piece of paper for the final cost calculation. <br />
@@ -593,7 +593,7 @@
 		<option href="l205e000" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 84 400€. </option>
 		<option href="l205e001" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 94 200€. </option>
 	</event>
-	<!-- Auswahl mit Bild -->
+	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="-1" imqual="0" imcost="-5" eventtype="5" id="l205e000" element="0" level="205">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of cost and note your decision on a piece of paper for the final cost calculation. <br />
@@ -602,7 +602,7 @@
 		<option href="l206e001" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 792 300€. </option>
 		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 104 600€. </option>
 	</event>
-	<!-- Auswahl mit Bild -->
+	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+5" imqual="0" imcost="+5" eventtype="5" id="l205e001" element="1" level="205">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of cost and note your decision on a piece of paper for the final cost calculation. <br />
@@ -611,7 +611,7 @@
 		<option href="l206e001" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 792 300€. </option>
 		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 104 600€. </option>
 	</event>
-	<!-- Auswahl mit Bild -->
+	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="-3" imqual="-5" imcost="-3" eventtype="5" id="l206e000" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of cost and note your decision on a piece of paper for the final cost calculation. <br />
@@ -620,7 +620,7 @@
 		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 312 500€. </option>
 		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 267 400€. </option>
 	</event>
-	<!-- Auswahl mit Bild -->
+	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+5" imqual="+9" imcost="+5" eventtype="5" id="l206e001" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of cost and note your decision on a piece of paper for the final cost calculation. <br />
@@ -668,38 +668,41 @@
 		</content>
 		<attachment />
 		<nextevent href="l289e000" />
+	<!-- Da das Spiel zum Kritischen Pfad geändert wurde, musste Mail geändert werden -->	
 	</event>
 	<event level="289" element="0" id="l289e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
 		<from>Priya Williams</from>
 		<to>%prename% %surname%</to>
 		<date>2014-02-17 10:21:00</date>
 		<subject>Gantt-diagram</subject>
-		<content>Dear %prename%, <br /> enclosed please find another important document for the project, the Gantt-diagram that I have compiled for you. Please go trough this document carefully and identify the critical path of the project! <br />
-			<br /> The Gantt-diagram is also stored on your desktop. <br />
+		<content>Dear %prename%, <br /> Mr. Zimmerman urgently needs a detailed planning structrue in form of a Gantt-diagram. <br />
+			<br /> I started with some samples which I left on your desk. <br />
 			<br /> Kind regards, <br />Priya Williams </content>
-		<attachment href="project.pdf">Project charts</attachment>
 		<nextevent href="l290e000" />
+	<!-- Wahl zwischen verschiedenen eingezeichneten kritischen Pfaden, Bilder neu eingefügt -->	
 	</event>
 	<event level="290" element="0" id="l290e000" eventtype="4" imcost="0" imqual="0" imtime="0" loc="3">
-		<title>Critical Path</title>
-		<description>What is the critical path of the Gantt-diagram </description>
-		<option href="l291e001"> The critical path is the red path including staffing and testing. </option>
-		<option href="l291e002"> There is no critical path </option>
-		<option href="l291e002">The critical path is the blue path including stakeholderanalysis and data migration. </option>
+		<title>Gantt-Diagramm</title>
+		<description>Which of the following samples shows the correct critical path?</description>
+		<option href="l291e001" img="content8fehler1.png"> Option 1 </option>
+		<option href="l291e002" img="content8richtigerpfad.png"> Option 2 </option>
+		<option href="l291e002" img="content8fehler2.png"> Option 3 </option>
+	<!-- Mail an neues Spiel angepasst -->	
 	</event>
 	<event level="291" element="0" id="l291e001" eventtype="3" imcost="+5" imqual="+7" imtime="+9" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
-		<content>Thank you %prename% for dealing with the Gantt-diagram. You seem to understand the importance of this document. I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
+		<content>Thank you %prename% for dealing with the Gantt-diagram. I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
 		<option href="l340e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
+	<!-- Mail an neues Spiel angepasst -->		
 	</event>
 	<event level="291" element="0" id="l291e002" eventtype="3" imcost="-7" imqual="-9" imtime="-13" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
-		<content>Thank you %prename% for dealing with the Gantt-diagram. You should imform yourself about the importance of this document once more in order to identify the critical path. Nevertheless, I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
+		<content>Thank you %prename% for dealing with the Gantt-diagram. You should imform yourself about that in order to identify the critical path. Nevertheless, I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
 		<option href="l292e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
 	</event>
