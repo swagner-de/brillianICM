@@ -75,7 +75,7 @@ th,td {
 			</tr>
 			<tr style="color: #aaa;">
 				<td><a href="/apidocs">JavaDoc</a></td>
-				<td><a href="http://ec2-54-149-157-182.us-west-2.compute.amazonaws.com/phpmyadmin/"><br>PHPmyAdmin
+				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/phpmyadmin/"><br>PHPmyAdmin
 				</a></td>
 				<td><a href="/manager"><br>Tomcat
 						Manager<br> </a></td>
