@@ -616,18 +616,18 @@
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of cost and note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 270 000€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 312 500€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 267 400€. </option>
+		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 891 900€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 812 500€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 867 400€. </option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+5" imqual="+9" imcost="+5" eventtype="5" id="l206e001" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the previously shown statement of cost and note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 270 000€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 312 500€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 267 400€. </option>
+		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 891 900€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 812 500€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 867 400€. </option>
 	</event>
 	<!-- Auswahl mit Bild -->
 	<event loc="4" imtime="-5" imqual="-5" imcost="-5" eventtype="4" id="l207e000" element="0" level="207">
