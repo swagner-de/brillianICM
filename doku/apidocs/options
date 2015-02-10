@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'brillianCRM rebirth 2.0.1benste API'
+'brillianCRM rebirth 2.1.0release API'
 -linkoffline
 'http://docs.oracle.com/javase/7/docs/api' '/home/benste/git/brillianCRM/app/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'brillianCRM rebirth 2.0.1benste API'
+'brillianCRM rebirth 2.1.0release API'

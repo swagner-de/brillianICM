@@ -34,7 +34,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * in the doPost method
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException
+	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -49,7 +49,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * and stores the string "professor" to the attribut professor
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException
+	 * @exception IOException - shows line of code in which error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

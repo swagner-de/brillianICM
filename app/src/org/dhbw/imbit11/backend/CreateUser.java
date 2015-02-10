@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Sends the verification e-Mail to a new user
  * Resolves groupid and calculates checksum
  * 
- * @author Mary & benste
+ * @author Mary und Benste
  *
  */
  public class CreateUser extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
@@ -51,7 +51,7 @@ import javax.servlet.http.HttpServletResponse;
 	 *  if not, the form is called again and an error/status message is displayed
 	 *  @param request - contains the request of a client
 	 *  @param response - contains the response of the servlet
-	 *  @exception IOException
+	 *  @exception IOException - signals that IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -325,7 +325,7 @@ import javax.servlet.http.HttpServletResponse;
 	
 	/**
 	 * Method to calculate a checksum for the entered int
-	 * @param groupid
+	 * @param groupid - contains the group id as an integer
 	 * @return ckecksum
 	 */
 	protected int calculateChecksum(int groupid) {
