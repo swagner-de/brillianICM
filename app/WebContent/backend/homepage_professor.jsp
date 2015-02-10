@@ -95,7 +95,7 @@
 															+"<th data-options=\"field:'cost',width:40,resizable:false,styler:cellStyler\">Cost</th>"
 															+"<th data-options=\"field:'time',width:40,resizable:false,styler:cellStyler\">Time</th>"
 															+"<th data-options=\"field:'quality',width:40,resizable:false,styler:cellStyler\">Quality</th>"
-															+"<th data-options=\"field:'finished',width:40,resizable:false\">Finished</th>"
+															+"<th data-options=\"field:'finished',width:60,resizable:false\">Finished</th>"
 															+"<th data-options=\"field:'email',width:200,resizable:false\">Email</th>"
 															+"</tr></thead><tbody>");
 												}
@@ -124,7 +124,17 @@
 													out.println("</td><td>");
 													out.println(row.get(8));
 													out.println("</td><td>");
-													out.println(row.get(6));
+													//Check whether student has confirmed registration by clicking on Link:
+													//if true, print email in table, if false, print error message
+														String mailToTest = row.get(6);
+														Boolean found;
+														String wordToFind  = "@";
+														found = mailToTest.contains(wordToFind);
+														if (found){
+															out.println(row.get(6));
+														} else {
+															out.println("<font color=\"red\">Registration not yet confirmed.</font>");
+														}
 													out.println("</td></tr>");
 													
 											}

@@ -10,36 +10,51 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet({"/DeleteProfessor"})
+
+/**
+ * When admin deletes a professor this class is invoked
+ * @author Mary
+ *
+ */
  public class DeleteProfessor extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
-    /* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
-	 */
+    /**
+     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
+     */
 	public DeleteProfessor() {
 		super();
 	}   	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * in the doPost method
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doPost(request, response);
 	}  	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Method selects the parameter delete_professor of the certain professor and deletes the UserRealm object
+	 * related to this parameter and forwards the request and response to URL of the admin view
+	 * Failure: exception thrown
+	 * @param request - contains the request of the user (has to be a professor/ admin)
+	 * @param response - contains the answer of the servlet
+	 * @exception IOException - shows in which line of code the IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-String url = "/Admin";
+		String url = "/Admin";
 		
 		
 		// get the userid of the current user
 		
 		String email = request.getParameter("delete_professor");
-		//System.out.println("Zu löschende Professor-Email ist " + email);		
+		//System.out.println("Zu loeschende Professor-Email ist " + email);		
 		UserRealm realm = new UserRealm();
 		try{
 			 realm.deleteProfessor(email);
