@@ -49,6 +49,7 @@
 		
 			<div>
 				<h4>Change Password.</h4>
+				<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
 					<input type="text" name="role" maxlength="50" value="student" style="display: none"/>
@@ -61,6 +62,12 @@
 					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+				</form>
+		
+				<h4>Startpunkt bestimmen</h4>
+				<form action="setnode" method="post">
+				<div class="formlabel">Knotenpunkt eingeben</div>
+				<input type="test" name="node" maxlenght="50"/>
 				</form>
 				
 			</div>
