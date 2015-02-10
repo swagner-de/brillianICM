@@ -42,7 +42,8 @@ import javax.servlet.http.HttpServletResponse;
 	 * Method selects the groupid of the professor and deletes the UserRealm object of the
 	 * chosen group and forwards the request and response to URL of the professor view
 	 * Failure: exception thrown
-	 * @param request - contains the request of the user (has to be a professor/ admin)
+	 * @param request - contains the request of the user to delete a group
+	 * (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
 	 * @exception IOException - shows in which line of code the IO exception occured
 	 */
