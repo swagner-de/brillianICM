@@ -643,7 +643,8 @@ window.mobilecheck = function() {
 //Get mobile check value. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
 //If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
 function showPdf(pdfPath){
-	if(window.mobilecheck = true)
+	
+	if(window.mobilecheck() == true)
 		{
 		window.open('pdfPath','_blank');
 		}
@@ -985,6 +986,8 @@ function removeHighlightMail () {
 	$('.mainMailButton').removeClass('elementHighlight');
 }
 
+/* TEMPORARY DISABLED FOR TROUBLESHOOTING AS IT IS THE ONLY FUNCTION WITH AN ERROR
+ * //TODO laluz
 // Adds Blinker to NewMail (MailDraft) Button
 function addBlinkerMailNew(selector){
     $('.tabs-tool').find('.l-btn').('.elementBlinker').animate({opacity:0}, 50, "linear", function(){
@@ -995,6 +998,7 @@ function addBlinkerMailNew(selector){
         $(this).delay(800);
     });
 }
+*/
 
 /*
 function addBlinkerMailNew() {

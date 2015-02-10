@@ -133,7 +133,7 @@
 														if (found){
 															out.println(row.get(6));
 														} else {
-															out.println("<font color="red">Registration not yet confirmed.</font>")
+															out.println("<font color=\"red\">Registration not yet confirmed.</font>");
 														}
 													out.println("</td></tr>");
 													

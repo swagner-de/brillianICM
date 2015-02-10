@@ -1,6 +1,7 @@
 package org.dhbw.imbit11.backend;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,12 +9,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
+
 @WebServlet({"/ChangeStudentPassword"})
 
 /** This class is responsible to handle a password change request
 * The frontend page is homepage_student.jsp where user enteres old and new password to update
 * @author Oliver Becher
-* @version 0.1
 */
 
  public class ChangeStudentPassword extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
@@ -21,7 +27,6 @@ import javax.servlet.annotation.WebServlet;
  	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
-		  
 	}  	
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -64,6 +69,19 @@ import javax.servlet.annotation.WebServlet;
 			// automatically
 			// A login will be performed to check the users credentials.
 			// User is of course already logged in
+			// The call to login will cause the following to occur
+			// Shiro will query the database for a password associated with the
+			// provided username (which is stored in token). If a password is
+			// found
+			// and matches the password
+			// provided by the user (also stored in the token), a new Subject
+			// will be created that is
+			// authenticated. This subject will be bound to the session for the
+			// user who made this request
+			// see:
+			// http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/Authenticator.html
+			// for a list of potential Exceptions that might be generated if
+			// authentication fails (e.g. incorrect password, no username found)
 
 			subject.login(token);
 
@@ -75,8 +93,6 @@ import javax.servlet.annotation.WebServlet;
 			request.setAttribute("username", username);
 
 			
-			Subject subject = SecurityUtils.getSubject();
-		
 		
 			if (password.equals(password_repeat))
 				{
@@ -91,10 +107,10 @@ import javax.servlet.annotation.WebServlet;
 					realm.updatePassword(username, hashedPassword);
 					// is the request necessary?
 					// request 
-					request.setAttribute("status", "Email was sent.");
+					request.setAttribute("status", "Password was changed");
 				}
 				catch(SQLException e){
-					//System.out.println("Update of Password in DB failed.");
+					System.out.println("Update of Password in DB failed.");
 					e.printStackTrace();
 				}
 				
