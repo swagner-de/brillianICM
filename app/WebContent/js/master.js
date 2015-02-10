@@ -986,6 +986,8 @@ function removeHighlightMail () {
 	$('.mainMailButton').removeClass('elementHighlight');
 }
 
+/* TEMPORARY DISABLED FOR TROUBLESHOOTING AS IT IS THE ONLY FUNCTION WITH AN ERROR
+ * //TODO laluz
 // Adds Blinker to NewMail (MailDraft) Button
 function addBlinkerMailNew(selector){
     $('.tabs-tool').find('.l-btn').('.elementBlinker').animate({opacity:0}, 50, "linear", function(){
@@ -996,6 +998,7 @@ function addBlinkerMailNew(selector){
         $(this).delay(800);
     });
 }
+*/
 
 /*
 function addBlinkerMailNew() {
