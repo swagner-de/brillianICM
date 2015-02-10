@@ -4,8 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<!-- WebApp_ID is NOT related to the version ID it is the servlet version to be used -->
-	<display-name>2.0.2benste</display-name>
-
+	<display-name>2.1.0release</display-name>
 	<!-- Backend Servlets start here -->
 
 
@@ -125,7 +124,7 @@ realmA.credentialsMatcher = $passwordMatcher
 
 	<context-param>
 		<param-name>domain</param-name>
-		<param-value>https://ec2-54-149-157-182.us-west-2.compute.amazonaws.com</param-value>
+		<param-value>https://ec2-54-213-27-83.us-west-2.compute.amazonaws.com</param-value>
 	</context-param>
 	
 	<!-- Context Parameter for Mail -->	
