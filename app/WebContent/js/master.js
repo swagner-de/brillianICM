@@ -656,17 +656,19 @@ function detectmob() {
 //If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
 function showPdf(pdfPath){
 	
+	var pdf = pdfPath.split("/")[1];
+	
+	if(pdf == ''){
+		pdf ='PDF';
+	}
+	
 	if(detectmob() == true)
 		{	
-			this.window.open(pdfPath);	
+			this.window.open(pdfPath, pdf);	
 		}
 	else
 		{
-		var pdf = pdfPath.split("/")[1];
 		
-		if(pdf == ''){
-			pdf ='PDF';
-		}
 		
 		try{
 			$('.mainEventContainerPdf').panel('destroy');
