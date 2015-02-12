@@ -163,7 +163,7 @@
 			
 			<div style="clear: both;"></div>
 			<div>
-				<h1>New Group</h1>
+				<h1>New group</h1>
 				<form action="NewUsergroup" method="post">
 					<div class="formLabel">Name:</div><input type="text" name="groupname" maxlength="50" required/>
 					<input type="submit" style="display: none" id="createGroup" value="Create group"/><br /><br />
@@ -174,7 +174,7 @@
 			</div>
 			<div style="clear: both;"></div>
 			<div>
-				<h1>Change Password</h1>
+				<h1>Change password</h1>
 				<form action="ResetPassword" method="post">
 					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/> 
 					<input type="text" name="role" maxlength="50" value="professor" style="display: none"/>
