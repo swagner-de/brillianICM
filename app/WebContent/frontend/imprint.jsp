@@ -57,6 +57,7 @@
 <script type="text/javascript">
 	var newwindow
 	var counter = 0;
+	// Easter egg 1/22
 	function hero() 
 	{
 		counter++;
