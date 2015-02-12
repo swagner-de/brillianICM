@@ -67,7 +67,7 @@
 							
 							out.println("<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/></form></td>");
 							out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\"><input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" "+
-									"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>Delete</a>");
+									"value=\"Delete group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>Delete</a>");
 							out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form>");
 							out.println("</td></tr></table> ");
 							
@@ -167,7 +167,7 @@
 				<form action="NewUsergroup" method="post">
 					<div class="formLabel">Name:</div><input type="text" name="groupname" maxlength="50" required/>
 					<input type="submit" style="display: none" id="createGroup" value="Create group"/><br /><br />
-					<a class="easyui-linkbutton" onclick="$('#createGroup').trigger('click')">Create Group</a>
+					<a class="easyui-linkbutton" onclick="$('#createGroup').trigger('click')">Create group</a>
 					<p style="color: green">${success}</p>
 					<p style="color: red">${error}</p>
 				</form>
@@ -183,7 +183,7 @@
 					<div class="formLabel">Repeat Password:</div>
 					<input type="password" name="password_repeat" maxlength="50"/><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+					<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update password</a>
 				</form>
 			</div>
 			<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
