@@ -49,6 +49,7 @@ versionID = versionID.substring(0, versionID.length()-1);
 
 </div>
 
+<!-- Seriously? Why are you here? Are you this interested in the source code of some imprint? Oo -->
 <script type="text/javascript">
 	var newwindow
 	function hero() 
