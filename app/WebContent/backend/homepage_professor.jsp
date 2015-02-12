@@ -195,9 +195,9 @@
         }
     }
 	
-	function checker(i)
+	function checker(i, groupname)
 	{
-		var box = window.confirm("Click OK if you want to delete this group.");
+		var box = window.confirm("Click OK if you want to delete group: " + groupname);
 		if(box)
 		{
 			$('#deleteGroupButton'+i).trigger('click');
