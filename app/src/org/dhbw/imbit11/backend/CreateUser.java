@@ -293,7 +293,7 @@ import javax.servlet.http.HttpServletResponse;
 	try {
 			MailClient mailclient = new MailClient();
 			mailclient.sendMail(email, "Please confirm your registration!",
-					msgBody);
+					msgBody, request);
 		} catch (Exception e) {
 			e.printStackTrace();
 			// System.out.println("Sending email failed with unknown cause, sorry");
