@@ -54,7 +54,7 @@ versionID = versionID.substring(0, versionID.length()-1);
 	function hero() 
 	{
 		var title = "In honor of our fallen heroes, without them our class is not the same as before.";
-		var url = ".\images\heroes\heroes.png";
+		var url = "../images/heroes/heroes.png";
 		if (newwindow && !newwindow.closed) 
 		{ 
 			newwindow.focus(); newwindow.document.clear() 
