@@ -39,7 +39,8 @@
 			<a id="help" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a>
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 			<a id="change_password" onclick="window.open('<%out.print(application.getContextPath());%>/ChangeStudentPassword','_blank')" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.CHANGE_PW_BUTTON_TEXT%></a>
-			<!--<a id="audio" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.AUDIO_BUTTON_TEXT%></a>  -->
+			<!-- Uncomment mute button to test functionality and to help us not to get crazy... -->
+			<a id="audio" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.AUDIO_BUTTON_TEXT%></a>
 			<div class="welcome"></div>
 		</div>
 	</div>	
@@ -47,8 +48,7 @@
 		<div class="westContainer easyui-panel" data-options="border:false,fit:true">
 			<div class="mainLocationButtonContainer">
 				<div class="mainLocationButton easyui-linkbutton" id="1"><img src="images/icons/Airport.png" height=13px><%=ApplicationConstants.LOCATION1_NAME%></div>
-				<!-- Uncomment mute button to test functionality and to help us not to get crazy... -->
-				<div class="mainLocationButton easyui-linkbutton" id="2"><%=ApplicationConstants.LOCATION2_NAME%></div>
+				<!--<div class="mainLocationButton easyui-linkbutton" id="2"><%=ApplicationConstants.LOCATION2_NAME%></div>-->
 				<div class="mainLocationButton easyui-linkbutton" id="4"><img src="images/icons/Office.png" height=20px><%=ApplicationConstants.LOCATION3_NAME%></div>								
 				<div class="mainLocationButton easyui-linkbutton" id="3"><img src="images/icons/Conference.png" height=20px><%=ApplicationConstants.LOCATION4_NAME%></div>
 				<div class="mainLocationButton easyui-linkbutton" id="5"><img src="images/icons/Bar.png" height=20px><%=ApplicationConstants.LOCATION5_NAME%></div>
