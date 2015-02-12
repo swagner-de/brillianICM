@@ -58,7 +58,7 @@ public class MailClient extends HttpServlet
 				message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(toEmail));
 				message.setSubject(subject);
-				message.setText(content);
+				message.setContent(content, "text/html; charset=utf-8");
 			   // messageBodyPart.setText(html, "UTF-8", "html");
 	 
 				Transport.send(message);
