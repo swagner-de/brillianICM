@@ -58,7 +58,7 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 	 * @exception IOException
 	 * 
 	 * Method creates a UsernamePasswordToken by getting the username and password of the requesting user
-	 * try-block runs secure: tests whether the user is admin, student or professor; if none of those --> exception.
+	 * try-block runs secure: tests whether the user is admin, student or professor; if none of those exception is thrown.
 	 * three possible exceptions: unknown account, incorrect credentials and the possibility 
 	 * to diagnose an exception (ex.printStackTrace()).
 	 * Client request is redirected to previous URL

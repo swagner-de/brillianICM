@@ -30,7 +30,6 @@ public class ImprintController extends HttpServlet {
 	/**
 	 * Information of the "Impressum" brillianCRM is saved to the Object jsp after Servlet config
 	 * is placed into service and Servlet Context Object created
-	 * @author Mary
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		ServletContext context = config.getServletContext();

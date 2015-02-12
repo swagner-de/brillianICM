@@ -12,26 +12,47 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.shiro.SecurityUtils;
 
 @WebServlet({"/NewUsergroup"})
+
+/**
+ * Class is invoked when professor wants to create a new user group
+ * @author Mary
+ *
+ */
  public class NewUsergroup extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
-    /* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
-	 */
+    /**
+     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
+     */
 	public NewUsergroup() {
 		super();
 	}   	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * (not in use for this class)
+	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * in the doPost method
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doPost(request, response);
 	}  	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Gets the parameter groupname from the form field
+	 * Creates a new UserRealm object and invokes the function createNewGroup of UserRealm.java
+	 * Groupname is saved as first parameter and the E-mail that identifies the profesor is saved
+	 * as second parameter
+	 * Stores attribut with name success and the object "The new User Group was created" to the request
+	 * Forwards the request (success/ error) to the URL of the professor site
+	 * @param request - contains the request of a professor (creating a new group)
+	 * @param response - contains the response of the servlet (success/ error)
+	 * @exception IOException - gives out in which line of code the error occured and stores
+	 * attribut with the name error and the object "NOT SUCCESSFUL - cause not known" to the request
+	 * 
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -42,8 +63,7 @@ import org.apache.shiro.SecurityUtils;
 		
 		try {
 			
-			//get the user (aka subject) associated with 
-			//this request.
+			//get the user (aka subject) associated with this request.
 			
 			String subjectPrincipal = SecurityUtils.getSubject().getPrincipal().toString();
 

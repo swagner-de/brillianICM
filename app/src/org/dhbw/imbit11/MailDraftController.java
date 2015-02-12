@@ -28,7 +28,6 @@ public class MailDraftController extends HttpServlet {
 	/**
 	 * Grid view and labels of ingame-MailDraft of the brillianCRM is saved to the Object jsp
 	 * after Servlet config is placed into service and Servlet Context Object created
-	 * @author Mary
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		ServletContext context = config.getServletContext();
@@ -56,7 +55,6 @@ public class MailDraftController extends HttpServlet {
 	 * Server-side information of grid view and labels of ingame-MailDraft brillianCRM is saved to response
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @author Mary
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

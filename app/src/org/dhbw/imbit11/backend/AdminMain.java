@@ -30,6 +30,7 @@ import javax.servlet.http.HttpServletResponse;
 	}   	
 	
 	/**
+	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
 	 * @param request - contains the request of a client
