@@ -55,7 +55,8 @@ th,td {
 			</tr>
 			<tr>
 				<td valign="top" align="center"><a
-					href="https://github.com/Illuminae/brillianCRM/blob/master/app/src/org/dhbw/imbit11/masterfile.xml">
+					href="https://github.com/Illuminae/brillianCRM/blob/master/app/src/org/dhbw/imbit11/masterfile.xml"> <img
+						width="50%" alt="Bug Report" src="logo/default.jpg">
 						<br>XML Spielbaum
 				</a></td>
 				<td valign="top" align="center"><a
@@ -64,7 +65,8 @@ th,td {
 						Report
 				</a></td>
 				<td valign="top" align="center"><a
-					href="https://github.com/Illuminae/brillianCRM/blob/devAngela/doku/Dokumentation_Cake_v2_0.docx">
+					href="https://github.com/Illuminae/brillianCRM/blob/devAngela/doku/Dokumentation_Cake_v2_0.docx"> <img
+						width="50%" alt="Bug Report" src="logo/default.jpg">
 						<br>Dokumentation
 				</a></td>
 				<td valign="top" align="center"><a
@@ -74,12 +76,19 @@ th,td {
 				</a></td>
 			</tr>
 			<tr style="color: #aaa;">
-				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/apidocs">JavaDoc</a></td>
-				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/phpmyadmin/"><br>PHPmyAdmin
+				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/apidocs">
+				<img width="50%" alt="Bug Report" src="logo/default.jpg">
+				<br>JavaDoc</a></td>
+				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/phpmyadmin/">
+				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
+				<br>PHPmyAdmin
 				</a></td>
-				<td><a href="/manager"><br>Tomcat
-						Manager<br> </a></td>
-				<td><a href="XMLEditor.jsp">XML Editor</a></td>
+				<td><a href="/manager">
+				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
+				<br>Tomcat Manager<br> </a></td>
+				<td><a href="XMLEditor.jsp">
+				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
+				<br>XML Editor</a></td>
 				
 			</tr>
 		</table>
