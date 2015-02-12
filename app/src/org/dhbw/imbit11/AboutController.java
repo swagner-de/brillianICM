@@ -30,7 +30,6 @@ public class AboutController extends HttpServlet {
 	/**
 	 * About information of the brillianCRM is saved to the Object jsp after Servlet config
 	 * is placed into service and Servlet Context Object created
-	 * @author Mary
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		ServletContext context = config.getServletContext();
@@ -42,7 +41,6 @@ public class AboutController extends HttpServlet {
 	 * Server-side information of the About brillianCRM is saved to response
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @author Mary
 	 */
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,7 +56,6 @@ public class AboutController extends HttpServlet {
 	 * Server-side information of the About brillianCRM is saved to response
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @author Mary
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
