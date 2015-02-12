@@ -39,7 +39,7 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 	/**
 	 * @param request - contains client request
 	 * @param response - contains servlet response to clients request
-	 * @exception IOException
+	 * @exception IOException - throws error when IO exception occures
 	 * 
 	 * Client request is directed to the path saved in dispatcher object. Path directs to login
 	 */
@@ -55,7 +55,7 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 	/**
 	 * @param request - contains client request
 	 * @param response - contains servlet response to clients request
-	 * @exception IOException
+	 * @exception IOException - throws error when IO exception occures
 	 * 
 	 * Method creates a UsernamePasswordToken by getting the username and password of the requesting user
 	 * try-block runs secure: tests whether the user is admin, student or professor; if none of those exception is thrown.

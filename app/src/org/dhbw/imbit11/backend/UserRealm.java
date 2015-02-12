@@ -46,6 +46,10 @@ public class UserRealm extends JdbcRealm {
 	protected String groupExistsQuery = "SELECT COUNT(`group_id`) FROM `group` WHERE `group_id`=?";
 	protected String userExistsQuery = "SELECT Count(email) from `user` WHERE `email`=?";
 	
+	/**
+	 * Invokes the constructor of parent class (superclass)
+	 * function looks up an insert in the database
+	 */
     public UserRealm() {
     	super();
 
@@ -68,9 +72,15 @@ public class UserRealm extends JdbcRealm {
 		}
     }
 
-/*
- * Creates a new group with the first parameter as group name and assigned to the professor that is defined by his email
- * in the second parameter of the function 
+/**
+ * Invoked in java class NewUsergroup
+ * Creates a new group with the first parameter as group name and assigned to the professor
+ * that is defined by his email in the second parameter of the function
+ * 
+ *  @param groupname - gets the groupname from java class NewUsergroup
+ *  @param professor - contains the professor that wants to create a group
+ *  
+ *  @exception SQLException - throws a database access error
  */
 protected void createNewGroup(String groupname, String professor) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -89,7 +99,8 @@ protected void createNewGroup(String groupname, String professor) throws SQLExce
     }
 } 
 
-/*
+/**
+ * Invoked in java class ProfessorMain
  * does not work if the user has no corresponding entry in the user_progress table
  * returns an array list with arraylist for each student that is part of the group of the professor
  * defined by the email that is entered as parameter
@@ -97,6 +108,11 @@ protected void createNewGroup(String groupname, String professor) throws SQLExce
  * the following information is stored about the students in each row of the arraylist:
  * 0:first_name, 1:last_name, 2:cost, 3:quality, 4:time, 5:group_name, 6:email, 7:group
  * 
+ * @param professor - gets the name of a professor from java class ProfessorMain
+ * 
+ * @return studentsForProfessor - contains array list with each student that is part of a group from a certain professor
+ * 
+ * @exception SQLException - throws a database access error
  */
 protected ArrayList<ArrayList<String>> getUsersForProfessor(String professor) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -135,10 +151,15 @@ protected ArrayList<ArrayList<String>> getUsersForProfessor(String professor) th
 }
 
 
-/*
- * returns an array list with an array list containing information for each professors currently registered in the database
- * each professor row contains the following information:
+/**
+ * Invoked in java class AdminMain
+ * returns an array list with an array list containing information for each professors
+ * currently registered in the database each professor row contains the following information:
  * 0:first_name, 1:last_name, 2:email
+ * 
+ * @return studentsForProfessor - contains an arraylist with all professors that are currently registered
+ *  
+ * @exception SQLException - throws a database access error
  * 
  */
 protected ArrayList<ArrayList<String>> getProfessors() throws SQLException{
@@ -168,8 +189,15 @@ protected ArrayList<ArrayList<String>> getProfessors() throws SQLException{
     return studentsForProfessor;
 }
 
-/*
- * returns an arraylist with name and registrationlink for each group of a professor
+/**
+ * Invoked in java class ProfessorMain
+ * returns an arraylist with name and registration link for each group of a professor
+ * 
+ * @param professor - gets the name of a professor from java class ProfessorMain
+ * 
+ * @return groups - arraylist with groupnames and fitting registration links
+ * 
+ * @exception SQLException - throws a database access error
  */
 protected ArrayList<ArrayList<String>> getGroupsForProfessor(String professor) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -198,8 +226,15 @@ protected ArrayList<ArrayList<String>> getGroupsForProfessor(String professor) t
 }
 
 
-/*
+/**
+ * 
  * Returns true if a group with the given groupid does already exist in the database
+ * 
+ * @param groupid - contains the id of a group that might exists
+ * 
+ * @exception SQLException - throws a database access error
+ * 
+ * @return returnValue - contains true if group exists or false when not
  */
 protected boolean groupExists(String groupid) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -228,8 +263,15 @@ protected boolean groupExists(String groupid) throws SQLException{
 }
 
 
-/*
+/**
+ * Invoked in java class CreateUser
  * Returns true if a user with the given email address does already exist in the database
+ * 
+ * @param email - contains the email of a new user that is compared with the entries in the database
+ * 
+ * @return returnValue - contains true when user already exists and false when not
+ * 
+ * @exception SQLException - returns a database access error
  */
 protected boolean userExists(String email) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -256,8 +298,19 @@ protected boolean userExists(String email) throws SQLException{
     return returnValue;
 }
 
-/*
+/**
+ * Invoked in java class CreateUser
  * creates a new entry in the user table and a corresponding one in the user_progress table
+ * 
+ * @param email - contains the email address of an user that is registering
+ * @param lastname - contains the last name of an user that is registering
+ * @param firstname - contains the first name of an user that is registering
+ * @param password - contains the encrypted password of an user that is registering
+ * @param role - contains the role of an user (admin, professor, student)
+ * @param group - contains the groupnumber of a student that is registering to a certain group
+ * @param gender - contains the gender of an user that is registering
+ * 
+ * @exception SQLException - returns a database access error
  */
 protected void createNewUser(String email, String lastname, String firstname, String password, String role, String group, int gender) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -295,9 +348,15 @@ protected void createNewUser(String email, String lastname, String firstname, St
     }
 }
 
-/*
+/**
+ * Invoked in java class ConfirmRegistration
  * Updates the unverified Email (second parameter, currently existing email in database table user) with the
- * email the first parameter  of the function
+ * email the first parameter of the function
+ * 
+ * @param email - contains the email that the user accessed the link trough
+ * @param unverifiedEmail - contains the email that is saved to the database
+ * 
+ * @exception SQLException - returns a database access error
  */
 protected void updateEmail(String email, String unverifiedEmail) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -314,9 +373,15 @@ protected void updateEmail(String email, String unverifiedEmail) throws SQLExcep
     }
 }
 
-/*
+/**
+ * Invoked in java class PasswortReset
  * function to update the password of a user
  * requires the user's email address and the new password
+ * 
+ * @param email - contains the field value when a user is logging in
+ * @param password - contains the field value entered in the password field
+ * 
+ * @exception SQLException - returns a database access error
  */
 protected void updatePassword(String email, String password) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -333,9 +398,18 @@ protected void updatePassword(String email, String password) throws SQLException
     }
 }
 
-/*
+/**
+ * 
  * function to update the progress of a user
  * required input parameter: userid, costs, quality, time, path
+ * 
+ * @param userid - contains the email address of an user
+ * @param costs - contains the user progress in costs
+ * @param quality - contains the user progress in quality
+ * @param time - contains the user progress in time
+ * @param path - contains the knot of the XML tree where the user is playing
+ * 
+ * @exception SQLException - returns a database access error
  */
 public void setUserProgress(String userid, int costs, int quality, int time, String path ) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -362,8 +436,13 @@ public void setUserProgress(String userid, int costs, int quality, int time, Str
     }
 }
 
-/*
+/**
+ * Invoked in java class DeleteUser
  * function to delete a user by handing his email to the function
+ * 
+ * @param email - contains the email address of a user
+ * 
+ * @exception SQLException - returns a database access error
  */
 public void deleteUser(String email) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -381,8 +460,12 @@ public void deleteUser(String email) throws SQLException{
     }
 }
 
-/*
+/**
  * function to delete a group by handing its group id to the function
+ * 
+ * @param group_id - contains the group id of a certain group
+ * 
+ * @exception SQLException - returns a database access error
  */
 public void deleteGroup(String group_id)throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -400,8 +483,13 @@ public void deleteGroup(String group_id)throws SQLException{
     }
 }
 
-/*
+/**
+ * Invoked in java class DeleteProfessor
  * function to delete a professor by handing his email to the function
+ * 
+ * @param email - email address of the professor that should be deleted
+ * 
+ * @exception SQLException - returns a database access error
  */
 public void deleteProfessor(String email) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -420,8 +508,15 @@ public void deleteProfessor(String email) throws SQLException{
 }
 
 
-/*
+/**
+ * Invoked in java class StudentMain
  * returns the user id for the user that is defined by the email address handed to the function
+ *
+ *@param email - contains the email address of a student that is saved to field "username"
+ *
+ *@return userid - contains the email of a student that was saved to the database
+ *
+ *@exception SQLException - returns a database access error
  */
 public String getUserByEmail(String email) throws SQLException{
 	
@@ -444,9 +539,16 @@ public String getUserByEmail(String email) throws SQLException{
     }
     return userid;
 }
-/*
+/**
+ * 
  * Returns an ArrayList<Object> containing the User Progress for the user with the ID that was handed to the function
  * The following entries can be fount in the arraylist: 0:last_name, 1:first_name, 2:gender, 3:cost, 4:quality, 5:time, 6:path
+ *
+ *@param userid - contains the email of a user
+ * 
+ * @return progress - returns the values for costs, quality, time
+ * 
+ * @exception SQLException - returns database access error
  */
 public ArrayList<Object> getUserProgress(String userid) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -480,9 +582,14 @@ public ArrayList<Object> getUserProgress(String userid) throws SQLException{
     return progress;
 }
 
-/*
+/**
+ * Invoked in java class ResetUserProgress
  * sets the User Progress to the hard coded starting values of 0/0/0 for time/quality/cost and
- * overwrites the existing path with the defined entry node l000e000 
+ * overwrites the existing with the defined entry node l000e000 
+ * 
+ * @param userEmail - contains the user´s email
+ * 
+ * @exception SQLException - returns a database access error
  */
 public void resetUserProgress(String userEmail) throws SQLException{
 	
@@ -491,8 +598,13 @@ public void resetUserProgress(String userEmail) throws SQLException{
 	
 	
 }
-/*
+/**
+ * 
  * gets the User Progress and checks whether the path ends with the ending node
+ * 
+ * @param userEmail - contains the email address of an user
+ * 
+ * @exception SQLException - returns a database access error
  */
 public boolean isUserFinished(String userEmail) throws SQLException{
 	//get the current path entry saved to the DB

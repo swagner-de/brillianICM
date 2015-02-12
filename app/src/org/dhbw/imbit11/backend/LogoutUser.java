@@ -20,6 +20,7 @@ import org.apache.shiro.subject.Subject;
 /**
  * Class is invoked when an usr tries to logout o the game
  * Use JSecurity to logout the current user
+ * 
  * @author Mary
  */
  public class LogoutUser extends HttpServlet implements javax.servlet.Servlet {
@@ -36,8 +37,10 @@ import org.apache.shiro.subject.Subject;
 	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
+	 * 
 	 * @param request - contains the request of a client (loggout button)
 	 * @param response - contains the response of the servlet
+	 * 
 	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,8 +54,10 @@ import org.apache.shiro.subject.Subject;
 	 * User is logged out when subject is not empty and associated entities are removed
 	 * Checks if session object is empty, when not invalidates session
 	 * Forwards request and response to the URL of the UserLogin site
+	 * 
 	 * @param request - contains the request of the user (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
+	 * 
 	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -40,6 +40,7 @@ public class ResultController extends HttpServlet {
 	 * Format of the response is HTML with UTF-8 Encoding
 	 * Server-side information of grid view, labels, results of game and restart option
 	 * of brillianCRM is saved to response
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 */
@@ -56,6 +57,7 @@ public class ResultController extends HttpServlet {
 	 * of unlimited length to web server
 	 * Server-side information of grid view, labels, results and restart option of
 	 * brillianCRM is saved to response
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 */

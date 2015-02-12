@@ -16,6 +16,7 @@ import org.apache.shiro.subject.Subject;
 
 /**
  * Class is invoked when the user tries to reset its user progress
+ * 
  * @author Mary
  *
  */
@@ -33,8 +34,10 @@ import org.apache.shiro.subject.Subject;
 	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
+	 * 
 	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -49,8 +52,10 @@ import org.apache.shiro.subject.Subject;
 	 * of the professor
 	 * Else the user id is stored, the progress related to the the user id is reseted and
 	 * the response and request is forwarded to the view of the student
+	 * 
 	 * @param request - contains the request of a user (reset of game progress)
 	 * @param response - contains the response of the servlet
+	 * 
 	 * @exception IOException - shows line of code where the exception is thrown
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -49,8 +49,10 @@ import javax.servlet.http.HttpServletResponse;
 	 * 	Verifies if e-Mail and gender is entered, if password equals the password_repeat and changes role of user
 	 *  If the registration was successful the user is redirected to a landing page
 	 *  if not, the form is called again and an error/status message is displayed
+	 *  
 	 *  @param request - contains the request of a client
 	 *  @param response - contains the response of the servlet
+	 *  
 	 *  @exception IOException - signals that IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request,

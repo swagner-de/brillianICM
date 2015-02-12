@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Class contains the doGet method for the confirmation mail,
  * where the e-Mail of a user is verified
+ * 
  * @author Mary
  *
  */
@@ -31,8 +32,10 @@ import javax.servlet.http.HttpServletResponse;
 	 * The UserRealm object enables the use of the sql statements saved to the class UserRealm
 	 * Exception changes the unidentified e-Mail to the e-Mail that is verified by the user or
 	 * gives out an error
+	 * 
 	 * @param response - contains the response of the servlet
 	 * @param request - contains the request of a client
+	 * 
 	 * @exception IOException - shows line of code in which error occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
