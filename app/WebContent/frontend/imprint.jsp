@@ -74,7 +74,7 @@ versionID = versionID.substring(0, versionID.length()-1);
 	
 	function bunnies()
 	{
-		document.getElementById('versionID').innerHTML = "IMBIT 12C 2012 YEAH!";
+		document.getElementById('versionID').innerHTML = "IMBIT 12C 2015 YEAH!";
 	}
 
 	function tidy()
