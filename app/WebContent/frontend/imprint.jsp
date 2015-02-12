@@ -45,6 +45,42 @@ String[] scRealPathSplit = scRealPath.split("##",2);
 String versionID = scRealPathSplit[1];
 versionID = versionID.substring(0, versionID.length()-1);
 %>
-<p align="right"> Version: <%= versionID %> </p>
+<p id="versionID" align="right" onClick="hero()"> Version: <%= versionID %> </p>
 
 </div>
+
+<script type="text/javascript">
+	var newwindow
+	function hero() 
+	{
+		var title = "In honor of our fallen heroes, without them our class is not the same as before.";
+		var url = ".\images\heroes\heroes.png";
+		if (newwindow && !newwindow.closed) 
+		{ 
+			newwindow.focus(); newwindow.document.clear() 
+		} 
+		else 
+		{ 
+			newwindow=window.open('','','width=2074,height=1383,resizable=1') 
+		}
+
+		newwindow.document.writeln('<> <head> <title>' + title + '<\/title> <\/head> <body bgcolor=\"black\"> <center>');
+		newwindow.document.writeln('<img src=' + url + ' title=\"' + title + '\" alt=\"' + title + '\" >');
+		newwindow.document.writeln('<\/center> <\/body> <\/html>');
+		newwindow.document.close();
+		bunnies();
+	}
+	
+	function bunnies()
+	{
+		document.getElementById('versionID').innerHTML = "IMBIT 12C 2012 YEAH!";
+	}
+
+	function tidy()
+	{
+		if (newwindow && !newwindow.closed) 
+		{ 
+			newwindow.close();
+		} 
+	}
+</script>
