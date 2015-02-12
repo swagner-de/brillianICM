@@ -73,7 +73,7 @@
 			} 
 			else 
 			{ 
-				newwindow=window.open('','','width=2074,height=1383,resizable=1') 
+				newwindow=window.open('','','width=1492,height=1060,resizable=1') 
 			}
 
 			newwindow.document.writeln('<> <head> <title>' + title + '<\/title> <\/head> <body bgcolor=\"black\"> <center>');
