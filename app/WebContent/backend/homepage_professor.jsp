@@ -66,7 +66,7 @@
 											
 											out.println("<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/></form></td>");
 											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\"><input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" "+
-													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#deleteGroupButton"+i+"').trigger('click')\">Delete</a>");
+													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+")>Delete</a>");
 											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form>");
 											out.println("</td></tr></table> ");
 											
@@ -194,5 +194,14 @@
         	return 'background:khaki';
         }
     }
+	
+	function checker(i)
+	{
+		var box = window.confirm("Click OK if you want to delete this group.");
+		if(box)
+		{
+			$('#deleteGroupButton'+i).trigger('click');
+		}
+	}
 </script>
 </html>
