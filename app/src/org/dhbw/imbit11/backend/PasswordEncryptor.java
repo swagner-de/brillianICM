@@ -5,15 +5,22 @@ import org.apache.shiro.crypto.hash.DefaultHashService;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.util.SimpleByteSource;
 
-/*
- * this class defines the encryption that shiro applies to passwords before storing them into the database
- * is used as well to decrypt them for veryfication
- * the private salt used here has to be set as well in the web.xml where the settings for shiro are made. however
- * in the web.xml this private salt needs to be base64 encoded
+/**
+ * this class defines the encryption that shiro applies to passwords before storing
+ * them into the database is used as well to decrypt them for veryfication
+ * the private salt used here has to be set as well in the web.xml where the settings
+ * for shiro are made. however in the web.xml this private salt needs to be base64 encoded
+ * 
+ * @author Mary
  */
 
 public class PasswordEncryptor {
 
+	/**
+	 * Encryption of an user´s password
+	 * @param password - contains the password that the user entered
+	 * @return encrypted password - contains the password encrypted with shiro
+	 */
 	public String hashPassword(String password){
 		
 		int iterations = 500000;
