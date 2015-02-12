@@ -128,20 +128,19 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 
 		} catch (UnknownAccountException ex) {
 			// username provided was not found
-			ex.printStackTrace();
-			request.setAttribute("error", "Login failed!");
+			//ex.printStackTrace(); ***commented out, Stack would otherwise fill up
+			request.setAttribute("error", "Login failed! Username or password incorrect. Please retry.");
 
 		} catch (IncorrectCredentialsException ex) {
 			// password provided did not match password found in database
 			// for the username provided
-			ex.printStackTrace();
-			request.setAttribute("error", "Login failed!");
+			//ex.printStackTrace(); ***commented out, Stack would otherwise fill up
+			request.setAttribute("error", "Login failed! Username or password incorrect. Please retry.");
 		}
 
 		catch (Exception ex) {
 			ex.printStackTrace();
-			request.setAttribute("error",
-					"Fatal Error! Please try again later.");
+			request.setAttribute("error", "Fatal Error! Please try again later.");
 		}
 
 		// forward the request and response to the view
