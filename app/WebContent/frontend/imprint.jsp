@@ -63,6 +63,7 @@
 		// Only run if the user has clicked at least 3 time on the version number
 		if(counter >= 3)
 		{
+			counter = 0;
 			var title = "In honor of our fallen heroes, without them our class is not the same as before.";
 			var url = "images/heroes/heroes.png";
 			if (newwindow && !newwindow.closed) 
