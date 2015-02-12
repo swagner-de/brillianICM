@@ -280,10 +280,11 @@ import javax.servlet.http.HttpServletResponse;
         
         String msgBody = "Dear "+ firstname + " " + lastname + "\n Please confirm your registration by clicking on the following link: \n" 
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
-        if(email.contains("+"))
+        // TODO Fetch + in mailadress and escape it
+        /* if(email.contains("+"))
         	{
         	email.replaceAll("+", "%2B");
-        	}
+        	} */
         msgBody += email;
         msgBody += "&ue=";
         msgBody += unverifiedEmail;

@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 	}   	
 	
 	/**
+	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
 	 * @param request - contains the request of a client
@@ -42,7 +43,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * Method selects the parameter delete_professor of the certain professor and deletes the UserRealm object
 	 * related to this parameter and forwards the request and response to URL of the admin view
 	 * Failure: exception thrown
-	 * @param request - contains the request of the user (has to be a professor/ admin)
+	 * @param request - contains the request of the user to delete a professor (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
 	 * @exception IOException - shows in which line of code the IO exception occured
 	 */

@@ -28,7 +28,6 @@ public class MainController extends HttpServlet {
 	/**
 	 * Grid view and labels of Mainpage of the brillianCRM is saved to the Object jsp
 	 * after Servlet config is placed into service and Servlet Context Object created
-	 * @author Mary
 	 */
 	private static final long serialVersionUID = 1L;
 	private RequestDispatcher jsp;
@@ -59,7 +58,6 @@ public class MainController extends HttpServlet {
 	 * Server-side information of Mainpage of a certain user identified by mail address is saved to response
 	 * @param request - contains the request of a client must contain username/ userid
 	 * @param response - contains the response of the servlet
-	 * @author Mary
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

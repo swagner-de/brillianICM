@@ -58,7 +58,7 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 	 * @exception IOException
 	 * 
 	 * Method creates a UsernamePasswordToken by getting the username and password of the requesting user
-	 * try-block runs secure: tests whether the user is admin, student or professor; if none of those --> exception.
+	 * try-block runs secure: tests whether the user is admin, student or professor; if none of those exception is thrown.
 	 * three possible exceptions: unknown account, incorrect credentials and the possibility 
 	 * to diagnose an exception (ex.printStackTrace()).
 	 * Client request is redirected to previous URL
@@ -142,20 +142,19 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 
 		} catch (UnknownAccountException ex) {
 			// username provided was not found
-			ex.printStackTrace();
-			request.setAttribute("error", "Login failed!");
+			//ex.printStackTrace(); ***commented out, Stack would otherwise fill up
+			request.setAttribute("error", "Login failed! Username or password incorrect. Please retry.");
 
 		} catch (IncorrectCredentialsException ex) {
 			// password provided did not match password found in database
 			// for the username provided
-			ex.printStackTrace();
-			request.setAttribute("error", "Login failed!");
+			//ex.printStackTrace(); ***commented out, Stack would otherwise fill up
+			request.setAttribute("error", "Login failed! Username or password incorrect. Please retry.");
 		}
 
 		catch (Exception ex) {
 			ex.printStackTrace();
-			request.setAttribute("error",
-					"Fatal Error! Please try again later.");
+			request.setAttribute("error", "Fatal Error! Please try again later.");
 		}
 
 		// forward the request and response to the view
