@@ -38,38 +38,44 @@ Die verwendeten Icons wurden von <a href="http://www.freepik.com" title="Freepik
 <hr />
 
 <%
-/* Read brillianCRM version from path of servlet. */
+/* Read brillianCRM version from path of servlet. 
 ServletContext sc = getServletContext();
 String scRealPath = sc.getRealPath("/");
 String[] scRealPathSplit = scRealPath.split("##",2);
 String versionID = scRealPathSplit[1];
-versionID = versionID.substring(0, versionID.length()-1);
-%>
-<p id="versionID" align="right" onClick="hero()"> Version: <%= versionID %> </p>
+versionID = versionID.substring(0, versionID.length()-1);*/
+%> 
+<p id="versionID" align="right" onClick="hero()"> Version: 1 </p>
 
 </div>
 
 <!-- Seriously? Why are you here? Are you this interested in the source code of some imprint? Oo -->
 <script type="text/javascript">
 	var newwindow
+	var counter = 0;
 	function hero() 
 	{
-		var title = "In honor of our fallen heroes, without them our class is not the same as before.";
-		var url = "images/heroes/heroes.png";
-		if (newwindow && !newwindow.closed) 
-		{ 
-			newwindow.focus(); newwindow.document.clear() 
-		} 
-		else 
-		{ 
-			newwindow=window.open('','','width=2074,height=1383,resizable=1') 
-		}
+		counter++;
+		// Only run if the user has clicked at least 3 time on the version number
+		if(counter >= 3)
+		{
+			var title = "In honor of our fallen heroes, without them our class is not the same as before.";
+			var url = "images/heroes/heroes.png";
+			if (newwindow && !newwindow.closed) 
+			{ 
+				newwindow.focus(); newwindow.document.clear() 
+			} 
+			else 
+			{ 
+				newwindow=window.open('','','width=2074,height=1383,resizable=1') 
+			}
 
-		newwindow.document.writeln('<> <head> <title>' + title + '<\/title> <\/head> <body bgcolor=\"black\"> <center>');
-		newwindow.document.writeln('<img src=' + url + ' title=\"' + title + '\" alt=\"' + title + '\" >');
-		newwindow.document.writeln('<\/center> <\/body> <\/html>');
-		newwindow.document.close();
-		bunnies();
+			newwindow.document.writeln('<> <head> <title>' + title + '<\/title> <\/head> <body bgcolor=\"black\"> <center>');
+			newwindow.document.writeln('<img src=' + url + ' title=\"' + title + '\" alt=\"' + title + '\" >');
+			newwindow.document.writeln('<\/center> <\/body> <\/html>');
+			newwindow.document.close();
+			bunnies();
+		}
 	}
 	
 	function bunnies()
