@@ -1140,6 +1140,39 @@ function showLoading () {
 	},duration);
 }
 
+window.onload = function()
+{
+	Element.prototype.remove = function() {
+	    this.parentElement.removeChild(this);
+	}
+	NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+	    for(var i = 0, len = this.length; i < len; i++) {
+	        if(this[i] && this[i].parentElement) {
+	            this[i].parentElement.removeChild(this[i]);
+	        }
+	    }
+	}
+	
+	var Rick = new Date();
+	var Astley = Rick.getHours();
+	var Never = 9;
+	var Gonna = 24;
+	
+	if(Astley >= Never &&  Astley <= Gonna)
+	{
+		var Give = document.createElement("span");
+		Give.setAttribute("class", "ricky");
+		//Give.setAttribute("id", "ricky");
+		var You = document.createTextNode("Never Gonna Give You Up, Never Gonna Let You Down");
+		Give.appendChild(You);
+		var Up = document.getElementsByClassName("div-header window")[0].appendChild(Give);
+		setTimeout(function()
+		{
+			$(".ricky").text(''); // remove text from span tags after 3 seconds
+		}, 3000)
+	}
+}
+
 //Automatically executed when Browser-Window is resized
 $(window).resize(function() {
 	$('.mainEventContainer').window('center');
