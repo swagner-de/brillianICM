@@ -196,6 +196,7 @@
 		showImprint();
 	});
 	
+	// Changes background color depending on score of student
 	function cellStyler(value,row,index){
         if (value <= 30){
             return 'background:#ffa8a8;';
