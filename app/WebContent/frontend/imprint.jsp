@@ -43,14 +43,14 @@
 	<hr />
 	
 	<%
-	/* Read brillianCRM version from path of servlet. 
+	/* Read brillianCRM version from path of servlet.*/ 
 	ServletContext sc = getServletContext();
 	String scRealPath = sc.getRealPath("/");
-	String[] scRealPathSplit = scRealPath.split("##",2);
-	String versionID = scRealPathSplit[1];
-	versionID = versionID.substring(0, versionID.length()-1);*/
-	%> 
-	<p id="versionID" align="right" onClick="hero()"> Version: 1 </p>
+	String[] scRealPathSplit = scRealPath.split("#");
+	String versionID = scRealPathSplit[scRealPathSplit.length-1];
+	versionID = versionID.substring(0, versionID.length()-1);
+	 %> 
+	<p id="versionID" align="right" onClick="hero()"> <%= versionID %> </p>
 </div>
 
 <!-- Seriously? Why are you here? Are you this interested in the source code of some imprint? Oo -->
