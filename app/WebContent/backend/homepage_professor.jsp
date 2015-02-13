@@ -206,6 +206,7 @@
         }
     }
 	
+	// Ask user to confirm if he really wants to delete a group
 	function checker(i, groupname)
 	{
 		var box = window.confirm("Click OK if you want to delete group: " + groupname);
