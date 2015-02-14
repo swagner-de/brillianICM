@@ -36,7 +36,7 @@ import javax.servlet.annotation.WebServlet;
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -52,7 +52,7 @@ import javax.servlet.annotation.WebServlet;
 	 * @param request - contains the request of a client (register student for a certain group)
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

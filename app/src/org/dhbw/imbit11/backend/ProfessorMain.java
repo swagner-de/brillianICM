@@ -33,7 +33,8 @@ import org.apache.shiro.SecurityUtils;
 	* @param request - contains the request of a client
 	* @param response - contains the response of the servlet
 	* 
-	* @exception IOException - signals that an IO exception occured
+	* @throws ServletException - throws exception when servlet encounters difficulties
+	* @throws IOException - signals that an IO exception occured
     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -48,7 +49,8 @@ import org.apache.shiro.SecurityUtils;
 	 * @param request - contains the request of a client (open Main site of professor)
 	 * @param response - contains the response of the servlet (success/ error)
 	 * 
-	 * @exception IOException - signals that an IO exception occured and gives out line of code
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured and gives out line of code
 	 * stores in the request the error message
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

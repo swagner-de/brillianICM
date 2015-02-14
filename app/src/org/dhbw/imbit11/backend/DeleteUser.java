@@ -35,7 +35,8 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -50,7 +51,8 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param request - contains the request of the user to delete a user (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
 	 * 
-	 * @exception IOException - Shows line of code in which the error occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - Shows line of code in which the error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

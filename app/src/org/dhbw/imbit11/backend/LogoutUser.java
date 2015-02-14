@@ -41,7 +41,8 @@ import org.apache.shiro.subject.Subject;
 	 * @param request - contains the request of a client (loggout button)
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -58,7 +59,8 @@ import org.apache.shiro.subject.Subject;
 	 * @param request - contains the request of the user (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

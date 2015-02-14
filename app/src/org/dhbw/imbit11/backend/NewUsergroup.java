@@ -37,7 +37,8 @@ import org.apache.shiro.SecurityUtils;
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -55,7 +56,8 @@ import org.apache.shiro.SecurityUtils;
 	 * @param request - contains the request of a professor (creating a new group)
 	 * @param response - contains the response of the servlet (success/ error)
 	 * 
-	 * @exception IOException - gives out in which line of code the error occured and stores
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - gives out in which line of code the error occured and stores
 	 * attribut with the name error and the object "NOT SUCCESSFUL - cause not known" to the request
 	 * 
 	 */

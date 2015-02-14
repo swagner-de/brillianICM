@@ -80,7 +80,7 @@ public class UserRealm extends JdbcRealm {
  *  @param groupname - gets the groupname from java class NewUsergroup
  *  @param professor - contains the professor that wants to create a group
  *  
- *  @exception SQLException - throws a database access error
+ *  @throws SQLException - throws a database access error
  */
 protected void createNewGroup(String groupname, String professor) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -112,7 +112,7 @@ protected void createNewGroup(String groupname, String professor) throws SQLExce
  * 
  * @return studentsForProfessor - contains array list with each student that is part of a group from a certain professor
  * 
- * @exception SQLException - throws a database access error
+ * @throws SQLException - throws a database access error
  */
 protected ArrayList<ArrayList<String>> getUsersForProfessor(String professor) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -159,7 +159,7 @@ protected ArrayList<ArrayList<String>> getUsersForProfessor(String professor) th
  * 
  * @return studentsForProfessor - contains an arraylist with all professors that are currently registered
  *  
- * @exception SQLException - throws a database access error
+ * @throws SQLException - throws a database access error
  * 
  */
 protected ArrayList<ArrayList<String>> getProfessors() throws SQLException{
@@ -197,7 +197,7 @@ protected ArrayList<ArrayList<String>> getProfessors() throws SQLException{
  * 
  * @return groups - arraylist with groupnames and fitting registration links
  * 
- * @exception SQLException - throws a database access error
+ * @throws SQLException - throws a database access error
  */
 protected ArrayList<ArrayList<String>> getGroupsForProfessor(String professor) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -232,7 +232,7 @@ protected ArrayList<ArrayList<String>> getGroupsForProfessor(String professor) t
  * 
  * @param groupid - contains the id of a group that might exists
  * 
- * @exception SQLException - throws a database access error
+ * @throws SQLException - throws a database access error
  * 
  * @return returnValue - contains true if group exists or false when not
  */
@@ -271,7 +271,7 @@ protected boolean groupExists(String groupid) throws SQLException{
  * 
  * @return returnValue - contains true when user already exists and false when not
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 protected boolean userExists(String email) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -310,7 +310,7 @@ protected boolean userExists(String email) throws SQLException{
  * @param group - contains the groupnumber of a student that is registering to a certain group
  * @param gender - contains the gender of an user that is registering
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 protected void createNewUser(String email, String lastname, String firstname, String password, String role, String group, int gender) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -356,7 +356,7 @@ protected void createNewUser(String email, String lastname, String firstname, St
  * @param email - contains the email that the user accessed the link trough
  * @param unverifiedEmail - contains the email that is saved to the database
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 protected void updateEmail(String email, String unverifiedEmail) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -381,7 +381,7 @@ protected void updateEmail(String email, String unverifiedEmail) throws SQLExcep
  * @param email - contains the field value when a user is logging in
  * @param password - contains the field value entered in the password field
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 protected void updatePassword(String email, String password) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -409,7 +409,7 @@ protected void updatePassword(String email, String password) throws SQLException
  * @param time - contains the user progress in time
  * @param path - contains the knot of the XML tree where the user is playing
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 public void setUserProgress(String userid, int costs, int quality, int time, String path ) throws SQLException {
 	Connection conn = dataSource.getConnection();
@@ -442,7 +442,7 @@ public void setUserProgress(String userid, int costs, int quality, int time, Str
  * 
  * @param email - contains the email address of a user
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 public void deleteUser(String email) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -465,7 +465,7 @@ public void deleteUser(String email) throws SQLException{
  * 
  * @param group_id - contains the group id of a certain group
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 public void deleteGroup(String group_id)throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -489,7 +489,7 @@ public void deleteGroup(String group_id)throws SQLException{
  * 
  * @param email - email address of the professor that should be deleted
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 public void deleteProfessor(String email) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -516,7 +516,7 @@ public void deleteProfessor(String email) throws SQLException{
  *
  *@return userid - contains the email of a student that was saved to the database
  *
- *@exception SQLException - returns a database access error
+ *@throws SQLException - returns a database access error
  */
 public String getUserByEmail(String email) throws SQLException{
 	
@@ -544,11 +544,11 @@ public String getUserByEmail(String email) throws SQLException{
  * Returns an ArrayList<Object> containing the User Progress for the user with the ID that was handed to the function
  * The following entries can be fount in the arraylist: 0:last_name, 1:first_name, 2:gender, 3:cost, 4:quality, 5:time, 6:path
  *
- *@param userid - contains the email of a user
+ * @param userid - contains the email of a user
  * 
  * @return progress - returns the values for costs, quality, time
  * 
- * @exception SQLException - returns database access error
+ * @throws SQLException - returns database access error
  */
 public ArrayList<Object> getUserProgress(String userid) throws SQLException{
 	Connection conn = dataSource.getConnection();
@@ -589,7 +589,7 @@ public ArrayList<Object> getUserProgress(String userid) throws SQLException{
  * 
  * @param userEmail - contains the user´s email
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 public void resetUserProgress(String userEmail) throws SQLException{
 	
@@ -604,7 +604,7 @@ public void resetUserProgress(String userEmail) throws SQLException{
  * 
  * @param userEmail - contains the email address of an user
  * 
- * @exception SQLException - returns a database access error
+ * @throws SQLException - returns a database access error
  */
 public boolean isUserFinished(String userEmail) throws SQLException{
 	//get the current path entry saved to the DB

@@ -38,7 +38,8 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -55,7 +56,8 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - shows line of code in which error occured
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - shows line of code in which error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

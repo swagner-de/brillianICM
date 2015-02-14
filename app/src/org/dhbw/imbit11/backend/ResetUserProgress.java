@@ -38,7 +38,7 @@ import org.apache.shiro.subject.Subject;
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - signals that an IO exception occured
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -56,7 +56,7 @@ import org.apache.shiro.subject.Subject;
 	 * @param request - contains the request of a user (reset of game progress)
 	 * @param response - contains the response of the servlet
 	 * 
-	 * @exception IOException - shows line of code where the exception is thrown
+	 * @throws IOException - shows line of code where the exception is thrown
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
