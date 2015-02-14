@@ -39,6 +39,7 @@ public class UserRealm extends JdbcRealm {
 	protected String updateEmailQuery = "UPDATE `user`SET `email`=? WHERE `email`=?";
 	protected String updatePasswordQuery = "UPDATE `user`SET `password`=? WHERE `email`=?";
 	protected String setProgressQuery = "UPDATE `user_progress` SET `cost`=?, `quality`=?, `time`=?, `path`=? WHERE `user_id` = ?";
+	protected String setLvlIdQuery = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String getProgressQuery = "SELECT `last_name`, `first_name`, `gender`,`cost`, `quality`, `time`, `path` FROM `user_progress`, `user` WHERE `user_progress`.`user_id`= `user`.`user_id` AND `user_progress`.`user_id`=?";
 	
 	protected String getStudentsForProfessorQuery = "SELECT `first_name`, `last_name`, `cost`, `quality`, `time` , `group_name`, `email`, `group`  FROM `user`, `user_progress` , `group` WHERE `user`.`user_id` = `user_progress`.`user_id` AND`user`.`group` IN (SELECT `group_id` FROM `group` WHERE `professor_id` = (SELECT `user_id` FROM`user` WHERE `email` = ?)) AND `user`.`group` = `group`.`group_id` ORDER BY `last_name` ASC";
@@ -361,6 +362,27 @@ public void setUserProgress(String userid, int costs, int quality, int time, Str
     	conn.close();
     }
 }
+
+/*
+ * Function to set the lvlId of a certain User. Requires the userid and the lvlId (Format: lxxxexxx)
+ */
+
+public void setLvlId(String userid, String lvlId) throws SQLException {
+	Connection conn = dataSource.getConnection();
+	PreparedStatement ps = null;
+    try {    	   	
+    	ps = conn.prepareStatement(setLvlIdQuery);
+    	ps.setString(1, lvlId);
+    	ps.setString(2, userid);
+    	ps.executeUpdate();
+    	//System.out.println("executed the following statement on DB: " + setProgressQuery);
+    }finally{
+    	JdbcUtils.closeStatement(ps);
+    	conn.close();
+    }
+}
+
+
 
 /*
  * function to delete a user by handing his email to the function
