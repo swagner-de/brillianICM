@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 
 /**
  * Class is invoked when user wants to update or reset his password
+ * 
  * @author Mary
  *
  */
@@ -23,9 +24,12 @@ import javax.servlet.annotation.WebServlet;
     * (not in use for this class)
     * Invokes the doPost method to answer to a request of a client, that is handled
 	* in the doPost method
+	* 
 	* @param request - contains the request of a client
 	* @param response - contains the response of the servlet
-	* @exception IOException - signals that an IO exception occured
+	* 
+	* @throws ServletException - throws exception when servlet encounters difficulties
+	* @throws IOException - signals that an IO exception occured
     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -41,9 +45,12 @@ import javax.servlet.annotation.WebServlet;
 	 * and sent to the user with the message that it was successful saved to the request
 	 * Request and response is sent to the view of the fitting URL
 	 * If repeated password does not equal the password: request gives out an error message
+	 * 
 	 * @param request - contains the request of a client (updated password)
 	 * @param response - contains the response of the servlet (success/ error)
-	 * @exception IOException - signals that an IO exception occured and gives out line of code
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured and gives out line of code
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

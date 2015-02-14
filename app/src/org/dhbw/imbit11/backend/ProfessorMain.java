@@ -18,6 +18,7 @@ import org.apache.shiro.SecurityUtils;
 /**
  * Generates the Homepage of the professor by identifying the professor and showing
  * associated groups and students
+ * 
  * @author Mary
  *
  */
@@ -28,9 +29,12 @@ import org.apache.shiro.SecurityUtils;
     * (not in use for this class)
     * Invokes the doPost method to answer to a request of a client, that is handled
 	* in the doPost method
+	* 
 	* @param request - contains the request of a client
 	* @param response - contains the response of the servlet
-	* @exception IOException - signals that an IO exception occured
+	* 
+	* @throws ServletException - throws exception when servlet encounters difficulties
+	* @throws IOException - signals that an IO exception occured
     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -41,9 +45,12 @@ import org.apache.shiro.SecurityUtils;
 	 * students and groups with the fiiting register links and saves to the request
 	 * the groups with the parameter name "groups" and forwards request and response
 	 * to the Homepage of the professor
+	 * 
 	 * @param request - contains the request of a client (open Main site of professor)
 	 * @param response - contains the response of the servlet (success/ error)
-	 * @exception IOException - signals that an IO exception occured and gives out line of code
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured and gives out line of code
 	 * stores in the request the error message
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -81,9 +88,11 @@ import org.apache.shiro.SecurityUtils;
 	/**
 	 * Creates the registration link for a group out of the parameter registration link,
 	 * checksumString, groupid and a settled multiplicator
+	 * 
 	 * @param groupidstring - contains the groupid in form of a string (generated in CreateUser)
 	 * @param request - contains the request of the professor to get a registration link for
 	 * a certain group
+	 * 
 	 * @return registrationlink - contains the made up registrationlink 
 	 */
 	protected String calculateRegistrationlink(String groupidstring, HttpServletRequest request){
@@ -105,7 +114,9 @@ import org.apache.shiro.SecurityUtils;
 	
 	/**
 	 * Calculates checksum with the group id
+	 * 
 	 * @param groupid - contains the id of a certain group
+	 * 
 	 * @return checksum - calculated number
 	 */
 	protected int calculateChecksum (int groupid){
