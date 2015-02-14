@@ -19,6 +19,7 @@ import org.apache.shiro.realm.jdbc.JdbcRealm;
  * The configuration specified in web.xml
  * will cause an object of this class to 
  * be injected into the SecurityManager
+ * 
  * @author brucephillips
  *
  */

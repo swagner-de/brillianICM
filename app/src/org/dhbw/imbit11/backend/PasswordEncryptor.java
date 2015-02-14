@@ -18,7 +18,9 @@ public class PasswordEncryptor {
 
 	/**
 	 * Encryption of an user´s password
+	 * 
 	 * @param password - contains the password that the user entered
+	 * 
 	 * @return encrypted password - contains the password encrypted with shiro
 	 */
 	public String hashPassword(String password){

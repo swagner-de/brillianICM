@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 /**
  * Class in invoked when a student registers through the link send by his professor
  * and associates the student to a certain group that was created by the professor
+ * 
  * @author Mary
  *
  */
@@ -31,9 +32,11 @@ import javax.servlet.annotation.WebServlet;
 	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException - signals that an IO exception occured
+	 * 
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -45,9 +48,11 @@ import javax.servlet.annotation.WebServlet;
 	 * to the certain group number, so data that is insert into the form register_student is
 	 * associated to a certain group
 	 * Forwards request and response to the URL of the student register view
+	 * 
 	 * @param request - contains the request of a client (register student for a certain group)
 	 * @param response - contains the response of the servlet
-	 * @exception IOException - signals that an IO exception occured
+	 * 
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

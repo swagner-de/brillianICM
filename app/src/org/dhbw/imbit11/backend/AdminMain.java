@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Class contains the doGet and doPost methods for the Admin homepage and associates
  * students to a certain professor
+ * 
  * @author Mary
  *
  */
@@ -33,9 +34,12 @@ import javax.servlet.http.HttpServletResponse;
 	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException - signals that an IO exception occured
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -48,9 +52,12 @@ import javax.servlet.http.HttpServletResponse;
 	 * The UserRealm object enables the use of the sql statements saved to the class UserRealm
 	 * Exception saves the names of the students of certain professor to the UserRealm object
 	 * and stores the string "professor" to the attribut professor
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException - shows line of code in which error occured
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - shows line of code in which error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
