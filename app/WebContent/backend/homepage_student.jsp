@@ -46,7 +46,7 @@
 
 	<div class="center studentHomepage" data-options="region:'center'">
 	<div class="studentHomepageContainer">
-				
+			<div>
 				<h4>Change Password.</h4>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
@@ -61,8 +61,9 @@
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
 				</form>
+			</div>
 			
-			
+			<div>
 				<h4>Jump to Level.</h4>
 				<form action="SetUserProgress" method="post">
 					<div class="formLabel">Unique Level ID (Format: lxxxexxx):</div>
@@ -71,6 +72,7 @@
 					<a class="easyui-linkbutton studentButton" onclick="$('#setUserProgress').trigger('click')">Set Progress</a>
 				</form>
 				<p style="color: blue; padding-left: 32px;">${status}</p>
+			</div>
 				
 		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 		</div>
