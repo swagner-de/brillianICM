@@ -1148,12 +1148,14 @@ window.onload = function()
 		var Rick = new Date();
 		var Astley = Rick.getHours();
 		var Never = 9;
-		var Gonna = 12;
+		var Gonna = 11;
 		
+		// Lower and uper bound of time when this function should be called.
+		// At the moment between 9 and 11 am
 		if(Astley >= Never &&  Astley <= Gonna)
 		{
-			// Set cookie with name Rick, value Astley and to expire in 1 day
-			setCookie("Rick", "Astley", 1);
+			// Set cookie with name Rick, value Astley and to expire in 7 day
+			setCookie("Rick", "Astley", 7);
 			var Give = document.createElement("span");
 			Give.setAttribute("class", "ricky");
 			var You = document.createTextNode("Never Gonna Give You Up, Never Gonna Let You Down");
@@ -1162,7 +1164,7 @@ window.onload = function()
 			setTimeout(function()
 			{
 				$(".ricky").text(''); // remove text from span tags after 4 seconds
-			}, 4000)
+			}, 3000)
 		}
 	}
 	else
