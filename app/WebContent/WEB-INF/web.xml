@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<!-- WebApp_ID is NOT related to the version ID it is the servlet version to be used -->
-	<display-name>2.1.2benste</display-name>
+	<display-name>2.1.2release</display-name>
 	<!-- Backend Servlets start here -->
 
 
