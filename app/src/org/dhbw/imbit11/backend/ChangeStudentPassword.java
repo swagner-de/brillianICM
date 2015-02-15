@@ -19,6 +19,7 @@ import org.apache.shiro.subject.Subject;
 
 /** This class is responsible to handle a password change request
 * The frontend page is homepage_student.jsp where user enteres old and new password to update
+* 
 * @author Oliver Becher
 */
 
@@ -34,6 +35,7 @@ import org.apache.shiro.subject.Subject;
 		String url="/backend/homepage_student.jsp";
 		
 		/** Required parameters
+		 * 
 		 * @param String username
 		 * @param String oldpassword
 		 * @param String password

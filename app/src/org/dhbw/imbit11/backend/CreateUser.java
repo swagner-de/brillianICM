@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet({"/CreateUser"})
 /**
  * Contains the doPost and doGet methods to get the parameters from the register_student.jsp
  * Assigns user to groups
@@ -34,7 +35,6 @@ import javax.servlet.http.HttpServletResponse;
 	 * Implemented GET method from javax.servlet.Servlet Not in use for this
 	 * particular class
 	 * 
-	 * @author benste
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -49,9 +49,12 @@ import javax.servlet.http.HttpServletResponse;
 	 * 	Verifies if e-Mail and gender is entered, if password equals the password_repeat and changes role of user
 	 *  If the registration was successful the user is redirected to a landing page
 	 *  if not, the form is called again and an error/status message is displayed
+	 *  
 	 *  @param request - contains the request of a client
 	 *  @param response - contains the response of the servlet
-	 *  @exception IOException - signals that IO exception occured
+	 *  
+	 *  @throws ServletException - throws exception when servlet encounters difficulties
+	 *  @throws IOException - signals that IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -179,6 +182,7 @@ import javax.servlet.http.HttpServletResponse;
 	/**
 	 * Assignment of a user to a group, when groupid exists creating user for this certain group
 	 * if group doesn't exist error message and exception by failure
+	 * 
 	 * @param request - contains the request of the client
 	 * @param realm - UserRealm object (was created after the parameters where send by user)
 	 * @param email - contains the e-Mail of the new user
@@ -186,6 +190,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param firstname - contains the firstname of the new user
 	 * @param encryptedPassword - contains the encrypted password of the new user
 	 * @param gender - contains the gender of the new user
+	 * 
 	 * @return url - Registration URL
 	 */
 	protected String createNewStudent(HttpServletRequest request,
@@ -237,6 +242,7 @@ import javax.servlet.http.HttpServletResponse;
 	/**
 	 * Creates a new user with the parameter professor with admin rights
 	 * and deletes attributes email, firstname, lastname
+	 * 
 	 * @param request - contains the request of the user
 	 * @param realm - - UserRealm object (was created after the parameters where send by user)
 	 * @param email - contains the e-Mail of the new user
@@ -244,6 +250,7 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param firstname - contains the firstname of the new user
 	 * @param encryptedPassword - contains the encrypted password of the new user
 	 * @param gender - contains the gender of the new user
+	 * 
 	 * @return url - URL Admin site 
 	 */
 	protected String createNewProfessor(HttpServletRequest request, UserRealm realm, String email, String lastname, String firstname, String encryptedPassword, int gender){
@@ -270,6 +277,7 @@ import javax.servlet.http.HttpServletResponse;
 	/**
 	 * Sends an email with a link and text to confirm the e-Mail address is valid
 	 * Failure exception is thrown
+	 * 
 	 * @param email - contains the e-Mail of the user, where confirmation mail is send to
 	 * @param firstname - contains the first name of the new user
 	 * @param lastname - contains the last name of the new user
@@ -294,7 +302,7 @@ import javax.servlet.http.HttpServletResponse;
 	try {
 			MailClient mailclient = new MailClient();
 			mailclient.sendMail(email, "Please confirm your registration!",
-					msgBody);
+					msgBody, request);
 		} catch (Exception e) {
 			e.printStackTrace();
 			// System.out.println("Sending email failed with unknown cause, sorry");
@@ -304,7 +312,9 @@ import javax.servlet.http.HttpServletResponse;
 	/**
 	 * This method resolves the groupID entered out of the encrypted groupid
 	 * ( first two digits: checksum of remaining digits; remaining digits: groupID*23)
+	 * 
 	 * @param encryptedgroupid - contains the encrypted groupid of a certain user
+	 * 
 	 * @return resolved - resolved groupid
 	 */
 	protected String resolveGroupid(String encryptedgroupid) {
@@ -326,7 +336,9 @@ import javax.servlet.http.HttpServletResponse;
 	
 	/**
 	 * Method to calculate a checksum for the entered int
+	 * 
 	 * @param groupid - contains the group id as an integer
+	 * 
 	 * @return ckecksum
 	 */
 	protected int calculateChecksum(int groupid) {

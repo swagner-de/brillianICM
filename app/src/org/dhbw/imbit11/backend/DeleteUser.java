@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * When a User is deleted this class is invoked
+ * 
  * @author Mary
  *
  */
@@ -27,11 +28,15 @@ import javax.servlet.http.HttpServletResponse;
 	}   	
 	
 	/**
+	 * (not in use for this class)
 	 * Invokes the doPost method to answer to a request of a client, that is handled
 	 * in the doPost method
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @exception IOException - signals that an IO exception occured
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -42,9 +47,12 @@ import javax.servlet.http.HttpServletResponse;
 	 * Method selects the parameter delete_email of the certain user and deletes the UserRealm object
 	 * related to this parameter and forwards the request and response to URL of the professor view
 	 * Failure: exception thrown
-	 * @param request - contains the request of the user (has to be a professor/ admin)
+	 * 
+	 * @param request - contains the request of the user to delete a user (has to be a professor/ admin)
 	 * @param response - contains the answer of the servlet
-	 * @exception IOException - Shows line of code in which the error occured
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - Shows line of code in which the error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
