@@ -62,7 +62,7 @@
 					<a class="easyui-linkbutton studentButton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
 				</form>
 			</div>
-			
+			<!-- For now only intended for development -->
 			<div>
 				<h4>Jump to Level.</h4>
 				<form action="SetUserProgress" method="post">

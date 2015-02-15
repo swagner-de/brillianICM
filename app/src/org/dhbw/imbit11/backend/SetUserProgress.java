@@ -15,7 +15,7 @@ import org.apache.shiro.subject.Subject;
 @WebServlet({"/SetUserProgress"})
 
 /**
- * Class is invoked when the user is setting his progress
+ * Class is invoked when the user is setting his progress in hompage_studen.jsp 
  * @author Philipp E.
  *
  */
