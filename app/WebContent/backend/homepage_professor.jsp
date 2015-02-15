@@ -41,7 +41,7 @@
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 		</div>
 	</div>
-	<div class="center" data-options="region:'center'">
+	<div class="center mainWindow" data-options="region:'center'">
 		<div id="studentsOfProfessor">
 			<div id="groupsOfProfessor">
 				<h1>Groups</h1>
