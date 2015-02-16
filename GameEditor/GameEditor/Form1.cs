@@ -70,10 +70,27 @@ namespace GameEditor
             // TODO
             if (element.Attribute("id") != null)
             {
-                result = result.AppendLine(new string(' ', indentLevel * 2) + element.Attribute("id").Value);
-                foreach (var item in element.Descendants())
+                //result = result.AppendLine(new string(' ', indentLevel * 2) + element.Attribute("id").Value);
+                //foreach (var item in element.Descendants())
+                //{
+                //    result = result.AppendLine(new string(' ', indentLevel * 2) + item.Value);
+                //}
+                var test = element.Attribute("id").Value;
+                result = result.AppendLine(element.Attribute("id").Value);
+                try
                 {
-                    result = result.AppendLine(new string(' ', indentLevel * 2) + item.Value);
+                    foreach (var item in element.Descendants())
+                    {
+                        var test1 = item.Name;
+                        var test2 = item.Value;
+                        //item.SetElementValue("from", "test");
+                        result = result.AppendLine(item.Name.ToString());
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    throw;
                 }
             }
 
