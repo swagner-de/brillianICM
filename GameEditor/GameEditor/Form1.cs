@@ -67,6 +67,7 @@ namespace GameEditor
         {
             StringBuilder result = new StringBuilder();
 
+            // TODO
             if (element.Attribute("id") != null)
             {
                 result = result.AppendLine(new string(' ', indentLevel * 2) + element.Attribute("id").Value);
