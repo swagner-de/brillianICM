@@ -16,8 +16,9 @@ import org.apache.shiro.subject.Subject;
 
 /**
  * Class is invoked when the user tries to reset its user progress
+ * result.jsp (located in "frontend" directory) is calling this class
  * 
- * @author Mary
+ * @author Mary, Yi Min
  *
  */
  public class ResetUserProgress extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {

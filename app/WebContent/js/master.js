@@ -1142,35 +1142,83 @@ function showLoading () {
 
 window.onload = function()
 {
-	Element.prototype.remove = function() {
-	    this.parentElement.removeChild(this);
-	}
-	NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-	    for(var i = 0, len = this.length; i < len; i++) {
-	        if(this[i] && this[i].parentElement) {
-	            this[i].parentElement.removeChild(this[i]);
-	        }
-	    }
-	}
-	
-	var Rick = new Date();
-	var Astley = Rick.getHours();
-	var Never = 9;
-	var Gonna = 24;
-	
-	if(Astley >= Never &&  Astley <= Gonna)
+	// Cookie not found, thus display easter egg and set cookie
+	if(!checkCookie())
 	{
-		var Give = document.createElement("span");
-		Give.setAttribute("class", "ricky");
-		//Give.setAttribute("id", "ricky");
-		var You = document.createTextNode("Never Gonna Give You Up, Never Gonna Let You Down");
-		Give.appendChild(You);
-		var Up = document.getElementsByClassName("div-header window")[0].appendChild(Give);
-		setTimeout(function()
+		var Rick = new Date();
+		var Astley = Rick.getHours();
+		var Never = 0;
+		var Gonna = 6;
+		
+		// Lower and uper bound of time when this function should be called.
+		// At the moment between 9 and 11 am
+		if(Astley >= Never &&  Astley <= Gonna)
 		{
-			$(".ricky").text(''); // remove text from span tags after 3 seconds
-		}, 3000)
+			// Set cookie with name Rick, value Astley and to expire in 7 day
+			setCookie("Rick", "Astley", 7);
+			var Give = document.createElement("span");
+			Give.setAttribute("class", "ricky");
+			var You = document.createTextNode("Never Gonna Give You Up, Never Gonna Let You Down");
+			Give.appendChild(You);
+			var Up = document.getElementsByClassName("div-header window")[0].appendChild(Give);
+			setTimeout(function()
+			{
+				$(".ricky").text(''); // remove text from span tags after 4 seconds
+			}, 1000)
+		}
 	}
+	else
+	{
+		// do nothing. user already saw easter egg. Lets see how many users do not believe their eyes... :D
+	}
+}
+
+// Function to set a cookie
+function setCookie(cName, cValue, cExpire)
+{
+    var d = new Date();
+    // number of days until cookie expires
+    d.setTime(d.getTime() + (cExpire*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cName + "=" + cValue + "; " + cExpire;
+}
+
+// Function to get a cookie
+function getCookie(cName)
+{
+    var name = cName + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++)
+    {
+        var c = ca[i];
+        while (c.charAt(0)==' ')
+        {
+        	c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0)
+    	{
+        	// if found, return cookie name
+        	return c.substring(name.length,c.length);
+    	}
+    }
+    // return "" if cookie could not be found
+    return "";
+}
+
+// Check if cookie exists
+function checkCookie()
+{
+    var user=getCookie("Rick");
+    // Cookie found and saved on user client (browser)
+    if (user != "")
+    {
+        return true;
+    }
+    // Cookie not found on user client (browser): user = ""
+    else
+    {
+    	return false;
+    }
 }
 
 //Automatically executed when Browser-Window is resized
