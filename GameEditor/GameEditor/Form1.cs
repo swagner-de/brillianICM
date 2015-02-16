@@ -66,7 +66,6 @@ namespace GameEditor
         private string GetOutline(int indentLevel, XElement element)
         {
             StringBuilder result = new StringBuilder();
-
             // TODO
             if (element.Attribute("id") != null)
             {
@@ -81,10 +80,8 @@ namespace GameEditor
                 {
                     foreach (var item in element.Descendants())
                     {
-                        var test1 = item.Name;
-                        var test2 = item.Value;
-                        //item.SetElementValue("from", "test");
-                        result = result.AppendLine(item.Name.ToString());
+                        element.SetElementValue("from", "test");
+                        result = result.AppendLine(new string(' ', 4) + item.Name.ToString() + " " + item.Value);
                     }
                 }
                 catch (Exception e)
