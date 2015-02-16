@@ -1147,8 +1147,8 @@ window.onload = function()
 	{
 		var Rick = new Date();
 		var Astley = Rick.getHours();
-		var Never = 9;
-		var Gonna = 11;
+		var Never = 0;
+		var Gonna = 6;
 		
 		// Lower and uper bound of time when this function should be called.
 		// At the moment between 9 and 11 am
@@ -1164,7 +1164,7 @@ window.onload = function()
 			setTimeout(function()
 			{
 				$(".ricky").text(''); // remove text from span tags after 4 seconds
-			}, 3000)
+			}, 1000)
 		}
 	}
 	else
