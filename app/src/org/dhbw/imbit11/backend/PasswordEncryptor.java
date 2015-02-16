@@ -17,7 +17,7 @@ import org.apache.shiro.util.SimpleByteSource;
 public class PasswordEncryptor {
 
 	/**
-	 * Encryption of an user´s password
+	 * Encryption of an user's password
 	 * 
 	 * @param password - contains the password that the user entered
 	 * 

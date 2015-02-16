@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet({"/CreateUser"})
 /**
  * Contains the doPost and doGet methods to get the parameters from the register_student.jsp
  * Assigns user to groups
@@ -301,7 +302,7 @@ import javax.servlet.http.HttpServletResponse;
 	try {
 			MailClient mailclient = new MailClient();
 			mailclient.sendMail(email, "Please confirm your registration!",
-					msgBody);
+					msgBody, request);
 		} catch (Exception e) {
 			e.printStackTrace();
 			// System.out.println("Sending email failed with unknown cause, sorry");

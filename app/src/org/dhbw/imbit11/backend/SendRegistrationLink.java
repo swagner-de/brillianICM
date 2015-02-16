@@ -55,13 +55,18 @@ import javax.servlet.annotation.WebServlet;
 		//get the registration link and the recipient of the email from the JSP
 		String link = request.getParameter("link");
 		String toMail = request.getParameter("email");
-			
-		String content = "Please use the following link to register to your course: " + link + "\n\nGreetings, \n" +
-					"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
+		String username = (String) request.getAttribute("username");		
+		//Test Email mit HTML tags
+		String content = "<b>Hello new Project Manager</b></br>Please use the following link to register to your course: " + link + "</b>Greetings, </b>" +
+					"your brillianCRM admin \n\n\n <i>This is an automated email</i>. <h2>Please do not reply.</h2>";
+		
+		//***Folgender String ist die urspruengliche Email ohne Verwendung von HTML
+		//String content = "Please use the following link to register to your course: " + link + "\n\nGreetings, \n" +
+		//"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
 		
 		//send the mail
 		MailClient mailclient = new MailClient();
-		mailclient.sendMail(toMail, "Registration Link brillianCRM", content);
+		mailclient.sendMail(toMail, "Registration Link brillianCRM", content, request);
 			
 		request.setAttribute("status", "Your email was sent to the entered address.");
 		

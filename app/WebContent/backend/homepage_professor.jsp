@@ -8,21 +8,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title><%=ApplicationConstants.PAGETITLE_PROFESSOR%></title>
-<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
-<link rel="icon" type="image/png" href="images/favicons/favicon-196x196.png" sizes="196x196">
-<link rel="icon" type="image/png" href="images/favicons/favicon-160x160.png" sizes="160x160">
-<link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="57x57"
+	href="images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="images/favicons/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png"
+	href="images/favicons/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png"
+	href="images/favicons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png"
+	href="images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png"
+	href="images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png"
+	href="images/favicons/favicon-32x32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+<meta name="msapplication-TileImage"
+	content="images/favicons/mstile-144x144.png">
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
 <link rel="stylesheet" type="text/css"
@@ -41,11 +55,15 @@
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 		</div>
 	</div>
-	<div class="center" data-options="region:'center'">
+	<div class="center mainWindow" data-options="region:'center'">
 		<div id="studentsOfProfessor">
 			<div id="groupsOfProfessor">
 				<h1>Groups</h1>
-				Below each group you can see a list of the students that are part of the respective group.<br /><br /><br /><br />
+				Below each group you can see a list of the students that are part of
+				the respective group.<br />
+				<br />
+				<br />
+				<br />
 				<%
 					if(request.getAttribute("groups")!=null){
 											
@@ -66,7 +84,7 @@
 											
 											out.println("<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/></form></td>");
 											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\"><input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" "+
-													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#deleteGroupButton"+i+"').trigger('click')\">Delete</a>");
+													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>Delete</a>");
 											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form>");
 											out.println("</td></tr></table> ");
 											
@@ -149,14 +167,17 @@
 										}
 				%>
 			</div>
-			
+
 			<div style="clear: both;"></div>
 			<div>
 				<h1>New Group</h1>
 				<form action="NewUsergroup" method="post">
-					<div class="formLabel">Name:</div><input type="text" name="groupname" maxlength="50" required/>
-					<input type="submit" style="display: none" id="createGroup" value="Create group"/><br /><br />
-					<a class="easyui-linkbutton" onclick="$('#createGroup').trigger('click')">Create Group</a>
+					<div class="formLabel">Name:</div>
+					<input type="text" name="groupname" maxlength="50" required /> <input
+						type="submit" style="display: none" id="createGroup"
+						value="Create group" /><br />
+					<br /> <a class="easyui-linkbutton"
+						onclick="$('#createGroup').trigger('click')">Create Group</a>
 					<p style="color: green">${success}</p>
 					<p style="color: red">${error}</p>
 				</form>
@@ -165,17 +186,23 @@
 			<div>
 				<h1>Change Password</h1>
 				<form action="ResetPassword" method="post">
-					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/> 
-					<input type="text" name="role" maxlength="50" value="professor" style="display: none"/>
+					<input type="text" name="username" maxlength="50"
+						value="${username}" style="display: none" /> <input type="text"
+						name="role" maxlength="50" value="professor" style="display: none" />
 					<div class="formLabel">Password:</div>
-					<input type="password" name="password" maxlength="50"/><br /><br />
+					<input type="password" name="password" maxlength="50" /><br />
+					<br />
 					<div class="formLabel">Repeat Password:</div>
-					<input type="password" name="password_repeat" maxlength="50"/><br /><br />
-					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+					<input type="password" name="password_repeat" maxlength="50" /><br />
+					<br /> <input id="updatePassword" type="submit"
+						name="updatePassword" value="Update password" hidden="hidden" /> <a
+						class="easyui-linkbutton"
+						onclick="$('#updatePassword').trigger('click')">Update
+						Password</a>
 				</form>
 			</div>
-			<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
+			<div class="mainEventContainerImprint easyui-window"
+				data-options="closed:true,width:863,height:576"></div>
 		</div>
 	</div>
 </body>
@@ -184,15 +211,24 @@
 	$('#imprint').bind('click', function() {
 		showImprint();
 	});
-	
-	function cellStyler(value,row,index){
-        if (value <= 30){
-            return 'background:#ffa8a8;';
-        }else if (value >= 70){
-        	return 'background:lightgreen;';
-        }else{
-        	return 'background:khaki';
-        }
-    }
+
+	function cellStyler(value, row, index) {
+		if (value <= 30) {
+			return 'background:#ffa8a8;';
+		} else if (value >= 70) {
+			return 'background:lightgreen;';
+		} else {
+			return 'background:khaki';
+		}
+	}
+
+	function checker(i, groupname) {
+		var box = window.confirm("Click OK if you want to delete group: "
+				+ groupname);
+		if (box) {
+			$('#deleteGroupButton' + i).trigger('click');
+		}
+	}
 </script>
 </html>
+

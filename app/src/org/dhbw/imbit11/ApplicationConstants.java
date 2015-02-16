@@ -30,6 +30,7 @@ public interface ApplicationConstants {
 	public static  String HELP_BUTTON_TEXT = "Help";
 	public static  String LOGOUT_BUTTON_TEXT = "Logout";
 	public static  String CHANGE_PW_BUTTON_TEXT = "Change Password";
+	public static  String ACCOUNT_BUTTON_TEXT = "Account";
 	
 	public static  String PAGETITLE_MAIN = "brillianCRM Game";
 	public static  String PAGETITLE_RESETPW = "brillianCRM Reset Password";
