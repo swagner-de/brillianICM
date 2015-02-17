@@ -143,6 +143,7 @@
             this.txtBoxLvl.Name = "txtBoxLvl";
             this.txtBoxLvl.Size = new System.Drawing.Size(100, 20);
             this.txtBoxLvl.TabIndex = 5;
+            this.txtBoxLvl.Text = "l000e000";
             // 
             // btnSubmitLvl
             // 

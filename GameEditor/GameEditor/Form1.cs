@@ -103,11 +103,17 @@ namespace GameEditor
         {
             if(checkInputLen(txtBoxLvl.Text))
             {
-                MessageBox.Show("true");
+                //MessageBox.Show("true");
+                Label lobj = new Label();
+                lobj.Text = "test";
+                lobj.AutoSize = true;
+                lobj.Name = "label11";
+                lobj.Location = new Point(txtBoxLvl.Location.X, txtBoxLvl.Location.Y + 23);
+                groupBox1.Controls.Add(lobj);
             }
             else
             {
-                MessageBox.Show("false");
+                //MessageBox.Show("false");
             }
         }
 
