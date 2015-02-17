@@ -12,26 +12,47 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.shiro.SecurityUtils;
 
 @WebServlet({"/Student"})
+
+/**
+ * Class is invoked when the main page of the game is loading (student view)
+ * @author Mary
+ *
+ */
  public class StudentMain extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
-    /* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
-	 */
+    /**
+     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
+     */
 	public StudentMain() {
 		super();
 	}   	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * (not in use for this class)
+	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * in the doPost method
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doPost(request, response);
 	}  	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Method gets the user id of a client and loads the inherent main page (with score of a certain user
+	 * identified by user id)
+	 * 
+	 * @param request - contains the request of a student to see the main page
+	 * @param response - contains the response of the servlet (specific for user id)
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - throws exception when IO error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

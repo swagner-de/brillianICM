@@ -24,6 +24,7 @@
 		var mainLocationButton = $('.mainLocationButton');
 		var eventContainer = $('.mainEventContainerLaptop');
 		
+		// Anzeige der Elemente auf der rechten Seite
 		if(level >= 12){
 			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
 			$('.projektCharterButton').show();
@@ -39,7 +40,7 @@
 			$('.ganttButton').show();
 		}
 		
-		//Wir nur beim ersten Mal zu Beginn des Spiels ausgeführt
+		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt
 		if (firstFlag == false){			
 			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
@@ -65,6 +66,7 @@
 			}
 		}
 		
+		//Highlights Mail Button upon arrival of a new mail
 		if(eventtype == '1' || eventtype == '2'){
 			addHighlightMail();
 		}
@@ -75,6 +77,7 @@
 		//Show the 'New Mail' button only when a MailDraft-Event happens
 		newMailDisabled = true;
 		if(eventtype == 2){
+			addBlinkerMailNew();
 			newMailDisabled = false;
 		}
 		
@@ -209,6 +212,7 @@ function loadMail (from, to, date, subject, content, attachment, attachmentHref)
 	}
 }
 
+//Herunterladen der neuen MailDraft
 function loadMailDraft () {
 	var window = $('.mainEventContainerLaptop');
 	//MailDraft Event Values from XML
@@ -245,6 +249,7 @@ function loadMailDraft () {
 	});	
 }
 
+//Herunterladen des neuen Dialogs
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
@@ -276,6 +281,7 @@ function loadDialog () {
 	});	
 	showDialog();
 }
+
 
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
@@ -412,6 +418,7 @@ function loadAllocation () {
         onDragLeave:function(e,source){
             $(source).draggable('options').cursor='not-allowed';
             $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
             $(this).removeClass('elementHighlight');
         },
         onDrop:function(e,source){
@@ -515,7 +522,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addHighlightMailNew();
+				addBlinkerMailNew();
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -575,6 +582,7 @@ function showLaptop () {
 	});
 }
 
+//Zeigt den Tab NewMail zum Verfassen eines MailDraft an
 function showNewMailTab () {
 	var tag = 'MailDraft';
 	if (tabsContainer.tabs('exists', 'New Mail')){
@@ -619,48 +627,84 @@ function showAbout () {
 	});
 }
 
+
+// Function to check if user has mobile device
+
+
+/** Detect if site is accessed on a mobile device
+ * @author Philipp E.
+ */
+function detectmob() { 
+	 if( navigator.userAgent.match(/Android/i)
+	 || navigator.userAgent.match(/webOS/i)
+	 || navigator.userAgent.match(/iPhone/i)
+	 || navigator.userAgent.match(/iPad/i)
+	 || navigator.userAgent.match(/iPod/i)
+	 || navigator.userAgent.match(/BlackBerry/i)
+	 || navigator.userAgent.match(/Windows Phone/i)
+	 ){
+	    return true;
+	  }
+	 else {
+	    return false;
+	  }
+	}
+
+
 //Shows PDF in a jquery-easyui window - Example: showPdf('pdf/Bachelorarbeit.pdf');
+//Get mobile check value. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
+//If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
 function showPdf(pdfPath){
-	var pdf = pdfPath.split("/")[1];
 	
-	if(pdf == ''){
-		pdf ='PDF';
-	}
-	
-	try{
-		$('.mainEventContainerPdf').panel('destroy');
-	}catch(err){
+	if(detectmob() == true)
+		{	
+			this.window.open(pdfPath);	
+		}
+	else
+		{
+		var pdf = pdfPath.split("/")[1];
 		
-	}
-	
-	$('.mainWindow').append( '<div class="mainEventContainerPdf easyui-window" data-options="closed:true,width:863,height:576"></div>');
-	
-	var window = $('.mainEventContainerPdf');
-	
-	window.append('<iframe class="pdfContainer" width="845" height="531"></iframe>');
-	
-	var pdfContainer = $('.pdfContainer');
-	
-	pdfContainer.attr('src', pdfPath);	
-	window.window({
-		title:pdf,
-	    width:863,
-	    height:576,
-	    closed:false,
-	    modal:false,
-	    draggable:false,
-	    resizable:false,
-	    minimizable:false,
-	    maximizable:false,
-	    collapsible:false,
-	    onClose:function(){
-	    	window.panel('destroy');
-	    }
-	});	
-	$('.mainEventContainerImprint').window({closed:true});	
+		if(pdf == ''){
+			pdf ='PDF';
+		}
+		
+		try{
+			$('.mainEventContainerPdf').panel('destroy');
+		}catch(err){
+			
+		}
+		
+		$('.mainWindow').append( '<div class="mainEventContainerPdf easyui-window" data-options="closed:true,width:863,height:576"></div>');
+		
+		var window = $('.mainEventContainerPdf');
+		
+		window.append('<iframe class="pdfContainer" width="845" height="531"></iframe>');
+		
+		var pdfContainer = $('.pdfContainer');
+		
+		pdfContainer.attr('src', pdfPath);	
+		window.window({
+			title:pdf,
+		    width:863,
+		    height:576,
+		    closed:false,
+		    modal:false,
+		    draggable:false,
+		    resizable:false,
+		    minimizable:false,
+		    maximizable:false,
+		    collapsible:false,
+		    onClose:function(){
+		    	window.panel('destroy');
+		    }
+		});	
+		$('.mainEventContainerImprint').window({closed:true});
+		}
+		
 }
 
 //Do we need this? How is a MailDraft saved?
+//I guess it is not saved!
 function showMailNotification (){
 	var from = $xml.find('from').text();
 	var href = $xml.find('nextevent').attr('href');
@@ -678,6 +722,7 @@ function showNotification () {
 	$('.mainLocationButton').removeClass('menu-active');
 }
 
+// Veränderung der TCQ IMAGES auf der Seite
 function setTCQImages (imtime, imcost, imqual) {
 	
 	var id = $xml.find('event').attr('id');
@@ -773,7 +818,8 @@ function setTCQImages (imtime, imcost, imqual) {
 		},1000);
 	}	
 }
-	
+
+// Lädt jeweils die aktuelle Zeitleiste der Projektphasen
 function setLevelImage (level) {
 	var imgUrlkl = '';
 	var imgUrlgr = '';
@@ -810,6 +856,7 @@ function setLevelImage (level) {
 	$('.ProjectTimeline').find('.fancybox').find('img').attr("src", "images/" + imgUrlkl + ".png");
 }
 
+// Veränderung der TCQ WERTE
 function updateTCQValues (imtime, imcost, imqual) {
 	try {
 		if(imtime.charAt(0) == '+'){
@@ -914,13 +961,16 @@ function hideEventContainer (container){
 	container.window({modal:false,closed:true,closable:false});
 }
 
+// Zeigt an, dass eine neue Mail gekommen ist
 function showMsg (title, msg) {
 	$.messager.show({
 		title: title,
+		timeout:3000,
 		msg: msg
 	});
 }
 
+// Adds Highlight to button (Location Button) referred to with current Id
 function addHighlight (button, id) {
 	$.each(button, function(){
 		if($(this).attr('id') == id){
@@ -929,6 +979,7 @@ function addHighlight (button, id) {
 	});	
 }
 
+//Removes Highlight from the button (Location Button) referred to with current Id
 function removeHighlight (button, id) {	
 	$.each(button, function(){
 		if($(this).attr('id') == id){
@@ -937,21 +988,48 @@ function removeHighlight (button, id) {
 	});
 }
 
+// Adds Highlight to Mail Button
 function addHighlightMail () {
 	$('.mainMailButton').addClass('elementHighlight');
-	
 }
 
+// Removes Highlight from Mail Button
 function removeHighlightMail () {	
 	$('.mainMailButton').removeClass('elementHighlight');
 }
 
+/* TEMPORARY DISABLED FOR TROUBLESHOOTING AS IT IS THE ONLY FUNCTION WITH AN ERROR
+ * //TODO laluz
+// Adds Blinker to NewMail (MailDraft) Button
+function addBlinkerMailNew(selector){
+    $('.tabs-tool').find('.l-btn').('.elementBlinker').animate({opacity:0}, 50, "linear", function(){
+    	$(this).delay(800);
+    	$(this).animate({opacity:1}, 50, function(){
+        addBlinkerMailNew(this);
+        });
+        $(this).delay(800);
+    });
+}
+*/
+
+/*
+function addBlinkerMailNew() {
+	for(var times=0; times <=5; times++) {
+    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeOut(500);
+    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeIn(500);
+	}
+	addHighlightMailNew();
+}
+*/
+
+// Adds Highlight to NewMail (MailDraft) Button
 function addHighlightMailNew () {
-	//$('.tabs-tool').find('.l-btn').addClass('elementHighlight');
+	$('.tabs-tool').find('.l-btn').addClass('elementHighlight');
 }
 
+//Removes Highlight from NewMail (MailDraft) Button
 function removeHighlightMailNew () {	
-	//$('.tabs-tool').find('.l-btn').removeClass('elementHighlight');
+	$('.tabs-tool').find('.l-btn').removeClass('elementHighlight');
 }
 
 //Shows the fullscreen transition window
@@ -986,6 +1064,7 @@ function showTransition (text, imageUrl, duration, href) {
 	});
 }
 
+// Final Screen showing result of user
 function showResult () {
 	var tag = 'Result';
 	var container = $('.mainEventContainerResult');
@@ -1025,14 +1104,18 @@ function saveGame (userid, gamePath, imtime, imcost, imqual) {
 	});	
 }
 
+// Shows that a screen is loading
 function showLoading () {	
 	var text = '';
 	var imageUrl = 'images/Gruppenfotos/Gruppenfoto_FINAL.png';
 	var imageUrl2 = 'images/Gruppenfotos/Logo_Ladescreen.png';	
-	var duration = 3000;
+	var duration = 1000;
 	
 	var window = $('.loadingScreen');
 	var imageContainer = $('.loadingScreenImageContainer');
+	
+	// Hier wird die Audio-Datei abgespielt 
+	// (Vielleicht kann man hier noch einen Filter einbauen??)
 	var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
 	audioElement.play();
@@ -1055,6 +1138,87 @@ function showLoading () {
 			});		
 		},duration);	
 	},duration);
+}
+
+window.onload = function()
+{
+	// Cookie not found, thus display easter egg and set cookie
+	if(!checkCookie())
+	{
+		var Rick = new Date();
+		var Astley = Rick.getHours();
+		var Never = 0;
+		var Gonna = 6;
+		
+		// Lower and uper bound of time when this function should be called.
+		// At the moment between 9 and 11 am
+		if(Astley >= Never &&  Astley <= Gonna)
+		{
+			// Set cookie with name Rick, value Astley and to expire in 7 day
+			setCookie("Rick", "Astley", 7);
+			var Give = document.createElement("span");
+			Give.setAttribute("class", "ricky");
+			var You = document.createTextNode("Never Gonna Give You Up, Never Gonna Let You Down");
+			Give.appendChild(You);
+			var Up = document.getElementsByClassName("div-header window")[0].appendChild(Give);
+			setTimeout(function()
+			{
+				$(".ricky").text(''); // remove text from span tags after 4 seconds
+			}, 1000)
+		}
+	}
+	else
+	{
+		// do nothing. user already saw easter egg. Lets see how many users do not believe their eyes... :D
+	}
+}
+
+// Function to set a cookie
+function setCookie(cName, cValue, cExpire)
+{
+    var d = new Date();
+    // number of days until cookie expires
+    d.setTime(d.getTime() + (cExpire*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cName + "=" + cValue + "; " + cExpire;
+}
+
+// Function to get a cookie
+function getCookie(cName)
+{
+    var name = cName + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++)
+    {
+        var c = ca[i];
+        while (c.charAt(0)==' ')
+        {
+        	c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0)
+    	{
+        	// if found, return cookie name
+        	return c.substring(name.length,c.length);
+    	}
+    }
+    // return "" if cookie could not be found
+    return "";
+}
+
+// Check if cookie exists
+function checkCookie()
+{
+    var user=getCookie("Rick");
+    // Cookie found and saved on user client (browser)
+    if (user != "")
+    {
+        return true;
+    }
+    // Cookie not found on user client (browser): user = ""
+    else
+    {
+    	return false;
+    }
 }
 
 //Automatically executed when Browser-Window is resized
