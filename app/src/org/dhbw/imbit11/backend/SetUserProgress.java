@@ -12,34 +12,30 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
-@WebServlet({"/ResetUserProgress"})
+@WebServlet({"/SetUserProgress"})
 
 /**
- * Class is invoked when the user tries to reset its user progress
- * result.jsp (located in "frontend" directory) is calling this class
- * 
- * @author Mary, Yi Min
+ * Class is invoked when the user is setting his progress in hompage_studen.jsp 
+ * @author Philipp E.
  *
  */
- public class ResetUserProgress extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+ public class SetUserProgress extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
     /**
      * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
      */
-	public ResetUserProgress() {
+	public SetUserProgress() {
 		super();
 	}   	
 	
 	/**
 	 * (not in use for this class)
-	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * Invokes the doGet method to answer to a request of a client, that is handled
 	 * in the doPost method
-	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * 
-	 * @throws IOException - signals that an IO exception occured
+	 * @exception IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -47,48 +43,49 @@ import org.apache.shiro.subject.Subject;
 	}  	
 	
 	/**
-	 * Gets the data of a current user and checks the role of a subject
-	 * When the role is professor the reset_email is stored, the progress related to this 
-	 * e-Mail address is reseted and the response and request is forwarded to the view
-	 * of the professor
-	 * Else the user id is stored, the progress related to the the user id is reseted and
-	 * the response and request is forwarded to the view of the student
-	 * 
+	 * Checks whether the subject is Professor or Student and does the following:
+	 * For Students: Jumps to the lvlId entered in the Students Account settings (hompage_student.jsp)
+	 * For Professors: Changes the lvlId of the E-Mail entered to the lvlId entered on Professors Account settings (hompage_professor.jsp)
 	 * @param request - contains the request of a user (reset of game progress)
 	 * @param response - contains the response of the servlet
-	 * 
-	 * @throws IOException - shows line of code where the exception is thrown
+	 * @exception IOException - shows line of code where the exception is thrown
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String url;
+	
 		String email;
+		String lvlId;
+		String url;
+		
 		
 		Subject subject = SecurityUtils.getSubject();
 		if(subject.hasRole("professor")){
-			email = request.getParameter("reset_email");	
+			lvlId = request.getParameter("lvlId");	
+			email = request.getParameter("setLvlIdEmail"); //To be implemented in Page professor.jsp
 			url = "/Professor";
 			
 			
 		}else{
 			// get the userid of the current user
 			email = (String) subject.getPrincipal();
+			lvlId = request.getParameter("lvlId");
 			//System.out.println("This is username before reset: "+email);
-			url = "/Student";
+			url = "/StudentHomepage";
 		}
 		UserRealm realm = new UserRealm();
-		try{
-			 realm.resetUserProgress(email);
+		try{ String userId = realm.getUserByEmail(email);
+			 realm.setLvlId(userId, lvlId);
+			 request.setAttribute("status", "Progress set. Re-Login now.");
 		}
 		catch(SQLException e){
 			e.printStackTrace();
 		}
 		
-	     // forward the request and response to the view
+	    // forward the request and response to the view
         RequestDispatcher dispatcher =
              getServletContext().getRequestDispatcher(url);
         
-        dispatcher.forward(request, response);   
+        dispatcher.forward(request, response);
 		
 	}   	  	    
 }
