@@ -21,11 +21,18 @@ public class ConnectionPool
     private static ConnectionPool pool = null;
     private static DataSource dataSource = null;
  
+    /**
+     * Constructor for ConnectionPool class
+     * @author YiMin
+     */
     private ConnectionPool()
     {
         try
         {
+        	// Create object ic of class InitialContext
             InitialContext ic = new InitialContext();
+            // Look up data or objects for a given path
+            // the returned value is casted into data type DataSource
             dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/security");
         }
         catch(Exception e)
@@ -34,6 +41,8 @@ public class ConnectionPool
         }
     }
 
+    // Try to get an instance of ConnectionPool and if there is alreay a pool return it
+    // if not call the constructor of this class to create a new one
     public static ConnectionPool getInstance()
     {
         if (pool == null)
@@ -56,6 +65,7 @@ public class ConnectionPool
         }
     }
     
+    // Close connection if not needed anymore. Has to be called explicitly
     public void freeConnection(Connection c)
     {
         try

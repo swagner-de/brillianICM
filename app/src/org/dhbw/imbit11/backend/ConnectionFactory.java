@@ -62,7 +62,7 @@ private static ConnectionFactory ref = new ConnectionFactory();
    * that can be used to connect to the
    * data storage
    * @return Connection
-   * @throws SQLException
+   * @throws SQLException - gives out a string describing the error
    */
   public static Connection getConnection() throws SQLException {
 

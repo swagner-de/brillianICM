@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+@WebServlet({ "/About" })
+
 /**
  * Class contains the doGet and doPost methods for responding with the content of the Frontend
  * "About brillianCRM" to a clients response
@@ -20,7 +23,6 @@ import javax.servlet.http.HttpServletResponse;
  *@version 2.0
  */
 
-@WebServlet({ "/About" })
 public class AboutController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -28,7 +30,6 @@ public class AboutController extends HttpServlet {
 	/**
 	 * About information of the brillianCRM is saved to the Object jsp after Servlet config
 	 * is placed into service and Servlet Context Object created
-	 * @author Mary
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		ServletContext context = config.getServletContext();
@@ -38,11 +39,11 @@ public class AboutController extends HttpServlet {
 	 * Method allows Servlet to handle a get request
 	 * Format of the response is HTML with UTF-8 Encoding
 	 * Server-side information of the About brillianCRM is saved to response
-	 * @param {object} request - contains the request of a client
-	 * @param {object} response - contains the response of the servlet
-	 * @author Mary
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
 	 */
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html");
@@ -54,10 +55,9 @@ public class AboutController extends HttpServlet {
 	 * Method allows servlet to handle post requests, so client can send data
 	 * of unlimited length to web server
 	 * Server-side information of the About brillianCRM is saved to response
-	 * @param {object} request - contains the request of a client
-	 * @param {object} response - contains the response of the servlet
-	 * @author Mary
-	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

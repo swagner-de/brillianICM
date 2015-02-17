@@ -16,24 +16,32 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 
 @WebServlet({ "/LoginUser" })
+
+/**
+ * 
+ * @author geitling
+ * 
+ * Class contains doGet and doPost methods: compares credentials entered by user with credentials in securityDB (inishiro)
+ * and sets exceptions.  
+ */
 public class LoginUser extends javax.servlet.http.HttpServlet implements
 		javax.servlet.Servlet {
 	static final long serialVersionUID = 1L;
 
-	/*
-	 * (non-Java-doc)
-	 * 
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	/**
+	 * invokes constructor of parent class (superclass): javax.servlet.http.HttpServlet
 	 */
 	public LoginUser() {
 		super();
 	}
 
-	/*
-	 * (non-Java-doc)
+	
+	/**
+	 * @param request - contains client request
+	 * @param response - contains servlet response to clients request
+	 * @exception IOException - throws error when IO exception occures
 	 * 
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request,
-	 * HttpServletResponse response)
+	 * Client request is directed to the path saved in dispatcher object. Path directs to login
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -44,11 +52,17 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 		dispatcher.forward(request, response);
 	}
 
-	/*
-	 * (non-Java-doc)
+	/**
+	 * @param request - contains client request
+	 * @param response - contains servlet response to clients request
+	 * @exception IOException - throws error when IO exception occures
 	 * 
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request,
-	 * HttpServletResponse response)
+	 * Method creates a UsernamePasswordToken by getting the username and password of the requesting user
+	 * try-block runs secure: tests whether the user is admin, student or professor; if none of those exception is thrown.
+	 * three possible exceptions: unknown account, incorrect credentials and the possibility 
+	 * to diagnose an exception (ex.printStackTrace()).
+	 * Client request is redirected to previous URL
+	 * 
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {

@@ -10,26 +10,49 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet({"/Registration"})
+
+/**
+ * Class in invoked when a student registers through the link send by his professor
+ * and associates the student to a certain group that was created by the professor
+ * 
+ * @author Mary
+ *
+ */
  public class RegisterStudent extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
-    /* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
-	 */
+    /**
+     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
+     */
 	public RegisterStudent() {
 		super();
 	}   	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * (not in use for this class)
+	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * in the doPost method
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * 
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 		  
 	}  	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Gets the group a student wants register to and sets the attribute in the request
+	 * to the certain group number, so data that is insert into the form register_student is
+	 * associated to a certain group
+	 * Forwards request and response to the URL of the student register view
+	 * 
+	 * @param request - contains the request of a client (register student for a certain group)
+	 * @param response - contains the response of the servlet
+	 * 
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
