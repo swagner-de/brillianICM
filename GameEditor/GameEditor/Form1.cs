@@ -98,5 +98,51 @@ namespace GameEditor
 
             return result.ToString();
         }
+
+        private void btnSubmitLvl_Click(object sender, EventArgs e)
+        {
+            if(checkInputLen(txtBoxLvl.Text))
+            {
+                MessageBox.Show("true");
+            }
+            else
+            {
+                MessageBox.Show("false");
+            }
+        }
+
+        /// <summary>
+        /// Checks if the inputed level has the length of 8, e.g. (l000e000)
+        /// and if it follow the convention. Converts the input string to lowercase.
+        /// </summary>
+        /// <param name="level">String in the format of lxxxeyyy</param>
+        /// <returns>True if length is 8, else false</returns>
+        private bool checkInputLen(string level)
+        {
+            level = level.ToLower();
+            if(level.Length == 8)
+            {
+                // That is a lowercase L, not the number one
+                if(level.Substring(0, 1) == "l" && level.Substring(4, 1) == "e")
+                {
+                    // Check if the parsed string is an int
+                    int value, value1;
+                    if(int.TryParse(level.Substring(1, 3), out value) && int.TryParse(level.Substring(5, 3), out value1))
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+                // return false, as the string does not contain a l, e or int values 
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
