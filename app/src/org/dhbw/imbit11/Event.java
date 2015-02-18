@@ -66,7 +66,7 @@ public class Event extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		//accept POST variables from UI and return xml of node
 		response.setContentType("text/html");
-		response.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-16");
 		
 		String id = request.getParameter("id");
 		String userid = request.getParameter("userid");
