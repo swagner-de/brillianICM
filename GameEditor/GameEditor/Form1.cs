@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
+using Treasure;
 
 namespace GameEditor
 {
@@ -37,6 +38,7 @@ namespace GameEditor
             {
                 XElement rootElement = XElement.Load(ofd.FileName);
                 txtBoxOut.Text = GetOutline(0, rootElement);
+                editLevel(rootElement);
                 using (StreamWriter sw = new StreamWriter("result.txt"))
                 {
                     sw.WriteLine(GetOutline(0, rootElement));
@@ -86,8 +88,12 @@ namespace GameEditor
                 }
                 catch (Exception e)
                 {
+#if DEBUG
                     Console.WriteLine(e.Message);
-                    throw;
+#endif
+#if RELEASE
+                    Logger.Log(e.Message);
+#endif
                 }
             }
 
@@ -99,21 +105,65 @@ namespace GameEditor
             return result.ToString();
         }
 
+        private void editLevel(XElement element)
+        {
+            // ID of node to be edited
+            var id = txtBoxLvl.Text;
+
+            try
+            {
+                MessageBox.Show(element.Attribute("id").Value);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //while(element.Attribute("id") != null)
+            //{
+            //    if(element.Attribute("id").Value == id)
+            //    {
+            //        MessageBox.Show(id);
+            //    }
+            //}
+            //if (element.Attribute("id").Value == id)
+            //{
+            //    try
+            //    {
+            //        foreach (var item in element.Descendants())
+            //        {
+            //            element.SetElementValue("from", "test");
+            //        }
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        Console.WriteLine(e.Message);
+            //        throw;
+            //    }
+            //}
+
+            foreach (XElement childElement in element.Elements())
+            {
+                editLevel(childElement);
+            }
+
+
+        }
         private void btnSubmitLvl_Click(object sender, EventArgs e)
         {
             if(checkInputLen(txtBoxLvl.Text))
             {
-                //MessageBox.Show("true");
-                Label lobj = new Label();
-                lobj.Text = "test";
-                lobj.AutoSize = true;
-                lobj.Name = "label11";
-                lobj.Location = new Point(txtBoxLvl.Location.X, txtBoxLvl.Location.Y + 23);
-                groupBox1.Controls.Add(lobj);
+                loadXMLToolStripMenuItem_Click(sender, e);
+                ////MessageBox.Show("true");
+                //Label lobj = new Label();
+                //lobj.Text = "test";
+                //lobj.AutoSize = true;
+                //lobj.Name = "label11";
+                //lobj.Location = new Point(txtBoxLvl.Location.X, txtBoxLvl.Location.Y + 23);
+                //groupBox1.Controls.Add(lobj);
             }
             else
             {
-                //MessageBox.Show("false");
+                MessageBox.Show("Input incorrect. Enter node level in this format: LxxxEyyy", "Wrong input");
             }
         }
 
