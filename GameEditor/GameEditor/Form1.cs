@@ -92,6 +92,7 @@ namespace GameEditor
                     Console.WriteLine(e.Message);
 #endif
 #if RELEASE
+                    Console.WriteLine(e.Message);
                     Logger.Log(e.Message);
 #endif
                 }
