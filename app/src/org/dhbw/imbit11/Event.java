@@ -87,6 +87,12 @@ public class Event extends HttpServlet {
 			UserRealm userRealm = new UserRealm();
 			try {	
 				list = userRealm.getUserProgress(userid);
+				System.out.println("DEBUG #23 =====");
+				System.out.println("Firstname");
+				System.out.println(list.get(0));
+				System.out.println("Lastname");
+				System.out.println(list.get(1));
+				System.out.println("END DEBUG #23 =====");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
