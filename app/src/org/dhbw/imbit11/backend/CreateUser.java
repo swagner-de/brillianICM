@@ -10,10 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-
-
 @WebServlet({"/CreateUser"})
 /**
  * Contains the doPost and doGet methods to get the parameters from the register_student.jsp
@@ -80,10 +76,6 @@ import java.net.URLEncoder;
 		System.out.println("DEBUG - issue #23 ============");
 		System.out.println(lastname);
 		System.out.println(firstname);
-		System.out.println("ISO to UTF test --");
-		lastname = URLEncoder.encode(lastname, "ISO-8859-1" );
-		lastname = URLDecoder.decode(lastname, "UTF-8" );
-		System.out.println(lastname);
 		System.out.println("END DEBUG - issue #23 ============");
 		
 		switch (role) {
