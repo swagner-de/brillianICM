@@ -12,31 +12,57 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet({"/Admin"})
+
+/**
+ * Class contains the doGet and doPost methods for the Admin homepage and associates
+ * students to a certain professor
+ * 
+ * @author Mary
+ *
+ */
  public class AdminMain extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
-    /* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+    /**
+     * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
 	 */
 	public AdminMain() {
 		super();
 	}   	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * (not in use for this class)
+	 * Invokes the doPost method to answer to a request of a client, that is handled
+	 * in the doPost method
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - signals that an IO exception occured
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doPost(request, response);
 	}  	
 	
-	/* (non-Java-doc)
-	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * Client's request is direct to path saved in the dispatcher object
+	 * Path directs to the homepage of the admin
+	 * The UserRealm object enables the use of the sql statements saved to the class UserRealm
+	 * Exception saves the names of the students of certain professor to the UserRealm object
+	 * and stores the string "professor" to the attribut professor
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response of the servlet
+	 * 
+	 * @throws ServletException - throws exception when servlet encounters difficulties
+	 * @throws IOException - shows line of code in which error occured
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String url = "/backend/homepage_admin.jsp";
-		//get professors 
+		//created object enables the use of sql statements saved in the class UserRealm
 		UserRealm userRealm = new UserRealm();
 		;
 		try {
@@ -47,8 +73,6 @@ import javax.servlet.http.HttpServletResponse;
 			e.printStackTrace();
 			
 		}		
-		
-		
 		
 	     // forward the request and response to the view
         RequestDispatcher dispatcher =

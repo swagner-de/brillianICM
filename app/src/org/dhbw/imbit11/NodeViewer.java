@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,26 +31,37 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-/**
- * Servlet implementation class NodeViewer
- */
+
 @WebServlet("/NodeViewer")
+/**
+ * Loads masterfile and gives out a specific node defined by level and element(needs addition)
+ * @author Mary
+ *
+ */
 public class NodeViewer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
     /**
-     * @see HttpServlet#HttpServlet()
+     * Invokes the constructor of parent class (superclass) HttpServlet
      */
     public NodeViewer() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
     String node = "Node not found.";
 	File masterfile = null;
+	
+	/**
+	 * Loads master file into the response and returns the character data to the client and
+	 * gives out node that was determined in getNode()
+	 * 
+	 * @param request - contains the request of a client
+	 * @param response - contains the response with character encoding type of the masterfile
+	 * 
+	 * @throws Servlet Exception - throws exception when servlet encounters difficulties
+	 * @throws IOException - throws exception when masterfile could not be loaded
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
@@ -75,6 +87,14 @@ public class NodeViewer extends HttpServlet {
 		{out.print(getNode(level,element));}
 	}
 
+		/**
+		 * Searches node with level and element
+		 * 
+		 * @param level
+		 * @param element
+		 * 
+		 * @return node - node that the method defined
+		 */
 		public String getNode(String level, String element) {
 			// search with level and element
 			String expression = "/events/event[@level ='" + level
@@ -114,6 +134,13 @@ public class NodeViewer extends HttpServlet {
 			return node;
 		}
 
+		/**
+		 * Calls node from masterfile according to unique ID
+		 * 
+		 * @param uniqueId - string that identifies the node
+		 * 
+		 * @return node - node defined in this method
+		 */
 		public String getNode(String uniqueId) {
 			// calls node from masterfile according to unique ID
 			String expression = "/events/event[@id = '" + uniqueId + "']";
@@ -151,6 +178,15 @@ public class NodeViewer extends HttpServlet {
 			return node;
 		}
 
+		/**
+		 * Transforms content of a specific node into a string
+		 * 
+		 * @param node - contains the node that was determined in the methods earlier
+		 * 
+		 * @return string containing the data of the xml file for a specific node
+		 * 
+		 * @throws TransformerException - specifies exceptional condition occured in transformation process
+		 */
 		private static String nodeToString(Node node) throws TransformerException {
 			StringWriter buf = new StringWriter();
 			Transformer xform = TransformerFactory.newInstance().newTransformer();
@@ -161,7 +197,7 @@ public class NodeViewer extends HttpServlet {
 		
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * (not in use for this method)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

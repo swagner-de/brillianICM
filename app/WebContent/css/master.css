@@ -15,8 +15,15 @@
 }
 
 /*from .datagrid-row-selected*/
+/*Defines color of highlighted element*/
 .elementHighlight {
-	background: #c1d3f6;
+	background: ##c1d3f6;
+	color: #000000;
+}
+
+/*Defines color of blinking element*/
+.elementBlinker{
+	background: #ffc0cb;
 	color: #000000;
 }
 

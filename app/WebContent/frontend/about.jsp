@@ -4,7 +4,7 @@
 brillianCRM was developed by <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank">IMBIT</a> students, who started to study &ldquo;International Management for Business and Information Technology&rdquo; at the Baden-Wuerttemberg Cooperative State University in Mannheim in 2011.
 As part of our education we realized ambitious IT projects: In cooperation with SAP we worked on the new technology SAP HANA. Moreover we developed a mobile guided tour for the city of <a href = "http://www.m-ladenburg.de/" target="_blank">Ladenburg</a>. <br />
 brillianCRM is our latest project made feasible by <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-dr-harald-bendl/" target="_blank">Prof. Dr. Harald Bendl</a> and <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-peter-mayr/" target="_blank">Prof. Peter Mayr</a>.<br />
-This game is webbased and should run in modern Browsers included mobil devices. We tested it with Google Chrome.
+This game is webbased and should run in modern Browsers including mobile devices. We tested it with Google Chrome.
 <br />
 <h3>We, the WIMBIT11B class, kept working hard to make a dream come true:</h3>
 
