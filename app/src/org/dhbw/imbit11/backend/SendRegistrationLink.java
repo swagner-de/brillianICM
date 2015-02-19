@@ -57,10 +57,23 @@ import javax.servlet.annotation.WebServlet;
 		String toMail = request.getParameter("email");
 		String username = (String) request.getAttribute("username");		
 		//Test Email mit HTML tags
-		String content = "<b>Hello new Project Manager</b></br>Please use the following link to register to your course: " + link + "</b>Greetings, </b>" +
-					"your brillianCRM admin \n\n\n <i>This is an automated email</i>. <h2>Please do not reply.</h2>";
+		String content="<table cellspacing='0' style='width: 570.0px;'>";
+		content+="<tr><td style='padding: 15.0px 0 15.0px 0;'><img alt='brillianCRM logo' src='../../WebContent/images/logo.png'/></td>";
+		content+="<td align='right' style='padding: 15.0px 0 15.0px 0; font-family: arial; font-size: 12.0px;'><a href='https://brilliancrm.com/' target='_blank' style='color:#000000; text-decoration:none'>brilliancrm.com</a></td></tr>";
+		content+="<tr><td colspan='2' style='padding: 15.0px; background-color: #c1d3f6; font-family: arial; font-size: 14.5px; font-weight: bold;'>brillianCRM registration link</td></tr>";
+		content+="<tr><td colspan='2' style='padding: 14.0px; font-family: arial; font-size: 14.0px;'>";
+		content+="<div><p>Dear Project Manager,</p>";
+		content+="<p>Welcome to brillianCRM, the serious game for Project Management. This game is designed by students, for students. Please <a href='" + link + "' style='color:#6699ff; text-decoration:none'>click here</a> and register to your course.</p><br>";
+		content+="<p>With best regards,</p><br>";
+		content+="<p>the brillianCRM Team</p></div>";
+		content+="<div style='font-size: 12.0px; color:#707a8f; font-family: Arial;'><br>";
+		content+="<p>Please notify that this is a system generated email. Please do not reply.</p><br>";
+		content+="Studiengang IMBIT, DHBW Mannheim, Prof. Dr. Harald Bendl<br>";
+		content+="Coblitzallee 1 - 9, D-68163 Mannheim<br>";
+		content+="Tel. +49 621 4105-1719, Fax +49 621 4105-1289, harald-bendl@dhbw-mannheim.de, www.IMBIT.dhbw-mannheim.de<br></div></td></tr>";
+		content+="<tr><td colspan='2'><img alt='' src='../../WebContent/images/emailBottomLine.gif'/></td></tr></table>";
 		
-		//***Folgender String ist die urspruengliche Email ohne Verwendung von HTML
+		//***Original Email without using HTML
 		//String content = "Please use the following link to register to your course: " + link + "\n\nGreetings, \n" +
 		//"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
 		
