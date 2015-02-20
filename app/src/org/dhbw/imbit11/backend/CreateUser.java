@@ -70,12 +70,6 @@ import javax.servlet.http.HttpServletResponse;
 		String email = request.getParameter("email");
 		String lastname = request.getParameter("lastname");
 		String firstname = request.getParameter("firstname");
-		
-		System.out.println("DEBUG - issue #23 ============");
-		System.out.println(lastname);
-		System.out.println(firstname);
-		System.out.println("END DEBUG - issue #23 ============");
-		
 		switch (role) {
 		case "student":
 			url = "/Registration?g=" + groupnumber;
