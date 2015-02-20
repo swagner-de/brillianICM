@@ -59,8 +59,6 @@ import javax.servlet.http.HttpServletResponse;
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		request.setCharacterEncoding("UTF-8");
-		
 		String groupnumber = request.getParameter("groupnumber");
 
 		// //System.out.println(groupnumber);
