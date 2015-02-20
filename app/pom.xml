@@ -1,5 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+						http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dhbw-mannheim</groupId>
 	<artifactId>brillianCRM</artifactId>
@@ -69,6 +71,9 @@
 
 	</dependencies>
 
+	<properties>
+		<yworks.uml.path>${basedir}\yworks-uml-doclet-3.0_02-jdk1.5</yworks.uml.path>
+	</properties>
 
 
 	<build>
@@ -93,6 +98,7 @@
 		</resources>
 		<!-- <testResources> <testResource> <directory>src/test/resources</directory> 
 			</testResource> </testResources> -->
+			
 		<!-- Plugins -->
 		<plugins>
 			<plugin>
@@ -107,6 +113,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<!-- Doclet configuration -->
+					<doclet>ydoc.doclets.YStandard</doclet>
+					<docletPath>${yworks.uml.path}/lib/ydoc.jar:${yworks.uml.path}/resources</docletPath>
+					<additionalparam>-umlautogen</additionalparam>
+				</configuration>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
