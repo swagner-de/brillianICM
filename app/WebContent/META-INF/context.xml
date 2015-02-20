@@ -18,7 +18,7 @@
     <Resource name="jdbc/security" auth="Container" 
         username="root" password="wibi12c" 
         driverClassName="com.mysql.jdbc.Driver" 
-        url="jdbc:mysql://localhost/cake3?useUnicode=yes&amp;characterEncoding=UTF-8;" 
+        url="jdbc:mysql://localhost/cake3?useUnicode=yes&amp;characterEncoding=UTF-8" 
         logAbandoned="true" removeAbandoned="true" 
         type="javax.sql.DataSource" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
         testWhileIdle="true"
