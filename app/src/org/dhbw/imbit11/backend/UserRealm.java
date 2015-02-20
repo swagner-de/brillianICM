@@ -504,6 +504,12 @@ public class UserRealm extends JdbcRealm {
 	/**
 	 * Function to set the lvlId of a certain User. Requires the userid and the
 	 * lvlId (Format: lxxxexxx)
+	 * @param userid
+	 * 			- contains the e-Mail address of a user
+	 * @param lvlId -
+	 * 			- contains the node the certain user is located at
+	 * @throws SQLException
+	 * 			- returns a database access error
 	 */
 
 	public void setLvlId(String userid, String lvlId) throws SQLException {
@@ -641,7 +647,7 @@ public class UserRealm extends JdbcRealm {
 
 	/**
 	 * 
-	 * Returns an ArrayList<Object> containing the User Progress for the user
+	 * Returns an ArrayList containing the User Progress for the user
 	 * with the ID that was handed to the function The following entries can be
 	 * fount in the arraylist: 0:last_name, 1:first_name, 2:gender, 3:cost,
 	 * 4:quality, 5:time, 6:path
@@ -716,6 +722,8 @@ public class UserRealm extends JdbcRealm {
 	 * 
 	 * @throws SQLException
 	 *             - returns a database access error
+	 *             
+	 * @return
 	 */
 	public boolean isUserFinished(String userEmail) throws SQLException {
 		// get the current path entry saved to the DB
