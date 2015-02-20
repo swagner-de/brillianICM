@@ -353,12 +353,6 @@ public class UserRealm extends JdbcRealm {
 		PreparedStatement ps = null;
 		PreparedStatement ps2 = null;
 		PreparedStatement ps3 = null;
-		System.out.println("DEBUG - issue #23 == UserRealm createNewUser ============");
-		System.out.println(lastname);
-		System.out.println(firstname);
-		System.out.println("hier stimmt es noch");
-		System.out.println("END DEBUG - issue #23 == UserRealm createNewUser ============");
-		
 		try {
 			ps = conn.prepareStatement(newUserQuery);
 			ps.setString(1, email);
@@ -368,14 +362,6 @@ public class UserRealm extends JdbcRealm {
 			ps.setString(5, role);
 			ps.setString(6, group);
 			ps.setInt(7, gender);
-			
-			System.out.println("DEBUG - issue #23 == SQL Statement ============");
-			System.out.println("Params of SQL statemtn");
-			System.out.println(ps.getParameterMetaData());
-			System.out.println("END DEBUG - issue #23 == SQL Statement ============");
-			
-			
-			
 			ps.executeUpdate();
 			// System.out.println("executed the following statement on DB: " +
 			// newUserQuery);

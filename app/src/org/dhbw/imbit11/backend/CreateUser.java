@@ -76,7 +76,6 @@ import javax.servlet.http.HttpServletResponse;
 		System.out.println("DEBUG - issue #23 ============");
 		System.out.println(lastname);
 		System.out.println(firstname);
-		System.out.println("hier stimmt es noch");
 		System.out.println("END DEBUG - issue #23 ============");
 		
 		switch (role) {
@@ -112,7 +111,6 @@ import javax.servlet.http.HttpServletResponse;
 
 		// setting attributes so that the user has not to reenter the data if
 		// registration fails
-		// TODO values schon drin ??? #23
 		request.setAttribute("email", email);
 		request.setAttribute("firstname", firstname);
 		request.setAttribute("lastname", lastname);
@@ -221,11 +219,6 @@ import javax.servlet.http.HttpServletResponse;
 					String unverifiedEmail = ""
 							+ Math.round(Math.random() * 100000);
 					url = "/backend/registration_landing.jsp";
-					System.out.println("DEBUG - issue #23 == createNewStudent ============");
-					System.out.println(lastname);
-					System.out.println(firstname);
-					System.out.println("hier stimmt es noch");
-					System.out.println("END DEBUG - issue #23 == createNewStudent ============");
 					realm.createNewUser(unverifiedEmail, lastname, firstname,
 							encryptedPassword, "student", groupnumber, gender);
 					sendConfirmationMail(email, firstname, lastname,
