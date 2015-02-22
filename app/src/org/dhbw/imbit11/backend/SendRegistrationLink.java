@@ -60,7 +60,7 @@ import javax.servlet.annotation.WebServlet;
 		String picture1Path = application.getContextPath()+"/images/logo.png";
 		String picture2Path = application.getContextPath()+"/images/emailBottomLine.png";
 		String content="<table cellspacing='0' style='width: 570.0px;'>"
-		+ "<tr><td style='padding: 15.0px 0 15.0px 0;'><img alt='brillianCRM logo' src='" + picture1Path + "' height='80px'/></td>";
+		+ "<tr><td style='padding: 15.0px 0 15.0px 0;'><img alt='brillianCRM logo' src='" + picture1Path + "' height='80px'/></td>"
 		+"<td align='right' style='padding: 15.0px 0 15.0px 0; font-family: arial; font-size: 12.0px;'><a href='https://brilliancrm.com/' target='_blank' style='color:#000000; text-decoration:none'>brilliancrm.com</a></td></tr>"
 		+"<tr><td colspan='2' style='padding: 15.0px; background-color: #c1d3f6; font-family: arial; font-size: 14.5px; font-weight: bold;'>brillianCRM registration link</td></tr>"
 		+"<tr><td colspan='2' style='padding: 14.0px; font-family: arial; font-size: 14.0px;'>"
