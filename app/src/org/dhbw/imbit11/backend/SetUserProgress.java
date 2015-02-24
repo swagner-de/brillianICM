@@ -2,6 +2,7 @@ package org.dhbw.imbit11.backend;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.RequestDispatcher;
@@ -15,7 +16,7 @@ import org.apache.shiro.subject.Subject;
 @WebServlet({"/SetUserProgress"})
 
 /**
- * Class is invoked when the user is setting his progress in hompage_studen.jsp 
+ * Class is invoked when the user is setting his progress in hompage_student.jsp 
  * @author Philipp E.
  *
  */
@@ -53,33 +54,57 @@ import org.apache.shiro.subject.Subject;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	
-		String email;
-		String lvlId;
-		String url;
 		
+		String url;		
 		
 		Subject subject = SecurityUtils.getSubject();
+		
 		if(subject.hasRole("professor")){
-			lvlId = request.getParameter("lvlId");	
-			email = request.getParameter("setLvlIdEmail"); //To be implemented in Page professor.jsp
+			
+			
+			//TODO: Validate and catch Integer to String conversion #403
+			String lvlId = request.getParameter("lvlId");
+			String group_id = request.getParameter("group_id");
+			int cost = new Integer(request.getParameter("cost"));
+			int time = new Integer(request.getParameter("time"));
+			int quality = new Integer(request.getParameter("quality"));
+			
+			UserRealm realm = new UserRealm();
+			
+				try{ 
+				ArrayList<String> users = realm.getUserIdsByGroupId(group_id);
+				for(String userid:users){
+				realm.setUserProgress(userid, cost, quality, time, lvlId);					
+				}
+				}
+			catch(SQLException e){
+				e.printStackTrace();
+			}			
+				
+			
 			url = "/Professor";
 			
 			
 		}else{
+			String email;
+			String lvlId;
+			
 			// get the userid of the current user
 			email = (String) subject.getPrincipal();
 			lvlId = request.getParameter("lvlId");
 			//System.out.println("This is username before reset: "+email);
 			url = "/StudentHomepage";
+			
+			UserRealm realm = new UserRealm();
+			try{ String userId = realm.getUserByEmail(email);
+				 realm.setLvlId(userId, lvlId);
+				 request.setAttribute("status", "Progress set. Re-Login now.");
+			}
+			catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
-		UserRealm realm = new UserRealm();
-		try{ String userId = realm.getUserByEmail(email);
-			 realm.setLvlId(userId, lvlId);
-			 request.setAttribute("status", "Progress set. Re-Login now.");
-		}
-		catch(SQLException e){
-			e.printStackTrace();
-		}
+		
 		
 	    // forward the request and response to the view
         RequestDispatcher dispatcher =

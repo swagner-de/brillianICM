@@ -26,6 +26,7 @@ import java.sql.SQLException;
 public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
+	protected String getUserIdsByGroupId = "SELECT `user_id` FROM `user` WHERE group` = ?";
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
@@ -161,6 +162,40 @@ public class UserRealm extends JdbcRealm {
 		}
 		return studentsForProfessor;
 	}
+	
+	/**
+	 * @author: Philipp E.
+	 * @param group_id: Group of the group from which userIds should be retrieved
+	 * @return: Array of userIds matching a group_id
+	 */
+	
+	protected ArrayList<String> getUserIdsByGroupId(String group_id)
+			throws SQLException {
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		ArrayList<String> userIds = new ArrayList<String>();
+		try {
+			ps = conn.prepareStatement(getUserIdsByGroupId);
+			ps.setString(1, group_id);
+			
+
+			// Execute query
+			rs = ps.executeQuery();
+			// System.out.println("executed the following statement on DB: " +
+			// getStudentsForProfessorQuery);
+			
+			while (rs.next()) {		
+			String studentRow = rs.getString(1);
+			userIds.add(studentRow);
+			}
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		return userIds;
+	}
+	
 
 	/**
 	 * Invoked in java class AdminMain returns an array list with an array list
@@ -467,6 +502,7 @@ public class UserRealm extends JdbcRealm {
 	 */
 	public void setUserProgress(String userid, int costs, int quality,
 			int time, String path) throws SQLException {
+		//TODO rename with correc parameter name according to database scheme #402
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
 		try {
