@@ -68,7 +68,12 @@
 			<version>1.2</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.10.1</version>
+			<type>maven-plugin</type>
+		</dependency>
 	</dependencies>
 
 	<properties>
