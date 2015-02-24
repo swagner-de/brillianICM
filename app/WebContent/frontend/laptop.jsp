@@ -1,8 +1,8 @@
 <%@ page import="org.dhbw.imbit11.ApplicationConstants"%>
 <div class="laptopContainer">
-	<div class="laptopMailClient easyui-tabs" data-options="border:false,fit:true,tools:'#tab-tools'">
+	<div class="laptopMailClient easyui-tabs" data-options="border:false,fit:true,tools:'#tabs-tool'">
 		<div title="<%=ApplicationConstants.MAIL_CLIENT_TAB1%>">
-		<div id="tab-tools" style="border-top-width:0px;border-right-width: 0px;height: inherit !important;">
+		<div id="tabs-tool" style="border-top-width:0px;border-right-width: 0px;height: inherit !important;">
 		    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="addPanel()"></a>
 		</div>
 			<table class="laptopMailClientInbox easyui-datagrid" data-options="border:false,fitColumns:true,singleSelect:true,fit:true">

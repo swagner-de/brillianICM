@@ -162,7 +162,7 @@ import javax.servlet.http.HttpServletResponse;
 
 			} else {
 				request.setAttribute("status",
-						"You have to fill in every field before submitting. \n Please do not use a +-sign in your mail adress.");
+						"You have to fill in every field before submitting. \n Please do not use a +-sign in your mail address.");
 			}
 
 		} catch (SQLException e) {
