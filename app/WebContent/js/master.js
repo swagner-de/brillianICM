@@ -24,7 +24,7 @@
 		var mainLocationButton = $('.mainLocationButton');
 		var eventContainer = $('.mainEventContainerLaptop');
 		
-		// Anzeige der Elemente auf der rechten Seite
+		// Anzeige der Elemente auf der rechten Seite je nach Level
 		if(level >= 12){
 			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
 			$('.projektCharterButton').show();
@@ -40,7 +40,7 @@
 			$('.ganttButton').show();
 		}
 		
-		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt
+		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
 		if (firstFlag == false){			
 			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
@@ -66,7 +66,7 @@
 			}
 		}
 		
-		//Highlights Mail Button upon arrival of a new mail
+		//Highlights Mail Button upon arrival of a New Mail
 		if(eventtype == '1' || eventtype == '2'){
 			addHighlightMail();
 		}
@@ -77,17 +77,18 @@
 		//Show the 'New Mail' button only when a MailDraft-Event happens
 		newMailDisabled = true;
 		if(eventtype == 2){
-			addBlinkerMailNew();
 			newMailDisabled = false;
+			addHighlightMailNew();
 		}
 		
-		//Disable New Button
+		//Disable 'New Mail' Button
 		try{
 			tabsContainer.tabs({
 				tools:[{
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
+						removeHighlightMailNew();
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -137,7 +138,8 @@
 			if(loc != ''){
 				addHighlight(mainLocationButton, loc);
 			}
-				
+			
+			
 			if(eventtype != eventtypeOld && eventtypeOld == '2'){
 				try{
 					$('.mainLocationButton').linkbutton('enable');
@@ -181,6 +183,7 @@
 	});	
 }
 
+// Lädt Mails vollständig herunter
 function loadMail (from, to, date, subject, content, attachment, attachmentHref) {
 	var tag = 'Mail';
 	
@@ -487,9 +490,9 @@ function showLocation (buttonId) {
 							$('.mainLocationButton').linkbutton('enable');
 							container.window({modal:false});
 						}						
-					},2500);					
-				},2500);
-			},2500);			
+					},1500);					
+				},1500);
+			},1500);			
 		}
 	});
 }
@@ -514,6 +517,7 @@ function showLaptop () {
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
+						removeHighlightMailNew();	
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -522,7 +526,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addBlinkerMailNew();
+				addHighlightMailNew();
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -582,7 +586,7 @@ function showLaptop () {
 	});
 }
 
-//Zeigt den Tab NewMail zum Verfassen eines MailDraft an
+//Zeigt den Tab 'New Mail' zum Verfassen eines MailDraft an
 function showNewMailTab () {
 	var tag = 'MailDraft';
 	if (tabsContainer.tabs('exists', 'New Mail')){
@@ -803,7 +807,7 @@ function setTCQImages (imtime, imcost, imqual) {
 		setTimeout(function(){	
 			tcqElement.css('height', '140px');
 			tcqElement.css('background-image', 'url(images/tcq/' + imgUrl + '.PNG)');
-		},1000);
+		},3000);
 	}	
 }
 
@@ -881,11 +885,12 @@ function updateTCQValues (imtime, imcost, imqual) {
 	else if(gameData.imqual<0){gameData.imqual=0;}
 }
 
-//Sets the background picture for the dialog
+//Sets the background picture for the dialog according to the dialog
 function setLocation (backgroundPictureUrl) {
 	$('.locationBackgroundContainer').css('background-image', 'url('+backgroundPictureUrl+')');
 }
 
+// Sets the background picture for the background
 function setDialogBackground (backgroundPictureUrl) {
 	backgroundPictureUrlNew = 'url('+backgroundPictureUrl+')';
 	backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
@@ -953,7 +958,7 @@ function hideEventContainer (container){
 function showMsg (title, msg) {
 	$.messager.show({
 		title: title,
-		timeout:3000,
+		timeout:5000,
 		msg: msg
 	});
 }
@@ -986,38 +991,14 @@ function removeHighlightMail () {
 	$('.mainMailButton').removeClass('elementHighlight');
 }
 
-/* TEMPORARY DISABLED FOR TROUBLESHOOTING AS IT IS THE ONLY FUNCTION WITH AN ERROR
- * //TODO laluz
-// Adds Blinker to NewMail (MailDraft) Button
-function addBlinkerMailNew(selector){
-    $('.tabs-tool').find('.l-btn').('.elementBlinker').animate({opacity:0}, 50, "linear", function(){
-    	$(this).delay(800);
-    	$(this).animate({opacity:1}, 50, function(){
-        addBlinkerMailNew(this);
-        });
-        $(this).delay(800);
-    });
-}
-*/
-
-/*
-function addBlinkerMailNew() {
-	for(var times=0; times <=5; times++) {
-    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeOut(500);
-    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeIn(500);
-	}
-	addHighlightMailNew();
-}
-*/
-
 // Adds Highlight to NewMail (MailDraft) Button
 function addHighlightMailNew () {
-	$('.tabs-tool').find('.l-btn').addClass('elementHighlight');
+	$("#tabs-tool").addClass("tabs-tool-highlight");
 }
 
 //Removes Highlight from NewMail (MailDraft) Button
 function removeHighlightMailNew () {	
-	$('.tabs-tool').find('.l-btn').removeClass('elementHighlight');
+	$("#tabs-tool").removeClass("tabs-tool-highlight");
 }
 
 //Shows the fullscreen transition window
