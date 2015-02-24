@@ -18,8 +18,9 @@ import org.apache.shiro.subject.Subject;
 @WebServlet({"/ChangeStudentPassword"})
 
 /** This class is responsible to handle a password change request
-* The frontend page is homepage_student.jsp where user enteres old and new password to update
-* @author Oliver Becher
+* The frontend page is homepage_student.jsp where user enters his old and new password to update
+* 
+* @author Oliver Becher, Yi Min
 */
 
  public class ChangeStudentPassword extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
@@ -34,6 +35,7 @@ import org.apache.shiro.subject.Subject;
 		String url="/backend/homepage_student.jsp";
 		
 		/** Required parameters
+		 * 
 		 * @param String username
 		 * @param String oldpassword
 		 * @param String password
@@ -45,9 +47,10 @@ import org.apache.shiro.subject.Subject;
 		String username = request.getParameter("username");
 		String oldpassword = request.getParameter("oldpassword");
 		
-		// create a UsernamePasswordToken using the
-		// and password provided by the user. Username is provided by form automatically.
-				
+		// create a UsernamePasswordToken using the current password
+		// Username is provided by form automatically.
+		// The following try catch will try to login using this token (login using the provided pw)
+		// and will throw an exception if the password is wrong
 		UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
 		
 		String password = request.getParameter("password");
@@ -93,7 +96,7 @@ import org.apache.shiro.subject.Subject;
 			request.setAttribute("username", username);
 
 			
-		
+			// Checks if the entered new password and its repetition are the same 
 			if (password.equals(password_repeat))
 				{
 				// encrypt the entered new password

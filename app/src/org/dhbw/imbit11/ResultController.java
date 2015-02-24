@@ -29,7 +29,6 @@ public class ResultController extends HttpServlet {
 	/**
 	 * Grid view, labels, results and restart option of the brillianCRM is saved to the Object jsp
 	 * after Servlet config is placed into service and Servlet Context Object created
-	 * @author Mary
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		ServletContext context = config.getServletContext();
@@ -41,6 +40,7 @@ public class ResultController extends HttpServlet {
 	 * Format of the response is HTML with UTF-8 Encoding
 	 * Server-side information of grid view, labels, results of game and restart option
 	 * of brillianCRM is saved to response
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
 	 */
@@ -57,9 +57,9 @@ public class ResultController extends HttpServlet {
 	 * of unlimited length to web server
 	 * Server-side information of grid view, labels, results and restart option of
 	 * brillianCRM is saved to response
+	 * 
 	 * @param request - contains the request of a client
 	 * @param response - contains the response of the servlet
-	 * @author Mary
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

@@ -1,0 +1,23 @@
+# Files with code to be ignored for language statistics
+doku/* linguist-documentation
+
+# Force line ending normalization for entire project. Does not affect local repo setting.
+# Will be converted on push to github and back to your local settings upon pull
+* text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
