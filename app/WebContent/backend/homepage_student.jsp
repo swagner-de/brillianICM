@@ -60,7 +60,7 @@
 					<div class="formLabel">Repeat Password:</div>
 					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton studentButton" onclick=warning()>Update Password</a>
+					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
 			</div>
 			<!-- For now only intended for development -->
@@ -88,7 +88,7 @@
 	$('#imprint').bind('click', function() {
 		showImprint();
 	});
-	function warning()
+	function confirmPasswordChange()
 	{
 		var box = window.confirm("Click OK if you want to change password. You will be logged out. ");
 		if(box)
