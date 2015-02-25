@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events>
-	<!-- HIER BEGINNT CONTENT 1 -->
+	<!-- HIER BEGINNT CONTENT 1! -->
 	<!-- Startwerte auf jeweils 71 gesetzt, um mit grünen Werten zu beginnen -->
 	<event level="0" element="0" id="l000e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
