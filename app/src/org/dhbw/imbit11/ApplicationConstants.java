@@ -25,7 +25,10 @@ public interface ApplicationConstants {
 	public static  String MAIL_CLIENT_TAB1 = "Inbox";
 	public static  String MAIL_CLIENT_TAB2 = "Sent";
 	
-	public static  String AUDIO_BUTTON_TEXT = "Audio On/Off";
+	/* public static  String AUDIO_BUTTON_TEXT = "Audio On/Off";
+	 * This one cannot stay because of featuritis. 
+	 * It is possible to add a Button with personal settings but no Audio On/Off Button.
+	 */
 	public static  String IMPRINT_BUTTON_TEXT = "Imprint";
 	public static  String HELP_BUTTON_TEXT = "Help";
 	public static  String LOGOUT_BUTTON_TEXT = "Logout";
