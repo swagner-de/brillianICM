@@ -288,15 +288,11 @@ import javax.servlet.http.HttpServletResponse;
         
         String msgBody = "Dear "+ firstname + " " + lastname + "\n Please confirm your registration by clicking on the following link: \n" 
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
-        // TODO Fetch + in mailadress and escape it
-        /* if(email.contains("+"))
-        	{
-        	email.replaceAll("+", "%2B");
-        	} */
+        
         msgBody += email;
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
-        msgBody += "\n\nGreetings, \n" +
+        msgBody += "\n\n Greetings, \n" +
 					"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
 
 	try {

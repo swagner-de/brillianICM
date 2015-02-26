@@ -389,7 +389,7 @@
 		<partner>Priya Williams, (Project Assistant Concrete Machinery)</partner>
 		<date>2014-01-21 08:45:00</date>
 		<title>Kick-off reminder</title>
-		<content>Hey %prename%, the kick-off meeting will start at 9 o' clock. I just wanted to remind you to be in the conference room in time! </content>
+		<content>Hey %prename%, just as a reminder, the kick-off meeting will start in the conference room at 9 o' clock. </content>
 		<option href="l067e000">Next</option>
 		<bgimg>role7pic2.png</bgimg>
 	</event>
@@ -554,32 +554,33 @@
 	<!-- Laura: Änderung des Spielinhaltes, 5 Projektmanagementphasen statt 4, detailiertere weniger Bausteine für die Phasen erstellt, geändert nach DIN 69901-5 --> 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
-		<description>Please assign the work packages to each phase of the work breakdown structure </description>
-		<column>Project Initiation</column>
-		<column>Project Definition</column>
-		<column>Project Planning</column>
-		<column>Project Execution</column>
-		<column>Project Closing</column>
-		<option column="4" rank="4" finfo="Arbeitspakete/Management_of_Risks.pdf" fdesc="Work Package Description: Management of Risks">Management of Risks</option>
-		<option column="5" rank="3" finfo="Arbeitspakete/Lessons_Learned.pdf" fdesc="Work Package Description: Lessons Learned">Lessons Learned</option>
-		<option column="3" rank="3" finfo="Arbeitspakete/Risk_Analysis.pdf" fdesc="Work Package Description: Risk Analysis">Risk Analysis</option>
-		<option column="1" rank="2" finfo="Arbeitspakete/Define_Responsibilities.pdf" fdesc="Work Package Description: Define Responsibilities">Define Responsibilities</option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Management_of_Schedule.pdf" fdesc="Work Package Description: Management of Schedule">Management of Schedule</option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Cost_Estimation.pdf" fdesc="Work Package Description: Cost Estimation">Cost Estimation</option>
-		<option column="5" rank="1" finfo="Arbeitspakete/Final_Project_Report.pdf" fdesc="Work Package Description: Final Project Report">Final Project Report</option>
-		<option column="1" rank="3" finfo="Arbeitspakete/Brainstorming.pdf" fdesc="Work Package Description: Brainstorming">Brainstorming</option>
-		<option column="3" rank="1" finfo="Arbeitspakete/Project_Structure_Plan.pdf" fdesc="Work Package Description: Project Structure Plan">Project Structure Plan</option>
-		<option column="4" rank="3" finfo="Arbeitspakete/Management_of_Costs.pdf" fdesc="Work Package Description: Management of Costs">Management of Costs</option>
-		<option column="1" rank="4" finfo="Arbeitspakete/Preliminary_Targets.pdf" fdesc="Work Package Description: Preliminary Targets">Preliminary Targets</option>
-		<option column="3" rank="5" finfo="Arbeitspakete/Scheduling.pdf" fdesc="Work Package Description: Scheduling">Scheduling</option>
-		<option column="2" rank="1" finfo="Arbeitspakete/Define_Targets.pdf" fdesc="Work Package Description: Define Targets">Define Targets</option>
-		<option column="3" rank="4" finfo="Arbeitspakete/Define_Strategies_and_Measures.pdf" fdesc="Work Package Description: Define Strategies and Measures">Define Strategies and Measures</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Feasability_Evaluation.pdf" fdesc="Work Package Description: Feasability Evaluation">Feasability Evaluation</option>
-		<option column="4" rank="2" finfo="Arbeitspakete/Management_of_Resources.pdf" fdesc="Work Package Description: Management of Resources">Management of Resources</option>
-		<option column="5" rank="2" finfo="Arbeitspakete/Post_Cost_Analysis.pdf" fdesc="Work Package Description: Post Cost Analysis">Post Cost Analysis</option>
-		<option column="3" rank="2" finfo="Arbeitspakete/Stakeholder_Analysis.pdf" fdesc="Work Package Description: Stakeholder Analysis">Stakeholder Analysis</option>
-		<option column="1" rank="1" finfo="Arbeitspakete/Project_Charter.pdf" fdesc="Work Package Description: Project Charter">Project Charter</option>
-		<option column="4" rank="5" finfo="Arbeitspakete/Management_of_Quality.pdf" fdesc="Work Package Description: Management of Quality">Management of Quality</option>
+		<description>Please assign the work packages to each deliverable of the Work Breakdown Structure </description>
+		<column>CRM Strategy</column>
+		<column>Software Customized</column>
+		<column>Data</column>
+		<column>Handover</column>
+		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration">Data Migration</option>
+		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
+		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
+		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
+		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_Live_System.pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
+		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
+		<option column="3" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination Mobile Devices </option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Requirements_Specification.pdf" fdesc="Work Package Description: Requirements Specification">Requirements Specification </option>
+		<option column="4" rank="5" finfo="Arbeitspakete/Testing.pdf" fdesc="Work Package Description: Testing">Testing</option>
+		<option column="2" rank="8" finfo="Arbeitspakete/Roll-Out.pdf" fdesc="Work Package Description: Roll-Out">Roll-Out</option>
+		<option column="1" rank="10" finfo="Arbeitspakete/Process_Analysis.pdf" fdesc="Work Package Description: Sales Process Analysis">Sales Process Analysis</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Development_in_India.pdf" fdesc="Work Package Description: Development in India">Development in India </option>
+		<option column="1" rank="12" finfo="Arbeitspakete/Target_State_Analysis.pdf" fdesc="Work Package Description: Target State Analysis">Target State Analysis </option>
+		<option column="2" rank="17" finfo="Arbeitspakete/Functional_Requirements.pdf" fdesc="Work Package Description: Functional Requirements">Functional Requirements </option>
+		<option column="3" rank="16" finfo="Arbeitspakete/Creation_of_Migration_Concept.pdf" fdesc="Work Package Description: Creation of Migration Concept"> Creation of Migration Concept </option>
+		<option column="1" rank="7" finfo="Arbeitspakete/Actual_State_Analysis.pdf" fdesc="Work Package Description: Actual State Analysis">Actual State Analysis </option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Approval.pdf" fdesc="Work Package Description: Approval">Approval</option>
+		<option column="1" rank="13" finfo="Arbeitspakete/Design_Customer_Relationship_Strategy.pdf" fdesc="Work Package Description: Design Customer Relationship Strategy and Structure">Design Customer Relationship Strategy and Structure</option>
 		<nextevent href="l202e000" />
 	</event>
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1" id="l202e000" element="0" level="202">
@@ -1475,7 +1476,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="600" element="7" id="l332e007" eventtype="13" imcost="0" imqual="0" imtime="-5" loc="4">
-		<content>Time flies. The discussion with Gundula took so long that you now don’t have any time left, go to the meeting now. The CEO - Thomas Zimmermann, could have needed your help, but you don't have any time left. Now he has to work it out on his own. Unfortunately this will have an impact on our time schedule. </content>
+		<content>Time flies. The discussion with Gundula took so long that you now don’t have any time left, go to the meeting now. The CEO - Thomas Zimmermann, could have needed your help, but you don't have any time left. Now he has to work it out on his own. Unfortunately, this will have an impact on our time schedule. </content>
 		<nextevent href="l630e100" />
 	</event>
 	<!-- Benachrichtigung -->
@@ -1631,7 +1632,7 @@
 		<bgimg>role9pic3.png</bgimg>
 		<content> Mhh... Well... Yes, why not. We never had time to talk in person yet. Let’s go for some drinks. </content>
 		<option href="l532e000">Great! Let's meet at 8 o'clock. See you there! </option>
-		<option href="l532e000">Sounds good. I'm looking forward to seeing you at 8pm. </option>
+		<option href="l532e000">Sounds good. I'm looking forward to seeing you at 8 pm. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="0" id="l531e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1639,7 +1640,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Your Phone rings – Vance Veba is calling!</title>
 		<bgimg>role9pic3.png</bgimg>
-		<content> Well...ok. We never had time to talk in person yet, but I don't have time for lunch. How about going in the bar tonight? </content>
+		<content> Well...ok. We haven't had time to talk in person yet, but I don't have time for lunch. How about going to the bar tonight? </content>
 		<option href="l532e000">Great! Let's meet at 8 o'clock. See you there! </option>
 		<option href="l532e000">That's fine with me as well. See you there at 8 o'clock. </option>
 	</event>
@@ -1789,7 +1790,7 @@
 		<bgimg>role9pic2.png</bgimg>
 		<content> Sounds like a plan. You will be surprised how much better our software will be then. </content>
 		<option href="l512e000"> Looking forward to it! We can take the project to the next level. </option>
-		<option href="l512e000"> Yes I'm very confident. You and your work are very important for us. </option>
+		<option href="l512e000"> Yes, I'm very confident. You and your work are very important to us. </option>
 		<option href="l512e000"> I'm eager to see the result. I'm sure we will benefit from your presence.  </option>
 	</event>
 	<!-- Dialogelement -->
@@ -2034,7 +2035,7 @@
 		<bgimg>role4pic1.png</bgimg>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
-		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am and we talked about business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. What do you think? Can you throw some analytics capabilities in the mix? </content>
+		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am, and we talked business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. What do you think? Can you throw some analytics capabilities in the mix? </content>
 		<option href="l571e000">Sure, shouldn’t be any trouble.</option>
 		<option href="l571e001">As you know, we’re pretty late in the project. </option>
 		<option href="l571e002">This late in the project? I wouldn’t think so. </option>
@@ -2046,7 +2047,7 @@
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Great! I knew I could count on you. I’ll run my ideas by Jessica. </content>
 		<option href="l580e000">Okay.</option>
-		<option href="l572e001">Mhh... maybe it's better when we set up a change request.</option>
+		<option href="l572e001">Mhh... maybe it would be better to set up a change request.</option>
 	</event>
 	<event level="700" element="1" id="l571e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
@@ -2162,7 +2163,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Good Morning, %gender% %surname%. Let’s get right down to business. Time is money, as they say. </content>
-		<option href="l601e001">I would’ve preferred some smalltalk. </option>
+		<option href="l601e001">I would’ve preferred some small talk. </option>
 		<option href="l601e002">Sure.</option>
 	</event>
 	<event level="700" element="1" id="l601e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2336,7 +2337,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Good Morning, %gender% %surname%. Let’s get right down to business, shall we? Time is money, as they say. </content>
-		<option href="l601e011">I would’ve preferred some smalltalk. </option>
+		<option href="l601e011">I would’ve preferred some small talk. </option>
 		<option href="l601e012">Sure.</option>
 	</event>
 	<event level="700" element="11" id="l601e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
@@ -2532,7 +2533,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
-		<content>Well, I’m worried... the CRM system is not...how do I put this... I think the it's not really what we need. Our sales operations are going great and we have had the company grow ever, since we got out of the financial crisis... </content>
+		<content>Well, I’m worried... the CRM system is not...how do I put this... I think it's not really what we need. Our sales operations are going great, and the company has grown ever since we got out of the financial crisis... </content>
 		<option href="l613e000">So you’re successful enough already? </option>
 		<option href="l613e000">So our product is rubbish? </option>
 	</event>
