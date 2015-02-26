@@ -42,7 +42,7 @@
 		
 		//Wird nur beim ersten Mal zu Beginn des Spiels ausgefÃ¼hrt
 		if (firstFlag == false){			
-		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe nächste Zeile workaround - kein chinesiches Zeichen hier möglich
+		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe nï¿½chste Zeile workaround - kein chinesiches Zeichen hier mï¿½glich
 	   		$('.welcome').text('Welcome to brillanCRM!');
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
 				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
@@ -632,7 +632,7 @@ function showAbout () {
 // Function to check if user has mobile device
 
 
-/** Detect if site is accessed on a mobile device
+/** Detects if site is accessed on a mobile device
  * @author Philipp E.
  */
 function detectmob() { 
@@ -652,10 +652,17 @@ function detectmob() {
 	}
 
 
-//Shows PDF in a jquery-easyui window - Example: showPdf('pdf/Bachelorarbeit.pdf');
-//Get mobile check value. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
-//If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
-function showPdf(pdfPath){
+/**
+ * @author Oliver B.
+ * @author Philipp K.
+ * @author Philipp E.
+ * 
+ * @param pdfPath Pfad der anzuzeigenden PDF
+ * 
+ * Shows PDF in a jquery-easyui window - Example: showPdf('pdf/Bachelorarbeit.pdf');
+ * Get boolean of detectmob. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
+ * If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
+ */ function showPdf(pdfPath){
 	
 	if(detectmob() == true)
 		{	
