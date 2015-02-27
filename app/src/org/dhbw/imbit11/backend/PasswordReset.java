@@ -78,7 +78,7 @@ import org.apache.shiro.subject.Subject;
 			}
 			
 			Subject subject = SecurityUtils.getSubject();
-			String email= (String) subject.getPrincipal();
+			String email = (String) subject.getPrincipal();
 			String oldpassword = request.getParameter("oldpassword");
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
