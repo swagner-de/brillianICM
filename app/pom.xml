@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dhbw-mannheim</groupId>
 	<artifactId>brillianCRM</artifactId>
-	<version>2.2.0release</version>
+	<version>2.2.1release</version>
 	<packaging>war</packaging>
 
 	<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->

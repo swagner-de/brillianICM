@@ -45,6 +45,7 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String url = "/login.jsp";
 		RequestDispatcher dispatcher = getServletContext()
 				.getRequestDispatcher(url);
@@ -66,6 +67,8 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+
+		request.setCharacterEncoding("UTF-8");
 
 		String url = "/login.jsp";
 

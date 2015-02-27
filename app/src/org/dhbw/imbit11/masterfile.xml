@@ -42,7 +42,6 @@
 	</event>
 	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0" imqual="0" imtime="0" loc="1">
 		<content>You are calling back Thomas Zimmermann as agreed…</content>
-		<bgimg>loc3a.png</bgimg>
 		<nextevent href="l001e001" />
 	</event>
 	<event level="1" element="0" id="l001e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">

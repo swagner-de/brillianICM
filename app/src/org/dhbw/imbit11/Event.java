@@ -47,6 +47,20 @@ public class Event extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
+	 * Java Class which enables the WebUI to communicate with Nodes, User Settings and E-Mail Game events
+	 * first of all all different parameters from the request are saved into dedicated variables. Currently this happens for all types if Events
+	 * 
+	 * Second an action is called based on the specified event
+	 * 1. node - loads data EventExtractor for a specified node
+	 * 2. loadGame - loads a list of the user progress
+	 * 3. saveGame - saves the user progress based on the params provided
+	 * 4. inbox - loads a data EventExtractor E-Mail
+	 * 5. sent - currently does nothing
+	 * 
+	 * @throws IOException
+	 * @throws ServletException
+	 * 
+	 * @exception SQLException catches errors which can occur with SQL related load and safeGame 
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -56,6 +70,7 @@ public class Event extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String userid = request.getParameter("userid");
+		//TODO get parameters only if needed (safe only ?) #339
 		int imtime = request.getParameter("imtime") == null ? 0 : Integer.parseInt(request.getParameter("imtime"));
 		int imcost = request.getParameter("imcost") == null ? 0 : Integer.parseInt(request.getParameter("imcost"));
 		int imqual = request.getParameter("imqual") == null ? 0 : Integer.parseInt(request.getParameter("imqual"));
