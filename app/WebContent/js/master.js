@@ -50,8 +50,7 @@
 		 * @author Laluz
 		*/
 		if (firstFlag == false){			
-		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe naechste Zeile workaround - kein chinesiches Zeichen hier moeglich
-	   		$('.welcome').text('Welcome to brillanCRM!');
+			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
 				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
 				setLevelImage(level);
@@ -179,8 +178,8 @@
 			 * @author Laluz
 			 */
 			mainLocationButton.linkbutton({
-			    onClick: function(){	
-					showLocation ($(this).attr('id'));	
+			    onClick: function(){
+			    	showLocation ($(this).attr('id'));			
 			    }
 			});
 
@@ -501,6 +500,9 @@ function showLocation (buttonId) {
 			if(buttonId == loc){
 				removeHighlight(mainLocationButton, loc);
 			}
+			var audioElement = document.createElement('audio');	
+			audioElement.setAttribute('src', 'audio/location.mp3');
+			audioElement.play();	
 			
 			/* Filter for showing images due to location change
 			 * @author Laluz

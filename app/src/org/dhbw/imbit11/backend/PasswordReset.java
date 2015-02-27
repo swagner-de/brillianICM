@@ -60,7 +60,8 @@ import org.apache.shiro.subject.Subject;
 	 * @throws IOException - signals that an IO exception occured and gives out line of code
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		request.setCharacterEncoding("UTF-8");
+
 		String url="/LoginUser";
 		
 		if(request.getParameter("updatePassword") != null){

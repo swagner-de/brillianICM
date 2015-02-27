@@ -29,15 +29,17 @@ public class UploadServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
+		request.setCharacterEncoding("UTF-8");
 		doPost(request, response);
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
+		request.setCharacterEncoding("UTF-8");
 
 		bachupfile();
 		// sendmail();
-
+		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println("<h2>Good job,</h2>");
