@@ -63,17 +63,17 @@
 		<div class="description"></div>
 	    <div style="clear: both;"></div>
 	    <div class="tileAcceptorContainer">
-	    	<div class="tileAcceptorTop bc tile"></div>
-	    	<div class="tileAcceptorTop bc tile"></div>
-	    	<div class="tileAcceptorTop bc tile"></div>
+	    	<div class="bc tileAcceptor"></div>
+	    	<div class="bc tileAcceptor"></div>
+	    	<div class="bc tileAcceptor"></div>
 	    	<div style="clear: both;"></div>
-		    <div class="tileAcceptorMiddle bc tile"></div>
-		    <div class="tileAcceptorMiddle bc tile"></div>
-		    <div class="tileAcceptorMiddle bc tile"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
 		     <div style="clear: both;"></div>
-		    <div class="tileAcceptorBottom bc tile"></div>
-		    <div class="tileAcceptorBottom bc tile"></div>
-		    <div class="tileAcceptorBottom bc tile"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
 	    </div>
 	    <div style="clear: both;"></div>
 	    <div class="draggableTilesContainer bc"></div>
