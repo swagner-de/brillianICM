@@ -1,5 +1,5 @@
 <div style="background-color: #c1d3f6; padding:10px; margin-top:0px; margin-bottom:0px">
-	<div><strong>brillianCRM</strong> wurde vom Kurs WIMBIT11B, <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank" >Studiengang IMBIT</a>, <a href = "http://www.dhbw-mannheim.de/" target="_blank" >DHBW Mannheim</a> im Fr&uuml;hjahr 2014 mit Unterst&uuml;tzung von Prof. Dr. Harald Bendl und Prof. Peter Mayr entwickelt.</div>
+	<div><strong>brillianCRM</strong> wurde von den Kursen WIMBIT11B und WIMBIT12C, <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank" >Studiengang IMBIT</a>, <a href = "http://www.dhbw-mannheim.de/" target="_blank" >DHBW Mannheim</a> im Fr&uuml;hjahr 2014 und 2015 mit Unterst&uuml;tzung von Prof. Dr. Harald Bendl und Prof. Peter Mayr entwickelt.</div>
 	
 	<h3>Impressum</h3>
 	<div>
