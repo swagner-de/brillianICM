@@ -580,7 +580,7 @@ div.matrixAllocationContainer{
 
 
 //Tile matrix place holders in top row
-div.tileAcceptorTop {
+div.tileAcceptor {
 	border-width: 1px;
 	width: 150px;
 	height: 150px;
@@ -595,37 +595,6 @@ div.tileAcceptorTop {
 	padding-bottom: 5px;
 }
 
-//Tile matrix place holders in middle row
-div.tileAcceptorMiddle {
-	border-width: 1px;
-	width: 150px;
-	height: 150px;
-	vertical-align: middle;
-	float: left;
-	margin-top: 0px;
-	overflow: hidden;
-	margin-right: 0px;
-	border-right-width: 0px;
-	border-top-width: 0px;
-	overflow-y: auto;
-	padding-bottom: 5px;
-}
-
-//Tile matrix place holders in bottom row
-div.tileAcceptorBotttom {
-	border-width: 1px;
-	width: 150px;
-	height: 150px;
-	vertical-align: bottom;
-	float: left;
-	margin-top: 0px;
-	overflow: hidden;
-	margin-right: 0px;
-	border-right-width: 0px;
-	border-top-width: 0px;
-	overflow-y: auto;
-	padding-bottom: 5px;
-}
 
 div.draggableTilesContainer {
 	border-width: 1px;
