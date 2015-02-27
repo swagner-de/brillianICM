@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <%@ page import="org.dhbw.imbit11.ApplicationConstants"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title><%=ApplicationConstants.PAGETITLE_PROFESSOR%></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><%= ApplicationConstants.PAGETITLE_PROFESSOR %></title>
 <link rel="apple-touch-icon" sizes="57x57"
 	href="images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114"
@@ -61,13 +61,14 @@
 				<h1>Groups</h1>
 				Below each group you can see a list of the students that are part of
 				the respective group.<br /> <br /> <br /> <br />
-				<%
-	if(request.getAttribute("groups")!=null){						
+
+				<% 
+if(request.getAttribute("groups")!=null){						
 	//students = new String[((String [][]) request.getAttribute("students")).length][request.getAttribute("students")[0].length];
 		@SuppressWarnings("unchecked")
 		ArrayList<ArrayList<String>> groups = (ArrayList<ArrayList<String>>)request.getAttribute("groups");												
 		out.println("<p style='color: red'>You have currently no groups. Create a group by entering a groupname below and click on 'create group'.</p>");	
-	}
+	
 	//out.println("<table><tr><td>Group</td><td>Registration Link</td></tr>");
 	for(int i=0; i<groups.size(); i++){//ArrayList<String> row : groups
 		out.println("<div class=\"group\"><table><tr><td><big>");
@@ -158,7 +159,8 @@
 		else {
 			out.println("<tr>You have not created any courses yet.</tr>");
 		}
-				%>
+	}
+}				%>
 			</div>
 
 			<div style="clear: both;"></div>
