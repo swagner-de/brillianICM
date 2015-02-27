@@ -87,7 +87,7 @@ import org.apache.shiro.subject.Subject;
 			 * UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
 			 * subject.login(token);
 			 * token.clear(); */
-	//	try {	
+		//try {	
 			
 			if(password.equals(password_repeat)){
 				PasswordEncryptor pe = new PasswordEncryptor();
