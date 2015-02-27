@@ -59,6 +59,8 @@ import javax.servlet.http.HttpServletResponse;
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
+		request.setCharacterEncoding("UTF-8");
+		
 		String groupnumber = request.getParameter("groupnumber");
 
 		// //System.out.println(groupnumber);
@@ -162,7 +164,7 @@ import javax.servlet.http.HttpServletResponse;
 
 			} else {
 				request.setAttribute("status",
-						"You have to fill in every field before submitting. \n Please do not use a +-sign in your mail adress.");
+						"You have to fill in every field before submitting. \n Please do not use a +-sign in your mail address.");
 			}
 
 		} catch (SQLException e) {
@@ -288,15 +290,11 @@ import javax.servlet.http.HttpServletResponse;
         
         String msgBody = "Dear "+ firstname + " " + lastname + "\n Please confirm your registration by clicking on the following link: \n" 
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
-        // TODO Fetch + in mailadress and escape it
-        /* if(email.contains("+"))
-        	{
-        	email.replaceAll("+", "%2B");
-        	} */
+        
         msgBody += email;
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
-        msgBody += "\n\nGreetings, \n" +
+        msgBody += "\n\n Greetings, \n" +
 					"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
 
 	try {
