@@ -73,7 +73,7 @@ import org.apache.shiro.subject.Subject;
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
 			
-			UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
+			/*UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
 			
 			try {
 				Subject subject = SecurityUtils.getSubject();
@@ -87,7 +87,7 @@ import org.apache.shiro.subject.Subject;
 				try{
 					realm.updatePassword(email, hashedPassword);
 					request.setAttribute("status", "Password changed.");
-					   if (subject != null) {
+					 /*  if (subject != null) {
 				        	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
 				            subject.logout();
 				        }
@@ -95,7 +95,7 @@ import org.apache.shiro.subject.Subject;
 				        HttpSession session = request.getSession(false);
 				        if( session != null ) {
 				            session.invalidate();
-				        }       
+				        }       */
 				}catch(SQLException e){
 					//System.out.println("password update failed!");
 					e.printStackTrace();
@@ -104,12 +104,12 @@ import org.apache.shiro.subject.Subject;
 			}else{
 				request.setAttribute("error", "Repeated password does not match.");
 			}
-			}  catch (IncorrectCredentialsException ex) {
+			/*}  catch (IncorrectCredentialsException ex) {
 				// password provided did not match password found in database
 				// for the Username which is trying to do the password change
 				ex.printStackTrace();
 				request.setAttribute("error", "Login failed! Wrong old Password!");
-			} 
+			} */
 		}else{
 		
 			String email = request.getParameter("username");
