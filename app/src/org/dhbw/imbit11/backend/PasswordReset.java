@@ -11,6 +11,9 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebServlet;
 
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 
 @WebServlet({"/ResetPassword"})
@@ -74,28 +77,34 @@ import org.apache.shiro.subject.Subject;
 				url="/Student";
 			}
 			
-			String email= request.getParameter("username");
+			Subject subject = SecurityUtils.getSubject();
+			String email= (String) subject.getPrincipal();
 			String oldpassword = request.getParameter("oldpassword");
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
-			
-			Subject subject = SecurityUtils.getSubject();
 
+			/* try {
+			 * UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
+			 * subject.login(token);
+			 * token.clear(); */
+	//	try {	
+			
 			if(password.equals(password_repeat)){
 				PasswordEncryptor pe = new PasswordEncryptor();
 				String hashedPassword = pe.hashPassword(password);
 				UserRealm realm = new UserRealm();
 				try{
 					realm.updatePassword(email, hashedPassword);
-			        if (subject != null) {
-			        	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
-			            subject.logout();
-			        }
-			        HttpSession session = request.getSession(false);
-			        if( session != null ) {
-			            session.invalidate();
-			        }     
-					   
+					/*
+			        * if (subject != null) {
+			        *	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
+			        *    subject.logout();
+			        * }
+			        * HttpSession session = request.getSession(false);
+			        * if( session != null ) {
+			        *    session.invalidate();
+			        * }     
+					*/   
 				}catch(SQLException e){
 					//System.out.println("password update failed!");
 					e.printStackTrace();
@@ -104,6 +113,13 @@ import org.apache.shiro.subject.Subject;
 			}else{
 				request.setAttribute("error", "Repeated password does not match.");
 			}
+		/* }  catch (IncorrectCredentialsException ex) {
+		*	// password provided did not match password found in database
+		*	// for the Username which is trying to do the password change
+		*	ex.printStackTrace();
+		*	request.setAttribute("error", "Login failed! Wrong old Password!");
+		* } 
+		*/ 
 		}else{
 		
 			String email = request.getParameter("username");
