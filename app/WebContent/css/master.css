@@ -571,6 +571,92 @@ div.drag {
 	cursor: pointer !important;
 }
 
+//This class is used for labeling all tiles that will get drag functionality
+//Tiles shall be organized in a tile matrix
+
+div.matrixAllocationContainer{
+	text-align: center;
+}
+
+
+//Tile matrix place holders in top row
+div.tileAcceptorTop {
+	border-width: 1px;
+	width: 150px;
+	height: 150px;
+	vertical-align: top;
+	float: left;
+	margin-top: 0px;
+	overflow: hidden;
+	margin-right: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+}
+
+//Tile matrix place holders in middle row
+div.tileAcceptorMiddle {
+	border-width: 1px;
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0px;
+	overflow: hidden;
+	margin-right: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+}
+
+//Tile matrix place holders in bottom row
+div.tileAcceptorBotttom {
+	border-width: 1px;
+	width: 150px;
+	height: 150px;
+	vertical-align: bottom;
+	float: left;
+	margin-top: 0px;
+	overflow: hidden;
+	margin-right: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+}
+
+div.draggableTilesContainer {
+	border-width: 1px;
+	height: 99px !important;
+	width: 826px;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	padding-left: 1px;
+	overflow-y: scroll;
+}
+
+
+
+// tiles to be dragged and dropped
+div.dragTile {
+	float: left;
+	width: 150px;
+	height: 150px;
+	padding: 0 0 0 5px;
+	margin: 5px 6px 0 5px;
+	border-width: 1px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer !important;
+}
+
+
+
 div.dragIncorrect {
 	background-color: #ffa8a8;
 }
