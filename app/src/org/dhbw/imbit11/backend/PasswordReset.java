@@ -127,7 +127,7 @@ import org.apache.shiro.subject.Subject;
 				+ temporaryPassword + ". You can change this after you logged in. \n\nGreetings, \n" +
 					"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
 		MailClient mailclient = new MailClient();
-		mailclient.sendMail(email, "Password Reset", content, request);
+		mailclient.sendMail(email, "Password Reset", content);
 		}
 		request.setAttribute("status", "Email was sent.");
 	     // forward the request and response to the view
