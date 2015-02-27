@@ -180,12 +180,7 @@
 			 */
 			mainLocationButton.linkbutton({
 			    onClick: function(){	
-			    	if (locOld != loc) {
-			    		if (locOld == "3" && loc == "4" || locOld == "4" && loc == "3") {
-			    		} else {
-			    			showLocation ($(this).attr('id'));
-			    		}        
-			    	}		
+					showLocation ($(this).attr('id'));	
 			    }
 			});
 
@@ -507,36 +502,64 @@ function showLocation (buttonId) {
 				removeHighlight(mainLocationButton, loc);
 			}
 			
-			/* Possibility to add a filter in order to disable audio file.
+			/* Filter for showing images due to location change
 			 * @author Laluz
 			 */
-			var audioElement = document.createElement('audio');	
-			audioElement.setAttribute('src', 'audio/location.mp3');
-			audioElement.play();	
-			
-			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
-			setTimeout(function(){
-				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
-				setTimeout(function(){
-					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
-					setTimeout(function(){
-						if(buttonId == loc){
-							if(eventtype == '3'){
-								loadDialog();		
-							}else if (eventtype == '4' || eventtype == '5'){								
-								loadSelection();
-							}else if (eventtype == '6' || eventtype == '7'){
-								loadAllocation();							
-							}else if (eventtype == '13'){
-								showNotification();							
-							}
-						}else{
-							$('.mainLocationButton').linkbutton('enable');
-							container.window({modal:false});
-						}						
-					},1500);					
-				},1500);
-			},1500);			
+			if (locOld != loc) {
+	    		if (locOld == "3" && loc == "4" || locOld == "4" && loc == "3") {
+	    			
+	    			if(buttonId == loc){
+						if(eventtype == '3'){
+							loadDialog();		
+						}else if (eventtype == '4' || eventtype == '5'){								
+							loadSelection();
+						}else if (eventtype == '6' || eventtype == '7'){
+							loadAllocation();							
+						}else if (eventtype == '13'){
+							showNotification();							
+						}
+					}else{
+						$('.mainLocationButton').linkbutton('enable');
+						container.window({modal:false});
+					}
+	    			
+	    		} else {
+	    			
+	    			/* Possibility to add a filter in order to disable audio file.
+	    			 * @author Laluz
+	    			 */
+	    			var audioElement = document.createElement('audio');	
+	    			audioElement.setAttribute('src', 'audio/location.mp3');
+	    			audioElement.play();
+	    			
+	    			/* Loads background images in a row and finally loads Dialog or alike. 
+	    			 * @author Laluz
+	    			 */
+	    			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
+	    			setTimeout(function(){
+	    				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
+	    				setTimeout(function(){
+	    					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+	    					setTimeout(function(){
+	    						if(buttonId == loc){
+	    							if(eventtype == '3'){
+	    								loadDialog();		
+	    							}else if (eventtype == '4' || eventtype == '5'){								
+	    								loadSelection();
+	    							}else if (eventtype == '6' || eventtype == '7'){
+	    								loadAllocation();							
+	    							}else if (eventtype == '13'){
+	    								showNotification();							
+	    							}
+	    						}else{
+	    							$('.mainLocationButton').linkbutton('enable');
+	    							container.window({modal:false});
+	    						}						
+	    					},1500);					
+	    				},1500);
+	    			},1500);
+	    		}        
+	    	}				
 		}
 	});
 }
