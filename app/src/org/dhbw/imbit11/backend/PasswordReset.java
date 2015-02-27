@@ -75,11 +75,11 @@ import org.apache.shiro.subject.Subject;
 			
 			// UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
 			
-			/* try {
+			try {
 				Subject subject = SecurityUtils.getSubject();
 				subject.login(token);
 				token.clear(); */
-			try {	
+			// try {	
 			if(password.equals(password_repeat)){
 				PasswordEncryptor pe = new PasswordEncryptor();
 				String hashedPassword = pe.hashPassword(password);
@@ -91,11 +91,11 @@ import org.apache.shiro.subject.Subject;
 				        	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
 				            subject.logout();
 				        }
-					   	/* 
+					   	 
 				        HttpSession session = request.getSession(false);
 				        if( session != null ) {
 				            session.invalidate();
-				        }  */       
+				        }       
 				}catch(SQLException e){
 					//System.out.println("password update failed!");
 					e.printStackTrace();
