@@ -7,7 +7,11 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebServlet;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 
 @WebServlet({"/ResetPassword"})
 
@@ -74,6 +78,8 @@ import javax.servlet.annotation.WebServlet;
 			String oldpassword = request.getParameter("oldpassword");
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
+			
+			Subject subject = SecurityUtils.getSubject();
 
 			if(password.equals(password_repeat)){
 				PasswordEncryptor pe = new PasswordEncryptor();
@@ -81,12 +87,22 @@ import javax.servlet.annotation.WebServlet;
 				UserRealm realm = new UserRealm();
 				try{
 					realm.updatePassword(email, hashedPassword);
+			        if (subject != null) {
+			        	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
+			            subject.logout();
+			        }
+			        HttpSession session = request.getSession(false);
+			        if( session != null ) {
+			            session.invalidate();
+			        }     
+					   
 				}catch(SQLException e){
 					//System.out.println("password update failed!");
 					e.printStackTrace();
+					request.setAttribute("error", "SQL Connection failed");
 				}
 			}else{
-				request.setAttribute("status", "Repeated password does not match.");
+				request.setAttribute("error", "Repeated password does not match.");
 			}
 		}else{
 		
