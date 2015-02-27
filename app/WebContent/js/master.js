@@ -42,7 +42,7 @@
 		
 		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
 		if (firstFlag == false){			
-		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe n�chste Zeile workaround - kein chinesiches Zeichen hier m�glich
+		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe n�chste Zeile workaround - kein chinesiches Zeichen hier m�glich
 	   		$('.welcome').text('Welcome to brillanCRM!');
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
 				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
@@ -106,6 +106,7 @@
 		hideDialog();
 		hideSelection();
 		hideAllocation();
+		hideMatrixAllocation();
 		
 		//Wenn Update Location und kein MailDraft
 		if(locOld == loc && eventtype != '2'){		
@@ -119,6 +120,8 @@
 			loadSelection();		
 		}else if ((eventtype == '6' || eventtype == '7') && locOld == loc){
 			loadAllocation();		
+		}else if (eventtype == '8' && locOld == loc){
+			loadMatrixAllocation();
 		}else if(eventtype == eventtypeOld && eventtype == '2') {
 			loadMailDraft();		
 		}else if(eventtype == '13' && locOld == loc){
@@ -432,6 +435,117 @@ function loadAllocation () {
     });
 }
 
+function loadMatrixAllocation () {
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();	
+	var container = $('.matrixAllocationContainer');
+	var descriptionContainer = container.find('.description');
+
+	alert (description);
+	
+	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	var tileAcceptors = container.find('.tileAcceptor');
+	var continueButton = $('#continueButton');
+	//Enthält zuzuordnende tiles
+	var draggableTilesContainer = $('.draggableTilesContainer');
+
+	$('.dragTile').remove();
+	
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemRank = $(this).attr('rank');
+		alert(rank);
+		var itemDescription = $(this).attr('fdesc');	
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
+	});
+	
+	//Auswahl aller Tiles die beweglich sind
+	var draggableItems = container.find('.dragTile');
+	descriptionContainer.text(description);
+	
+	//Might be reused to name axes --> Low to High Impact/Priority
+	//$xml.find('column').each(function(index){
+	//	phaseTitleContainer.eq(index).text($(this).html());
+	//});
+	
+	continueButton.unbind('click');
+	continueButton.bind('click', function(){
+		$('.tileAcceptor').css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
+		//mit dem rank "1"
+		$('.tileAcceptor').each(function(index) {
+			var correctTileRank = index;
+			if ($(this).find('.dragTile').attr('data-rank') != null){
+				var actualTileRank = $(this).find('.dragTile').attr('data-rank');
+				if (actualTileRank != correctTileRank){
+					correct = false;
+					$(this).addClass('dragIncorrect');
+				}
+				
+				} else {
+					alert("Please complete the matrix!");
+				}
+			});
+
+
+		//Check if all items have been dragged
+		$('.draggableTilesContainer').find('.dragTile').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			container.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements.'); //For Debugging
+			}
+			if (correct == false){
+			showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
+			}					
+		}
+	});	
+	showMatrixAllocation();
+	
+	//Drag Funktionalität
+	draggableItems.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität
+	tileAcceptors.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+}
+
 function fancyImageLoading(imageUrl, element){
 	var img = new Array();
 	img[0] = new Image();
@@ -463,12 +577,14 @@ function showLocation (buttonId) {
 			hideDialog();
 			hideSelection();
 			hideAllocation();
+			hideMatrixAllocation();
 
 			if(buttonId == loc){
 				removeHighlight(mainLocationButton, loc);
 			}
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
+			//Gotta love that melody!
 			audioElement.play();	
 			
 			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
@@ -484,6 +600,8 @@ function showLocation (buttonId) {
 								loadSelection();
 							}else if (eventtype == '6' || eventtype == '7'){
 								loadAllocation();							
+							}else if (eventtype == '8'){
+								loadMatrixAllocation();
 							}else if (eventtype == '13'){
 								showNotification();							
 							}
@@ -952,6 +1070,14 @@ function hideAllocation () {
 
 function showAllocation () {
 	$('.allocationContainer').show();
+}
+
+function hideMatrixAllocation(){
+	$('.matrixAllocationContainer').hide();
+}
+
+function showMatrixAllocation(){
+	$('.matrixAllocationContainer').show();
 }
 
 function showEventContainer (container) {
