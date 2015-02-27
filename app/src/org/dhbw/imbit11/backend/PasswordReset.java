@@ -73,7 +73,7 @@ import org.apache.shiro.subject.Subject;
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
 			
-			// UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
+			UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
 			
 			try {
 				Subject subject = SecurityUtils.getSubject();
