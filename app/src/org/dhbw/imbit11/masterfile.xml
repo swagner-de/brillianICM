@@ -2,7 +2,15 @@
 <events>
 	<!-- HIER BEGINNT CONTENT 1 -->
 	<!-- Startwerte auf jeweils 71 gesetzt, um mit grünen Werten zu beginnen -->
-	<event level="0" element="0" id="l000e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
+	
+	<!-- JobOffer Bild und Accept Job offer Button -->
+	
+	<event level="0" element="0" id="l000e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="">
+		<content />
+		<bgimg>content9pic1.png</bgimg>
+		<nextevent href="l000e001" />
+	</event>
+	<event level="0" element="0" id="l000e001" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">	
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-01-01 09:21:00</date>
@@ -13,9 +21,9 @@
 			<br /> Don’t forget that you should manage the project according to the standard of the Project Management Institute: <a href = "http://www.pmi.org/PMBOK-Guide-and-Standards.aspx" target="_blank">PMBOK standard</a>
 			<br /> Attached you can find the project charter. The project charter is also stored on your desktop. <br /> Good Luck! <br /> Kind regards, <br /> Thomas </content>
 		<attachment href="Concrete_Machinery_Info.pdf">Concrete_Machinery_Info.pdf</attachment>
-		<nextevent href="l000e001" />
+		<nextevent href="l000e002" />
 	</event>
-	<event level="0" element="0" id="l000e001" eventtype="1" imcost="+21" imqual="+21" imtime="+21" loc="">
+	<event level="0" element="0" id="l000e002" eventtype="1" imcost="+21" imqual="+21" imtime="+21" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-01-01 09:21:00</date>
@@ -28,10 +36,43 @@
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
-		<content>Hello %prename%, good to talk to you! Did you already receive my e-mails with the basic information about CRM? I hope you had a good flight and I am glad that you accepted this job offer. We chose you because of your long-term international project experience. This is a huge project for our company. This is why you have to put all efforts into bringing it to a successful end. You will find out about all the necessary details as soon as you arrive at the client's site in Houston. The customer's project manager, Miss Oaks, will pick you up at the airport. I wish you all the best for the project. I don't think that I have to remind you of this project's importance and that it is also a huge opportunity for you and your career. So, don't disappoint me! </content>
-		<option href="l002e000">Next</option>
+		<content>Hello %prename%, good to talk to you! I am glad that you accepted this job offer. In preparation for our project, I sent you two emails with the basic information about CRM, project management and Concrete Machinery. Please read them in advance and make sure you understand them. This is very important for a good project start. Please call me back, as soon as you read the emails. </content>
+		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
 	</event>
+	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0" imqual="0" imtime="0" loc="1">
+		<content>You are calling back Thomas Zimmermann as agreed…</content>
+		<bgimg>loc3a.png</bgimg>
+		<nextevent href="l001e001" />
+	</event>
+	<event level="1" element="0" id="l001e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
+		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
+		<date>2014-01-01 17:21:34</date>
+		<title>Welcome</title>
+		<content>Hello %prename%, thanks for calling me back. Do you have any questions about the emails I sent you?</content>
+		<option href="l001e002">No, I feel well prepared for the project. Thank you for asking.</option>
+		<option href="l001e003">Yes, indeed, I didn’t really understand the files and videos you sent me.</option>
+		<bgimg>role1pic9.png</bgimg>
+	</event>
+	<event level="1" element="0" id="l001e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
+		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
+		<date>2014-01-01 17:21:34</date>
+		<title>Welcome</title>
+		<content>That is good to hear, I am sure you will do a great job.  We chose you because of your long-term international project experience. This is a huge project for our company. This is why you have to put all efforts into bringing it to a successful end. You will find out about all the necessary details as soon as you arrive at the client's site in Houston. I wish you all the best for the project. I don't think that I have to remind you of this project's importance and that it is also a huge opportunity for you and your career. So, don't disappoint me! The customer's project manager, Miss Oaks, will pick you up at the airport. Have a good flight!</content>
+		<option href="l002e000"> Hang up phone </option>
+		<bgimg>role1pic9.png</bgimg>
+	</event>
+	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0" imqual="-5" imtime="0" loc="1">
+		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
+		<date>2014-01-01 17:21:34</date>
+		<title>Welcome</title>
+		<content>Are you sure you really read them? Please do whatever is needed to understand the documents before your arrival. I hope I won’t regret my decision for you as our project manager. This is a huge project for our company. This is why you have to put all efforts into bringing it to a successful end. You will find out about all the necessary details as soon as you arrive at the client's site in Houston. The customer's project manager, Miss Oaks, will pick you up at the airport. I wish you all the best for the project. I don't think that I have to remind you of this project's importance and that it is also a huge opportunity for you and your career. So, don't disappoint me!</content>
+		<option href="l002e000"> Hang up phone </option>
+		<bgimg>role1pic9.png</bgimg>
+	</event>
+	
+	<!-- Flugbilder -->
+	
 	<event level="2" element="0" id="l002e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 09:21:34</date>
@@ -133,7 +174,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
-		<content>You may connect your computer to our network. I have already sent you an e-mail containing the project charter. </content>
+		<content>You may connect your computer to our network. I have already sent you an email containing the project charter. </content>
 		<option href="l011e000">Next</option>
 		<bgimg>loc3a.png</bgimg>
 	</event>
@@ -141,7 +182,7 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
-		<content>You may connect your computer to our network. I have already sent you an e-mail containing the project charter. </content>
+		<content>You may connect your computer to our network. I have already sent you an email containing the project charter. </content>
 		<option href="l011e001">Next</option>
 		<bgimg>loc3a.png</bgimg>
 	</event>
@@ -254,7 +295,7 @@
 		<subject>Important! Risk Analysis</subject>
 		<content> Dear %prename%, <br /> did you already think about the project management tools? For example, the risk analysis is very important for this project and needs to be done as quickly as possible! <br /> Keep in mind how the risk matrix is arranged – Please find attached an example. <br />
 			<br />
-			<br /> Please perform the risk analysis and check your e-mails afterwards. <br />
+			<br /> Please perform the risk analysis and check your emails afterwards. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="GenericMatrix.pdf">Example of a generic risk matrix </attachment>
@@ -736,7 +777,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-02-18 13:17:52</date>
 		<subject>Project schedule</subject>
-		<content> Dear %prename%, <br /> I have prepared the project schedule with MS Project. Please find attached the corresponding file. If you cannot open the file, you have to download the MS Project software. I will send you a second e-mail with further instructions. <br /> Kind regards, <br /> Priya </content>
+		<content> Dear %prename%, <br /> I have prepared the project schedule with MS Project. Please find attached the corresponding file. If you cannot open the file, you have to download the MS Project software. I will send you a second email with further instructions. <br /> Kind regards, <br /> Priya </content>
 		<attachment href="BrillianCRM_Project_chart.mpp">Project schedule</attachment>
 		<nextevent href="l293e000" />
 	</event>
@@ -1045,7 +1086,7 @@
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
 			<br /> Hope you are doing well? <br />
-			<br /> I have followed up on your e-mail with our Indian colleagues. Seems like things are a little bit out of hand. It appears that our colleagues are significantly behind schedule. <br /> I propose the following action to fix this problem: <br />
+			<br /> I have followed up on your email with our Indian colleagues. Seems like things are a little bit out of hand. It appears that our colleagues are significantly behind schedule. <br /> I propose the following action to fix this problem: <br />
 		</content>
 		<option href="l317e000">Our Indian colleagues will work overtime to fix the problem. Obviously without additional compensation – they created the problem, they should fix it. </option>
 		<option href="l315e000">We will hire additional staff. I will follow up with a proposition later today. </option>
@@ -1062,7 +1103,7 @@
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
 			<br /> Hope you are doing well? <br />
-			<br /> I have followed up on your e-mail with our Indian colleagues. Seems like things are a little bit out of hand. As you know, our colleagues in India worked overtime to fix a problem with their schedule. Unfortunately, this measure backfired and quality has suffered: <br /> * The system crashes frequently <br /> * Not all required data fields have been implemented <br />
+			<br /> I have followed up on your email with our Indian colleagues. Seems like things are a little bit out of hand. As you know, our colleagues in India worked overtime to fix a problem with their schedule. Unfortunately, this measure backfired and quality has suffered: <br /> * The system crashes frequently <br /> * Not all required data fields have been implemented <br />
 			<br /> I propose the following action to fix this problem: <br />
 		</content>
 		<option href="l317e005">We have the know-how needed to deal with these issues in Germany. We will send over experts to solve the issue. </option>
@@ -1080,7 +1121,7 @@
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
 			<br /> Hope you are doing well? <br />
-			<br /> I have followed up on your e-mail with our Indian colleagues. Seems like their work got slightly delayed. As you know, we have hired additional resources in India to counter the delay. <br /> Due to our new situation, I propose the following action: <br />
+			<br /> I have followed up on your email with our Indian colleagues. Seems like their work got slightly delayed. As you know, we have hired additional resources in India to counter the delay. <br /> Due to our new situation, I propose the following action: <br />
 		</content>
 		<option href="l317e008">Let’s further increase our Indian team. The situation has already improved since hiring the new colleagues and can be improved further! </option>
 		<option href="l315e001">Maybe you, Mrs. Eberle and I can come to an agreement to reduce the project scope. We could then meet the schedule. Obviously we would reduce our charges accordingly. </option>
@@ -1097,7 +1138,7 @@
 		<subject>Follow-up on progress in India</subject>
 		<content> Hi Jessica, <br />
 			<br /> Hope you are doing well? <br />
-			<br /> I have followed up on your e-mail with our Indian colleagues. Seems like things are slightly out of hand. Our Indian colleagues had problems meeting the schedule, so we sent over experts from Germany. We are back on schedule now, but the cost of sending our experts on assignment was significant. <br />
+			<br /> I have followed up on your email with our Indian colleagues. Seems like things are slightly out of hand. Our Indian colleagues had problems meeting the schedule, so we sent over experts from Germany. We are back on schedule now, but the cost of sending our experts on assignment was significant. <br />
 			<br /> I propose the following action: <br />
 		</content>
 		<option href="l317e011">Let’s remove our German colleagues from the project again. The time problems are fixed for now and we do not want further cost increases. </option>
@@ -1122,7 +1163,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Can you please propose modules that might be taken out of scope for this release? <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1135,7 +1176,7 @@
 		<date>2014-06-10 16:12:27</date>
 		<subject>Changes in Scope</subject>
 		<content> Hi Jessica, <br />
-			<br /> Thank you for your e-mail. I suggest to take the following modules out of scope for now: <br />
+			<br /> Thank you for your email. I suggest to take the following modules out of scope for now: <br />
 		</content>
 		<option href="l317e004">Customer rating in form of ABC-Analysis </option>
 		<option href="l317e004">Social Network Integration </option>
@@ -1151,7 +1192,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1164,7 +1205,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1177,7 +1218,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1190,7 +1231,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1203,7 +1244,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1216,7 +1257,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1229,7 +1270,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1242,7 +1283,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1255,7 +1296,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1268,7 +1309,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1281,7 +1322,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1294,7 +1335,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1307,7 +1348,7 @@
 		<date>2014-06-10 14:12:27</date>
 		<subject>Re: Follow-up on progress in India</subject>
 		<content> Hi %prename%, <br />
-			<br /> Thank you for your e-mail. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
+			<br /> Thank you for your email. I was surprised to hear that things developed this fast, but I’m glad you already came up with a back-up plan. <br />
 			<br /> I agree to your suggestion. Please take all necessary steps. <br />
 			<br /> Best regards, <br /> Jessica </content>
 		<attachment />
@@ -1339,7 +1380,7 @@
 		<subject>Re: Feedback on current status</subject>
 		<date>2014-08-25 17:21:34</date>
 		<content> Hello Mr. Gupta <br />
-			<br /> Thanks for your e-mail. </content>
+			<br /> Thanks for your email. </content>
 		<option href="l800e001"> It is good to hear that testing is about to be finished and did not show any basic problems. Excuse my short answer, but I am in a hurry. We will talk soon. <br />
 			<br /> Kind regards, <br /> %prename% %surname% </option>
 		<option href="l800e002"> It is good to hear that testing runs well and is about to be finished. You did a really good job! However we need to work on the issues you mentioned. It is highly important that the invoicing functions seamlessly. My assistant will call you soon to discuss the issue so that we can find a solution quickly. <br />
@@ -1459,7 +1500,7 @@
 		<content> Hello %gender% %surname%, <br />
 			<br /> hope everything is going well on your side. <br />
 			<br /> I know you have to be in the steering committee meeting in a couple of minutes but I’m afraid I come to you with a very urgent topic. There is a change in plan. The prototype development will be executed earlier than planned. That mean we need our new CRM database up and running by the end of next week. <br />
-			<br /> Please contact our CTO via e-mail, he has to give the green light to the database guys, otherwise they won’t set it up. <br />
+			<br /> Please contact our CTO via email, he has to give the green light to the database guys, otherwise they won’t set it up. <br />
 			<br /> Be quick, it’s his last day before he goes on vacation! <br />
 			<br /> Kind regards, <br />
 			<br /> Thomas <br />
