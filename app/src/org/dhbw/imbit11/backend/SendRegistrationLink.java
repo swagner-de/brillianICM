@@ -58,13 +58,20 @@ import javax.servlet.annotation.WebServlet;
 		String link = request.getParameter("link");
 		String toMail = request.getParameter("email");
 		String username = (String) request.getAttribute("username");		
-		//Test Email mit HTML tags
-		String content = "<b>Hello new Project Manager</b></br>Please use the following link to register to your course: " + link + "</b>Greetings, </b>" +
-					"your brillianCRM admin \n\n\n <i>This is an automated email</i>. <h2>Please do not reply.</h2>";
+		//***Test Email mit HTML tags -> tags would need to be escaped
+		//String content="<table cellspacing='0' style='width: 570.0px;'>"
+		//+"<tr><td style='padding: 15.0px; background-color: #c1d3f6; font-family: arial; font-size: 14.5px; font-weight: bold;'>brillianCRM registration link</td></tr>"
+		//+"<tr><td style='padding: 14.0px; font-family: arial; font-size: 14.0px;'>"
+		//+"<div>Dear project manager,<br><br>"
+		//+"welcome to brillianCRM, the serious game for project management. This game is designed by students, for students. Please <a href='" + link + "' style='color:#6699ff; text-decoration:none'>click here</a> and register to your course.<br><br>"
+		//+"With best regards,<br><br>"
+		//+"the brillianCRM team<br><br>"
+		//+"<p style='font-size: 12.0px; color:#707a8f; font-family: Arial;'>Please notify that this is a system generated email. Please do not reply.</p><br>"
+		//+"<tr><td><hr color='#c1d3f6'></td></tr></table>";
 		
-		//***Folgender String ist die urspruengliche Email ohne Verwendung von HTML
-		//String content = "Please use the following link to register to your course: " + link + "\n\nGreetings, \n" +
-		//"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
+		//***Original Email without using HTML
+		String content = "Dear project manager, \n\n please use the following link to register to your course: " + link + "\n\n With best regards, \n" +
+		"your brillianCRM team \n\n\n Please notify that this is a system generated email. Please do not reply.";
 		
 		//send the mail
 		MailClient mailclient = new MailClient();

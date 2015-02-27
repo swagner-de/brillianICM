@@ -7,13 +7,17 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebServlet;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 
 @WebServlet({"/ResetPassword"})
 
 /**
  * Class is invoked when user wants to update or reset his password
- * 
  * @author Mary
  *
  */
@@ -24,12 +28,9 @@ import javax.servlet.annotation.WebServlet;
     * (not in use for this class)
     * Invokes the doPost method to answer to a request of a client, that is handled
 	* in the doPost method
-	* 
 	* @param request - contains the request of a client
 	* @param response - contains the response of the servlet
-	* 
-	* @throws ServletException - throws exception when servlet encounters difficulties
-	* @throws IOException - signals that an IO exception occured
+	* @exception IOException - signals that an IO exception occured
     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -45,12 +46,9 @@ import javax.servlet.annotation.WebServlet;
 	 * and sent to the user with the message that it was successful saved to the request
 	 * Request and response is sent to the view of the fitting URL
 	 * If repeated password does not equal the password: request gives out an error message
-	 * 
 	 * @param request - contains the request of a client (updated password)
 	 * @param response - contains the response of the servlet (success/ error)
-	 * 
-	 * @throws ServletException - throws exception when servlet encounters difficulties
-	 * @throws IOException - signals that an IO exception occured and gives out line of code
+	 * @exception IOException - signals that an IO exception occured and gives out line of code
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
@@ -71,23 +69,48 @@ import javax.servlet.annotation.WebServlet;
 				url="/Student";
 			}
 			
+			String oldpassword = request.getParameter("oldpassword");
 			String email= request.getParameter("username");
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
-
+			
+			// UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
+			
+			/* try {
+				Subject subject = SecurityUtils.getSubject();
+				subject.login(token);
+				token.clear(); */
+			try {	
 			if(password.equals(password_repeat)){
 				PasswordEncryptor pe = new PasswordEncryptor();
 				String hashedPassword = pe.hashPassword(password);
 				UserRealm realm = new UserRealm();
 				try{
 					realm.updatePassword(email, hashedPassword);
+					request.setAttribute("status", "Password changed.");
+					   if (subject != null) {
+				        	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
+				            subject.logout();
+				        }
+					   	/* 
+				        HttpSession session = request.getSession(false);
+				        if( session != null ) {
+				            session.invalidate();
+				        }  */       
 				}catch(SQLException e){
 					//System.out.println("password update failed!");
 					e.printStackTrace();
+					request.setAttribute("error", "DB Connection failed");
 				}
 			}else{
-				request.setAttribute("status", "Repeated password does not match.");
+				request.setAttribute("error", "Repeated password does not match.");
 			}
+			}  catch (IncorrectCredentialsException ex) {
+				// password provided did not match password found in database
+				// for the Username which is trying to do the password change
+				ex.printStackTrace();
+				request.setAttribute("error", "Login failed! Wrong old Password!");
+			} 
 		}else{
 		
 			String email = request.getParameter("username");
@@ -111,7 +134,7 @@ import javax.servlet.annotation.WebServlet;
 				+ temporaryPassword + ". You can change this after you logged in. \n\nGreetings, \n" +
 					"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
 		MailClient mailclient = new MailClient();
-		mailclient.sendMail(email, "Password Reset", content, request);
+		mailclient.sendMail(email, "Password Reset", content);
 		}
 		request.setAttribute("status", "Email was sent.");
 	     // forward the request and response to the view

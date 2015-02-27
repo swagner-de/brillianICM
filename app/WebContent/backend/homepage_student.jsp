@@ -48,23 +48,25 @@
 	<div class="studentHomepageContainer">
 			<div>
 				<h4>Change Password.</h4>
+					<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
-					<input type="text" name="role" maxlength="50" value="student" style="display: none"/>
-					<div class="formlabel">Old Password:</div>
-					<input type="password" id="oldpassword" name="oldpassword" maxlength="50"/><br /><br />
+					<input type="text" name="role" maxlength="50" value="student" style="display: none"/><br /><br />
 					<!--  Password check -->
+					<div class="formLabel">Old Password:</div>
+					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
 					<div class="formLabel">Password:</div>
 					<input type="password" name="password" maxlength="50"/><br /><br />
 					<div class="formLabel">Repeat Password:</div>
 					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton studentButton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
 			</div>
 			<!-- For now only intended for development -->
 			<div>
 				<h4>Jump to Level.</h4>
+							<p style="color: red; padding-left: 32px;">${progresserror}</p>
 				<form action="SetUserProgress" method="post">
 					<div class="formLabel">Unique Level ID (Format: lxxxexxx):</div>
 					<input type="text" name="lvlId" maxlength="8" value=""/>
@@ -77,7 +79,7 @@
 		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 		</div>
 	</div>
-	
+
 			
 	
 
@@ -86,6 +88,14 @@
 	$('#imprint').bind('click', function() {
 		showImprint();
 	});
+	function confirmPasswordChange()
+	{
+		var box = window.confirm("Click OK if you want to change password. You will be logged out. ");
+		if(box)
+		{
+			$('#updatePassword').trigger('click');
+		}
+	}
 </script>
 </body>
 </html>

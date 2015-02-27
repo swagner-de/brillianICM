@@ -29,10 +29,10 @@
 
 
 	<div class="center" data-options="region:'center'">
-<h3>Welcome to The Login Page</h3>
+<h3>Reset your password</h3>
 
 <form action="ResetPassword" method="post">
-If you forgot your password, you can reset it here and we will send you an email containing a temporary password.<br/>
+If you forgot your password, you can reset it here. We will send you an email containing a temporary password. You can use this password to login afterwards. <br/>
  Email address: <input type="text" name="username" maxlength="50" />
  <br/>
    <input id="resetPassword" type="submit" value="Reset my password" style="display:none"></input>

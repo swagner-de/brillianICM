@@ -83,45 +83,47 @@
 				%>
 			</tbody>
 		</table>
-		<br /><br />
-		<div>
-			<h4>New Lecturer</h4>
-			<form action="CreateUser" method="post">
-				<input type="text" name="role" maxlength="50" value="professor" style="display: none"/>				
-				<div class="formLabel">title</div>
-				<select name="gender" id="gender" size="1" required>
-					<option value="" disabled="disabled" selected="selected">Please select</option>
-					<option value="m">Mr.</option>
-					<option value="f">Mrs.</option>
-				</select><br /><br />
-				<div class="formLabel">first name</div>
-				<input type="text" name="firstname" maxlength="50" value="${firstname}" required /><br /><br />
-				<div class="formLabel">last name</div>
-				<input type="text" name="lastname" maxlength="50" value="${lastname}" required/><br /><br />
-				<div class="formLabel">email</div>
-				<input type="email" name="email" maxlength="50" value="${email}" required/><br /><br />
-				<div class="formLabel">password</div>
-				<input type="password" name="password" maxlength="50" required/><br /><br />
-				<div class="formLabel">repeat password</div>
-				<input type="password" name="password_repeat" maxlength="50" required /><br /><br />
-				<input id="createUser" type="submit" value="Create now!" hidden="hidden"></input>
-				<a class="easyui-linkbutton" onclick="$('#createUser').trigger('click')">Create Lecturer</a>
-				<p style="color: green">${success}</p>
-				<p style="color: red">${error}</p>
-			</form>
-		</div>
-		<div>
-			<h4>Change Password.</h4>
-			<form action="ResetPassword" method="post">				
-				<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
-				<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
-				<div class="formLabel">Password:</div>
-				<input type="password" name="password" maxlength="50"/><br /><br />
-				<div class="formLabel">Repeat Password:</div>
-				<input type="password" name="password_repeat" maxlength="50" /><br /><br />
-				<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-				<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
-			</form>
+		<br/>
+		<div style="height: 410px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">
+			<div style="width: 300px; float: left;">
+				<h4>New Lecturer</h4>
+				<form action="CreateUser" method="post">
+					<input type="text" name="role" maxlength="50" value="professor" style="display: none"/>				
+					<div class="formLabel">title</div>
+					<select name="gender" id="gender" size="1" required>
+						<option value="" disabled="disabled" selected="selected">Please select</option>
+						<option value="m">Mr.</option>
+						<option value="f">Mrs.</option>
+					</select><br /><br />
+					<div class="formLabel">first name</div>
+					<input type="text" name="firstname" maxlength="50" value="${firstname}" required /><br /><br />
+					<div class="formLabel">last name</div>
+					<input type="text" name="lastname" maxlength="50" value="${lastname}" required/><br /><br />
+					<div class="formLabel">email</div>
+					<input type="email" name="email" maxlength="50" value="${email}" required/><br /><br />
+					<div class="formLabel">password</div>
+					<input type="password" name="password" maxlength="50" required/><br /><br />
+					<div class="formLabel">repeat password</div>
+					<input type="password" name="password_repeat" maxlength="50" required /><br /><br />
+					<input id="createUser" type="submit" value="Create now!" hidden="hidden"></input>
+					<a class="easyui-linkbutton" onclick="$('#createUser').trigger('click')">Create Lecturer</a>
+					<p style="color: green">${success}</p>
+					<p style="color: red">${error}</p>
+				</form>
+			</div>
+			<div style="margin-left: 320px;">
+				<h4>Change Password.</h4>
+				<form action="ResetPassword" method="post">				
+					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
+					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
+					<div class="formLabel">Password:</div>
+					<input type="password" name="password" maxlength="50"/><br /><br />
+					<div class="formLabel">Repeat Password:</div>
+					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
+					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
+					<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+				</form>
+			</div>
 		</div>
 		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 	</div>
