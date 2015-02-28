@@ -42,8 +42,7 @@
 		
 		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
 		if (firstFlag == false){			
-		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe n�chste Zeile workaround - kein chinesiches Zeichen hier m�glich
-	   		$('.welcome').text('Welcome to brillanCRM!');
+			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
 				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
 				setLevelImage(level);
