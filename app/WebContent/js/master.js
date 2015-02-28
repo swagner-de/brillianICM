@@ -446,7 +446,7 @@ function loadMatrixAllocation () {
 	
 	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptors = container.find('.tileAcceptor');
-	var continueButton = $('#continueButton');
+	var continueButtonMatrix = $('#continueButtonMatrix');
 	//Enthält zuzuordnende tiles
 	var draggableTilesContainer = $('.draggableTilesContainer');
 
@@ -455,7 +455,6 @@ function loadMatrixAllocation () {
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
-		alert(rank);
 		var itemDescription = $(this).attr('fdesc');	
 		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
 	});
@@ -469,8 +468,8 @@ function loadMatrixAllocation () {
 	//	phaseTitleContainer.eq(index).text($(this).html());
 	//});
 	
-	continueButton.unbind('click');
-	continueButton.bind('click', function(){
+	continueButtonMatrix.unbind('click');
+	continueButtonMatrix.bind('click', function(){
 		$('.tileAcceptor').css('background-color', '');
 		var correct = true;
 		var allDragged = true;
@@ -480,8 +479,8 @@ function loadMatrixAllocation () {
 		//mit dem rank "1"
 		$('.tileAcceptor').each(function(index) {
 			var correctTileRank = index;
-			if ($(this).find('.dragTile').attr('data-rank') != null){
-				var actualTileRank = $(this).find('.dragTile').attr('data-rank');
+			if ($(this).find('.dragTile').attr('rank') != null){
+				var actualTileRank = $(this).find('.dragTile').attr('rank');
 				if (actualTileRank != correctTileRank){
 					correct = false;
 					$(this).addClass('dragIncorrect');

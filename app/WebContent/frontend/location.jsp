@@ -80,7 +80,7 @@
 	    <div style="clear: both;"></div>
 	    
 	    <div class="buttonContainer">
-	    	<div id="continueButton" class="easyui-linkbutton allocationButton"><%=ApplicationConstants.ALLOCATION_BUTTON%></div>
+	    	<div id="continueButtonMatrix" class="easyui-linkbutton allocationButton"><%=ApplicationConstants.ALLOCATION_BUTTON%></div>
 	    </div>
 	</div>
 </div>
