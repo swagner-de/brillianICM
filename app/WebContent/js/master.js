@@ -65,8 +65,7 @@
 				saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
 			}
 		}
-		
-		//Highlights Mail Button upon arrival of a New Mail
+		/* Highlights Mail Button upon arrival of an unread Mail (1) or  when User has to write a New Mail (2) as next task */
 		if(eventtype == '1' || eventtype == '2'){
 			addHighlightMail();
 		}
@@ -152,7 +151,10 @@
 					
 				};
 			}			
-			
+			/* If the location changes, showLocation() is executed.
+			* Except for: User changing from Meeting Room to Office and vice versa.
+			* @author Laluz
+			*/
 			mainLocationButton.linkbutton({
 			    onClick: function(){
 			    	showLocation ($(this).attr('id'));			
@@ -183,7 +185,7 @@
 	});	
 }
 
-// Lädt Mails vollständig herunter
+// Writes the specified email into the GUI
 function loadMail (from, to, date, subject, content, attachment, attachmentHref) {
 	var tag = 'Mail';
 	
@@ -215,7 +217,7 @@ function loadMail (from, to, date, subject, content, attachment, attachmentHref)
 	}
 }
 
-//Herunterladen der neuen MailDraft
+// Opens the email draft matching the current element of the XML and writes it into the GUI
 function loadMailDraft () {
 	var window = $('.mainEventContainerLaptop');
 	//MailDraft Event Values from XML
@@ -252,7 +254,7 @@ function loadMailDraft () {
 	});	
 }
 
-//Herunterladen des neuen Dialogs
+// Loading a dialog style event from the XML to perpare its content for display
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
