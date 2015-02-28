@@ -6,9 +6,7 @@
 		var str2 = '</events>';
 		xml = str1 + xml + str2;
 		
-		/* Replaces Prename, Surname and Gender of the User
-		 * @author Laluz
-		 */
+		//Replace Variables
 		xml = xml.replace(/%prename%/g, gameData.firstName);
 		xml = xml.replace(/%surname%/g, gameData.lastName);
 		xml = xml.replace(/%gender%/g, gameData.address);
@@ -16,9 +14,7 @@
 		//Create Jquery XML Element
 		$xml = $(xml);
 		
-		/* Asks for general XML Event Variables
-		 * @author Laluz
-		 */
+		//General XML Event Variables
 		var id = $xml.find('event').attr('id');
 		var eventtype = $xml.find('event').attr('eventtype');
 		var loc = $xml.find('event').attr('loc');
@@ -28,9 +24,7 @@
 		var mainLocationButton = $('.mainLocationButton');
 		var eventContainer = $('.mainEventContainerLaptop');
 		
-		/* Anzeige der Elemente auf der rechten Seite je nach Level
-		 * @author Laluz
-		*/
+		// Anzeige der Elemente auf der rechten Seite je nach Level
 		if(level >= 12){
 			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
 			$('.projektCharterButton').show();
@@ -46,11 +40,10 @@
 			$('.ganttButton').show();
 		}
 		
-		/*Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
-		 * @author Laluz
-		*/
+		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
 		if (firstFlag == false){			
-			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
+		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe n�chste Zeile workaround - kein chinesiches Zeichen hier m�glich
+	   		$('.welcome').text('Welcome to brillanCRM!');
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
 				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
 				setLevelImage(level);
@@ -61,9 +54,7 @@
 			var imcost = $xml.find('event').attr('imcost');
 			var imqual = $xml.find('event').attr('imqual');
 			
-			/* Update of Time Cost Quality Values
-			 * @author Laluz
-			 */
+			//Update der Time Cost Quality Werte
 			updateTCQValues(imtime, imcost, imqual);
 			
 			//Füge die neue Id zum GamePath hinzu
@@ -76,33 +67,22 @@
 			}
 		}
 		
-		/*Highlights Mail Button upon arrival of an unread Mail or 
-		* when User has to write a New Mail as next task
-		* @author Laluz
-		*/
+		//Highlights Mail Button upon arrival of a New Mail
 		if(eventtype == '1' || eventtype == '2'){
 			addHighlightMail();
 		}
-		
-		/* Pushes unread Mails to Inbox
-		* @author Laluz
-		*/
 		if(eventtype == '1'){
 			unreadMails.push(id);
 		}
 				
-		/* Shows the 'New Mail' button only when a MailDraft-Event happens
-		* @author Laluz
-		*/
+		//Show the 'New Mail' button only when a MailDraft-Event happens
 		newMailDisabled = true;
 		if(eventtype == 2){
 			newMailDisabled = false;
 			addHighlightMailNew();
 		}
 		
-		/* Disable 'New Mail' Button
-		 * * @author Laluz
-		 */
+		//Disable 'New Mail' Button
 		try{
 			tabsContainer.tabs({
 				tools:[{
@@ -145,6 +125,7 @@
 			showNotification();
 		}else{
 			//Wenn das neue Event an einer anderen Location stattfindet bzw. das Event kein Dialog, keine Auswahl und keine Zuordnung ist			
+			
 			if(id != lastEvent){
 				$('.mainLocationButton').linkbutton('enable');
 			}
@@ -173,17 +154,12 @@
 				};
 			}			
 			
-			/* If the location changes, showLocation() is executed.
-			 * Except for: User changing from Meeting Room to Office and vice versa.
-			 * @author Laluz
-			 */
 			mainLocationButton.linkbutton({
 			    onClick: function(){
 			    	showLocation ($(this).attr('id'));			
 			    }
 			});
 
-			// Immer wenn der User auf den mainMailButton klickt, wird showLaptop ausgeführt
 			$('.mainMailButton').linkbutton({
 				onClick: function(){
 					showLaptop();
@@ -208,9 +184,7 @@
 	});	
 }
 
-/* Lädt Mails vollständig herunter
-* @author Laluz
-*/
+// Lädt Mails vollständig herunter
 function loadMail (from, to, date, subject, content, attachment, attachmentHref) {
 	var tag = 'Mail';
 	
@@ -242,9 +216,7 @@ function loadMail (from, to, date, subject, content, attachment, attachmentHref)
 	}
 }
 
-/* Load new MailDraft and disable other buttons
- * @author Laluz
- */
+//Herunterladen der neuen MailDraft
 function loadMailDraft () {
 	var window = $('.mainEventContainerLaptop');
 	//MailDraft Event Values from XML
@@ -281,16 +253,14 @@ function loadMailDraft () {
 	});	
 }
 
-/*Herunterladen des neuen Dialogs
- * @author Laluz
- */
+//Herunterladen des neuen Dialogs
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
 	var background = $xml.find('bgimg').text();
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
-	// Lade den Dialog Hintergrund
+	//Lade den Dialog Hintergrund
 	var backgroundPictureWithPartnerUrl = 'images/' + background;
 	setDialogBackground(backgroundPictureWithPartnerUrl);
 		
@@ -471,9 +441,6 @@ function fancyImageLoading(imageUrl, element){
 	img[0].src = imageUrl;
 }
 
-/* Shows taxi, DHBW building etc. screens when User changes his location
- * @author Laluz
- */
 function showLocation (buttonId) {			
 	var tag = 'Location';
 	var container = $('.mainEventContainer');
@@ -504,64 +471,29 @@ function showLocation (buttonId) {
 			audioElement.setAttribute('src', 'audio/location.mp3');
 			audioElement.play();	
 			
-			/* Filter for showing images due to location change
-			 * @author Laluz
-			 */
-			if (locOld != loc) {
-	    		if (locOld == "3" && loc == "4" || locOld == "4" && loc == "3") {
-	    			
-	    			if(buttonId == loc){
-						if(eventtype == '3'){
-							loadDialog();		
-						}else if (eventtype == '4' || eventtype == '5'){								
-							loadSelection();
-						}else if (eventtype == '6' || eventtype == '7'){
-							loadAllocation();							
-						}else if (eventtype == '13'){
-							showNotification();							
-						}
-					}else{
-						$('.mainLocationButton').linkbutton('enable');
-						container.window({modal:false});
-					}
-	    			
-	    		} else {
-	    			
-	    			/* Possibility to add a filter in order to disable audio file.
-	    			 * @author Laluz
-	    			 */
-	    			var audioElement = document.createElement('audio');	
-	    			audioElement.setAttribute('src', 'audio/location.mp3');
-	    			audioElement.play();
-	    			
-	    			/* Loads background images in a row and finally loads Dialog or alike. 
-	    			 * @author Laluz
-	    			 */
-	    			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
-	    			setTimeout(function(){
-	    				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
-	    				setTimeout(function(){
-	    					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
-	    					setTimeout(function(){
-	    						if(buttonId == loc){
-	    							if(eventtype == '3'){
-	    								loadDialog();		
-	    							}else if (eventtype == '4' || eventtype == '5'){								
-	    								loadSelection();
-	    							}else if (eventtype == '6' || eventtype == '7'){
-	    								loadAllocation();							
-	    							}else if (eventtype == '13'){
-	    								showNotification();							
-	    							}
-	    						}else{
-	    							$('.mainLocationButton').linkbutton('enable');
-	    							container.window({modal:false});
-	    						}						
-	    					},1500);					
-	    				},1500);
-	    			},1500);
-	    		}        
-	    	}				
+			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
+			setTimeout(function(){
+				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
+				setTimeout(function(){
+					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+					setTimeout(function(){
+						if(buttonId == loc){
+							if(eventtype == '3'){
+								loadDialog();		
+							}else if (eventtype == '4' || eventtype == '5'){								
+								loadSelection();
+							}else if (eventtype == '6' || eventtype == '7'){
+								loadAllocation();							
+							}else if (eventtype == '13'){
+								showNotification();							
+							}
+						}else{
+							$('.mainLocationButton').linkbutton('enable');
+							container.window({modal:false});
+						}						
+					},1500);					
+				},1500);
+			},1500);			
 		}
 	});
 }
