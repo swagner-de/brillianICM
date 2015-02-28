@@ -6,7 +6,7 @@
 		var str2 = '</events>';
 		xml = str1 + xml + str2;
 		
-		//Replace Variables
+		/* Replaces Prename, Surname and Gender of the User */
 		xml = xml.replace(/%prename%/g, gameData.firstName);
 		xml = xml.replace(/%surname%/g, gameData.lastName);
 		xml = xml.replace(/%gender%/g, gameData.address);
@@ -24,7 +24,7 @@
 		var mainLocationButton = $('.mainLocationButton');
 		var eventContainer = $('.mainEventContainerLaptop');
 		
-		// Anzeige der Elemente auf der rechten Seite je nach Level
+		// Display the elements on the right side pane based on the level
 		if(level >= 12){
 			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
 			$('.projektCharterButton').show();
