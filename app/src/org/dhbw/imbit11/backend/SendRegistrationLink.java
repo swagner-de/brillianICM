@@ -29,6 +29,7 @@ import javax.servlet.annotation.WebServlet;
     * @exception IOException - throws exception when IO error occured
     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String url="/backend/sendRegistrationLink.jsp";
 		
 		request.setAttribute("link", request.getParameter("link"));
@@ -50,6 +51,7 @@ import javax.servlet.annotation.WebServlet;
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("UTF-8");
 		String url="/backend/sendRegistrationLink.jsp";
 		
 		//get the registration link and the recipient of the email from the JSP
