@@ -341,7 +341,7 @@ function loadAllocation () {
 		var itemInfo = $(this).attr('finfo');
 		var itemDescription = $(this).attr('fdesc');
 		var itemRank = $(this).attr('rank');	
-		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
+		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '"data-rank="' + itemRank + '">' + itemText + '</div>');
 	});
 	
 	var draggableItem = container.find('.drag');
@@ -456,7 +456,7 @@ function loadMatrixAllocation () {
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
 		var itemDescription = $(this).attr('fdesc');	
-		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '"rank="' + itemRank + '">' + itemText + '</div>');
 	});
 	
 	//Auswahl aller Tiles die beweglich sind
@@ -478,18 +478,22 @@ function loadMatrixAllocation () {
 		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
 		//mit dem rank "1"
 		$('.tileAcceptor').each(function(index) {
-			var correctTileRank = index;
+			var correctTileRank = index+1;
 			if ($(this).find('.dragTile').attr('rank') != null){
 				var actualTileRank = $(this).find('.dragTile').attr('rank');
 				if (actualTileRank != correctTileRank){
 					correct = false;
-					$(this).addClass('dragIncorrect');
+					$(this).find('.dragTile').addClass('dragIncorrect');
 				}
 				
 				} else {
-					alert("Please complete the matrix!");
+					// Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					//--> XML überprüfen
+					showMsg("There has a been a problem with the validation!");
 				}
 			});
+		
+		
 
 
 		//Check if all items have been dragged
@@ -504,7 +508,7 @@ function loadMatrixAllocation () {
 				showMsg('Info', 'You have not allocated all elements.'); //For Debugging
 			}
 			if (correct == false){
-			showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
+				showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
 			}					
 		}
 	});	
@@ -525,8 +529,27 @@ function loadMatrixAllocation () {
         }
     });
 	
-	//Drop Funktionalität
+	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
 	tileAcceptors.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+	
+	draggableTilesContainer.droppable({
         accept:'.dragTile',
         onDragEnter:function(e,source){
             $(source).draggable('options').cursor='auto';
