@@ -502,7 +502,7 @@ public class UserRealm extends JdbcRealm {
 	 */
 	public void setUserProgress(String userid, int costs, int quality,
 			int time, String path) throws SQLException {
-		//TODO rename with correc parameter name according to database scheme #402
+		//TODO rename with correct parameter name according to database scheme #402
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
 		try {

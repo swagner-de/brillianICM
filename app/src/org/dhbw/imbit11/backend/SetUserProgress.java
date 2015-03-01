@@ -61,7 +61,6 @@ import org.apache.shiro.subject.Subject;
 		
 		if(subject.hasRole("professor")){
 			
-			
 			//TODO: Validate and catch Integer to String conversion #403
 			String lvlId = request.getParameter("lvlId");
 			String group_id = request.getParameter("group_id");
@@ -71,11 +70,12 @@ import org.apache.shiro.subject.Subject;
 			
 			UserRealm realm = new UserRealm();
 			
-				try{ 
+			try{ 
 				ArrayList<String> users = realm.getUserIdsByGroupId(group_id);
 				for(String userid:users){
-				realm.setUserProgress(userid, cost, quality, time, lvlId);					
+				realm.setUserProgress(userid, cost, quality, time, lvlId);	
 				}
+				request.setAttribute("status", "Progress set.");
 				}
 			catch(SQLException e){
 				e.printStackTrace();

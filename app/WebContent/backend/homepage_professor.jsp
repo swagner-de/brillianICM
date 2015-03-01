@@ -57,11 +57,12 @@
 	</div>
 	<div class="center mainWindow" data-options="region:'center'">
 		<div id="studentsOfProfessor">
-			<div id="groupsOfProfessor">
+			<div id="groupsOfProfessor">			
 				<h1>Groups</h1>
 				Below each group you can see a list of the students that are part of
 				the respective group.<br />
 				<br />
+				<p style="color: blue; padding-left: 32px;">${status}</p>
 				<br />
 				<br />
 				<%
@@ -87,13 +88,15 @@
 													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>Delete</a>");
 											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form></td><td>");
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
+												+"<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"cost\" value=\"50\" style=\"display:none\"/>" 
 												+"<input type=\"text\" name=\"time\" value=\"50\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"quality\" value=\"50\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"lvlId\" value=\"lxxxexxx\"/>"
-												+"<input style=\"display:none\" id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\"/></td><td>"
-												+"<a class= \"easyui-linkbutton\" onclick=\"$('#changeProgess"+i+"').trigger('click')\")>Set Progress</a></td>"
-												+"<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form></td><td>");
+												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\"/></td><td>"
+											//	+"<p style=\"color: blue;\">${status}</p>"
+											//	+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ groups.get(i).get(0) +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
+												);
 											out.println("</td></tr></table> ");
 											
 											//add students table beneath group header
