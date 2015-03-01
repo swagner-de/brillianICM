@@ -565,15 +565,15 @@ div.drag {
 	cursor: pointer !important;
 }
 
-//This class is used for labeling all tiles that will get drag functionality
-//Tiles shall be organized in a tile matrix
+/*This class is used for labeling all tiles that will get drag functionality
+Tiles shall be organized in a tile matrix*/
 
 div.matrixAllocationContainer{
 	text-align: center;
 }
 
 
-//Tile matrix place holders in top row
+/*Tile matrix place holders in top row*/
 div.tileAcceptor {
 	border-width: 1px;
 	width: 150px;
@@ -604,7 +604,7 @@ div.draggableTilesContainer {
 
 
 
-// tiles to be dragged and dropped
+/* tiles to be dragged and dropped*/
 div.dragTile {
 	float: left;
 	width: 150px;
