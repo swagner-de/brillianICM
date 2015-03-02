@@ -341,7 +341,7 @@ function loadAllocation () {
 		var itemInfo = $(this).attr('finfo');
 		var itemDescription = $(this).attr('fdesc');
 		var itemRank = $(this).attr('rank');	
-		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '"data-rank="' + itemRank + '">' + itemText + '</div>');
+		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
 	});
 	
 	var draggableItem = container.find('.drag');
@@ -456,7 +456,7 @@ function loadMatrixAllocation () {
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
 		var itemDescription = $(this).attr('fdesc');	
-		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '"rank="' + itemRank + '">' + itemText + '</div>');
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '">' + itemText + '</div>');
 	});
 	
 	//Auswahl aller Tiles die beweglich sind
