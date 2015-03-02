@@ -29,7 +29,7 @@
 	
 	<h3>Verwendete Frameworks und Icons</h3>
 	<a href = "http://tomcat.apache.org/" target="_blank" >Apache Tomcat</a>, <a href = "http://shiro.apache.org/" target="_blank" >Apache Shiro</a>, <a href = "http://www.mysql.com/" target="_blank" >mySQL</a> <a href = "http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" >inkl. JDBC Adapter</a>,
-	<a href = "http://commons.apache.org/proper/commons-io/" target="_blank" >Apache Commons IO</a>, <a href = "http://jquery.com/" target="_blank" >jQuery</a>, <a href = "http://www.jeasyui.com/" target="_blank" >jQuery EasyUI</a> und <a href = "http://fancybox.net/" target="_blank" >fancybox</a>.
+	<a href = "http://commons.apache.org/proper/commons-io/" target="_blank" >Apache Commons IO</a>, <a href = "http://jquery.com/" target="_blank" >jQuery</a>, <a href = "http://www.jeasyui.com/" target="_blank" >jQuery EasyUI</a> und <a href = "http://fancybox.net/" target="_blank" >fancybox</a> <a href= "https://www.yworks.com/de/products_ydoc.html" target= "_blank">yWorks UML Doclet</a>.
 	Die verwendeten Icons wurden von <a href="http://www.freepik.com" title="Freepik" target="_blank" >Freepik</a> entworfen und k&ouml;nnen von <a href="http://www.flaticon.com" title="Flaticon" target="_blank" >Flaticon</a> kostenlos heruntergeladen werden. In dem Spiel wurden folgende Icons verwendet: <br />
 	<a href="http://www.flaticon.com/free-icon/chart-gantt_31970" target="_blank" title="Flaticon">Chart Gantt</a>, 
 	<a href="http://www.flaticon.com/free-icon/e-mail-envelope-ios-7-interface-symbol_20520" title="Flaticon" target="_blank" >E-mail envelope, IOS7 interface symbol</a>,
