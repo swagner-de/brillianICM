@@ -740,17 +740,17 @@
 		<to>%prename% %surname%</to>
 		<date>2014-02-17 10:21:00</date>
 		<subject>Gantt-diagram</subject>
-		<content>Dear %prename%, <br /> Mr. Zimmerman urgently needs a detailed planning structrue in form of a Gantt-diagram. <br />
+		<content>Dear %prename%, <br /> Mr. Zimmerman urgently needs a detailed planning structure in form of a Gantt-diagram. <br />
 			<br /> I started with some samples which I left on your desk. <br />
 			<br /> Kind regards, <br />Priya Williams </content>
 		<nextevent href="l290e000" />
 	<!-- Theresa: Wahl zwischen verschiedenen eingezeichneten kritischen Pfaden, Bilder neu eingefügt -->	
 	</event>
-	<event level="290" element="0" id="l290e000" eventtype="4" imcost="0" imqual="0" imtime="0" loc="3">
-		<title>Gantt-Diagramm</title>
+	<event level="290" element="0" id="l290e000" eventtype="5" imcost="0" imqual="0" imtime="0" loc="3">
+		<title>Gantt-diagram</title>
 		<description>Which of the following samples shows the correct critical path?</description>
-		<option href="l291e001" img="content8fehler1.png"> Option 1 </option>
-		<option href="l291e002" img="content8richtigerpfad.png"> Option 2 </option>
+		<option href="l291e002" img="content8fehler1.png"> Option 1 </option>
+		<option href="l291e001" img="content8richtigerpfad.png"> Option 2 </option>
 		<option href="l291e002" img="content8fehler2.png"> Option 3 </option>
 	<!-- Theresa: Mail an neues Spiel angepasst -->	
 	</event>
