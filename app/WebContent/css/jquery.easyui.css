@@ -745,7 +745,6 @@ background: transparent;
 .tabs-header,
 .tabs-scroller-left,
 .tabs-scroller-right,
-.tabs-tool,
 .tabs,
 .tabs-panels,
 .tabs li a.tabs-inner,
@@ -753,6 +752,9 @@ background: transparent;
 .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner,
 .tabs-header-left .tabs li.tabs-selected a.tabs-inner,
 .tabs-header-right .tabs li.tabs-selected a.tabs-inner {
+border-color: #707a8f;
+}
+.tabs-tool {
 border-color: #707a8f;
 }
 .tabs-p-tool a:hover,

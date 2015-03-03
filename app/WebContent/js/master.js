@@ -1,4 +1,4 @@
-﻿function getXml(id) {	
+function getXml(id) {	
 	
 	$.get('Event', {id : id, type : 'node'}, function(xml) {
 		//Fix XML
@@ -6,7 +6,7 @@
 		var str2 = '</events>';
 		xml = str1 + xml + str2;
 		
-		//Replace Variables
+		/* Replaces Prename, Surname and Gender of the User */
 		xml = xml.replace(/%prename%/g, gameData.firstName);
 		xml = xml.replace(/%surname%/g, gameData.lastName);
 		xml = xml.replace(/%gender%/g, gameData.address);
@@ -24,7 +24,7 @@
 		var mainLocationButton = $('.mainLocationButton');
 		var eventContainer = $('.mainEventContainerLaptop');
 		
-		// Anzeige der Elemente auf der rechten Seite
+		// Display the elements on the right side pane based on the level
 		if(level >= 12){
 			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
 			$('.projektCharterButton').show();
@@ -40,10 +40,9 @@
 			$('.ganttButton').show();
 		}
 		
-		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt
+		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
 		if (firstFlag == false){			
-		//	$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName); siehe n�chste Zeile workaround - kein chinesiches Zeichen hier m�glich
-	   		$('.welcome').text('Welcome to brillanCRM!');
+			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
 				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
 				setLevelImage(level);
@@ -66,8 +65,7 @@
 				saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
 			}
 		}
-		
-		//Highlights Mail Button upon arrival of a new mail
+		/* Highlights Mail Button upon arrival of an unread Mail (1) or  when User has to write a New Mail (2) as next task */
 		if(eventtype == '1' || eventtype == '2'){
 			addHighlightMail();
 		}
@@ -78,17 +76,18 @@
 		//Show the 'New Mail' button only when a MailDraft-Event happens
 		newMailDisabled = true;
 		if(eventtype == 2){
-			addBlinkerMailNew();
 			newMailDisabled = false;
+			addHighlightMailNew();
 		}
 		
-		//Disable New Button
+		//Disable 'New Mail' Button
 		try{
 			tabsContainer.tabs({
 				tools:[{
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
+						removeHighlightMailNew();
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -105,6 +104,7 @@
 		hideDialog();
 		hideSelection();
 		hideAllocation();
+		hideMatrixAllocation();
 		
 		//Wenn Update Location und kein MailDraft
 		if(locOld == loc && eventtype != '2'){		
@@ -118,6 +118,8 @@
 			loadSelection();		
 		}else if ((eventtype == '6' || eventtype == '7') && locOld == loc){
 			loadAllocation();		
+		}else if (eventtype == '8' && locOld == loc){
+			loadMatrixAllocation();
 		}else if(eventtype == eventtypeOld && eventtype == '2') {
 			loadMailDraft();		
 		}else if(eventtype == '13' && locOld == loc){
@@ -138,7 +140,8 @@
 			if(loc != ''){
 				addHighlight(mainLocationButton, loc);
 			}
-				
+			
+			
 			if(eventtype != eventtypeOld && eventtypeOld == '2'){
 				try{
 					$('.mainLocationButton').linkbutton('enable');
@@ -151,7 +154,10 @@
 					
 				};
 			}			
-			
+			/* If the location changes, showLocation() is executed.
+			* Except for: User changing from Meeting Room to Office and vice versa.
+			* @author Laluz
+			*/
 			mainLocationButton.linkbutton({
 			    onClick: function(){
 			    	showLocation ($(this).attr('id'));			
@@ -170,6 +176,9 @@
 			showLocation('1');	
 		}else if(id == lastEvent){
 			showResult();
+		//Umbenennung des Next Buttons in Accept Job Offer am Spiel Beginn 
+		}else if(id == jobofferEvent){
+			$('#continueButton').html("Accept Job Offer");
 		}
 		
 		//Setzte die Werte für locOld & eventtypeOld - wichtig für logische Überprüfungen im nächsten Durchlauf
@@ -182,6 +191,7 @@
 	});	
 }
 
+// Writes the specified email into the GUI
 function loadMail (from, to, date, subject, content, attachment, attachmentHref) {
 	var tag = 'Mail';
 	
@@ -213,7 +223,7 @@ function loadMail (from, to, date, subject, content, attachment, attachmentHref)
 	}
 }
 
-//Herunterladen der neuen MailDraft
+// Opens the email draft matching the current element of the XML and writes it into the GUI
 function loadMailDraft () {
 	var window = $('.mainEventContainerLaptop');
 	//MailDraft Event Values from XML
@@ -250,7 +260,7 @@ function loadMailDraft () {
 	});	
 }
 
-//Herunterladen des neuen Dialogs
+// Loading a dialog style event from the XML to perpare its content for display
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
@@ -429,6 +439,137 @@ function loadAllocation () {
     });
 }
 
+function loadMatrixAllocation () {
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();	
+	var container = $('.matrixAllocationContainer');
+	var descriptionContainer = container.find('.description');
+	
+	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	var tileAcceptors = container.find('.tileAcceptor');
+	var continueButtonMatrix = $('#continueButtonMatrix');
+	//Enthält zuzuordnende tiles
+	var draggableTilesContainer = $('.draggableTilesContainer');
+
+	$('.dragTile').remove();
+	
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemRank = $(this).attr('rank');
+		var itemDescription = $(this).attr('fdesc');	
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '">' + itemText + '</div>');
+	});
+	
+	//Auswahl aller Tiles die beweglich sind
+	var draggableItems = container.find('.dragTile');
+	descriptionContainer.text(description);
+	
+	//Might be reused to name axes --> Low to High Impact/Priority
+	//$xml.find('column').each(function(index){
+	//	phaseTitleContainer.eq(index).text($(this).html());
+	//});
+	
+	continueButtonMatrix.unbind('click');
+	continueButtonMatrix.bind('click', function(){
+		$('.tileAcceptor').css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
+		//mit dem rank "1"
+		$('.tileAcceptor').each(function(index) {
+			var correctTileRank = index+1;
+			if ($(this).find('.dragTile').attr('rank') != null){
+				var actualTileRank = $(this).find('.dragTile').attr('rank');
+				if (actualTileRank != correctTileRank){
+					correct = false;
+					$(this).find('.dragTile').addClass('dragIncorrect');
+				}
+				
+				} else {
+					// Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					//--> XML überprüfen
+					showMsg("There has a been a problem with the validation!");
+				}
+			});
+		
+		
+
+
+		//Check if all items have been dragged
+		$('.draggableTilesContainer').find('.dragTile').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			container.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements.'); //For Debugging
+			}
+			if (correct == false){
+				showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
+			}					
+		}
+	});	
+	showMatrixAllocation();
+	
+	//Drag Funktionalität
+	draggableItems.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	tileAcceptors.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+	
+	draggableTilesContainer.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+}
+
 function fancyImageLoading(imageUrl, element){
 	var img = new Array();
 	img[0] = new Image();
@@ -460,40 +601,48 @@ function showLocation (buttonId) {
 			hideDialog();
 			hideSelection();
 			hideAllocation();
+			hideMatrixAllocation();
 
 			if(buttonId == loc){
 				removeHighlight(mainLocationButton, loc);
 			}
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
+			//Gotta love that melody!
 			audioElement.play();	
-			
-			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
-			setTimeout(function(){
-				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
-				setTimeout(function(){
-					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
-					setTimeout(function(){
-						if(buttonId == loc){
-							if(eventtype == '3'){
-								loadDialog();		
-							}else if (eventtype == '4' || eventtype == '5'){								
-								loadSelection();
-							}else if (eventtype == '6' || eventtype == '7'){
-								loadAllocation();							
-							}else if (eventtype == '13'){
-								showNotification();							
-							}
-						}else{
-							$('.mainLocationButton').linkbutton('enable');
-							container.window({modal:false});
-						}						
-					},2500);					
-				},2500);
-			},2500);			
+					
+	    			/* Loads background images in a row and finally loads Dialog or alike. 
+	    			 * @author Laluz
+	    			 */
+	    			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
+	    			setTimeout(function(){
+	    				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
+	    				setTimeout(function(){
+	    					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+	    					setTimeout(function(){
+	    						if(buttonId == loc){
+	    							if(eventtype == '3'){
+	    								loadDialog();		
+	    							}else if (eventtype == '4' || eventtype == '5'){								
+	    								loadSelection();
+	    							}else if (eventtype == '6' || eventtype == '7'){
+	    								loadAllocation();	
+	    							}else if (eventtype == '8'){
+	    								loadMatrixAllocation();						
+	    							}else if (eventtype == '13'){
+	    								showNotification();							
+	    							}
+	    						}else{
+	    								$('.mainLocationButton').linkbutton('enable');
+	    								container.window({modal:false});
+	    						}						
+	    					},1500);					
+	    				},1500);
+	    			},1500);
+	    		}        
+	    	});				
 		}
-	});
-}
+
 
 function showLaptop () {
 	var tag = 'Laptop';
@@ -515,6 +664,7 @@ function showLaptop () {
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
+						removeHighlightMailNew();	
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -523,7 +673,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addBlinkerMailNew();
+				addHighlightMailNew();
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -583,7 +733,7 @@ function showLaptop () {
 	});
 }
 
-//Zeigt den Tab NewMail zum Verfassen eines MailDraft an
+//Zeigt den Tab 'New Mail' zum Verfassen eines MailDraft an
 function showNewMailTab () {
 	var tag = 'MailDraft';
 	if (tabsContainer.tabs('exists', 'New Mail')){
@@ -632,7 +782,7 @@ function showAbout () {
 // Function to check if user has mobile device
 
 
-/** Detects if site is accessed on a mobile device
+/** Detect if site is accessed on a mobile device
  * @author Philipp E.
  */
 function detectmob() { 
@@ -652,17 +802,10 @@ function detectmob() {
 	}
 
 
-/**
- * @author Oliver B.
- * @author Philipp K.
- * @author Philipp E.
- * 
- * @param pdfPath Pfad der anzuzeigenden PDF
- * 
- * Shows PDF in a jquery-easyui window - Example: showPdf('pdf/Bachelorarbeit.pdf');
- * Get boolean of detectmob. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
- * If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
- */ function showPdf(pdfPath){
+//Shows PDF in a jquery-easyui window - Example: showPdf('pdf/Bachelorarbeit.pdf');
+//Get mobile check value. If User has mobile device, this function provides a link to the pdf document to open it in a new tap
+//If User does not use mobile device, PDF will be shown as an iFrame inbound to a PDF Container.
+function showPdf(pdfPath){
 	
 	if(detectmob() == true)
 		{	
@@ -823,7 +966,7 @@ function setTCQImages (imtime, imcost, imqual) {
 		setTimeout(function(){	
 			tcqElement.css('height', '140px');
 			tcqElement.css('background-image', 'url(images/tcq/' + imgUrl + '.PNG)');
-		},1000);
+		},3000);
 	}	
 }
 
@@ -901,11 +1044,12 @@ function updateTCQValues (imtime, imcost, imqual) {
 	else if(gameData.imqual<0){gameData.imqual=0;}
 }
 
-//Sets the background picture for the dialog
+//Sets the background picture for the dialog according to the dialog
 function setLocation (backgroundPictureUrl) {
 	$('.locationBackgroundContainer').css('background-image', 'url('+backgroundPictureUrl+')');
 }
 
+// Sets the background picture for the background
 function setDialogBackground (backgroundPictureUrl) {
 	backgroundPictureUrlNew = 'url('+backgroundPictureUrl+')';
 	backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
@@ -956,6 +1100,14 @@ function showAllocation () {
 	$('.allocationContainer').show();
 }
 
+function hideMatrixAllocation(){
+	$('.matrixAllocationContainer').hide();
+}
+
+function showMatrixAllocation(){
+	$('.matrixAllocationContainer').show();
+}
+
 function showEventContainer (container) {
 	container.window({modal:false,closed:false});
 }
@@ -973,7 +1125,7 @@ function hideEventContainer (container){
 function showMsg (title, msg) {
 	$.messager.show({
 		title: title,
-		timeout:3000,
+		timeout:5000,
 		msg: msg
 	});
 }
@@ -1006,38 +1158,14 @@ function removeHighlightMail () {
 	$('.mainMailButton').removeClass('elementHighlight');
 }
 
-/* TEMPORARY DISABLED FOR TROUBLESHOOTING AS IT IS THE ONLY FUNCTION WITH AN ERROR
- * //TODO laluz
-// Adds Blinker to NewMail (MailDraft) Button
-function addBlinkerMailNew(selector){
-    $('.tabs-tool').find('.l-btn').('.elementBlinker').animate({opacity:0}, 50, "linear", function(){
-    	$(this).delay(800);
-    	$(this).animate({opacity:1}, 50, function(){
-        addBlinkerMailNew(this);
-        });
-        $(this).delay(800);
-    });
-}
-*/
-
-/*
-function addBlinkerMailNew() {
-	for(var times=0; times <=5; times++) {
-    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeOut(500);
-    $('.tabs-tool').find('.l-btn').('.elementBlinker').fadeIn(500);
-	}
-	addHighlightMailNew();
-}
-*/
-
 // Adds Highlight to NewMail (MailDraft) Button
 function addHighlightMailNew () {
-	$('.tabs-tool').find('.l-btn').addClass('elementHighlight');
+	$("#tabs-tool").addClass("tabs-tool-highlight");
 }
 
 //Removes Highlight from NewMail (MailDraft) Button
 function removeHighlightMailNew () {	
-	$('.tabs-tool').find('.l-btn').removeClass('elementHighlight');
+	$("#tabs-tool").removeClass("tabs-tool-highlight");
 }
 
 //Shows the fullscreen transition window
@@ -1147,7 +1275,8 @@ function showLoading () {
 		},duration);	
 	},duration);
 }
-
+/*
+//TODO #443 Commented Code due to Syntax Error after Merge 
 window.onload = function()
 {
 	// Cookie not found, thus display easter egg and set cookie
@@ -1172,7 +1301,7 @@ window.onload = function()
 			setTimeout(function()
 			{
 				$(".ricky").text(''); // remove text from span tags after 4 seconds
-			}, 1000)
+			}, 1000);
 		}
 	}
 	else
@@ -1180,6 +1309,7 @@ window.onload = function()
 		// do nothing. user already saw easter egg. Lets see how many users do not believe their eyes... :D
 	}
 }
+*/
 
 // Function to set a cookie
 function setCookie(cName, cValue, cExpire)
@@ -1238,6 +1368,43 @@ $(window).resize(function() {
 	$('.transitionScreen').window('center');
 	$('.mainEventContainerResult').window('resize');
 	$('.loadingScreen').window('resize');	
+});
+
+// TODO CHECK CODE AFTER MERGE -#442
+
+//Get Url Parameters - Example: $.getUrlVar('name');
+$.extend({
+	getUrlVars: function(){
+		var vars = [], hash;
+		try{
+			var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			for(var i = 0; i < hashes.length; i++)
+			{
+				hash = hashes[i].split('=');
+				vars.push(hash[0]);
+				vars[hash[0]] = hash[1].replace('%20', ' ');
+			}
+		}catch(err){
+			//console.log('no parameters found');
+		}
+		return vars;
+	},
+	getUrlVar: function(name){
+		return $.getUrlVars()[name];
+	}
+});
+
+$.extend({	  
+	// Arguments are image paths relative to the current page.
+	preLoadImages: function() {
+		var cache = [];
+		var args_len = arguments.length;
+		for (var i = args_len; i--;) {
+			var cacheImage = document.createElement('img');
+			cacheImage.src = arguments[i];
+			cache.push(cacheImage);
+		};
+	}
 });
 
 //Get Url Parameters - Example: $.getUrlVar('name');

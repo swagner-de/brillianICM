@@ -540,6 +540,16 @@ public class UserRealm extends JdbcRealm {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * Function to set the lvlId of a certain User. Requires the userid and the
+	 * lvlId (Format: lxxxexxx)
+	 * @param userid
+	 * 			- contains the e-Mail address of a user
+	 * @param lvlId -
+	 * 			- contains the node the certain user is located at
+	 * @throws SQLException
+	 * 			- returns a database access error
+=======
 	 * Function to set the lvlId of a certain User. Requires the User ID and the
 	 * Unique Level ID (Format: lxxxexxx)
 	 * @author Philipp E.
@@ -549,6 +559,7 @@ public class UserRealm extends JdbcRealm {
 	 * 			- Unique Level ID (Format: lxxxexxx)
 	 * @throws SQLException
 	 *             - returns a database access error
+>>>>>>> refs/remotes/origin/devPh1l337
 	 */
 
 	public void setLvlId(String userId, String lvlId) throws SQLException {
@@ -763,6 +774,8 @@ public class UserRealm extends JdbcRealm {
 	 * 
 	 * @throws SQLException
 	 *             - returns a database access error
+	 *             
+	 * @return
 	 */
 	public boolean isUserFinished(String userEmail) throws SQLException {
 		// get the current path entry saved to the DB

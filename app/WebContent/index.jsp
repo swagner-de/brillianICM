@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>BrillianCRM Rebirth - Development Konsole</title>
+<title>brillianCRM Rebirth - Development Konsole</title>
 <style type="text/css">
 a,p {
 	color: blue;

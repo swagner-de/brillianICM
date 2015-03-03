@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CAKE - Node Content Browser</title>
 </head>
 <body>
 	<h1>Content Browser</h1>
 	<hr />
-	<h4>Hier könnt ihr die ID des Knotens eingeben, dessen Code ihr anschauen möchtet.</h4>
-	<h5>Die Konvention für die ID ist lxxxeyyy, also z.B. l001e001.</h5>
+	<h4>Hier kÃ¶nnt ihr die ID des Knotens eingeben, dessen Code ihr anschauen mÃ¶chtet.</h4>
+	<h5>Die Konvention fÃ¼r die ID ist lxxxeyyy, also z.B. l001e001.</h5>
 	<hr />
 	<br />
 	<form name="viewnode" id="viewnode" action="Node"  method="get" enctype="multipart/form-data">
