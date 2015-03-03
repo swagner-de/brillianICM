@@ -173,7 +173,7 @@ function getXml(id) {
 		}
 		
 		if(id == firstEvent){
-			showLocation('1');	
+			showLocation('4');	
 		}else if(id == lastEvent){
 			showResult();
 		//Umbenennung des Next Buttons in Accept Job Offer am Spiel Beginn 
