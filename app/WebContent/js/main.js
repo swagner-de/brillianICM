@@ -16,7 +16,6 @@
 		newMailDisabled = true;
 		firstEvent = 'l001e000';
 		lastEvent = 'l999e999';
-		schreibe hier blödsinn yum testen
 		jobofferEvent = 'l000e000';
 		unreadMails = [];
 		
