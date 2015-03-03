@@ -86,8 +86,8 @@
 					id = idArray[idArray.length-1];
 					
 				}catch(err){
-					lastName = 'Max';
-					firstName = 'Mustermann';
+					lastName = 'Mustermann';
+					firstName = 'Max';
 					gender = '1';
 					imcost = '50';
 					imqual = '50';
