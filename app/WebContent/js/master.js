@@ -176,6 +176,9 @@ function getXml(id) {
 			showLocation('1');	
 		}else if(id == lastEvent){
 			showResult();
+		//Umbenennung des Next Buttons in Accept Job Offer am Spiel Beginn 
+		}else if(id == jobofferEvent){
+			$('#continueButton').html("Accept Job Offer");
 		}
 		
 		//Setzte die Werte für locOld & eventtypeOld - wichtig für logische Überprüfungen im nächsten Durchlauf
