@@ -26,6 +26,7 @@ import java.sql.SQLException;
 public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
+	protected String getUserIdsByGroupId = "SELECT `user_id` FROM `user` WHERE `group` = ?";
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
@@ -161,6 +162,42 @@ public class UserRealm extends JdbcRealm {
 		}
 		return studentsForProfessor;
 	}
+	
+	/**
+	 * @author	Philipp E.
+	 * @param 	group_id: Group of the group from which userIds should be retrieved
+	 * @return	Array of userIds matching a group_id
+	 * @throws 	SQLException
+	 *             - throws a database access error
+	 */
+	
+	protected ArrayList<String> getUserIdsByGroupId(String group_id)
+			throws SQLException {
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		ArrayList<String> userIds = new ArrayList<String>();
+		try {
+			ps = conn.prepareStatement(getUserIdsByGroupId);
+			ps.setString(1, group_id);
+			
+
+			// Execute query
+			rs = ps.executeQuery();
+			// System.out.println("executed the following statement on DB: " +
+			// getStudentsForProfessorQuery);
+			
+			while (rs.next()) {		
+			String studentRow = rs.getString(1);
+			userIds.add(studentRow);
+			}
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		return userIds;
+	}
+	
 
 	/**
 	 * Invoked in java class AdminMain returns an array list with an array list
@@ -467,6 +504,7 @@ public class UserRealm extends JdbcRealm {
 	 */
 	public void setUserProgress(String userid, int costs, int quality,
 			int time, String path) throws SQLException {
+		//TODO rename with correct parameter name according to database scheme #402
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
 		try {
@@ -502,17 +540,35 @@ public class UserRealm extends JdbcRealm {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Function to set the lvlId of a certain User. Requires the userid and the
 	 * lvlId (Format: lxxxexxx)
+	 * @param userid
+	 * 			- contains the e-Mail address of a user
+	 * @param lvlId -
+	 * 			- contains the node the certain user is located at
+	 * @throws SQLException
+	 * 			- returns a database access error
+=======
+	 * Function to set the lvlId of a certain User. Requires the User ID and the
+	 * Unique Level ID (Format: lxxxexxx)
+	 * @author Philipp E.
+	 * @param userId
+	 * 			- User ID of the affected User
+	 * @param lvlId
+	 * 			- Unique Level ID (Format: lxxxexxx)
+	 * @throws SQLException
+	 *             - returns a database access error
+>>>>>>> refs/remotes/origin/devPh1l337
 	 */
 
-	public void setLvlId(String userid, String lvlId) throws SQLException {
+	public void setLvlId(String userId, String lvlId) throws SQLException {
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
 		try {
 			ps = conn.prepareStatement(setLvlIdQuery);
 			ps.setString(1, lvlId);
-			ps.setString(2, userid);
+			ps.setString(2, userId);
 			ps.executeUpdate();
 			// System.out.println("executed the following statement on DB: " +
 			// setProgressQuery);
@@ -641,18 +697,19 @@ public class UserRealm extends JdbcRealm {
 
 	/**
 	 * 
-	 * Returns an ArrayList<Object> containing the User Progress for the user
+	 * Returns an ArrayList containing the User Progress for the user
 	 * with the ID that was handed to the function The following entries can be
 	 * fount in the arraylist: 0:last_name, 1:first_name, 2:gender, 3:cost,
 	 * 4:quality, 5:time, 6:path
 	 * 
 	 * @param userid
-	 *            - contains the email of a user
+	 *          - contains the email of a user
 	 * 
-	 * @return progress - returns the values for costs, quality, time
+	 * @return progress 
+	 * 			- returns the values for costs, quality, time
 	 * 
 	 * @throws SQLException
-	 *             - returns database access error
+	 *          - returns database access error
 	 */
 	public ArrayList<Object> getUserProgress(String userid) throws SQLException {
 		Connection conn = dataSource.getConnection();
@@ -695,6 +752,7 @@ public class UserRealm extends JdbcRealm {
 	 * 
 	 * @param userEmail
 	 *            - contains the user�s email
+	 *            
 	 * 
 	 * @throws SQLException
 	 *             - returns a database access error
@@ -716,6 +774,8 @@ public class UserRealm extends JdbcRealm {
 	 * 
 	 * @throws SQLException
 	 *             - returns a database access error
+	 *             
+	 * @return
 	 */
 	public boolean isUserFinished(String userEmail) throws SQLException {
 		// get the current path entry saved to the DB

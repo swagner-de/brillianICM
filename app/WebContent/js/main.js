@@ -16,6 +16,7 @@
 		newMailDisabled = true;
 		firstEvent = 'l001e000';
 		lastEvent = 'l999e999';
+		jobofferEvent = 'l000e000';
 		unreadMails = [];
 		
 		//Lokale Variablen
@@ -85,8 +86,8 @@
 					id = idArray[idArray.length-1];
 					
 				}catch(err){
-					lastName = 'Max';
-					firstName = 'Mustermann';
+					lastName = 'Mustermann';
+					firstName = 'Max';
 					gender = '1';
 					imcost = '50';
 					imqual = '50';
