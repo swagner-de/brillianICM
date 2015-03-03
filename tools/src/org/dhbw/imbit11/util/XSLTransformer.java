@@ -29,12 +29,21 @@ public class XSLTransformer {
 	}
 
 	/**
-	 * Transform an XML and XSL document as <code>Reader</code>s, placing the
-	 * resulting transformed document in a <code>Writer</code>. Convenient for
-	 * handling an XML document as a String (<code>StringReader</code>) residing
+	 * Transform an XML and XSL document as Readers, placing the
+	 * resulting transformed document in a Writer. Convenient for
+	 * handling an XML document as a String (StringReader) residing
 	 * in memory, not on disk. The output document could easily be handled as a
-	 * String (<code>StringWriter</code>) or as a <code>JSPWriter</code> in a
+	 * String (StringWriter) or as a JSPWriter in a
 	 * JavaServer page.
+	 * 
+	 * @param xmlFile
+	 * 			- contains XML File
+	 * @param xslFile
+	 * 			- contains XSL File
+	 * @param output
+	 * 			- contains transformed document
+	 * 
+	 * @throws TransformerException - exceptional condition that occured during the transformation process
 	 */
 
 	public void process(Reader xmlFile, Reader xslFile, Writer output)
@@ -44,10 +53,19 @@ public class XSLTransformer {
 	}
 
 	/**
-	 * Transform an XML and XSL document as <code>File</code>s, placing the
-	 * resulting transformed document in a <code>Writer</code>. The output
-	 * document could easily be handled as a String (<code>StringWriter</code)>
-	 * or as a <code>JSPWriter</code> in a JavaServer page.
+	 * Transform an XML and XSL document as Files, placing the
+	 * resulting transformed document in a Writer. The output
+	 * document could easily be handled as a String (StringWriter)
+	 * or as a JSPWriter in a JavaServer page.
+	 * 
+	 * @param xmlFile
+	 * 			- contains xmlFile
+	 * @param xslFile
+	 * 			- contains xslFile
+	 * @param output
+	 * 			- contains transformed document
+	 * 
+	 * @throws TransformerException - exceptional condition that occured during the transformation process
 	 */
 	public void process(File xmlFile, File xslFile, Writer output)
 			throws TransformerException {
@@ -56,10 +74,19 @@ public class XSLTransformer {
 	}
 
 	/**
-	 * Transform an XML <code>File</code> based on an XSL <code>File</code>,
-	 * placing the resulting transformed document in a <code>OutputStream</code>
-	 * . Convenient for handling the result as a <code>FileOutputStream</code>
-	 * or <code>ByteArrayOutputStream</code>.
+	 * Transform an XML File based on an XSL File,
+	 * placing the resulting transformed document in a OutputStream
+	 * Convenient for handling the result as a FileOutputStream
+	 * or ByteArrayOutputStream
+	 * 
+	 * @param xmlFile
+	 * 			- contains xmlFile
+	 * @param xslFile
+	 * 			- contains xslFile
+	 * @param out
+	 * 			- contains transformed document
+	 * 
+	 * @throws TransformerException - exceptional condition that occured during the transformation process
 	 */
 
 	public void process(File xmlFile, File xslFile, OutputStream out)
@@ -71,7 +98,15 @@ public class XSLTransformer {
 	/**
 	 * Transform an XML source using XSLT based on a new template for the source
 	 * XSL document. The resulting transformed document is placed in the passed
-	 * in <code>Result</code> object.
+	 * in Result object.
+	 * 
+	 * @param xml - contains xml source
+	 * 
+	 * @param xsl - contains XSL source
+	 * 
+	 * @param result - object that contains the transformed document
+	 * 
+	 * @throws TransformerException - exceptional condition that occured during the transformation process
 	 */
 
 	public void process(Source xml, Source xsl, Result result)

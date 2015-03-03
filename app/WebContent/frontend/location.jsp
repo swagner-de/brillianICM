@@ -57,4 +57,31 @@
 	    	<div id="continueButton" class="easyui-linkbutton allocationButton"><%=ApplicationConstants.ALLOCATION_BUTTON%></div>
 	    </div>
 	</div>
+
+
+<div class="matrixAllocationContainer easyui-panel" data-options="fit:true,border:false">
+		<div class="description"></div>
+	    <div style="clear: both;"></div>
+	    <div class="tileAcceptorContainer">
+	    	<div class="bc tileAcceptor"></div>
+	    	<div class="bc tileAcceptor"></div>
+	    	<div class="bc tileAcceptor"></div>
+	    	<div style="clear: both;"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		     <div style="clear: both;"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+	    </div>
+	    <div style="clear: both;"></div>
+	    <div class="draggableTilesContainer bc"></div>
+	    <div style="clear: both;"></div>
+	    
+	    <div class="buttonContainer">
+	    	<div id="continueButtonMatrix" class="easyui-linkbutton allocationButton"><%=ApplicationConstants.ALLOCATION_BUTTON%></div>
+	    </div>
+	</div>
 </div>
+
