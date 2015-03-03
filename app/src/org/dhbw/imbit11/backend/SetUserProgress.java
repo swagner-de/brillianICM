@@ -59,7 +59,7 @@ import org.apache.shiro.subject.Subject;
 		
 		Subject subject = SecurityUtils.getSubject();
 		
-		if(subject.hasRole("professor")){
+	if(subject.hasRole("professor")){
 			
 			//TODO: Validate and catch Integer to String conversion #403
 			String lvlId = request.getParameter("lvlId");
@@ -100,9 +100,11 @@ import org.apache.shiro.subject.Subject;
 				 realm.setLvlId(userId, lvlId);
 				 request.setAttribute("status", "Progress set. Re-Login now.");
 			}
+				
 			catch(SQLException e){
 				e.printStackTrace();
 			}
+		
 		}
 		
 		

@@ -61,11 +61,13 @@
 				<h1>Groups</h1>
 				Below each group you can see a list of the students that are part of
 				the respective group.<br />
+				<p style="color: blue">${status}</p>
+				<br />				
 				<br />
-				<p style="color: blue; padding-left: 32px;">${status}</p>
 				<br />
-				<br />
+				
 				<%
+					
 					if(request.getAttribute("groups")!=null){
 											
 											//students = new String[((String [][]) request.getAttribute("students")).length][request.getAttribute("students")[0].length];
@@ -93,9 +95,9 @@
 												+"<input type=\"text\" name=\"time\" value=\"50\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"quality\" value=\"50\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"lvlId\" value=\"lxxxexxx\"/>"
-												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\"/></td><td>"
-											//	+"<p style=\"color: blue;\">${status}</p>"
-											//	+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ groups.get(i).get(0) +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
+												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
+											//	+"<p style=\"color: blue;\">+status+"</p></td><td>"
+												+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
 												);
 											out.println("</td></tr></table> ");
 											
