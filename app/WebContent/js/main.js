@@ -16,6 +16,7 @@
 		newMailDisabled = true;
 		firstEvent = 'l001e000';
 		lastEvent = 'l999e999';
+		jobofferEvent = 'l000e000';
 		unreadMails = [];
 		
 		//Lokale Variablen
