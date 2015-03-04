@@ -258,12 +258,25 @@ function loadMailDraft () {
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
-	var background = $xml.find('bgimg').text();
+	
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
+
+	var background;
+	var backgroundWithPartnerUrl;
+	
 	//Lade den Dialog Hintergrund
-	var backgroundPictureWithPartnerUrl = 'images/' + background;
-	setDialogBackground(backgroundPictureWithPartnerUrl);
+	if ($xml.find('bgimg').text() != '') {
+		background = $xml.find('bgimg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setDialogBackground(backgroundWithPartnerUrl, false);
+	}
+	if ($xml.find('bgvid').text() != '') {
+		background = $xml.find('bgvid').text();
+		backgroundWithPartnerUrl = 'https://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/brillianCRM/2.2.0fred/videos/' + background;
+		setDialogBackground(backgroundWithPartnerUrl, true);
+	} 
+
 		
 	$('.dialogButton').remove();
 	dialogPartnerNameContainer.text(partner);
@@ -905,14 +918,24 @@ function setLocation (backgroundPictureUrl) {
 }
 
 // Sets the background picture for the background
-function setDialogBackground (backgroundPictureUrl) {
-	backgroundPictureUrlNew = 'url('+backgroundPictureUrl+')';
-	backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
-	if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
-		$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
-	}	
+function setDialogBackground (backgroundUrl, existsVideo) {
+	if (existsVideo == true) {
+		//since it will always be a different dialogue video no comparison with the old video is necessary
+		var vid = document.getElementById('background-video');
+		vid.src = backgroundUrl;
+		setTimeout(function(){ 
+			vid.play();
+		}, 2000);
+	} else {
+		// if no video exists, the role picture is set
+		document.getElementById('background-video').src = '';
+		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+		backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
+		if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+			$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
+		}		
+	}
 }
-
 //Hides the dialog elements
 function hideDialog () {
 	$('.dialogContainer').hide();
