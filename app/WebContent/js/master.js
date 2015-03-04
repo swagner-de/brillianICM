@@ -273,7 +273,10 @@ function loadDialog () {
 	}
 	if ($xml.find('bgvid').text() != '') {
 		background = $xml.find('bgvid').text();
-		backgroundWithPartnerUrl = 'https://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/brillianCRM/2.2.0fred/videos/' + background;
+		backgroundWithPartnerUrl=window.location.href;
+		position = backgroundWithPartnerUrl.lastIndexOf('/');
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
 		setDialogBackground(backgroundWithPartnerUrl, true);
 	} 
 
