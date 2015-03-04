@@ -29,10 +29,10 @@
 		<date>2014-01-01 09:21:00</date>
 		<subject>Further CRM Introduction</subject>
 		<content> Dear %prename%, <br /> enclosed please find one more document with further information about CRM. <br /> Kind regards, <br /> Thomas </content>
-		<attachment href="CRM_introduction.pdf">CRM_introduction.pdf</attachment>
+		<attachment href="CRM_Introduction.pdf">CRM_introduction.pdf</attachment>
 		<nextevent href="l001e000" />
 	</event>
-	<event level="1" element="0" id="l001e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
+	<event level="1" element="0" id="l001e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
@@ -40,11 +40,11 @@
 		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
 	</event>
-	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0" imqual="0" imtime="0" loc="1">
+	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
 		<content>You are calling back Thomas Zimmermann as agreed…</content>
 		<nextevent href="l001e001" />
 	</event>
-	<event level="1" element="0" id="l001e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
+	<event level="1" element="0" id="l001e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
@@ -53,7 +53,7 @@
 		<option href="l001e003">Yes, indeed, I didn’t really understand the files and videos you sent me.</option>
 		<bgimg>role1pic9.png</bgimg>
 	</event>
-	<event level="1" element="0" id="l001e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
+	<event level="1" element="0" id="l001e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
@@ -61,7 +61,7 @@
 		<option href="l002e000"> Hang up phone </option>
 		<bgimg>role1pic9.png</bgimg>
 	</event>
-	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0" imqual="-5" imtime="0" loc="1">
+	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0" imqual="-5" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
@@ -70,7 +70,7 @@
 		<bgimg>role1pic9.png</bgimg>
 	</event>
 	
-	<!-- Flugbilder -->
+	<!-- Flugbilder/ location change -->
 	
 	<event level="2" element="0" id="l002e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -192,7 +192,7 @@
 		<date>2014-01-03 14:21:00</date>
 		<content> Dear %prename%, <br /> enclosed please find the project charter. Since you are the Project Manager please print it out and sign the copy. With your signature you officially accept the terms of the project. <br />
 			<br /> BR, <br /> Jessie </content>
-		<attachment href="project_charter1.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter1</attachment>
 		<nextevent href="l012e000" />
 	</event>
 	<event level="11" element="0" id="l011e001" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
@@ -202,7 +202,7 @@
 		<date>2014-01-03 14:21:00</date>
 		<content> Dear %prename%, <br /> enclosed please find the project charter. Since you are the Project Manager please print it out and sign the copy. With your signature you officially accept the terms of the project. <br />
 			<br /> BR, <br /> Jessie </content>
-		<attachment href="project_charter1.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter1</attachment>
 		<nextevent href="l011e002" />
 	</event>
 	<event level="11" element="0" id="l011e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -297,7 +297,7 @@
 			<br /> Please perform the risk analysis and check your emails afterwards. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
-		<attachment href="GenericMatrix.pdf">Example of a generic risk matrix </attachment>
+		<attachment href="Generic_Matrix.pdf">Example of a generic risk matrix </attachment>
 		<nextevent href="l022e000" />
 	</event>
 	<!-- Auswahl mit Bild -->
@@ -382,7 +382,7 @@
 			<br /> Please perform the stakeholder analysis. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
-		<attachment href="GenericStakeholderMatrix.pdf">Example of a generic stakeholder matrix </attachment>
+		<attachment href="Generic_Stakeholder_Matrix.pdf">Example of a generic stakeholder matrix </attachment>
 		<nextevent href="l031e000" />
 	</event>
 	<!-- Auswahl mit Bild -->
@@ -404,7 +404,7 @@
 			<br /> thanks for your stakeholder analysis. <br /> After reviewing it I noticed that you made some mistakes. Please take a look at the correct matrix in the attachment. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
-		<attachment href="StakeSol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
+		<attachment href="Stake_Sol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
 		<nextevent href="l065e000" />
 	</event>
 	<!-- Mail -->
@@ -417,7 +417,7 @@
 			<br /> thanks for your stakeholder analysis. You did a great job on that one! <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
-		<attachment href="StakeSol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
+		<attachment href="Stake_Sol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
 		<nextevent href="l065e000" />
 	</event>
 	<event level="065" element="0" id="l065e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
@@ -600,15 +600,15 @@
 		<column>Data</column>
 		<column>Handover</column>
 		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration">Data Migration</option>
-		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
+		<option column="1" rank="14" finfo="Arbeitspakete/Process_Adaptation.pdf" fdesc="Work Package Description: Sales Process Adaptation"> Sales Process Adaption </option>
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
 		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
 		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_Live_System.pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_(live_system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
 		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
-		<option column="3" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
+		<option column="3" rank="15" finfo="Arbeitspakete/Data_Model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test_environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
 		<option column="1" rank="5" finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination Mobile Devices </option>
 		<option column="2" rank="2" finfo="Arbeitspakete/Requirements_Specification.pdf" fdesc="Work Package Description: Requirements Specification">Requirements Specification </option>
 		<option column="4" rank="5" finfo="Arbeitspakete/Testing.pdf" fdesc="Work Package Description: Testing">Testing</option>
@@ -777,7 +777,7 @@
 		<date>2014-02-18 13:17:52</date>
 		<subject>Project schedule</subject>
 		<content> Dear %prename%, <br /> I have prepared the project schedule with MS Project. Please find attached the corresponding file. If you cannot open the file, you have to download the MS Project software. I will send you a second email with further instructions. <br /> Kind regards, <br /> Priya </content>
-		<attachment href="BrillianCRM_Project_chart.mpp">Project schedule</attachment>
+		<attachment href="BrillianCRM_Project_Chart.mpp">Project schedule</attachment>
 		<nextevent href="l293e000" />
 	</event>
 	<event level="293" element="0" id="l293e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
