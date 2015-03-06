@@ -654,63 +654,63 @@
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the statement of costs previously shown and note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l205e000" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 104 600€. </option>
-		<option href="l205e000" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 84 400€. </option>
-		<option href="l205e001" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 94 200€. </option>
+		<option href="l205e000" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 148 600€. </option>
+		<option href="l205e000" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 140 400€. </option>
+		<option href="l205e001" img="content7pic3.png"> The result of the cost calculation for the Initiation Phase is <br /> 141 000€. </option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="-1" imqual="0" imcost="-5" eventtype="5" id="l205e000" element="0" level="205">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the statement of costs previously shown and note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 973 200€. </option>
-		<option href="l206e001" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 792 300€. </option>
-		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 104 600€. </option>
+		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 668 200€. </option>
+		<option href="l206e001" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 668 400€. </option>
+		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 668 600€. </option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+5" imqual="0" imcost="+5" eventtype="5" id="l205e001" element="1" level="205">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the statement of costs previously shown and note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 973 200€. </option>
-		<option href="l206e001" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 792 300€. </option>
-		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 104 600€. </option>
+		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 668 200€. </option>
+		<option href="l206e001" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 668 400€. </option>
+		<option href="l206e000" img="content7pic4.png"> The result of the cost calculation for the Planning Phase is <br /> 668 600€. </option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="-3" imqual="-5" imcost="-3" eventtype="5" id="l206e000" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the statement of costs previously shown and note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 891 900€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 812 500€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 867 400€. </option>
+		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 1 262 100€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 1 262 500€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 1 262 400€. </option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+5" imqual="+9" imcost="+5" eventtype="5" id="l206e001" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description> Please select the correct amount of costs for the statement of costs previously shownand note your decision on a piece of paper for the final cost calculation. <br />
 		</description>
-		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 891 900€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 812 500€. </option>
-		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 867 400€. </option>
+		<option href="l207e001" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 1 262 100€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 1 262 500€. </option>
+		<option href="l207e000" img="content7pic2.png"> The result of the cost calculation for the Execution and Closing Phase is <br /> 1 262 400€. </option>
 	</event>
 	<!-- Auswahl mit Bild -->
 	<event loc="4" imtime="-5" imqual="-5" imcost="-5" eventtype="4" id="l207e000" element="0" level="207">
 		<title>Auswahl mit Bild</title>
 		<description> Now after you have calculated the costs for each phase of the project, please select which budget is needed in total for our resource plan. <br />
 		</description>
-		<option href="l208e000"> The result of the needed overall budget is <br /> 1 573 400€. </option>
-		<option href="l208e000"> The result of the needed overall budget is <br /> 1 962 400€. </option>
-		<option href="l208e001"> The result of the needed overall budget is <br /> 1 778 400€. </option>
+		<option href="l208e000"> The result of the needed overall budget is <br /> 2 072 400€. </option>
+		<option href="l208e000"> The result of the needed overall budget is <br /> 2 072 100€. </option>
+		<option href="l208e001"> The result of the needed overall budget is <br /> 2 071 500€. </option>
 	</event>
 	<!-- Auswahl mit Bild -->
 	<event loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="4" id="l207e001" element="0" level="207">
 		<title>Auswahl mit Bild</title>
 		<description> Now after you have calculated the costs for each phase of the project, please select which budget is needed in total for our resource plan. <br />
 		</description>
-		<option href="l208e000"> The result of the needed overall budget is <br /> 1 573 400€. </option>
-		<option href="l208e000"> The result of the needed overall budget is <br /> 1 962 400€. </option>
-		<option href="l208e001"> The result of the needed overall budget is <br /> 1 778 400€. </option>
+		<option href="l208e000"> The result of the needed overall budget is <br /> 2 072 400€. </option>
+		<option href="l208e000"> The result of the needed overall budget is <br /> 2 072 100€. </option>
+		<option href="l208e001"> The result of the needed overall budget is <br /> 2 071 500€. </option>
 	</event>
 	<!-- Mail -->
 	<event loc="" imtime="-10" imqual="-10" imcost="-15" eventtype="1" id="l208e000" element="0" level="208">
