@@ -94,6 +94,7 @@
 												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
 												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
+												/* Hier wird das Dropdown zur Auswahl der zu setztenden Levels in der Lecturerer Seite definiert*/
 												+"<select name=\"lvlId\" id=\"lvlId\">"
 												+"<option value=\"l204e000\">Budget Planning</option>"
 												+"<option value=\"l290e000\">Critical Path</option>"
@@ -101,7 +102,7 @@
 												+"<option value=\"l022e000\">Risk Analysis</option>"
 												+"<option value=\"l031e000\">Stakeholder Analysis</option>"								
 												+"<option value=\"l201e000\">Work Breakdown Structure</option>"
-												+"</select>"
+												+"</select>"								
 												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
 												+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
 												);
