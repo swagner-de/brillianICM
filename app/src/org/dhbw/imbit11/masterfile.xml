@@ -8,7 +8,6 @@
 	<event level="0" element="0" id="l000e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="">
 		<content />
 		<bgimg>content9pic1.png</bgimg>
- <bgvid> .mp4</bgvid>
 		<nextevent href="l000e001" />
 	</event>
 	<event level="0" element="0" id="l000e001" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">	
