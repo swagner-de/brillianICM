@@ -8,6 +8,7 @@
 	<event level="0" element="0" id="l000e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="">
 		<content />
 		<bgimg>content9pic1.png</bgimg>
+ <bgvid> .mp4</bgvid>
 		<nextevent href="l000e001" />
 	</event>
 	<event level="0" element="0" id="l000e001" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">	
@@ -39,6 +40,7 @@
 		<content>Hello %prename%, good to talk to you! I am glad that you accepted this job offer. In preparation for our project, I sent you two emails with the basic information about CRM, project management and Concrete Machinery. Please read them in advance and make sure you understand them. This is very important for a good project start. Please call me back, as soon as you read the emails. </content>
 		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
+
 	</event>
 	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
 		<content>You are calling back Thomas Zimmermann as agreed…</content>
@@ -52,6 +54,7 @@
 		<option href="l001e002">No, I feel well prepared for the project. Thank you for asking.</option>
 		<option href="l001e003">Yes, indeed, I didn’t really understand the files and videos you sent me.</option>
 		<bgimg>role1pic9.png</bgimg>
+
 	</event>
 	<event level="1" element="0" id="l001e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -60,6 +63,7 @@
 		<content>That is good to hear, I am sure you will do a great job.  We chose you because of your long-term international project experience. This is a huge project for our company. This is why you have to put all efforts into bringing it to a successful end. You will find out about all the necessary details as soon as you arrive at the client's site in Houston. I wish you all the best for the project. I don't think that I have to remind you of this project's importance and that it is also a huge opportunity for you and your career. So, don't disappoint me! The customer's project manager, Miss Oaks, will pick you up at the airport. Have a good flight!</content>
 		<option href="l002e000"> Hang up phone </option>
 		<bgimg>role1pic9.png</bgimg>
+
 	</event>
 	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0" imqual="-5" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -82,6 +86,7 @@
 		<option href="l003e003">Hi Jessie, the flight was okay but they only served American food. I did not like that at all! </option>
 		<option href="l003e004">Hello Miss Oaks. Yes, the flight was okay. </option>
 		<bgimg>role3pic7.png</bgimg>
+		<bgvid>l002e000.mp4</bgvid>
 	</event>
 	<event level="3" element="1" id="l003e001" eventtype="3" imcost="+2" imqual="+4" imtime="+2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -90,6 +95,7 @@
 		<content>Awesome. I am very excited about the project as well. So let's drive to the office and get started right away. </content>
 		<option href="l004e000">Next</option>
 		<bgimg>role3pic7.png</bgimg>
+		<bgvid>l003e001.mp4</bgvid>
 	</event>
 	<event level="3" element="2" id="l003e002" eventtype="3" imcost="-2" imqual="-2" imtime="-2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -98,6 +104,7 @@
 		<content>I heard that you have great experience with such projects. I hope there will be no reason to be nervous about. Let's drive to the office to start with the project! </content>
 		<option href="l004e000">Next</option>
 		<bgimg>role3pic7.png</bgimg>
+ <bgvid>l003e002.mp4</bgvid>
 	</event>
 	<event level="3" element="3" id="l003e003" eventtype="3" imcost="-2" imqual="-4" imtime="-2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -106,6 +113,7 @@
 		<content>I hope that you will get used to it! Let's drive to the office to start with the project. </content>
 		<option href="l004e000">Next</option>
 		<bgimg>role3pic7.png</bgimg>
+ <bgvid>l003e003.mp4</bgvid>
 	</event>
 	<event level="3" element="4" id="l003e004" eventtype="3" imcost="-3" imqual="-5" imtime="-3" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -114,6 +122,7 @@
 		<content>Great. I know you Germans are pretty formal but you can really call me Jessie! So come on, let's drive to the office. </content>
 		<option href="l004e000">Next</option>
 		<bgimg>role3pic7.png</bgimg>
+ <bgvid>l003e004.mp4</bgvid>
 	</event>
 	<event level="4" element="0" id="l004e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -122,15 +131,18 @@
 		<content>Welcome at Concrete Machinery! This is going to be your office for the next 9 months. I already placed some paperwork on your table. You will need an assistant to help you with the administrative work. These are the three potential candidates: </content>
 		<option href="l005e000">Next</option>
 		<bgimg>role3pic2.png</bgimg>
+ <bgvid>l004e000.mp4</bgvid>
 	</event>
 	<event level="5" element="0" id="l005e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
 		<content />
 		<bgimg>content2pic3.png</bgimg>
+ 
 		<nextevent href="l006e000" />
 	</event>
 	<event level="6" element="0" id="l006e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
 		<content />
 		<bgimg>content2pic2.png</bgimg>
+
 		<nextevent href="l007e000" />
 	</event>
 	<event level="7" element="0" id="l007e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
@@ -152,6 +164,7 @@
 		<content>Good decision, Priya is going to be a great assistant! </content>
 		<option href="l010e000">Next</option>
 		<bgimg>role3pic3.png</bgimg>
+ <bgvid>l009e001.mp4</bgvid>
 	</event>
 	<event level="9" element="2" id="l009e002" eventtype="3" imcost="0" imqual="+10" imtime="-10" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -160,6 +173,7 @@
 		<content>Good decision, Nadja is going to be a great assistant! </content>
 		<option href="l010e001">Next</option>
 		<bgimg>role3pic3.png</bgimg>
+ <bgvid>l009e002.mp4</bgvid>
 	</event>
 	<event level="9" element="3" id="l009e003" eventtype="3" imcost="+10" imqual="0" imtime="-6" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -168,6 +182,7 @@
 		<content>Good decision, Martin is going to be a great assistant! </content>
 		<option href="l010e001">Next</option>
 		<bgimg>role3pic3.png</bgimg>
+ <bgvid>l009e003.mp4</bgvid>
 	</event>
 	<event level="10" element="0" id="l010e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -176,6 +191,7 @@
 		<content>You may connect your computer to our network. I have already sent you an email containing the project charter. </content>
 		<option href="l011e000">Next</option>
 		<bgimg>loc3a.png</bgimg>
+ <bgvid>l010e000.mp4</bgvid>
 	</event>
 	<event level="10" element="0" id="l010e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -234,6 +250,7 @@
 		<option href="l016e003"> Sorry, I don’t know about the intention of the project. </option>
 		<!-- letzte Option von l016e001 zu l016e003 geändert, unten neue Antwort für diese Option formuliert -->
 		<bgimg>role1pic9.png</bgimg>
+ <bgvid>l015e000.mp4</bgvid>
 	</event>
 	<event level="16" element="1" id="l016e001" eventtype="3" imcost="-5" imqual="-10" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -242,6 +259,7 @@
 		<content>That’s different from what I have discussed with the customer. Maybe you should look at the project charter again! </content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
+ <bgvid>l016e001.mp4</bgvid>
 	</event>
 	<event level="16" element="2" id="l016e002" eventtype="3" imcost="+5" imqual="+10" imtime="+5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -250,6 +268,7 @@
 		<content>Okay, it seems like you understood the intention of the project, great! </content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
+ <bgvid>l016e002.mp4</bgvid>
 	</event>
 	<event level="16" element="1" id="l016e003" eventtype="3" imcost="-5" imqual="-10" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -258,6 +277,7 @@
 		<content>Maybe you should look at the project charter again! </content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
+ <bgvid>l016e003.mp4</bgvid>
 	</event>
 	<event level="17" element="0" id="l017e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -269,6 +289,7 @@
 		<option href="l018e002"> The software will help to strengthen the relationship of Concrete Machinery with its suppliers and optimize the procurement process. </option>
 		<option href="l018e002"> There are no benefits involved. </option>
 		<bgimg>role1pic9.png</bgimg>
+ <bgvid>l017e000.mp4</bgvid>
 	</event>
 	<event level="18" element="1" id="l018e001" eventtype="3" imcost="+3" imqual="+5" imtime="+3" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -277,6 +298,7 @@
 		<content>That sounds worthwhile. The benefits are really important to convince the customer to expand its business with us! </content>
 		<option href="l021e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
+ <bgvid>l018e001.mp4</bgvid>
 	</event>
 	<event level="18" element="2" id="l018e002" eventtype="3" imcost="-3" imqual="-5" imtime="-3" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -285,6 +307,7 @@
 		<content>Please look at the project charter again to get more information about the benefits. They are really important in order to convince the customer to expand its business with us! </content>
 		<option href="l021e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
+ <bgvid>l018e002.mp4</bgvid>
 	</event>
 	<!-- Mail -->
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1" id="l021e000" element="0" level="21">
@@ -423,7 +446,7 @@
 	<event level="065" element="0" id="l065e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="4">
 		<content>2 weeks later... </content>
 		<bgimg>loc3a.png</bgimg>
-		<nextevent href="l066e000" />
+ 		<nextevent href="l066e000" />
 	</event>
 	<event level="66" element="0" id="l066e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams, (Project Assistant Concrete Machinery)</partner>
@@ -432,11 +455,12 @@
 		<content>Hey %prename%, just as a reminder, the kick-off meeting will start in the conference room at 9 o' clock. </content>
 		<option href="l067e000">Next</option>
 		<bgimg>role7pic2.png</bgimg>
+ <bgvid>l066e000.mp4</bgvid>
 	</event>
 	<event level="67" element="0" id="l067e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="3">
 		<content />
 		<bgimg>content1pic1.png</bgimg>
-		<nextevent href="l068e000" />
+ 		<nextevent href="l068e000" />
 	</event>
 	<event level="68" element="0" id="l068e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="3">
 		<content />
@@ -504,6 +528,7 @@
 		<content>Hello everyone! I am very happy to welcome you to the project's kick-off meeting. We all know why we are here but we don't know each other, yet. So I would suggest to start with a short personal introduction. </content>
 		<option href="l075e000">Next</option>
 		<bgimg>role3pic6.png</bgimg>
+ <bgvid>l074e000.mp4</bgvid>
 	</event>
 	<event level="75" element="0" id="l075e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -512,6 +537,7 @@
 		<content>May I introduce myself. My name is Jessie Oaks. I am the project leader at Concrete Machinery. I am convinced that the project will bring great benefit to our company! I am also happy to welcome %prename%, the responsible Project Manager of brillianCRM.</content>
 		<option href="l076e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
+ <bgvid>l075e000.mp4</bgvid>
 	</event>
 	<event level="76" element="0" id="l076e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
@@ -520,6 +546,7 @@
 		<content>Hello everyone, my name is Gundula Eberle. I am the CFO at Concrete Machinery. In contrast to Jessica I am not so sure that the amount of money and time invested in the project will pay off eventually, but we will see. </content>
 		<option href="l077e000">Next</option>
 		<bgimg>role5pic1.png</bgimg>
+ <bgvid>l076e000.mp4</bgvid>
 	</event>
 	<event level="77" element="0" id="l077e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
@@ -528,6 +555,7 @@
 		<content>Hi, my name is Billy Ray Stylus. I am the Head of Sales at Concrete Machinery. As long as it will help me to make my quota, you have my full support for the project! </content>
 		<option href="l078e000">Next</option>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l077e000.mp4</bgvid>
 	</event>
 	<event level="78" element="0" id="l078e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
@@ -536,6 +564,7 @@
 		<content>Hello ladies and gentlemen. My name is Thomas Zimmermann and I am the CEO of brillianCRM. I personally agree with Miss Oaks. I think that this project is very important and I can guarantee that we are the best possible partner for it. </content>
 		<option href="l080e000">Next</option>
 		<bgimg>role1pic1.png</bgimg>
+ <bgvid>l078e000.mp4</bgvid>
 	</event>
 	<event level="80" element="0" id="l080e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -567,7 +596,7 @@
 	<event level="85" element="0" id="l085e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="3">
 		<content />
 		<bgimg>content7pic9.png</bgimg>
-		<nextevent href="l086e000" />
+ 		<nextevent href="l086e000" />
 	</event>
 	<event level="86" element="0" id="l086e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="3">
 		<content />
@@ -761,6 +790,7 @@
 		<content>Thank you %prename% for dealing with the Gantt-diagram. I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
 		<option href="l340e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
+ <bgvid>l291e001.mp4</bgvid>
 	<!-- Theresa: Mail an neues Spiel angepasst -->		
 	</event>
 	<event level="291" element="0" id="l291e002" eventtype="3" imcost="-7" imqual="-9" imtime="-13" loc="3">
@@ -770,6 +800,7 @@
 		<content>Thank you %prename% for dealing with the Gantt-diagram. You should inform yourself about that in order to identify the critical path. Nevertheless, I think we are doing fine with the project. The next important milestone will be our first steering committee. </content>
 		<option href="l292e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
+ <bgvid>l291e002.mp4</bgvid>
 	</event>
 	<event level="292" element="0" id="l292e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
 		<from>Priya Williams</from>
@@ -815,6 +846,7 @@
 		<date>2014-04-16 11:01:34</date>
 		<title>You call Avi Gupta to find out what is going on in India... </title>
 		<bgimg>role2pic1.png</bgimg>
+ <bgvid>l302e000.mp4</bgvid>
 		<content>Avi Gupta speaking? </content>
 		<option href="l303e000">Hi Avi. This is %gender% %surname%. </option>
 		<option href="l303e000">Hello Mr. Gupta, this is %gender% %surname%. </option>
@@ -827,6 +859,7 @@
 		<date>2014-04-16 11:09:44</date>
 		<title>You call Avi Gupta to find out what is going on in India... </title>
 		<bgimg>role2pic1.png</bgimg>
+ <bgvid>l303e000".mp4</bgvid>
 		<content>Oh, hello %gender% %surname%. How are you doing? </content>
 		<option href="l305e000">I’m fine, thanks for asking. And you? </option>
 		<option href="l303e001">Doesn’t matter. We have to get to work. </option>
@@ -1403,6 +1436,7 @@
 		<date>2014-07-02 13:21:34</date>
 		<title> Your Assistant comes into your office.</title>
 		<bgimg>role7pic2.png</bgimg>
+ <bgvid>l331e000.mp4</bgvid>
 		<content> %gender% %surname%! <br />
 			<br /> Sorry to interrupt you but it is important. <br />
 			<br /> PAS is on the brink to steal our best developer – Vance Veba! They offered him a better paid job and a prized package of PAS stocks. He is a very proud fellow. He has just said to me that it is not about the money, he likes his current job as well but doesn’t feels valued for his hard work. The only one who can change his mind is the project leader – YOU! Do something and hurry up or we will lose him. <br />
@@ -1418,6 +1452,7 @@
 		<date>2014-07-04 17:21:34</date>
 		<title> Your Assistant comes into your office.</title>
 		<bgimg>role7pic2.png</bgimg>
+ <bgvid>l331e001.mp4</bgvid>
 		<content> %gender% %surname%! <br />
 			<br /> It’s your decision. I know you will do the right thing! I have to head back to the meeting room and finish the preparations! </content>
 		<option href="l332e000">Okay see you then! </option>
@@ -1459,6 +1494,7 @@
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
 		<bgimg>role5pic1.png</bgimg>
+ <bgvid>l332e005.mp4</bgvid>
 		<content> Good! I count on you,%prename% %surname% <br />
 			<br />
 		</content>
@@ -1472,6 +1508,7 @@
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
 		<bgimg>role5pic1.png</bgimg>
+ <bgvid>l332e002.mp4</bgvid>
 		<content> Yes, that’s very good. It's a pleasure working with you. <br />
 			<br />
 		</content>
@@ -1484,6 +1521,7 @@
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
 		<bgimg>role5pic1.png</bgimg>
+ <bgvid>l332e004.mp4</bgvid>
 		<content> Time is money! There is no misunderstanding. I always pay my bills on time. Get it fixed or this will have inconvenient consequences for you and TopCRM. <br />
 			<br />
 		</content>
@@ -1561,6 +1599,7 @@
 		<date>2014-08-05 10:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role5pic1.png</bgimg>
+ <bgvid>l340e004.mp4</bgvid>
 		<content>Is there any possibility that we can meet more often than every month if it is necessary? </content>
 		<option href="l340e005">Yes of course, if there are any major decisions to make immediately, I will organize a meeting as soon as possible. If any of you has problems or concerns please let me know! </option>
 		<option href="l340e006">No, that is strictly forbidden. We will just meet once a month. Apart from that I think we all are pretty busy so that we won’t have time for any more meetings. </option>
@@ -1625,6 +1664,7 @@
 		<date>2014-08-06 12:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role3pic1.png</bgimg>
+ <bgvid>l340e011.mp4</bgvid>
 		<content>Thanks for the presentation! I am glad to hear that everything goes so well. From our side there are no issues or problems as well. I think this cooperation is very productive so far and I feel positive about the project. </content>
 		<option href="l340e012">Thanks Jessica! </option>
 		<option href="l340e012">I feel very positive as well. </option>
@@ -1635,6 +1675,7 @@
 		<date>2014-08-06 13:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role1pic1.png</bgimg>
+ <bgvid>l340e012.mp4</bgvid>
 		<content>This is nice to hear Jessica. BrillanCRM is also very happy about the collaboration and we think we will be successful! </content>
 		<option href="l340e013">Right, Thomas! </option>
 		<option href="l340e013">Of course we will! </option>
@@ -1670,6 +1711,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Your Phone rings – Vance Veba is calling!</title>
 		<bgimg>role9pic3.png</bgimg>
+ <bgvid>l531e000.mp4</bgvid>
 		<content> Mhh... Well... Yes, why not. We never had time to talk in person yet. Let’s go for some drinks. </content>
 		<option href="l532e000">Great! Let's meet at 8 o'clock. See you there! </option>
 		<option href="l532e000">Sounds good. I'm looking forward to seeing you at 8 pm. </option>
@@ -1680,6 +1722,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Your Phone rings – Vance Veba is calling!</title>
 		<bgimg>role9pic3.png</bgimg>
+ <bgvid>l531e001.mp4</bgvid>
 		<content> Well...ok. We haven't had time to talk in person yet, but I don't have time for lunch. How about going to the bar tonight? </content>
 		<option href="l532e000">Great! Let's meet at 8 o'clock. See you there! </option>
 		<option href="l532e000">That's fine with me as well. See you there at 8 o'clock. </option>
@@ -1694,6 +1737,7 @@
 	<event level="800" element="0" id="l540e000" eventtype="13" imcost="0" imqual="0" imtime="0" loc="5">
 		<content> You are entering the bar. Vance is already there. Go talk to him. </content>
 		<bgimg>role9pic1.PNG</bgimg>
+ <bgvid>l540e000.mp4</bgvid>
 		<nextevent href="l541e000" />
 	</event>
 	<!-- Dialogelement -->
@@ -1702,6 +1746,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l541e000.mp4</bgvid>
 		<content> You are walking up to Vance. </content>
 		<option href="l542e000">Hey Vance! My man! How are you doing? Let’s get boozed up! What do you want? </option>
 		<option href="l542e000">Hi Vance! Hope you haven’t been waiting long. Everything good? What can I order for you? </option>
@@ -1713,6 +1758,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l542e000.mp4</bgvid>
 		<content>Hello, %gender% %surname%. I’m fine. I’ll have a beer. Thanks. </content>
 		<option href="l544e000">Eh! Don’t be so stuck up! Bartender, 2 shots of Jägermeister! We have to celebrate. </option>
 		<option href="l544e000">Good choice I'll have one too. Bartender, 2 pints of Paulaner, please. </option>
@@ -1735,6 +1781,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l544e000.mp4</bgvid>
 		<content> Alright... </content>
 		<option href="l545e000"> Tell me Vance, where are you from originally, you don’t look very Texan? </option>
 		<option href="l545e001">Finally I meet our best programmer, how did you end up in the IT sector? </option>
@@ -1746,6 +1793,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l545e000.mp4</bgvid>
 		<content> That’s right. I come from New York. The best city ever! </content>
 		<option href="l550e000">Alright beside that.. Have you seen the football game yesterday? </option>
 		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
@@ -1756,6 +1804,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l545e001.mp4</bgvid>
 		<content> In highschool I discovered my talent in programming. Since then I really was into programming games and later studied Computer Science in Virgina. </content>
 		<option href="l550e000">Alright, sounds cool... Have you seen the football game yesterday? </option>
 		<option href="l550e000">Interesting. Are you into sports? I had a blast at last nights football match. </option>
@@ -1766,6 +1815,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l545e002.mp4</bgvid>
 		<content> Thanks... I don’t really have much time for playing games. </content>
 		<option href="l550e000">What a shame. Have you seen the football game yesterday? </option>
 		<option href="l550e000">Oh ok. Are you into sports? I had a blast at last nights football match. </option>
@@ -1776,6 +1826,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l550e000.mp4</bgvid>
 		<content> I didn't see the game. I was fishing yesterday. </content>
 		<option href="l552e000">Oh man, that sucks. The Cowboys smashed the Giants yesterday! Let’s watch the next one together! </option>
 		<option href="l552e000">Sounds boring to me. Anyway let’s talk about business now. </option>
@@ -1787,6 +1838,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l551e002.mp4</bgvid>
 		<content> Yes, me too. Most of the time I go the spot at the Colorado River, right next to the city park. </content>
 		<option href="l552e000">Sounds great. Haven’t heard about that one. We should go there after work at some point. </option>
 		<option href="l552e001">I always go to the Turkey Creek spot. I think it’s much better. </option>
@@ -1798,6 +1850,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l552e000.mp4</bgvid>
 		<content> I will let you know. Anyway, why did you want to talk to me? </content>
 		<option href="l554e000">I heard that you want to leave the company. What's the problem? </option>
 		<option href="l553e000">The PAS offer of course... </option>
@@ -1808,6 +1861,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l554e000.mp4</bgvid>
 		<content> The Management treats us like dumb coding machines. All we have to do is coding as fast as we can. No one talks with us about the project and what we think about it. </content>
 		<option href="l556e000">But isn't that your job? </option>
 		<option href="l556e000">I guess that is your field of expertise. What else could you contribute? </option>
@@ -1818,6 +1872,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l556e000.mp4</bgvid>
 		<content> It is, but we have good ideas, too. And no one cares about that. </content>
 		<option href="l557e000">Alright, I will invite you to the next steering committee meeting. </option>
 		<option href="l557e001">Please, talk to the IT boss then. He is your representative in the strategy meetings. </option>
@@ -1828,6 +1883,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l557e000.mp4</bgvid>
 		<content> Sounds like a plan. You will be surprised how much better our software will be then. </content>
 		<option href="l512e000"> Looking forward to it! We can take the project to the next level. </option>
 		<option href="l512e000"> Yes, I'm very confident. You and your work are very important to us. </option>
@@ -1839,6 +1895,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l512e000.mp4</bgvid>
 		<content> It was great talking to you but I really have to go now, my family is waiting for me. <br /> I will continue to work on this project together with you. <br /> I am happy that you will give the developers the chance to contribute. </content>
 		<option href="l513e000">Next</option>
 	</event>
@@ -1848,6 +1905,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l557e001.mp4</bgvid>
 		<content> That doesn't work. We need a faster way. </content>
 		<option href="l515e000">Sorry, but that are the rules. Listen, I will raise your pay by 50.000$ because you are really important to us. Let us continue to work together. </option>
 		<option href="l557e000">Alright, next time I will invite you to the next steering committee meeting. </option>
@@ -1858,6 +1916,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l515e000.mp4</bgvid>
 		<content> Mhh... I guess I will give this project another chance then. </content>
 		<option href="l514e000">Next</option>
 	</event>
@@ -1879,6 +1938,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l552e001.mp4</bgvid>
 		<content> Maybe... Why did you want to talk so urgently? I can’t stay too long. </content>
 		<option href="l553e000">I need you to stay on the project. Your are our best man! </option>
 		<option href="l553e000">Ok. Let's come to the point. Don't take the PAS offer. We will pay much more! </option>
@@ -1889,6 +1949,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l553e000.mp4</bgvid>
 		<content> Sorry my decision is final. I will leave next week. We can't work together. </content>
 		<option href="l555e000">Next</option>
 	</event>
@@ -1896,6 +1957,7 @@
 	<event level="800" element="0" id="l555e000" eventtype="13" imcost="0" imqual="-10" imtime="0" loc="5">
 		<content> Vance stands up and leaves. You haven't been doing a great impression. This will have a big impact on the quality of the project. </content>
 		<bgimg>loc2a.png</bgimg>
+ <bgvid>l555e000".mp4</bgvid>
 		<nextevent href="l665e600" />
 	</event>
 	<!-- Dialogelement -->
@@ -1904,6 +1966,7 @@
 		<date>2014-04-04 18:23:34</date>
 		<title>Drinks with Vance Veba</title>
 		<bgimg>role9pic2.png</bgimg>
+ <bgvid>l552e002.mp4</bgvid>
 		<content> Yes, let’s do that. I guess you wanted to talk me about my PAS offer? </content>
 		<option href="l554e000">That's correct. What's on your mind? Why do you want to leave? </option>
 		<option href="l554e000">Why don't you feel valued? I want to understand your position. </option>
@@ -1929,6 +1992,7 @@
 	<event level="600" element="0" id="l502e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l502e000.mp4</bgvid>
 		<date>2014-06-22 15:03:12</date>
 		<title>You already called for your assistant to talk things through. </title>
 		<content>Hi boss, you called me in?</content>
@@ -1940,6 +2004,7 @@
 	<event level="600" element="0" id="l503e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l503e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Really well, thanks for asking.</content>
@@ -1950,6 +2015,7 @@
 	<event level="600" element="0" id="l504e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l504e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>O...kay?</content>
@@ -1961,6 +2027,7 @@
 	<event level="600" element="1" id="l504e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l504e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Oh, that. I wasn’t aware that you’re involved. I delivered it to Thomas just a few days ago. What about it? </content>
@@ -1972,6 +2039,7 @@
 	<event level="600" element="2" id="l504e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l504e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Okay. What would that be? </content>
@@ -1981,6 +2049,7 @@
 	<event level="600" element="0" id="l505e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l505e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>What? I didn’t have much time to do it, but I had no idea he wasn’t okay with what I delivered. What was wrong? </content>
@@ -1992,6 +2061,7 @@
 	<event level="600" element="1" id="l505e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l505e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Why yes, of course. Was there anything wrong with it? </content>
@@ -2003,6 +2073,7 @@
 	<event level="600" element="2" id="l505e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l505e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Oh, okay. Then there’s not much to talk about, is there? </content>
@@ -2013,6 +2084,7 @@
 	<event level="600" element="0" id="l506e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l506e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Well, okay. If that’s what both of you think.</content>
@@ -2022,6 +2094,7 @@
 	<event level="600" element="1" id="l506e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l506e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Now that you say it. Yes, I was in a real hurry and just wanted to get it done. I probably should’ve spent a few more minutes before sending it out. I’ll be more careful in the future. </content>
@@ -2031,6 +2104,7 @@
 	<event level="600" element="2" id="l506e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l506e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Oh, okay. Yeah, I couldn’t possibly have foreseen every detail. </content>
@@ -2040,6 +2114,7 @@
 	<event level="600" element="3" id="l506e003" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l506e003.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Yes, sure.</content>
@@ -2049,6 +2124,7 @@
 	<event level="600" element="0" id="l507e000" eventtype="3" imcost="0" imqual="-2" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l507e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Okay, boss. Won’t happen again...</content>
@@ -2057,6 +2133,7 @@
 	<event level="600" element="1" id="l507e001" eventtype="3" imcost="0" imqual="+2" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l507e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Thanks for the feedback. I’d better hang in and make it up to Thomas on the next opportunity. Is that all for now? </content>
@@ -2065,6 +2142,7 @@
 	<event level="600" element="2" id="l507e002" eventtype="3" imcost="0" imqual="0" imtime="-2" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)</partner>
 		<bgimg>role7pic1.png</bgimg>
+ <bgvid>l507e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You give feedback to your assistant </title>
 		<content>Is that it for now or do you need anything else? </content>
@@ -2073,6 +2151,7 @@
 	<event level="700" element="0" id="l570e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l570e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Nice job, %prename%. You really dodged all the bullets this time. Listen, I was at a BBQ with some friends from college recently. One of them is in a similar position as I am, and we talked business... long story short, I’m really excited about the analytical side of CRM. This could really push my sales to the next level. But, as you know – we don’t have any of that covered in the project as it is. What do you think? Can you throw some analytics capabilities in the mix? </content>
@@ -2083,6 +2162,7 @@
 	<event level="700" element="0" id="l571e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l571e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Great! I knew I could count on you. I’ll run my ideas by Jessica. </content>
@@ -2092,6 +2172,7 @@
 	<event level="700" element="1" id="l571e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l571e001".mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Yeah, of course I’m aware of that. But you know how they say: Where there's a will there's a way, right? </content>
@@ -2102,6 +2183,7 @@
 	<event level="700" element="2" id="l571e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l571e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>I know you’re concerned about your project, but it’d be a real benefit for my department... </content>
@@ -2111,6 +2193,7 @@
 	<event level="700" element="1" id="l572e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l572e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>The formal way, huh? Can’t we just have a gentleman’s agreement on that? </content>
@@ -2119,6 +2202,7 @@
 	<event level="700" element="1" id="l573e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l573e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Well, okay. How would that work? </content>
@@ -2127,6 +2211,7 @@
 	<event level="700" element="2" id="l572e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l572e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>After the Steering Committee meeting, B.R. talks to you in the conference room. </title>
 		<content>Frankly, that wasn’t the answer I expected to hear. But well, it’s your project... I gotta run, next meeting up ahead. Bye. </content>
@@ -2200,6 +2285,7 @@
 	<event level="700" element="0" id="l601e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l601e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Good Morning, %gender% %surname%. Let’s get right down to business. Time is money, as they say. </content>
@@ -2209,6 +2295,7 @@
 	<event level="700" element="1" id="l601e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l601e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>What’s the matter? Aren’t you awake yet? ... So, I heard that you’re in big trouble without additional funds. Convince me. Why should I approve them? </content>
@@ -2219,6 +2306,7 @@
 	<event level="700" element="2" id="l601e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l601e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Good. So, I heard that you’re in big trouble without additional funds. Convince me. Why should I approve them? </content>
@@ -2229,6 +2317,7 @@
 	<event level="700" element="0" id="l602e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l602e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>That is entirely your problem. I do want the project to succeed. But: I want this done without any additional money. You won’t see another Cent from Concrete Machinery. </content>
@@ -2240,6 +2329,7 @@
 	<event level="700" element="1" id="l602e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l602e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>I am aware of that. And I do want the project to succeed. But: I want this done without any additional money. You won’t see another Cent from Concrete Machinery. </content>
@@ -2251,6 +2341,7 @@
 	<event level="700" element="2" id="l602e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l602e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>That is entirely your problem. I do want the project to succeed. But: I want this done without any additional money. You won’t see another Cent from Concrete Machinery. </content>
@@ -2262,6 +2353,7 @@
 	<event level="700" element="1" id="l603e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>I’m not the one who made promises that are out of my power. I guess I will have to save the day... as is often the case. I want to see something for my money. How do we assure that? </content>
@@ -2271,6 +2363,7 @@
 	<event level="700" element="2" id="l603e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Interesting. I'm all ears. </content>
@@ -2280,6 +2373,7 @@
 	<event level="700" element="3" id="l603e003" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e003.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Bluffing?! You are obviously misjudging... </content>
@@ -2289,6 +2383,7 @@
 	<event level="700" element="4" id="l603e004" eventtype="3" imcost="+2" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e004.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>I’m not the one who made promises that are out of my power. I guess I will have to save the day... as is often the case. I want to see something for my money. How do we assure that? </content>
@@ -2298,6 +2393,7 @@
 	<event level="700" element="0" id="l604e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e000.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>I certainly hope so. Fine. Consider the funding secured. </content>
@@ -2306,6 +2402,7 @@
 	<event level="700" element="1" id="l604e001" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e001.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Good, you’ve got yourself a deal. Just make sure to live up to your promises... you appear to be a loudmouth. </content>
@@ -2314,6 +2411,7 @@
 	<event level="700" element="2" id="l604e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e002.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the promised scope expansion </title>
 		<content>Good, you’ve got yourself a deal. Just make sure to live up to your promises... you appear to be a loudmouth. </content>
@@ -2322,6 +2420,7 @@
 	<event level="700" element="3" id="l604e003" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e003".mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>You are the most disrespectful person I have encountered so far. Forget the budget. Out of my office. </content>
@@ -2374,6 +2473,7 @@
 	<event level="700" element="10" id="l601e010" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l601e010.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Good Morning, %gender% %surname%. Let’s get right down to business, shall we? Time is money, as they say. </content>
@@ -2383,6 +2483,7 @@
 	<event level="700" element="11" id="l601e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l601e011.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>What’s the matter? Aren’t you awake yet? ... So, I heard that you plan on expanding the project and funds. Convince me. Why should I approve them? </content>
@@ -2393,6 +2494,7 @@
 	<event level="700" element="12" id="l601e012" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l601e012.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Good. So, I heard that you plan on expanding the project and funds. Convince me. Why should I approve them? </content>
@@ -2403,6 +2505,7 @@
 	<event level="700" element="10" id="l602e010" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l602e010.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Although personally I don’t see the need for those additional features, I do want the project to succeed. But: Why can’t you do this without additional money. You won’t see another Cent from Concrete Machinery. </content>
@@ -2414,6 +2517,7 @@
 	<event level="700" element="11" id="l602e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l602e011.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>I am aware of that. And I do want the project to succeed. But: Why shouldn't you do this without additional money? You won’t see another Cent from Concrete Machinery. </content>
@@ -2425,6 +2529,7 @@
 	<event level="700" element="12" id="l602e012" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l602e012.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>I am aware of that. And I do want the project to succeed. But: I want this done without additional money. You won’t see another Cent from Concrete Machinery. </content>
@@ -2436,6 +2541,7 @@
 	<event level="700" element="11" id="l603e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e011.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Well, it seems you are really certain about this. I guess I don’t want to be the killjoy this time. But: I want to see something for my money. How do we assure that? </content>
@@ -2445,6 +2551,7 @@
 	<event level="700" element="12" id="l603e012" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e012.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Interesting. I'm all ears. </content>
@@ -2454,6 +2561,7 @@
 	<event level="700" element="13" id="l603e013" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e013.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Bluffing?! You are obviously misjudging... </content>
@@ -2463,6 +2571,7 @@
 	<event level="700" element="14" id="l603e014" eventtype="3" imcost="+2" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l603e014.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Well, it seems you are really certain about this. I guess I don’t want to be the killjoy this time. But: I want to see something for my money. How do we assure that? </content>
@@ -2472,6 +2581,7 @@
 	<event level="700" element="10" id="l604e010" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e010.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>I certainly hope so. Fine. Consider the funding secured. </content>
@@ -2480,6 +2590,7 @@
 	<event level="700" element="11" id="l604e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e011.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Good, you’ve got yourself a deal. Just make sure to live up to your promises. </content>
@@ -2488,6 +2599,7 @@
 	<event level="700" element="12" id="l604e012" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e012.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>Good, you’ve got yourself a deal. Just make sure to live up to your promises. </content>
@@ -2496,6 +2608,7 @@
 	<event level="700" element="13" id="l604e013" eventtype="3" imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l604e013.mp4</bgvid>
 		<date>2014-04-04 17:21:34</date>
 		<title>You negotiate additional budget for the optional scope expansion </title>
 		<content>You are the most disrespectful person I have encountered so far. Forget the budget. Out of my office. </content>
@@ -2553,6 +2666,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
+ <bgvid>l610e000.mp4</bgvid>
 		<content>%prename%, hi! How are you today? </content>
 		<option href="l611e000">Can’t complain, how are you? </option>
 		<option href="l612e000">I'm fine and how about you? Is everything allright? </option>
@@ -2563,6 +2677,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
+ <bgvid>l611e000.mp4</bgvid>
 		<content>Good, good, thanks. Listen, I wanted to talk to you about the CRM system. </content>
 		<option href="l612e000">Sure, what’s going on? </option>
 		<option href="l612e000">Is something wrong with it? </option>
@@ -2573,6 +2688,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
+ <bgvid>l612e000.mp4</bgvid>
 		<content>Well, I’m worried... the CRM system is not...how do I put this... I think it's not really what we need. Our sales operations are going great, and the company has grown ever since we got out of the financial crisis... </content>
 		<option href="l613e000">So you’re successful enough already? </option>
 		<option href="l613e000">So our product is rubbish? </option>
@@ -2583,6 +2699,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic2.png</bgimg>
+ <bgvid>l613e000.mp4</bgvid>
 		<content>I’ve been told you are an open person. So yes, that’s what I think. I can’t really understand why our company puts so much time and money into this new system. </content>
 		<option href="l614e000">But don’t you see how we’re making your life even easier? </option>
 		<option href="l614e001">So what would you have me do? </option>
@@ -2593,6 +2710,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic2.png</bgimg>
+ <bgvid>l614e000.mp4</bgvid>
 		<content>All I’m seeing right now is that I’ll have to go to IT classes and learn a new system when instead we could be with my clients, selling our products! </content>
 		<option href="l615e000">I see. It seems you and your leadership have different perceptions of our product. </option>
 		<option href="l615e001">But after you’ve learned it, you’ll be more successful, don’t you think? </option>
@@ -2603,6 +2721,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic2.png</bgimg>
+ <bgvid>l614e001.mp4</bgvid>
 		<content>I...I don’t know. I mean, your job is to improve our sales function. Can’t you advise B.R. to invest our money into rhetoric or presentation courses instead? </content>
 		<option href="l615e002">My job is not to consult your sales leader, my job is to implement a CRM... </option>
 		<option href="l615e003">Oh, I’ll have a talk with B.R., you can count on that... </option>
@@ -2613,6 +2732,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
+ <bgvid>l615e000.mp4</bgvid>
 		<content>Yes. But since my leadership isn’t discussing this topic with me, I thought I might as well voice my concerns with you. </content>
 		<option href="l617e000">I get that. I’ll talk to B.R., I have a meeting with him in a couple of minutes anyway. </option>
 	</event>
@@ -2622,6 +2742,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
+ <bgvid>l615e001.mp4</bgvid>
 		<content>Could be. I don’t know, I wasn’t ever told much about the software. </content>
 		<option href="l617e000">That’s interesting. Maybe this is a communication problem. I’ll go talk to B.R. </option>
 	</event>
@@ -2631,6 +2752,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic1.png</bgimg>
+ <bgvid>l615e002.mp4</bgvid>
 		<content>Maybe. But he’s not listening to me anyway, maybe that’s why I thought you could... </content>
 		<option href="l617e000">I see. Well, after hearing your concerns I’ll definitely go talk to him. </option>
 	</event>
@@ -2640,6 +2762,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>On the way to a meeting, you run into J.J. in the hallway... </title>
 		<bgimg>role10pic2.png</bgimg>
+ <bgvid>l615e003.mp4</bgvid>
 		<content>No, wait. Don’t get me wrong. That was a stupid suggestion, I shouldn’t have said that. </content>
 		<option href="l617e000">It’s fine. But I am indeed on my way to talk to B.R. See you around, J.J. </option>
 	</event>
@@ -2683,6 +2806,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l618e000.mp4</bgvid>
 		<content>There’s my favorite project manager! How are you doin’, %prename%? </content>
 		<option href="l619e000"> Oh you know how it goes, work hard, play hard, right? And how are you? </option>
 		<option href="l619e000"> The painter Herm Albright once said ‘A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort’. How about you? </option>
@@ -2693,6 +2817,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l619e000.mp4</bgvid>
 		<content>Hahaha, it sure does! I’m great, I was out huntin’ this morning and I shot a deer, boy oh boy, that was majestic! That guy’s gonna go up on my living room wall, believe me! </content>
 		<option href="l620e000">Congrats, B.R.! Hope your wife’s not gonna mind... </option>
 		<option href="l621e000">Congratulations! Anyhow, let's talk about business. I ran into J.J. on my way here and had an interesting conversation with him. </option>
@@ -2703,6 +2828,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l620e000.mp4</bgvid>
 		<content>Oh, she’ll deal with it, she always does. Anyhow, how’s business? </content>
 		<option href="l621e000"> I’m actually really glad we have this meeting. I ran into J.J. on the way here. </option>
 		<option href="l621e000"> I just had an interesting conversation with J.J. about the project. </option>
@@ -2713,6 +2839,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l621e000.mp4</bgvid>
 		<content>Ah, J.J. Good guy, don’t you think? </content>
 		<option href="l622e000">I’m not sure. He doesn’t seem to like our software. </option>
 		<option href="l622e000">He might be, but he seems to lack confidence in our project. </option>
@@ -2723,6 +2850,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l622e000.mp4</bgvid>
 		<content>That’s interesting. I mean, you know my opinion, I don’t care what I use, if it makes me successful. But I thought especially my more ‘modern’ colleagues would like it, with all their Tablets and whatnot... </content>
 		<option href="l623e000">I would have thought so too. But it seems we haven’t made the value of what we do here clear enough to them. </option>
 		<option href="l623e000">Maybe they would, if they really knew how our software will help them? </option>
@@ -2733,6 +2861,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l623e000.mp4</bgvid>
 		<content>So what do you suggest we do? </content>
 		<option href="l624e000">Let me think... </option>
 	</event>
@@ -2750,6 +2879,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l625e000.mp4</bgvid>
 		<content>Hm, if you feel that’s sufficient to change their mind, fine with me. Can you get me the materials? I’ll get my team together for a meeting and go over it with them. </content>
 		<option href="l626e000">Absolutely. Anything you’d like to discuss? </option>
 		<option href="l626e000">Sure it is. Are there any other topics to discuss? </option>
@@ -2760,6 +2890,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l625e001.mp4</bgvid>
 		<content>That sounds like a good idea to me. We won’t take too much of everyone’s time but get a chance to make sure that they’re all on board. I like it! </content>
 		<option href="l626e001">Glad you do. I’ll have my secretary arrange everything. Anything you’d like to discuss? </option>
 		<option href="l626e001">Glad you do. I'm sure they'll be all on board. Are there any other topics to discuss? </option>
@@ -2770,6 +2901,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l625e002.mp4</bgvid>
 		<content>That sounds like a good enough plan, but I wouldn’t have thought the project could still afford it...anyhow, if you think we do, I’ll roll with it. </content>
 		<option href="l626e002">Glad you like it. I’ll have my secretary arrange everything. Anything you’d like to discuss? </option>
 		<option href="l626e002">Great. Are there any other topics to discuss?</option>
@@ -2780,6 +2912,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l626e000.mp4</bgvid>
 		<content>No, I’m good for today, thanks. Glad you brought this up, though. Talk to you soon, %prename%! </content>
 		<option href="l627e000">Alright, bye bye, B.R.! </option>
 	</event>
@@ -2789,6 +2922,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l626e001.mp4</bgvid>
 		<content>No, I’m good for today, thanks. Glad you brought this up, though. Talk to you soon, %prename%! </content>
 		<option href="l627e001">Alright, bye bye, B.R.! </option>
 	</event>
@@ -2798,6 +2932,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Time for your checkpoint meeting with B.R.!</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l626e002.mp4</bgvid>
 		<content>No, I’m good for today, thanks. Glad you brought this up, though. Talk to you soon, %prename%! </content>
 		<option href="l627e002">Alright, bye bye, B.R.! </option>
 	</event>
@@ -2856,6 +2991,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l630e001.mp4</bgvid>
 		<content> ....wait! Your are telling us that you guys ran into some troubles, won’t tell us the effects and just expect that we are satisfied? </content>
 		<option href="l630e002">Mrs. Eberle, my job is project manager. I fix problems, when they occur. And I did. I assure you, the project will be completed to everyone’s satisfaction. </option>
 		<option href="l630e002">Mrs. Eberle, as a project manager you always have to react on new circumstances and there is never THE one right way to cope with an issue. That is why I can’t tell you which one action fixed our problem, but I can assure you that the combination of our actions, the decisions we’ve made and the conversations we had with Avi Gupta actually helped us to deal with this issue. </option>
@@ -2866,6 +3002,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l630e002.mp4</bgvid>
 		<content> We’re still lacking details here... </content>
 		<option href="l630e003">You can trust me on this. I talked to Avi Gupta about this issue and we found a proper solution together. You don’t need to worry. </option>
 		<option href="l630e003">Didn’t I do a good job in this project so far? You really have to put more faith in me and my skills as a project manager. </option>
@@ -2885,6 +3022,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role3pic1.png</bgimg>
+ <bgvid>l630e004.mp4</bgvid>
 		<content> I trust in your judgment Mr. Zimmermann. Hopefully this won’t backfire on us. <br /> How about the others? </content>
 		<option href="l630e005">Next</option>
 	</event>
@@ -2894,6 +3032,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role5pic3.png</bgimg>
+ <bgvid>l630e005.mp4</bgvid>
 		<content> In my opinion, the last couple of weeks showed that we cannot trust %gender% %surname%’s judgment. Trust is something hard to gain but very easy to lose. <br /> Hopefully, in the next steering committee we will get some more pleasant news. </content>
 		<option href="l630e006">Next</option>
 	</event>
@@ -2903,6 +3042,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>role4pic1.png</bgimg>
+ <bgvid>l630e006.mp4</bgvid>
 		<content> You guys know my standing in this. As long as it does not affect my quota, I don’t care. </content>
 		<option href="l630e007">Next</option>
 	</event>
@@ -2912,6 +3052,7 @@
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
 		<bgimg>content3pic3.png</bgimg>
+ <bgvid>l630e007.mp4</bgvid>
 		<content> Well, thanks everyone for coming and providing us with your honest feedback! I will contact you shortly about the date for our next steering committee, but all of you are always welcome to contact me if there is anything to discuss! </content>
 		<option href="l570e000">Next</option>
 	</event>
