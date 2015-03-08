@@ -71,13 +71,13 @@ import javax.servlet.annotation.WebServlet;
 		
 		//***Original Email without using HTML
 		String content = "Dear project manager, \n\n please use the following link to register to your course: " + link + "\n\n With best regards, \n" +
-		"your brillianCRM team \n\n\n Please notify that this is a system generated email. Please do not reply.";
+		"your brillianCRM team \n\n\n Please note that this is a system generated e-mail. Please do not reply.";
 		
 		//send the mail
 		MailClient mailclient = new MailClient();
 		mailclient.sendMail(toMail, "Registration Link brillianCRM", content, request);
 			
-		request.setAttribute("status", "Your email was sent to the entered address.");
+		request.setAttribute("status", "Your e-mail was sent to the entered address.");
 		
 		//request.setAttribute("status", "Repeated password does not match.");
 			
