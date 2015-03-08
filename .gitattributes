@@ -1,6 +1,6 @@
 # Files with code to be ignored for language statistics
 doku/* linguist-documentation
-tools/* linguist-documentation
+tools/* linguist-documentation=false
 
 # Force line ending normalization for entire project. Does not affect local repo setting.
 # Will be converted on push to github and back to your local settings upon pull
