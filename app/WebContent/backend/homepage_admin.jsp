@@ -113,8 +113,12 @@
 			</div>
 			<div style="margin-left: 320px;">
 				<h4>Change Password.</h4>
+				<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
-					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
+					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
++					<!--  Password check -->
++					<div class="formLabel">Old Password:</div>
++					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
 					<div class="formLabel">Password:</div>
 					<input type="password" name="password" maxlength="50"/><br /><br />
@@ -133,5 +137,15 @@
 	$('#imprint').bind('click', function() {
 		showImprint();
 	});
+	function confirmPasswordChange()
+	{
+		var box = window.confirm("Click OK if you want to change password. You will be logged out. ");
+		if(box)
+		{
+		$('#updatePassword').trigger('click');
+		sessionStorage.removeItem('userid');
+		window.location.href = 'LogoutUser';
+		}
+	}
 </script>
 </html>
