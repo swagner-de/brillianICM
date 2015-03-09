@@ -1,6 +1,9 @@
 <%@ page import="org.dhbw.imbit11.ApplicationConstants" %>
 <div class="locationBackgroundContainer easyui-panel" data-options="fit:true,border:false">
 	<div class="dialogContainer">
+		<video id="background-video">
+			<source src="" type="video/mp4">
+		</video>
 		<div class="dialogTextContainer bc easyui-panel" data-options="width:315,height:562,border:false">
 			<div class="dialogPartner panel-header">
 				<div class="dialogPartnerName panel-title"></div>
