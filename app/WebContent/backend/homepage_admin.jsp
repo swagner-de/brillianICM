@@ -125,7 +125,7 @@
 					<div class="formLabel">Repeat Password:</div>
 					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton" onclick="$('#updatePassword').trigger('click')">Update Password</a>
+					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
 			</div>
 		</div>
