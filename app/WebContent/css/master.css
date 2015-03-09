@@ -386,13 +386,6 @@ body.dialogBody,body.mainBody {
 	display: none;
 }
 
-.dialogContainer video {
-	position:absolute;
-	z-index:0;
-	width: 852px    !important;
-	height: 562px   !important;
-}
-
 .dialogContainer div.panel {
 	margin-left: inherit !important;
 	margin-right: inherit !important;
@@ -401,6 +394,7 @@ body.dialogBody,body.mainBody {
 .selectionContainer,.allocationContainer {
 	background: white;
 	opacity: 1.0;
+	width: 100%;
 }
 
 .selectionTitle {
