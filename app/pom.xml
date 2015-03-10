@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dhbw-mannheim</groupId>
 	<artifactId>brillianCRM</artifactId>
-	<version>2.2.2release</version>
+	<version>2.2.3release</version>
 	<packaging>war</packaging>
 
 	<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->
@@ -85,7 +85,6 @@
 	<properties>
 		<yworks.uml.path>${basedir}\yworks-uml-doclet-3.0_02-jdk1.5</yworks.uml.path>
 	</properties>
-
 
 	<build>
 		<!-- Basic Config -->
