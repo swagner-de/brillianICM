@@ -81,10 +81,10 @@
 		<title>Welcome</title>
 		<content>Hello %prename%, good to talk to you! I am glad that you
 			accepted this job offer. In preparation for our project, I sent you
-			two emails with the basic information about CRM, project management
+			two e-mails with the basic information about CRM, project management
 			and Concrete Machinery. Please read them in advance and make sure you
 			understand them. This is very important for a good project start.
-			Please call me back, as soon as you read the emails. </content>
+			Please call me back, as soon as you read the e-mails. </content>
 		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
 
@@ -100,7 +100,7 @@
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
 		<content>Hello %prename%, thanks for calling me back. Do you have any
-			questions about the emails I sent you?</content>
+			questions about the e-mails I sent you?</content>
 		<option href="l001e002">No, I feel well prepared for the project. Thank
 			you for asking.</option>
 		<option href="l001e003">Yes, indeed, I didn’t really understand the files
@@ -373,7 +373,7 @@
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
 		<content>You may connect your computer to our network. I have already
-			sent you an email containing the project charter. </content>
+			sent you an e-mail containing the project charter. </content>
 		<option href="l011e000">Next</option>
 		<bgimg>loc3a.png</bgimg>
 		<bgvid>l010e000.mp4</bgvid>
@@ -384,7 +384,7 @@
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
 		<content>You may connect your computer to our network. I have already
-			sent you an email containing the project charter. </content>
+			sent you an e-mail containing the project charter. </content>
 		<option href="l011e001">Next</option>
 		<bgimg>loc3a.png</bgimg>
 	</event>
@@ -587,7 +587,7 @@
 			<br />
 			<br />
 			<br />
-			Please perform the risk analysis and check your emails afterwards.
+			Please perform the risk analysis and check your e-mails afterwards.
 			<br />
 			<br />
 			Kind regards,
@@ -1469,7 +1469,7 @@
 			I have prepared the project schedule with MS Project. Please find
 			attached the corresponding file. If you cannot open the file, you
 			have to download the MS Project software. I will send you a second
-			email with further instructions.
+			e-mail with further instructions.
 			<br />
 			Kind regards,
 			<br />
@@ -1967,7 +1967,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like things are a little bit out of hand. It appears that our
 			colleagues are significantly behind schedule.
 			<br />
@@ -2008,7 +2008,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like things are a little bit out of hand. As you know, our colleagues
 			in India worked overtime to fix a problem with their schedule.
 			Unfortunately, this measure backfired and quality has suffered:
@@ -2054,7 +2054,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like their work got slightly delayed. As you know, we have hired
 			additional resources in India to counter the delay.
 			<br />
@@ -2095,7 +2095,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like things are slightly out of hand. Our Indian colleagues had
 			problems meeting the schedule, so we sent over experts from Germany.
 			We are back on schedule now, but the cost of sending our experts on
@@ -2159,7 +2159,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2186,7 +2186,7 @@
 			Hi Jessica,
 			<br />
 			<br />
-			Thank you for your email. I suggest to take the following modules out
+			Thank you for your e-mail. I suggest to take the following modules out
 			of scope for now:
 			<br />
 		</content>
@@ -2215,7 +2215,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2241,7 +2241,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2267,7 +2267,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2293,7 +2293,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2319,7 +2319,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2345,7 +2345,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2371,7 +2371,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2397,7 +2397,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2423,7 +2423,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2449,7 +2449,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2475,7 +2475,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2501,7 +2501,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2527,7 +2527,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2599,7 +2599,7 @@
 			Hello Mr. Gupta
 			<br />
 			<br />
-			Thanks for your email.
+			Thanks for your e-mail.
 		</content>
 		<option href="l800e001">
 			It is good to hear that testing is about to be finished and did not
@@ -2835,7 +2835,7 @@
 			running by the end of next week.
 			<br />
 			<br />
-			Please contact our CTO via email, he has to give the green light to
+			Please contact our CTO via e-mail, he has to give the green light to
 			the database guys, otherwise they won’t set it up.
 			<br />
 			<br />
