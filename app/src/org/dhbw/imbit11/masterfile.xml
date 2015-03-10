@@ -692,7 +692,7 @@
 		</option>
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="+7" imqual="+13" imcost="+11" eventtype="1"
+	<event loc="" imtime="+7" imqual="+13" imcost="+10" eventtype="1"
 		id="l025e000" element="0" level="25">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -715,7 +715,7 @@
 		<nextevent href="l030e000" />
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="-5" imqual="-9" imcost="-9" eventtype="1"
+	<event loc="" imtime="-7" imqual="-13" imcost="-10" eventtype="1"
 		id="l025e001" element="1" level="25">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
