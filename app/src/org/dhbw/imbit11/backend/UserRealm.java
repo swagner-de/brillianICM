@@ -47,6 +47,9 @@ public class UserRealm extends JdbcRealm {
 	protected String getGroupsForProfessorQuery = "SELECT * FROM `group`WHERE `professor_id`= (SELECT `user_id` FROM `user` WHERE `email` = ?)ORDER BY `group_name` ASC";
 	protected String groupExistsQuery = "SELECT COUNT(`group_id`) FROM `group` WHERE `group_id`=?";
 	protected String userExistsQuery = "SELECT Count(email) from `user` WHERE `email`=?";
+	
+	protected String getSettings = "SELECT * FROM `settings`";
+	protected String setSettings = "UPDATE `settings` SET `audio`=?, `video`=?, `tts`=?, `subtitles`=?";
 
 	/**
 	 * Invokes the constructor of parent class (superclass) function looks up an
@@ -104,6 +107,39 @@ public class UserRealm extends JdbcRealm {
 			conn.close();
 		}
 	}
+	
+	protected ArrayList<Boolean> getSettings()
+				throws SQLException {
+			Connection conn = dataSource.getConenction();
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+			ArrayList<Boolean> settings = new ArrayList<Boolean>();
+			try {
+					ps = conn.prepareStatement(getSettings);
+					rs = ps.executeQuery();
+					while(rs.next()) {
+						settings.add(rs.getBoolean(1));
+						settings.add(rs.getBoolean(2));
+						settings.add(rs.getBoolean(3));
+						settings.add(rs.getBoolean(4));
+					}
+			}
+		}
+		
+		protected void setSettings(Boolean audio, Boolean video, Boolean tts, Boolean subtitles)
+				throws SQLException {
+			Connection conn = datasource.getConnection();
+			PreparedStatement ps = null;
+			// what about null values?
+			try {
+				ps = conn.prepareStatement(setSettings);
+				ps.setBoolean(1, audio);
+				ps.setBoolean(2, video);
+				ps.setBoolean(3, tts);
+				ps.setBoolean(4, subtitles);
+				ps.executeUpdate();
+			}
+		}
 
 	/**
 	 * Invoked in java class ProfessorMain does not work if the user has no

@@ -116,9 +116,9 @@
 				<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
-+					<!--  Password check -->
-+					<div class="formLabel">Old Password:</div>
-+					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
+					<!--  Password check -->
+					<div class="formLabel">Old Password:</div>
+					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
 					<div class="formLabel">Password:</div>
 					<input type="password" name="password" maxlength="50"/><br /><br />
@@ -127,6 +127,23 @@
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
+			</div>
+			<div style="margin-left: 320px;">
+				<h4>Global Settings</h4>
+				<form action="SetGlobalSettings" method="post">				
+					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
+					<input type="radio" name="audio" value="true" checked>Audio On
+					<br>
+					<input type="radio" name="audio" value="false">Audio Off
+					<br>
+					<input type="radio" name="video" value="true" checked>Video On
+					<br>
+					<input type="radio" name="video" value="false">Video Off
+					<br>
+					<input id="setSettings" type="submit" name="setSettings" value="Save Changes" hidden="hidden"/>
+					<a class="easyui-linkbutton studentButton" onclick="$('#setSettings').trigger('click')">Save Changes</a>
+				</form>
+				
 			</div>
 		</div>
 		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
