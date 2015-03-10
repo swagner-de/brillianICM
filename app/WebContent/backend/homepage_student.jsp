@@ -69,7 +69,14 @@
 							<p style="color: red; padding-left: 32px;">${progresserror}</p>
 				<form action="SetUserProgress" method="post">
 					<div class="formLabel">Unique Level ID (Format: lxxxexxx):</div>
-					<input type="text" name="lvlId" maxlength="8" value=""/>
+					<select name="lvlId" id="lvlId">
+					<option value="l009e013">Project Management Phasen</option>
+					<option value="l022e000">Risk Analysis</option>
+					<option value="l031e000">Stakeholder Analysis</option>
+					<option value="l201e000">Work Breakdown Structure</option>
+					<option value="l204e000">Budget Planning</option>
+					<option value="l290e000">Critical Path</option>													
+					</select>
 					<input id="setUserProgress" type="submit" name="setUserProgress" value="Set Progress" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick="$('#setUserProgress').trigger('click')">Set Progress</a>
 				</form>
