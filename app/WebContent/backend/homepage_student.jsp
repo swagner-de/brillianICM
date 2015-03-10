@@ -68,7 +68,7 @@
 				<h4>Jump to Level.</h4>
 							<p style="color: red; padding-left: 32px;">${progresserror}</p>
 				<form action="SetUserProgress" method="post">
-					<div class="formLabel">Unique Level ID (Format: lxxxexxx):</div>
+					<div class="formLabel">Select Game:</div>
 					<select name="lvlId" id="lvlId">
 					<option value="l009e013">Project Management Phasen</option>
 					<option value="l022e000">Risk Analysis</option>
