@@ -91,12 +91,19 @@
 											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form></td><td>");
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
 												+"<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"cost\" value=\"50\" style=\"display:none\"/>" 
-												+"<input type=\"text\" name=\"time\" value=\"50\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"quality\" value=\"50\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"lvlId\" value=\"lxxxexxx\"/>"
+												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
+												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
+												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
+												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here*/
+												+"<select name=\"lvlId\" id=\"lvlId\">"
+												+"<option value=\"l204e000\">Budget Planning</option>"
+												+"<option value=\"l290e000\">Critical Path</option>"
+												+"<option value=\"l009e013\">Project Management Phasen</option>"
+												+"<option value=\"l022e000\">Risk Analysis</option>"
+												+"<option value=\"l031e000\">Stakeholder Analysis</option>"								
+												+"<option value=\"l201e000\">Work Breakdown Structure</option>"
+												+"</select>"								
 												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
-											//	+"<p style=\"color: blue;\">+status+"</p></td><td>"
 												+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
 												);
 											out.println("</td></tr></table> ");
