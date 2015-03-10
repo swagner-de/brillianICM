@@ -264,12 +264,30 @@ function loadMailDraft () {
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
-	var background = $xml.find('bgimg').text();
+
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
+	
+	var background;
+	var backgroundWithPartnerUrl;
+		
 	//Lade den Dialog Hintergrund
-	var backgroundPictureWithPartnerUrl = 'images/' + background;
-	setDialogBackground(backgroundPictureWithPartnerUrl);
+	if ($xml.find('bgimg').text() != '') {
+		background = $xml.find('bgimg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setDialogBackground(backgroundWithPartnerUrl, false);
+	}
+	if ($xml.find('bgvid').text() != '') {
+		background = $xml.find('bgvid').text();
+		backgroundWithPartnerUrl=window.location.href;
+		position = backgroundWithPartnerUrl.lastIndexOf('/');
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
+		setDialogBackground(backgroundWithPartnerUrl, true);
+	} 
+
+	
+	
 		
 	$('.dialogButton').remove();
 	dialogPartnerNameContainer.text(partner);
@@ -344,8 +362,17 @@ function loadAllocation () {
 		var itemInfo = $(this).attr('finfo');
 		var itemDescription = $(this).attr('fdesc');
 		var itemRank = $(this).attr('rank');	
-		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
 	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
 	
 	var draggableItem = container.find('.drag');
 	
@@ -460,9 +487,19 @@ function loadMatrixAllocation () {
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
-		var itemDescription = $(this).attr('fdesc');	
-		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '">' + itemText + '</div>');
+		var itemDescription = $(this).attr('fdesc');
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '"' + itemHoverTitle +'>' + itemText + '</div>');
 	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
 	
 	//Auswahl aller Tiles die beweglich sind
 	var draggableItems = container.find('.dragTile');
@@ -1055,12 +1092,23 @@ function setLocation (backgroundPictureUrl) {
 	$('.locationBackgroundContainer').css('background-image', 'url('+backgroundPictureUrl+')');
 }
 
-// Sets the background picture for the background
-function setDialogBackground (backgroundPictureUrl) {
-	backgroundPictureUrlNew = 'url('+backgroundPictureUrl+')';
-	backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
-	if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
-		$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
+// Sets the background picture or video for the background
+function setDialogBackground (backgroundUrl, existsVideo) {
+	if (existsVideo == true) {
+		//since it will always be a different dialogue video no comparison with the old video is necessary
+		var vid = document.getElementById('background-video');
+		vid.src = backgroundUrl;
+		setTimeout(function(){
+			vid.play();
+		}, 2000);
+	} else {
+		// if no video exists, the role picture is set
+		document.getElementById('background-video').src = '';
+		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+		backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
+		if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+			$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
+		}
 	}	
 }
 

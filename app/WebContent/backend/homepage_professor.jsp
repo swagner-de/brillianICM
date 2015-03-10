@@ -91,12 +91,19 @@
 											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form></td><td>");
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
 												+"<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"cost\" value=\"50\" style=\"display:none\"/>" 
-												+"<input type=\"text\" name=\"time\" value=\"50\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"quality\" value=\"50\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"lvlId\" value=\"lxxxexxx\"/>"
+												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
+												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
+												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
+												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here*/
+												+"<select name=\"lvlId\" id=\"lvlId\">"
+												+"<option value=\"l204e000\">Budget Planning</option>"
+												+"<option value=\"l290e000\">Critical Path</option>"
+												+"<option value=\"l009e013\">Project Management Phasen</option>"
+												+"<option value=\"l022e000\">Risk Analysis</option>"
+												+"<option value=\"l031e000\">Stakeholder Analysis</option>"								
+												+"<option value=\"l201e000\">Work Breakdown Structure</option>"
+												+"</select>"								
 												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
-											//	+"<p style=\"color: blue;\">+status+"</p></td><td>"
 												+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
 												);
 											out.println("</td></tr></table> ");
@@ -197,21 +204,21 @@
 			</div>
 			<div style="clear: both;"></div>
 			<div>
-				<h1>Change Password</h1>
-				<form action="ResetPassword" method="post">
-					<input type="text" name="username" maxlength="50"
-						value="${username}" style="display: none" /> <input type="text"
-						name="role" maxlength="50" value="professor" style="display: none" />
+				<h4>Change Password.</h4>
+				<p style="color: red; padding-left: 32px;">${error}</p>
+				<form action="ResetPassword" method="post">				
+					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
+					<input type="text" name="role" maxlength="50" value="professor" style="display: none"/><br /><br />
+					<!--  Password check -->
+					<div class="formLabel">Old Password:</div>
+					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
 					<div class="formLabel">Password:</div>
-					<input type="password" name="password" maxlength="50" /><br />
+					<input type="password" name="password" maxlength="50"/><br /><br />
 					<br />
 					<div class="formLabel">Repeat Password:</div>
-					<input type="password" name="password_repeat" maxlength="50" /><br />
-					<br /> <input id="updatePassword" type="submit"
-						name="updatePassword" value="Update password" hidden="hidden" /> <a
-						class="easyui-linkbutton"
-						onclick="$('#updatePassword').trigger('click')">Update
-						Password</a>
+					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
+					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
+					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
 			</div>
 			<div class="mainEventContainerImprint easyui-window"
@@ -240,6 +247,16 @@
 				+ groupname);
 		if (box) {
 			$('#deleteGroupButton' + i).trigger('click');
+		}
+	}
+	function confirmPasswordChange()
+	{
+		var box = window.confirm("Click OK if you want to change password. You will be logged out. ");
+		if(box)
+		{
+			$('#updatePassword').trigger('click');
+			sessionStorage.removeItem('userid');
+			window.location.href = 'LogoutUser';
 		}
 	}
 </script>
