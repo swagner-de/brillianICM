@@ -253,7 +253,7 @@
 		<description>Let me know your choice!</description>
 		<option href="l009e001" img="role7pic3.png">I want Priya Williams!</option>
 		<option href="l009e002" img="role8pic4.png">I want Nadja Schuster!</option>
-		<option href="l009e003" img="role6pic3.png">I want Martin Heinemann!</option>
+		<option href="l022e000" img="role6pic3.png">I want Martin Heinemann!</option>
 	</event>
 	<event level="9" element="1" id="l009e001" eventtype="3" imcost="0"
 		imqual="-10" imtime="+10" loc="4">
@@ -262,7 +262,7 @@
 		<title>Choice of an Assistant</title>
 		<content>Good decision, Priya is going to be a great assistant!
 		</content>
-		<option href="l010e000">Next</option>
+		<option href="l009e010">Next</option>
 		<bgimg>role3pic3.png</bgimg>
 		<bgvid>l009e001.mp4</bgvid>
 	</event>
@@ -273,7 +273,7 @@
 		<title>Choice of an Assistant</title>
 		<content>Good decision, Nadja is going to be a great assistant!
 		</content>
-		<option href="l010e001">Next</option>
+		<option href="l009e011">Next</option>
 		<bgimg>role3pic3.png</bgimg>
 		<bgvid>l009e002.mp4</bgvid>
 	</event>
@@ -284,10 +284,89 @@
 		<title>Choice of an Assistant</title>
 		<content>Good decision, Martin is going to be a great assistant!
 		</content>
-		<option href="l010e001">Next</option>
+		<option href="l009e011">Next</option>
 		<bgimg>role3pic3.png</bgimg>
 		<bgvid>l009e003.mp4</bgvid>
 	</event>
+	<!-- Laura: Neue Einfuehrung-->
+	<event level="9" element="4" id="l009e010" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
+		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
+		<date>2014-01-03 11:31:54</date>
+		<title>Arrival at the office</title>
+		<content>So, now that you have chosen an assistant, we can go over the project management tasks to ensure that we are on the same page about project procedure. Prepare an overview of the project management tasks, and show me your result.  </content>
+		<option href="l009e012">Next</option>
+		<bgimg>role3pic2.png</bgimg>
+	</event>
+	<event level="9" element="4" id="l009e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
+		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
+		<date>2014-01-03 11:31:54</date>
+		<title>Arrival at the office</title>
+		<content>So, now that you have chosen an assistant, we can go over the project management tasks to ensure that we are on the same page about project procedure. Prepare an overview of the project management tasks, and show me your result.  </content>
+		<option href="l009e013">Next</option>
+		<bgimg>role3pic2.png</bgimg>
+	</event>
+	<!-- Laura: Splittung der WBS in 2 separate Spiele: Projekt Management Phasen und Work Breakdown Structure in Bezug auf BrillianCRM Spiel--> 
+	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e012" element="0" level="009">
+		<title>Project Management Tasks</title>
+		<description>Please assign the tasks to each deliverable of the project management phase</description>
+		<column>Project Initiation</column>
+		<column>Project Planning</column>
+		<column>Project Execution</column>
+		<column>Project Closing</column>
+		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Change Management</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Project Charter</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Work Breakdown Structure</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Responsibilities</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Cost Management</option>
+		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Quality Management</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Post Cost Analysis</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Budget Estimations</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Management</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Milestone Planning</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Kickoff Meeting</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Management</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Strategies and Measures</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling Management</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Allocation</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Final Project Report</option>
+			<nextevent href="l010e000" />
+	</event>
+	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e013" element="0" level="009">
+		<title>Project Management Tasks</title>
+		<description>Please assign the tasks to each deliverable of the project management phase</description>
+		<column>Project Initiation</column>
+		<column>Project Planning</column>
+		<column>Project Execution</column>
+		<column>Project Closing</column>
+		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Change Management</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Project Charter</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Work Breakdown Structure</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Responsibilities</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Cost Management</option>
+		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Quality Management</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Post Cost Analysis</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Budget Estimations</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Management</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Milestone Planning</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Kickoff Meeting</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Management</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Strategies and Measures</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling Management</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Allocation</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Final Project Report</option>
+			<nextevent href="l010e001" />
+	</event>
+	
 	<event level="10" element="0" id="l010e000" eventtype="3" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -520,71 +599,36 @@
 		</attachment>
 		<nextevent href="l022e000" />
 	</event>
-	<!-- Auswahl mit Bild -->
-	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="5"
-		id="l022e000" element="0" level="22">
-		<title>Auswahl mit Bild</title>
-		<description>
-			Please select an appropiate risk analysis matrix, which will fit your
-			project best.
-			<br />
-		</description>
-		<option href="l023e000" img="content4pic1.png"> Risk Analysis 1. </option>
-		<option href="l023e000" img="content4pic2.png"> Risk Analysis 2. </option>
-		<option href="l023e001" img="content4pic3.png"> Risk Analysis 3. </option>
+	<!-- Laura: Drag and Drop der Risk Matrix -->
+	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l022e000" element="0" level="22">
+		<title>Risk Analysis</title>
+		<description>Please assign the risk packages to each field of the Risk Matrix</description>
+		<option rank="1" fdesc="Test">Exchange of Human Resources, because of absence (e.g. sickness, vacation, …).</option>
+		<option rank="4" fdesc="Test">Traffic Jam on the way to work for employees.</option>
+		<option rank="7" fdesc="Test">Minor difference of executed tasks from the action plan.</option>
+		<option rank="2" fdesc="Test">The requirements definition is incomplete, insufficient and changes appear in the course of the project. The customer might try to widen the scope of the project.</option>
+		<option rank="5" fdesc="Test">Lack of communication within the Team. Intercultural missunderstanding within the Team. Indian team members cannot deliver in time. </option>
+		<option rank="8" fdesc="Test">Key Contacts are not specifically defined or do not have enough time for their tasks.</option>
+		<option rank="3" fdesc="Test">Project is out of scope. It faces delays regarding milestones and time. Budged is out of scope. </option>
+		<option rank="6" fdesc="Test">The requirements of the security of information and data protection is not complied (Governmental requirements).</option>
+		<option rank="9" fdesc="Test">Customer's IT department is not ready for CRM implementation.</option>
+		<nextevent href="l023e000" />
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="-10" imqual="-15" imcost="-10" eventtype="1"
-		id="l023e000" element="0" level="23">
+	<!-- Laura: Einheitliche Mail ohne Punktebewertung -->
+	<!-- Laura: Durch die neue Matrix keine Splittung des Pfades und Punktebewertung von Zeit, Kosten und Qualitaet bisher technisch nicht moeglich.-->
+	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1" id="l023e000" element="0" level="23">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 10:21:00</date>
 		<subject>Re: Important! Risk Analysis</subject>
-		<content>
-			Dear %prename%,
-			<br />
-			thanks for your risk analysis.
-			<br />
-			After taking a look at it I noticed that you made some mistakes.
-			Please take a look at the attached correct matrix.
-			<br />
-			<br />
-			After identifying the possible risks, please also make sure you
-			provide necessary measures for them.
-			<br />
-			<br />
-			Kind regards,
-			<br />
-			Thomas
-			<br />
+		<content> Dear %prename%, <br /> thanks for your risk analysis. You did a great job on that one! <br /> After identifying the possible risks, please also make sure you provide necessary measures for them. <br />
+			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="Solution.pdf">Final risk matrix</attachment>
 		<nextevent href="l024e000" />
 	</event>
-	<!-- Mail -->
-	<event loc="" imtime="+10" imqual="+15" imcost="+10" eventtype="1"
-		id="l023e001" element="1" level="23">
-		<from>Thomas Zimmermann</from>
-		<to>%prename% %surname%</to>
-		<date>2014-01-06 10:55:00</date>
-		<subject>Re: Important! Risk Analysis</subject>
-		<content>
-			Dear %prename%,
-			<br />
-			thanks for your risk analysis. You did a great job on that one!
-			<br />
-			After identifying the possible risks, please also make sure you
-			provide necessary measures for them.
-			<br />
-			<br />
-			Kind regards,
-			<br />
-			Thomas
-			<br />
-		</content>
-		<attachment href="Solution.pdf">Final risk matrix</attachment>
-		<nextevent href="l024e000" />
-	</event>
+	
 	<!-- Auswahl -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="4"
 		id="l024e000" element="0" level="24">
@@ -733,69 +777,39 @@
 		</attachment>
 		<nextevent href="l031e000" />
 	</event>
-	<!-- Auswahl mit Bild -->
-	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="5"
-		id="l031e000" element="0" level="31">
-		<title>Auswahl mit Bild</title>
-		<description>
-			Please select an appropiate stakeholder analysis matrix, which will
-			fit your project best.
-			<br />
+	<!-- Laura: Drag and Drop der Stakeholder Matrix -->
+	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l031e000" element="0" level="31">
+		<title>Stakeholder Analysis</title>
+		<description> Please assign the CRM customer to each field of the Stakeholder Matrix. <br />
 		</description>
-		<option href="l032e000" img="content5pic1.png"> Stakeholder Analysis 1. </option>
-		<option href="l032e001" img="content5pic3.png"> Stakeholder Analysis 2. </option>
-		<option href="l032e000" img="content5pic2.png"> Stakeholder Analysis 3. </option>
+		<option rank="1" fdesc="Test">Future users of the CRM software (employees and sales representatives)</option>
+		<option rank="4" fdesc="Test">Competitive companies</option>
+		<option rank="7" fdesc="Test">Customer's customer</option>
+		<option rank="2" fdesc="Test">CEO of brillianCRM "Thomas Zimmermann"; IT manager "Avinash (Avi) Gupta" and the assistant from India "Rajesh Ananat"</option>
+		<option rank="5" fdesc="Test">IT specialists; Consultants;</option>
+		<option rank="8" fdesc="Test">Customer's sales director "Billy-Ray Stylus"; Governmental organization</option>
+		<option rank="3" fdesc="Test">Customer's CEO; Customer's CIO; Customer's CFO; Customer's Project Manager "Jessica (Jessie) Oaks"</option>
+		<option rank="6" fdesc="Test">Sponsors of the customer</option>
+		<option rank="9" fdesc="Test">Person in charge of data security</option>
+		<nextevent href="l032e000" />
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="-10" imqual="-15" imcost="-10" eventtype="1"
-		id="l032e000" element="0" level="32">
-		<from>Thomas Zimmermann</from>
-		<to>%prename% %surname%</to>
-		<date>2014-01-07 12:53:00</date>
-		<subject>Re: Important! Stakeholder Analysis</subject>
-		<content>
-			Dear %prename%,
-			<br />
-			<br />
-			thanks for your stakeholder analysis.
-			<br />
-			After reviewing it I noticed that you made some mistakes. Please take
-			a look at the correct matrix in the attachment.
-			<br />
-			<br />
-			Kind regards,
-			<br />
-			Thomas
-			<br />
-		</content>
-		<attachment href="Stake_Sol3.pdf">Final Stakeholder Analysis / Matrix
-		</attachment>
-		<nextevent href="l065e000" />
-	</event>
-	<!-- Mail -->
-	<event loc="" imtime="+7" imqual="+11" imcost="+7" eventtype="1"
-		id="l032e001" element="1" level="32">
+	<!-- Laura: Einheitliche Mail ohne Punktebewertung -->
+	<!-- Laura: Durch die neue Matrix keine Splittung des Pfades und Punktebewertung von Zeit, Kosten und Qualitaet bisher technisch nicht moeglich.-->
+	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1" id="l032e000" element="0" level="32">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-01-07 12:57:00</date>
 		<subject>Re: Important! Stakeholder Analysis</subject>
-		<content>
-			Dear %prename%,
-			<br />
-			<br />
-			thanks for your stakeholder analysis. You did a great job on that
-			one!
-			<br />
-			<br />
-			Kind regards,
-			<br />
-			Thomas
-			<br />
+		<content> Dear %prename%, <br />
+			<br /> thanks for your stakeholder analysis. You did a great job on that one! <br />
+			<br /> Kind regards, <br /> Thomas <br />
 		</content>
-		<attachment href="Stake_Sol3.pdf">Final Stakeholder Analysis / Matrix
-		</attachment>
-		<nextevent href="l065e000" />
+		<attachment href="StakeSol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
+		<nextevent href="l065e000" />	
 	</event>
+	
+
 	<event level="065" element="0" id="l065e000" eventtype="13"
 		imcost="0" imqual="0" imtime="0" loc="4">
 		<content>2 weeks later... </content>
@@ -1050,73 +1064,36 @@
 		<attachment />
 		<nextevent href="l201e000" />
 	</event>
-	<!-- Laura: Änderung des Spielinhaltes, 5 Projektmanagementphasen statt 
-		4, detailiertere weniger Bausteine für die Phasen erstellt, geändert nach 
-		DIN 69901-5 -->
-	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6"
-		id="l201e000" element="0" level="201">
+	<!-- Laura: Splittung der WBS in 2 separate Spiele: Projekt Management Phasen und Work Breakdown Structure in Bezug auf BrillianCRM Spiel--> 
+	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
-		<description>Please assign the work packages to each deliverable of
-			the Work Breakdown Structure </description>
+		<description>Please assign the work packages to each deliverable of the work breakdown structure </description>
 		<column>CRM Strategy</column>
 		<column>Software Customized</column>
 		<column>Data</column>
 		<column>Handover</column>
-		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf"
-			fdesc="Work Package Description: Data Migration">Data Migration</option>
-		<option column="1" rank="14" finfo="Arbeitspakete/Process_Adaptation.pdf"
-			fdesc="Work Package Description: Sales Process Adaptation"> Sales Process Adaption </option>
-		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf"
-			fdesc="Work Package Description: Training">Training</option>
-		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf"
-			fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
-		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf"
-			fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
-		<option column="2" rank="6"
-			finfo="Arbeitspakete/Implementation_(live_system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation
-			Live System </option>
-		<option column="1" rank="9"
-			finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force
-			Analysis </option>
-		<option column="3" rank="15" finfo="Arbeitspakete/Data_Model_Creation.pdf"
-			fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf"
-			fdesc="Work Package Description: Pilot Running">Pilot Running</option>
-		<option column="2" rank="4"
-			finfo="Arbeitspakete/Implementation_(test_environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation
-			Testing Environment</option>
-		<option column="1" rank="5"
-			finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination
-			Mobile Devices </option>
-		<option column="2" rank="2"
-			finfo="Arbeitspakete/Requirements_Specification.pdf" fdesc="Work Package Description: Requirements Specification">Requirements
-			Specification </option>
-		<option column="4" rank="5" finfo="Arbeitspakete/Testing.pdf"
-			fdesc="Work Package Description: Testing">Testing</option>
-		<option column="2" rank="8" finfo="Arbeitspakete/Roll-Out.pdf"
-			fdesc="Work Package Description: Roll-Out">Roll-Out</option>
-		<option column="1" rank="10" finfo="Arbeitspakete/Process_Analysis.pdf"
-			fdesc="Work Package Description: Sales Process Analysis">Sales Process Analysis</option>
-		<option column="2" rank="1"
-			finfo="Arbeitspakete/Development_in_India.pdf" fdesc="Work Package Description: Development in India">Development in
-			India </option>
-		<option column="1" rank="12"
-			finfo="Arbeitspakete/Target_State_Analysis.pdf" fdesc="Work Package Description: Target State Analysis">Target State
-			Analysis </option>
-		<option column="2" rank="17"
-			finfo="Arbeitspakete/Functional_Requirements.pdf" fdesc="Work Package Description: Functional Requirements">Functional
-			Requirements </option>
-		<option column="3" rank="16"
-			finfo="Arbeitspakete/Creation_of_Migration_Concept.pdf" fdesc="Work Package Description: Creation of Migration Concept">
-			Creation of Migration Concept </option>
-		<option column="1" rank="7"
-			finfo="Arbeitspakete/Actual_State_Analysis.pdf" fdesc="Work Package Description: Actual State Analysis">Actual State
-			Analysis </option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Approval.pdf"
-			fdesc="Work Package Description: Approval">Approval</option>
-		<option column="1" rank="13"
-			finfo="Arbeitspakete/Design_Customer_Relationship_Strategy.pdf"
-			fdesc="Work Package Description: Design Customer Relationship Strategy and Structure">Design Customer Relationship Strategy and Structure</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration">Data Migration</option>
+		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
+		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
+		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
+		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_Live_System.pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
+		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
+		<option column="3" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination Mobile Devices </option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Requirements_Specification.pdf" fdesc="Work Package Description: Requirements Specification">Requirements Specification </option>
+		<option column="4" rank="5" finfo="Arbeitspakete/Testing.pdf" fdesc="Work Package Description: Testing">Testing</option>
+		<option column="2" rank="8" finfo="Arbeitspakete/Roll-Out.pdf" fdesc="Work Package Description: Roll-Out">Roll-Out</option>
+		<option column="1" rank="10" finfo="Arbeitspakete/Process_Analysis.pdf" fdesc="Work Package Description: Sales Process Analysis">Sales Process Analysis</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Development_in_India.pdf" fdesc="Work Package Description: Development in India">Development in India </option>
+		<option column="1" rank="12" finfo="Arbeitspakete/Target_State_Analysis.pdf" fdesc="Work Package Description: Target State Analysis">Target State Analysis </option>
+		<option column="2" rank="17" finfo="Arbeitspakete/Functional_Requirements.pdf" fdesc="Work Package Description: Functional Requirements">Functional Requirements </option>
+		<option column="3" rank="16" finfo="Arbeitspakete/Creation_of_Migration_Concept.pdf" fdesc="Work Package Description: Creation of Migration Concept"> Creation of Migration Concept </option>
+		<option column="1" rank="7" finfo="Arbeitspakete/Actual_State_Analysis.pdf" fdesc="Work Package Description: Actual State Analysis">Actual State Analysis </option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Approval.pdf" fdesc="Work Package Description: Approval">Approval</option>
+		<option column="1" rank="13" finfo="Arbeitspakete/Design_Customer_Relationship_Strategy.pdf" fdesc="Work Package Description: Design Customer Relationship Strategy and Structure">Design Customer Relationship Strategy and Structure</option>
 		<nextevent href="l202e000" />
 	</event>
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1"
