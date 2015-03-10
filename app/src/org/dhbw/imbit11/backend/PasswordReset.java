@@ -44,11 +44,14 @@ import org.apache.shiro.subject.Subject;
 	}  	
 
 	/**
-	 * Reads out whether the parameter updatePassword is not empty
+	 * Checks updatePasswor Form in either admin, professor or student homepage. 
++	 * Contained data means that user wants to perform password change.
++	 * If data is filled, password change will be processed.
 	 * Parameter updatePassword is not empty: Reads out role and stores depending on the role the fitting URL
-	 * in the parameter url and checks if password equals repeated password and encrypts new
-	 * password
-	 * Parameter updatePassword is empty: A new password is created, saved to the database
+	 * in the parameter url.
++	 * subject and strings are loaded. Old password will be checked via UsernamePasswordToken. 
++	 * If new entered passwords match, they will be hashed and stored in database. User will be logged out.
++	 * If Parameter updatePassword is empty: A new password is created, saved to the database
 	 * and sent to the user with the message that it was successful saved to the request
 	 * Request and response is sent to the view of the fitting URL
 	 * If repeated password does not equal the password: request gives out an error message
@@ -58,6 +61,7 @@ import org.apache.shiro.subject.Subject;
 	 * 
 	 * @throws ServletException - throws exception when servlet encounters difficulties
 	 * @throws IOException - signals that an IO exception occured and gives out line of code
+	 * @throws IncorrectCredentialsException - old Password is wrong
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
@@ -84,11 +88,11 @@ import org.apache.shiro.subject.Subject;
 			String password = request.getParameter("password");
 			String password_repeat = request.getParameter("password_repeat");
 
-			/* try {
-			 * UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
-			 * subject.login(token);
-			 * token.clear(); */
-		//try {	
+			try {
+				UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
+				// subject.login(token);
+				token.clear(); 
+				//try {	
 			
 			if(password.equals(password_repeat)){
 				PasswordEncryptor pe = new PasswordEncryptor();
@@ -96,31 +100,38 @@ import org.apache.shiro.subject.Subject;
 				UserRealm realm = new UserRealm();
 				try{
 					realm.updatePassword(email, hashedPassword);
-					/*
-			        * if (subject != null) {
-			        *	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
-			        *    subject.logout();
-			        * }
-			        * HttpSession session = request.getSession(false);
-			        * if( session != null ) {
-			        *    session.invalidate();
-			        * }     
-					*/   
-				}catch(SQLException e){
-					//System.out.println("password update failed!");
-					e.printStackTrace();
+					this.url="/LogoutUser";
+					// Log out after password update 
+					/* if (subject != null) {
+				 	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
+				     subject.logout();
+				   }
+			         HttpSession session = request.getSession(false);
+			         if( session != null ) {
+			          session.invalidate();
+			        }     */ 
+					   
+					}catch(SQLException ex){
+					// System.out.println("password update failed!");
+					// e.printStackTrace();
 					request.setAttribute("error", "SQL Connection failed");
+					this.url = "/backend/homepage_"+ role +".jsp";
 				}
 			}else{
 				request.setAttribute("error", "Repeated password does not match.");
 			}
-		/* }  catch (IncorrectCredentialsException ex) {
-		*	// password provided did not match password found in database
-		*	// for the Username which is trying to do the password change
-		*	ex.printStackTrace();
-		*	request.setAttribute("error", "Login failed! Wrong old Password!");
-		* } 
-		*/ 
+			} catch (IncorrectCredentialsException ex) {
+				// password provided did not match password found in database
+				// for the Username which is trying to do the password change
+				ex.printStackTrace();
+				request.setAttribute("error", "Login failed! Wrong old Password!");
+				this.url = "/backend/homepage_"+ role +".jsp";
+				
+				 } catch (RuntimeException ex) {
+			 	// passwords do not match each other
+			  	request.setAttribute("error", "Repeated password does not match.");
+			  	this.url = "/backend/homepage_"+ role +".jsp";
+				 }
 		}else{
 		
 			String email = request.getParameter("username");
@@ -134,6 +145,7 @@ import org.apache.shiro.subject.Subject;
 		UserRealm realm = new UserRealm();
 		try{
 			realm.updatePassword(email, hashedPassword);
+			url="/LogoutUser";
 		}catch(SQLException e){
 			//System.out.println("Update of Password in DB failed.");
 			e.printStackTrace();

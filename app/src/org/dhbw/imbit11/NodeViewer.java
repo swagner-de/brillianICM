@@ -59,7 +59,6 @@ public class NodeViewer extends HttpServlet {
 	 * @param request - contains the request of a client
 	 * @param response - contains the response with character encoding type of the masterfile
 	 * 
-	 * @throws Servlet Exception - throws exception when servlet encounters difficulties
 	 * @throws IOException - throws exception when masterfile could not be loaded
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -90,8 +89,8 @@ public class NodeViewer extends HttpServlet {
 		/**
 		 * Searches node with level and element
 		 * 
-		 * @param level
-		 * @param element
+		 * @param level - defined in xml (?)
+		 * @param element - element the user is at (?)
 		 * 
 		 * @return node - node that the method defined
 		 */
