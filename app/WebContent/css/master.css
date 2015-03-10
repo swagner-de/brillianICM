@@ -394,7 +394,6 @@ body.dialogBody,body.mainBody {
 .selectionContainer,.allocationContainer {
 	background: white;
 	opacity: 1.0;
-	width: 100%;
 }
 
 .selectionTitle {
@@ -643,6 +642,14 @@ div.dragTile {
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 	
+}
+
+#xAxisDescription {
+	background: #e6edfa;
+	height: 30px;
+	width: 494px;
+	margin-left: 165px;
+	font-size: 30px
 }
 
 
