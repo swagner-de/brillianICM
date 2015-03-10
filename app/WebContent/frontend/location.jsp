@@ -76,6 +76,7 @@
 		    <div class="bc tileAcceptor"></div>
 	    </div>
 	    <div style="clear: both;"></div>
+	    <div id="xAxisDescription"></div>
 	    <div class="draggableTilesContainer bc"></div>
 	    <div style="clear: both;"></div>
 	    
