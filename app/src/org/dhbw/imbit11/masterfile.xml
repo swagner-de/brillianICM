@@ -253,7 +253,7 @@
 		<description>Let me know your choice!</description>
 		<option href="l009e001" img="role7pic3.png">I want Priya Williams!</option>
 		<option href="l009e002" img="role8pic4.png">I want Nadja Schuster!</option>
-		<option href="l022e000" img="role6pic3.png">I want Martin Heinemann!</option>
+		<option href="l009e003" img="role6pic3.png">I want Martin Heinemann!</option>
 	</event>
 	<event level="9" element="1" id="l009e001" eventtype="3" imcost="0"
 		imqual="-10" imtime="+10" loc="4">
