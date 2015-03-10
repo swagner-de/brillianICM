@@ -101,6 +101,8 @@
 		if(box)
 		{
 			$('#updatePassword').trigger('click');
+			sessionStorage.removeItem('userid');
+			window.location.href = 'LogoutUser';
 		}
 	}
 </script>
