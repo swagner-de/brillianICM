@@ -128,7 +128,7 @@
 
 	</event>
 	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0"
-		imqual="-3" imtime="-3" loc="4">
+		imqual="-5" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
@@ -169,7 +169,7 @@
 		<bgvid>l002e000.mp4</bgvid>
 	</event>
 	<event level="3" element="1" id="l003e001" eventtype="3" imcost="+2"
-		imqual="+4" imtime="+2" loc="1">
+		imqual="+2" imtime="+2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 10:21:34</date>
 		<title>Pick up by client</title>
