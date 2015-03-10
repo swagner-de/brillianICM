@@ -48,7 +48,7 @@
 <p style="color:red">${status}</p>
 <form action="SendRegistrationLink" method="post">
  <input type="text" name="link" maxlength="50" value="${link}" style="display:none"/> <!-- Needed to post the groupnumber -->
- email <input type="email" name="email" maxlength="50"/><br />
+ e-mail <input type="email" name="email" maxlength="50"/><br />
 <input id="sendRegistration" style="display:none" type="submit" value="Send registration link"></input>
 <a class= "easyui-linkbutton" onclick="$('#sendRegistration').trigger('click')">Send registration link</a>
  </form>
