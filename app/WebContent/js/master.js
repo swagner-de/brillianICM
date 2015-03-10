@@ -473,8 +473,8 @@ function loadMatrixAllocation () {
 	var yAxisDescription = $xml.find('yAxis').text().toUpperCase();
 	var container = $('.matrixAllocationContainer');
 	var descriptionContainer = container.find('.description');
-	var xAxisDescriptionContainer = container.find('.xAxisDescription');
-	var yAxisDescriptionContainer = container.find('.yAxisDescription');
+	var xAxisDescriptionContainer = document.getElementById(xAxisDescription);
+	var yAxisDescriptionContainer = document.getElementById(yAxisDescription);
 	
 	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptors = container.find('.tileAcceptor');
@@ -505,7 +505,7 @@ function loadMatrixAllocation () {
 	var draggableItems = container.find('.dragTile');
 	descriptionContainer.text(description);
 	xAxisDescriptionContainer.text(xAxisDescription);
-	yAxisDescriptionContainer.text(yAxisDescriptionContainer);
+	yAxisDescriptionContainer.text(yAxisDescription);
 	
 	//Might be reused to name axes --> Low to High Impact/Priority
 	//$xml.find('column').each(function(index){

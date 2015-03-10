@@ -660,6 +660,19 @@ div.dragTile {
 }
 
 
+#yAxisDescription{
+width:20px;
+font-size:45px;
+background-color:#e6edfa;
+position:static;
+float:left;
+margin-left:90px;
+margin-right:10px;
+word-break:break-all;
+margin-top:100px;
+}
+
+
 
 div.dragIncorrect {
 	background-color: #ffa8a8;
