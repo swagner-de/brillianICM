@@ -491,8 +491,8 @@
 		<bgimg>role1pic9.png</bgimg>
 		<bgvid>l015e000.mp4</bgvid>
 	</event>
-	<event level="16" element="1" id="l016e001" eventtype="3" imcost="-5"
-		imqual="-10" imtime="-5" loc="4">
+	<event level="16" element="1" id="l016e001" eventtype="3" imcost="-3"
+		imqual="-7" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-05 10:09:34</date>
 		<title>Call with CEO</title>
@@ -515,7 +515,7 @@
 		<bgvid>l016e002.mp4</bgvid>
 	</event>
 	<event level="16" element="1" id="l016e003" eventtype="3" imcost="-5"
-		imqual="-10" imtime="-5" loc="4">
+		imqual="-10" imtime="-7" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-05 10:09:34</date>
 		<title>Call with CEO</title>
