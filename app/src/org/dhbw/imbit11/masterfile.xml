@@ -192,7 +192,7 @@
 		<bgvid>l003e002.mp4</bgvid>
 	</event>
 	<event level="3" element="3" id="l003e003" eventtype="3" imcost="-2"
-		imqual="-4" imtime="-2" loc="1">
+		imqual="-2" imtime="-2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 12:21:34</date>
 		<title>Pick up by client</title>
@@ -202,8 +202,8 @@
 		<bgimg>role3pic7.png</bgimg>
 		<bgvid>l003e003.mp4</bgvid>
 	</event>
-	<event level="3" element="4" id="l003e004" eventtype="3" imcost="-3"
-		imqual="-5" imtime="-3" loc="1">
+	<event level="3" element="4" id="l003e004" eventtype="3" imcost="0"
+		imqual="0" imtime="0" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 13:21:34</date>
 		<title>Pick up by client</title>
