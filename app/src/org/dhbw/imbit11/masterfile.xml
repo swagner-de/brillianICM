@@ -1186,7 +1186,7 @@
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="-1" imqual="0" imcost="-5" eventtype="5"
+	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="5"
 		id="l205e000" element="0" level="205">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1212,7 +1212,7 @@
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="+5" imqual="0" imcost="+5" eventtype="5"
+	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="5"
 		id="l205e001" element="1" level="205">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1238,7 +1238,7 @@
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="-3" imqual="-5" imcost="-3" eventtype="5"
+	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="5"
 		id="l206e000" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1267,7 +1267,7 @@
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="+5" imqual="+9" imcost="+5" eventtype="5"
+	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="5"
 		id="l206e001" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1296,7 +1296,7 @@
 		</option>
 	</event>
 	<!-- Auswahl mit Bild -->
-	<event loc="4" imtime="-5" imqual="-5" imcost="-5" eventtype="4"
+	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="4"
 		id="l207e000" element="0" level="207">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1322,7 +1322,7 @@
 		</option>
 	</event>
 	<!-- Auswahl mit Bild -->
-	<event loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="4"
+	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="4"
 		id="l207e001" element="0" level="207">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1348,7 +1348,7 @@
 		</option>
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="-10" imqual="-10" imcost="-15" eventtype="1"
+	<event loc="" imtime="-7" imqual="-11" imcost="-15" eventtype="1"
 		id="l208e000" element="0" level="208">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -1372,7 +1372,7 @@
 		<nextevent href="l289e000" />
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="+5" imqual="+5" imcost="+13" eventtype="1"
+	<event loc="" imtime="+7" imqual="+11" imcost="+15" eventtype="1"
 		id="l208e001" element="1" level="208">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
