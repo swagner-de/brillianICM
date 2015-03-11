@@ -2870,7 +2870,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="6" id="l332e006" eventtype="1"
-		imcost="-5" imqual="-3" imtime="0" loc="">
+		imcost="0" imqual="0" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-07-04 17:21:34</date>
