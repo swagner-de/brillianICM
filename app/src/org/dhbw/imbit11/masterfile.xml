@@ -5201,7 +5201,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="0" id="l630e000" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="3">
+		imcost="+2" imqual="+2" imtime="+5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
@@ -5229,7 +5229,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="0" id="l630e100" eventtype="3"
-		imcost="0" imqual="0" imtime="-5" loc="3">
+		imcost="-2" imqual="-2" imtime="-5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
