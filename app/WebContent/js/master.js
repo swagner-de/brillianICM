@@ -87,7 +87,6 @@ function getXml(id) {
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
-						removeHighlightMailNew();
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -734,7 +733,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addHighlightMailNew();
+				addHighlightNewMail();
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -817,6 +816,7 @@ function showNewMailTab () {
 			}
 		});	
 	}
+	removeHighlightNewMail();
 }
 
 function showImprint () {
@@ -1231,13 +1231,13 @@ function removeHighlightMail () {
 }
 
 // Adds Highlight to NewMail (MailDraft) Button
-function addHighlightMailNew () {
-	$("#tabs-tool").addClass("tabs-tool-highlight");
+function addHighlightNewMail () {
+	$('.tabs-tool').addClass('new-button-highlight');
 }
 
 //Removes Highlight from NewMail (MailDraft) Button
-function removeHighlightMailNew () {	
-	$("#tabs-tool").removeClass("tabs-tool-highlight");
+function removeHighlightNewMail () {	
+	$('.tabs-tool').removeClass('new-button-highlight');
 }
 
 //Shows the fullscreen transition window
