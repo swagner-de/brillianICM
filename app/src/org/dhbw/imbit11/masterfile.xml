@@ -2689,7 +2689,7 @@
 			such. </option>
 	</event>
 	<event level="600" element="1" id="l331e001" eventtype="3"
-		imcost="+5" imqual="+5" imtime="+5" loc="4">
+		imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)
 		</partner>
 		<date>2014-07-04 17:21:34</date>
@@ -2707,7 +2707,7 @@
 		<option href="l332e000">Thank you! See you later! </option>
 	</event>
 	<event level="600" element="1" id="l331e002" eventtype="3"
-		imcost="+5" imqual="+5" imtime="+5" loc="4">
+		imcost="-10" imqual="-5" imtime="-5" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)
 		</partner>
 		<date>2014-07-04 17:21:34</date>
@@ -2725,7 +2725,7 @@
 		<option href="l332e000">Thank you! See you later! </option>
 	</event>
 	<event level="600" element="1" id="l331e003" eventtype="3"
-		imcost="+5" imqual="+5" imtime="+5" loc="4">
+		imcost="-5" imqual="-5" imtime="-5" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)
 		</partner>
 		<date>2014-07-04 17:21:34</date>
