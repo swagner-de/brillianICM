@@ -733,7 +733,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addHighlightNewMail();
+				$('.tabs-tool').addClass('new-button-highlight');
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -816,7 +816,7 @@ function showNewMailTab () {
 			}
 		});	
 	}
-	removeHighlightNewMail();
+	$('.tabs-tool').removeClass('new-button-highlight');
 }
 
 function showImprint () {
