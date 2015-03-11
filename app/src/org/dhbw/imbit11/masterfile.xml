@@ -1431,7 +1431,7 @@
 		<!-- Theresa: Mail an neues Spiel angepasst -->
 	</event>
 	<event level="291" element="0" id="l291e001" eventtype="3"
-		imcost="+5" imqual="+7" imtime="+9" loc="3">
+		imcost="+7" imqual="+11" imtime="+15" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
@@ -1444,7 +1444,7 @@
 		<!-- Theresa: Mail an neues Spiel angepasst -->
 	</event>
 	<event level="291" element="0" id="l291e002" eventtype="3"
-		imcost="-7" imqual="-9" imtime="-13" loc="3">
+		imcost="-7" imqual="-11" imtime="-15" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
