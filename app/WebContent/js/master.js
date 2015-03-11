@@ -646,7 +646,9 @@ function showLocation (buttonId) {
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
 			//Gotta love that melody!
-			audioElement.play();	
+			var audiosetting=getCookie("audio");
+			if (audiosetting = true) {
+			audioElement.play();	}
 					
 	    			/* Loads background images in a row and finally loads Dialog or alike. 
 	    			 * @author Laluz
@@ -1258,7 +1260,9 @@ function showResult () {
 		onLoad: function(){
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
-			audioElement.play();
+			var audiosetting=getCookie("audio");
+			if (audiosetting = true) {
+			audioElement.play();	}
 			
 			document.getElementById("cost").innerHTML=gameData.imcost+"%";
 			document.getElementById("time").innerHTML=gameData.imtime+"%";
@@ -1302,7 +1306,9 @@ function showLoading () {
 	// (Vielleicht kann man hier noch einen Filter einbauen??)
 	var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
-	audioElement.play();
+	var audiosetting=getCookie("audio");
+	if (audiosetting = true) {
+	audioElement.play();	}
 	
 	//Um hässliche Ladeartefakte zu verhindern
 	$('body').show();

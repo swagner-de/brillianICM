@@ -130,6 +130,14 @@
 			</div>
 			<div style="margin-left: 320px;">
 				<h4>Global Settings</h4>
+				<form action="GetGlobalSettings" method="post">				
+					<p style="color: blue; padding-left: 32px;">${audio}</p>
+					<p style="color: blue; padding-left: 32px;">${video}</p>
+					<p style="color: blue; padding-left: 32px;">${tts}</p>
+					<p style="color: blue; padding-left: 32px;">${settings}</p>
+					<input id="getSettings" type="submit" name="getSettings" value="Get Settings" hidden="hidden"/>
+					<a class="easyui-linkbutton studentButton" onclick="$('#getSettings').trigger('click')">Get Settings</a>
+				</form>
 				<form action="SetGlobalSettings" method="post">				
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
 					<input type="radio" name="audio" value="true" checked>Audio On

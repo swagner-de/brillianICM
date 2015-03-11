@@ -114,5 +114,30 @@ import org.apache.shiro.subject.Subject;
         
         dispatcher.forward(request, response);
 		
-	}   	  	    
+	}   
+	
+	protected boolean getSettings(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+			
+				
+			//TODO: Validate and catch Integer to String conversion #403
+			Boolean audio;
+			Boolean video;
+			Boolean tts;
+			Boolean subtitles;
+			UserRealm realm = new UserRealm();
+			
+			try{ 
+				ArrayList<Boolean> settings = realm.getSettings();
+
+				audio = settings.get(0);
+				video = settings.get(1);
+				tts = settings.get(2);
+				subtitles = settings.get(3);
+				}
+			catch(SQLException e){
+				e.printStackTrace();
+			
+			}
+	}
 }

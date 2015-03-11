@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
-@WebServlet({"/GetGlobalProgress"})
+@WebServlet({"/GetSettingsCookie"})
 
 /**
  * 
@@ -60,6 +60,10 @@ import org.apache.shiro.subject.Subject;
 				video = settings.get(1);
 				tts = settings.get(2);
 				subtitles = settings.get(3);
+				
+				Cookie cookieSettings = new Cookie("Settings", audio, video, tts, subtitles);
+
+				response.addCookie(cookie);
 				}
 			catch(SQLException e){
 				e.printStackTrace();
