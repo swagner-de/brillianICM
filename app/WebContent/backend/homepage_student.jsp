@@ -67,7 +67,7 @@
 			<div>
 				<h4>Jump to Level.</h4>
 							<p style="color: red; padding-left: 32px;">${progresserror}</p>
-				<form action="SetUserProgress" method="post">
+				<form action="SetUserProgress" method="post" style=display:none id="setUserProgressForm">
 					<div class="formLabel">Select Game:</div>
 					<select name="lvlId" id="lvlId">
 					<option value="l009e013">Project Management Phasen</option>
@@ -82,7 +82,7 @@
 				</form>
 				<p style="color: blue; padding-left: 32px;">${status}</p>
 			</div>
-				
+		<a class="easyui-linkbutton studentButton" onclick="changeViewUserProgress()">Show</a>		
 		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 		</div>
 	</div>
@@ -105,6 +105,16 @@
 			window.location.href = 'LogoutUser';
 		}
 	}
+	
+	function changeViewUserProgress() {
+	if(Documen.getElementById('setUserProgressForm').style.display=="none")	{
+		Document.getElementById('setUserProgressForm').style.display = "initial";
+	
+	} if(Document.getElementById('setUserProgressForm').style.display=="initial") {
+		Document.getElementById('setUserProgressForm').style.display = "none";
+	}
+	}
+	
 </script>
 </body>
 </html>
