@@ -2676,19 +2676,73 @@
 		</content>
 		<option href="l331e001">Chill out my friend. I will call Vance and invite
 			him for some drinks later tonight. </option>
-		<option href="l331e001">It’s always the same with these PAS suckers! No
+		<option href="l331e002">It’s always the same with these PAS suckers! No
 			way they steal our best man. I don’t have time right now. Call him
 			and tell him that he will get a pay raise of 50k! This will keep him
 			at our firm. </option>
-		<option href="l331e001">Vance who? Never heard of this guy. He can’t be
+		<option href="l331e003">Vance who? Never heard of this guy. He can’t be
 			that important. Let him go, I have more important things to do.
 		</option>
-		<option href="l331e001">Damn, not now! We can’t lose him but I don’t have
+		<option href="l331e004">Damn, not now! We can’t lose him but I don’t have
 			time right now. I will visit him after the next meeting and tell how
 			important he is to us and that he deserves more acknowledgements of
 			such. </option>
 	</event>
 	<event level="600" element="1" id="l331e001" eventtype="3"
+		imcost="+5" imqual="+5" imtime="+5" loc="4">
+		<partner>Priya Williams (Project Assistant Concrete Machinery)
+		</partner>
+		<date>2014-07-04 17:21:34</date>
+		<title> Your Assistant comes into your office.</title>
+		<bgimg>role7pic2.png</bgimg>
+		<bgvid>l331e001.mp4</bgvid>
+		<content>
+			%gender% %surname%!
+			<br />
+			<br />
+			It’s your decision. I know you will do the right thing! I have to
+			head back to the meeting room and finish the preparations!
+		</content>
+		<option href="l332e000">Okay see you then! </option>
+		<option href="l332e000">Thank you! See you later! </option>
+	</event>
+	<event level="600" element="1" id="l331e002" eventtype="3"
+		imcost="+5" imqual="+5" imtime="+5" loc="4">
+		<partner>Priya Williams (Project Assistant Concrete Machinery)
+		</partner>
+		<date>2014-07-04 17:21:34</date>
+		<title> Your Assistant comes into your office.</title>
+		<bgimg>role7pic2.png</bgimg>
+		<bgvid>l331e001.mp4</bgvid>
+		<content>
+			%gender% %surname%!
+			<br />
+			<br />
+			It’s your decision. I know you will do the right thing! I have to
+			head back to the meeting room and finish the preparations!
+		</content>
+		<option href="l332e000">Okay see you then! </option>
+		<option href="l332e000">Thank you! See you later! </option>
+	</event>
+	<event level="600" element="1" id="l331e003" eventtype="3"
+		imcost="+5" imqual="+5" imtime="+5" loc="4">
+		<partner>Priya Williams (Project Assistant Concrete Machinery)
+		</partner>
+		<date>2014-07-04 17:21:34</date>
+		<title> Your Assistant comes into your office.</title>
+		<bgimg>role7pic2.png</bgimg>
+		<bgvid>l331e001.mp4</bgvid>
+		<content>
+			%gender% %surname%!
+			<br />
+			<br />
+			It’s your decision. I know you will do the right thing! I have to
+			head back to the meeting room and finish the preparations!
+		</content>
+		<option href="l332e000">Okay see you then! </option>
+		<option href="l332e000">Thank you! See you later! </option>
+	</event>
+	<event level="600" element="1" id="l331e004" eventtype="3"
 		imcost="+5" imqual="+5" imtime="+5" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)
 		</partner>
