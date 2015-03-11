@@ -110,7 +110,7 @@ public class UserRealm extends JdbcRealm {
 	
 	protected ArrayList<Boolean> getSettings()
 				throws SQLException {
-			Connection conn = dataSource.getConenction();
+			Connection conn = dataSource.getConnection();
 			PreparedStatement ps = null;
 			ResultSet rs = null;
 			ArrayList<Boolean> settings = new ArrayList<Boolean>();
