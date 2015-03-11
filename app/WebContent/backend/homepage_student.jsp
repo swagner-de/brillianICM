@@ -63,11 +63,11 @@
 					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
 			</div>
-			<!-- For now only intended for development -->
-			<div>
-				<h4>Jump to Level.</h4>
-							<p style="color: red; padding-left: 32px;">${progresserror}</p>
-				<form action="SetUserProgress" method="post" style=display:none id="setUserProgressForm">
+			<!-- Hidden Button on Nose of Background to show Level Jump Dropdown -->
+			<div style="height:40px; width:32px; position:absolute; top:110px; left:780px" onclick="changeViewUserProgress()"></div>
+			<div id="setUserProgressForm" style=display:none>
+				<h4>Jump to Level.</h4>													
+				<form action="SetUserProgress" method="post">
 					<div class="formLabel">Select Game:</div>
 					<select name="lvlId" id="lvlId">
 					<option value="l009e013">Project Management Phasen</option>
@@ -79,11 +79,11 @@
 					</select>
 					<input id="setUserProgress" type="submit" name="setUserProgress" value="Set Progress" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick="$('#setUserProgress').trigger('click')">Set Progress</a>
-				</form>
-				<p style="color: blue; padding-left: 32px;">${status}</p>
-			</div>
-		<a class="easyui-linkbutton studentButton" onclick="changeViewUserProgress()">Show</a>		
-		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
+					</form>
+				</div>
+				<p style="color: red; padding-left: 32px;">${progresserror}</p>
+				<p style="color: blue; padding-left: 32px;">${status}</p>	
+			<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 		</div>
 	</div>
 
@@ -107,11 +107,11 @@
 	}
 	
 	function changeViewUserProgress() {
-	if(Documen.getElementById('setUserProgressForm').style.display=="none")	{
-		Document.getElementById('setUserProgressForm').style.display = "initial";
+	 if(document.getElementById('setUserProgressForm').style.display == "none"){
+		document.getElementById('setUserProgressForm').style.display = "initial";
 	
-	} if(Document.getElementById('setUserProgressForm').style.display=="initial") {
-		Document.getElementById('setUserProgressForm').style.display = "none";
+	}else{
+		document.getElementById('setUserProgressForm').style.display = "none";
 	}
 	}
 	
