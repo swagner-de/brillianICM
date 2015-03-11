@@ -2642,7 +2642,7 @@
 	<!-- Prioritäten setzen -->
 	<!-- Benachrichtigung -->
 	<event level="600" element="0" id="l330e000" eventtype="13"
-		imcost="+10" imqual="0" imtime="-10" loc="4">
+		imcost="0" imqual="0" imtime="0" loc="4">
 		<content> In 30 minutes is your meeting with the steering committee.
 			You will present the current status of the project. Better be
 			prepared! </content>
