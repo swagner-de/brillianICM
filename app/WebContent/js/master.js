@@ -646,7 +646,8 @@ function showLocation (buttonId) {
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
 			//Gotta love that melody!
-			var audiosetting=getCookie("audio");
+			var audiosetting=true;
+			audiosetting=getCookie("audio");
 			if (audiosetting = true) {
 			audioElement.play();	}
 					
@@ -1260,7 +1261,8 @@ function showResult () {
 		onLoad: function(){
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
-			var audiosetting=getCookie("audio");
+			var audiosetting=true;
+			audiosetting=getCookie("audio");
 			if (audiosetting = true) {
 			audioElement.play();	}
 			
@@ -1306,7 +1308,8 @@ function showLoading () {
 	// (Vielleicht kann man hier noch einen Filter einbauen??)
 	var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
-	var audiosetting=getCookie("audio");
+	var audiosetting=true;
+	audiosetting=getCookie("audio");
 	if (audiosetting = true) {
 	audioElement.play();	}
 	

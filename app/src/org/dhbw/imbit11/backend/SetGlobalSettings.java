@@ -13,12 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
-@WebServlet({"/SetGlobalProgress"})
+@WebServlet({"/SetGlobalSettings"})
 
 /**
- * 
+ * This class is opened, when admin wants to change global settings. 
  * @author Oliver B.
- *
+ * @param boolean audio
+ * @param boolean video
+ * @param boolean tts
+ * @param boolean subtitles
  */
  public class SetGlobalSettings extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
@@ -38,7 +41,9 @@ import org.apache.shiro.subject.Subject;
 	}  	
 	
 	/**
-	 *
+	 *function asks for parameters from admin homepage
+	 *creates a new userrealm, and writes to database
+	 *database owns a table for settings only
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

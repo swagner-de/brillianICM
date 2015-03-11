@@ -16,17 +16,17 @@ import org.apache.shiro.subject.Subject;
 @WebServlet({"/GetSettingsCookie"})
 
 /**
- * 
+ * After the User logs in he will recieve cookies for the global settings
  * @author Oliver B.
  *
  */
- public class GetGlobalSettings extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+ public class GetSettingsCookie extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
    
     /**
      * Invokes the constructor of parent class (superclass) javax.servlet.http.HttpServlet
      */
-	public GetGlobalSettings() {
+	public GetSettingsCookie() {
 		super();
 	}   	
 	
@@ -38,7 +38,10 @@ import org.apache.shiro.subject.Subject;
 	}  	
 	
 	/**
-	 *
+	 *function asks for parameters from database
+	 *creates a new userrealm, and requests from database
+	 *database owns a table for settings only
+	 *Attributes are stored in cookies and will be handled later
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

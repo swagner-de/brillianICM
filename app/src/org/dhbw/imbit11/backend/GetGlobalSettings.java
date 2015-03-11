@@ -13,12 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
-@WebServlet({"/GetSettingsCookie"})
+@WebServlet({"/GetGlobalSettings"})
 
 /**
- * 
+ * This class is requested, when admin asks for actual global settings at his homepage.
+ * It sets 
  * @author Oliver B.
- *
+ * @param boolean audio
+ * @param boolean video
+ * @param boolean tts
+ * @param boolean subtitles
  */
  public class GetGlobalSettings extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
@@ -38,7 +42,10 @@ import org.apache.shiro.subject.Subject;
 	}  	
 	
 	/**
-	 *
+	 *function asks for parameters from database
+	 *creates a new userrealm, and requests from database
+	 *database owns a table for settings only
+	 *Attributes are given back
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -61,14 +68,16 @@ import org.apache.shiro.subject.Subject;
 				tts = settings.get(2);
 				subtitles = settings.get(3);
 				
-				Cookie cookieSettings = new Cookie("Settings", audio, video, tts, subtitles);
-
-				response.addCookie(cookie);
+	
 				}
 			catch(SQLException e){
 				e.printStackTrace();
 			
 			}
+		request.setAttribute("audio", audio);
+		request.setAttribute("video", video);
+		request.setAttribute("tts", tts);
+		request.setAttribute("subtitles", subtitles);
 		
 		
 	    // forward the request and response to the view
