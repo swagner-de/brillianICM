@@ -4898,6 +4898,7 @@
 			I thought you could... </content>
 		<option href="l617e000">I see. Well, after hearing your concerns I’ll
 			definitely go talk to him. </option>
+		<option href="l617e000">Thank you for being honest with me and trusting me. I’ll talk to B.R. right now. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="3" id="l615e003" eventtype="3"
