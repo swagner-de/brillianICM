@@ -3892,7 +3892,7 @@
 		<option href="l581e002">I'm sorry. See you.</option>
 	</event>
 	<event level="700" element="0" id="l580e000" eventtype="1"
-		imcost="-9" imqual="0" imtime="0" loc="">
+		imcost="-10" imqual="-5" imtime="-10" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-07-06 08:21:56</date>
@@ -3990,7 +3990,7 @@
 		<nextevent href="l581e102" />
 	</event>
 	<event level="700" element="0" id="l581e000" eventtype="1"
-		imcost="0" imqual="+7" imtime="0" loc="">
+		imcost="+5" imqual="+10" imtime="+5" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-12-06 15:30:11</date>
@@ -4022,7 +4022,7 @@
 		<nextevent href="l581e102" />
 	</event>
 	<event level="700" element="1" id="l581e001" eventtype="1"
-		imcost="0" imqual="+3" imtime="0" loc="">
+		imcost="+5" imqual="+10" imtime="-5" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-12-06 15:30:11</date>
@@ -4050,7 +4050,7 @@
 		<nextevent href="l600e010" />
 	</event>
 	<event level="700" element="2" id="l581e002" eventtype="1"
-		imcost="0" imqual="0" imtime="0" loc="">
+		imcost="0" imqual="-2" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-12-06 15:30:11</date>
