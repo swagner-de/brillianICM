@@ -3139,7 +3139,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="500" element="14" id="l340e014" eventtype="13"
-		imcost="+3" imqual="+3" imtime="+3" loc="3">
+		imcost="+5" imqual="+5" imtime="+5" loc="3">
 		<content>3 weeks later... </content>
 		<nextevent href="l301e000" />
 	</event>
