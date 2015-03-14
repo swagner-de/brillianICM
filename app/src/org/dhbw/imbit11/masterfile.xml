@@ -3505,9 +3505,9 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l555e000" eventtype="13"
-		imcost="0" imqual="-10" imtime="0" loc="5">
+		imcost="-15" imqual="-15" imtime="-15" loc="5">
 		<content> Vance stands up and leaves. You haven't been doing a great
-			impression. This will have a big impact on the quality of the
+			impression. This will have a big impact on the
 			project. </content>
 		<bgimg>loc2a.png</bgimg>
 		<bgvid>l555e000".mp4</bgvid>
