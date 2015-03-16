@@ -192,7 +192,7 @@
 		<date>2014-01-03 14:21:00</date>
 		<content> Dear %prename%, <br /> enclosed please find the project charter. Since you are the Project Manager please print it out and sign the copy. With your signature you officially accept the terms of the project. <br />
 			<br /> BR, <br /> Jessie </content>
-		<attachment href="Project_Charter.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter</attachment>
 		<nextevent href="l012e000" />
 	</event>
 	<event level="11" element="0" id="l011e001" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
@@ -202,7 +202,7 @@
 		<date>2014-01-03 14:21:00</date>
 		<content> Dear %prename%, <br /> enclosed please find the project charter. Since you are the Project Manager please print it out and sign the copy. With your signature you officially accept the terms of the project. <br />
 			<br /> BR, <br /> Jessie </content>
-		<attachment href="Project_Charter.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter</attachment>
 		<nextevent href="l011e002" />
 	</event>
 	<event level="11" element="0" id="l011e002" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -604,11 +604,11 @@
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
 		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
 		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_(live_system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_(live system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
 		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
 		<option column="3" rank="15" finfo="Arbeitspakete/Data_Model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test_environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
 		<option column="1" rank="5" finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination Mobile Devices </option>
 		<option column="2" rank="2" finfo="Arbeitspakete/Requirements_Specification.pdf" fdesc="Work Package Description: Requirements Specification">Requirements Specification </option>
 		<option column="4" rank="5" finfo="Arbeitspakete/Testing.pdf" fdesc="Work Package Description: Testing">Testing</option>
