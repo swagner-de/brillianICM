@@ -777,7 +777,7 @@
 		<date>2014-02-18 13:17:52</date>
 		<subject>Project schedule</subject>
 		<content> Dear %prename%, <br /> I have prepared the project schedule with MS Project. Please find attached the corresponding file. If you cannot open the file, you have to download the MS Project software. I will send you a second email with further instructions. <br /> Kind regards, <br /> Priya </content>
-		<attachment href="BrillianCRM_Project_Chart.mpp">Project schedule</attachment>
+		<attachment href="brillianCRM_Project_Chart.mpp">Project schedule</attachment>
 		<nextevent href="l293e000" />
 	</event>
 	<event level="293" element="0" id="l293e000" eventtype="1" imcost="0" imqual="0" imtime="0" loc="">
