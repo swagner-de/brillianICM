@@ -52,10 +52,31 @@ import org.apache.shiro.subject.Subject;
 		String url="/backend/homepage_admin.jsp";		
 				
 			//TODO: Validate and catch Integer to String conversion #403
-			Boolean audio = request.getParameter("audio");
-			Boolean video = request.getParameter("video");
-			Boolean tts = request.getParameter("tts");
-			Boolean subtitles = request.getParameter("subtitles");
+		String a = request.getParameter("audio");
+		String b = request.getParameter("video");
+		String c = request.getParameter("tts");
+		String d = request.getParameter("subtitles");
+		Boolean audio; 
+		Boolean video; 
+		Boolean tts; 			
+		Boolean subtitles;
+
+		if (a=="true"){
+			audio = true;
+		} else { audio = false;}
+		
+		if (b=="true"){
+			video = true;
+		} else { video = false;}
+		
+		if (c=="true"){
+			tts = true;
+		} else { tts = false;}
+		
+		if (d=="true"){
+			subtitles = true;
+		} else { subtitles = false;}
+			  
 			UserRealm realm = new UserRealm();
 			
 			try{ 

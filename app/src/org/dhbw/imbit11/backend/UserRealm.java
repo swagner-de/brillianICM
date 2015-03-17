@@ -123,7 +123,11 @@ public class UserRealm extends JdbcRealm {
 						settings.add(rs.getBoolean(3));
 						settings.add(rs.getBoolean(4));
 					}
+			} finally {
+				JdbcUtils.closeStatement(ps);
+				conn.close();
 			}
+			return settings;
 		}
 		
 		protected void setSettings(Boolean audio, Boolean video, Boolean tts, Boolean subtitles)
@@ -138,7 +142,11 @@ public class UserRealm extends JdbcRealm {
 				ps.setBoolean(3, tts);
 				ps.setBoolean(4, subtitles);
 				ps.executeUpdate();
+			} finally {
+				JdbcUtils.closeStatement(ps);
+				conn.close();
 			}
+			
 		}
 
 	/**

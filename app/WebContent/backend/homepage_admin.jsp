@@ -112,17 +112,17 @@
 				</form>
 			</div>
 			<div style="margin-left: 320px;">
-				<h4>Change Password.</h4>
+				<h4>Change Lecturer Password.</h4>
 				<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
 					<!--  Password check -->
-					<div class="formLabel">Old Password:</div>
+					<div class="formLabel">old Password:</div>
 					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
-					<div class="formLabel">Password:</div>
+					<div class="formLabel">new password:</div>
 					<input type="password" name="password" maxlength="50"/><br /><br />
-					<div class="formLabel">Repeat Password:</div>
+					<div class="formLabel">repeat new password:</div>
 					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
@@ -132,7 +132,7 @@
 			<br>
 			<div style="height: 210px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">			
 			<div style="width: 300px; float: left;">
-			<h4>Global Settings.</h4>
+			<h4>Global Settings</h4>
 			<br>
 				<form action="GetGlobalSettings" method="post">				
 					<p style="color: blue; padding-left: 32px;">${audio}</p>
@@ -149,23 +149,23 @@
 					<div style="width: 120px; float: left;">	
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
 				<br><br>
-					<input type="radio" name="audio" value="true" checked>Audio On
+					<input type="radio" name="audio" value="true" checked>audio on
 					<br>
-					<input type="radio" name="audio" value="false">Audio Off
+					<input type="radio" name="audio" value="false">audio off
 					<br>
-					<input type="radio" name="video" value="true" checked>Video On
+					<input type="radio" name="video" value="true" checked>video on
 					<br>
-					<input type="radio" name="video" value="false">Video Off
+					<input type="radio" name="video" value="false">video off
 					<br>
 					</div>
 					<div style="margin-left:120px;"><br><br>
-					<input type="radio" name="tts" value="true" checked>Text-to-Speech On
+					<input type="radio" name="tts" value="true" checked>text-to-speech on
 					<br>
-					<input type="radio" name="tts" value="false">Text-to-Speech Off
+					<input type="radio" name="tts" value="false">text-to-speech off
 					<br>
-					<input type="radio" name="subtitles" value="true" checked>Subtitles On
+					<input type="radio" name="subtitles" value="true" checked>subtitles on
 					<br>
-					<input type="radio" name="subtitles" value="false">Subtitles Off
+					<input type="radio" name="subtitles" value="false">subtitles off
 					<br>
 				</div>
 				<br>
