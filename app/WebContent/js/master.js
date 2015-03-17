@@ -675,7 +675,9 @@ function showLocation (buttonId) {
 							}else if (eventtype == '4' || eventtype == '5'){								
 								loadSelection();
 							}else if (eventtype == '6' || eventtype == '7'){
-								loadAllocation();							
+								loadAllocation();	
+							}else if (eventtype == '8'){
+								loadMatrixAllocation();	
 							}else if (eventtype == '13'){
 								showNotification();							
 							}
