@@ -740,19 +740,6 @@ background-color: #e6edfa;
 background-color: #e6edfa;
 }
 
-.new-button-highlight {
-    -webkit-animation: blink 1s step-end infinite;
-    animation: blink 1s step-end infinite;
-}
-@keyframes blink {
-	0% {background-color: #e6edfa}
-	50% {background-color: #6699ff}
-}
-@-webkit-keyframes blink {
-    0% {background-color: #e6edfa}
-	50% {background-color: #6699ff}
-}
-
 .tabs-header-plain {
 background: transparent;
 }
