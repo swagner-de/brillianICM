@@ -87,7 +87,7 @@
 			Please call me back, as soon as you read the e-mails. </content>
 		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
-
+		<bgvid>l001e000.mp4</bgvid>
 	</event>
 	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -106,7 +106,7 @@
 		<option href="l001e003">Yes, indeed, I didn’t really understand the files
 			and videos you sent me.</option>
 		<bgimg>role1pic9.png</bgimg>
-
+		<bgvid>l001e001.mp4</bgvid>
 	</event>
 	<event level="1" element="0" id="l001e002" eventtype="3" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -125,7 +125,7 @@
 			you up at the airport. Have a good flight!</content>
 		<option href="l002e000"> Hang up phone </option>
 		<bgimg>role1pic9.png</bgimg>
-
+		<bgvid>l001e002.mp4</bgvid>
 	</event>
 	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0"
 		imqual="-5" imtime="-5" loc="4">
@@ -145,6 +145,7 @@
 			disappoint me!</content>
 		<option href="l002e000"> Hang up phone </option>
 		<bgimg>role1pic9.png</bgimg>
+		<bgvid>l001e003.mp4</bgvid>
 	</event>
 
 	<!-- Flugbilder/ location change -->
