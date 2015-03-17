@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
-import java.servlet.http.Cookie;
+import javax.servlet.http.Cookie;
 
 @WebServlet({"/GetSettingsCookie"})
 
