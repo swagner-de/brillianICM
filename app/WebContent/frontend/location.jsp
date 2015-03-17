@@ -65,6 +65,7 @@
 <div class="matrixAllocationContainer easyui-panel" data-options="fit:true,border:false">
 		<div class="description"></div>
 	    <div style="clear: both;"></div>
+	    <div id="yAxisDescription"></div>
 	    <div class="tileAcceptorContainer">
 	    	<div class="bc tileAcceptor"></div>
 	    	<div class="bc tileAcceptor"></div>
@@ -79,6 +80,7 @@
 		    <div class="bc tileAcceptor"></div>
 	    </div>
 	    <div style="clear: both;"></div>
+	    <div id="xAxisDescription"></div>
 	    <div class="draggableTilesContainer bc"></div>
 	    <div style="clear: both;"></div>
 	    
