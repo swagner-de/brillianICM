@@ -619,7 +619,8 @@
 	<!-- Laura: Drag and Drop der Risk Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l022e000" element="0" level="22">
 		<title>Risk Analysis</title>
-		<description><br>Risk Analysis</br>Please assign the risk packages to each field of the Risk Matrix:</description>
+		<description><b>Risk Analysis</b></description>
+		<description>Please assign the risk packages to each field of the Risk Matrix:</description>
 		<option rank="1" fdesc="Test">Exchange of Human Resources, because of absence (e.g. sickness, vacation, …).</option>
 		<option rank="4" fdesc="Test">Traffic Jam on the way to work for employees.</option>
 		<option rank="7" fdesc="Test">Minor difference of executed tasks from the action plan.</option>
@@ -797,8 +798,8 @@
 	<!-- Laura: Drag and Drop der Stakeholder Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l031e000" element="0" level="31">
 		<title>Stakeholder Analysis</title>
-		<description><br>Stakeholder Analysis</br> Please assign the CRM customer to each field of the Stakeholder Matrix: <br />
-		</description>
+		<description><b>Stakeholder Analysis</b></description>
+		<description>Please assign the CRM customer to each field of the Stakeholder Matrix:</description>
 		<option rank="1" fdesc="Test">Future users of the CRM software (employees and sales representatives)</option>
 		<option rank="4" fdesc="Test">Competitive companies</option>
 		<option rank="7" fdesc="Test">Customer's customer</option>
@@ -1085,10 +1086,11 @@
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
 		<description>Please assign the work packages to each deliverable of the work breakdown structure: </description>
+		<description><b>brillianCRM</b></description>
 		<column>CRM Strategy</column>
-		<column>Software Customized</column>
+		<column>Software</column>
 		<column>Data</column>
-		<column>Handover</column>
+		<column>Handover / Documentation</column>
 		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration" >Data Migration</option>
 		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
