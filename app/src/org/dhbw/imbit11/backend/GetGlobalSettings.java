@@ -54,10 +54,10 @@ import org.apache.shiro.subject.Subject;
 		String url="/backend/homepage_admin.jsp";		
 				
 			//TODO: Validate and catch Integer to String conversion #403
-			Boolean audio;
-			Boolean video;
-			Boolean tts;
-			Boolean subtitles;
+			Boolean audio=true;
+			Boolean video=true;
+			Boolean tts=true;
+			Boolean subtitles=true;
 			UserRealm realm = new UserRealm();
 			
 			try{ 

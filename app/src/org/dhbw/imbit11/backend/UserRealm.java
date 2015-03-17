@@ -132,7 +132,7 @@ public class UserRealm extends JdbcRealm {
 		
 		protected void setSettings(Boolean audio, Boolean video, Boolean tts, Boolean subtitles)
 				throws SQLException {
-			Connection conn = datasource.getConnection();
+			Connection conn = dataSource.getConnection();
 			PreparedStatement ps = null;
 			// what about null values?
 			try {
