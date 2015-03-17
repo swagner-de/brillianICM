@@ -77,7 +77,6 @@ function getXml(id) {
 		newMailDisabled = true;
 		if(eventtype == 2){
 			newMailDisabled = false;
-			addHighlightMailNew();
 		}
 		
 		//Disable 'New Mail' Button
@@ -148,7 +147,6 @@ function getXml(id) {
 					showMsg('Info', 'Mail Sent'); //For Debugging
 					eventContainer.window({modal:false,closable:true});					
 					tabsContainer.tabs('close', 'New Mail');
-					removeHighlightMailNew();
 				}catch(err){
 					
 				};
@@ -744,15 +742,12 @@ function showLaptop () {
 			tabsContainer = $('.laptopMailClient');
 			var inbox = $('.laptopMailClientInbox');
 			var inboxData = {'mails': []};
-
 			$('.laptopMailClient div.tabs-panels').addClass('bc');
-
 			tabsContainer.tabs({
 				tools:[{
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
-						removeHighlightMailNew();	
 						showNewMailTab();
 						newMailDisabled = true;
 					},
