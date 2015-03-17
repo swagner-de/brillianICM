@@ -401,7 +401,7 @@ body.dialogBody,body.mainBody {
 .selectionContainer,.allocationContainer {
 	background: white;
 	opacity: 1.0;
-	width: 100%;
+	
 }
 
 .selectionTitle {
@@ -513,11 +513,12 @@ div.draftbutton-first {
 div.allocationContainer {
 	padding: 10px;
 	display: none;
+	width: 100%;
 }
 
 div.phaseTitle {
 	border-width: 1px;
-	width: 196px;
+	width: 190px;
 	margin-top: 5px;
 	height: 16px;
 	float: left;
@@ -527,7 +528,7 @@ div.phaseTitle {
 
 div.phase {
 	border-width: 1px;
-	width: 206px;
+	width: 200px;
 	height: 280px;
 	vertical-align: top;
 	float: left;
@@ -536,7 +537,7 @@ div.phase {
 	margin-right: 0px;
 	border-right-width: 0px;
 	border-top-width: 0px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	padding-bottom: 5px;
 }
 
