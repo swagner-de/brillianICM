@@ -490,7 +490,6 @@
 		<!-- letzte Option von l016e001 zu l016e003 geändert, unten neue Antwort 
 			für diese Option formuliert -->
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l015e000.mp4</bgvid>
 	</event>
 	<event level="16" element="1" id="l016e001" eventtype="3" imcost="-3"
 		imqual="-7" imtime="-5" loc="4">
@@ -502,7 +501,6 @@
 		</content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
-		<bgvid>l016e001.mp4</bgvid>
 	</event>
 	<event level="16" element="2" id="l016e002" eventtype="3" imcost="+5"
 		imqual="+10" imtime="+5" loc="4">
@@ -513,7 +511,6 @@
 			project, great! </content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l016e002.mp4</bgvid>
 	</event>
 	<event level="16" element="1" id="l016e003" eventtype="3" imcost="-5"
 		imqual="-10" imtime="-7" loc="4">
@@ -544,7 +541,6 @@
 			the procurement process. </option>
 		<option href="l018e002"> There are no benefits involved. </option>
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l017e000.mp4</bgvid>
 	</event>
 	<event level="18" element="1" id="l018e001" eventtype="3" imcost="+5"
 		imqual="+10" imtime="+5" loc="4">
@@ -555,7 +551,6 @@
 			convince the customer to expand its business with us! </content>
 		<option href="l021e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l018e001.mp4</bgvid>
 	</event>
 	<event level="18" element="2" id="l018e002" eventtype="3" imcost="-5"
 		imqual="-10" imtime="-5" loc="4">
@@ -567,7 +562,6 @@
 			convince the customer to expand its business with us! </content>
 		<option href="l021e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
-		<bgvid>l018e002.mp4</bgvid>
 	</event>
 	<!-- Mail -->
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1"
