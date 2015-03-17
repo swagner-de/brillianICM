@@ -331,9 +331,9 @@ function loadDialog () {
 		alert("Female Detected and Moira set");
 		}
 	
-	var ttsSettings=true;
+	var ttsSettings="false";
 	 ttsSettings=getCookie("tts");
-	 if (ttsSettings = true) {
+	 if (ttsSettings == "true") {
 	//Opens the dialog and plays the tts:
 	speechSynthesis.speak(tts);
 	 }
@@ -677,9 +677,9 @@ function showLocation (buttonId) {
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
 			//Gotta love that melody!
-			var audiosetting=true;
+			var audiosetting="false";
 			audiosetting=getCookie("audio");
-			if (audiosetting = true) {
+			if (audiosetting == "true") {
 			audioElement.play();	}
 					
 	    			/* Loads background images in a row and finally loads Dialog or alike. 
@@ -1292,9 +1292,9 @@ function showResult () {
 		onLoad: function(){
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
-			var audiosetting=true;
+			var audiosetting="false";
 			audiosetting=getCookie("audio");
-			if (audiosetting = true) {
+			if (audiosetting == "true") {
 			audioElement.play();	}
 			
 			document.getElementById("cost").innerHTML=gameData.imcost+"%";
@@ -1339,9 +1339,9 @@ function showLoading () {
 	// (Vielleicht kann man hier noch einen Filter einbauen??)
 	var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
-	var audiosetting=true;
+	var audiosetting="false";
 	audiosetting=getCookie("audio");
-	if (audiosetting = true) {
+	if (audiosetting == "true") {
 	audioElement.play();	}
 	
 	//Um hässliche Ladeartefakte zu verhindern
