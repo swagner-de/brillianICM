@@ -297,6 +297,7 @@
 		<content>So, now that you have chosen an assistant, we can go over the project management tasks to ensure that we are on the same page about project procedure. Prepare an overview of the project management tasks, and show me your result.  </content>
 		<option href="l009e012">Next</option>
 		<bgimg>role3pic2.png</bgimg>
+		<bgvid>l009e010.mp4</bgvid>
 	</event>
 	<event level="9" element="4" id="l009e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -305,6 +306,7 @@
 		<content>So, now that you have chosen an assistant, we can go over the project management tasks to ensure that we are on the same page about project procedure. Prepare an overview of the project management tasks, and show me your result.  </content>
 		<option href="l009e013">Next</option>
 		<bgimg>role3pic2.png</bgimg>
+		<bgvid>l009e010.mp4</bgvid>
 	</event>
 	<!-- Laura: Splittung der WBS in 2 separate Spiele: Projekt Management Phasen und Work Breakdown Structure in Bezug auf BrillianCRM Spiel--> 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e012" element="0" level="009">
