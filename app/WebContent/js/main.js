@@ -37,7 +37,7 @@
 		});
 	
 		$('#help').bind('click', function(){
-			showPdf('documents/help.pdf');
+			showPdf('documents/Help.pdf');
 		});
 	
 		$('#logout').bind('click', function(){
@@ -45,15 +45,15 @@
 		});	
 		
 		$('.projektStrukturPlanButton').bind('click', function(){
-			showPdf('documents/PSP.pdf');
+			showPdf('documents/WBS.pdf');
 		});
 		
 		$('.projektCharterButton').bind('click', function(){
-			showPdf('documents/project_charter.pdf');
+			showPdf('documents/Project_Charter.pdf');
 		});
 		
 		$('.ganttButton').bind('click', function(){
-			showPdf('documents/project.pdf');
+			showPdf('documents/Project.pdf');
 		});
 
 		$('.mainLogo').bind('click', function(){
