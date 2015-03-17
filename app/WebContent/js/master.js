@@ -497,8 +497,8 @@ function loadMatrixAllocation () {
 	var yAxisXML = $xml.find('yaxisdescription').text().toUpperCase();
 	var container = $('.matrixAllocationContainer');
 	var descriptionContainer = container.find('.description');
-	var xAxisDescriptionContainer = $(xAxisDescription);
-	var yAxisDescriptionContainer = $(yAxisDescription);
+	var xAxisDescriptionContainer = $('#xAxisDescription');
+	var yAxisDescriptionContainer = $('#yAxisDescription');
 	
 	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptors = container.find('.tileAcceptor');
