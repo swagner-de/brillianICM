@@ -867,6 +867,7 @@
 		<option href="l072e001">You have to ask my assistant about that. I
 			personally didn't have much time to elaborate on the project.
 		</option>
+		<bgvid>l071e000.mp4</bgvid>
 	</event>
 	<event level="72" element="1" id="l072e001" eventtype="3" imcost="-5"
 		imqual="-5" imtime="-5" loc="3">
