@@ -92,6 +92,7 @@ function getXml(id) {
 					disabled:newMailDisabled
 				}]
 			});
+			$('.tabs-tool').addClass('new-button-highlight')
 		}catch(err){
 			
 		}
@@ -145,7 +146,8 @@ function getXml(id) {
 					$('.mainLocationButton').linkbutton('enable');
 					$('.mainMailButton').linkbutton('enable');
 					showMsg('Info', 'Mail Sent'); //For Debugging
-					eventContainer.window({modal:false,closable:true});					
+					eventContainer.window({modal:false,closable:true});	
+					$('.tabs-tool').removeClass('new-button-highlight');
 					tabsContainer.tabs('close', 'New Mail');
 				}catch(err){
 					

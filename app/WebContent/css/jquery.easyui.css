@@ -740,7 +740,7 @@ background-color: #e6edfa;
 background-color: #e6edfa;
 }
 
-.tabs-tool.new-button-highlight {
+.new-button-highlight {
     -webkit-animation: blink 1s step-end infinite;
     animation: blink 1s step-end infinite;
 }
@@ -752,6 +752,7 @@ background-color: #e6edfa;
     0% {background-color: #e6edfa}
 	50% {background-color: #6699ff}
 }
+
 .tabs-header-plain {
 background: transparent;
 }
