@@ -313,27 +313,35 @@
 		<column>Project Planning</column>
 		<column>Project Execution</column>
 		<column>Project Closing</column>
-		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Change Management</option>
-		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Project Charter</option>
-		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Work Breakdown Structure</option>
-		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Responsibilities</option>
-		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Lessons Learned</option>
-		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Cost Management</option>
-		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling</option>
-		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Targets</option>
-		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Quality Management</option>
-		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Post Cost Analysis</option>
-		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Budget Estimations</option>
-		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Management</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Stakeholder Analysis</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Milestone Planning</option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Analysis</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Kickoff Meeting</option>
-		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Management</option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Strategies and Measures</option>
-		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling Management</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Allocation</option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Final Project Report</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the acceptance and awareness of the differences that the project brings to
+			the business">Change Management</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
+			begin work">Project Charter</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the WBS is a deliverables-oriented hierarchy of project elements that defines the project">Work Breakdown Structure</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="roles and responsibilities are defined for each team member and communicated to the rest of the team. A
+			RACI (Responsible, Accountable, Consulted, Informed) diagram is often used.">Define Responsibilities</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="is the knowledge gained from the process of performing the project">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the project budget and all supplemental costs incurred">Cost Management</option>
+		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the time needed to fulfill or execute a work package is planned according to the period of the project">Scheduling</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a continuation of the definition of the project scope through interim goal">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the quality of the deliverables of the project">Quality Management</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the costs of the project are inspected and used for estimations in future, similar projects">Post Cost Analysis</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the first calculations of the total estimated cost of the project with detailed cost incurrence
+			estimations">Preliminary Budget Estimations</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the project resources to ensure the plan">Resource Management</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence"the specification of major accomplishments to be achieved throughout the project in accordance with a certain
+			deadline>Milestone Planning</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition and assessment of the risks involved in the project">Risk Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the startup of the project used to familiarize the team with one another, communicate and ensure the nature of the
+			project as well as devised execution, and to get feedback and commitment from team members">Kickoff Meeting</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the avoidance of unnecessary risk through guidance and defined measures">Risk Management</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition of strategies for dealing with stakeholders of the project and measures to be taken
+			against risks associated with the project">Define Strategies and Measures</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the time planning to ensure that the plan stays on track">Scheduling Management</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the strategic allotment of project resources i.e. budget, personnel to the work packages and other project
+			efforts">Resource Allocation</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the last version of the documentation of the project">Final Project Report</option>
 			<nextevent href="l010e000" />
 	</event>
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e013" element="0" level="009">
@@ -343,27 +351,35 @@
 		<column>Project Planning</column>
 		<column>Project Execution</column>
 		<column>Project Closing</column>
-		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Change Management</option>
-		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Project Charter</option>
-		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Work Breakdown Structure</option>
-		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Responsibilities</option>
-		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Lessons Learned</option>
-		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Cost Management</option>
-		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling</option>
-		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Targets</option>
-		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Quality Management</option>
-		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Post Cost Analysis</option>
-		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Budget Estimations</option>
-		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Management</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Stakeholder Analysis</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Milestone Planning</option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Analysis</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Kickoff Meeting</option>
-		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Management</option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Strategies and Measures</option>
-		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling Management</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Allocation</option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Final Project Report</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the acceptance and awareness of the differences that the project brings to
+			the business">Change Management</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
+			begin work">Project Charter</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the WBS is a deliverables-oriented hierarchy of project elements that defines the project">Work Breakdown Structure</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="roles and responsibilities are defined for each team member and communicated to the rest of the team. A
+			RACI (Responsible, Accountable, Consulted, Informed) diagram is often used.">Define Responsibilities</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="is the knowledge gained from the process of performing the project">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the project budget and all supplemental costs incurred">Cost Management</option>
+		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the time needed to fulfill or execute a work package is planned according to the period of the project">Scheduling</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a continuation of the definition of the project scope through interim goal">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the quality of the deliverables of the project">Quality Management</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the costs of the project are inspected and used for estimations in future, similar projects">Post Cost Analysis</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the first calculations of the total estimated cost of the project with detailed cost incurrence
+			estimations">Preliminary Budget Estimations</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the project resources to ensure the plan">Resource Management</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence"the specification of major accomplishments to be achieved throughout the project in accordance with a certain
+			deadline>Milestone Planning</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition and assessment of the risks involved in the project">Risk Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the startup of the project used to familiarize the team with one another, communicate and ensure the nature of the
+			project as well as devised execution, and to get feedback and commitment from team members">Kickoff Meeting</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the avoidance of unnecessary risk through guidance and defined measures">Risk Management</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition of strategies for dealing with stakeholders of the project and measures to be taken
+			against risks associated with the project">Define Strategies and Measures</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the time planning to ensure that the plan stays on track">Scheduling Management</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the strategic allotment of project resources i.e. budget, personnel to the work packages and other project
+			efforts">Resource Allocation</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the last version of the documentation of the project">Final Project Report</option>
 			<nextevent href="l010e001" />
 	</event>
 	
