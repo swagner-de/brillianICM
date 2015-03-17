@@ -86,9 +86,9 @@ th,td {
 				<td><a href="/manager">
 				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
 				<br>Tomcat Manager<br> </a></td>
-				<td><a href="XMLEditor.jsp">
+				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/catalina.out">
 				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
-				<br>XML Editor</a></td>
+				<br>Tomcat Logfile</a></td>
 				
 			</tr>
 		</table>

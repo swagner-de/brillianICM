@@ -308,7 +308,7 @@
 	<!-- Laura: Splittung der WBS in 2 separate Spiele: Projekt Management Phasen und Work Breakdown Structure in Bezug auf BrillianCRM Spiel--> 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e012" element="0" level="009">
 		<title>Project Management Tasks</title>
-		<description>Please assign the tasks to each deliverable of the project management phase</description>
+		<description>Please assign the tasks to each deliverable of the project management phase:</description>
 		<column>Project Initiation</column>
 		<column>Project Planning</column>
 		<column>Project Execution</column>
@@ -338,7 +338,7 @@
 	</event>
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e013" element="0" level="009">
 		<title>Project Management Tasks</title>
-		<description>Please assign the tasks to each deliverable of the project management phase</description>
+		<description>Please assign the tasks to each deliverable of the project management phase:</description>
 		<column>Project Initiation</column>
 		<column>Project Planning</column>
 		<column>Project Execution</column>
@@ -602,12 +602,12 @@
 	<!-- Laura: Drag and Drop der Risk Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l022e000" element="0" level="22">
 		<title>Risk Analysis</title>
-		<description>Please assign the risk packages to each field of the Risk Matrix</description>
+		<description><br>Risk Analysis</br>Please assign the risk packages to each field of the Risk Matrix:</description>
 		<option rank="1" fdesc="Test">Exchange of Human Resources, because of absence (e.g. sickness, vacation, …).</option>
 		<option rank="4" fdesc="Test">Traffic Jam on the way to work for employees.</option>
 		<option rank="7" fdesc="Test">Minor difference of executed tasks from the action plan.</option>
-		<option rank="2" fdesc="Test">The requirements definition is incomplete, insufficient and changes appear in the course of the project. The customer might try to widen the scope of the project.</option>
-		<option rank="5" fdesc="Test">Lack of communication within the Team. Intercultural missunderstanding within the Team. Indian team members cannot deliver in time. </option>
+		<option rank="2" fdesc="Test">The requirements definition is incomplete, insufficient and changes appear in the course of the project.</option>
+		<option rank="5" fdesc="Test">Lack of communication within the Team. Intercultural misunderstandings and Indian team members cannot deliver in time. </option>
 		<option rank="8" fdesc="Test">Key Contacts are not specifically defined or do not have enough time for their tasks.</option>
 		<option rank="3" fdesc="Test">Project is out of scope. It faces delays regarding milestones and time. Budged is out of scope. </option>
 		<option rank="6" fdesc="Test">The requirements of the security of information and data protection is not complied (Governmental requirements).</option>
@@ -780,7 +780,7 @@
 	<!-- Laura: Drag and Drop der Stakeholder Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l031e000" element="0" level="31">
 		<title>Stakeholder Analysis</title>
-		<description> Please assign the CRM customer to each field of the Stakeholder Matrix. <br />
+		<description><br>Stakeholder Analysis</br> Please assign the CRM customer to each field of the Stakeholder Matrix: <br />
 		</description>
 		<option rank="1" fdesc="Test">Future users of the CRM software (employees and sales representatives)</option>
 		<option rank="4" fdesc="Test">Competitive companies</option>
@@ -1067,12 +1067,12 @@
 	<!-- Laura: Splittung der WBS in 2 separate Spiele: Projekt Management Phasen und Work Breakdown Structure in Bezug auf BrillianCRM Spiel--> 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
-		<description>Please assign the work packages to each deliverable of the work breakdown structure </description>
+		<description>Please assign the work packages to each deliverable of the work breakdown structure: </description>
 		<column>CRM Strategy</column>
 		<column>Software Customized</column>
 		<column>Data</column>
 		<column>Handover</column>
-		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration">Data Migration</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration" >Data Migration</option>
 		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
 		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
@@ -1166,7 +1166,7 @@
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation.
+			final cost calculation:
 			<br />
 		</description>
 		<option href="l205e000" img="content7pic3.png">
@@ -1192,7 +1192,7 @@
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation.
+			final cost calculation:
 			<br />
 		</description>
 		<option href="l206e000" img="content7pic4.png">
@@ -1218,7 +1218,7 @@
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation.
+			final cost calculation:
 			<br />
 		</description>
 		<option href="l206e000" img="content7pic4.png">
@@ -1244,7 +1244,7 @@
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation.
+			final cost calculation:
 			<br />
 		</description>
 		<option href="l207e001" img="content7pic2.png">
@@ -1273,7 +1273,7 @@
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shownand note your decision on a piece of paper for the
-			final cost calculation.
+			final cost calculation:
 			<br />
 		</description>
 		<option href="l207e001" img="content7pic2.png">
@@ -1302,7 +1302,7 @@
 		<description>
 			Now after you have calculated the costs for each phase of the
 			project, please select which budget is needed in total for our
-			resource plan.
+			resource plan:
 			<br />
 		</description>
 		<option href="l208e000">
@@ -2131,7 +2131,7 @@
 		imcost="0" imqual="0" imtime="0" loc="4">
 		<title>You have the choice...</title>
 		<description>Please choose how many people you would like to add to
-			your project team. </description>
+			your project team: </description>
 		<option href="l317e001">
 			Hire 10 Indian IT specialists!
 			<br />
@@ -2908,7 +2908,7 @@
 	<event level="600" element="000" id="l333e000" eventtype="4"
 		imcost="0" imqual="0" imtime="0" loc="4">
 		<title>Auswahl</title>
-		<description>Please choose an appropiate reaction!</description>
+		<description>Please choose an appropiate reaction:</description>
 		<option href="l630e000">This is an important task and has to be done asap.
 			I will contact the CTO and explain to him the change in plan. No
 			delay is expected. </option>

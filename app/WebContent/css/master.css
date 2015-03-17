@@ -801,17 +801,3 @@ div.transitionScreenImageContainer:hover {
 	border-right-width: 0px;
 }
 
-.tabs-tool-highlight {
--webkit-animation: pulse-border 1s infinite;
-animation: pulse-border 1s infinite;
-}
-
-@-webkit-keyframes pulse-border {
-    from, to { box-shadow: 0 0 0 0 #707a8f;}
-    50% { box-shadow: 0 0 0 4px #707a8f; }
-}
-
-@keyframes pulse-border {
-    from, to { box-shadow: 0 0 0 0 #707a8f;}
-    50% { box-shadow: 0 0 0 4px #707a8f; }
-}
