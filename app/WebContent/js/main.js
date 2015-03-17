@@ -10,6 +10,7 @@
 		$xml = '';
 		loc = '';
 		locOld = '';
+		buttonIdOld = '';
 		eventtypeOld = '';
 		tabsContainer = '';	
 		firstFlag = false;
