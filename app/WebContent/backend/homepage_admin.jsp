@@ -116,9 +116,9 @@
 				<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
-+					<!--  Password check -->
-+					<div class="formLabel">Old Password:</div>
-+					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
+					<!--  Password check -->
+					<div class="formLabel">Old Password:</div>
+					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
 					<div class="formLabel">Password:</div>
 					<input type="password" name="password" maxlength="50"/><br /><br />

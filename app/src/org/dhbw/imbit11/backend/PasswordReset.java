@@ -66,7 +66,7 @@ import org.apache.shiro.subject.Subject;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		String url="/LoginUser";
+		String url;
 		
 		if(request.getParameter("updatePassword") != null){
 			String role = request.getParameter("role");
@@ -89,7 +89,7 @@ import org.apache.shiro.subject.Subject;
 			String password_repeat = request.getParameter("password_repeat");
 
 			try {
-				UsernamePasswordToken token = new UsernamePasswordToken(username, oldpassword);
+				UsernamePasswordToken token = new UsernamePasswordToken(email, oldpassword);
 				// subject.login(token);
 				token.clear(); 
 				//try {	
@@ -100,7 +100,7 @@ import org.apache.shiro.subject.Subject;
 				UserRealm realm = new UserRealm();
 				try{
 					realm.updatePassword(email, hashedPassword);
-					this.url="/LogoutUser";
+					url="/LogoutUser";
 					// Log out after password update 
 					/* if (subject != null) {
 				 	//see:  http://jsecurity.org/api/index.html?org/jsecurity/web/DefaultWebSecurityManager.html
@@ -115,7 +115,7 @@ import org.apache.shiro.subject.Subject;
 					// System.out.println("password update failed!");
 					// e.printStackTrace();
 					request.setAttribute("error", "SQL Connection failed");
-					this.url = "/backend/homepage_"+ role +".jsp";
+					url = "/backend/homepage_"+ role +".jsp";
 				}
 			}else{
 				request.setAttribute("error", "Repeated password does not match.");
@@ -125,12 +125,12 @@ import org.apache.shiro.subject.Subject;
 				// for the Username which is trying to do the password change
 				ex.printStackTrace();
 				request.setAttribute("error", "Login failed! Wrong old Password!");
-				this.url = "/backend/homepage_"+ role +".jsp";
+				url = "/backend/homepage_"+ role +".jsp";
 				
 				 } catch (RuntimeException ex) {
 			 	// passwords do not match each other
 			  	request.setAttribute("error", "Repeated password does not match.");
-			  	this.url = "/backend/homepage_"+ role +".jsp";
+			  	url = "/backend/homepage_"+ role +".jsp";
 				 }
 		}else{
 		

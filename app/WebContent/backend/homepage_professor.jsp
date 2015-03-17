@@ -94,7 +94,7 @@
 												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
 												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
-												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here*/
+												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
 												+"<select name=\"lvlId\" id=\"lvlId\">"
 												+"<option value=\"l204e000\">Budget Planning</option>"
 												+"<option value=\"l290e000\">Critical Path</option>"
@@ -188,6 +188,7 @@
 				%>
 			</div>
 
+<<<<<<< HEAD
 			<div style="clear: both;"></div>
 			<div>
 				<h1>New Group</h1>
@@ -220,6 +221,40 @@
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
+=======
+			<div style="height: 410px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">
+				<div style="width: 300px; float: left;">
+					<h4>New Group</h4>
+					<form action="NewUsergroup" method="post">
+						<div class="formLabel">name:</div>
+						<input type="text" name="groupname" maxlength="50" required /> <input
+							type="submit" style="display: none" id="createGroup"
+							value="Create group" /><br />
+						<br /> <a class="easyui-linkbutton"
+							onclick="$('#createGroup').trigger('click')">create group</a>
+						<p style="color: green">${success}</p>
+						<p style="color: red">${error}</p>
+					</form>
+				</div>
+				<div style="margin-left: 320px;">
+					<h4>Change Lecturer Password</h4>
+					<form action="ResetPassword" method="post">
+						<input type="text" name="username" maxlength="50"
+							value="${username}" style="display: none" /> <input type="text"
+							name="role" maxlength="50" value="professor" style="display: none" />
+						<div class="formLabel">new password:</div>
+						<input type="password" name="password" maxlength="50" /><br />
+						<br />
+						<div class="formLabel">repeat new password:</div>
+						<input type="password" name="password_repeat" maxlength="50" /><br />
+						<br /> <input id="updatePassword" type="submit"
+							name="updatePassword" value="Update password" hidden="hidden" /> <a
+							class="easyui-linkbutton"
+							onclick="$('#updatePassword').trigger('click')">update
+							password</a>
+					</form>
+				</div>
+>>>>>>> refs/remotes/origin/devFred
 			</div>
 			<div class="mainEventContainerImprint easyui-window"
 				data-options="closed:true,width:863,height:576"></div>
