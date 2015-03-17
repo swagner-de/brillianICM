@@ -56,6 +56,11 @@ import java.servlet.http.Cookie;
 			Boolean tts;
 			Boolean subtitles;
 			UserRealm realm = new UserRealm();
+			String a;
+			String b;
+			String c;
+			String d;
+			
 			
 			try{ 
 				ArrayList<Boolean> settings = realm.getSettings();
@@ -65,10 +70,27 @@ import java.servlet.http.Cookie;
 				tts = settings.get(2);
 				subtitles = settings.get(3);
 				
-				Cookie audioSettings = new Cookie("audio", audio);
-				Cookie videoSettings = new Cookie("video", video);
-				Cookie ttsSettings = new Cookie("tts", tts);
-				Cookie subtitlesSettings = new Cookie("subtitles", subtitles);
+				if (audio) {
+					a="true";
+				} else { a="false";}
+				
+				if (video) {
+					b="true";
+				} else { b="false";}
+				
+				if (tts) {
+					c="true";
+				} else { c="false";}
+				
+				if (subtitles) {
+					d="true";
+				} else { d="false";}
+				
+				
+				Cookie audioSettings = new Cookie("audio", a);
+				Cookie videoSettings = new Cookie("video", b);
+				Cookie ttsSettings = new Cookie("tts", c);
+				Cookie subtitlesSettings = new Cookie("subtitles", d);
 				
 				audioSettings.setMaxAge(12 * 60 * 60);  // 12 hours. 
 				videoSettings.setMaxAge(12 * 60 * 60);  // 12 hours. 
