@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>BrillianCRM Rebirth - Development Konsole</title>
+<title>brillianCRM Rebirth - Development Konsole</title>
 <style type="text/css">
 a,p {
 	color: blue;
@@ -86,9 +86,9 @@ th,td {
 				<td><a href="/manager">
 				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
 				<br>Tomcat Manager<br> </a></td>
-				<td><a href="XMLEditor.jsp">
+				<td><a href="http://ec2-54-213-27-83.us-west-2.compute.amazonaws.com/catalina.out">
 				 <img width="50%" alt="Bug Report" src="logo/default.jpg">
-				<br>XML Editor</a></td>
+				<br>Tomcat Logfile</a></td>
 				
 			</tr>
 		</table>

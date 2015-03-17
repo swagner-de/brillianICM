@@ -1,4 +1,4 @@
-﻿function getXml(id) {	
+function getXml(id) {	
 	
 	$.get('Event', {id : id, type : 'node'}, function(xml) {
 		//Fix XML
@@ -87,7 +87,6 @@
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
-						removeHighlightMailNew();
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -104,6 +103,7 @@
 		hideDialog();
 		hideSelection();
 		hideAllocation();
+		hideMatrixAllocation();
 		
 		//Wenn Update Location und kein MailDraft
 		if(locOld == loc && eventtype != '2'){		
@@ -117,6 +117,8 @@
 			loadSelection();		
 		}else if ((eventtype == '6' || eventtype == '7') && locOld == loc){
 			loadAllocation();		
+		}else if (eventtype == '8' && locOld == loc){
+			loadMatrixAllocation();
 		}else if(eventtype == eventtypeOld && eventtype == '2') {
 			loadMailDraft();		
 		}else if(eventtype == '13' && locOld == loc){
@@ -170,9 +172,12 @@
 		}
 		
 		if(id == firstEvent){
-			showLocation('1');	
+			showLocation('4');	
 		}else if(id == lastEvent){
 			showResult();
+		//Umbenennung des Next Buttons in Accept Job Offer am Spiel Beginn 
+		}else if(id == jobofferEvent){
+			$('#continueButton').html("Accept Job Offer");
 		}
 		
 		//Setzte die Werte für locOld & eventtypeOld - wichtig für logische Überprüfungen im nächsten Durchlauf
@@ -258,12 +263,30 @@ function loadMailDraft () {
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
-	var background = $xml.find('bgimg').text();
+
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
+	
+	var background;
+	var backgroundWithPartnerUrl;
+		
 	//Lade den Dialog Hintergrund
-	var backgroundPictureWithPartnerUrl = 'images/' + background;
-	setDialogBackground(backgroundPictureWithPartnerUrl);
+	if ($xml.find('bgimg').text() != '') {
+		background = $xml.find('bgimg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setDialogBackground(backgroundWithPartnerUrl, false);
+	}
+	if ($xml.find('bgvid').text() != '') {
+		background = $xml.find('bgvid').text();
+		backgroundWithPartnerUrl=window.location.href;
+		position = backgroundWithPartnerUrl.lastIndexOf('/');
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
+		setDialogBackground(backgroundWithPartnerUrl, true);
+	} 
+
+	
+	
 		
 	$('.dialogButton').remove();
 	dialogPartnerNameContainer.text(partner);
@@ -284,7 +307,31 @@ function loadDialog () {
 	        getXml(href);
 	    });		
 	});	
+	
+	// Generates TTS object and fill it with the content of the dialog partner:
+	// @param tts Text-to-Speech object and content loaded
+	// @param voices loads available voices and stores them
+	var tts = new SpeechSynthesisUtterance(content);
+	var voices = window.speechSynthesis.getVoices();
+	
+	//Setting speechSynthesis parameters for Male Voice:
+	tts.native = false;
+	tts.lang = 'en-GB';
+	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+	
+	// Checks if the partner female and setting female parameters:
+	if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
+		{
+		tts.native = false;
+		tts.lang = 'en-IE';
+		//tts.name = Kathy;
+		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
+		alert("Female Detected and Moira set");
+		}
+	
+	//Opens the dialog and plays the tts:
 	showDialog();
+	speechSynthesis.speak(tts);
 }
 
 
@@ -338,8 +385,17 @@ function loadAllocation () {
 		var itemInfo = $(this).attr('finfo');
 		var itemDescription = $(this).attr('fdesc');
 		var itemRank = $(this).attr('rank');	
-		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '">' + itemText + '</div>');
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
 	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
 	
 	var draggableItem = container.find('.drag');
 	
@@ -433,6 +489,147 @@ function loadAllocation () {
     });
 }
 
+function loadMatrixAllocation () {
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();	
+	var container = $('.matrixAllocationContainer');
+	var descriptionContainer = container.find('.description');
+	
+	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	var tileAcceptors = container.find('.tileAcceptor');
+	var continueButtonMatrix = $('#continueButtonMatrix');
+	//Enthält zuzuordnende tiles
+	var draggableTilesContainer = $('.draggableTilesContainer');
+
+	$('.dragTile').remove();
+	
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemRank = $(this).attr('rank');
+		var itemDescription = $(this).attr('fdesc');
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '"' + itemHoverTitle +'>' + itemText + '</div>');
+	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
+	
+	//Auswahl aller Tiles die beweglich sind
+	var draggableItems = container.find('.dragTile');
+	descriptionContainer.text(description);
+	
+	//Might be reused to name axes --> Low to High Impact/Priority
+	//$xml.find('column').each(function(index){
+	//	phaseTitleContainer.eq(index).text($(this).html());
+	//});
+	
+	continueButtonMatrix.unbind('click');
+	continueButtonMatrix.bind('click', function(){
+		$('.tileAcceptor').css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
+		//mit dem rank "1"
+		$('.tileAcceptor').each(function(index) {
+			var correctTileRank = index+1;
+			if ($(this).find('.dragTile').attr('rank') != null){
+				var actualTileRank = $(this).find('.dragTile').attr('rank');
+				if (actualTileRank != correctTileRank){
+					correct = false;
+					$(this).find('.dragTile').addClass('dragIncorrect');
+				}
+				
+				} else {
+					// Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					//--> XML überprüfen
+					showMsg("There has a been a problem with the validation!");
+				}
+			});
+		
+		
+
+
+		//Check if all items have been dragged
+		$('.draggableTilesContainer').find('.dragTile').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			container.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements.'); //For Debugging
+			}
+			if (correct == false){
+				showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
+			}					
+		}
+	});	
+	showMatrixAllocation();
+	
+	//Drag Funktionalität
+	draggableItems.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	tileAcceptors.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+	
+	draggableTilesContainer.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+}
+
 function fancyImageLoading(imageUrl, element){
 	var img = new Array();
 	img[0] = new Image();
@@ -464,40 +661,48 @@ function showLocation (buttonId) {
 			hideDialog();
 			hideSelection();
 			hideAllocation();
+			hideMatrixAllocation();
 
 			if(buttonId == loc){
 				removeHighlight(mainLocationButton, loc);
 			}
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
+			//Gotta love that melody!
 			audioElement.play();	
-			
-			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
-			setTimeout(function(){
-				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
-				setTimeout(function(){
-					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
-					setTimeout(function(){
-						if(buttonId == loc){
-							if(eventtype == '3'){
-								loadDialog();		
-							}else if (eventtype == '4' || eventtype == '5'){								
-								loadSelection();
-							}else if (eventtype == '6' || eventtype == '7'){
-								loadAllocation();							
-							}else if (eventtype == '13'){
-								showNotification();							
-							}
-						}else{
-							$('.mainLocationButton').linkbutton('enable');
-							container.window({modal:false});
-						}						
-					},1500);					
-				},1500);
-			},1500);			
+					
+	    			/* Loads background images in a row and finally loads Dialog or alike. 
+	    			 * @author Laluz
+	    			 */
+	    			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
+	    			setTimeout(function(){
+	    				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
+	    				setTimeout(function(){
+	    					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+	    					setTimeout(function(){
+	    						if(buttonId == loc){
+	    							if(eventtype == '3'){
+	    								loadDialog();		
+	    							}else if (eventtype == '4' || eventtype == '5'){								
+	    								loadSelection();
+	    							}else if (eventtype == '6' || eventtype == '7'){
+	    								loadAllocation();	
+	    							}else if (eventtype == '8'){
+	    								loadMatrixAllocation();						
+	    							}else if (eventtype == '13'){
+	    								showNotification();							
+	    							}
+	    						}else{
+	    								$('.mainLocationButton').linkbutton('enable');
+	    								container.window({modal:false});
+	    						}						
+	    					},1500);					
+	    				},1500);
+	    			},1500);
+	    		}        
+	    	});				
 		}
-	});
-}
+
 
 function showLaptop () {
 	var tag = 'Laptop';
@@ -528,7 +733,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addHighlightMailNew();
+				$('.tabs-tool').addClass('new-button-highlight');
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -611,6 +816,7 @@ function showNewMailTab () {
 			}
 		});	
 	}
+	$('.tabs-tool').removeClass('new-button-highlight');
 }
 
 function showImprint () {
@@ -904,12 +1110,23 @@ function setLocation (backgroundPictureUrl) {
 	$('.locationBackgroundContainer').css('background-image', 'url('+backgroundPictureUrl+')');
 }
 
-// Sets the background picture for the background
-function setDialogBackground (backgroundPictureUrl) {
-	backgroundPictureUrlNew = 'url('+backgroundPictureUrl+')';
-	backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
-	if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
-		$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
+// Sets the background picture or video for the background
+function setDialogBackground (backgroundUrl, existsVideo) {
+	if (existsVideo == true) {
+		//since it will always be a different dialogue video no comparison with the old video is necessary
+		var vid = document.getElementById('background-video');
+		vid.src = backgroundUrl;
+		setTimeout(function(){
+			vid.play();
+		}, 2000);
+	} else {
+		// if no video exists, the role picture is set
+		document.getElementById('background-video').src = '';
+		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+		backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
+		if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+			$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
+		}
 	}	
 }
 
@@ -953,6 +1170,14 @@ function hideAllocation () {
 
 function showAllocation () {
 	$('.allocationContainer').show();
+}
+
+function hideMatrixAllocation(){
+	$('.matrixAllocationContainer').hide();
+}
+
+function showMatrixAllocation(){
+	$('.matrixAllocationContainer').show();
 }
 
 function showEventContainer (container) {
@@ -1006,13 +1231,13 @@ function removeHighlightMail () {
 }
 
 // Adds Highlight to NewMail (MailDraft) Button
-function addHighlightMailNew () {
-	$("#tabs-tool").addClass("tabs-tool-highlight");
+function addHighlightNewMail () {
+	$('.tabs-tool').addClass('new-button-highlight');
 }
 
 //Removes Highlight from NewMail (MailDraft) Button
-function removeHighlightMailNew () {	
-	$("#tabs-tool").removeClass("tabs-tool-highlight");
+function removeHighlightNewMail () {	
+	$('.tabs-tool').removeClass('new-button-highlight');
 }
 
 //Shows the fullscreen transition window
@@ -1122,7 +1347,8 @@ function showLoading () {
 		},duration);	
 	},duration);
 }
-
+/*
+//TODO #443 Commented Code due to Syntax Error after Merge 
 window.onload = function()
 {
 	// Cookie not found, thus display easter egg and set cookie
@@ -1147,7 +1373,7 @@ window.onload = function()
 			setTimeout(function()
 			{
 				$(".ricky").text(''); // remove text from span tags after 4 seconds
-			}, 1000)
+			}, 1000);
 		}
 	}
 	else
@@ -1155,6 +1381,7 @@ window.onload = function()
 		// do nothing. user already saw easter egg. Lets see how many users do not believe their eyes... :D
 	}
 }
+*/
 
 // Function to set a cookie
 function setCookie(cName, cValue, cExpire)
@@ -1213,6 +1440,43 @@ $(window).resize(function() {
 	$('.transitionScreen').window('center');
 	$('.mainEventContainerResult').window('resize');
 	$('.loadingScreen').window('resize');	
+});
+
+// TODO CHECK CODE AFTER MERGE -#442
+
+//Get Url Parameters - Example: $.getUrlVar('name');
+$.extend({
+	getUrlVars: function(){
+		var vars = [], hash;
+		try{
+			var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			for(var i = 0; i < hashes.length; i++)
+			{
+				hash = hashes[i].split('=');
+				vars.push(hash[0]);
+				vars[hash[0]] = hash[1].replace('%20', ' ');
+			}
+		}catch(err){
+			//console.log('no parameters found');
+		}
+		return vars;
+	},
+	getUrlVar: function(name){
+		return $.getUrlVars()[name];
+	}
+});
+
+$.extend({	  
+	// Arguments are image paths relative to the current page.
+	preLoadImages: function() {
+		var cache = [];
+		var args_len = arguments.length;
+		for (var i = args_len; i--;) {
+			var cacheImage = document.createElement('img');
+			cacheImage.src = arguments[i];
+			cache.push(cacheImage);
+		};
+	}
 });
 
 //Get Url Parameters - Example: $.getUrlVar('name');

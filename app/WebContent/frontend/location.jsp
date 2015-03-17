@@ -1,6 +1,9 @@
 <%@ page import="org.dhbw.imbit11.ApplicationConstants" %>
 <div class="locationBackgroundContainer easyui-panel" data-options="fit:true,border:false">
 	<div class="dialogContainer">
+		<video id="background-video">
+			<source src="" type="video/mp4">
+		</video>
 		<div class="dialogTextContainer bc easyui-panel" data-options="width:315,height:562,border:false">
 			<div class="dialogPartner panel-header">
 				<div class="dialogPartnerName panel-title"></div>
@@ -57,4 +60,31 @@
 	    	<div id="continueButton" class="easyui-linkbutton allocationButton"><%=ApplicationConstants.ALLOCATION_BUTTON%></div>
 	    </div>
 	</div>
+
+
+<div class="matrixAllocationContainer easyui-panel" data-options="fit:true,border:false">
+		<div class="description"></div>
+	    <div style="clear: both;"></div>
+	    <div class="tileAcceptorContainer">
+	    	<div class="bc tileAcceptor"></div>
+	    	<div class="bc tileAcceptor"></div>
+	    	<div class="bc tileAcceptor"></div>
+	    	<div style="clear: both;"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		     <div style="clear: both;"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+		    <div class="bc tileAcceptor"></div>
+	    </div>
+	    <div style="clear: both;"></div>
+	    <div class="draggableTilesContainer bc"></div>
+	    <div style="clear: both;"></div>
+	    
+	    <div class="buttonContainer">
+	    	<div id="continueButtonMatrix" class="easyui-linkbutton allocationButton"><%=ApplicationConstants.ALLOCATION_BUTTON%></div>
+	    </div>
+	</div>
 </div>
+

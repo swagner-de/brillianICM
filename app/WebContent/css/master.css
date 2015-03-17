@@ -386,6 +386,13 @@ body.dialogBody,body.mainBody {
 	display: none;
 }
 
+.dialogContainer video {
+	position:absolute;
+	z-index:0;
+	width: 852px !important;
+	height: 562px !important;
+}
+
 .dialogContainer div.panel {
 	margin-left: inherit !important;
 	margin-right: inherit !important;
@@ -394,6 +401,7 @@ body.dialogBody,body.mainBody {
 .selectionContainer,.allocationContainer {
 	background: white;
 	opacity: 1.0;
+	width: 100%;
 }
 
 .selectionTitle {
@@ -565,6 +573,87 @@ div.drag {
 	cursor: pointer !important;
 }
 
+/*This class is used for labeling all tiles that will get drag functionality
+Tiles shall be organized in a tile matrix*/
+
+div.matrixAllocationContainer{
+	text-align: center;
+	vertical-align: middle;
+	display:block;
+}
+
+div.tileAcceptorContainer{
+	/*Params needed for centering the stakeholder analysis*/
+	display: inline-block;
+    text-align: left;
+
+}
+
+/*Tile matrix place holders in top row*/
+div.tileAcceptor {
+	border-width: 5px;
+	width: 157px;
+	height: 157px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+
+div.draggableTilesContainer {
+	border-width: 1px;
+	height: 135px !important;
+	width:820px;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	padding-left: 1px;
+	overflow-y: scroll;
+}
+
+div.description{
+	
+	padding-bottom: 20px;
+padding-top: 20px;
+}
+
+
+
+/* tiles to be dragged and dropped*/
+div.dragTile {
+	float: center;
+	width: 150px;
+	height: 144px;
+	padding: 0 0 0 0px;
+	vertical-align: baseline;
+	margin-top:5px;
+	border-width: 1px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer !important;
+	display: inline-block;
+	text-align: left;
+	
+	/* break line for different browsers*/
+	white-space: pre-wrap;    
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	
+}
+
+
+
 div.dragIncorrect {
 	background-color: #ffa8a8;
 }
@@ -712,17 +801,3 @@ div.transitionScreenImageContainer:hover {
 	border-right-width: 0px;
 }
 
-.tabs-tool-highlight {
--webkit-animation: pulse-border 1s infinite;
-animation: pulse-border 1s infinite;
-}
-
-@-webkit-keyframes pulse-border {
-    from, to { box-shadow: 0 0 0 0 #707a8f;}
-    50% { box-shadow: 0 0 0 4px #707a8f; }
-}
-
-@keyframes pulse-border {
-    from, to { box-shadow: 0 0 0 0 #707a8f;}
-    50% { box-shadow: 0 0 0 4px #707a8f; }
-}
