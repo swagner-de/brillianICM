@@ -329,9 +329,9 @@
 		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the first calculations of the total estimated cost of the project with detailed cost incurrence
 			estimations">Preliminary Budget Estimations</option>
 		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the project resources to ensure the plan">Resource Management</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="">Stakeholder Analysis</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence"the specification of major accomplishments to be achieved throughout the project in accordance with a certain
-			deadline>Milestone Planning</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the specification of major accomplishments to be achieved throughout the project in accordance with a certain
+			deadline">Milestone Planning</option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition and assessment of the risks involved in the project">Risk Analysis</option>
 		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the startup of the project used to familiarize the team with one another, communicate and ensure the nature of the
 			project as well as devised execution, and to get feedback and commitment from team members">Kickoff Meeting</option>
@@ -367,9 +367,9 @@
 		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the first calculations of the total estimated cost of the project with detailed cost incurrence
 			estimations">Preliminary Budget Estimations</option>
 		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the project resources to ensure the plan">Resource Management</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="">Stakeholder Analysis</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence"the specification of major accomplishments to be achieved throughout the project in accordance with a certain
-			deadline>Milestone Planning</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the specification of major accomplishments to be achieved throughout the project in accordance with a certain
+			deadline">Milestone Planning</option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition and assessment of the risks involved in the project">Risk Analysis</option>
 		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the startup of the project used to familiarize the team with one another, communicate and ensure the nature of the
 			project as well as devised execution, and to get feedback and commitment from team members">Kickoff Meeting</option>
