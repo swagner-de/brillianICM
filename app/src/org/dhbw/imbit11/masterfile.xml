@@ -1172,17 +1172,17 @@
 		<option href="l205e000" img="content7pic3.png">
 			The result of the cost calculation for the Initiation Phase is
 			<br />
-			148 600€.
+			112 600€.
 		</option>
 		<option href="l205e000" img="content7pic3.png">
 			The result of the cost calculation for the Initiation Phase is
 			<br />
-			140 400€.
+			112 400€.
 		</option>
 		<option href="l205e001" img="content7pic3.png">
 			The result of the cost calculation for the Initiation Phase is
 			<br />
-			141 000€.
+			112 800€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
@@ -1198,17 +1198,17 @@
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 200€.
+			560 200€.
 		</option>
 		<option href="l206e001" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 400€.
+			550 500€.
 		</option>
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 600€.
+			555 600€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
@@ -1224,17 +1224,17 @@
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 200€.
+			560 200€.
 		</option>
 		<option href="l206e001" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 400€.
+			550 500€.
 		</option>
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 600€.
+			555 600€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
@@ -1251,19 +1251,19 @@
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 100€.
+			1 184 100€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 500€.
+			1 185 500€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 400€.
+			1 184 400€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
@@ -1280,19 +1280,19 @@
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 100€.
+			1 184 100€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 500€.
+			1 185 500€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 400€.
+			1 184 400€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild -->
@@ -1308,17 +1308,17 @@
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 400€.
+			1 871 500€.
 		</option>
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 100€.
+			1 874 100€.
 		</option>
 		<option href="l208e001">
 			The result of the needed overall budget is
 			<br />
-			2 071 500€.
+			1 847 400€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild -->
@@ -1334,17 +1334,17 @@
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 400€.
+			1 871 500€.
 		</option>
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 100€.
+			1 874 100€.
 		</option>
 		<option href="l208e001">
 			The result of the needed overall budget is
 			<br />
-			2 071 500€.
+			1 847 400€.
 		</option>
 	</event>
 	<!-- Mail -->
@@ -1361,14 +1361,16 @@
 			correct.
 			<br />
 			According to my calculations, the correct amount of the budget is 1
-			778 400€!
+			847 400€!
+			<br />
+			Please have a look at the overall costs per project phase.
 			<br />
 			Kind regards,
 			<br />
 			Thomas
 			<br />
 		</content>
-		<attachment />
+		<attachment href="Overall Costs.pdf">Overall Costs </attachment>
 		<nextevent href="l289e000" />
 	</event>
 	<!-- Mail -->
@@ -1386,12 +1388,14 @@
 			<br />
 			All calculations are right! Keep this work up.
 			<br />
+			Please have a look at the overall costs per project phase.
+			<br />
 			Kind regards,
 			<br />
 			Thomas
 			<br />
 		</content>
-		<attachment />
+		<attachment href="Overall Costs.pdf">Overall Costs </attachment>
 		<nextevent href="l289e000" />
 		<!-- Theresa: Da das Spiel zum Kritischen Pfad geändert wurde, musste Mail 
 			geändert werden -->
