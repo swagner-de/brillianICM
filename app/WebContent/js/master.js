@@ -153,10 +153,7 @@ function getXml(id) {
 					
 				};
 			}			
-			/* If the location changes, showLocation() is executed.
-			* Except for: User changing from Meeting Room to Office and vice versa.
-			* @author Laluz
-			*/
+
 			mainLocationButton.linkbutton({
 			    onClick: function(){
 			    	showLocation ($(this).attr('id'));			
@@ -640,7 +637,6 @@ function fancyImageLoading(imageUrl, element){
 }
 
 function showLocation (buttonId) {	
-	buttonIdOld;
  	var tag = 'Location';
 	var container = $('.mainEventContainer');
 	var mainLocationButton = $('.mainLocationButton');	
