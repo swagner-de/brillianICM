@@ -323,7 +323,7 @@ function loadDialog () {
 		tts.lang = 'en-IE';
 		//tts.name = Kathy;
 		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
-		alert("Female Detected and Moira set");
+		//alert("Female Detected and Moira set");
 		}
 	
 	//Opens the dialog and plays the tts:
