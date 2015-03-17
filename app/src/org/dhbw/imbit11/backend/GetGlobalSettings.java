@@ -74,10 +74,31 @@ import org.apache.shiro.subject.Subject;
 				e.printStackTrace();
 			
 			}
-		request.setAttribute("audio", audio);
-		request.setAttribute("video", video);
-		request.setAttribute("tts", tts);
-		request.setAttribute("subtitles", subtitles);
+		String a;
+		String b;
+		String c;
+		String d;
+		
+		if (audio) {
+			a="activated";
+		} else {a="deactivated";}
+		
+		if (video) {
+			b="activated";
+		} else {b="deactivated";}
+		
+		if (tts) {
+			c="activated";
+		} else {c="deactivated";}
+		
+		if (subtitles) {
+			d="activated";
+		} else {d="deactivated";}
+		
+		request.setAttribute("audio", a);
+		request.setAttribute("video", b);
+		request.setAttribute("tts", c);
+		request.setAttribute("subtitles", d);
 		
 		
 	    // forward the request and response to the view

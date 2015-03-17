@@ -130,15 +130,19 @@
 			</div>
 			</div>
 			<br>
-			<div style="height: 210px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">			
+			<div style="height: 220px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">			
 			<h4>Global Settings</h4>
 			<div style="width: 300px; float: left;">
-				<form action="GetGlobalSettings" method="post">				
-					audio:<a style="color: blue; padding-left: 32px;">${audio}</a>
-					video:<a style="color: blue; padding-left: 32px;">${video}</a><br>
-					text-to-speech:<a style="color: blue; padding-left: 32px;">${tts}</a>
-					subtitles<a style="color: blue; padding-left: 32px;">${settings}</a>
-					<br><br>
+				<form action="GetGlobalSettings" method="post">	
+					<div style="width: 120px; float: left;">			
+					audio:<br><a style="color: blue; padding-left: 32px;">${audio}</a><br>
+					video:<br><a style="color: blue; padding-left: 32px;">${video}</a>
+					</div>
+					<div style="margin-left:120px;">
+					text-to-speech:<br><a style="color: blue; padding-left: 32px;">${tts}</a><br>
+					subtitles<br><a style="color: blue; padding-left: 32px;">${settings}</a>
+					</div>
+					<br>
 					<input id="getSettings" type="submit" name="getSettings" value="Get Settings" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick="$('#getSettings').trigger('click')">Get Settings</a>
 				</form>
