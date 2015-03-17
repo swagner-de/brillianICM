@@ -639,8 +639,9 @@ function fancyImageLoading(imageUrl, element){
 	img[0].src = imageUrl;
 }
 
-function showLocation (buttonId) {			
-	var tag = 'Location';
+function showLocation (buttonId) {	
+	buttonIdOld;
+ 	var tag = 'Location';
 	var container = $('.mainEventContainer');
 	var mainLocationButton = $('.mainLocationButton');	
 	var eventtype =$xml.find('event').attr('eventtype');
@@ -662,15 +663,42 @@ function showLocation (buttonId) {
 			hideSelection();
 			hideAllocation();
 			hideMatrixAllocation();
-
+			
 			if(buttonId == loc){
 				removeHighlight(mainLocationButton, loc);
 			}
-			var audioElement = document.createElement('audio');	
-			audioElement.setAttribute('src', 'audio/location.mp3');
-			//Gotta love that melody!
-			audioElement.play();	
-					
+			/* Filter for showing images due to location change
+			 */
+			if (buttonIdOld == buttonId || buttonIdOld == "3" && buttonId == "4" || buttonIdOld == "4" && buttonId == "3") {
+	    			
+	    			fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+					setTimeout(function(){
+						if(buttonId == loc){
+							if(eventtype == '3'){
+								loadDialog();		
+							}else if (eventtype == '4' || eventtype == '5'){								
+								loadSelection();
+							}else if (eventtype == '6' || eventtype == '7'){
+								loadAllocation();							
+							}else if (eventtype == '13'){
+								showNotification();							
+							}
+						}else{
+							$('.mainLocationButton').linkbutton('enable');
+							container.window({modal:false});
+						}						
+					},1500);
+	    			
+	    		} else {
+	    			
+	    			/* Possibility to add a filter in order to disable audio file.
+	    			 * @author Laluz
+	    			 */
+			
+	    			var audioElement = document.createElement('audio');	
+	    			audioElement.setAttribute('src', 'audio/location.mp3');
+	    			audioElement.play();
+	    			
 	    			/* Loads background images in a row and finally loads Dialog or alike. 
 	    			 * @author Laluz
 	    			 */
@@ -699,9 +727,11 @@ function showLocation (buttonId) {
 	    					},1500);					
 	    				},1500);
 	    			},1500);
-	    		}        
-	    	});				
-		}
+	    		} 
+	    	buttonIdOld=buttonId;			
+		 }
+	});				
+}
 
 
 function showLaptop () {
