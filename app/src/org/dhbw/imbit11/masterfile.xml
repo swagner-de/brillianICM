@@ -406,7 +406,7 @@
 			<br />
 			Jessie
 		</content>
-		<attachment href="Project_Charter.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter</attachment>
 		<nextevent href="l012e000" />
 	</event>
 	<event level="11" element="0" id="l011e001" eventtype="1" imcost="0"
@@ -427,7 +427,7 @@
 			<br />
 			Jessie
 		</content>
-		<attachment href="Project_Charter.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter</attachment>
 		<nextevent href="l011e002" />
 	</event>
 	<event level="11" element="0" id="l011e002" eventtype="3" imcost="0"
@@ -1077,7 +1077,7 @@
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
 		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
 		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_Live_System.pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_(live system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
 		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
 		<option column="3" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
@@ -1479,7 +1479,7 @@
 			<br />
 			Priya
 		</content>
-		<attachment href="BrillianCRM_Project_Chart.mpp">Project schedule</attachment>
+		<attachment href="brillianCRM_Project_Chart.mpp">Project schedule</attachment>
 		<nextevent href="l293e000" />
 	</event>
 	<event level="293" element="0" id="l293e000" eventtype="1"
