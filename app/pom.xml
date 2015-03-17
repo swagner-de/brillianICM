@@ -205,7 +205,8 @@
 						<configuration>
 							<encoding>UTF-8</encoding>
 							<doclet>ydoc.doclets.YStandard</doclet>
-							<docletPath>${yworks.uml.path}/lib/ydoc.jar:${yworks.uml.path}/lib/class2svg:${yworks.uml.path}/resources:${basedir}/target/finalName/WEB-INF/org</docletPath>
+							<docletPath>${yworks.uml.path}/lib/ydoc.jar:${yworks.uml.path}/lib/class2svg:${yworks.uml.path}/resources</docletPath>
+							<sourcepath>${basedir}/target/finalName/WEB-INF/org</sourcepath>
 							<additionalparam>-umlautogen</additionalparam>
 						</configuration>
 						<executions>
