@@ -131,14 +131,13 @@
 			</div>
 			<br>
 			<div style="height: 210px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">			
-			<div style="width: 300px; float: left;">
 			<h4>Global Settings</h4>
-			<br>
+			<div style="width: 300px; float: left;">
 				<form action="GetGlobalSettings" method="post">				
-					<p style="color: blue; padding-left: 32px;">${audio}</p>
-					<p style="color: blue; padding-left: 32px;">${video}</p>
-					<p style="color: blue; padding-left: 32px;">${tts}</p>
-					<p style="color: blue; padding-left: 32px;">${settings}</p>
+					audio:<a style="color: blue; padding-left: 32px;">${audio}</a>
+					video:<a style="color: blue; padding-left: 32px;">${video}</a><br>
+					text-to-speech:<a style="color: blue; padding-left: 32px;">${tts}</a>
+					subtitles<a style="color: blue; padding-left: 32px;">${settings}</a>
 					<br><br>
 					<input id="getSettings" type="submit" name="getSettings" value="Get Settings" hidden="hidden"/>
 					<a class="easyui-linkbutton studentButton" onclick="$('#getSettings').trigger('click')">Get Settings</a>
@@ -148,7 +147,7 @@
 				<form action="SetGlobalSettings" method="post">			
 					<div style="width: 120px; float: left;">	
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
-				<br><br>
+				
 					<input type="radio" name="audio" value="true" checked>audio on
 					<br>
 					<input type="radio" name="audio" value="false">audio off
@@ -158,7 +157,7 @@
 					<input type="radio" name="video" value="false">video off
 					<br>
 					</div>
-					<div style="margin-left:120px;"><br><br>
+					<div style="margin-left:120px;">
 					<input type="radio" name="tts" value="true" checked>text-to-speech on
 					<br>
 					<input type="radio" name="tts" value="false">text-to-speech off

@@ -56,24 +56,24 @@ import org.apache.shiro.subject.Subject;
 		String b = request.getParameter("video");
 		String c = request.getParameter("tts");
 		String d = request.getParameter("subtitles");
-		Boolean audio; 
-		Boolean video; 
-		Boolean tts; 			
-		Boolean subtitles;
+		Boolean audio=false; 
+		Boolean video=false; 
+		Boolean tts=false; 			
+		Boolean subtitles=false;
 
-		if (a=="true"){
+		if ("true".equals(a)){
 			audio = true;
 		} else { audio = false;}
 		
-		if (b=="true"){
+		if ("true".equals(b)){
 			video = true;
 		} else { video = false;}
 		
-		if (c=="true"){
+		if ("true".equals(c)){
 			tts = true;
 		} else { tts = false;}
 		
-		if (d=="true"){
+		if ("true".equals(d)){
 			subtitles = true;
 		} else { subtitles = false;}
 			  

@@ -161,10 +161,13 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 		}
 
 		// forward the request and response to the view
+		RequestDispatcher included = getServletContext()
+				.getRequestDispatcher("/GetSettingsCookie");
+		included.include(request, response);
+		
 		RequestDispatcher dispatcher = getServletContext()
 				.getRequestDispatcher(url);
-
-		dispatcher.forward(request, response);
+				dispatcher.forward(request, response);
 
 	}
 }

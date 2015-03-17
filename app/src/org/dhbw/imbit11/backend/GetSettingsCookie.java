@@ -86,12 +86,5 @@ import org.apache.shiro.subject.Subject;
 			
 			}
 		
-		
-	    // forward the request and response to the view
-        RequestDispatcher dispatcher =
-             getServletContext().getRequestDispatcher(url);
-        
-        dispatcher.forward(request, response);
-		
 	}
 }
