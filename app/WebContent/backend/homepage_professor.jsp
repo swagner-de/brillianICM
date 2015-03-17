@@ -94,7 +94,7 @@
 												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
 												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
 												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
-												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here*/
+												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
 												+"<select name=\"lvlId\" id=\"lvlId\">"
 												+"<option value=\"l204e000\">Budget Planning</option>"
 												+"<option value=\"l290e000\">Critical Path</option>"
