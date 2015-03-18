@@ -316,26 +316,28 @@ function loadDialog () {
 	var tts = new SpeechSynthesisUtterance(content);
 	var voices = window.speechSynthesis.getVoices();
 	
-	//Setting speechSynthesis parameters for Male Voice:
-	tts.native = false;
-	tts.lang = 'en-GB';
-	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
-	
-	// Checks if the partner female and setting female parameters:
-	if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
-		{
-		tts.native = false;
-		tts.lang = 'en-IE';
-		//tts.name = Kathy;
-		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
-		alert("Female Detected and Moira set");
-		}
-	
 	var ttsSettings="false";
 	 ttsSettings=getCookie("tts");
 	 if (ttsSettings == "true") {
-	//Opens the dialog and plays the tts:
-	speechSynthesis.speak(tts);
+	 	
+	//Setting speechSynthesis parameters for Male Voice:
+		tts.native = false;
+		tts.lang = 'en-GB';
+		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+	
+		// Checks if the partner female and setting female parameters:
+		if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
+			{
+			tts.native = false;
+			tts.lang = 'en-IE';
+			//tts.name = Kathy;
+			tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
+			alert("Female Detected and Moira set");
+			}
+	
+
+		//Opens the dialog and plays the tts:
+		speechSynthesis.speak(tts);
 	 }
 	
 	//lade den Dialog:
