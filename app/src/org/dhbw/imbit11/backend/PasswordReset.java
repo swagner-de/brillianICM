@@ -64,7 +64,7 @@ import org.apache.shiro.subject.Subject;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		String url = null;
+		String url;
 		
 		if(request.getParameter("updatePassword") != null){
 			String role = request.getParameter("role");
