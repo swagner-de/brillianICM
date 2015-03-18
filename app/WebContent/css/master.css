@@ -512,11 +512,12 @@ div.draftbutton-first {
 div.allocationContainer {
 	padding: 10px;
 	display: none;
+	width: 100%;
 }
 
 div.phaseTitle {
 	border-width: 1px;
-	width: 196px;
+	width: 190px;
 	margin-top: 5px;
 	height: 16px;
 	float: left;
@@ -526,7 +527,7 @@ div.phaseTitle {
 
 div.phase {
 	border-width: 1px;
-	width: 206px;
+	width: 200px;
 	height: 280px;
 	vertical-align: top;
 	float: left;
@@ -535,7 +536,7 @@ div.phase {
 	margin-right: 0px;
 	border-right-width: 0px;
 	border-top-width: 0px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	padding-bottom: 5px;
 }
 
@@ -819,19 +820,4 @@ div.transitionScreenImageContainer:hover {
 	height: inherit !important;
 	border-top-width: 0px;
 	border-right-width: 0px;
-}
-
-.tabs-tool-highlight {
--webkit-animation: pulse-border 1s infinite;
-animation: pulse-border 1s infinite;
-}
-
-@-webkit-keyframes pulse-border {
-    from, to { box-shadow: 0 0 0 0 #707a8f;}
-    50% { box-shadow: 0 0 0 4px #707a8f; }
-}
-
-@keyframes pulse-border {
-    from, to { box-shadow: 0 0 0 0 #707a8f;}
-    50% { box-shadow: 0 0 0 4px #707a8f; }
 }

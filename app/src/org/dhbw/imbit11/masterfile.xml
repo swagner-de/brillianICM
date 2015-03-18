@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events>
 	<!-- HIER BEGINNT CONTENT 1 -->
-	<!-- Startwerte auf jeweils 71 gesetzt, um mit grünen Werten zu beginnen -->
+	<!-- Startwerte auf jeweils 50 gesetzt, bei l000e002 +21 addiert, um mit grünen Werten zu beginnen -->
 
 	<!-- JobOffer Bild und Accept Job offer Button -->
 
@@ -81,13 +81,13 @@
 		<title>Welcome</title>
 		<content>Hello %prename%, good to talk to you! I am glad that you
 			accepted this job offer. In preparation for our project, I sent you
-			two emails with the basic information about CRM, project management
+			two e-mails with the basic information about CRM, project management
 			and Concrete Machinery. Please read them in advance and make sure you
 			understand them. This is very important for a good project start.
-			Please call me back, as soon as you read the emails. </content>
+			Please call me back, as soon as you read the e-mails. </content>
 		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
-
+		<bgvid>l001e000.mp4</bgvid>
 	</event>
 	<event level="1" element="0" id="l001e004" eventtype="13" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -100,13 +100,13 @@
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
 		<content>Hello %prename%, thanks for calling me back. Do you have any
-			questions about the emails I sent you?</content>
+			questions about the e-mails I sent you?</content>
 		<option href="l001e002">No, I feel well prepared for the project. Thank
 			you for asking.</option>
 		<option href="l001e003">Yes, indeed, I didn’t really understand the files
 			and videos you sent me.</option>
 		<bgimg>role1pic9.png</bgimg>
-
+		<bgvid>l001e001.mp4</bgvid>
 	</event>
 	<event level="1" element="0" id="l001e002" eventtype="3" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -125,10 +125,10 @@
 			you up at the airport. Have a good flight!</content>
 		<option href="l002e000"> Hang up phone </option>
 		<bgimg>role1pic9.png</bgimg>
-
+		<bgvid>l001e002.mp4</bgvid>
 	</event>
 	<event level="1" element="0" id="l001e003" eventtype="3" imcost="0"
-		imqual="-5" imtime="0" loc="4">
+		imqual="-5" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
@@ -145,6 +145,7 @@
 			disappoint me!</content>
 		<option href="l002e000"> Hang up phone </option>
 		<bgimg>role1pic9.png</bgimg>
+		<bgvid>l001e003.mp4</bgvid>
 	</event>
 
 	<!-- Flugbilder/ location change -->
@@ -169,7 +170,7 @@
 		<bgvid>l002e000.mp4</bgvid>
 	</event>
 	<event level="3" element="1" id="l003e001" eventtype="3" imcost="+2"
-		imqual="+4" imtime="+2" loc="1">
+		imqual="+2" imtime="+2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 10:21:34</date>
 		<title>Pick up by client</title>
@@ -192,7 +193,7 @@
 		<bgvid>l003e002.mp4</bgvid>
 	</event>
 	<event level="3" element="3" id="l003e003" eventtype="3" imcost="-2"
-		imqual="-4" imtime="-2" loc="1">
+		imqual="-2" imtime="-2" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 12:21:34</date>
 		<title>Pick up by client</title>
@@ -202,8 +203,8 @@
 		<bgimg>role3pic7.png</bgimg>
 		<bgvid>l003e003.mp4</bgvid>
 	</event>
-	<event level="3" element="4" id="l003e004" eventtype="3" imcost="-3"
-		imqual="-5" imtime="-3" loc="1">
+	<event level="3" element="4" id="l003e004" eventtype="3" imcost="0"
+		imqual="0" imtime="0" loc="1">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-02 13:21:34</date>
 		<title>Pick up by client</title>
@@ -253,7 +254,7 @@
 		<description>Let me know your choice!</description>
 		<option href="l009e001" img="role7pic3.png">I want Priya Williams!</option>
 		<option href="l009e002" img="role8pic4.png">I want Nadja Schuster!</option>
-		<option href="l022e000" img="role6pic3.png">I want Martin Heinemann!</option>
+		<option href="l009e003" img="role6pic3.png">I want Martin Heinemann!</option>
 	</event>
 	<event level="9" element="1" id="l009e001" eventtype="3" imcost="0"
 		imqual="-10" imtime="+10" loc="4">
@@ -267,7 +268,7 @@
 		<bgvid>l009e001.mp4</bgvid>
 	</event>
 	<event level="9" element="2" id="l009e002" eventtype="3" imcost="0"
-		imqual="+10" imtime="-10" loc="4">
+		imqual="+10" imtime="-5" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 11:21:34</date>
 		<title>Choice of an Assistant</title>
@@ -277,8 +278,8 @@
 		<bgimg>role3pic3.png</bgimg>
 		<bgvid>l009e002.mp4</bgvid>
 	</event>
-	<event level="9" element="3" id="l009e003" eventtype="3" imcost="+10"
-		imqual="0" imtime="-6" loc="4">
+	<event level="9" element="3" id="l009e003" eventtype="3" imcost="-10"
+		imqual="+5" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-03 11:21:34</date>
 		<title>Choice of an Assistant</title>
@@ -296,6 +297,7 @@
 		<content>So, now that you have chosen an assistant, we can go over the project management tasks to ensure that we are on the same page about project procedure. Prepare an overview of the project management tasks, and show me your result.  </content>
 		<option href="l009e012">Next</option>
 		<bgimg>role3pic2.png</bgimg>
+		<bgvid>l009e010.mp4</bgvid>
 	</event>
 	<event level="9" element="4" id="l009e011" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
@@ -304,6 +306,7 @@
 		<content>So, now that you have chosen an assistant, we can go over the project management tasks to ensure that we are on the same page about project procedure. Prepare an overview of the project management tasks, and show me your result.  </content>
 		<option href="l009e013">Next</option>
 		<bgimg>role3pic2.png</bgimg>
+		<bgvid>l009e010.mp4</bgvid>
 	</event>
 	<!-- Laura: Splittung der WBS in 2 separate Spiele: Projekt Management Phasen und Work Breakdown Structure in Bezug auf BrillianCRM Spiel--> 
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e012" element="0" level="009">
@@ -313,27 +316,35 @@
 		<column>Project Planning</column>
 		<column>Project Execution</column>
 		<column>Project Closing</column>
-		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Change Management</option>
-		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Project Charter</option>
-		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Work Breakdown Structure</option>
-		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Responsibilities</option>
-		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Lessons Learned</option>
-		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Cost Management</option>
-		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling</option>
-		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Targets</option>
-		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Quality Management</option>
-		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Post Cost Analysis</option>
-		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Budget Estimations</option>
-		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Management</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Stakeholder Analysis</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Milestone Planning</option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Analysis</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Kickoff Meeting</option>
-		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Management</option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Strategies and Measures</option>
-		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling Management</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Allocation</option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Final Project Report</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the acceptance and awareness of the differences that the project brings to
+			the business">Change Management</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
+			begin work">Project Charter</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the WBS is a deliverables-oriented hierarchy of project elements that defines the project">Work Breakdown Structure</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="roles and responsibilities are defined for each team member and communicated to the rest of the team. A
+			RACI (Responsible, Accountable, Consulted, Informed) diagram is often used.">Define Responsibilities</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="is the knowledge gained from the process of performing the project">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the project budget and all supplemental costs incurred">Cost Management</option>
+		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the time needed to fulfill or execute a work package is planned according to the period of the project">Scheduling</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a continuation of the definition of the project scope through interim goal">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the quality of the deliverables of the project">Quality Management</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the costs of the project are inspected and used for estimations in future, similar projects">Post Cost Analysis</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the first calculations of the total estimated cost of the project with detailed cost incurrence
+			estimations">Preliminary Budget Estimations</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the project resources to ensure the plan">Resource Management</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the specification of major accomplishments to be achieved throughout the project in accordance with a certain
+			deadline">Milestone Planning</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition and assessment of the risks involved in the project">Risk Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the startup of the project used to familiarize the team with one another, communicate and ensure the nature of the
+			project as well as devised execution, and to get feedback and commitment from team members">Kickoff Meeting</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the avoidance of unnecessary risk through guidance and defined measures">Risk Management</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition of strategies for dealing with stakeholders of the project and measures to be taken
+			against risks associated with the project">Define Strategies and Measures</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the time planning to ensure that the plan stays on track">Scheduling Management</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the strategic allotment of project resources i.e. budget, personnel to the work packages and other project
+			efforts">Resource Allocation</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the last version of the documentation of the project">Final Project Report</option>
 			<nextevent href="l010e000" />
 	</event>
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l009e013" element="0" level="009">
@@ -343,27 +354,35 @@
 		<column>Project Planning</column>
 		<column>Project Execution</column>
 		<column>Project Closing</column>
-		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Change Management</option>
-		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Project Charter</option>
-		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Work Breakdown Structure</option>
-		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Responsibilities</option>
-		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Lessons Learned</option>
-		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Cost Management</option>
-		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling</option>
-		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Targets</option>
-		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Quality Management</option>
-		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Post Cost Analysis</option>
-		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Preliminary Budget Estimations</option>
-		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Management</option>
-		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Stakeholder Analysis</option>
-		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Milestone Planning</option>
-		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Analysis</option>
-		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Kickoff Meeting</option>
-		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Risk Management</option>
-		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Define Strategies and Measures</option>
-		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Scheduling Management</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Resource Allocation</option>
-		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary">Final Project Report</option>
+		<option column="3" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the acceptance and awareness of the differences that the project brings to
+			the business">Change Management</option>
+		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
+			begin work">Project Charter</option>
+		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the WBS is a deliverables-oriented hierarchy of project elements that defines the project">Work Breakdown Structure</option>
+		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="roles and responsibilities are defined for each team member and communicated to the rest of the team. A
+			RACI (Responsible, Accountable, Consulted, Informed) diagram is often used.">Define Responsibilities</option>
+		<option column="4" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="is the knowledge gained from the process of performing the project">Lessons Learned</option>
+		<option column="3" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the project budget and all supplemental costs incurred">Cost Management</option>
+		<option column="2" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the time needed to fulfill or execute a work package is planned according to the period of the project">Scheduling</option>
+		<option column="1" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a continuation of the definition of the project scope through interim goal">Preliminary Targets</option>
+		<option column="3" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the conducting and supervising of the quality of the deliverables of the project">Quality Management</option>
+		<option column="4" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the costs of the project are inspected and used for estimations in future, similar projects">Post Cost Analysis</option>
+		<option column="1" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the first calculations of the total estimated cost of the project with detailed cost incurrence
+			estimations">Preliminary Budget Estimations</option>
+		<option column="3" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the project resources to ensure the plan">Resource Management</option>
+		<option column="2" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the assessment of the people with interest or involvement in the project on a plane of interest and influence">Stakeholder Analysis</option>
+		<option column="1" rank="5" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the specification of major accomplishments to be achieved throughout the project in accordance with a certain
+			deadline">Milestone Planning</option>
+		<option column="2" rank="3" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition and assessment of the risks involved in the project">Risk Analysis</option>
+		<option column="1" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the startup of the project used to familiarize the team with one another, communicate and ensure the nature of the
+			project as well as devised execution, and to get feedback and commitment from team members">Kickoff Meeting</option>
+		<option column="3" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the avoidance of unnecessary risk through guidance and defined measures">Risk Management</option>
+		<option column="2" rank="4" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the definition of strategies for dealing with stakeholders of the project and measures to be taken
+			against risks associated with the project">Define Strategies and Measures</option>
+		<option column="3" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the controlling and supervising of the time planning to ensure that the plan stays on track">Scheduling Management</option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the strategic allotment of project resources i.e. budget, personnel to the work packages and other project
+			efforts">Resource Allocation</option>
+		<option column="4" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="the last version of the documentation of the project">Final Project Report</option>
 			<nextevent href="l010e001" />
 	</event>
 	
@@ -373,7 +392,7 @@
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
 		<content>You may connect your computer to our network. I have already
-			sent you an email containing the project charter. </content>
+			sent you an e-mail containing the project charter. </content>
 		<option href="l011e000">Next</option>
 		<bgimg>loc3a.png</bgimg>
 		<bgvid>l010e000.mp4</bgvid>
@@ -384,7 +403,7 @@
 		<date>2014-01-03 12:21:34</date>
 		<title>Starting to work</title>
 		<content>You may connect your computer to our network. I have already
-			sent you an email containing the project charter. </content>
+			sent you an e-mail containing the project charter. </content>
 		<option href="l011e001">Next</option>
 		<bgimg>loc3a.png</bgimg>
 	</event>
@@ -406,7 +425,7 @@
 			<br />
 			Jessie
 		</content>
-		<attachment href="Project_Charter.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter</attachment>
 		<nextevent href="l012e000" />
 	</event>
 	<event level="11" element="0" id="l011e001" eventtype="1" imcost="0"
@@ -427,7 +446,7 @@
 			<br />
 			Jessie
 		</content>
-		<attachment href="Project_Charter.pdf">Project charter1</attachment>
+		<attachment href="Project_Charter.pdf">Project charter</attachment>
 		<nextevent href="l011e002" />
 	</event>
 	<event level="11" element="0" id="l011e002" eventtype="3" imcost="0"
@@ -489,10 +508,9 @@
 		<!-- letzte Option von l016e001 zu l016e003 geändert, unten neue Antwort 
 			für diese Option formuliert -->
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l015e000.mp4</bgvid>
 	</event>
-	<event level="16" element="1" id="l016e001" eventtype="3" imcost="-5"
-		imqual="-10" imtime="-5" loc="4">
+	<event level="16" element="1" id="l016e001" eventtype="3" imcost="-3"
+		imqual="-7" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-05 10:09:34</date>
 		<title>Call with CEO</title>
@@ -501,7 +519,6 @@
 		</content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
-		<bgvid>l016e001.mp4</bgvid>
 	</event>
 	<event level="16" element="2" id="l016e002" eventtype="3" imcost="+5"
 		imqual="+10" imtime="+5" loc="4">
@@ -512,10 +529,9 @@
 			project, great! </content>
 		<option href="l017e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l016e002.mp4</bgvid>
 	</event>
 	<event level="16" element="1" id="l016e003" eventtype="3" imcost="-5"
-		imqual="-10" imtime="-5" loc="4">
+		imqual="-10" imtime="-7" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-05 10:09:34</date>
 		<title>Call with CEO</title>
@@ -543,10 +559,9 @@
 			the procurement process. </option>
 		<option href="l018e002"> There are no benefits involved. </option>
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l017e000.mp4</bgvid>
 	</event>
-	<event level="18" element="1" id="l018e001" eventtype="3" imcost="+3"
-		imqual="+5" imtime="+3" loc="4">
+	<event level="18" element="1" id="l018e001" eventtype="3" imcost="+5"
+		imqual="+10" imtime="+5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-05 10:21:34</date>
 		<title>Call with CEO</title>
@@ -554,10 +569,9 @@
 			convince the customer to expand its business with us! </content>
 		<option href="l021e000">Next</option>
 		<bgimg>role1pic9.png</bgimg>
-		<bgvid>l018e001.mp4</bgvid>
 	</event>
-	<event level="18" element="2" id="l018e002" eventtype="3" imcost="-3"
-		imqual="-5" imtime="-3" loc="4">
+	<event level="18" element="2" id="l018e002" eventtype="3" imcost="-5"
+		imqual="-10" imtime="-5" loc="4">
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-05 10:26:34</date>
 		<title>Call with CEO</title>
@@ -566,7 +580,6 @@
 			convince the customer to expand its business with us! </content>
 		<option href="l021e000">Next</option>
 		<bgimg>role1pic8.png</bgimg>
-		<bgvid>l018e002.mp4</bgvid>
 	</event>
 	<!-- Mail -->
 	<event loc="" imtime="0" imqual="0" imcost="0" eventtype="1"
@@ -587,7 +600,7 @@
 			<br />
 			<br />
 			<br />
-			Please perform the risk analysis and check your emails afterwards.
+			Please perform the risk analysis and check your e-mails afterwards.
 			<br />
 			<br />
 			Kind regards,
@@ -602,12 +615,13 @@
 	<!-- Laura: Drag and Drop der Risk Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l022e000" element="0" level="22">
 		<title>Risk Analysis</title>
+		<description><b>Risk Analysis</b></description>
 		<description>Please assign the risk packages to each field of the Risk Matrix:</description>
 		<option rank="1" fdesc="Test">Exchange of Human Resources, because of absence (e.g. sickness, vacation, …).</option>
 		<option rank="4" fdesc="Test">Traffic Jam on the way to work for employees.</option>
 		<option rank="7" fdesc="Test">Minor difference of executed tasks from the action plan.</option>
-		<option rank="2" fdesc="Test">The requirements definition is incomplete, insufficient and changes appear in the course of the project. The customer might try to widen the scope of the project.</option>
-		<option rank="5" fdesc="Test">Lack of communication within the Team. Intercultural missunderstanding within the Team. Indian team members cannot deliver in time. </option>
+		<option rank="2" fdesc="Test">The requirements definition is incomplete, insufficient and changes appear in the course of the project.</option>
+		<option rank="5" fdesc="Test">Lack of communication within the Team. Intercultural misunderstandings and Indian team members cannot deliver in time. </option>
 		<option rank="8" fdesc="Test">Key Contacts are not specifically defined or do not have enough time for their tasks.</option>
 		<option rank="3" fdesc="Test">Project is out of scope. It faces delays regarding milestones and time. Budged is out of scope. </option>
 		<option rank="6" fdesc="Test">The requirements of the security of information and data protection is not complied (Governmental requirements).</option>
@@ -692,7 +706,7 @@
 		</option>
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="+7" imqual="+13" imcost="+11" eventtype="1"
+	<event loc="" imtime="+7" imqual="+13" imcost="+10" eventtype="1"
 		id="l025e000" element="0" level="25">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -715,7 +729,7 @@
 		<nextevent href="l030e000" />
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="-5" imqual="-9" imcost="-9" eventtype="1"
+	<event loc="" imtime="-7" imqual="-13" imcost="-10" eventtype="1"
 		id="l025e001" element="1" level="25">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -780,8 +794,8 @@
 	<!-- Laura: Drag and Drop der Stakeholder Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l031e000" element="0" level="31">
 		<title>Stakeholder Analysis</title>
-		<description> Please assign the CRM customer to each field of the Stakeholder Matrix: <br />
-		</description>
+		<description><b>Stakeholder Analysis</b></description>
+		<description>Please assign the CRM customer to each field of the Stakeholder Matrix:</description>
 		<option rank="1" fdesc="Test">Future users of the CRM software (employees and sales representatives)</option>
 		<option rank="4" fdesc="Test">Competitive companies</option>
 		<option rank="7" fdesc="Test">Customer's customer</option>
@@ -870,9 +884,10 @@
 		<option href="l072e001">You have to ask my assistant about that. I
 			personally didn't have much time to elaborate on the project.
 		</option>
+		<bgvid>l071e000.mp4</bgvid>
 	</event>
-	<event level="72" element="1" id="l072e001" eventtype="3" imcost="-3"
-		imqual="-5" imtime="-3" loc="3">
+	<event level="72" element="1" id="l072e001" eventtype="3" imcost="-5"
+		imqual="-5" imtime="-5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:11:34</date>
 		<title>kick-off meeting</title>
@@ -884,7 +899,7 @@
 	<!-- Für Alternative 1 und 2 im Folgenden neue Antworten formuliert. l072e001 
 		auf l072e003 und 004 gesetzt. -->
 	<event level="72" element="1" id="l072e003" eventtype="3" imcost="-3"
-		imqual="-5" imtime="-3" loc="3">
+		imqual="-3" imtime="-3" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:11:34</date>
 		<title>kick-off meeting</title>
@@ -892,8 +907,8 @@
 			I'm sure that we can manage the risks well. </content>
 		<option href="l073e000">Next</option>
 	</event>
-	<event level="72" element="1" id="l072e004" eventtype="3" imcost="-3"
-		imqual="-5" imtime="-3" loc="3">
+	<event level="72" element="1" id="l072e004" eventtype="3" imcost="-5"
+		imqual="-5" imtime="-5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:11:34</date>
 		<title>kick-off meeting</title>
@@ -902,8 +917,8 @@
 			immediately. </content>
 		<option href="l073e000">Next</option>
 	</event>
-	<event level="72" element="2" id="l072e002" eventtype="3" imcost="+3"
-		imqual="+5" imtime="+3" loc="3">
+	<event level="72" element="2" id="l072e002" eventtype="3" imcost="+5"
+		imqual="+5" imtime="+5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:21:34</date>
 		<title>Kick-off meeting</title>
@@ -989,6 +1004,7 @@
 		<content>Great. I think that we will be able to successfully end the
 			project together. So, now that we all know each other let’s take a
 			look at a short kick-off presentation! </content>
+		<bgvid>l080e000.mp4</bgvid>
 		<option href="l081e000">Next</option>
 	</event>
 	<event level="81" element="0" id="l081e000" eventtype="13"
@@ -1068,16 +1084,17 @@
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="6" id="l201e000" element="0" level="201">
 		<title>Work Breakdown Structure</title>
 		<description>Please assign the work packages to each deliverable of the work breakdown structure: </description>
+		<description><b>brillianCRM</b></description>
 		<column>CRM Strategy</column>
-		<column>Software Customized</column>
+		<column>Software</column>
 		<column>Data</column>
-		<column>Handover</column>
+		<column>Handover / Documentation</column>
 		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration" >Data Migration</option>
 		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
 		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
 		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
-		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_Live_System.pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
+		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_(live system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
 		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
 		<option column="3" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
@@ -1172,21 +1189,21 @@
 		<option href="l205e000" img="content7pic3.png">
 			The result of the cost calculation for the Initiation Phase is
 			<br />
-			148 600€.
+			112 600€.
 		</option>
 		<option href="l205e000" img="content7pic3.png">
 			The result of the cost calculation for the Initiation Phase is
 			<br />
-			140 400€.
+			112 400€.
 		</option>
 		<option href="l205e001" img="content7pic3.png">
 			The result of the cost calculation for the Initiation Phase is
 			<br />
-			141 000€.
+			112 800€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="-1" imqual="0" imcost="-5" eventtype="5"
+	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="5"
 		id="l205e000" element="0" level="205">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1198,21 +1215,21 @@
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 200€.
+			560 200€.
 		</option>
 		<option href="l206e001" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 400€.
+			550 500€.
 		</option>
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 600€.
+			555 600€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="+5" imqual="0" imcost="+5" eventtype="5"
+	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="5"
 		id="l205e001" element="1" level="205">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1224,21 +1241,21 @@
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 200€.
+			560 200€.
 		</option>
 		<option href="l206e001" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 400€.
+			550 500€.
 		</option>
 		<option href="l206e000" img="content7pic4.png">
 			The result of the cost calculation for the Planning Phase is
 			<br />
-			668 600€.
+			555 600€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="-3" imqual="-5" imcost="-3" eventtype="5"
+	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="5"
 		id="l206e000" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1251,23 +1268,23 @@
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 100€.
+			1 184 100€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 500€.
+			1 185 500€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 400€.
+			1 184 400€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
-	<event loc="4" imtime="+5" imqual="+9" imcost="+5" eventtype="5"
+	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="5"
 		id="l206e001" element="0" level="206">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1280,23 +1297,23 @@
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 100€.
+			1 184 100€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 500€.
+			1 185 500€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
 			The result of the cost calculation for the Execution and Closing
 			Phase is
 			<br />
-			1 262 400€.
+			1 184 400€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild -->
-	<event loc="4" imtime="-5" imqual="-5" imcost="-5" eventtype="4"
+	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="4"
 		id="l207e000" element="0" level="207">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1308,21 +1325,21 @@
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 400€.
+			1 871 500€.
 		</option>
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 100€.
+			1 874 100€.
 		</option>
 		<option href="l208e001">
 			The result of the needed overall budget is
 			<br />
-			2 071 500€.
+			1 847 400€.
 		</option>
 	</event>
 	<!-- Auswahl mit Bild -->
-	<event loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="4"
+	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="4"
 		id="l207e001" element="0" level="207">
 		<title>Auswahl mit Bild</title>
 		<description>
@@ -1334,21 +1351,21 @@
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 400€.
+			1 871 500€.
 		</option>
 		<option href="l208e000">
 			The result of the needed overall budget is
 			<br />
-			2 072 100€.
+			1 874 100€.
 		</option>
 		<option href="l208e001">
 			The result of the needed overall budget is
 			<br />
-			2 071 500€.
+			1 847 400€.
 		</option>
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="-10" imqual="-10" imcost="-15" eventtype="1"
+	<event loc="" imtime="-7" imqual="-11" imcost="-15" eventtype="1"
 		id="l208e000" element="0" level="208">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -1361,18 +1378,20 @@
 			correct.
 			<br />
 			According to my calculations, the correct amount of the budget is 1
-			778 400€!
+			847 400€!
+			<br />
+			Please have a look at the overall costs per project phase.
 			<br />
 			Kind regards,
 			<br />
 			Thomas
 			<br />
 		</content>
-		<attachment />
+		<attachment href="Overall Costs.pdf">Overall Costs </attachment>
 		<nextevent href="l289e000" />
 	</event>
 	<!-- Mail -->
-	<event loc="" imtime="+5" imqual="+5" imcost="+13" eventtype="1"
+	<event loc="" imtime="+7" imqual="+11" imcost="+15" eventtype="1"
 		id="l208e001" element="1" level="208">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
@@ -1386,12 +1405,14 @@
 			<br />
 			All calculations are right! Keep this work up.
 			<br />
+			Please have a look at the overall costs per project phase.
+			<br />
 			Kind regards,
 			<br />
 			Thomas
 			<br />
 		</content>
-		<attachment />
+		<attachment href="Overall Costs.pdf">Overall Costs </attachment>
 		<nextevent href="l289e000" />
 		<!-- Theresa: Da das Spiel zum Kritischen Pfad geändert wurde, musste Mail 
 			geändert werden -->
@@ -1431,7 +1452,7 @@
 		<!-- Theresa: Mail an neues Spiel angepasst -->
 	</event>
 	<event level="291" element="0" id="l291e001" eventtype="3"
-		imcost="+5" imqual="+7" imtime="+9" loc="3">
+		imcost="+7" imqual="+11" imtime="+15" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
@@ -1444,7 +1465,7 @@
 		<!-- Theresa: Mail an neues Spiel angepasst -->
 	</event>
 	<event level="291" element="0" id="l291e002" eventtype="3"
-		imcost="-7" imqual="-9" imtime="-13" loc="3">
+		imcost="-7" imqual="-11" imtime="-15" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
@@ -1469,13 +1490,13 @@
 			I have prepared the project schedule with MS Project. Please find
 			attached the corresponding file. If you cannot open the file, you
 			have to download the MS Project software. I will send you a second
-			email with further instructions.
+			e-mail with further instructions.
 			<br />
 			Kind regards,
 			<br />
 			Priya
 		</content>
-		<attachment href="BrillianCRM_Project_Chart.mpp">Project schedule</attachment>
+		<attachment href="brillianCRM_Project_Chart.mpp">Project schedule</attachment>
 		<nextevent href="l293e000" />
 	</event>
 	<event level="293" element="0" id="l293e000" eventtype="1"
@@ -1705,7 +1726,7 @@
 	</event>
 	<!-- l310e000 ENDPUNKT Deutlicher Qualitätsverlust, leichter Zeitverlust -->
 	<event level="600" element="0" id="l310e000" eventtype="1"
-		imcost="0" imqual="-8" imtime="-3" loc="">
+		imcost="-5" imqual="-15" imtime="-10" loc="">
 		<from>Priya Williams</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-0 6-14 17:21:00</date>
@@ -1815,7 +1836,7 @@
 	</event>
 	<!-- l311e003 ENDPUNKT: deutlicher Zeitverzug -->
 	<event level="600" element="3" id="l311e003" eventtype="1"
-		imcost="0" imqual="0" imtime="-10" loc="">
+		imcost="-10" imqual="-5" imtime="-15" loc="">
 		<from>Priya Williams</from>
 		<to>%surname%, %prename%</to>
 		<subject>We have a problem!!!</subject>
@@ -1859,7 +1880,7 @@
 	<!-- l312e000 Endpunkt: Leicht höhere Kosten; Qualität leicht runter, Zeit 
 		leicht hoch -->
 	<event level="600" element="0" id="l312e000" eventtype="1"
-		imcost="-4" imqual="-4" imtime="+5" loc="">
+		imcost="-10" imqual="0" imtime="+5" loc="">
 		<from>Priya Williams</from>
 		<to>%surname%, %prename%</to>
 		<subject>We have a problem!!!</subject>
@@ -1919,7 +1940,7 @@
 	</event>
 	<!-- l313e000 Endpunkt: Deutlich höhere Kosten; Qualität und Zeit beim Ursprungswert -->
 	<event level="600" element="0" id="l313e000" eventtype="1"
-		imcost="-8" imqual="+10" imtime="+10" loc="">
+		imcost="-15" imqual="+5" imtime="+5" loc="">
 		<from>Priya Williams</from>
 		<to>%surname%, %prename%</to>
 		<subject>We have a problem!!!</subject>
@@ -1967,7 +1988,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like things are a little bit out of hand. It appears that our
 			colleagues are significantly behind schedule.
 			<br />
@@ -2008,7 +2029,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like things are a little bit out of hand. As you know, our colleagues
 			in India worked overtime to fix a problem with their schedule.
 			Unfortunately, this measure backfired and quality has suffered:
@@ -2054,7 +2075,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like their work got slightly delayed. As you know, we have hired
 			additional resources in India to counter the delay.
 			<br />
@@ -2095,7 +2116,7 @@
 			Hope you are doing well?
 			<br />
 			<br />
-			I have followed up on your email with our Indian colleagues. Seems
+			I have followed up on your e-mail with our Indian colleagues. Seems
 			like things are slightly out of hand. Our Indian colleagues had
 			problems meeting the schedule, so we sent over experts from Germany.
 			We are back on schedule now, but the cost of sending our experts on
@@ -2159,7 +2180,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2186,7 +2207,7 @@
 			Hi Jessica,
 			<br />
 			<br />
-			Thank you for your email. I suggest to take the following modules out
+			Thank you for your e-mail. I suggest to take the following modules out
 			of scope for now:
 			<br />
 		</content>
@@ -2206,7 +2227,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="0" id="l317e000" eventtype="1"
-		imcost="0" imqual="-3" imtime="+3" loc="">
+		imcost="0" imqual="-5" imtime="0" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2215,7 +2236,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2232,7 +2253,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="1" id="l317e001" eventtype="1"
-		imcost="-5" imqual="+4" imtime="+4" loc="">
+		imcost="-5" imqual="+5" imtime="+5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2241,7 +2262,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2258,7 +2279,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="2" id="l317e002" eventtype="1"
-		imcost="-10" imqual="+9" imtime="+9" loc="">
+		imcost="-15" imqual="+10" imtime="+10" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2267,7 +2288,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2284,7 +2305,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="3" id="l317e003" eventtype="1"
-		imcost="-8" imqual="+5" imtime="+5" loc="">
+		imcost="-10" imqual="+8" imtime="+8" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2293,7 +2314,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2310,7 +2331,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="4" id="l317e004" eventtype="1"
-		imcost="-4" imqual="-2" imtime="+6" loc="">
+		imcost="-10" imqual="-15" imtime="+5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2319,7 +2340,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2336,7 +2357,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="5" id="l317e005" eventtype="1"
-		imcost="-8" imqual="+5" imtime="+6" loc="">
+		imcost="-15" imqual="+5" imtime="+5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2345,7 +2366,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2362,7 +2383,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="6" id="l317e006" eventtype="1"
-		imcost="-5" imqual="+4" imtime="+3" loc="">
+		imcost="-5" imqual="-5" imtime="-5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2371,7 +2392,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2388,7 +2409,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="7" id="l317e007" eventtype="1"
-		imcost="-6" imqual="+1" imtime="+4" loc="">
+		imcost="-10" imqual="+5" imtime="+5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2397,7 +2418,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2414,7 +2435,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="8" id="l317e008" eventtype="1"
-		imcost="-6" imqual="+1" imtime="+4" loc="">
+		imcost="-10" imqual="+5" imtime="+5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2423,7 +2444,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2440,7 +2461,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="10" id="l317e010" eventtype="1"
-		imcost="+3" imqual="0" imtime="0" loc="">
+		imcost="+5" imqual="0" imtime="0" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2449,7 +2470,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2466,7 +2487,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="11" id="l317e011" eventtype="1"
-		imcost="+3" imqual="0" imtime="0" loc="">
+		imcost="+5" imqual="0" imtime="0" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2475,7 +2496,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2492,7 +2513,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="12" id="l317e012" eventtype="1"
-		imcost="+6" imqual="-4" imtime="-4" loc="">
+		imcost="+10" imqual="-5" imtime="-5" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2501,7 +2522,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2518,7 +2539,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="13" id="l317e013" eventtype="1"
-		imcost="-10" imqual="+6" imtime="+6" loc="">
+		imcost="-10" imqual="+10" imtime="+10" loc="">
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
@@ -2527,7 +2548,7 @@
 			Hi %prename%,
 			<br />
 			<br />
-			Thank you for your email. I was surprised to hear that things
+			Thank you for your e-mail. I was surprised to hear that things
 			developed this fast, but I’m glad you already came up with a back-up
 			plan.
 			<br />
@@ -2599,7 +2620,7 @@
 			Hello Mr. Gupta
 			<br />
 			<br />
-			Thanks for your email.
+			Thanks for your e-mail.
 		</content>
 		<option href="l800e001">
 			It is good to hear that testing is about to be finished and did not
@@ -2642,7 +2663,7 @@
 	<!-- Prioritäten setzen -->
 	<!-- Benachrichtigung -->
 	<event level="600" element="0" id="l330e000" eventtype="13"
-		imcost="+10" imqual="0" imtime="-10" loc="4">
+		imcost="0" imqual="0" imtime="0" loc="4">
 		<content> In 30 minutes is your meeting with the steering committee.
 			You will present the current status of the project. Better be
 			prepared! </content>
@@ -2676,19 +2697,73 @@
 		</content>
 		<option href="l331e001">Chill out my friend. I will call Vance and invite
 			him for some drinks later tonight. </option>
-		<option href="l331e001">It’s always the same with these PAS suckers! No
+		<option href="l331e002">It’s always the same with these PAS suckers! No
 			way they steal our best man. I don’t have time right now. Call him
 			and tell him that he will get a pay raise of 50k! This will keep him
 			at our firm. </option>
-		<option href="l331e001">Vance who? Never heard of this guy. He can’t be
+		<option href="l331e003">Vance who? Never heard of this guy. He can’t be
 			that important. Let him go, I have more important things to do.
 		</option>
-		<option href="l331e001">Damn, not now! We can’t lose him but I don’t have
+		<option href="l331e004">Damn, not now! We can’t lose him but I don’t have
 			time right now. I will visit him after the next meeting and tell how
 			important he is to us and that he deserves more acknowledgements of
 			such. </option>
 	</event>
 	<event level="600" element="1" id="l331e001" eventtype="3"
+		imcost="0" imqual="0" imtime="0" loc="4">
+		<partner>Priya Williams (Project Assistant Concrete Machinery)
+		</partner>
+		<date>2014-07-04 17:21:34</date>
+		<title> Your Assistant comes into your office.</title>
+		<bgimg>role7pic2.png</bgimg>
+		<bgvid>l331e001.mp4</bgvid>
+		<content>
+			%gender% %surname%!
+			<br />
+			<br />
+			It’s your decision. I know you will do the right thing! I have to
+			head back to the meeting room and finish the preparations!
+		</content>
+		<option href="l332e000">Okay see you then! </option>
+		<option href="l332e000">Thank you! See you later! </option>
+	</event>
+	<event level="600" element="1" id="l331e002" eventtype="3"
+		imcost="-10" imqual="-5" imtime="-5" loc="4">
+		<partner>Priya Williams (Project Assistant Concrete Machinery)
+		</partner>
+		<date>2014-07-04 17:21:34</date>
+		<title> Your Assistant comes into your office.</title>
+		<bgimg>role7pic2.png</bgimg>
+		<bgvid>l331e001.mp4</bgvid>
+		<content>
+			%gender% %surname%!
+			<br />
+			<br />
+			It’s your decision. I know you will do the right thing! I have to
+			head back to the meeting room and finish the preparations!
+		</content>
+		<option href="l332e000">Okay see you then! </option>
+		<option href="l332e000">Thank you! See you later! </option>
+	</event>
+	<event level="600" element="1" id="l331e003" eventtype="3"
+		imcost="-5" imqual="-5" imtime="-5" loc="4">
+		<partner>Priya Williams (Project Assistant Concrete Machinery)
+		</partner>
+		<date>2014-07-04 17:21:34</date>
+		<title> Your Assistant comes into your office.</title>
+		<bgimg>role7pic2.png</bgimg>
+		<bgvid>l331e001.mp4</bgvid>
+		<content>
+			%gender% %surname%!
+			<br />
+			<br />
+			It’s your decision. I know you will do the right thing! I have to
+			head back to the meeting room and finish the preparations!
+		</content>
+		<option href="l332e000">Okay see you then! </option>
+		<option href="l332e000">Thank you! See you later! </option>
+	</event>
+	<event level="600" element="1" id="l331e004" eventtype="3"
 		imcost="+5" imqual="+5" imtime="+5" loc="4">
 		<partner>Priya Williams (Project Assistant Concrete Machinery)
 		</partner>
@@ -2743,7 +2818,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="1" id="l332e001" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="4">
+		imcost="-5" imqual="-3" imtime="0" loc="4">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
@@ -2782,7 +2857,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="2" id="l332e002" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="4">
+		imcost="5" imqual="3" imtime="0" loc="4">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
@@ -2798,7 +2873,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="4" id="l332e004" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="4">
+		imcost="-5" imqual="-5" imtime="0" loc="4">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<date>2014-07-04 17:21:34</date>
 		<title>Your Phone rings – it’s the CFO.</title>
@@ -2816,7 +2891,7 @@
 	</event>
 	<!-- Mail -->
 	<event level="600" element="6" id="l332e006" eventtype="1"
-		imcost="-5" imqual="0" imtime="0" loc="">
+		imcost="0" imqual="0" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-07-04 17:21:34</date>
@@ -2835,7 +2910,7 @@
 			running by the end of next week.
 			<br />
 			<br />
-			Please contact our CTO via email, he has to give the green light to
+			Please contact our CTO via e-mail, he has to give the green light to
 			the database guys, otherwise they won’t set it up.
 			<br />
 			<br />
@@ -2961,7 +3036,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="500" element="5" id="l340e005" eventtype="3"
-		imcost="0" imqual="-5" imtime="0" loc="3">
+		imcost="0" imqual="+5" imtime="0" loc="3">
 		<partner>%prename% %surname%</partner>
 		<date>2014-08-05 10:21:34</date>
 		<title>Steering Committee</title>
@@ -2976,7 +3051,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="500" element="6" id="l340e006" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="3">
+		imcost="0" imqual="-5" imtime="0" loc="3">
 		<partner>%prename% %surname%</partner>
 		<date>2014-08-06 11:21:34</date>
 		<title>Steering Committee</title>
@@ -3085,7 +3160,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="500" element="14" id="l340e014" eventtype="13"
-		imcost="+3" imqual="+3" imtime="+3" loc="3">
+		imcost="+5" imqual="+5" imtime="+5" loc="3">
 		<content>3 weeks later... </content>
 		<nextevent href="l301e000" />
 	</event>
@@ -3241,7 +3316,7 @@
 		<bgvid>l545e001.mp4</bgvid>
 		<content> In highschool I discovered my talent in programming. Since
 			then I really was into programming games and later studied Computer
-			Science in Virgina. </content>
+			Science in Virginia. </content>
 		<option href="l550e000">Alright, sounds cool... Have you seen the football
 			game yesterday? </option>
 		<option href="l550e000">Interesting. Are you into sports? I had a blast at
@@ -3451,9 +3526,9 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l555e000" eventtype="13"
-		imcost="0" imqual="-10" imtime="0" loc="5">
+		imcost="-15" imqual="-15" imtime="-15" loc="5">
 		<content> Vance stands up and leaves. You haven't been doing a great
-			impression. This will have a big impact on the quality of the
+			impression. This will have a big impact on the
 			project. </content>
 		<bgimg>loc2a.png</bgimg>
 		<bgvid>l555e000".mp4</bgvid>
@@ -3838,7 +3913,7 @@
 		<option href="l581e002">I'm sorry. See you.</option>
 	</event>
 	<event level="700" element="0" id="l580e000" eventtype="1"
-		imcost="-9" imqual="0" imtime="0" loc="">
+		imcost="-10" imqual="-5" imtime="-10" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-07-06 08:21:56</date>
@@ -3936,7 +4011,7 @@
 		<nextevent href="l581e102" />
 	</event>
 	<event level="700" element="0" id="l581e000" eventtype="1"
-		imcost="0" imqual="+7" imtime="0" loc="">
+		imcost="+5" imqual="+10" imtime="+5" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-12-06 15:30:11</date>
@@ -3968,7 +4043,7 @@
 		<nextevent href="l581e102" />
 	</event>
 	<event level="700" element="1" id="l581e001" eventtype="1"
-		imcost="0" imqual="+3" imtime="0" loc="">
+		imcost="+5" imqual="+10" imtime="-5" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-12-06 15:30:11</date>
@@ -3996,7 +4071,7 @@
 		<nextevent href="l600e010" />
 	</event>
 	<event level="700" element="2" id="l581e002" eventtype="1"
-		imcost="0" imqual="0" imtime="0" loc="">
+		imcost="0" imqual="-2" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-12-06 15:30:11</date>
@@ -4192,7 +4267,7 @@
 		</option>
 	</event>
 	<event level="700" element="4" id="l603e004" eventtype="3"
-		imcost="+2" imqual="0" imtime="0" loc="3">
+		imcost="0" imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<bgimg>role5pic3.png</bgimg>
 		<bgvid>l603e004.mp4</bgvid>
@@ -4255,7 +4330,7 @@
 		<option href="l605e003">Leave. </option>
 	</event>
 	<event level="700" element="0" id="l605e000" eventtype="2"
-		imcost="+7" imqual="+3" imtime="+3" loc="">
+		imcost="+10" imqual="+5" imtime="+5" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-06-20 17:08:55</date>
@@ -4279,7 +4354,7 @@
 		<option href="l605e115">...I managed to convince the CFO... </option>
 	</event>
 	<event level="700" element="1" id="l605e001" eventtype="2"
-		imcost="+7" imqual="+3" imtime="-3" loc="">
+		imcost="+10" imqual="+5" imtime="-5" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-04-04 17:21:34</date>
@@ -4304,7 +4379,7 @@
 			concessions about the speed of the project. </option>
 	</event>
 	<event level="700" element="2" id="l605e002" eventtype="2"
-		imcost="+7" imqual="-3" imtime="+3" loc="">
+		imcost="+10" imqual="-5" imtime="+5" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-06-20 17:08:55</date>
@@ -4329,7 +4404,7 @@
 			make concessions about the quality of our work... </option>
 	</event>
 	<event level="700" element="3" id="l605e003" eventtype="2"
-		imcost="-9" imqual="-7" imtime="-7" loc="">
+		imcost="-15" imqual="-15" imtime="-15" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-04-04 17:21:34</date>
@@ -4584,7 +4659,7 @@
 		<option href="l605e013">Leave. </option>
 	</event>
 	<event level="700" element="10" id="l605e010" eventtype="2"
-		imcost="+7" imqual="+3" imtime="+3" loc="">
+		imcost="+10" imqual="+5" imtime="+5" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-06-20 17:08:55</date>
@@ -4608,7 +4683,7 @@
 		<option href="l605e115">...I managed to convince the CFO... </option>
 	</event>
 	<event level="700" element="11" id="l605e011" eventtype="2"
-		imcost="+7" imqual="+3" imtime="-3" loc="">
+		imcost="+10" imqual="+5" imtime="-5" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-06-20 17:08:55</date>
@@ -4633,7 +4708,7 @@
 			concessions about the speed of the project. </option>
 	</event>
 	<event level="700" element="12" id="l605e012" eventtype="2"
-		imcost="+7" imqual="-3" imtime="+3" loc="">
+		imcost="+10" imqual="-5" imtime="+5" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-06-20 17:08:55</date>
@@ -4658,7 +4733,7 @@
 			make concessions about the quality of our work... </option>
 	</event>
 	<event level="700" element="13" id="l605e013" eventtype="2"
-		imcost="0" imqual="0" imtime="0" loc="">
+		imcost="-15" imqual="-15" imtime="-15" loc="">
 		<from>%prename% %surname%</from>
 		<to>Thomas Zimmermann</to>
 		<date>2014-06-20 17:08:55</date>
@@ -4810,6 +4885,8 @@
 			me, I thought I might as well voice my concerns with you. </content>
 		<option href="l617e000">I get that. I’ll talk to B.R., I have a meeting
 			with him in a couple of minutes anyway. </option>
+		<option href="l617e000">Thank you for being honest with me and trusting me. I’ll talk to B.R., I have a meeting
+			with him in a couple of minutes anyway. </option>	
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="1" id="l615e001" eventtype="3"
@@ -4825,6 +4902,8 @@
 			software. </content>
 		<option href="l617e000">That’s interesting. Maybe this is a communication
 			problem. I’ll go talk to B.R. </option>
+		<option href="l617e000">Oh really? I will take care about that. 
+			I have a meeting with B.R. in a couple of minutes anyway.</option>	
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="2" id="l615e002" eventtype="3"
@@ -4840,6 +4919,7 @@
 			I thought you could... </content>
 		<option href="l617e000">I see. Well, after hearing your concerns I’ll
 			definitely go talk to him. </option>
+		<option href="l617e000">Thank you for being honest with me and trusting me. I’ll talk to B.R. right now. </option>
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="3" id="l615e003" eventtype="3"
@@ -4855,6 +4935,8 @@
 			shouldn’t have said that. </content>
 		<option href="l617e000">It’s fine. But I am indeed on my way to talk to
 			B.R. See you around, J.J. </option>
+		<option href="l617e000">It is never stupid to openly phrase concerns. I am glad we talked about that. 
+			I have a meeting with B.R. in a couple of minutes anyway. See you. </option>
 	</event>
 	<!-- Dialogelement -->
 	<!--event level="800" element="0" id="l616e000" eventtype="3" imcost="0" 
@@ -4978,7 +5060,7 @@
 	</event>
 	<!-- Auswahl -->
 	<event level="800" element="0" id="l624e000" eventtype="4"
-		imcost="+10" imqual="0" imtime="-10" loc="3">
+		imcost="0" imqual="0" imtime="0" loc="3">
 		<title>Dealing with the Sales Team...</title>
 		<description>What would you like to suggest to B.R. to get everyone in
 			the Sales Team on board? </description>
@@ -5092,7 +5174,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="0" id="l627e000" eventtype="13"
-		imcost="-0" imqual="+2" imtime="+2" loc="3">
+		imcost="-3" imqual="+3" imtime="-3" loc="3">
 		<content>One week and a thorough discussion with the sales team
 			later... </content>
 		<bgimg>loc4a.png</bgimg>
@@ -5100,7 +5182,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="1" id="l627e001" eventtype="13"
-		imcost="-2" imqual="+3" imtime="+3" loc="3">
+		imcost="-5" imqual="+5" imtime="-5" loc="3">
 		<content>One week and a thorough discussion with the sales team
 			later... </content>
 		<bgimg>loc4a.png</bgimg>
@@ -5108,7 +5190,7 @@
 	</event>
 	<!-- Benachrichtigung -->
 	<event level="800" element="2" id="l627e002" eventtype="13"
-		imcost="-3" imqual="+5" imtime="+5" loc="3">
+		imcost="-7" imqual="+7" imtime="-7" loc="3">
 		<content>A few days and a thorough discussion with the sales team
 			later... </content>
 		<bgimg>loc4a.png</bgimg>
@@ -5147,7 +5229,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="0" id="l630e000" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="3">
+		imcost="+2" imqual="+2" imtime="+5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
@@ -5175,7 +5257,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="600" element="0" id="l630e100" eventtype="3"
-		imcost="0" imqual="0" imtime="-5" loc="3">
+		imcost="-2" imqual="-2" imtime="-5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
@@ -5482,12 +5564,12 @@
 			the same. Have a good day and stop worrying too much. Just fill out
 			the forms as I told you and hand them in as soon as possible.
 		</content>
-		<option href="l666e016"> Ok, alright, I will do this. Thank you for your
+		<option href="l666e616"> Ok, alright, I will do this. Thank you for your
 			help. </option>
 		<option href="l609e000"> Hang up phone </option>
 	</event>
 	<event level="800" element="15" id="l666e615" eventtype="3"
-		imcost="0" imqual="-3" imtime="-5" loc="3">
+		imcost="0" imqual="-5" imtime="-5" loc="3">
 		<partner>Government official at Department of Labor</partner>
 		<date>1871-04-16 18:00:00</date>
 		<title>Compliance </title>
@@ -5501,7 +5583,7 @@
 		<option href="l609e000"> Hang up phone </option>
 	</event>
 	<event level="800" element="14" id="l666e616" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="3">
+		imcost="0" imqual="+2" imtime="+2" loc="3">
 		<partner>Government official at Department of Labor</partner>
 		<date>1871-04-16 18:00:00</date>
 		<title>Compliance </title>
@@ -5727,7 +5809,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="7" id="l800e001" eventtype="3"
-		imcost="0" imqual="0" imtime="0" loc="3">
+		imcost="0" imqual="-3" imtime="0" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>
@@ -5744,7 +5826,7 @@
 	</event>
 	<!-- Dialogelement -->
 	<event level="800" element="7" id="l800e002" eventtype="3"
-		imcost="0" imqual="+5" imtime="0" loc="3">
+		imcost="0" imqual="+3" imtime="0" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-04-04 17:21:34</date>
 		<title>Steering Committee</title>

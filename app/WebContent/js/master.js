@@ -87,7 +87,6 @@ function getXml(id) {
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
-						removeHighlightMailNew();
 						showNewMailTab();
 						newMailDisabled = true;
 					},
@@ -154,10 +153,7 @@ function getXml(id) {
 					
 				};
 			}			
-			/* If the location changes, showLocation() is executed.
-			* Except for: User changing from Meeting Room to Office and vice versa.
-			* @author Laluz
-			*/
+
 			mainLocationButton.linkbutton({
 			    onClick: function(){
 			    	showLocation ($(this).attr('id'));			
@@ -327,7 +323,7 @@ function loadDialog () {
 		tts.lang = 'en-IE';
 		//tts.name = Kathy;
 		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
-		alert("Female Detected and Moira set");
+		//alert("Female Detected and Moira set");
 		}
 	
 	//Opens the dialog and plays the tts:
@@ -646,8 +642,8 @@ function fancyImageLoading(imageUrl, element){
 	img[0].src = imageUrl;
 }
 
-function showLocation (buttonId) {			
-	var tag = 'Location';
+function showLocation (buttonId) {	
+ 	var tag = 'Location';
 	var container = $('.mainEventContainer');
 	var mainLocationButton = $('.mainLocationButton');	
 	var eventtype =$xml.find('event').attr('eventtype');
@@ -669,15 +665,42 @@ function showLocation (buttonId) {
 			hideSelection();
 			hideAllocation();
 			hideMatrixAllocation();
-
+			
 			if(buttonId == loc){
 				removeHighlight(mainLocationButton, loc);
 			}
-			var audioElement = document.createElement('audio');	
-			audioElement.setAttribute('src', 'audio/location.mp3');
-			//Gotta love that melody!
-			audioElement.play();	
-					
+			/* Filter for showing images due to location change
+			 */
+			if (buttonIdOld == buttonId || buttonIdOld == "3" && buttonId == "4" || buttonIdOld == "4" && buttonId == "3") {
+	    			
+	    			fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+					setTimeout(function(){
+						if(buttonId == loc){
+							if(eventtype == '3'){
+								loadDialog();		
+							}else if (eventtype == '4' || eventtype == '5'){								
+								loadSelection();
+							}else if (eventtype == '6' || eventtype == '7'){
+								loadAllocation();							
+							}else if (eventtype == '13'){
+								showNotification();							
+							}
+						}else{
+							$('.mainLocationButton').linkbutton('enable');
+							container.window({modal:false});
+						}						
+					},1500);
+	    			
+	    		} else {
+	    			
+	    			/* Possibility to add a filter in order to disable audio file.
+	    			 * @author Laluz
+	    			 */
+			
+	    			var audioElement = document.createElement('audio');	
+	    			audioElement.setAttribute('src', 'audio/location.mp3');
+	    			audioElement.play();
+	    			
 	    			/* Loads background images in a row and finally loads Dialog or alike. 
 	    			 * @author Laluz
 	    			 */
@@ -706,9 +729,11 @@ function showLocation (buttonId) {
 	    					},1500);					
 	    				},1500);
 	    			},1500);
-	    		}        
-	    	});				
-		}
+	    		} 
+	    	buttonIdOld=buttonId;			
+		 }
+	});				
+}
 
 
 function showLaptop () {
@@ -740,7 +765,7 @@ function showLaptop () {
 			});
 			
 			if(eventtype == '2'){
-				addHighlightMailNew();
+				$('.tabs-tool').addClass('new-button-highlight');
 			}
 			
 			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
@@ -823,6 +848,7 @@ function showNewMailTab () {
 			}
 		});	
 	}
+	$('.tabs-tool').removeClass('new-button-highlight');
 }
 
 function showImprint () {
@@ -1237,13 +1263,13 @@ function removeHighlightMail () {
 }
 
 // Adds Highlight to NewMail (MailDraft) Button
-function addHighlightMailNew () {
-	$("#tabs-tool").addClass("tabs-tool-highlight");
+function addHighlightNewMail () {
+	$('.tabs-tool').addClass('new-button-highlight');
 }
 
 //Removes Highlight from NewMail (MailDraft) Button
-function removeHighlightMailNew () {	
-	$("#tabs-tool").removeClass("tabs-tool-highlight");
+function removeHighlightNewMail () {	
+	$('.tabs-tool').removeClass('new-button-highlight');
 }
 
 //Shows the fullscreen transition window
