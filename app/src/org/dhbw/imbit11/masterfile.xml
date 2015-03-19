@@ -16,7 +16,7 @@
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-01-01 09:21:00</date>
-		<subject>Basic information on CRM and project management</subject>
+		<subject>Basic Information on CRM and Project Management</subject>
 		<content>
 			Dear %prename%,
 			<br />
@@ -64,14 +64,14 @@
 		<content>
 			Dear %prename%,
 			<br />
-			enclosed please find one more document with further information about
+			Enclosed please find one more document with further information about
 			CRM.
 			<br />
 			Kind regards,
 			<br />
 			Thomas
 		</content>
-		<attachment href="CRM_Introduction.pdf">CRM_introduction.pdf</attachment>
+		<attachment href="CRM_Introduction.pdf">CRM Introduction.pdf</attachment>
 		<nextevent href="l001e000" />
 	</event>
 	<event level="1" element="0" id="l001e000" eventtype="3" imcost="0"
@@ -79,12 +79,13 @@
 		<partner>Thomas Zimmermann (CEO brillianCRM)</partner>
 		<date>2014-01-01 17:21:34</date>
 		<title>Welcome</title>
-		<content>Hello %prename%, good to talk to you! I am glad that you
+		<content>Hello %prename%! 
+			Good to talk to you! I am glad that you
 			accepted this job offer. In preparation for our project, I sent you
 			two e-mails with the basic information about CRM, project management
 			and Concrete Machinery. Please read them in advance and make sure you
 			understand them. This is very important for a good project start.
-			Please call me back, as soon as you read the e-mails. </content>
+			Please call me back as soon as you read the e-mails. </content>
 		<option href="l001e004">Next</option>
 		<bgimg>role1pic9.png</bgimg>
 
@@ -157,7 +158,7 @@
 		<content>Hi %prename%, my name is Jessica Oaks. But you can call me
 			Jessie. I am the project leader at Concrete Machinery. Did you have a
 			pleasant flight? </content>
-		<option href="l003e001">Hi, nice to meet you. Yes, it was a great flight
+		<option href="l003e001">Hi, nice to meet you. Yes, it was a great flight,
 			and I am looking forward to finally starting the project! </option>
 		<option href="l003e002">Pleasant? It was horrible. I could not get any
 			sleep, as I am so nervous about the project! </option>
@@ -392,13 +393,13 @@
 		imqual="0" imtime="0" loc="">
 		<from>Jessica Oaks</from>
 		<to>%prename% %surname%</to>
-		<subject>Project charter</subject>
+		<subject>Project Charter</subject>
 		<date>2014-01-03 14:21:00</date>
 		<content>
 			Dear %prename%,
 			<br />
-			enclosed please find the project charter. Since you are the Project
-			Manager please print it out and sign the copy. With your signature
+			Enclosed please find the project charter. Since you are the project
+			manager please print it out and sign the copy. With your signature
 			you officially accept the terms of the project.
 			<br />
 			<br />
@@ -413,13 +414,13 @@
 		imqual="0" imtime="0" loc="">
 		<from>Jessica Oaks</from>
 		<to>%prename% %surname%</to>
-		<subject>Project charter</subject>
+		<subject>Project Charter</subject>
 		<date>2014-01-03 14:21:00</date>
 		<content>
 			Dear %prename%,
 			<br />
-			enclosed please find the project charter. Since you are the Project
-			Manager please print it out and sign the copy. With your signature
+			Enclosed please find the project charter. Since you are the project
+			manager please print it out and sign the copy. With your signature
 			you officially accept the terms of the project.
 			<br />
 			<br />
@@ -447,7 +448,7 @@
 		imqual="0" imtime="0" loc="">
 		<from>Thomas Zimmermann</from>
 		<to>%gender% %surname%</to>
-		<subject>Project details</subject>
+		<subject>Project Details</subject>
 		<date>2014-01-03 14:51:00</date>
 		<content>
 			Dear %prename%,
@@ -603,14 +604,14 @@
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l022e000" element="0" level="22">
 		<title>Risk Analysis</title>
 		<description><br>Risk Analysis</br>Please assign the risk packages to each field of the Risk Matrix:</description>
-		<option rank="1" fdesc="Test">Exchange of Human Resources, because of absence (e.g. sickness, vacation, …).</option>
-		<option rank="4" fdesc="Test">Traffic Jam on the way to work for employees.</option>
+		<option rank="1" fdesc="Test">Exchange of human resources because of absence (e.g. sickness, vacation, …).</option>
+		<option rank="4" fdesc="Test">Traffic jam on the way to work for employees.</option>
 		<option rank="7" fdesc="Test">Minor difference of executed tasks from the action plan.</option>
-		<option rank="2" fdesc="Test">The requirements definition is incomplete, insufficient and changes appear in the course of the project.</option>
-		<option rank="5" fdesc="Test">Lack of communication within the Team. Intercultural misunderstandings and Indian team members cannot deliver in time. </option>
-		<option rank="8" fdesc="Test">Key Contacts are not specifically defined or do not have enough time for their tasks.</option>
+		<option rank="2" fdesc="Test">The requirements definition is incomplete and insufficient and changes appear in the course of the project.</option>
+		<option rank="5" fdesc="Test">Lack of communication within the team. Intercultural misunderstandings and Indian team members cannot deliver in time. </option>
+		<option rank="8" fdesc="Test">Key contacts are not specifically defined or do not have enough time for their tasks.</option>
 		<option rank="3" fdesc="Test">Project is out of scope. It faces delays regarding milestones and time. Budged is out of scope. </option>
-		<option rank="6" fdesc="Test">The requirements of the security of information and data protection is not complied (Governmental requirements).</option>
+		<option rank="6" fdesc="Test">The requirements of the security of information and data protection were not complied with in the project(governmental requirements).</option>
 		<option rank="9" fdesc="Test">Customer's IT department is not ready for CRM implementation.</option>
 		<nextevent href="l023e000" />
 	</event>
@@ -622,7 +623,7 @@
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 10:21:00</date>
 		<subject>Re: Important! Risk Analysis</subject>
-		<content> Dear %prename%, <br /> thanks for your risk analysis. You did a great job on that one! <br /> After identifying the possible risks, please also make sure you provide necessary measures for them. <br />
+		<content> Dear %prename%, <br /> Thanks for your risk analysis. You did a great job on that one! <br /> After identifying the possible risks, please also make sure you provide necessary measures for them. <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="Solution.pdf">Final risk matrix</attachment>
@@ -632,11 +633,11 @@
 	<!-- Auswahl -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="4"
 		id="l024e000" element="0" level="24">
-		<title>Auswahl</title>
+		<title>Major Risks</title>
 		<description>
 			Dear %prename%,
 			<br />
-			Please choose the right measurements for the major risks “Project is
+			Please choose the right measures for the major risks “Project is
 			out of scope” , “Budget is out of scope”!
 			<br />
 			Kind regards,
@@ -646,7 +647,7 @@
 			<br />
 		</description>
 		<option href="l025e000">
-			Measurements for “Project is out of scope” , “Budget is out of
+			Measures for “Project is out of scope” , “Budget is out of
 			scope”.
 			<br />
 			Plan every process and activity of the project in detail!
@@ -656,11 +657,11 @@
 			the communication within the team. Our communication strategy focuses
 			on relaying the project's objectives and goals.
 			<br />
-			Regarding time concerns we will implement enough time buffer within
+			Regarding time concerns, we will implement enough time buffer within
 			the project schedule and provide a well structured project plan.
 		</option>
 		<option href="l025e001">
-			Measurements for “Project is out of scope” , “Budget is out of
+			Measures for “Project is out of scope” , “Budget is out of
 			scope”.
 			<br />
 			We don’t need to plan every process in detail.
@@ -675,7 +676,7 @@
 			<br />
 		</option>
 		<option href="l025e001">
-			Measurements for “Project is out of scope” , “Budget is out of
+			Measures for “Project is out of scope” , “Budget is out of
 			scope”.
 			<br />
 			We must plan every process in detail.
@@ -697,14 +698,14 @@
 		<from>Thomas Zimmermann</from>
 		<to>%prename% %surname%</to>
 		<date>2014-01-06 11:27:00</date>
-		<subject>Re: Important! Risk Analysis Measurements</subject>
+		<subject>Re: Important! Risk Analysis Measures</subject>
 		<content>
 			Dear %prename%,
 			<br />
-			Great job! I think you are really the perfect Project Manager for
+			Great job! I think you are really the perfect project manager for
 			this project.
 			<br />
-			All measures are right! Keep this work up.
+			All of your proposed measures are right! Keep up the good work.
 			<br />
 			Kind regards,
 			<br />
@@ -725,13 +726,13 @@
 			Dear %prename%,
 			<br />
 			I think you should review your decision. The measures are good but
-			there are some measures missing. I completed them for you. Please
+			there are some missing. I completed them for you. Please
 			check them below.
 			<br />
 			<br />
-			Use an agile project management approach such as Scrum. This enables
+			Use an agile project management approach such as scrum. This enables
 			us to adapt them to new requirements easily and to encourage frequent
-			and regular communication with the customer. Regarding time concerns
+			and regular communication with the customer. Regarding time concerns,
 			we should implement enough time buffers within the project schedule
 			and provide a well structured project plan as well as a precise
 			budget plan.
@@ -756,12 +757,12 @@
 			Dear %prename%,
 			<br />
 			<br />
-			another project management tool is the stakeholder analysis. It is
+			Another project management tool is the stakeholder analysis. It is
 			very important for this project as well and needs to be done as
 			quickly as possible!
 			<br />
-			Keep in mind how the stakeholder matrix is arranged – Please find
-			attached an example.
+			Keep in mind how the stakeholder matrix is arranged. Please consult
+			the attached example.
 			<br />
 			<br />
 			<br />
@@ -780,7 +781,7 @@
 	<!-- Laura: Drag and Drop der Stakeholder Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l031e000" element="0" level="31">
 		<title>Stakeholder Analysis</title>
-		<description><br>Stakeholder Analysis</br> Please assign the CRM customer to each field of the Stakeholder Matrix: <br />
+		<description><br>Stakeholder Analysis</br> Please assign the stakeholders to each field of the stakeholder matrix: <br />
 		</description>
 		<option rank="1" fdesc="Test">Future users of the CRM software (employees and sales representatives)</option>
 		<option rank="4" fdesc="Test">Competitive companies</option>
@@ -802,7 +803,7 @@
 		<date>2014-01-07 12:57:00</date>
 		<subject>Re: Important! Stakeholder Analysis</subject>
 		<content> Dear %prename%, <br />
-			<br /> thanks for your stakeholder analysis. You did a great job on that one! <br />
+			<br /> Thanks for your stakeholder analysis. You did a great job on that one! <br />
 			<br /> Kind regards, <br /> Thomas <br />
 		</content>
 		<attachment href="Stake_Sol3.pdf">Final Stakeholder Analysis / Matrix </attachment>
@@ -822,7 +823,7 @@
 		</partner>
 		<date>2014-01-21 08:45:00</date>
 		<title>Kick-off reminder</title>
-		<content>Hey %prename%, just as a reminder, the kick-off meeting will
+		<content>Hey %prename%, just as a reminder, the kickoff meeting will
 			start in the conference room at 9 o' clock. </content>
 		<option href="l067e000">Next</option>
 		<bgimg>role7pic2.png</bgimg>
@@ -858,11 +859,11 @@
 		<date>2014-01-21 09:00:34</date>
 		<title>Kickoff meeting</title>
 		<content>Just as I expected! You Germans are always so punctual.
-			Welcome to our meeting. Please tell me, how is the project going so
+			Welcome to our meeting. So, how is the project going so
 			far? </content>
 		<option href="l072e003">We have identified a lot of risks. I hope that we
 			can overcome those obstacles anyway. </option>
-		<option href="l072e004">Today's kick-off meeting is really important for
+		<option href="l072e004">Today's kickoff meeting is really important for
 			me since I haven't really understood the benefits of this project.
 		</option>
 		<option href="l072e002">We are on track. I think that we can manage the
@@ -906,7 +907,7 @@
 		imqual="+5" imtime="+5" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:21:34</date>
-		<title>Kick-off meeting</title>
+		<title>Kickoff meeting</title>
 		<content>Great to hear that. I think that today's event will
 			contribute to the success of the project. </content>
 		<option href="l073e000">Next</option>
@@ -921,10 +922,10 @@
 		imqual="0" imtime="0" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-01-21 09:34:00</date>
-		<title>kick-off introduction</title>
+		<title>Kickoff Introduction</title>
 		<content>Hello everyone! I am very happy to welcome you to the
-			project's kick-off meeting. We all know why we are here but we don't
-			know each other, yet. So I would suggest to start with a short
+			project's kickoff meeting. We all know why we are here, but we don't
+			know each other, yet. So I would suggest starting with a short
 			personal introduction. </content>
 		<option href="l075e000">Next</option>
 		<bgimg>role3pic6.png</bgimg>
@@ -934,11 +935,11 @@
 		imqual="0" imtime="0" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-0014-21 09:36:32</date>
-		<title>Introduction round</title>
+		<title>Introduction Round</title>
 		<content>May I introduce myself. My name is Jessie Oaks. I am the
 			project leader at Concrete Machinery. I am convinced that the project
 			will bring great benefit to our company! I am also happy to welcome
-			%prename%, the responsible Project Manager of brillianCRM.</content>
+			%prename%, the responsible project manager of brillianCRM.</content>
 		<option href="l076e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
 		<bgvid>l075e000.mp4</bgvid>
@@ -947,7 +948,7 @@
 		imqual="0" imtime="0" loc="3">
 		<partner>Gundula Eberle (CFO Concrete Machinery)</partner>
 		<date>2014-01-21 09:43:34</date>
-		<title>Introduction round</title>
+		<title>Introduction Round</title>
 		<content>Hello everyone, my name is Gundula Eberle. I am the CFO at
 			Concrete Machinery. In contrast to Jessica I am not so sure that the
 			amount of money and time invested in the project will pay off
@@ -961,7 +962,7 @@
 		<partner>B.R. Stylus (Head of Sales Concrete Machinery)</partner>
 		<date>2014-01-21 09:46:54</date>
 		<title>Introduction round</title>
-		<content>Hi, my name is Billy Ray Stylus. I am the Head of Sales at
+		<content>Hi, my name is Billy Ray Stylus. I am the head of sales at
 			Concrete Machinery. As long as it will help me to make my quota, you
 			have my full support for the project! </content>
 		<option href="l078e000">Next</option>
@@ -988,7 +989,7 @@
 		<title>Introduction round</title>
 		<content>Great. I think that we will be able to successfully end the
 			project together. So, now that we all know each other let’s take a
-			look at a short kick-off presentation! </content>
+			look at a short kickoff presentation! </content>
 		<option href="l081e000">Next</option>
 	</event>
 	<event level="81" element="0" id="l081e000" eventtype="13"
@@ -1044,7 +1045,7 @@
 			<br />
 			How are you doing?
 			<br />
-			I hope everything is going great. The kick-off meeting for sure went
+			I hope everything is going great. The kickoff meeting went
 			very well. Thank you for the good work and your detailed preparation!
 			<br />
 			<br />
@@ -1069,17 +1070,17 @@
 		<title>Work Breakdown Structure</title>
 		<description>Please assign the work packages to each deliverable of the work breakdown structure: </description>
 		<column>CRM Strategy</column>
-		<column>Software Customized</column>
+		<column>Software</column>
 		<column>Data</column>
 		<column>Handover</column>
 		<option column="3" rank="2" finfo="Arbeitspakete/Data_Migration.pdf" fdesc="Work Package Description: Data Migration" >Data Migration</option>
-		<option column="1" rank="14" finfo="Arbeitspakete/Process_adaption.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
+		<option column="1" rank="14" finfo="Arbeitspakete/Process_Adaptation.pdf" fdesc="Work Package Description: Sales Process Adaption"> Sales Process Adaption </option>
 		<option column="4" rank="7" finfo="Arbeitspakete/Training.pdf" fdesc="Work Package Description: Training">Training</option>
 		<option column="1" rank="8" finfo="Arbeitspakete/Customer_Analysis.pdf" fdesc="Work Package Description: Customer Analysis">Customer Analysis</option>
 		<option column="3" rank="11" finfo="Arbeitspakete/Data_Analysis.pdf" fdesc="Work Package Description: Sales Data Analysis">Sales Data Analysis</option>
 		<option column="2" rank="6" finfo="Arbeitspakete/Implementation_(live system).pdf" fdesc="Work Package Description: Implementation Live System">Implementation Live System </option>
 		<option column="1" rank="9" finfo="Arbeitspakete/Sales_Force_Analysis.pdf" fdesc="Work Package Description: Sales Force Analysis">Sales Force Analysis </option>
-		<option column="3" rank="15" finfo="Arbeitspakete/Data_model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
+		<option column="3" rank="15" finfo="Arbeitspakete/Data_Model_Creation.pdf" fdesc="Work Package Description: Data Model Creation">Data Model Creation </option>
 		<option column="2" rank="3" finfo="Arbeitspakete/Pilot_Running.pdf" fdesc="Work Package Description: Pilot Running">Pilot Running</option>
 		<option column="2" rank="4" finfo="Arbeitspakete/Implementation_(test environment).pdf" fdesc="Work Package Description: Implementation Testing Environment">Implementation Testing Environment</option>
 		<option column="1" rank="5" finfo="Arbeitspakete/Determination_Mobile_Devices.pdf" fdesc="Work Package Description: Determination Mobile Devices">Determination Mobile Devices </option>
@@ -1101,12 +1102,12 @@
 		<from>Thomas Zimmermann </from>
 		<to>%prename% %surname%</to>
 		<date>2014-02-15 14:21:00</date>
-		<subject>Thank You for the Work Break Down Structure</subject>
+		<subject>Thank You for the Work Breakdown Structure</subject>
 		<content>
 			Hello %prename%,
 			<br />
 			<br />
-			I have received your corrected work breakdown structure and it looks
+			I have received your corrected work breakdown structure, and it looks
 			very good. I hope it didn’t take too much time.
 			<br />
 			<br />
