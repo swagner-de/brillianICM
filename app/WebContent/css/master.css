@@ -710,6 +710,12 @@ div.over {
 	margin-bottom: 10px;
 }
 
+/*removes text decoration from links on front page*/
+.login{
+	text-decoration:none;
+	color:#0000EE;
+}
+
 .imprintContainer {
 	padding: 10px;
 }
