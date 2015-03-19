@@ -615,6 +615,8 @@
 	<!-- Laura: Drag and Drop der Risk Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l022e000" element="0" level="22">
 		<title>Risk Analysis</title>
+		<xaxisdescription>Impact</xaxisdescription>
+		<yaxisdescription>Likeliness</yaxisdescription>
 		<description><b>Risk Analysis</b></description>
 		<description>Please assign the risk packages to each field of the Risk Matrix:</description>
 		<option rank="1" fdesc="Test">Exchange of Human Resources, because of absence (e.g. sickness, vacation, …).</option>
@@ -794,6 +796,8 @@
 	<!-- Laura: Drag and Drop der Stakeholder Matrix -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="8" id="l031e000" element="0" level="31">
 		<title>Stakeholder Analysis</title>
+		<xaxisdescription>Influence</xaxisdescription>
+		<yaxisdescription>Interest</yaxisdescription>
 		<description><b>Stakeholder Analysis</b></description>
 		<description>Please assign the CRM customer to each field of the Stakeholder Matrix:</description>
 		<option rank="1" fdesc="Test">Future users of the CRM software (employees and sales representatives)</option>
