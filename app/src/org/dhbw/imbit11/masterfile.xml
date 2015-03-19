@@ -1138,14 +1138,14 @@
 			or design that is carefully planned to achieve a particular aim. A
 			well planned project saves time, money and also evaluates unexpected
 			problems that may occur in the given activity. A plan is a guide that
-			will help you as a Project Manager.
+			will help you as a project manager.
 			<br />
-			It will help you finding the critical path. It allows you to balance
+			It will help you find the critical path. It allows you to balance
 			the costs, schedule and resources to be most efficient as well as to
 			set milestones and effectively track the progress.
 			<br />
 			<br />
-			It is now the time to plan the budget for our CRM Project. In the
+			It is now the time to plan the budget for our CRM project. In the
 			following activity you need to calculate the resources for every
 			phase of the project. Please note the amount for each phase on a
 			piece of paper in order to calculate the final amount of costs for
@@ -1163,25 +1163,25 @@
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="5"
 		id="l204e000" element="0" level="204">
-		<title>Auswahl mit Bild</title>
+		<title>Costs Calculation</title>
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation:
+			final costs calculation:
 			<br />
 		</description>
 		<option href="l205e000" img="content7pic3.png">
-			The result of the cost calculation for the Initiation Phase is
+			The result of the costs calculation for the initiation phase is
 			<br />
 			112 600€.
 		</option>
 		<option href="l205e000" img="content7pic3.png">
-			The result of the cost calculation for the Initiation Phase is
+			The result of the costs calculation for the initiation phase is
 			<br />
 			112 400€.
 		</option>
 		<option href="l205e001" img="content7pic3.png">
-			The result of the cost calculation for the Initiation Phase is
+			The result of the costs calculation for the initiation phase is
 			<br />
 			112 800€.
 		</option>
@@ -1189,25 +1189,25 @@
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="5"
 		id="l205e000" element="0" level="205">
-		<title>Auswahl mit Bild</title>
+		<title>Costs Calculation</title>
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation:
+			final costs calculation:
 			<br />
 		</description>
 		<option href="l206e000" img="content7pic4.png">
-			The result of the cost calculation for the Planning Phase is
+			The result of the costs calculation for the planning phase is
 			<br />
 			560 200€.
 		</option>
 		<option href="l206e001" img="content7pic4.png">
-			The result of the cost calculation for the Planning Phase is
+			The result of the costs calculation for the planning phase is
 			<br />
 			550 500€.
 		</option>
 		<option href="l206e000" img="content7pic4.png">
-			The result of the cost calculation for the Planning Phase is
+			The result of the costs calculation for the planning phase is
 			<br />
 			555 600€.
 		</option>
@@ -1215,25 +1215,25 @@
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="5"
 		id="l205e001" element="1" level="205">
-		<title>Auswahl mit Bild</title>
+		<title>Costs Calculation</title>
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation:
+			final costs calculation:
 			<br />
 		</description>
 		<option href="l206e000" img="content7pic4.png">
-			The result of the cost calculation for the Planning Phase is
+			The result of the costs calculation for the planning phase is
 			<br />
 			560 200€.
 		</option>
 		<option href="l206e001" img="content7pic4.png">
-			The result of the cost calculation for the Planning Phase is
+			The result of the costs calculation for the planning phase is
 			<br />
 			550 500€.
 		</option>
 		<option href="l206e000" img="content7pic4.png">
-			The result of the cost calculation for the Planning Phase is
+			The result of the costs calculation for the planning phase is
 			<br />
 			555 600€.
 		</option>
@@ -1241,28 +1241,28 @@
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="5"
 		id="l206e000" element="0" level="206">
-		<title>Auswahl mit Bild</title>
+		<title>Costs Calculation</title>
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shown and note your decision on a piece of paper for the
-			final cost calculation:
+			final costs calculation:
 			<br />
 		</description>
 		<option href="l207e001" img="content7pic2.png">
-			The result of the cost calculation for the Execution and Closing
-			Phase is
+			The result of the costs calculation for the execution and closing
+			phases is
 			<br />
 			1 184 100€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
-			The result of the cost calculation for the Execution and Closing
-			Phase is
+			The result of the costs calculation for the execution and closing
+			phases is
 			<br />
 			1 185 500€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
-			The result of the cost calculation for the Execution and Closing
-			Phase is
+			The result of the costs calculation for the execution and closing
+			phases is
 			<br />
 			1 184 400€.
 		</option>
@@ -1270,28 +1270,28 @@
 	<!-- Auswahl mit Bild, Theresa: neues Bild -->
 	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="5"
 		id="l206e001" element="0" level="206">
-		<title>Auswahl mit Bild</title>
+		<title>Costs Calculation</title>
 		<description>
 			Please select the correct amount of costs for the statement of costs
 			previously shownand note your decision on a piece of paper for the
-			final cost calculation:
+			final costs calculation:
 			<br />
 		</description>
 		<option href="l207e001" img="content7pic2.png">
-			The result of the cost calculation for the Execution and Closing
-			Phase is
+			The result of the costs calculation for the execution and closing
+			phases is
 			<br />
 			1 184 100€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
-			The result of the cost calculation for the Execution and Closing
-			Phase is
+			The result of the costs calculation for the execution and closing
+			phases is
 			<br />
 			1 185 500€.
 		</option>
 		<option href="l207e000" img="content7pic2.png">
-			The result of the cost calculation for the Execution and Closing
-			Phase is
+			The result of the costs calculation for the execution and closing
+			phases is
 			<br />
 			1 184 400€.
 		</option>
@@ -1299,7 +1299,7 @@
 	<!-- Auswahl mit Bild -->
 	<event loc="4" imtime="-3" imqual="-5" imcost="-7" eventtype="4"
 		id="l207e000" element="0" level="207">
-		<title>Auswahl mit Bild</title>
+		<title>Resource Plan</title>
 		<description>
 			Now after you have calculated the costs for each phase of the
 			project, please select which budget is needed in total for our
@@ -1325,7 +1325,7 @@
 	<!-- Auswahl mit Bild -->
 	<event loc="4" imtime="+3" imqual="+5" imcost="+7" eventtype="4"
 		id="l207e001" element="0" level="207">
-		<title>Auswahl mit Bild</title>
+		<title>Resource Plan</title>
 		<description>
 			Now after you have calculated the costs for each phase of the
 			project, please select which budget is needed in total for our
@@ -1384,7 +1384,7 @@
 		<content>
 			Dear %prename%,
 			<br />
-			great job! I think you are really the perfect Project Manager for
+			Great job! I think you are really the perfect project manager for
 			this project.
 			<br />
 			All calculations are right! Keep this work up.
@@ -1440,9 +1440,9 @@
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
 		<title>Critical path</title>
-		<content>Thank you %prename% for dealing with the Gantt-diagram. I
+		<content>Thank you, %prename%, for dealing with the Gantt-diagram. I
 			think we are doing fine with the project. The next important
-			milestone will be our first steering committee. </content>
+			milestone will be our first steering committee meeting. </content>
 		<option href="l340e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
 		<bgvid>l291e001.mp4</bgvid>
@@ -1452,11 +1452,11 @@
 		imcost="-7" imqual="-11" imtime="-15" loc="3">
 		<partner>Jessica Oaks (Project Leader Concrete Machinery)</partner>
 		<date>2014-02-17 11:21:34</date>
-		<title>Critical path</title>
-		<content>Thank you %prename% for dealing with the Gantt-diagram. You
-			should inform yourself about that in order to identify the critical
+		<title>Critical Path</title>
+		<content>Thank you, %prename%, for dealing with the Gantt-diagram. You
+			should inform yourself in order to identify the critical
 			path. Nevertheless, I think we are doing fine with the project. The
-			next important milestone will be our first steering committee.
+			next important milestone will be our first steering committee meeting.
 		</content>
 		<option href="l292e000">Next</option>
 		<bgimg>role3pic1.png</bgimg>
@@ -1467,7 +1467,7 @@
 		<from>Priya Williams</from>
 		<to>%prename% %surname%</to>
 		<date>2014-02-18 13:17:52</date>
-		<subject>Project schedule</subject>
+		<subject>Project Schedule</subject>
 		<content>
 			Dear %prename%,
 			<br />
@@ -1700,7 +1700,7 @@
 			few additional hands would not hurt... </content>
 		<option href="l310e001">In that case, I will give you the budget to hire a
 			few more people. </option>
-		<option href="l311e002">I could send over a few experts from Germany if
+		<option href="l311e002">I could send over a few experts from Germany, if
 			you think that’s helpful. </option>
 		<option href="l310e002">I am afraid our budget allows no further hands.
 		</option>
@@ -2089,9 +2089,9 @@
 			schedule. Obviously we would reduce our charges accordingly. </option>
 		<option href="l317e010">Since we are close to our original schedule, we
 			can remove the additional resources from our project to stop project
-			cost from increasing further. 
+			costs from increasing further. 
 			<br />
-			This decision will have a small positive influence on quality.</option>
+			This decision will have a small positive effect on quality.</option>
 		<content>
 			<br />
 			I am very sorry for the inconvenience created and hope we will find a
@@ -2109,7 +2109,7 @@
 		<from>%surname%, %prename%</from>
 		<to>Jessica Oaks</to>
 		<date>2014-06-10 16:35:00</date>
-		<subject>Follow-up on progress in India</subject>
+		<subject>Follow-up on Progress in India</subject>
 		<content>
 			Hi Jessica,
 			<br />
@@ -2136,14 +2136,14 @@
 			decrease the Indian team size. Since we are back on schedule, Avi
 			should be doing fine from now on even with a smaller team. 
 			<br />
-			This decision will have a positive influence on cost, but small negative 
-			influences on quality and time.</option>
+			This decision will have a positive effect on cost, but small negative 
+			effects on quality and time.</option>
 		<option href="l317e013">Since everything worked so well with our experts,
 			let’s keep them on the project and provide further support to our
 			colleagues in India. This way we can ensure the time and quality
 			goals will be met. 
 			<br />
-			This decision will have a positive influence on cost, but negative influences 
+			This decision will have a positive effect on cost, but negative effects 
 			on quality and time.</option>
 		<content>
 			<br />
@@ -2193,7 +2193,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2229,7 +2229,7 @@
 			of scope for now:
 			<br />
 		</content>
-		<option href="l317e004">Customer rating in form of ABC-Analysis 
+		<option href="l317e004">Customer rating in form of an ABC-Analysis 
 		<br /> 
 		This decision will have a negative effect on cost and a high negative 
 		impact on quality, but a small positive effect on time.</option>
