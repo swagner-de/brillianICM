@@ -79,34 +79,41 @@
 											}
 										//out.println("<table><tr><td>Group</td><td>Registration Link</td></tr>");
 										for(int i=0; i<groups.size(); i++){//ArrayList<String> row : groups
-											
+											//group name
 											out.println("<div class=\"group\"><table><tr><td><big>");
 											out.println(groups.get(i).get(1));
 											out.println("</big></td><td>");
+											//send email invitation button
 											out.println("<form action=\""+ application.getContextPath()+"/SendRegistrationLink\" method=\"get\"><input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "+
-												"value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">Send email invitation</a>");
-											
+												"value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>");
 											out.println("<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/></form></td><td>");
-											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\"><input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" "+
-													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>Delete </a>");
-											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form></td><td>");
+											//delete group without members button
+											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\">"
+												+ "<input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>delete group</a>"
+												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
+												+ "</form></td><td>");
+											//delete group with all members button
+											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroupMembers\" method=\"post\">"
+												+ "<input style=\"display:none\" id=\"deleteGroupMembersButton"+i+"\" type=\"submit\" value=\"Delete Group Members\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>delete group with members</a>"
+												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
+												+ "</form></td><td>");
+											//set progress dropdown and button with set TCQ progress
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
-												+"<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
-												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
+												+ "<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
 												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
-												+"<select name=\"lvlId\" id=\"lvlId\">"
-												+"<option value=\"l204e000\">Budget Planning</option>"
-												+"<option value=\"l290e000\">Critical Path</option>"
-												+"<option value=\"l009e013\">Project Management Phasen</option>"
-												+"<option value=\"l022e000\">Risk Analysis</option>"
-												+"<option value=\"l031e000\">Stakeholder Analysis</option>"								
-												+"<option value=\"l201e000\">Work Breakdown Structure</option>"
-												+"</select>"								
-												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
-												+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
-												);
+												+ "<select name=\"lvlId\" id=\"lvlId\">"
+												+ "<option value=\"l204e000\">Budget Planning</option>"
+												+ "<option value=\"l290e000\">Critical Path</option>"
+												+ "<option value=\"l009e013\">Project Management Phasen</option>"
+												+ "<option value=\"l022e000\">Risk Analysis</option>"
+												+ "<option value=\"l031e000\">Stakeholder Analysis</option>"								
+												+ "<option value=\"l201e000\">Work Breakdown Structure</option>"
+												+ "</select>"								
+												+ "<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
+												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>");
 											out.println("</td></tr></table> ");
 											
 											//add students table beneath group header
