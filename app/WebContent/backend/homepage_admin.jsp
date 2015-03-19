@@ -140,7 +140,7 @@
 					</div>
 					<div style="margin-left:120px;">
 					text-to-speech:<br><a style="color: blue; padding-left: 32px;">${tts}</a><br>
-					subtitles<br><a style="color: blue; padding-left: 32px;">${settings}</a>
+					subtitles<br><a style="color: blue; padding-left: 32px;">${subtitles}</a>
 					</div>
 					<br>
 					<input id="getSettings" type="submit" name="getSettings" value="Get Settings" hidden="hidden"/>
