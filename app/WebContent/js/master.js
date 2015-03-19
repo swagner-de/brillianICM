@@ -317,6 +317,12 @@ function loadDialog () {
 	//Get all available voices for the browser and safe in an array:
 	var voices = window.speechSynthesis.getVoices();
 	
+	//Checks if Cookie has TTS-settings on "true":
+	var ttsSettings="false";
+	ttsSettings=getCookie("tts");
+	if (ttsSettings == "true") {
+		 
+	 
 	//Setting speechSynthesis parameters for Male Voice:
 	tts.native = false;
 	tts.lang = 'en-GB';
@@ -340,9 +346,12 @@ function loadDialog () {
 		
 		}
 	
-	//Opens the dialog and plays the tts:
-	showDialog();
+	//Starts TTS:
 	speechSynthesis.speak(tts);
+	 }
+	 
+	//Opens the dialog:
+	showDialog();
 }
 
 
