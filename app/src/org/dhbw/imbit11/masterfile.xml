@@ -1980,7 +1980,9 @@
 		</content>
 		<option href="l317e000">Our Indian colleagues will work overtime to fix
 			the problem. Obviously without additional compensation – they created
-			the problem, they should fix it. </option>
+			the problem, they should fix it. 
+			<br />
+			This decision will have a small negative effect on quality.</option>
 		<option href="l315e000">We will hire additional staff. I will follow up
 			with a proposition later today. </option>
 		<option href="l315e001">Maybe you, Mrs. Eberle and I can come to an
@@ -2027,12 +2029,22 @@
 		</content>
 		<option href="l317e005">We have the know-how needed to deal with these
 			issues in Germany. We will send over experts to solve the issue.
+			<br />
+			This decision will have a high negative impact on the cost, 
+			but it will have small positive effects on quality and time.
 		</option>
 		<option href="l317e006">We will pay a bonus to our Indian employees to
 			increase motivation. We will monitor them more tightly and thereby
-			get things back on track. </option>
+			get things back on track. 
+			<br />
+			This decision will have small negative effects on cost, quality and time.
+		</option>
 		<option href="l317e007">We will hire new resources in India to increase
-			our team’s capacity. </option>
+			our team’s capacity. 
+			<br />
+			This decision will have a negative effect on cost, but small positive 
+			effects on quality and time.
+		</option>
 		<content>
 			<br />
 			I am very sorry for the inconvenience created and hope we will find a
@@ -2067,13 +2079,18 @@
 		</content>
 		<option href="l317e008">Let’s further increase our Indian team. The
 			situation has already improved since hiring the new colleagues and
-			can be improved further! </option>
+			can be improved further! 
+			<br />
+			This decision will have a negative effect on cost, but small 
+			positive effects on quality and time.</option>
 		<option href="l315e001">Maybe you, Mrs. Eberle and I can come to an
 			agreement to reduce the project scope. We could then meet the
 			schedule. Obviously we would reduce our charges accordingly. </option>
 		<option href="l317e010">Since we are close to our original schedule, we
 			can remove the additional resources from our project to stop project
-			cost from increasing further. </option>
+			cost from increasing further. 
+			<br />
+			This decision will have a small positive influence on quality.</option>
 		<content>
 			<br />
 			I am very sorry for the inconvenience created and hope we will find a
@@ -2111,14 +2128,22 @@
 		</content>
 		<option href="l317e011">Let’s remove our German colleagues from the
 			project again. The time problems are fixed for now and we do not want
-			further cost increases. </option>
+			further cost increases. 
+			<br />
+			This decision will have a small positive effect on quality. </option>
 		<option href="l317e012">Let’s send our experts back to Germany and
 			decrease the Indian team size. Since we are back on schedule, Avi
-			should be doing fine from now on even with a smaller team. </option>
+			should be doing fine from now on even with a smaller team. 
+			<br />
+			This decision will have a positive influence on cost, but small negative 
+			influences on quality and time.</option>
 		<option href="l317e013">Since everything worked so well with our experts,
 			let’s keep them on the project and provide further support to our
 			colleagues in India. This way we can ensure the time and quality
-			goals will be met. </option>
+			goals will be met. 
+			<br />
+			This decision will have a positive influence on cost, but negative influences 
+			on quality and time.</option>
 		<content>
 			<br />
 			I am very sorry for the inconvenience created and hope we will find a
@@ -2139,17 +2164,26 @@
 		<option href="l317e001">
 			Hire 10 Indian IT specialists!
 			<br />
-			They work hard at much lower cost than their Germany colleagues.
+			They work hard at much lower cost than their German colleagues.
+			<br />
+			This decision will have a small negative effect on cost, but 
+			small positive effects on quality and time.
 		</option>
 		<option href="l317e002">
 			Hire 10 German CRM experts!
 			<br />
 			They may be more expensive, but they will get the job done!
+			<br />
+			This decision will have a high negative impact on cost, but a 
+			positive effect on quality and time.
 		</option>
 		<option href="l317e003">
 			Hire 5 Indian IT specialists and 5 German CRM experts!
 			<br />
 			Combine the best of both options to make sure the project goes well.
+			<br />
+			This decision will have a high negative impact on cost, but a positive 
+			effect on quality and time.
 		</option>
 	</event>
 	<!-- Mail -->
@@ -2194,9 +2228,18 @@
 			of scope for now:
 			<br />
 		</content>
-		<option href="l317e004">Customer rating in form of ABC-Analysis </option>
-		<option href="l317e004">Social Network Integration </option>
-		<option href="l317e004">Cross-Selling Analysis </option>
+		<option href="l317e004">Customer rating in form of ABC-Analysis 
+		<br /> 
+		This decision will have a negative effect on cost and a high negative 
+		impact on quality, but a small positive effect on time.</option>
+		<option href="l317e004">Social Network Integration 
+		<br /> 
+		This decision will have a negative effect on cost and a high negative 
+		impact on quality, but a small positive effect on time.</option>
+		<option href="l317e004">Cross-Selling Analysis 
+		<br />
+		This decision will have a negative influence on cost and a high negative 
+		impact on quality, but a small positive influence on time.</option>
 		<content>
 			<br />
 			Please discuss my suggestion with your colleagues. I look forward to
