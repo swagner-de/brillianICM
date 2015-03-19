@@ -135,7 +135,7 @@ import org.apache.shiro.subject.Subject;
 		}else{
 		
 			String email = request.getParameter("username");
-		
+		url="/login.jsp";
 		//Create a new temporary password for the user
 		String temporaryPassword = ""+ Math.round(Math.random()*100000);
 		PasswordEncryptor pe = new PasswordEncryptor();
@@ -145,7 +145,7 @@ import org.apache.shiro.subject.Subject;
 		UserRealm realm = new UserRealm();
 		try{
 			realm.updatePassword(email, hashedPassword);
-			url="/LogoutUser";
+
 		}catch(SQLException e){
 			//System.out.println("Update of Password in DB failed.");
 			e.printStackTrace();
