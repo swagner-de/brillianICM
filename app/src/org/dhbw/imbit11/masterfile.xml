@@ -2336,7 +2336,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2362,7 +2362,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2388,7 +2388,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2414,7 +2414,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2440,7 +2440,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2466,7 +2466,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2492,7 +2492,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2518,7 +2518,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2544,7 +2544,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2570,7 +2570,7 @@
 		<from>Jessica Oaks</from>
 		<to>%surname%, %prename%</to>
 		<date>2014-06-10 14:12:27</date>
-		<subject>Re: Follow-up on progress in India</subject>
+		<subject>Re: Follow-up on Progress in India</subject>
 		<content>
 			Hi %prename%,
 			<br />
@@ -2594,7 +2594,7 @@
 	<event level="800" element="0" id="l720e000" eventtype="13"
 		imcost="0" imqual="0" imtime="0" loc="3">
 		<content>Decide quickly! You are on the way to meet your best friend
-			and you don’t want to let him wait. </content>
+			and you don’t want to make him wait. </content>
 		<bgimg />
 		<nextevent href="l720e001" />
 	</event>
@@ -2603,24 +2603,24 @@
 		<from>Avinash Gupta</from>
 		<to>%gender% %surname%</to>
 		<date>2014-08-25 17:21:34</date>
-		<subject>Feedback on current status</subject>
+		<subject>Feedback on Current Status</subject>
 		<content>
 			Hello %gender% %surname% ,
 			<br />
 			<br />
 			Thank you again for the extensive conversation last Thursday. I think
 			it was good that we had this discussion and that we could clarify all
-			these little issues we had. I am very positive about our progress by
+			the little issues we had. I am very positive about our progress by
 			now and I feel that we are back on track with all of our tasks. I
 			also talked to your assistant on Friday. I appreciate that you invested
 			so much time in informing me about the situation. We should try to
 			keep this close contact from now on. As I already mentioned, I am very
 			satisfied with the progress of my team. We will conclude the
-			implementation soon, so that we can finally rollout the last
+			implementation soon, so that we can finally roll-out the last
 			components and complete the employees' training. The implementation
 			has been quite satisfying so far. There are some minor bugs
 			concerning the customer data. The issuing of invoices does not
-			function perfectly so far. In some cases the address is not generated
+			function perfectly at this point in time. In some cases the address is not generated
 			correctly. Most likely it has something to do with the design of the
 			underlying database. But apart from that, the implementation runs
 			very well and we are about to finish soon. Let me know if you want to
@@ -2641,7 +2641,7 @@
 		<from>%prename% %surname%</from>
 		<to> Avinash Gupta </to>
 		<date>2014-08-25 17:31:34</date>
-		<subject>Re: Feedback on current status</subject>
+		<subject>Re: Feedback on Current Status</subject>
 		<date>2014-08-25 17:21:34</date>
 		<content>
 			Hello Mr. Gupta
@@ -2668,7 +2668,7 @@
 			<br />
 			<br />
 			Please keep on informing me about the testing. I am very satisfied so
-			far and I am positive that we can rollout a perfect solution soon.
+			far, and I am positive that we can roll-out a perfect solution soon.
 			<br />
 			<br />
 			Kind regards
@@ -2691,7 +2691,7 @@
 	<!-- Benachrichtigung -->
 	<event level="600" element="0" id="l330e000" eventtype="13"
 		imcost="0" imqual="0" imtime="0" loc="4">
-		<content> In 30 minutes is your meeting with the steering committee.
+		<content> Your meeting with the steering committee is in 30 minutes.
 			You will present the current status of the project. Better be
 			prepared! </content>
 		<bgimg>loc3a.PNG</bgimg>
@@ -2710,15 +2710,15 @@
 			%gender% %surname%!
 			<br />
 			<br />
-			Sorry to interrupt you but it is important.
+			Sorry to interrupt you, but it is important.
 			<br />
 			<br />
 			PAS is on the brink to steal our best developer – Vance Veba! They
 			offered him a better paid job and a prized package of PAS stocks. He
 			is a very proud fellow. He has just said to me that it is not about
-			the money, he likes his current job as well but doesn’t feels valued
+			the money, he likes his current job but doesn’t feels valued
 			for his hard work. The only one who can change his mind is the
-			project leader – YOU! Do something and hurry up or we will lose him.
+			project leader – YOU! Do something and hurry up, or we will lose him.
 			<br />
 			<br />
 		</content>
@@ -2825,7 +2825,7 @@
 			Let me get straight to the point. Our database server supplier has
 			just called. They still didn’t receive the payment for the servers
 			you ordered. We agreed that you should have done it 2 days ago. If
-			they don’t receive the money today we will lose the cashback! This is
+			they don’t receive the money today we will lose the cash back! This is
 			big money and this project did cost a lot already! Get this fixed
 			quickly!
 			<br />
@@ -2833,13 +2833,13 @@
 		</content>
 		<option href="l332e001">Hello Mrs. Eberle, I wish you a good day as well.
 			I don’t have any time left. I need to be in an imporant meeting in 10
-			minutes. I talk to the suppliers tomorrow. </option>
+			minutes. I will talk to the suppliers tomorrow. </option>
 		<option href="l332e002">You don’t beat around the bush, Gundula. I like
 			that. I will transfer the money immediately by myself. I hope that
 			satisfies you. </option>
 		<option href="l332e006">Sorry, I don’t have any time right now. I will
 			deal with this tomorrow. </option>
-		<option href="l332e004">Mrs. Eberle. Don’t worry. We work with these
+		<option href="l332e004">Mrs. Eberle. Don’t worry. We have worked with these
 			suppliers for ages. They wouldn’t upset a good customer just because
 			of one day. I think this is just a misunderstanding. </option>
 	</event>
@@ -2909,7 +2909,7 @@
 		<content>
 			Time is money! There is no misunderstanding. I always pay my bills on
 			time. Get it fixed or this will have inconvenient consequences for
-			you and TopCRM.
+			you and brillianCRM.
 			<br />
 			<br />
 		</content>
@@ -2955,14 +2955,14 @@
 	</event>
 	<event level="600" element="000" id="l333e000" eventtype="4"
 		imcost="0" imqual="0" imtime="0" loc="4">
-		<title>Auswahl</title>
+		<title>CTO Contact</title>
 		<description>Please choose an appropiate reaction:</description>
 		<option href="l630e000">This is an important task and has to be done asap.
 			I will contact the CTO and explain to him the change in plan. No
 			delay is expected. </option>
 		<option href="l630e100">This can wait until tomorrow. I need to prepare
 			for the meeting now. </option>
-		<option href="l630e100"> I will answer him that I don’t have any time and
+		<option href="l630e100"> I will answer that I don’t have any time and
 			that he should do it on his own. I hope he can figure it out.
 		</option>
 	</event>
@@ -3032,7 +3032,7 @@
 		<content>Ok, then let’s go over the agenda quickly. In the following
 			meetings we will start going over the minutes of the previous
 			meeting, to remind us again of what has happened until then and to
-			obtain everyone’s approval. As our last meeting was the kick-off
+			obtain everyone’s approval. As our last meeting was the kickoff
 			meeting, we won’t go over the minutes today. In the following we will
 			discuss the action list we composed in the last meeting. Afterwards I
 			will give a status report on the project, presenting what has been
@@ -3069,7 +3069,7 @@
 		<title>Steering Committee</title>
 		<bgimg>content3pic14.png</bgimg>
 		<content>So if there are no more questions, let’s start for today.
-			Here we have the action list from the kick-off meeting, which
+			Here we have the action list from the kickoff meeting, which
 			contains the tasks for the planning phase. The tasks mainly concern
 			the project management team and I am happy to say that we could
 			complete all tasks. I will refer to the task again later in the
@@ -3084,7 +3084,7 @@
 		<title>Steering Committee</title>
 		<bgimg>content3pic14.png</bgimg>
 		<content>So if there are no more questions, let’s start for today.
-			Here we have the action list from the kick-off meeting, which
+			Here we have the action list from the kickoff meeting, which
 			contains the tasks for the planning phase. The tasks mainly concern
 			the project management team and I am happy to say that we could
 			complete all tasks. I will refer to the task again later in the
@@ -3113,7 +3113,7 @@
 		<bgimg>content3pic13.png</bgimg>
 		<content>Our main achievement from the last months is the actual state
 			and the target state analysis. During several meetings with Concrete
-			Mashinery we discussed their current situation. Afterwards we
+			Mashinery, we discussed their current situation. Afterwards we
 			performed a target state analysis, including the migration concept
 			and so on. </content>
 		<option href="l340e009">Next</option>
@@ -3127,7 +3127,7 @@
 		<bgimg>content3pic13.png</bgimg>
 		<content>With this the planning phase is completed and we can start
 			the execution phase. I am happy to announce that we already have a
-			detailed migration concept so that we already can go on with the
+			detailed migration concept so that we can go ahead with the
 			development and the data migration, which will take us some weeks.
 			After that we will go over to the implementation and testing.
 		</content>
@@ -3168,7 +3168,7 @@
 		<title>Steering Committee</title>
 		<bgimg>role1pic1.png</bgimg>
 		<bgvid>l340e012.mp4</bgvid>
-		<content>This is nice to hear Jessica. BrillanCRM is also very happy
+		<content>This is nice to hear Jessica. brillanCRM is also very happy
 			about the collaboration and we think we will be successful! </content>
 		<option href="l340e013">Right, Thomas! </option>
 		<option href="l340e013">Of course we will! </option>
@@ -3199,8 +3199,8 @@
 		<title>Your Phone rings – Vance Veba is calling!</title>
 		<bgimg>content6pic2.png</bgimg>
 		<content>
-			Hello, %gender% %surname%. This is Vance Veba from the Application
-			Development Team.
+			Hello, %gender% %surname%. This is Vance Veba from the application
+			development team.
 			<br />
 			Your assistant told me that you wanted to talk to me?
 			<br />
@@ -3343,7 +3343,7 @@
 		<bgvid>l545e001.mp4</bgvid>
 		<content> In highschool I discovered my talent in programming. Since
 			then I really was into programming games and later studied Computer
-			Science in Virgina. </content>
+			Science at the University of Virgina. </content>
 		<option href="l550e000">Alright, sounds cool... Have you seen the football
 			game yesterday? </option>
 		<option href="l550e000">Interesting. Are you into sports? I had a blast at
@@ -3487,7 +3487,7 @@
 		<bgvid>l557e001.mp4</bgvid>
 		<content> That doesn't work. We need a faster way. </content>
 		<option href="l515e000">Sorry, but that are the rules. Listen, I will
-			raise your pay by 50.000$ because you are really important to us. Let
+			raise your pay by $50,000 because you are really important to us. Let
 			us continue to work together. </option>
 		<option href="l557e000">Alright, next time I will invite you to the next
 			steering committee meeting. </option>
