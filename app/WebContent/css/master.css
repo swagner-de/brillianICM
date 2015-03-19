@@ -662,15 +662,15 @@ div.dragTile {
 
 
 #yAxisDescription{
-width:20px;
-font-size:45px;
-background-color: white;
-position:static;
-float:left;
-margin-left:60px;
-margin-right:-100px;
-word-break:break-all;
-margin-top:100px;
+	width:20px;
+	font-size:38px;
+	background-color: white;
+	position:static;
+	float:left;
+	margin-left:60px;
+	margin-right:-100px;
+	word-break:break-all;
+	margin-top:40px;
 }
 
 
