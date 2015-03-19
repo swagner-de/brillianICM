@@ -305,6 +305,7 @@ function loadDialog () {
 	        getXml(href);
 	    });		
 	});	
+
 	
 	// Generates TTS object and fill it with the content of the dialog partner:
 	// @param tts Text-to-Speech object and content loaded
@@ -312,24 +313,32 @@ function loadDialog () {
 	var tts = new SpeechSynthesisUtterance(content);
 	var voices = window.speechSynthesis.getVoices();
 	
+	var ttsSettings="false";
+	 ttsSettings=getCookie("tts");
+	 if (ttsSettings == "true") {
+	 	
 	//Setting speechSynthesis parameters for Male Voice:
-	tts.native = false;
-	tts.lang = 'en-GB';
-	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
-	
-	// Checks if the partner female and setting female parameters:
-	if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
-		{
 		tts.native = false;
-		tts.lang = 'en-IE';
-		//tts.name = Kathy;
-		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
-		//alert("Female Detected and Moira set");
-		}
+		tts.lang = 'en-GB';
+		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
 	
-	//Opens the dialog and plays the tts:
+		// Checks if the partner female and setting female parameters:
+		if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
+			{
+			tts.native = false;
+			tts.lang = 'en-IE';
+			//tts.name = Kathy;
+			tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
+			//alert("Female Detected and Moira set");
+			}
+	
+
+		//Opens the dialog and plays the tts:
+		speechSynthesis.speak(tts);
+	 }
+	
+	//lade den Dialog:
 	showDialog();
-	speechSynthesis.speak(tts);
 }
 
 
@@ -700,7 +709,11 @@ function showLocation (buttonId) {
 			
 	    			var audioElement = document.createElement('audio');	
 	    			audioElement.setAttribute('src', 'audio/location.mp3');
-	    			audioElement.play();
+					//Gotta love that melody!
+					var audiosetting="false";
+					audiosetting=getCookie("audio");
+					if (audiosetting == "true") {
+					audioElement.play();	}
 	    			
 	    			/* Loads background images in a row and finally loads Dialog or alike. 
 	    			 * @author Laluz
@@ -1315,7 +1328,10 @@ function showResult () {
 		onLoad: function(){
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
-			audioElement.play();
+			var audiosetting="false";
+			audiosetting=getCookie("audio");
+			if (audiosetting == "true") {
+			audioElement.play();	}
 			
 			document.getElementById("cost").innerHTML=gameData.imcost+"%";
 			document.getElementById("time").innerHTML=gameData.imtime+"%";
@@ -1359,7 +1375,10 @@ function showLoading () {
 	// (Vielleicht kann man hier noch einen Filter einbauen??)
 	var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
-	audioElement.play();
+	var audiosetting="false";
+	audiosetting=getCookie("audio");
+	if (audiosetting == "true") {
+	audioElement.play();	}
 	
 	//Um hässliche Ladeartefakte zu verhindern
 	$('body').show();

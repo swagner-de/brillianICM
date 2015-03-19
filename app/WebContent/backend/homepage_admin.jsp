@@ -112,7 +112,7 @@
 				</form>
 			</div>
 			<div style="margin-left: 320px;">
-				<h4>Change Password.</h4>
+				<h4>Change Password</h4>
 				<p style="color: red; padding-left: 32px;">${error}</p>
 				<form action="ResetPassword" method="post">				
 					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/><br /><br />
@@ -128,7 +128,55 @@
 					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
 				</form>
 			</div>
-		</div>
+			</div>
+			<br>
+			<div style="height: 220px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">			
+			<h4>Global Settings</h4>
+			<div style="width: 300px; float: left;">
+				<form action="GetGlobalSettings" method="post">	
+					<div style="width: 120px; float: left;">			
+					Audio:<br><a style="color: blue; padding-left: 32px;">${audio}</a><br>
+					Video:<br><a style="color: blue; padding-left: 32px;">${video}</a>
+					</div>
+					<div style="margin-left:120px;">
+					Text-to-Speech:<br><a style="color: blue; padding-left: 32px;">${tts}</a><br>
+					Subtitles<br><a style="color: blue; padding-left: 32px;">${subtitles}</a>
+					</div>
+					<br>
+					<input id="getSettings" type="submit" name="getSettings" value="Get Settings" hidden="hidden"/>
+					<a class="easyui-linkbutton studentButton" onclick="$('#getSettings').trigger('click')">Get Settings</a>
+				</form>
+			</div>
+			<div style="margin-left: 300px;">
+				<form action="SetGlobalSettings" method="post">			
+					<div style="width: 120px; float: left;">	
+					<input type="text" name="role" maxlength="50" value="admin" style="display: none"/>
+				
+					<input type="radio" name="audio" value="true" checked>Audio Enabled
+					<br>
+					<input type="radio" name="audio" value="false">Audio Disabled
+					<br>
+					<input type="radio" name="video" value="true" checked>Video Enabled
+					<br>
+					<input type="radio" name="video" value="false">Video Disabled
+					<br>
+					</div>
+					<div style="margin-left:120px;">
+					<input type="radio" name="tts" value="true" checked>Text-to-Speech Enabled
+					<br>
+					<input type="radio" name="tts" value="false">Text-to-Speech Disabled
+					<br>
+					<input type="radio" name="subtitles" value="true" checked>Subtitles Enabled
+					<br>
+					<input type="radio" name="subtitles" value="false">Subtitles Disabled
+					<br>
+				</div>
+				<br>
+					<input id="setSettings" type="submit" name="setSettings" value="Save Changes" hidden="hidden"/>
+					<a class="easyui-linkbutton studentButton" onclick="$('#setSettings').trigger('click')">Save Changes</a>
+				</form>
+				
+			</div>
 		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 	</div>
 </body>

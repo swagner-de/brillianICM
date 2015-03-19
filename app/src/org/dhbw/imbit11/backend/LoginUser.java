@@ -1,9 +1,10 @@
 package org.dhbw.imbit11.backend;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.annotation.WebServlet;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import javax.servlet.http.Cookie;
 
 @WebServlet({ "/LoginUser" })
 
@@ -159,12 +161,76 @@ public class LoginUser extends javax.servlet.http.HttpServlet implements
 			ex.printStackTrace();
 			request.setAttribute("error", "Fatal Error! Please try again later.");
 		}
+		
+		//TODO: Validate and catch Integer to String conversion #403
+		Boolean audio;
+		Boolean video;
+		Boolean tts;
+		Boolean subtitles;
+		UserRealm realm = new UserRealm();
+		String a;
+		String b;
+		String c;
+		String d;
+		
+		
+		try{ 
+			ArrayList<Boolean> settings = realm.getSettings();
+
+			audio = settings.get(0);
+			video = settings.get(1);
+			tts = settings.get(2);
+			subtitles = settings.get(3);
+			
+			if (audio) {
+				a="true";
+			} else { a="false";}
+			
+			if (video) {
+				b="true";
+			} else { b="false";}
+			
+			if (tts) {
+				c="true";
+			} else { c="false";}
+			
+			if (subtitles) {
+				d="true";
+			} else { d="false";}
+			
+			
+			Cookie audioSettings = new Cookie("audio", a);
+			Cookie videoSettings = new Cookie("video", b);
+			Cookie ttsSettings = new Cookie("tts", c);
+			Cookie subtitlesSettings = new Cookie("subtitles", d);
+			
+			audioSettings.setMaxAge(12 * 60 * 60);  // 12 hours. 
+			videoSettings.setMaxAge(12 * 60 * 60);  // 12 hours. 
+			ttsSettings.setMaxAge(12 * 60 * 60);  // 12 hours. 
+			subtitlesSettings.setMaxAge(12 * 60 * 60);  // 12 hours. 
+
+
+			response.addCookie(audioSettings);
+			response.addCookie(videoSettings);
+			response.addCookie(ttsSettings);
+			response.addCookie(subtitlesSettings);
+		
+			}
+		catch(SQLException e){
+			e.printStackTrace();
+		
+		}
+	
+
 
 		// forward the request and response to the view
+		// RequestDispatcher included = getServletContext()
+		//		.getRequestDispatcher("/GetSettingsCookie");
+		// included.include(request, response);
+		
 		RequestDispatcher dispatcher = getServletContext()
 				.getRequestDispatcher(url);
-
-		dispatcher.forward(request, response);
+				dispatcher.forward(request, response);
 
 	}
 }
