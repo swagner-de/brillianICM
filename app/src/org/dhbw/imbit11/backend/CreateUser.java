@@ -288,7 +288,7 @@ import javax.servlet.http.HttpServletResponse;
 	 */
 	protected void sendConfirmationMail(String email, String firstname, String lastname, String unverifiedEmail, HttpServletRequest request){
         
-        String msgBody = "Dear "+ firstname + " " + lastname + ",\n\n wolcome to brillianCRM. Please confirm your registration by clicking on the following link: \n" 
+        String msgBody = "Dear "+ firstname + " " + lastname + ",\n\n welcome to brillianCRM. Please confirm your registration by clicking on the following link: \n" 
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
         
         msgBody += email;

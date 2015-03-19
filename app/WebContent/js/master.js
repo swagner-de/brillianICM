@@ -274,7 +274,7 @@ function loadDialog () {
 		setDialogBackground(backgroundWithPartnerUrl, false);
 	}
 	videoEnabled=getCookie("video");
-	if (($xml.find('bgvid').text() != '') && (videoEnabled == "ture")){
+	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
 		background = $xml.find('bgvid').text();
 		backgroundWithPartnerUrl=window.location.href;
 		position = backgroundWithPartnerUrl.lastIndexOf('/');
