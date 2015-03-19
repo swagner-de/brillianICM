@@ -57,12 +57,13 @@
 	</div>
 	<div class="center mainWindow" data-options="region:'center'">
 		<div id="studentsOfProfessor">
+			<h1>Lecturer Page</h1>
+			<br />
 			<div id="groupsOfProfessor">			
-				<h1>Groups</h1>
-				Below each group you can see a list of the students that are part of
-				the respective group.<br />
+				<h4>Groups</h4>
+				Below, all existing groups are listed with their belonging students.
+				<br />
 				<p style="color: blue">${status}</p>
-				<br />				
 				<br />
 				<br />
 				
@@ -78,34 +79,41 @@
 											}
 										//out.println("<table><tr><td>Group</td><td>Registration Link</td></tr>");
 										for(int i=0; i<groups.size(); i++){//ArrayList<String> row : groups
-											
+											//group name
 											out.println("<div class=\"group\"><table><tr><td><big>");
 											out.println(groups.get(i).get(1));
 											out.println("</big></td><td>");
+											//send email invitation button
 											out.println("<form action=\""+ application.getContextPath()+"/SendRegistrationLink\" method=\"get\"><input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "+
-												"value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">Send email invitation</a>");
-											
+												"value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>");
 											out.println("<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/></form></td><td>");
-											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\"><input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" "+
-													"value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>Delete</a>");
-											out.println("<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/></form></td><td>");
+											//delete group without members button
+											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\">"
+												+ "<input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>delete group</a>"
+												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
+												+ "</form></td><td>");
+											//delete group with all members button
+											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroupMembers\" method=\"post\">"
+												+ "<input style=\"display:none\" id=\"deleteGroupMembersButton"+i+"\" type=\"submit\" value=\"Delete Group Members\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>delete group with members</a>"
+												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
+												+ "</form></td><td>");
+											//set progress dropdown and button with set TCQ progress
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
-												+"<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
-												+"<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
-												+"<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
+												+ "<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
 												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
-												+"<select name=\"lvlId\" id=\"lvlId\">"
-												+"<option value=\"l204e000\">Budget Planning</option>"
-												+"<option value=\"l290e000\">Critical Path</option>"
-												+"<option value=\"l009e013\">Project Management Phasen</option>"
-												+"<option value=\"l022e000\">Risk Analysis</option>"
-												+"<option value=\"l031e000\">Stakeholder Analysis</option>"								
-												+"<option value=\"l201e000\">Work Breakdown Structure</option>"
-												+"</select>"								
-												+"<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
-												+"<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>"
-												);
+												+ "<select name=\"lvlId\" id=\"lvlId\">"
+												+ "<option value=\"l204e000\">Budget Planning</option>"
+												+ "<option value=\"l290e000\">Critical Path</option>"
+												+ "<option value=\"l009e013\">Project Management Phasen</option>"
+												+ "<option value=\"l022e000\">Risk Analysis</option>"
+												+ "<option value=\"l031e000\">Stakeholder Analysis</option>"								
+												+ "<option value=\"l201e000\">Work Breakdown Structure</option>"
+												+ "</select>"								
+												+ "<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
+												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>");
 											out.println("</td></tr></table> ");
 											
 											//add students table beneath group header
@@ -188,43 +196,10 @@
 				%>
 			</div>
 
-<<<<<<< HEAD
-			<div style="clear: both;"></div>
-			<div>
-				<h1>New Group</h1>
-				<form action="NewUsergroup" method="post">
-					<div class="formLabel">Name:</div>
-					<input type="text" name="groupname" maxlength="50" required /> <input
-						type="submit" style="display: none" id="createGroup"
-						value="Create group" /><br />
-					<br /> <a class="easyui-linkbutton"
-						onclick="$('#createGroup').trigger('click')">Create Group</a>
-					<p style="color: green">${success}</p>
-					<p style="color: red">${error}</p>
-				</form>
-			</div>
-			<div style="clear: both;"></div>
-			<div>
-				<h4>Change Password.</h4>
-				<p style="color: red; padding-left: 32px;">${error}</p>
-				<form action="ResetPassword" method="post">				
-					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
-					<input type="text" name="role" maxlength="50" value="professor" style="display: none"/><br /><br />
-					<!--  Password check -->
-					<div class="formLabel">Old Password:</div>
-					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
-					<div class="formLabel">Password:</div>
-					<input type="password" name="password" maxlength="50"/><br /><br />
-					<br />
-					<div class="formLabel">Repeat Password:</div>
-					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
-					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
-				</form>
-=======
-			<div style="height: 410px; width: 594px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">
-				<div style="width: 300px; float: left;">
-					<h4>New Group</h4>
+
+			<div style="width: 800px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">
+				<div style="width: 390px; float: left;">
+					<h4>Create New Group</h4>
 					<form action="NewUsergroup" method="post">
 						<div class="formLabel">name:</div>
 						<input type="text" name="groupname" maxlength="50" required /> <input
@@ -236,7 +211,7 @@
 						<p style="color: red">${error}</p>
 					</form>
 				</div>
-				<div style="margin-left: 320px;">
+				<div style="margin-left: 410px;">
 					<h4>Change Lecturer Password</h4>
 					<form action="ResetPassword" method="post">
 						<input type="text" name="username" maxlength="50"
@@ -254,7 +229,6 @@
 							password</a>
 					</form>
 				</div>
->>>>>>> refs/remotes/origin/devFred
 			</div>
 			<div class="mainEventContainerImprint easyui-window"
 				data-options="closed:true,width:863,height:576"></div>

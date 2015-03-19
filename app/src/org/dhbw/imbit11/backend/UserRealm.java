@@ -34,6 +34,7 @@ public class UserRealm extends JdbcRealm {
 
 	protected String deleteUserQuery = "DELETE FROM `user` WHERE `email`=?";
 	protected String deleteGroupQuery = "DELETE FROM `group` WHERE `group_id`=?";
+	protected String deleteGroupMembersQuery = "DELETE FROM `user` WHERE `group`=?";
 	protected String deleteProfessorQuery = "DELETE FROM `user` WHERE `email`=?";
 	protected String getProfessorsQuery = "SELECT `first_name`, `last_name`, `email` FROM `user` WHERE `role` = 'professor'";
 
@@ -631,6 +632,29 @@ public class UserRealm extends JdbcRealm {
 		}
 	}
 
+	/**
+	 * function to delete a group with its belonging members by handing its group id to the function
+	 * 
+	 * @param group_id
+	 *            - contains the group id of a certain group
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	public void deleteGroupMembers(String group_id) throws SQLException {
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		try {
+			ps = conn.prepareStatement(deleteGroupMembersQuery);
+			ps.setInt(1, Integer.parseInt(group_id));
+			ps.executeUpdate();
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+	}
+	
+	
 	/**
 	 * Invoked in java class DeleteProfessor function to delete a professor by
 	 * handing his email to the function

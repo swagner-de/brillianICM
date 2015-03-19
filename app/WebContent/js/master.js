@@ -273,7 +273,8 @@ function loadDialog () {
 		backgroundWithPartnerUrl = 'images/' + background;
 		setDialogBackground(backgroundWithPartnerUrl, false);
 	}
-	if ($xml.find('bgvid').text() != '') {
+	videoEnabled=getCookie("video");
+	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
 		background = $xml.find('bgvid').text();
 		backgroundWithPartnerUrl=window.location.href;
 		position = backgroundWithPartnerUrl.lastIndexOf('/');

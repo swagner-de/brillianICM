@@ -288,14 +288,14 @@ import javax.servlet.http.HttpServletResponse;
 	 */
 	protected void sendConfirmationMail(String email, String firstname, String lastname, String unverifiedEmail, HttpServletRequest request){
         
-        String msgBody = "Dear "+ firstname + " " + lastname + "\n Please confirm your registration by clicking on the following link: \n" 
+        String msgBody = "Dear "+ firstname + " " + lastname + ",\n\n welcome to brillianCRM. Please confirm your registration by clicking on the following link: \n" 
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
         
         msgBody += email;
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
-        msgBody += "\n\n Greetings, \n" +
-					"your brillianCRM admin \n\n\n This is an automated email. Please do not reply.";
+        msgBody += "\n\n With best regards, \n\n" +
+					"your brillianCRM team \n\n\n Note that this is a system generated e-mail. Please do not reply.";
 
 	try {
 			MailClient mailclient = new MailClient();
