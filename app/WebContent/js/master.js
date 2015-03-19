@@ -77,7 +77,6 @@ function getXml(id) {
 		newMailDisabled = true;
 		if(eventtype == 2){
 			newMailDisabled = false;
-			addHighlightMailNew();
 		}
 		
 		//Disable 'New Mail' Button
@@ -93,6 +92,7 @@ function getXml(id) {
 					disabled:newMailDisabled
 				}]
 			});
+			$('.tabs-tool').addClass('new-button-highlight')
 		}catch(err){
 			
 		}
@@ -146,9 +146,9 @@ function getXml(id) {
 					$('.mainLocationButton').linkbutton('enable');
 					$('.mainMailButton').linkbutton('enable');
 					showMsg('Info', 'Mail Sent'); //For Debugging
-					eventContainer.window({modal:false,closable:true});					
+					eventContainer.window({modal:false,closable:true});	
+					$('.tabs-tool').removeClass('new-button-highlight');
 					tabsContainer.tabs('close', 'New Mail');
-					removeHighlightMailNew();
 				}catch(err){
 					
 				};
@@ -691,7 +691,9 @@ function showLocation (buttonId) {
 							}else if (eventtype == '4' || eventtype == '5'){								
 								loadSelection();
 							}else if (eventtype == '6' || eventtype == '7'){
-								loadAllocation();							
+								loadAllocation();	
+							}else if (eventtype == '8'){
+								loadMatrixAllocation();	
 							}else if (eventtype == '13'){
 								showNotification();							
 							}
@@ -762,15 +764,12 @@ function showLaptop () {
 			tabsContainer = $('.laptopMailClient');
 			var inbox = $('.laptopMailClientInbox');
 			var inboxData = {'mails': []};
-
 			$('.laptopMailClient div.tabs-panels').addClass('bc');
-
 			tabsContainer.tabs({
 				tools:[{
 					text:'New',
 					iconCls:'icon-add',
 					handler:function(){
-						removeHighlightMailNew();	
 						showNewMailTab();
 						newMailDisabled = true;
 					},

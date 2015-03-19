@@ -816,6 +816,19 @@ div.transitionScreenImageContainer:hover {
 	cursor: pointer;
 }
 
+.new-button-highlight {
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+	0% {background-color: #e6edfa}
+	50% {background-color: #6699ff}
+}
+@-webkit-keyframes blink {
+    0% {background-color: #e6edfa}
+	50% {background-color: #6699ff}
+}
+
 .tabs-tool{
 	height: inherit !important;
 	border-top-width: 0px;
