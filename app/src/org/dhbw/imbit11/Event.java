@@ -58,8 +58,6 @@ public class Event extends HttpServlet {
 	 * 5. sent - currently does nothing
 	 *  
 	 * @throws IOException Input Output Error
-	 * 
-	 * @exception SQLException catches errors which can occur with SQL related load and safeGame 
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
