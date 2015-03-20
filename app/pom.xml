@@ -77,7 +77,7 @@
 	</dependencies>
 
 	<properties>
-		<yworks.uml.path>${basedir}\yworks-uml-doclet-3.0_02-jdk1.5</yworks.uml.path>
+		<yworks.uml.path>${basedir}/yworks-uml-doclet-3.0_02-jdk1.5</yworks.uml.path>
 	</properties>
 
 	<build>
