@@ -832,7 +832,7 @@ public class UserRealm extends JdbcRealm {
 	 * @throws SQLException
 	 *             - returns a database access error
 	 *             
-	 * @return
+	 * @return true or false
 	 */
 	public boolean isUserFinished(String userEmail) throws SQLException {
 		// get the current path entry saved to the DB
