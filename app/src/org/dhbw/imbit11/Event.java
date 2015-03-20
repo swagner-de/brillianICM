@@ -56,14 +56,13 @@ public class Event extends HttpServlet {
 	 * 3. saveGame - saves the user progress based on the params provided
 	 * 4. inbox - loads a data EventExtractor E-Mail
 	 * 5. sent - currently does nothing
-	 * 
-	 * @throws IOException
-	 * @throws ServletException
+	 *  
+	 * @throws IOException Input Output Error
 	 * 
 	 * @exception SQLException catches errors which can occur with SQL related load and safeGame 
 	 */
 	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+			HttpServletResponse response) throws IOException {
 		//accept POST variables from UI and return xml of node
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
