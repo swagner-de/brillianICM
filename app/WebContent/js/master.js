@@ -643,8 +643,12 @@ function loadMatrixAllocation () {
             $(this).removeClass('elementHighlight');
         },
         onDrop:function(e,source){
-            $(this).append(source);
             $(this).removeClass('elementHighlight');
+            // Wurde dem Zielfeld bereits eine Kachel zugeordnet, wird die Funktion abgebrochen, die Kachel bleibt wo sie ist. 
+    		if (e.target.hasChildNodes()) { 
+    			return;
+    		}
+            $(this).append(source);
         }
     });
 	
