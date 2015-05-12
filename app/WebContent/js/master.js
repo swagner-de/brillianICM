@@ -1,10 +1,13 @@
 function getXml(id) {	
+	//print name to into the "account" button
+	$("#account").html(gameData.firstName+' '+ gameData.lastName);
 	
 	$.get('Event', {id : id, type : 'node'}, function(xml) {
 		//Fix XML
 		var str1 = '<events>';
 		var str2 = '</events>';
 		xml = str1 + xml + str2;
+	//alert(xml);
 		
 		/* Replaces Prename, Surname and Gender of the User */
 		xml = xml.replace(/%prename%/g, gameData.firstName);
@@ -19,341 +22,181 @@ function getXml(id) {
 		var eventtype = $xml.find('event').attr('eventtype');
 		var loc = $xml.find('event').attr('loc');
 		var level = $xml.find('event').attr('level');
-		
-		//General PageElement Variables
-		var mainLocationButton = $('.mainLocationButton');
-		var eventContainer = $('.mainEventContainerLaptop');
-		
-		// Display the elements on the right side pane based on the level
-		if(level >= 12){
-			$('.projektCharterButton').css('background-image', 'url(images/icons/Charter.png)');
-			$('.projektCharterButton').show();
-		}	
-		
-		if(level >= 202){
-			$('.projektStrukturPlanButton').css('background-image', 'url(images/icons/Projektstrukturplan.png)');
-			$('.projektStrukturPlanButton').show();
-		}
-		
-		if(level >= 290){
-			$('.ganttButton').css('background-image', 'url(images/icons/Gantt.png)');
-			$('.ganttButton').show();
-		}
+	
+		// Display background-image
+			$('.mainWindow').css('background-image', 'url(images/background/'+level+'.png)');
+			$('.mainWindow').show();
 		
 		//Wird nur beim ersten Mal zu Beginn des Spiels ausgeführt (Get Name and set Level etc.)
 		if (firstFlag == false){			
-			$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
-			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
-				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
-				setLevelImage(level);
-			}
+		$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			firstFlag = true;
 		}else{
-			var imtime = $xml.find('event').attr('imtime');
-			var imcost = $xml.find('event').attr('imcost');
-			var imqual = $xml.find('event').attr('imqual');
-			
-			//Update der Time Cost Quality Werte
-			updateTCQValues(imtime, imcost, imqual);
-			
 			//Füge die neue Id zum GamePath hinzu
 			gameData.gamePath = gameData.gamePath + ';' + id;
-
-			if(locOld != loc || (eventtypeOld != '2' && eventtype == '2')){
-				setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
-				setLevelImage(level);
-				saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
-			}
 		}
-		/* Highlights Mail Button upon arrival of an unread Mail (1) or  when User has to write a New Mail (2) as next task */
-		if(eventtype == '1' || eventtype == '2'){
-			addHighlightMail();
-		}
-		if(eventtype == '1'){
-			unreadMails.push(id);
-		}
-				
-		//Show the 'New Mail' button only when a MailDraft-Event happens
-		newMailDisabled = true;
-		if(eventtype == 2){
-			newMailDisabled = false;
-		}
-		
-		//Disable 'New Mail' Button
-		try{
-			tabsContainer.tabs({
-				tools:[{
-					text:'New',
-					iconCls:'icon-add',
-					handler:function(){
-						showNewMailTab();
-						newMailDisabled = true;
-					},
-					disabled:newMailDisabled
-				}]
-			});
-			$('.tabs-tool').addClass('new-button-highlight')
-		}catch(err){
-			
-		}
-		
-		//console.log('getXml > Id: ' + id + '; Time: ' + gameData.imtime + '; Cost: ' + gameData.imcost + '; Quality: ' + gameData.imqual); //For Debugging
 		
 		//Verstecke alle Location Inhalte
 		hideDialog();
 		hideSelection();
 		hideAllocation();
+		hideAllocationTwo();
+		hideAllocationThree();
+		hideMatrixAllocationStandard();
 		hideMatrixAllocation();
+		hideTest();
 		
-		//Wenn Update Location und kein MailDraft
-		if(locOld == loc && eventtype != '2'){		
-			removeHighlight(mainLocationButton, loc);			
-			//console.log('updateLocation > Id: ' + id + '; Time: ' + gameData.imtime + '; Cost: ' + gameData.imcost + '; Quality: ' + gameData.imqual); //For Debugging
-		}
-		
-		if (eventtype == '3' && locOld == loc){			
-			loadDialog();
-		}else if ((eventtype == '4' || eventtype == '5') && locOld == loc){
-			loadSelection();		
-		}else if ((eventtype == '6' || eventtype == '7') && locOld == loc){
-			loadAllocation();		
-		}else if (eventtype == '8' && locOld == loc){
-			loadMatrixAllocation();
-		}else if(eventtype == eventtypeOld && eventtype == '2') {
-			loadMailDraft();		
-		}else if(eventtype == '13' && locOld == loc){
-			showNotification();
-		}else{
-			//Wenn das neue Event an einer anderen Location stattfindet bzw. das Event kein Dialog, keine Auswahl und keine Zuordnung ist			
-			
-			if(id != lastEvent){
-				$('.mainLocationButton').linkbutton('enable');
-			}
-			
-			if (eventtype == '1'){
-				showMailNotification();
-				hideLaptop();	
-				hideLocation();
-			}
-			
-			if(loc != ''){
-				addHighlight(mainLocationButton, loc);
-			}
-			
-			
-			if(eventtype != eventtypeOld && eventtypeOld == '2'){
-				try{
-					$('.mainLocationButton').linkbutton('enable');
-					$('.mainMailButton').linkbutton('enable');
-					showMsg('Info', 'Mail Sent'); //For Debugging
-					eventContainer.window({modal:false,closable:true});	
-					$('.tabs-tool').removeClass('new-button-highlight');
-					tabsContainer.tabs('close', 'New Mail');
-				}catch(err){
-					
-				};
-			}			
-
-			mainLocationButton.linkbutton({
-			    onClick: function(){
-			    	showLocation ($(this).attr('id'));			
-			    }
-			});
-
-			$('.mainMailButton').linkbutton({
-				onClick: function(){
-					showLaptop();
-					removeHighlightMail();
-				}				
-			});				
-		}
-		
-		if(id == firstEvent){
-			showLocation('4');	
-		}else if(id == lastEvent){
+		showLocation();
+if(id == lastEvent){
 			showResult();
-		//Umbenennung des Next Buttons in Accept Job Offer am Spiel Beginn 
-		}else if(id == jobofferEvent){
-			$('#continueButton').html("Accept Job Offer");
-		}
-		
-		//Setzte die Werte für locOld & eventtypeOld - wichtig für logische Überprüfungen im nächsten Durchlauf
-		if(eventtype == '1'){
-			locOld = '';
-		}else{
-			locOld = loc;
-		}	
-		eventtypeOld = eventtype;
-	});	
-}
-
-// Writes the specified email into the GUI
-function loadMail (from, to, date, subject, content, attachment, attachmentHref) {
-	var tag = 'Mail';
-	
-	if (tabsContainer.tabs('exists', subject)){
-		tabsContainer.tabs('select', subject);
-	}else{
-		tabsContainer.tabs('add',{
-		    title:subject,
-		    href:tag,
-		    closable:true
-		});
-		
-		tabsContainer.tabs('getSelected').panel({
-			href:tag,
-			onLoad:function(){
-				$(this).find('.from').text(from);
-				$(this).find('.to').text(to);
-				$(this).find('.date').text(date);
-				$(this).find('.subject').text(subject);
-				$(this).find('.content').html(content);
-				$(this).find('.attachment').text(attachment);
-				$(this).find('.attachment').attr('data-href', attachmentHref);
-				
-				$(this).find('.attachment').bind('click', function(){
-					showPdf('documents/' + $(this).attr('data-href'));
-				});				
 			}
-		});	
-	}
+	});	
 }
 
-// Opens the email draft matching the current element of the XML and writes it into the GUI
-function loadMailDraft () {
-	var window = $('.mainEventContainerLaptop');
-	//MailDraft Event Values from XML
-	var from = $xml.find('from').text();
-	var to = $xml.find('to').text();
-	var date = $xml.find('date').text();
-	var subject = $xml.find('subject').text();
-	var container = $('.mailDraftContainer');
-	
-	var optionButton = container.find('.option');
-	$('.mainLocationButton').linkbutton('disable');
-	window.window({modal:false,closable:false});
-	$('.mainMailButton').linkbutton('disable');
-	container.find('.from').text(from);
-	container.find('.to').text(to);
-	container.find('.date').text(date);
-	container.find('.subject').text(subject);
-	
-	$xml.find('content').each(function(index){
-		var text = $xml.find('content').eq(index).html();
-		container.find('.content').eq(index).html(text);
-	});
-	
-	optionButton.unbind('click');
-	
-	$xml.find('option').each(function(index){
-		var text = $xml.find('option').eq(index).text();
-		var href = $xml.find('option').eq(index).attr('href');
+function showLocation () {
+ 	var tag = 'Location';
+	var container = $('.mainEventContainer');
+	var eventtype =$xml.find('event').attr('eventtype');
+//	var backgroundPictureTransition1Url = 'images/locationBackgrounds/loc' + buttonId + 't1.png';
+//	var backgroundPictureTransition2Url = 'images/locationBackgrounds/loc' + buttonId + 't2.png';
+//	var backgroundPictureUrl = 'images/locationBackgrounds/loc' + buttonId + '.png';
+	$('.mainEventContainerLaptop').window('close');
+	$('.mainEventContainerPdf').window('close');
+	container.window({closed:false,modal:false,noheader:true,draggable:false,resizable:false});
+	container.panel({
+		href:tag,
+		onLoad:function(){
+
+		hideDialog();
+		hideSelection();
+		hideAllocation();
+		hideAllocationTwo();
+		hideAllocationThree();
+		hideMatrixAllocation();
+		hideMatrixAllocationStandard();
+		hideTest();
 		
-		optionButton.eq(index).text(text);
-		optionButton.eq(index).bind('click', function(){
-	        getXml(href);
-	    });
-	});	
+	    			// Musik am Anfang
+					 if(eventtype=="1"){
+	    			var audioElement = document.createElement('audio');	
+	    			audioElement.setAttribute('src', 'audio/location.mp3');
+					//Gotta love that melody!
+					var audiosetting="false";
+					audiosetting=getCookie("audio");
+					if (audiosetting == "true") {
+					audioElement.play();	}
+					}
+	    			
+	    			/* Loads background images in a row and finally loads Dialog or alike. 
+	    			 * @author Laluz
+	    			 */
+	    		//	fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
+	    		//	setTimeout(function(){
+	    			//	fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
+	    			//	setTimeout(function(){
+	    					//fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
+	    					setTimeout(function(){
+	    							if(eventtype == '3'){
+	    								loadDialog();		
+	    							}else if (eventtype == '4' || eventtype == '5'){								
+	    								loadSelection();
+	    							}else if (eventtype == '6' || eventtype == '7'){
+	    								loadAllocation();
+									}else if (eventtype == '8'){
+										loadAllocationTwo();	
+									}else if (eventtype == '9'){
+										loadAllocationThree();											
+									}else if (eventtype == '10'){
+										loadMatrixAllocationStandard();	
+									}else if (eventtype == '11'){
+										loadMatrixAllocation();											
+	    							}else if (eventtype == '12'){
+	    								showNotification();	
+									}else if (eventtype == '13'){
+	    								loadTest();										
+	    							}	
+	    				//	},1500);					
+	    			//	},1500);
+	    			},0);
+		 }
+	});				
 }
 
 // Loading a dialog style event from the XML to perpare its content for display
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
-
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
 	
-	var background;
-	var backgroundWithPartnerUrl;
-		
+		loadBackground();
 	//Lade den Dialog Hintergrund
-	if ($xml.find('bgimg').text() != '') {
-		background = $xml.find('bgimg').text();
-		backgroundWithPartnerUrl = 'images/' + background;
-		setDialogBackground(backgroundWithPartnerUrl, false);
-	}
-	videoEnabled=getCookie("video");
-	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
-		background = $xml.find('bgvid').text();
-		backgroundWithPartnerUrl=window.location.href;
-		position = backgroundWithPartnerUrl.lastIndexOf('/');
-		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
-		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
-		setDialogBackground(backgroundWithPartnerUrl, true);
-	} 
 
-	
-	
-		
 	$('.dialogButton').remove();
 	dialogPartnerNameContainer.text(partner);
 	dialogPartnerTextContainer.text(content);
 	
-	$xml.find('option').each(function(index){
+		$xml.find('option').each(function(index){
 		var text = $xml.find('option').eq(index).text();
 		var href = $xml.find('option').eq(index).attr('href');
 		var dialogTextContainer = $('.dialogTextContainer');
 		
 		dialogTextContainer.append('<div class="dialogButton"></div>');
 		var dialogButton = $('.dialogButton').eq(index);
-		
+
 		dialogButton.linkbutton({
 			text:text
 		});
 		dialogButton.bind('click', function(){				
 	        getXml(href);
 	    });		
-	});	
+	}); 	
 	
-	//Cancels loaded TTS-Dialogues and resets the queue:
-	speechSynthesis.cancel();
+	// //Cancels loaded TTS-Dialogues and resets the queue:
+	// speechSynthesis.cancel();
 		
-	// Generates TTS object and fill it with the content of the dialog partner:
-	// @param tts Text-to-Speech object and content loaded
-	// @param voices loads available voices and stores them
-	var tts = new SpeechSynthesisUtterance(content);
+	// // Generates TTS object and fill it with the content of the dialog partner:
+	// // @param tts Text-to-Speech object and content loaded
+	// // @param voices loads available voices and stores them
+	// var tts = new SpeechSynthesisUtterance(content);
 		
-	//Get all available voices for the browser and safe in an array:
-	var voices = window.speechSynthesis.getVoices();
+	// //Get all available voices for the browser and safe in an array:
+	// var voices = window.speechSynthesis.getVoices();
 	
-	//Checks if Cookie has TTS-settings on "true":
-	var ttsSettings="false";
-	ttsSettings=getCookie("tts");
-	if (ttsSettings == "true") {
+	// //Checks if Cookie has TTS-settings on "true":
+	// var ttsSettings="false";
+	// ttsSettings=getCookie("tts");
+	// if (ttsSettings == "true") {
 		 
 	 
-	//Setting speechSynthesis parameters for Male Voice:
-	tts.native = false;
-	tts.lang = 'en-GB';
-	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+	// //Setting speechSynthesis parameters for Male Voice:
+	// tts.native = false;
+	// tts.lang = 'en-GB';
+	// tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
 	
-	// Checks if the partner female and setting female parameters:
-	if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
-		{
-		//alert("Female detected!");
-		tts.native = false;
-		tts.lang = 'en-IE';
-		tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
+	// // Checks if the partner female and setting female parameters:
+	// if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
+		// {
+		// //alert("Female detected!");
+		// tts.native = false;
+		// tts.lang = 'en-IE';
+		// tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
 		
-		if(checkBrowserName('chrome'))
-			{
-			//alert("Chrome detected");
-			tts.native = false;
-			tts.lang = 'en-US';
-			tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google US English'; });
-			}
-		
-		}
-	
-	//Starts TTS:
-	speechSynthesis.speak(tts);
-	 }
+		// if(checkBrowserName('chrome'))
+			// {
+			// //alert("Chrome detected");
+			// tts.native = false;
+			// tts.lang = 'en-US';
+			// tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google US English'; });
+			// }
+		// }
+	// //Starts TTS:
+	// speechSynthesis.speak(tts);
+	 // }
 	 
 	//Opens the dialog:
 	showDialog();
 }
-
 
 //Browserweiche:
 function checkBrowserName(name)
@@ -366,7 +209,6 @@ function checkBrowserName(name)
 	return false; 
 } 
 
-
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
 	var description = $xml.find('description').text();
@@ -374,9 +216,11 @@ function loadSelection () {
 	var descriptionContainer =  container.find('.selectionTitleText');
 	var imgContainer = container.find('.selectionPicture');
 	var textContainer = container.find('.selectionText');
-	var button = container.find('.selectionButton');	
-	
+	var button = container.find('.selectionButton');
+
+
 	descriptionContainer.text(description);
+	
 	$xml.find('option').each(function(index){
 		var text = $xml.find('option').eq(index).text();
 		var href = $xml.find('option').eq(index).attr('href');
@@ -386,6 +230,7 @@ function loadSelection () {
 			$('.selectionContainer').hide();
 			getXml(href);								        
 	    });		
+		
 		if (eventtype == 5){
 			var img = 'images/' + $xml.find('option').eq(index).attr('img');
 			imgContainer.eq(index).attr('src', img);
@@ -408,7 +253,7 @@ function loadAllocation () {
 	var phaseContainer = container.find('.phase');
 	var continueButton = $('#continueButton');
 	var draggableContainer = $('.draggableContainer');
-
+		loadBackground();
 	$('.drag').remove();
 	
 	$xml.find('option').each(function(index){
@@ -521,24 +366,349 @@ function loadAllocation () {
     });
 }
 
-function loadMatrixAllocation () {
+function loadAllocationTwo () {
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();	
+	var container = $('.allocationContainerTwo');
+	var descriptionContainer = container.find('.description');
+	var phaseTitleContainerTwo = container.find('.phaseTitleTwo');
+	var phaseContainerTwo = container.find('.phaseTwo');
+	var continueButtonTwo = $('#continueButtonTwo');
+	var draggableContainerTwo = $('.draggableContainerTwo');
+		loadBackground();
+	$('.drag').remove();
+	
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemColumn = $(this).attr('column');
+
+		var itemInfo = $(this).attr('finfo');
+		var itemDescription = $(this).attr('fdesc');
+		var itemRank = $(this).attr('rank');	
+
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableContainerTwo.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
+	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
+	var draggableItem = container.find('.drag');
+	
+	descriptionContainer.text(description);
+	
+	$xml.find('column').each(function(index){
+		phaseTitleContainerTwo.eq(index).text($(this).html());
+	});
+	
+	continueButtonTwo.unbind('click');
+	continueButtonTwo.bind('click', function(){
+
+		$('.phaseTwo').css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Check if Items are allocated in the right column
+		$('.phaseTwo').each (function(index) {
+			$(this).find('.drag').each(function(i) {
+				if ($(this).attr('data-column')-1 != index){
+					correct = false;
+					$(this).addClass('dragIncorrect');
+				}
+			});
+		});
+		//Check if all items have been dragged
+		$('.draggableContainerTwo').find('.drag').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			container.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements'); //For Debugging
+			}
+			if (correct == false){
+			showMsg('Info', 'Incorrect Allocation'); //For Debugging
+			}					
+		}
+	});	
+	showAllocationTwo();
+	
+	//Drag Funktionalität
+	draggableItem.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');
+            
+        	$('.dragInfoContainerTwo').html('');
+        	$('.dragInfoContainerTwo').append('<div class="fbutton"><span class="fdescription"></span></div>');
+        	
+        	var infoButton = $('.fbutton');        	
+        	var info = $(this).attr('data-finfo');
+        	var description = $(this).attr('data-fdesc');
+        	
+        	infoButton.linkbutton({
+        		text: description,
+        		onClick: function(){
+        			showPdf('documents/' + info);
+        		}
+        	});
+            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität
+	phaseContainerTwo.droppable({
+        accept:'.drag',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+}
+
+function loadAllocationThree () {
+
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();	
+	var container = $('.allocationContainerThree');
+	var descriptionContainer = container.find('.description');
+	var phaseTitleContainerThree = container.find('.phaseTitleThree');
+	var phaseContainerThree = container.find('.phaseThree');
+	var continueButtonThree = $('#continueButtonThree');
+	var draggableContainerThree = $('.draggableContainerThree');
+	
+
+		
+	//Lade den Dialog Hintergrund
+	loadBackground();
+
+
+	$('.drag').remove();
+	
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemColumn = $(this).attr('column');
+
+		var itemInfo = $(this).attr('finfo');
+		var itemDescription = $(this).attr('fdesc');
+		var itemRank = $(this).attr('rank');	
+
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableContainerThree.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
+	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
+	var draggableItem = container.find('.drag');
+	
+	descriptionContainer.text(description);
+	
+	$xml.find('column').each(function(index){
+		phaseTitleContainerThree.eq(index).text($(this).html());
+	});
+	
+	continueButtonThree.unbind('click');
+	continueButtonThree.bind('click', function(){
+
+		$('.phaseThree').css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Check if Items are allocated in the right column
+		$('.phaseThree').each (function(index) {
+			$(this).find('.drag').each(function(i) {
+				if ($(this).attr('data-column')-1 != index){
+					correct = false;
+					$(this).addClass('dragIncorrect');
+				}
+			});
+		});
+		//Check if all items have been dragged
+		$('.draggableContainerThree').find('.drag').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			container.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements'); //For Debugging
+			}
+			if (correct == false){
+			showMsg('Info', 'Incorrect Allocation'); //For Debugging
+			}					
+		}
+	});	
+	showAllocationThree();
+	
+	//Drag Funktionalität
+	draggableItem.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');
+            
+        	$('.dragInfoContainerThree').html('');
+        	$('.dragInfoContainerThree').append('<div class="fbutton"><span class="fdescription"></span></div>');
+        	
+        	var infoButton = $('.fbutton');        	
+        	var info = $(this).attr('data-finfo');
+        	var description = $(this).attr('data-fdesc');
+        	
+        	infoButton.linkbutton({
+        		text: description,
+        		onClick: function(){
+        			showPdf('documents/' + info);
+        		}
+        	});
+            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität
+	phaseContainerThree.droppable({
+        accept:'.drag',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+}
+
+function loadTest(){
+	// liest XML aus
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();
-	var xAxisXML = $xml.find('xaxisdescription').text().toUpperCase();
-	var yAxisXML = $xml.find('yaxisdescription').text().toUpperCase();
+	var containerTest = $('.test');
+	var descriptionContainerTest = containerTest.find('.description');
+	descriptionContainerTest.text(description);
+	//Lade den Dialog Hintergrund	
+	loadBackground();
+//globale Variablen
+	var indexAB =0;
+	
+//dynamischer Ansatz
+		$xml.find('messageBoxA, messageBoxB').each(function(index){	
+		indexAB = index;
+		  testElementAIndex = $xml.find('messageBoxA').eq(index).index();
+		  testElementBIndex = $xml.find('messageBoxB').eq(index).index();
+	
+	if(testElementAIndex != "-1"){
+		messageBoxA();
+		}
+		if(testElementBIndex != "-1"){
+		messageBoxB();
+		}
+		});
+				 function messageBoxA(){ 
+					var text = $xml.find('messageBoxA').eq(indexAB).text();
+					
+						//text to speech			
+	var tts = new SpeechSynthesisUtterance(text);
+	speechSynthesis.speak(tts);
+			
+				// google voice
+			/*		var audio = new Audio();
+				audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
+				audio.play(); */
+					var messageBoxContainer = $('.dialogBox');
+					messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="bc messageBoxA"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
+					var messageBoxA = $('.messageBoxA').eq(indexAB).text(text);
+			
+				 }
+				 
+				 
+			 	 function messageBoxB(){
+			var text = $xml.find('messageBoxB').eq(indexAB).text();
+			
+	var tts = new SpeechSynthesisUtterance(text);
+	tts.native = false;
+	tts.lang = 'en-GB';
+	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+	speechSynthesis.speak(tts);
+			var messageBoxContainer = $('.dialogBox');
+			messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
+			var messageBoxB = $('.messageBoxB').eq(indexAB);
+			messageBoxB.text(text);
+				 }
+				 
+	var continueButtonMatrixTest = $('#continueButtonMatrixTest');
+
+		showTest();
+		
+	continueButtonMatrixTest.unbind('click');
+	continueButtonMatrixTest.bind('click', function(){
+		getXml(href);
+			speechSynthesis.cancel();
+			containerTest.window('close');
+	});
+} 
+
+
+function loadMatrixAllocation () {
+
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();
 	var container = $('.matrixAllocationContainer');
 	var descriptionContainer = container.find('.description');
-	var xAxisDescriptionContainer = $('#xAxisDescription');
-	var yAxisDescriptionContainer = $('#yAxisDescription');
+
 	
 	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
-	var tileAcceptors = container.find('.tileAcceptor');
+	var tileAcceptor = container.find('.tileAcceptor');
 	var continueButtonMatrix = $('#continueButtonMatrix');
 	//Enthält zuzuordnende tiles
 	var draggableTilesContainer = $('.draggableTilesContainer');
 
 	$('.dragTile').remove();
-	
+		loadBackground();
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
@@ -559,8 +729,6 @@ function loadMatrixAllocation () {
 	//Auswahl aller Tiles die beweglich sind
 	var draggableItems = container.find('.dragTile');
 	descriptionContainer.text(description);
-	xAxisDescriptionContainer.text(xAxisXML);
-	yAxisDescriptionContainer.text(yAxisXML);
 	
 	//Might be reused to name axes --> Low to High Impact/Priority
 	//$xml.find('column').each(function(index){
@@ -629,7 +797,7 @@ function loadMatrixAllocation () {
     });
 	
 	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
-	tileAcceptors.droppable({
+	tileAcceptor.droppable({
         accept:'.dragTile',
         onDragEnter:function(e,source){
             $(source).draggable('options').cursor='auto';
@@ -672,226 +840,211 @@ function loadMatrixAllocation () {
     });
 }
 
-function fancyImageLoading(imageUrl, element){
-	var img = new Array();
-	img[0] = new Image();
-	img[0].onload = function() {
-		element.css("background-image", "url('" + imageUrl + "')");
-	};
-	img[0].src = imageUrl;
-}
+function loadMatrixAllocationStandard () {
 
-function showLocation (buttonId) {	
- 	var tag = 'Location';
-	var container = $('.mainEventContainer');
-	var mainLocationButton = $('.mainLocationButton');	
-	var eventtype =$xml.find('event').attr('eventtype');
-	var loc = $xml.find('event').attr('loc');
-	var backgroundPictureTransition1Url = 'images/locationBackgrounds/loc' + buttonId + 't1.png';
-	var backgroundPictureTransition2Url = 'images/locationBackgrounds/loc' + buttonId + 't2.png';
-	var backgroundPictureUrl = 'images/locationBackgrounds/loc' + buttonId + '.png';
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();
+
+	var xAxisXML = $xml.find('xaxisdescription').text().toUpperCase();
+	var yAxisXML = $xml.find('yaxisdescription').text().toUpperCase();
+	var containerStandard = $('.matrixAllocationContainerStandard');
+	var descriptionContainer = containerStandard.find('.description');
+	var xAxisDescriptionContainer = $('.xAxisDescription');
+	var yAxisDescriptionContainer = $('.yAxisDescription');
+		loadBackground();
+	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	var tileAcceptorStandard = containerStandard.find('.tileAcceptorStandard');
+	var continueButtonMatrixStandard = $('#continueButtonMatrixStandard');
+	//Enthält zuzuordnende tiles
+	var draggableTilesContainerStandard = $('.draggableTilesContainerStandard');
+
+	$('.dragTile').remove();
 	
-	$('.mainEventContainerLaptop').window('close');
-	$('.mainEventContainerPdf').window('close');
-	
-	$('.mainLocationButton').linkbutton('disable');
-	container.window({closed:false,modal:false,noheader:true,draggable:false,resizable:false});
-	container.panel({
-		href:tag,
-		onLoad:function(){
-
-			hideDialog();
-			hideSelection();
-			hideAllocation();
-			hideMatrixAllocation();
-			
-			if(buttonId == loc){
-				removeHighlight(mainLocationButton, loc);
-			}
-			/* Filter for showing images due to location change
-			 */
-			if (buttonIdOld == buttonId || buttonIdOld == "3" && buttonId == "4" || buttonIdOld == "4" && buttonId == "3") {
-	    			
-	    			fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
-					setTimeout(function(){
-						if(buttonId == loc){
-							if(eventtype == '3'){
-								loadDialog();		
-							}else if (eventtype == '4' || eventtype == '5'){								
-								loadSelection();
-							}else if (eventtype == '6' || eventtype == '7'){
-								loadAllocation();	
-							}else if (eventtype == '8'){
-								loadMatrixAllocation();	
-							}else if (eventtype == '13'){
-								showNotification();							
-							}
-						}else{
-							$('.mainLocationButton').linkbutton('enable');
-							container.window({modal:false});
-						}						
-					},1500);
-	    			
-	    		} else {
-	    			
-	    			/* Possibility to add a filter in order to disable audio file.
-	    			 * @author Laluz
-	    			 */
-			
-	    			var audioElement = document.createElement('audio');	
-	    			audioElement.setAttribute('src', 'audio/location.mp3');
-					//Gotta love that melody!
-					var audiosetting="false";
-					audiosetting=getCookie("audio");
-					if (audiosetting == "true") {
-					audioElement.play();	}
-	    			
-	    			/* Loads background images in a row and finally loads Dialog or alike. 
-	    			 * @author Laluz
-	    			 */
-	    			fancyImageLoading(backgroundPictureTransition1Url, $('.locationBackgroundContainer'));
-	    			setTimeout(function(){
-	    				fancyImageLoading(backgroundPictureTransition2Url, $('.locationBackgroundContainer'));
-	    				setTimeout(function(){
-	    					fancyImageLoading(backgroundPictureUrl, $('.locationBackgroundContainer'));					
-	    					setTimeout(function(){
-	    						if(buttonId == loc){
-	    							if(eventtype == '3'){
-	    								loadDialog();		
-	    							}else if (eventtype == '4' || eventtype == '5'){								
-	    								loadSelection();
-	    							}else if (eventtype == '6' || eventtype == '7'){
-	    								loadAllocation();	
-	    							}else if (eventtype == '8'){
-	    								loadMatrixAllocation();						
-	    							}else if (eventtype == '13'){
-	    								showNotification();							
-	    							}
-	    						}else{
-	    								$('.mainLocationButton').linkbutton('enable');
-	    								container.window({modal:false});
-	    						}						
-	    					},1500);					
-	    				},1500);
-	    			},1500);
-	    		} 
-	    	buttonIdOld=buttonId;			
-		 }
-	});				
-}
-
-
-function showLaptop () {
-	var tag = 'Laptop';
-	var container = $('.mainEventContainerLaptop');
-	var eventtype = $xml.find('event').attr('eventtype');
-		
-	container.window({closed:false,modal:false,title:'Laptop',draggable:false,resizable:false,minimizable:false,maximizable:false,collapsible:false});
-	container.panel({
-		href:tag,
-		onLoad:function(){				
-			tabsContainer = $('.laptopMailClient');
-			var inbox = $('.laptopMailClientInbox');
-			var inboxData = {'mails': []};
-			$('.laptopMailClient div.tabs-panels').addClass('bc');
-			tabsContainer.tabs({
-				tools:[{
-					text:'New',
-					iconCls:'icon-add',
-					handler:function(){
-						showNewMailTab();
-						newMailDisabled = true;
-					},
-					disabled:newMailDisabled
-				}]
-			});
-			
-			if(eventtype == '2'){
-				$('.tabs-tool').addClass('new-button-highlight');
-			}
-			
-			$.get('Event', {gamePath : gameData.gamePath, type : 'inbox'}, function(inboxXml){
-				var str1 = '<events>';
-				var str2 = '</events>';
-				inboxXml = str1 + inboxXml + str2;
-				inboxXml = inboxXml.replace(/%prename%/g, gameData.firstName);
-				inboxXml = inboxXml.replace(/%surname%/g, gameData.lastName);
-				inboxXml = inboxXml.replace(/%gender%/g, gameData.address);	
-				
-				var $inboxXml = $(inboxXml);
-
-				//General Event Values from XML
-				$inboxXml.find('event').each(function(index){
-					var id = $(this).attr('id');
-					var from = $(this).find('from').text();
-					var to = $(this).find('to').text();
-					var subject = $(this).find('subject').text();
-					var date = $(this).find('date').text();
-					var content = $(this).find('content').html();
-					var attachment = $(this).find('attachment').text();
-					var attachmentHref = $(this).find('attachment').attr('href');
-
-					inboxData.mails.unshift({'id' : id, 'from' : from, 'to' : to, 'subject' : subject, 'date' : date, 'content' : content, 'attachment' : attachment, 'attachmentHref' : attachmentHref});
-				});					
-				
-				inbox.datagrid({
-					data: inboxData.mails,
-					onClickRow: function(rowIndex, rowData){
-
-						var	person1 = rowData.from;
-						var	person2 = rowData.to;												
-						var date = rowData.date;
-						var subject = rowData.subject;
-						var content = rowData.content;
-						var attachment = rowData.attachment;
-						var attachmentHref = rowData.attachmentHref;
-													
-						if($.inArray(rowData.id, unreadMails) != -1){
-							$('#'+ $('.datagrid-row-selected').attr('id')).css('font-weight', 'normal');
-	            		}
-
-						loadMail(person1, person2, date, subject, content, attachment, attachmentHref);
-						
-						unreadMails = $.grep(unreadMails, function(value) {
-							return value != rowData.id;
-						});
-					},
-					rowStyler: function(rowIndex,rowData){
-	                    if($.inArray(rowData.id, unreadMails) != -1){
-	                    	return 'font-weight:bold;';
-	            		}
-	                }
-				});
-			});
-		}			
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemRank = $(this).attr('rank');
+		var itemDescription = $(this).attr('fdesc');
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableTilesContainerStandard.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '"' + itemHoverTitle +'>' + itemText + '</div>');
 	});
+	
+	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
+	
+	//Auswahl aller Tiles die beweglich sind
+	var draggableItems = containerStandard.find('.dragTile');
+	descriptionContainer.text(description);
+	xAxisDescriptionContainer.text(xAxisXML);
+	yAxisDescriptionContainer.text(yAxisXML);
+	
+	//Might be reused to name axes --> Low to High Impact/Priority
+	//$xml.find('column').each(function(index){
+	//	phaseTitleContainer.eq(index).text($(this).html());
+	//});
+	
+	continueButtonMatrixStandard.unbind('click');
+	continueButtonMatrixStandard.bind('click', function(){
+		$('.tileAcceptorStandard').css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
+		//mit dem rank "1"
+		$('.tileAcceptorStandard').each(function(index) {
+			var correctTileRank = index+1;
+			if ($(this).find('.dragTile').attr('rank') != null){
+				var actualTileRank = $(this).find('.dragTile').attr('rank');
+				if (actualTileRank != correctTileRank){
+					correct = false;
+					$(this).find('.dragTile').addClass('dragIncorrect');
+				}
+				
+				} else {
+					// Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					//--> XML überprüfen
+					showMsg("There has a been a problem with the validation!");
+				}
+			});
+		
+		//Check if all items have been dragged
+		$('.draggableTilesContainerStandard').find('.dragTile').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			containerStandard.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements.'); //For Debugging
+			}
+			if (correct == false){
+				showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
+			}					
+		}
+	});	
+	showMatrixAllocationStandard();
+	
+	//Drag Funktionalität
+	draggableItems.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	tileAcceptorStandard.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).removeClass('elementHighlight');
+            // Wurde dem Zielfeld bereits eine Kachel zugeordnet, wird die Funktion abgebrochen, die Kachel bleibt wo sie ist. 
+    		if (e.target.hasChildNodes()) { 
+    			return;
+    		}
+            $(this).append(source);
+        }
+    });
+	
+	draggableTilesContainerStandard.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
 }
 
-//Zeigt den Tab 'New Mail' zum Verfassen eines MailDraft an
-function showNewMailTab () {
-	var tag = 'MailDraft';
-	if (tabsContainer.tabs('exists', 'New Mail')){
-		tabsContainer.tabs('select', 'New Mail');
-	}else{
-		tabsContainer.tabs('add',{
-		    title:'New Mail',
-		    href:tag,
-		    closable:false
-		});
-		
-		var firstTabLoad = 0;
-		tabsContainer.tabs('getTab', 'New Mail').panel({
-			href:tag,
-			onLoad:function(){
-				if(firstTabLoad == 1){
-					loadMailDraft();
-				}
-				firstTabLoad = 1;
-			}
-		});	
+
+function	loadBackground(){
+	var background;
+	var backgroundWithPartnerUrl;
+	if ($xml.find('bgimg').text() != '') {
+		background = $xml.find('bgimg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setDialogBackground(backgroundWithPartnerUrl, false);
 	}
-	$('.tabs-tool').removeClass('new-button-highlight');
+	
+	videoEnabled=getCookie("video");
+	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
+		background = $xml.find('bgvid').text();
+		backgroundWithPartnerUrl=window.location.href;
+		position = backgroundWithPartnerUrl.lastIndexOf('/');
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
+		setDialogBackground(backgroundWithPartnerUrl, true);
+	} 
+	}
+
+// Sets the background picture or video for the background
+function setDialogBackground (backgroundUrl, existsVideo) {
+
+	if (existsVideo == true) {
+		//since it will always be a different dialogue video no comparison with the old video is necessary
+		var vid = document.getElementById('background-video');
+		vid.src = backgroundUrl;
+		setTimeout(function(){
+			vid.play();
+		}, 2000);
+	}  else {
+		// if no video exists, the role picture is set
+		document.getElementById('background-video').src = '';
+		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+			var eventtype = $xml.find('event').attr('eventtype');
+
+			backgroundPictureUrlOld = $('.bgimg').css('background-image');
+			if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+				$('.bgimg').css('background-image', backgroundPictureUrlNew);
+						$('.bgimg').css('background-repeat', 'no-repeat');
+			}
+	}	
 }
+
+// function fancyImageLoading(imageUrl, element){
+	// var img = new Array();
+	// img[0] = new Image();
+	// img[0].onload = function() {
+		// element.css("background-image", "url('" + imageUrl + "')");
+	// };
+	// img[0].src = imageUrl;
+// }
+
+
 
 function showImprint () {
 	var tag = 'Imprint';
@@ -913,9 +1066,7 @@ function showAbout () {
 	});
 }
 
-
 // Function to check if user has mobile device
-
 
 /** Detect if site is accessed on a mobile device
  * @author Philipp E.
@@ -986,223 +1137,10 @@ function showPdf(pdfPath){
 		});	
 		$('.mainEventContainerImprint').window({closed:true});
 		}
-		
 }
 
-//Do we need this? How is a MailDraft saved?
-//I guess it is not saved!
-function showMailNotification (){
-	var from = $xml.find('from').text();
-	var href = $xml.find('nextevent').attr('href');
-	showMsg('Info', 'New mail from ' + from);
-	$('.mainLocationButton').removeClass('menu-active');
-	getXml(href);
-}
 
-function showNotification () {
-	var text = $xml.find('content').text();
-	var imageUrl = $xml.find('bgimg').text();	
-	var duration = 3000;
-	var href = $xml.find('nextevent').attr('href');
-	showTransition(text, imageUrl, duration, href);
-	$('.mainLocationButton').removeClass('menu-active');
-}
 
-// Veränderung der TCQ IMAGES auf der Seite
-function setTCQImages (imtime, imcost, imqual) {
-	
-	var id = $xml.find('event').attr('id');
-	var imgUrl = '';
-	var tcqElement = $('.mainTCQ');
-	
-	if (imtime > 70) {
-		if(imcost > 70){
-			if(imqual > 70){
-				imgUrl = '111';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '112';
-			}else if (imqual < 30) {
-				imgUrl = '113';
-			}
-		}else if(imcost >= 30 && imcost <= 70){
-			if(imqual > 70){			
-				imgUrl = '121';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '122';
-			}else if (imqual < 30) {			
-				imgUrl = '123';
-			}
-		}else if (imcost < 30) {
-			if(imqual > 70){				
-				imgUrl = '131';
-			}else if(imqual >= 30 && imqual <= 70){				
-				imgUrl = '132';
-			}else if (imqual < 30) {				
-				imgUrl = '133';
-			}
-		}
-	}else if (imtime >= 30 && imtime <= 70) {
-		if(imcost > 70){
-			if(imqual > 70){
-				imgUrl = '211';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '212';
-			}else if (imqual < 30) {
-				imgUrl = '213';
-			}
-		}else if(imcost >= 30 && imcost <= 70){
-			if(imqual > 70){
-				imgUrl = '221';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '222';
-			}else if (imqual < 30) {
-				imgUrl = '223';
-			}
-		}else if (imcost < 30) {
-			if(imqual > 70){
-				imgUrl = '231';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '232';
-			}else if (imqual < 30) {
-				imgUrl = '233';
-			}
-		}
-	}else if (imtime < 30) {
-		if(imcost > 70){
-			if(imqual > 70){
-				imgUrl = '311';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '312';
-			}else if (imqual < 30) {
-				imgUrl = '313';
-			}
-		}else if(imcost >= 30 && imcost <= 70){
-			if(imqual > 70){
-				imgUrl = '321';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '322';
-			}else if (imqual < 30) {
-				imgUrl = '323';
-			}
-		}else if (imcost < 30) {
-			if(imqual > 70){
-				imgUrl = '331';
-			}else if(imqual >= 30 && imqual <= 70){
-				imgUrl = '332';
-			}else if (imqual < 30) {
-				imgUrl = '333';
-			}
-		}
-	}
-	if(firstFlag == false || id == lastEvent){
-		tcqElement.css('background-image', 'url(images/tcq/' + imgUrl + '.PNG)');
-	}else{
-		tcqElement.css('height', '0px');	
-		setTimeout(function(){	
-			tcqElement.css('height', '140px');
-			tcqElement.css('background-image', 'url(images/tcq/' + imgUrl + '.PNG)');
-		},3000);
-	}	
-}
-
-// Lädt jeweils die aktuelle Zeitleiste der Projektphasen
-function setLevelImage (level) {
-	var imgUrlkl = '';
-	var imgUrlgr = '';
-		
-	if (level >= 0 && level <= 20) {
-		imgUrlkl = 'zeitleiste/phase1kl';
-		imgUrlgr = 'zeitleiste/phase1gr';
-	} else if (level >= 21 && level <= 65) {
-		imgUrlkl = 'zeitleiste/phase2kl';
-		imgUrlgr = 'zeitleiste/phase2gr';
-	} else if (level >= 66 && level <= 90) {
-		imgUrlkl = 'zeitleiste/phase3kl';
-		imgUrlgr = 'zeitleiste/phase3gr';
-	} else if (level >= 91 && level <= 202) {
-		imgUrlkl = 'zeitleiste/phase4kl';
-		imgUrlgr = 'zeitleiste/phase4gr';
-	} else if (level >= 203 && level <= 293) {
-		imgUrlkl = 'zeitleiste/phase5kl';
-		imgUrlgr = 'zeitleiste/phase5gr';
-	}  else if (level == 500 || level == 294) {
-		imgUrlkl = 'zeitleiste/phase6kl';
-		imgUrlgr = 'zeitleiste/phase6gr';
-	} else if (level == 600) {
-		imgUrlkl = 'zeitleiste/phase7kl';
-		imgUrlgr = 'zeitleiste/phase7gr';
-	} else if (level == 700) {
-		imgUrlkl = 'zeitleiste/phase8kl';
-		imgUrlgr = 'zeitleiste/phase8gr';
-	} else if (level == 800) {
-		imgUrlkl = 'zeitleiste/phase9kl';
-		imgUrlgr = 'zeitleiste/phase9gr';
-	}	
-	$('.ProjectTimeline').find('.fancybox').attr( "href", "images/" + imgUrlgr + ".png");
-	$('.ProjectTimeline').find('.fancybox').find('img').attr("src", "images/" + imgUrlkl + ".png");
-}
-
-// Veränderung der TCQ WERTE
-function updateTCQValues (imtime, imcost, imqual) {
-	try {
-		if(imtime.charAt(0) == '+'){
-			gameData.imtime = parseInt(gameData.imtime, 10) + parseInt(imtime.substring(1), 10);
-		}else if (imtime.charAt(0) == '-'){
-			gameData.imtime = gameData.imtime - imtime.substring(1);
-		}			
-	}catch(err){
-		
-	}
-	try {
-		if(imcost.charAt(0) == '+'){
-			gameData.imcost = parseInt(gameData.imcost, 10) + parseInt(imcost.substring(1), 10);
-		}else if (imcost.charAt(0) == '-'){
-			gameData.imcost = gameData.imcost - imcost.substring(1);
-		}			
-	}catch(err){
-		
-	}
-	try {
-		if(imqual.charAt(0) == '+'){
-			gameData.imqual = parseInt(gameData.imqual, 10) + parseInt(imqual.substring(1), 10);
-		}else if (imqual.charAt(0) == '-'){
-			gameData.imqual = gameData.imqual - imqual.substring(1);
-		}			
-	}catch(err){
-		
-	}
-	if(gameData.imtime>100){gameData.imtime=100;}
-	else if(gameData.imtime<0){gameData.imtime=0;}
-	if(gameData.imcost>100){gameData.imcost=100;}
-	else if(gameData.imcost<0){gameData.imcost=0;}
-	if(gameData.imqual>100){gameData.imqual=100;}
-	else if(gameData.imqual<0){gameData.imqual=0;}
-}
-
-//Sets the background picture for the dialog according to the dialog
-function setLocation (backgroundPictureUrl) {
-	$('.locationBackgroundContainer').css('background-image', 'url('+backgroundPictureUrl+')');
-}
-
-// Sets the background picture or video for the background
-function setDialogBackground (backgroundUrl, existsVideo) {
-	if (existsVideo == true) {
-		//since it will always be a different dialogue video no comparison with the old video is necessary
-		var vid = document.getElementById('background-video');
-		vid.src = backgroundUrl;
-		setTimeout(function(){
-			vid.play();
-		}, 2000);
-	} else {
-		// if no video exists, the role picture is set
-		document.getElementById('background-video').src = '';
-		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
-		backgroundPictureUrlOld = $('.dialogContainer').css('background-image');
-		if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
-			$('.dialogContainer').css('background-image', backgroundPictureUrlNew);
-		}
-	}	
-}
 
 //Hides the dialog elements
 function hideDialog () {
@@ -1220,16 +1158,6 @@ function showDialog () {
 	$('.dialogButton').delay(1500).fadeIn( 'slow', function() {});
 }
 
-function hideLocation(){
-	var container = $('.mainEventContainer');
-	container.window({closed:true});
-}
-
-function hideLaptop(){
-	var container = $('.mainEventContainerLaptop');
-	container.window({closed:true});
-}
-
 function hideSelection () {
 	$('.selectionContainer').hide();
 }
@@ -1245,7 +1173,28 @@ function hideAllocation () {
 function showAllocation () {
 	$('.allocationContainer').show();
 }
+function hideAllocationTwo () {
+	$('.allocationContainerTwo').hide();
+}
 
+function showAllocationTwo () {
+	$('.allocationContainerTwo').show();
+}
+function hideAllocationThree () {
+	$('.allocationContainerThree').hide();
+}
+
+function showAllocationThree () {
+	$('.allocationContainerThree').show();
+}
+
+function hideMatrixAllocationStandard(){
+	$('.matrixAllocationContainerStandard').hide();
+}
+
+function showMatrixAllocationStandard(){
+	$('.matrixAllocationContainerStandard').show();
+}
 function hideMatrixAllocation(){
 	$('.matrixAllocationContainer').hide();
 }
@@ -1253,13 +1202,20 @@ function hideMatrixAllocation(){
 function showMatrixAllocation(){
 	$('.matrixAllocationContainer').show();
 }
+function hideTest(){
+	$('.test').hide();
+}
+
+function showTest(){
+	$('.test').show();
+}
 
 function showEventContainer (container) {
 	container.window({modal:false,closed:false});
 }
 
 function showEventContainerModal (container) {
-	$('.mainLocationButton').linkbutton('disable');
+
 	container.window({modal:true,closed:false});
 }
 
@@ -1276,76 +1232,6 @@ function showMsg (title, msg) {
 	});
 }
 
-// Adds Highlight to button (Location Button) referred to with current Id
-function addHighlight (button, id) {
-	$.each(button, function(){
-		if($(this).attr('id') == id){
-			$(this).addClass('elementHighlight');
-		}
-	});	
-}
-
-//Removes Highlight from the button (Location Button) referred to with current Id
-function removeHighlight (button, id) {	
-	$.each(button, function(){
-		if($(this).attr('id') == id){
-			$(this).removeClass('elementHighlight');
-		}
-	});
-}
-
-// Adds Highlight to Mail Button
-function addHighlightMail () {
-	$('.mainMailButton').addClass('elementHighlight');
-}
-
-// Removes Highlight from Mail Button
-function removeHighlightMail () {	
-	$('.mainMailButton').removeClass('elementHighlight');
-}
-
-// Adds Highlight to NewMail (MailDraft) Button
-function addHighlightNewMail () {
-	$('.tabs-tool').addClass('new-button-highlight');
-}
-
-//Removes Highlight from NewMail (MailDraft) Button
-function removeHighlightNewMail () {	
-	$('.tabs-tool').removeClass('new-button-highlight');
-}
-
-//Shows the fullscreen transition window
-function showTransition (text, imageUrl, duration, href) {	
-	var window = $('.transitionScreen');
-	var imageContainer = $('.transitionScreenImageContainer');
-	var textContainer = $('.transitionScreenTextContainer');
-	textContainer.text(text);
-	if(imageUrl != ''){
-		imageContainer.css('background-image', 'url(images/'+imageUrl+')');
-	}else{
-		imageContainer.css('background-image', 'url(css/icons/blank.gif)');
-	}
-	window.window({closed:false});
-	
-	$('.transitionScreenImageContainer').unbind('click');
-	$('.transitionScreenImageContainer').bind('click', function(){
-		window.window('close');
-		getXml(href);
-	});
-	
-	var height1 = 520;
-	var height2 = $('.transitionScreenTextContainer').height();
-
-	height = height1 - height2;
-	$('.transitionContinueButton').css('margin-top', height + 'px');
-	$('.transitionContinueButton').linkbutton({
-	    onClick: function(){
-	    	window.window('close');
-			getXml(href);
-	    }
-	});
-}
-
 // Final Screen showing result of user
 function showResult () {
 	var tag = 'Result';
@@ -1353,6 +1239,7 @@ function showResult () {
 	container.window({closed:false,modal:false,title:tag,draggable:false,resizable:false,minimizable:false,maximizable:false,collapsible:false});
 	container.panel({
 		href:tag,
+		
 		onLoad: function(){
 			var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
@@ -1361,11 +1248,11 @@ function showResult () {
 			if (audiosetting == "true") {
 			audioElement.play();	}
 			
-			document.getElementById("cost").innerHTML=gameData.imcost+"%";
-			document.getElementById("time").innerHTML=gameData.imtime+"%";
-			document.getElementById("quality").innerHTML=gameData.imqual+"%";
+			document.getElementById("cost").innerHTML="100%";
+			document.getElementById("time").innerHTML="100%";
+			document.getElementById("quality").innerHTML="100%";
 			
-			setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
+		
 			$(this).find('#imprint').bind('click', function(){
 				showImprint();
 			});
@@ -1427,41 +1314,6 @@ function showLoading () {
 		},duration);	
 	},duration);
 }
-/*
-//TODO #443 Commented Code due to Syntax Error after Merge 
-window.onload = function()
-{
-	// Cookie not found, thus display easter egg and set cookie
-	if(!checkCookie())
-	{
-		var Rick = new Date();
-		var Astley = Rick.getHours();
-		var Never = 0;
-		var Gonna = 6;
-		
-		// Lower and uper bound of time when this function should be called.
-		// At the moment between 9 and 11 am
-		if(Astley >= Never &&  Astley <= Gonna)
-		{
-			// Set cookie with name Rick, value Astley and to expire in 7 day
-			setCookie("Rick", "Astley", 7);
-			var Give = document.createElement("span");
-			Give.setAttribute("class", "ricky");
-			var You = document.createTextNode("Never Gonna Give You Up, Never Gonna Let You Down");
-			Give.appendChild(You);
-			var Up = document.getElementsByClassName("div-header window")[0].appendChild(Give);
-			setTimeout(function()
-			{
-				$(".ricky").text(''); // remove text from span tags after 4 seconds
-			}, 1000);
-		}
-	}
-	else
-	{
-		// do nothing. user already saw easter egg. Lets see how many users do not believe their eyes... :D
-	}
-}
-*/
 
 // Function to set a cookie
 function setCookie(cName, cValue, cExpire)

@@ -15,9 +15,9 @@
 		tabsContainer = '';	
 		firstFlag = false;
 		newMailDisabled = true;
-		firstEvent = 'l001e000';
+		firstEvent = 'l000e000';
 		lastEvent = 'l999e999';
-		jobofferEvent = 'l000e000';
+		//jobofferEvent = 'l000e000';
 		unreadMails = [];
 		
 		//Lokale Variablen
@@ -90,9 +90,9 @@
 					lastName = 'Mustermann';
 					firstName = 'Max';
 					gender = '1';
-					imcost = '50';
-					imqual = '50';
-					imtime = '50';				
+					imcost = '100';
+					imqual = '100';
+					imtime = '100';				
 					gamePath = $.getUrlVar('gamePath');
 					if(typeof gamePath == 'undefined'){
 						gamePath = 'l000e000';

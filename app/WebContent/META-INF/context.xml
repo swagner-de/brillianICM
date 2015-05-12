@@ -16,9 +16,9 @@
     <!-- Type: a org.apache.tomcat.jdbc.pool.DataSource will be created. -->
 
     <Resource name="jdbc/security" auth="Container" 
-        username="root" password="wibi12c" 
+        username="brillianicm" password="wimbit12"
         driverClassName="com.mysql.jdbc.Driver" 
-        url="jdbc:mysql://localhost/cake2?autoReconnect=true" 
+        url="jdbc:mysql://localhost/cake?autoReconnect=true"
         logAbandoned="true" removeAbandoned="true" 
         type="javax.sql.DataSource" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
         testWhileIdle="true"

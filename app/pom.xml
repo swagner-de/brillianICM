@@ -4,8 +4,8 @@
 						http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dhbw-mannheim</groupId>
-	<artifactId>brillianCRM</artifactId>
-	<version>2.2.4release</version>
+	<artifactId>brillianICM</artifactId>
+	<version>3.0new-ui</version>
 	<packaging>war</packaging>
 
 	<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->

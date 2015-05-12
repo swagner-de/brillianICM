@@ -81,6 +81,7 @@ div.north div a,div.welcome {
 	float: right;
 }
 
+
 .layout-panel-west div.panel-header {
 	border-left: 0px;
 }
@@ -92,7 +93,7 @@ div.north div a,div.welcome {
 div.west {
 	width: 200px;
 	border-bottom: 0px;
-	border-left: 0px;
+	border-left: 10px;
 }
 
 div.east {
@@ -112,7 +113,7 @@ div.east-south {
 
 div.center {
 	border-right: 0px;
-	padding: 10px;
+	padding: 0px;
 	border-top-width: 1px;
 }
 
@@ -230,14 +231,14 @@ div.transitionScreenImageContainer {
 
 div.mainLocationButtonContainer {
 	margin: 10px 10px 0 10px;
-	text-align: left !important;
+	text-align: left;
 }
 
-div.mainLocationButton, div.mainMailButton {
+div.mainLocationButton {
 	margin-bottom: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 100%;
+	width: 80px;
 }
 
 /*deprecated*/
@@ -345,6 +346,16 @@ div.dialogTextContainer {
 	border-width: 0 1px 0 0;
 	background: white;
 	opacity: 0.9;
+	
+}
+
+div.dialogTextContainerTwo {
+	opacity: 0.9;
+	padding: 10px;
+	line-height: 20px;
+	border-width: 0 1px 0 0;
+	background: white;
+	opacity: 0.9;
 }
 
 div.dialogPartner {
@@ -378,7 +389,16 @@ body.dialogBody,body.mainBody {
 	margin: 0px;
 }
 
-.dialogContainer,.selectionContainer {
+.dialogContainer {
+	-webkit-backface-visibility: hidden;
+	transition: background-image 2s ease-in-out;
+	width: 100%
+	height: 100% 
+	background-repeat: no-repeat;
+	display: none;
+}
+
+.selectionContainer {
 	-webkit-backface-visibility: hidden;
 	transition: background-image 2s ease-in-out;
 	background-size: 849px 562px;
@@ -389,8 +409,9 @@ body.dialogBody,body.mainBody {
 .dialogContainer video {
 	position:absolute;
 	z-index:0;
-	width: 852px !important;
-	height: 562px !important;
+	float:left;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .dialogContainer div.panel {
@@ -399,6 +420,14 @@ body.dialogBody,body.mainBody {
 }
 
 .selectionContainer,.allocationContainer {
+	background: white;
+	opacity: 1.0;
+}
+.selectionContainer,.allocationContainerThree {
+	background: white;
+	opacity: 1.0;
+}
+.selectionContainer,.allocationContainerTwo {
 	background: white;
 	opacity: 1.0;
 }
@@ -413,8 +442,8 @@ body.dialogBody,body.mainBody {
 	padding: 0px;
 	margin-right: 0px;
 	border-width: 0 1px 0 0;
-	width: 282px;
-	height: 562px;
+	width: 35.51%;
+	height: 100%;
 }
 
 .selectionOptionContainer:nth-child(odd) {
@@ -426,7 +455,7 @@ body.dialogBody,body.mainBody {
 }
 
 .selectionPicture {
-	height: 250px;
+	height: 597px; 
 	width: 100%;
 	border-width: 0 0 1px 0;
 	display: none;
@@ -508,16 +537,26 @@ div.draftbutton-first {
 	margin-top: 0px;
 }
 
+
 /*end mail and mailDraft*/
 div.allocationContainer {
-	padding: 10px;
 	display: none;
-	width: 100%;
 }
 
 div.phaseTitle {
 	border-width: 1px;
-	width: 190px;
+	width: 23.8%;
+
+	margin-top: 5px;
+	height: 16px;
+	float: left;
+	text-align: center;
+	border-right-width: 0px;
+}
+
+div.phaseTitleThree {
+	border-width: 1px;
+	width: 408px;
 	margin-top: 5px;
 	height: 16px;
 	float: left;
@@ -527,7 +566,48 @@ div.phaseTitle {
 
 div.phase {
 	border-width: 1px;
-	width: 200px;
+	width: 24.8%;
+	height: 280px;
+	vertical-align: top;
+	float: left;
+	margin-top: 0px;
+	overflow: hidden;
+	margin-right: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+}
+div.phaseThree {
+	width: 99%;
+	height: 200px;
+	vertical-align: top;
+	margin-top: 0px;
+	overflow: hidden;
+	margin-right: 0px;
+	border-width: 2px;
+	border-color:white;
+	overflow-y: auto;
+	padding-bottom: 5px;
+}
+
+div.phaseTitle:last-child,div.phase:last-child {
+	border-right-width: 1px;
+}
+
+div.phaseTitleTwo {
+	border-width: 1px;
+	width: 408px;
+	margin-top: 5px;
+	height: 16px;
+	float: left;
+	text-align: center;
+	border-right-width: 0px;
+}
+
+div.phaseTwo {
+	border-width: 1px;
+	width: 418px;
 	height: 280px;
 	vertical-align: top;
 	float: left;
@@ -540,11 +620,20 @@ div.phase {
 	padding-bottom: 5px;
 }
 
-div.phaseTitle:last-child,div.phase:last-child {
+div.phaseTitleTwo:last-child,div.phaseTwo:last-child {
 	border-right-width: 1px;
 }
 
 div.draggableContainer {
+	border-width: 1px;
+	height: 99px !important;
+	width: 99%;
+	float: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+div.draggableContainerTwo{
 	border-width: 1px;
 	height: 99px !important;
 	width: 826px;
@@ -556,9 +645,29 @@ div.draggableContainer {
 	overflow-y: scroll;
 }
 
-div.allocationContainer div.buttonContainer {
-	text-align: center;
+div.draggableContainerThree {
+	border-width: 1px;
+	height: 99px !important;
+	width: 99.84%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	padding-left: 1px;
+	overflow-y: scroll;
 }
+
+div.allocationContainer div.buttonContainer {
+	float: center;
+}
+div.allocationContainerTwo {
+	float: center;
+}
+div.allocationContainerThree {
+	float: center;
+}
+
+
 
 div.drag {
 	float: left;
@@ -580,23 +689,47 @@ div.matrixAllocationContainer{
 	text-align: center;
 	vertical-align: middle;
 	display:block;
+		width:100%;
+	height:100%;
 }
 
-div.tileAcceptorContainer{
+div.matrixAllocationContainerStandard{
+	text-align: center;
+	vertical-align: middle;
+	display:block;
+}
+
+div.test{
+	text-align: center;
+	vertical-align: middle;
+	display:block;
+
+}
+div.matrixAllocationContainerEarsModell{
+	text-align: center;
+	vertical-align: middle;
+	display:block;
+}
+
+div.outerTitleAcceptorContainer{
+width:600px;
+margin:0px auto;
+}
+
+div.tileAcceptorContainer,.tileAcceptorContainerStandard{
 	/*Params needed for centering the stakeholder analysis*/
 	display: inline-block;
-    text-align: left;
-
+    text-align: center;
 }
 
-/*Tile matrix place holders in top row*/
-div.tileAcceptor {
-	border-width: 5px;
-	width: 157px;
-	height: 157px;
+
+div.BorderHorizontalVertical {
+   border: 5px solid rgba(255, 255, 255, .5);
+	width: 150px;
+	height: 30px;
 	vertical-align: middle;
 	float: left;
-	margin-top: 0px;
+	margin-top: 0%px;
 	overflow: hidden;
 	margin-right: 0px;
 	margin-left:0px;
@@ -606,6 +739,155 @@ div.tileAcceptor {
 	text-align:center;
 }
 
+div.BorderHorizontal {
+   border: 5px solid rgba(255, 255, 255, .5);
+	width: 157px;
+	height: 30px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+div.BorderVertical {
+   border: 5px solid rgba(255, 255, 255, .5);
+	width: 150px;
+	height: 157px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+
+/*Tile matrix place holders in top row*/
+div.tileAcceptor {
+	border-width: 5px;
+	width: 157px;
+	height: 157px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+div.tileAcceptorStandard {
+	border-width: 5px;
+	width: 157px;
+	height: 157px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+/*Tile matrix place holders in top row*/
+div.tileAcceptorTransparent {
+	border-width: 5px;
+	border-color: white;
+	width: 157px;
+	height: 157px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 5px;
+	overflow: hidden;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+div.Message {
+text-align:center;
+margin-top: 45px;
+font-weight: bold;
+font-size:40px;
+}
+
+div.BorderHorizontalVertical {
+border-width: 5px;
+	border-color: white;
+	width: 150px;
+	height: 30px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+div.BorderHorizontal {
+border-width: 5px;
+	border-color: white;
+	width: 157px;
+	height: 30px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+div.BorderVertical {
+border-width: 5px;
+	border-color: white;
+	width: 150px;
+	height: 157px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 0%px;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left:0px;
+	overflow-y: auto;
+	padding-bottom: 5px;
+	display: table-cell;
+	text-align:center;
+}
+
+div.outerleftMessage {
+	text-align:left;
+	margin-top: 50%;
+	margin-left:15px;
+}
+div.outerrightMessage {   
+	text-align:right;
+	margin-top: 50%;
+	margin-right:15px;
+}
 
 div.draggableTilesContainer {
 	border-width: 1px;
@@ -618,10 +900,22 @@ div.draggableTilesContainer {
 	padding-left: 1px;
 	overflow-y: scroll;
 }
+div.draggableTilesContainerStandard {
+	border-width: 1px;
+	height: 135px !important;
+	width:820px;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	padding-left: 1px;
+	overflow-y: scroll;
+}
 
 div.description{
-	
-	padding-bottom: 20px;
+font-weight: bold;
+font-size: 35px;
+padding-bottom: 20px;
 padding-top: 20px;
 }
 
@@ -649,31 +943,30 @@ div.dragTile {
 	white-space: -pre-wrap;
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
-	
 }
 
-#xAxisDescription {
-	background: white;
+div.xAxisDescription {
 	height: 30px;
 	width: 494px;
-	margin-left: 165px;
+	margin-top:20px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 50px;
+	word-break:break-all;
 	font-size: 30px
+
 }
 
 
-#yAxisDescription{
-	width:20px;
-	font-size:38px;
-	background-color: white;
+
+div.yAxisDescription{
+	width:5px;
+	font-size:30px;
 	position:static;
 	float:left;
-	margin-left:60px;
-	margin-right:-100px;
+	margin-left: 150px;
 	word-break:break-all;
-	margin-top:40px;
 }
-
-
 
 div.dragIncorrect {
 	background-color: #ffa8a8;
@@ -695,11 +988,12 @@ div.over {
 
 .fancybox-overlay {
 	z-index: 10000 !important;
+	
 }
 
 .fancybox-wrap {
 	z-index: 10001 !important;
-}
+} 
 
 .loginContainer {
 	padding: 10px;
@@ -726,7 +1020,7 @@ div.over {
 	line-height: 30px;
 }
 
-.dragInfoContainer {
+.dragInfoContainer,.dragInfoContainerTwo,.dragInfoContainerThree {
 	height: 24px;
 }
 
@@ -792,8 +1086,10 @@ select.registerGender{
 }
 
 div.mainWindow{
-	background-image:url(../images/background.png);
+	background-image:url(../img/bar.png);
 	background-repeat: repeat;
+	height:90%;
+	top: 70px;
 }
 
 div.transitionContinueButtonContainer{
@@ -804,7 +1100,7 @@ div.transitionContinueButton {
 	font-size: 18px;
 }
 
-div.mainLocationButton span.l-btn-left, div.mainMailButton span.l-btn-left {
+div.mainLocationButton span.l-btn-left {
 	float: left;
 	padding-left: 20px;
 }
@@ -840,3 +1136,85 @@ div.transitionScreenImageContainer:hover {
 	border-top-width: 0px;
 	border-right-width: 0px;
 }
+div.dialogBox{
+	width: 50%;
+	height:108%;
+	border-width: 0px;
+	margin-left: auto;
+    margin-right: auto;
+	}
+	
+div.messageBoxA{
+	width: 100%;
+ 	float: left;
+		-webkit-border-radius: 20px;  
+		-moz-border-radius: 20px;
+	border-width: 2px;
+	border-color:blue;
+}
+
+div.messageBoxB{
+	width: 100%;
+	float: right;
+		-webkit-border-radius: 20px;  
+		-moz-border-radius: 20px;
+	border-width: 2px;
+	border-color:red;
+
+}
+div.messageBoxATriangle{
+  width: 0px;  
+  height: 0px;  
+  float: left;  
+  border: 11px solid blue;  
+    margin-top:5px;
+  margin-left:15px;
+  border-radius: 100px;
+}
+div.messageBoxATriangle2{
+
+  width: 0px;  
+  height: 0px;  
+  float: left;  
+  border: 7px solid blue;  
+    margin-right:100%;
+    border-radius: 20px;
+}
+
+div.messageBoxBTriangle{
+  width: 0px;  
+  height: 0px;  
+  float: right;  
+  border: 11px solid red;  
+    margin-top:5px;
+  margin-right:15px;
+  border-radius: 100px;
+ /* border-color: red red transparent  transparent; */
+}
+
+div.messageBoxBTriangle2{
+  width: 0px;  
+  height: 0px;  
+  float: right;  
+  border: 7px solid red;  
+    margin-left:100%;
+    border-radius: 20px;
+
+
+/*  border-color: white white transparent  transparent    ; */
+}
+
+div.messageBoxAContainer{
+width: 50%;
+float:left;
+border-color:transparent;
+}
+div.messageBoxBContainer{
+width: 50%;
+float:right;
+border-color:transparent;
+}
+
+
+	
+
