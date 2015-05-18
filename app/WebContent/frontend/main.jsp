@@ -93,12 +93,12 @@
 			<!--		<div class="mainLocationButton easyui-linkbutton" id="4" >START</div>	 -->
 		<div class="mainEventContainer" data-options="inline:true, center:true, fit:true" ></div>
 		<!--<div class="mainEventContainerLaptop easyui-window" data-options="closed:true,width:863,height:576"></div> -->
-		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:1000,height:700"></div>
+		<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:800,height:500"></div>
 		<div class="mainEventContainerResult easyui-window" data-options="closed:true,maximized:true,noheader:true"></div>
 		<div class="loadingScreen easyui-window" data-options="closed:true,maximized:true,noheader:true">
 		<div class="loadingScreenImageContainer easyui-panel" data-options="fit:true,border:false"></div>
 		</div>
-		<div class="transitionScreen easyui-window" data-options="closed:true,noheader:true,width:1000,height:700">
+		<div class="transitionScreen easyui-window" data-options="closed:true,noheader:true,width:800,height:500">
 			<div class="transitionScreenImageContainer">
 				<div class="transitionScreenTextContainer"></div>
 				<div class="buttonContainer">

@@ -341,10 +341,7 @@ div.dialogMoodContainer {
 
 div.dialogTextContainer {
 	opacity: 0.9;
-	padding: 10px;
 	line-height: 20px;
-	border-width: 0 1px 0 0;
-	background: white;
 	opacity: 0.9;
 	
 }
@@ -404,11 +401,12 @@ body.dialogBody,body.mainBody {
 	background-size: 849px 562px;
 	background-repeat: no-repeat;
 	display: none;
+	text-align: center;
 }
 
 .dialogContainer video {
 	position:absolute;
-	z-index:0;
+	display:block;
 	float:left;
 	width: 100% !important;
 	height: 100% !important;
@@ -418,7 +416,9 @@ body.dialogBody,body.mainBody {
 	margin-left: inherit !important;
 	margin-right: inherit !important;
 }
-
+div.bgimg{
+text-align:center;
+}
 .selectionContainer,.allocationContainer {
 	background: white;
 	opacity: 1.0;
@@ -446,6 +446,11 @@ body.dialogBody,body.mainBody {
 	height: 100%;
 }
 
+.container{
+text-align:center;
+float:center;
+}
+
 .selectionOptionContainer:nth-child(odd) {
 	width: 283px;
 }
@@ -467,6 +472,7 @@ body.dialogBody,body.mainBody {
 
 .selectionButton {
 	width: 100%;
+	float: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-right: 0px !important;
@@ -546,12 +552,19 @@ div.allocationContainer {
 div.phaseTitle {
 	border-width: 1px;
 	width: 23.8%;
+	line-height:10px;
 
 	margin-top: 5px;
-	height: 16px;
+	height: 20px;
 	float: left;
 	text-align: center;
 	border-right-width: 0px;
+}
+
+div.phaseTitleContainerTwo{
+	margin-left: auto;
+    margin-right: auto;
+	float:center;
 }
 
 div.phaseTitleThree {
@@ -566,7 +579,7 @@ div.phaseTitleThree {
 
 div.phase {
 	border-width: 1px;
-	width: 24.8%;
+	width: 23.8%;
 	height: 280px;
 	vertical-align: top;
 	float: left;
@@ -597,9 +610,11 @@ div.phaseTitle:last-child,div.phase:last-child {
 
 div.phaseTitleTwo {
 	border-width: 1px;
-	width: 408px;
+	width: 23.8%;
+	line-height:10px;
+		
 	margin-top: 5px;
-	height: 16px;
+	height: 20px;
 	float: left;
 	text-align: center;
 	border-right-width: 0px;
@@ -607,7 +622,7 @@ div.phaseTitleTwo {
 
 div.phaseTwo {
 	border-width: 1px;
-	width: 418px;
+	width: 23.8%;
 	height: 280px;
 	vertical-align: top;
 	float: left;
@@ -636,8 +651,7 @@ div.draggableContainer {
 div.draggableContainerTwo{
 	border-width: 1px;
 	height: 99px !important;
-	width: 826px;
-	float: left;
+	width: 100%;
 	margin-top: 10px;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
@@ -654,24 +668,20 @@ div.draggableContainerThree {
 	margin-bottom: 15px;
 	padding-bottom: 5px;
 	padding-left: 1px;
-	overflow-y: scroll;
+	overflow-y: auto;
+	border:none;
 }
 
-div.allocationContainer div.buttonContainer {
-	float: center;
+ div.buttonContainer {
+	text-align:center;
 }
-div.allocationContainerTwo {
-	float: center;
-}
-div.allocationContainerThree {
-	float: center;
-}
+
 
 
 
 div.drag {
 	float: left;
-	width: 173px;
+	width: 200px;
 	height: 26px;
 	padding: 0 0 0 5px;
 	margin: 5px 6px 0 5px;
@@ -699,12 +709,19 @@ div.matrixAllocationContainerStandard{
 	display:block;
 }
 
-div.test{
+div.conversation{
 	text-align: center;
 	vertical-align: middle;
 	display:block;
 
 }
+div.textBox{
+	text-align: center;
+	vertical-align: middle;
+	display:block;
+
+}
+
 div.matrixAllocationContainerEarsModell{
 	text-align: center;
 	vertical-align: middle;
@@ -824,7 +841,7 @@ div.Message {
 text-align:center;
 margin-top: 45px;
 font-weight: bold;
-font-size:40px;
+font-size:30px;
 }
 
 div.BorderHorizontalVertical {
@@ -848,7 +865,7 @@ div.BorderHorizontal {
 border-width: 5px;
 	border-color: white;
 	width: 157px;
-	height: 30px;
+	height: 66px;
 	vertical-align: middle;
 	float: left;
 	margin-top: 0%px;
@@ -893,23 +910,21 @@ div.draggableTilesContainer {
 	border-width: 1px;
 	height: 135px !important;
 	width:820px;
-	float: left;
 	margin-top: 10px;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
 	padding-left: 1px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 div.draggableTilesContainerStandard {
 	border-width: 1px;
 	height: 135px !important;
 	width:820px;
-	float: left;
+	margin-left: auto;
+    margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 15px;
-	padding-bottom: 5px;
-	padding-left: 1px;
-	overflow-y: scroll;
+
 }
 
 div.description{
@@ -917,6 +932,17 @@ font-weight: bold;
 font-size: 35px;
 padding-bottom: 20px;
 padding-top: 20px;
+}
+
+div.messageBox{
+	float: center;
+	width: 50%;
+	height:108%;
+	border-width: 0px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -948,8 +974,8 @@ div.dragTile {
 div.xAxisDescription {
 	height: 30px;
 	width: 494px;
-	margin-top:20px;
-	margin-left: auto;
+	margin-top:0;
+	margin-left: 0;
     margin-right: auto;
 	margin-bottom: 50px;
 	word-break:break-all;
@@ -960,12 +986,13 @@ div.xAxisDescription {
 
 
 div.yAxisDescription{
-	width:5px;
+	width:25px;
 	font-size:30px;
 	position:static;
 	float:left;
 	margin-left: 150px;
 	word-break:break-all;
+	float:left;
 }
 
 div.dragIncorrect {
@@ -1022,12 +1049,16 @@ div.over {
 
 .dragInfoContainer,.dragInfoContainerTwo,.dragInfoContainerThree {
 	height: 24px;
+	margin-bottom:10px;
 }
 
 .group {
 	margin-bottom: 30px;
 }
 
+.margin-left{
+margin-left: 10px;
+}
 /* student landing page*/
 a.studentButton{
 	width: 267px;

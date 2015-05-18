@@ -44,7 +44,8 @@ function getXml(id) {
 		hideAllocationThree();
 		hideMatrixAllocationStandard();
 		hideMatrixAllocation();
-		hideTest();
+		hideConversation();
+		hideTextBox();
 		
 		showLocation();
 if(id == lastEvent){
@@ -74,7 +75,8 @@ function showLocation () {
 		hideAllocationThree();
 		hideMatrixAllocation();
 		hideMatrixAllocationStandard();
-		hideTest();
+		hideConversation();
+		hideTextBox();
 		
 	    			// Musik am Anfang
 					 if(eventtype=="1"){
@@ -113,8 +115,10 @@ function showLocation () {
 	    							}else if (eventtype == '12'){
 	    								showNotification();	
 									}else if (eventtype == '13'){
-	    								loadTest();										
-	    							}	
+	    								loadConversation();										
+	    							}else if (eventtype == '14'){
+	    								loadTextBox();										
+	    							}
 	    				//	},1500);					
 	    			//	},1500);
 	    			},0);
@@ -623,13 +627,13 @@ function loadAllocationThree () {
     });
 }
 
-function loadTest(){
+function loadConversation(){
 	// liest XML aus
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();
-	var containerTest = $('.test');
-	var descriptionContainerTest = containerTest.find('.description');
-	descriptionContainerTest.text(description);
+	var containerConversation = $('.conversation');
+	var descriptionContainerConversation = containerConversation.find('.description');
+	descriptionContainerConversation.text(description);
 	//Lade den Dialog Hintergrund	
 	loadBackground();
 //globale Variablen
@@ -638,13 +642,13 @@ function loadTest(){
 //dynamischer Ansatz
 		$xml.find('messageBoxA, messageBoxB').each(function(index){	
 		indexAB = index;
-		  testElementAIndex = $xml.find('messageBoxA').eq(index).index();
-		  testElementBIndex = $xml.find('messageBoxB').eq(index).index();
+		  conversationElementAIndex = $xml.find('messageBoxA').eq(index).index();
+		  conversationElementBIndex = $xml.find('messageBoxB').eq(index).index();
 	
-	if(testElementAIndex != "-1"){
+	if(conversationElementAIndex != "-1"){
 		messageBoxA();
 		}
-		if(testElementBIndex != "-1"){
+		if(conversationElementBIndex != "-1"){
 		messageBoxB();
 		}
 		});
@@ -680,16 +684,43 @@ function loadTest(){
 			messageBoxB.text(text);
 				 }
 				 
-	var continueButtonMatrixTest = $('#continueButtonMatrixTest');
+	var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
 
-		showTest();
+		showConversation();
 		
-	continueButtonMatrixTest.unbind('click');
-	continueButtonMatrixTest.bind('click', function(){
+	continueButtonMatrixConversation.unbind('click');
+	continueButtonMatrixConversation.bind('click', function(){
 		getXml(href);
 			speechSynthesis.cancel();
-			containerTest.window('close');
+			containerConversation.window('close');
 	});
+} 
+
+function loadTextBox(){
+	// liest XML aus
+	 var href = $xml.find('nextevent').attr('href');
+	 var description = $xml.find('description').text();
+	// alert("description");
+	 var containerTextBox = $('.textBox');
+	 var descriptioncontainerTextBox = containerTextBox.find('.description');
+	 descriptioncontainerTextBox.text(description);
+	//Lade den Dialog Hintergrund	
+	 loadBackground();
+	
+	 var messageBox = $xml.find('message').text();
+	 var messageContainerTest = containerTextBox.find('.messageBox');
+	 messageContainerTest.text(messageBox);
+ 	 
+	 var continueButtonTextBox = $('#continueButtonTextBox');
+
+		showTextBox();
+		
+	 continueButtonTextBox.unbind('click');
+	 continueButtonTextBox.bind('click', function(){
+		 getXml(href);
+			 speechSynthesis.cancel();
+			 containerTextBox.window('close');
+	 });
 } 
 
 
@@ -1031,6 +1062,7 @@ function setDialogBackground (backgroundUrl, existsVideo) {
 			if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
 				$('.bgimg').css('background-image', backgroundPictureUrlNew);
 						$('.bgimg').css('background-repeat', 'no-repeat');
+						$('.bgimg').css('background-size', 'cover');
 			}
 	}	
 }
@@ -1202,12 +1234,20 @@ function hideMatrixAllocation(){
 function showMatrixAllocation(){
 	$('.matrixAllocationContainer').show();
 }
-function hideTest(){
-	$('.test').hide();
+function hideConversation(){
+	$('.conversation').hide();
 }
 
-function showTest(){
-	$('.test').show();
+function showConversation(){
+	$('.conversation').show();
+}
+
+function hideTextBox(){
+	$('.textBox').hide();
+}
+
+function showTextBox(){
+	$('.textBox').show();
 }
 
 function showEventContainer (container) {
