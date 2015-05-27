@@ -3,18 +3,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"  style="width:100%; margin:0; padding:0 ">
+<html lang="en">
+<!-- <html xmlns="http://www.w3.org/1999/xhtml"  style="width:100%; margin:0; padding:0 ">-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><%=ApplicationConstants.PAGETITLE_LOGIN%></title>
-<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
+<!--  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">-->
 <link rel="icon" type="image/png" href="images/favicons/favicon-196x196.png" sizes="196x196">
 <link rel="icon" type="image/png" href="images/favicons/favicon-160x160.png" sizes="160x160">
 <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96">
@@ -22,43 +25,164 @@
 <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
-<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/my.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/full-slider.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+   
+
+<!-- <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
 <link rel="stylesheet" type="text/css"
 	href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
-<link type="text/css" rel="stylesheet" href="css/master.css" />
+<link type="text/css" rel="stylesheet" href="css/master.css" /> -->
 <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/master.js"></script>
-<script type="text/javascript">
+
+<!--  <script type="text/javascript">
 	$(document).ready(function(){
 		$('body').show();
 		$('#imprint').bind('click', function() {
 			showImprint();
 		});
 	});
-</script>
+</script>-->
 </head>
-<body class="loginContainer" style="width:100%; margin:0; padding:0 ">
-<div style="overflow:visible; height:auto; position:relative; min-width:800px; margin:0; padding:0 ">
-	<a id="imprint" class="easyui-linkbutton" data-options="plain:true" style="position:absolute; z-index:1 ;  right:5px; top: 5px;"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
-	<img src="images/locationBackgrounds/login_background.png"  style="z-index:0; width:100%;   margin:0; padding:0"/>
-	<div style="float:left; min-width:800px; width:95%; z-index:1;  position:absolute; top:50%; margin-top:-7em">
-		<!-- <img src="images/Logo_FINAL.PNG" align="middle" style="height:10%; width:15%; padding-left:9%; padding-top:5%; padding-bottom:5%"/>-->
-		<p style="color: red; padding-left: 32px;">${error}</p>
-		<form action="LoginUser" method="post" >
-			<table style="width:33%; float:left; bottom:0px; margin:0; padding:0; text-align:center">
+<body  id="page-top"  data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+       <nav class="navbar navbar-custom navbar-fixed-top my" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class=" page-scroll" href="#page-top">
+                     <img   src="http://placehold.it/100x40&text=Logo" alt="">  
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                     <li>
+                        <a class="page-scroll "  href="#Login">LogIn</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                     <li>
+                      <a class="page-scroll" href="#imprint">Imprint</a>
+                    </li>
+                   
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active maenchen">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/ES.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>BrillianYou</h1>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/Gruppenfoto_FINAL.png');"></div>
+                <div class="carousel-caption">
+                    <h1>BrillianME</h1>
+                </div>
+            </div>
+            <div class="item maenchen">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/image.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>BrillianICM</h1>
+                </div>
+            </div>
+            <div class="item maenchen">
+                <!-- Set the fourth background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/ESP.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>BrillianME</h1>
+                </div>
+            </div>
+        </div>
+      <!--  <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">BrillianICM</h1>
+                        <p class="intro-text">We are glad to see you.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>-->
+        
+ <!-- LogIn Section -->
+    <section id="Login" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>LogIn BrillianICM</h2>
+                   <!--   <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>-->
+               <form action="LoginUser" method="post" >
+			<table style="width:50%; bottom:0px; margin: 0 auto; padding:0; text-align:center">
 			<tr>
-				<td><input type="text" name="username" maxlength="50" style="width:90%;" placeholder="Email"/></td>
+				<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
 			</tr>
+			
 			<tr>
-				<td><input type="password" name="password" maxlength="50" style="width:90%;" placeholder="Password" /></td>
+				<td><input class="form-control" type="password" name="password" maxlength="50" placeholder="Password" /></td>
 			</tr>
+			
 			<tr >
-				<td><input type="submit"
-					name="submit" value="Login" style="width:90%; margin:0; padding:0; -moz-box-sizing: content-box;
-    			-webkit-box-sizing: content-box; box-sizing: content-box;
-    padding: 0;"/></td>
+				<td><input class="btn btn-default"  type="submit"
+					name="submit" value="Login" /></td>
 			</tr>
 			<tr>
 				<td align="right" style="padding-right: 28px;">
@@ -77,8 +201,153 @@
 			</tr>
 		</table>
 		</form>
-	</div>
+               
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>brillianCRM Project Management Game &ndash; how brilliant are you?</h2>
+
+brillianCRM was developed by <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank">IMBIT</a> students, who started to study &ldquo;International Management for Business and Information Technology&rdquo; at the Baden-Wuerttemberg Cooperative State University in Mannheim in 2011.
+As part of our education we realized ambitious IT projects: In cooperation with SAP we worked on the new technology SAP HANA. Moreover we developed a mobile guided tour for the city of <a href = "http://www.m-ladenburg.de/" target="_blank">Ladenburg</a>. <br />
+brillianCRM is our latest project made feasible by <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-dr-harald-bendl/" target="_blank">Prof. Dr. Harald Bendl</a> and <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-peter-mayr/" target="_blank">Prof. Peter Mayr</a>.<br />
+This game is webbased and should run in modern Browsers including mobile devices. We tested it with Google Chrome.
+<br />
+<h3>We, the WIMBIT11B class, kept working hard to make a dream come true:</h3>
+
+<img src="images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
+<p>Jubly Anand, Ayleen Bocretsion, Michaela Brandl, Clemens Buchert, Sönke Cramme, Moritz Döring, Benedikt Esser, Hannah Fidora, Kathrin Fitzner, Malte Hake, Marius Kaiser, Mario Wares Khan, Martin Knipf, Dorothea Langer, Philipp Ludwig, Jonas Müller, Katrin Nagel, Dajana Pirke, Saskia Polenske, Benjamin Schäfer, Simon Schlephorst, Kevin Schork, Alexander Schrödinger, Sonja Seidel, Lukas Steigerwald, Max Steimle, Veronika Trübe, Antonia Vetter, Nadine Winkler and our lecturers Prof. Dr. Harald Bendl, Prof. Peter Mayr</p>
+<a href="http://vimeo.com/96179581" target="_blank">brillianCRM Teaser Video</a>
+
 </div>
-<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Imprint Section -->
+    <section id="imprint" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Impressum</h3>
+	<div>
+		Studiengang IMBIT, DHBW Mannheim, Prof. Dr. Harald Bendl<br />
+		Coblitzallee 1 &ndash; 9, D-68163 Mannheim<br />
+		Tel. +49 621 4105-1719, Fax +49 621 4105-1289, harald.bendl@dhbw-mannheim.de,
+		<a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank" >www.IMBIT.dhbw-mannheim.de</a>
+	</div>
+	
+	<h3>Haftungsausschluss</h3>
+	<p>Der Autor &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Aktualit&auml;t, Richtigkeit und Vollst&auml;ndigkeit der bereitgestellten Informationen auf der brillianCRM Website. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden vorliegt.<br>
+	Alle Angebote sind freibleibend und unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ank&uuml;ndigung zu ver&auml;ndern, zu erg&auml;nzen, zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen.</p>
+	<p>Bei direkten oder indirekten Verweisen auf fremde Webseiten (Hyperlinks), die au&szlig;erhalb des Verantwortungsbereiches des Autors liegen, w&uuml;rde eine Haftungsverpflichtung ausschlie&szlig;lich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch m&ouml;glich und zumutbar w&auml;re, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.<br>
+	Der Autor erkl&auml;rt hiermit ausdr&uuml;cklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zuk&uuml;nftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verkn&uuml;pften Seiten hat der Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdr&uuml;cklich von allen Inhalten aller verlinkten/verkn&uuml;pften Seiten, die nach der Linksetzung ver&auml;ndert wurden. F&uuml;r illegale, fehlerhafte oder unvollst&auml;ndige Inhalte und insbesondere f&uuml;r Sch&auml;den, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der &uuml;ber Links auf die jeweilige Ver&ouml;ffentlichung lediglich verweist.</p>
+	
+	<h3>Urheberrecht</h3>
+	<p>Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zur&uuml;ckzugreifen.<br>
+	Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte gesch&uuml;tzten Marken- und Warenzeichen unterliegen uneingeschr&auml;nkt den Bestimmungen des jeweils g&uuml;ltigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigent&uuml;mer. Allein aufgrund der blo&szlig;en Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter gesch&uuml;tzt sind!<br>
+	Das Copyright f&uuml;r ver&ouml;ffentlichte, vom Autor selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielf&auml;ltigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdr&uuml;ckliche Zustimmung des Autors nicht gestattet.</p>
+	
+	<h3>Datenschutz</h3>
+	<p>Sofern innerhalb des Internetangebotes die M&ouml;glichkeit zur Eingabe pers&ouml;nlicher oder gesch&auml;ftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdr&uuml;cklich freiwilliger Basis. Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben ver&ouml;ffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur &uuml;bersendung von nicht ausdr&uuml;cklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von sogenannten Spam-Mails bei Verst&ouml;&szlig;en gegen dieses Verbot sind ausdr&uuml;cklich vorbehalten.</p>
+	
+	<h3>Anwendbares Recht </h3>
+	<p> Es gilt ausschlie&szlig;lich das ma&szlig;gebliche Recht der Bundesrepublik Deutschland. Diese Nutzungshinweise sind als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. </p>
+	<hr />
+	
+	<h3>Verwendete Frameworks und Icons</h3>
+	<a href = "http://tomcat.apache.org/" target="_blank" >Apache Tomcat</a>, <a href = "http://shiro.apache.org/" target="_blank" >Apache Shiro</a>, <a href = "http://www.mysql.com/" target="_blank" >mySQL</a> <a href = "http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" >inkl. JDBC Adapter</a>,
+	<a href = "http://commons.apache.org/proper/commons-io/" target="_blank" >Apache Commons IO</a>, <a href = "http://jquery.com/" target="_blank" >jQuery</a>, <a href = "http://www.jeasyui.com/" target="_blank" >jQuery EasyUI</a> und <a href = "http://fancybox.net/" target="_blank" >fancybox</a> <a href= "https://www.yworks.com/de/products_ydoc.html" target= "_blank">yWorks UML Doclet</a>.
+	Die verwendeten Icons wurden von <a href="http://www.freepik.com" title="Freepik" target="_blank" >Freepik</a> entworfen und k&ouml;nnen von <a href="http://www.flaticon.com" title="Flaticon" target="_blank" >Flaticon</a> kostenlos heruntergeladen werden. In dem Spiel wurden folgende Icons verwendet: <br />
+	<a href="http://www.flaticon.com/free-icon/chart-gantt_31970" target="_blank" title="Flaticon">Chart Gantt</a>, 
+	<a href="http://www.flaticon.com/free-icon/e-mail-envelope-ios-7-interface-symbol_20520" title="Flaticon" target="_blank" >E-mail envelope, IOS7 interface symbol</a>,
+	<a href="http://www.flaticon.com/free-icon/stats-document_36170" title="Flaticon" target="_blank" >Statsdocument</a>,
+	<a href="http://www.flaticon.com/free-icon/taxi-cab_34869" title="Flaticon" target="_blank" >Taxi cab</a>,
+	<a href="http://www.flaticon.com/free-icon/black-plane_3634" title="Flaticon" target="_blank" >Black plane</a>,
+	<a href="http://www.flaticon.com/free-icon/businessmen-having-a-group-conference_31171" title="Flaticon" target="_blank" >Businessmen having a group conference</a>,
+	<a href="http://www.flaticon.com/free-icon/man-in-office-desk-with-computer_11296" title="Flaticon" target="_blank" >Man in office desk with computer</a> und 
+	<a href="http://www.flaticon.com/free-icon/cocktail-cup_8066" title="Flaticon" target="_blank" >Cocktail cup</a>.
+	
+	<hr />
+	
+	<%
+	/* Read brillianCRM version from path of servlet.*/ 
+	ServletContext sc = getServletContext();
+	String scRealPath = sc.getRealPath("/");
+	String[] scRealPathSplit = scRealPath.split("#");
+	String versionID = scRealPathSplit[scRealPathSplit.length-1];
+	versionID = versionID.substring(0, versionID.length()-1);
+	 %> 
+	<!--<p id="versionID" align="right" onClick="hero()"> <%= versionID %> </p>-->
+              
+            </div>
+        </div>
+    </section>
+    
+  
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact BrillianICM Team</h2>
+                <p>Feel free to email us to provide some feedback on our game, or to just to say hello!</p>
+                <p><a href="mailto:HowBrillianAreYou">HowBrillianAreYou@brillianICM.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                   <!--  <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li> -->
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+ <!--<div id="map"></div>  -->  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; BrillianICM 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+     <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
 </body>
+
+
+
+
+  
 </html>
