@@ -200,13 +200,14 @@
 </div>
 <!--eventtyp: 14 textBox-->
 <div class="textBox easyui-panel" data-options="fit:true,border:false">
-	<div class="bgimg">	
+	<div class="bgimg"></div>
 	<div class="description"></div>
-	<div class="messageBox"></div>
+	<div class ="centerMessageBox">
+		<div class="messageBox"></div>
+	</div>
 	<div class="buttonContainer">
 		<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
 	</div>
-</div>
 </div>
 
 <!-- eventtyp 9: 9x9 Matrix-->

@@ -2,7 +2,7 @@ function getXml(id) {
 	//print name to into the "account" button
 	$("#account").html(gameData.firstName+' '+ gameData.lastName);
 	
-	$.get('Event', {id : id, type : 'node'}, function(xml) {
+	$.get('Event', {id: id, userid : userid, gamePath : gamePath, imtime : imtime, imcost : imcost, imqual : imqual, type : 'node'}, function(xml) {
 		//Fix XML
 		var str1 = '<events>';
 		var str2 = '</events>';
@@ -694,34 +694,34 @@ function loadConversation(){
 			speechSynthesis.cancel();
 			containerConversation.window('close');
 	});
-} 
+}
 
 function loadTextBox(){
 	// liest XML aus
-	 var href = $xml.find('nextevent').attr('href');
-	 var description = $xml.find('description').text();
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();
 	// alert("description");
-	 var containerTextBox = $('.textBox');
-	 var descriptioncontainerTextBox = containerTextBox.find('.description');
-	 descriptioncontainerTextBox.text(description);
+	var containerTextBox = $('.textBox');
+	var descriptioncontainerTextBox = containerTextBox.find('.description');
+	descriptioncontainerTextBox.text(description);
 	//Lade den Dialog Hintergrund	
-	 loadBackground();
-	
-	 var messageBox = $xml.find('message').text();
-	 var messageContainerTest = containerTextBox.find('.messageBox');
-	 messageContainerTest.text(messageBox);
- 	 
-	 var continueButtonTextBox = $('#continueButtonTextBox');
+	loadContentPicAsBackground();
 
-		showTextBox();
-		
-	 continueButtonTextBox.unbind('click');
-	 continueButtonTextBox.bind('click', function(){
-		 getXml(href);
-			 speechSynthesis.cancel();
-			 containerTextBox.window('close');
-	 });
-} 
+	var messageBox = $xml.find('message').text();
+	var messageContainerTest = containerTextBox.find('.messageBox');
+	messageContainerTest.text(messageBox);
+
+	var continueButtonTextBox = $('#continueButtonTextBox');
+
+	showTextBox();
+
+	continueButtonTextBox.unbind('click');
+	continueButtonTextBox.bind('click', function(){
+		getXml(href);
+		speechSynthesis.cancel();
+		containerTextBox.window('close');
+	});
+}
 
 
 function loadMatrixAllocation () {
@@ -1021,6 +1021,15 @@ function loadMatrixAllocationStandard () {
     });
 }
 
+function loadContentPicAsBackground(){
+	var background;
+	var backgroundWithPartnerUrl;
+	if ($xml.find('bgimg').text() != '') {
+		background = $xml.find('bgimg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setContentPicAsBackground(backgroundWithPartnerUrl, false);
+	}
+}
 
 function	loadBackground(){
 	var background;
@@ -1065,6 +1074,20 @@ function setDialogBackground (backgroundUrl, existsVideo) {
 						$('.bgimg').css('background-size', 'cover');
 			}
 	}	
+}
+
+function setContentPicAsBackground (backgroundUrl) {
+	document.getElementById('background-video').src = '';
+	backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+	var eventtype = $xml.find('event').attr('eventtype');
+
+	backgroundPictureUrlOld = $('.bgimg').css('content');
+	if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+		$('.bgimg').css('content', backgroundPictureUrlNew);
+		$('.bgimg').css('width', '100%');
+		$('.bgimg').css('float', 'left');
+		$('.bgimg').css('z-index', '-1');
+	}
 }
 
 // function fancyImageLoading(imageUrl, element){
