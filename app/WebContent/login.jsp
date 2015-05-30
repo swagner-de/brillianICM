@@ -35,7 +35,7 @@
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet"> 
+    <link href="css/bootstrap-changes.css" rel="stylesheet"> 
     
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
