@@ -31,19 +31,16 @@
    
    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-   <link href="css/my.css" rel="stylesheet">
+
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet"> 
     
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-   
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">  
 
 <!-- <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
@@ -66,7 +63,7 @@
 <body  id="page-top"  data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-       <nav class="navbar navbar-custom navbar-fixed-top my" role="navigation">
+       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" >
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -74,7 +71,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class=" page-scroll" href="#page-top">
-                     <img   src="http://placehold.it/100x40&text=Logo" alt="">  
+                    <div style="width:100px; hight:40px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
                 </a>
             </div>
 
@@ -85,9 +82,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                     <li>
-                        <a class="page-scroll "  href="#Login">LogIn</a>
-                    </li>
+                     
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -105,73 +100,23 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active maenchen">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/ES.jpg');"></div>
-                <div class="carousel-caption">
-                    <h1>BrillianYou</h1>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/Gruppenfoto_FINAL.png');"></div>
-                <div class="carousel-caption">
-                    <h1>BrillianME</h1>
-                </div>
-            </div>
-            <div class="item maenchen">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/image.jpg');"></div>
-                <div class="carousel-caption">
-                    <h1>BrillianICM</h1>
-                </div>
-            </div>
-            <div class="item maenchen">
-                <!-- Set the fourth background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/ESP.jpg');"></div>
-                <div class="carousel-caption">
-                    <h1>BrillianME</h1>
-                </div>
-            </div>
-        </div>
-      <!--  <header class="intro">
-        <div class="intro-body">
+    
+   <header class="intro">
+        <div class="intro intro-body">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">BrillianICM</h1>
-                        <p class="intro-text">We are glad to see you.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+            
+             <div class=" row">
+                    <div class="col-md-8" style="padding-top:20px; color: #000">
+                        <h1 class="brand-heading" style="text-transform:none; text-align: left;">brillianICM</h1>
+                        <p class="intro-text" style="text-align: left;">How brillian are you?</p>
+                        
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>-->
+            
         
- <!-- LogIn Section -->
-    <section id="Login" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>LogIn BrillianICM</h2>
-                   <!--   <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>-->
-               <form action="LoginUser" method="post" >
-			<table style="width:50%; bottom:0px; margin: 0 auto; padding:0; text-align:center">
+            
+             <form action="LoginUser" method="post" >
+			<table style="width:30%; bottom:0px; padding:0; text-align:center">
 			<tr>
 				<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
 			</tr>
@@ -201,11 +146,11 @@
 			</tr>
 		</table>
 		</form>
-               
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>  
+   </div>     
+    </header>
+        
+
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
@@ -319,7 +264,7 @@ This game is webbased and should run in modern Browsers including mobile devices
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; BrillianICM 2015</p>
+            <p>Copyright &copy; brillianICM 2015</p>
         </div>
     </footer>
 
