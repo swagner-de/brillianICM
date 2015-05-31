@@ -23,13 +23,33 @@
 <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
-<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
-<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
+<!--<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />-->
 <link type="text/css" rel="stylesheet" href="css/master.css" />
 <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/master.js"></script>
+
+<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    
+    
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    
+ <!--Framework changes -->
+<link href="css/changes-master.css" rel="stylesheet">
+<link href="css/bootstrap-changes.css" rel="stylesheet">
+
 </head>
+
+
 <body class="easyui-layout">
 <div class="north" data-options="region:'north',border:false">
 		<div class="div-header window">			

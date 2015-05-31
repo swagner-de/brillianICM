@@ -23,22 +23,41 @@
 <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
-<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
-<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
+<!-- <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />-->
 <link type="text/css" rel="stylesheet" href="css/master.css" />
 <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/master.js"></script>
+
+<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/full-slider.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+ <!--Framework changes -->
+<link href="css/changes-master.css" rel="stylesheet">
+<link href="css/bootstrap-changes.css" rel="stylesheet">
+
+
 </head>
 <body class="easyui-layout">
-<div class="north" data-options="region:'north',border:false">
+<!-- <div class="north" data-options="region:'north',border:false">
 		<div class="div-header window">			
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 			<div class="welcome"></div>
 		</div>
-	</div>
+	</div>-->
 <div class="center" data-options="region:'center'">
-<h3>Welcome to brillianCRM</h3>
+<h3 style="text-transform:none;">Welcome to brillianICM</h3>
 <p>Your registration was successful.</p>
 <p>At the moment your account is still inactive. You will shortly receive an e-mail from us with an activation link. 
 Please follow the directions in the next e-mail to activate your account, so you can start your CRM project.</p>
