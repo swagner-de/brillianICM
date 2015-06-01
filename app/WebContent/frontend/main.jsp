@@ -67,8 +67,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-					<a class="player" href="#">
-                     <img   src="http://placehold.it/100x50&text=Logo" alt="">  
+					<a class="player">
+                      <div style="width:120px"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
 					</a>
 			</div>
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -84,10 +84,7 @@
             <ul class="nav navbar-nav second-button">
                  <li><a href="#" id="account" onclick="window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank')"  data-options="plain:true"></a></li>   
 			</ul>
-			<a class="player second-button" data-options="plain:true">
-<!--image container für das Spielergesicht-->
-                <img class="spieler"  src="img/default-avatar.png" alt="">  
-            </a>     
+			
         </div>
         </div>
 	   </nav>
