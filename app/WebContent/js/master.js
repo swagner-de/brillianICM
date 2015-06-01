@@ -163,49 +163,6 @@ function loadDialog () {
 	    });		
 	}); 	
 	
-	// //Cancels loaded TTS-Dialogues and resets the queue:
-	// speechSynthesis.cancel();
-		
-	// // Generates TTS object and fill it with the content of the dialog partner:
-	// // @param tts Text-to-Speech object and content loaded
-	// // @param voices loads available voices and stores them
-	// var tts = new SpeechSynthesisUtterance(content);
-		
-	// //Get all available voices for the browser and safe in an array:
-	// var voices = window.speechSynthesis.getVoices();
-	
-	// //Checks if Cookie has TTS-settings on "true":
-	// var ttsSettings="false";
-	// ttsSettings=getCookie("tts");
-	// if (ttsSettings == "true") {
-		 
-	 
-	// //Setting speechSynthesis parameters for Male Voice:
-	// tts.native = false;
-	// tts.lang = 'en-GB';
-	// tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
-	
-	// // Checks if the partner female and setting female parameters:
-	// if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
-		// {
-		// //alert("Female detected!");
-		// tts.native = false;
-		// tts.lang = 'en-IE';
-		// tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
-		
-		// if(checkBrowserName('chrome'))
-			// {
-			// //alert("Chrome detected");
-			// tts.native = false;
-			// tts.lang = 'en-US';
-			// tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google US English'; });
-			// }
-		// }
-	// //Starts TTS:
-	// speechSynthesis.speak(tts);
-	 // }
-	 
-	//Opens the dialog:
 	showDialog();
 }
 
