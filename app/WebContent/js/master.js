@@ -118,8 +118,6 @@ function showLocation () {
 	    								loadConversation();										
 	    							}else if (eventtype == '24'){
 	    								loadTextBox();										
-	    							}else if (eventtype == '25'){
-	    								loadWorldMap();										
 	    							}
 	    				//	},1500);					
 	    			//	},1500);
@@ -128,11 +126,6 @@ function showLocation () {
 	});				
 }
 
-//Loading the Worldmapmatrix 4x4
-function loadWorldMap (newValue)
-{
-	document.getElementById('range').value=newValue;
-}
 // Loading a dialog style event from the XML to perpare its content for display
 function loadDialog () {
 	var partner = $xml.find('partner').text();
@@ -163,24 +156,67 @@ function loadDialog () {
 	    });		
 	}); 	
 	
+
+
+
+	 //Checks if Cookie has TTS-settings on "true":
+	 var ttsSettings="false";
+	 ttsSettings=getCookie("tts");
+	 if (ttsSettings == "true") {
+		 //Cancels loaded TTS-Dialogues and resets the queue:
+		 speechSynthesis.cancel();
+		 // Generates TTS object and fill it with the content of the dialog partner:
+		 // @param tts Text-to-Speech object and content loaded
+		 // @param voices loads available voices and stores them
+		 var tts = new SpeechSynthesisUtterance(content);
+
+		 //Get all available voices for the browser and safe in an array:
+		 var voices = window.speechSynthesis.getVoices();
+
+		 //Setting speechSynthesis parameters for Male Voice:
+	 tts.native = false;
+	 tts.lang = 'en-GB';
+	 tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+
+	 // Checks if the partner female and setting female parameters:
+	if(partner.indexOf('Thomas') == -1 && partner.indexOf('Pria') == -1 && partner.indexOf('Martin') == -1 && partner.indexOf('Avinash') == -1 && partner.indexOf('Rajesh') == -1 && partner.indexOf('Vance') == -1 && partner.indexOf('Stylus') == -1 && partner.indexOf('Jeremy') == -1)
+		 {
+		 //alert("Female detected!");
+		 tts.native = false;
+		 tts.lang = 'en-IE';
+		 tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Moira'; });
+
+		 if(checkBrowserName('chrome'))
+			 {
+			 //alert("Chrome detected");
+			 tts.native = false;
+			 tts.lang = 'en-US';
+			 tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google US English'; });
+	 }
+	 }
+	 //Starts TTS:
+	 speechSynthesis.speak(tts);
+	  }
+
+	//Opens the dialog:
 	showDialog();
 }
 
 //Browserweiche:
 function checkBrowserName(name)
-{ 
-	var agent = navigator.userAgent.toLowerCase(); 
-	if (agent.indexOf(name.toLowerCase())>-1) 
-	{ 
-		return true; 
-	} 
-	return false; 
-} 
+{
+	var agent = navigator.userAgent.toLowerCase();
+	if (agent.indexOf(name.toLowerCase())>-1)
+	{
+		return true;
+	}
+	return false;
+}
 
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
 	var description = $xml.find('description').text();
-	var container = $('.selectionContainer');	
+	var container = $('.selectionContainer');
 	var descriptionContainer =  container.find('.selectionTitleText');
 	var imgContainer = container.find('.selectionPicture');
 	var textContainer = container.find('.selectionText');
@@ -188,11 +224,11 @@ function loadSelection () {
 
 
 	descriptionContainer.text(description);
-	
+
 	$xml.find('option').each(function(index){
 		var text = $xml.find('option').eq(index).text();
 		var href = $xml.find('option').eq(index).attr('href');
-		
+
 		textContainer.eq(index).text(text);
 		button.eq(index).bind('click', function(){
 			$('.selectionContainer').hide();
