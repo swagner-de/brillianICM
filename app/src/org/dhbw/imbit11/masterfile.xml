@@ -19,7 +19,7 @@
 		<content>Get started with a country!</content>  
 		<option href="l101e101">USA</option>
 		<option href="l010e000">Germany</option>
-		<option href="l01e101">China</option>
+		<option href="l999e997">China</option>
 		<option href="l01e101">UK</option>
 			<bgimg>role3pic7.png</bgimg>
 			<bgvid>l002e000.mp4</bgvid>
@@ -171,7 +171,7 @@
 	</event>
 	
 	<!-- conversation -->
-		<event level="p9" element="0" id="l999e997" eventtype="24" imcost="0"
+		<event level="p9" element="0" id="l999e997" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="0">
 		<description>Conversation</description>
 		<messageBoxA href="l999e998">
