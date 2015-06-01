@@ -49,31 +49,25 @@
 	</div>
 	
 	<!-- eventtyp 16 & 17: vier Spalten mit drag und drop -->
-	<div class="allocationContainer easyui-panel margin-left" data-options="fit:true,border:false">
-		<div class="bgimg">
-		<div class="container">
+	<div class="allocationContainer easyui-panel" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer margin-left">
 			<div class="description"></div>
-			
 			<div class="phaseTitleContainer">
 				<div class="phaseTitle bc panel-header panel-title"></div>
 				<div class="phaseTitle bc panel-header panel-title"></div>
 				<div class="phaseTitle bc panel-header panel-title"></div>
 				<div class="phaseTitle bc panel-header panel-title"></div>
 			</div>
-			<div style="clear: both;"></div>
 			<div class="phaseContainer">
 				<div class="phase bc"></div>
 				<div class="phase bc"></div>
 				<div class="phase bc"></div>
 				<div class="phase bc"></div>
 			</div>
-		</div>
-			<div style="clear: both;"></div>
 			<div class="draggableContainer bc"></div>
-			<div style="clear: both;"></div>
 			<div class="dragInfoContainer">
 			</div>
-			<div style="clear: both;"></div>
 			<div class="buttonContainer">
 				<div id="continueButton" class="easyui-linkbutton allocationButton">Done</div>
 			</div>
@@ -83,44 +77,37 @@
 
 
 <!-- eventtyp 18: zwei Spalten mit drag und drop -->
-	<div class="allocationContainerTwo easyui-panel  margin-left" data-options="fit:true,border:false">
-		<div class="bgimg">
-	
+	<div class="allocationContainerTwo easyui-panel" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer margin-left">
 			<div class="description"></div>
-				<div class="container">
+			<div class="container">
 			<div class="phaseTitleContainerTwo">
 				<div class="phaseTitleTwo bc panel-header panel-title"></div>
 				<div class="phaseTitleTwo bc panel-header panel-title"></div>
 			</div>
-			<div style="clear: both;"></div>
 			<div  class="phaseContainerTwo">
 				<div class="phaseTwo bc"></div>
 				<div class="phaseTwo bc"></div>
 			</div>
-		</div>
-			<div style="clear: both;"></div>
-			<div class="draggableContainerTwo bc"></div>
-			<div style="clear: both;"></div>
-			<div class="dragInfoContainerTwo">
 			</div>
-			<div style="clear: both;"></div>
-	
+			<div class="draggableContainerTwo bc"></div>
+			<div class="dragInfoContainerTwo">
+			</div>	
 			<div class="buttonContainer">
 				<div id="continueButtonTwo" class="easyui-linkbutton allocationButton">Done</div>
 			</div>
 		</div>
 	</div>
 	<!-- eventtyp 19: zwei Zeilen mit drag und drop (iceberg) -->
-	<div class="allocationContainerThree easyui-panel margin-left" data-options="fit:true,border:false">
-		<div class="bgimg">	
+	<div class="allocationContainerThree easyui-panel" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer margin-left">
 			<div class="description"></div>
-			<div style="clear: both;"></div>
 			<div  class="phaseContainerThree">
-			<a class="fancybox"><img class="selectionPicture bc"></a>
 				<div class="phaseThree bc"></div>
 				<div class="phaseThree bc"></div>
 			</div>
-			<div style="clear: both;"></div>
 			<div class="draggableContainerThree bc"></div>
 			<div style="clear: both;"></div>
 			<div class="dragInfoContainerThree">
@@ -194,7 +181,7 @@
 	<div class="buttonContainer">
 		<div id="continueButtonMatrixConversation" class="easyui-linkbutton allocationButton">Done</div>
 	</div>
-</div>
+	</div>
 </div>
 <!--eventtyp: 24 textBox-->
 <div class="textBox easyui-panel" data-options="fit:true,border:false">

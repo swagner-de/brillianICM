@@ -279,7 +279,7 @@ function loadAllocation () {
 	var phaseContainer = container.find('.phase');
 	var continueButton = $('#continueButton');
 	var draggableContainer = $('.draggableContainer');
-		loadBackground();
+		loadContentPicAsBackground();
 	$('.drag').remove();
 	
 	$xml.find('option').each(function(index){
@@ -401,7 +401,7 @@ function loadAllocationTwo () {
 	var phaseContainerTwo = container.find('.phaseTwo');
 	var continueButtonTwo = $('#continueButtonTwo');
 	var draggableContainerTwo = $('.draggableContainerTwo');
-		loadBackground();
+		loadContentPicAsBackground();
 	$('.drag').remove();
 	
 	$xml.find('option').each(function(index){
@@ -531,7 +531,7 @@ function loadAllocationThree () {
 
 		
 	//Lade den Dialog Hintergrund
-	loadBackground();
+	loadContentPicAsBackground();
 
 
 	$('.drag').remove();

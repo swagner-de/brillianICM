@@ -562,18 +562,23 @@ div.phaseTitle {
 	border-width: 1px;
 	width: 23.8%;
 	line-height:10px;
-
-	margin-top: 5px;
 	height: 20px;
 	float: left;
 	text-align: center;
 	border-right-width: 0px;
 }
 
+
+div.phaseTitleContainer{
+	height:20px;
+	margin-left: 15px !important;
+}
+
 div.phaseTitleContainerTwo{
 	margin-left: auto;
     margin-right: auto;
 	float:center;
+	height:20px;
 }
 
 div.phaseTitleThree {
@@ -600,6 +605,12 @@ div.phase {
 	overflow-y: auto;
 	padding-bottom: 5px;
 }
+
+div.phaseContainer{
+	height:280px;
+	margin-left: 15px !important;
+}
+
 div.phaseThree {
 	width: 99%;
 	height: 200px;
@@ -613,6 +624,10 @@ div.phaseThree {
 	padding-bottom: 5px;
 }
 
+div.phaseContainerThree{
+	height:405px;
+}
+
 div.phaseTitle:last-child,div.phase:last-child {
 	border-right-width: 1px;
 }
@@ -621,8 +636,6 @@ div.phaseTitleTwo {
 	border-width: 1px;
 	width: 23.8%;
 	line-height:10px;
-		
-	margin-top: 5px;
 	height: 20px;
 	float: left;
 	text-align: center;
@@ -644,6 +657,10 @@ div.phaseTwo {
 	padding-bottom: 5px;
 }
 
+div.phaseContainerTwo{
+	height:280px;
+}
+
 div.phaseTitleTwo:last-child,div.phaseTwo:last-child {
 	border-right-width: 1px;
 }
@@ -660,7 +677,7 @@ div.draggableContainer {
 div.draggableContainerTwo{
 	border-width: 1px;
 	height: 99px !important;
-	width: 100%;
+	width: 99%;
 	margin-top: 10px;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
