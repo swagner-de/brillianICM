@@ -33,6 +33,10 @@
 <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="js/master.js"></script>
 
+<!-- Overwriting Font -->
+     <link href="css/font.css" rel="stylesheet">
+
+
 </head>
 <body class="easyui-layout">
 <div class="north" data-options="region:'north',border:false">

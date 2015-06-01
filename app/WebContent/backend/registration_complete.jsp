@@ -43,6 +43,9 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     
+    <!-- Overwriting Font -->
+     <link href="css/font.css" rel="stylesheet">
+    
  <!--Framework changes -->
 <link href="css/changes-master.css" rel="stylesheet">
 <link href="css/bootstrap-changes.css" rel="stylesheet">
