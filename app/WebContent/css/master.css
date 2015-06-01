@@ -406,7 +406,7 @@ body.dialogBody,body.mainBody {
 
 .dialogContainer video {
 	position:absolute;
-
+	display:block;
 	float:left;
 	width: 100% !important;
 	height: 100% !important;
@@ -477,6 +477,15 @@ float:center;
 	padding-bottom: 10px;
 	border-right: 0px !important;
 	border-left: 0px !important;
+}
+
+div.centerContainer{
+display:block;
+width: 98%;
+height:100%;
+margin: 0 auto;
+text-align:center;
+position:absolute;
 }
 
 div.laptopContainer {
@@ -824,7 +833,7 @@ div.tileAcceptorStandard {
 /*Tile matrix place holders in top row*/
 div.tileAcceptorTransparent {
 	border-width: 5px;
-	border-color: white;
+	border-color: transparent;
 	width: 157px;
 	height: 157px;
 	vertical-align: middle;
@@ -846,7 +855,7 @@ font-size:30px;
 
 div.BorderHorizontalVertical {
 border-width: 5px;
-	border-color: white;
+	border-color: transparent;
 	width: 150px;
 	height: 30px;
 	vertical-align: middle;
@@ -863,7 +872,7 @@ border-width: 5px;
 
 div.BorderHorizontal {
 border-width: 5px;
-	border-color: white;
+	border-color: transparent;
 	width: 157px;
 	height: 66px;
 	vertical-align: middle;
@@ -880,7 +889,7 @@ border-width: 5px;
 
 div.BorderVertical {
 border-width: 5px;
-	border-color: white;
+	border-color: transparent;
 	width: 150px;
 	height: 157px;
 	vertical-align: middle;
@@ -935,16 +944,14 @@ padding-top: 20px;
 }
 
 div.messageBox{
-	float: center;
 	width: 50%;
-	height:108%;
+	height:80%;
 	border-width: 0px;
-	margin-top: 10px;
-	margin-bottom: 20px;
 	margin-left: auto;
     margin-right: auto;
+	overflow: auto;
+	
 }
-
 
 
 /* tiles to be dragged and dropped*/
@@ -1169,7 +1176,6 @@ div.transitionScreenImageContainer:hover {
 }
 div.dialogBox{
 	width: 50%;
-	height:108%;
 	border-width: 0px;
 	margin-left: auto;
     margin-right: auto;

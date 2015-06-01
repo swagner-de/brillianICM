@@ -22,7 +22,7 @@
 	</div>
 	</div>
 	
-	<!-- eventtyp 4: choose ohne Bild und eventtype 5: choose mit Bild -->
+	<!-- eventtyp 14 & 15: choose ohne Bild und eventtype 5: choose mit Bild -->
 	<div class="selectionContainer easyui-panel" data-options="fit:true,border:false">
 		<div class="container">
 			<div class="selectionTitle">
@@ -49,7 +49,7 @@
 
 	</div>
 	
-	<!-- eventtyp 6: vier Spalten mit drag und drop und (7) -->
+	<!-- eventtyp 16 & 17: vier Spalten mit drag und drop -->
 	<div class="allocationContainer easyui-panel margin-left" data-options="fit:true,border:false">
 		<div class="bgimg">
 		<div class="container">
@@ -83,7 +83,7 @@
 
 
 
-<!-- eventtyp 8: zwei Spalten mit drag und drop -->
+<!-- eventtyp 18: zwei Spalten mit drag und drop -->
 	<div class="allocationContainerTwo easyui-panel  margin-left" data-options="fit:true,border:false">
 		<div class="bgimg">
 	
@@ -111,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- eventtyp 08: zwei Zeilen mit drag und drop (iceberg) -->
+	<!-- eventtyp 19: zwei Zeilen mit drag und drop (iceberg) -->
 	<div class="allocationContainerThree easyui-panel margin-left" data-options="fit:true,border:false">
 		<div class="bgimg">	
 			<div class="description"></div>
@@ -134,7 +134,7 @@
 	</div>
 
 
-	<!-- eventtyp 10: 4 Ohren Modell -->
+	<!-- eventtyp 20: 4 Ohren Modell -->
 <div class="matrixAllocationContainer easyui-panel" data-options="fit:true,border:false">
 			<div class="bgimg">	
 		<div class="description">conversation</div>	
@@ -185,31 +185,31 @@
 		</div>
 				</div>
 </div>
-<!--eventtyp: 13 Conversation-->
+<!--eventtyp: 23 Conversation-->
 <div class="conversation easyui-panel" data-options="fit:true,border:false">
-	<div class="bgimg">	
+	<div class="bgimg"></div>	
+	<div class ="centerContainer">
 	<div class="description"></div>
-	<div style="clear: both;"></div>
-	<div class="bc dialogBox">
+	<div class="bc dialogBox">	
 	</div>
-	<div style="clear: both;"></div>
 	<div class="buttonContainer">
 		<div id="continueButtonMatrixConversation" class="easyui-linkbutton allocationButton">Done</div>
 	</div>
 </div>
 </div>
-<!--eventtyp: 14 textBox-->
+<!--eventtyp: 24 textBox-->
 <div class="textBox easyui-panel" data-options="fit:true,border:false">
-	<div class="bgimg">	
-	<div class="description"></div>
-	<div class="messageBox"></div>
+	<div class="bgimg"></div>
+	<div class ="centerContainer">
+		<div class="description"></div>
+		<div class="messageBox"></div>
+	</div>
 	<div class="buttonContainer">
 		<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
 	</div>
 </div>
-</div>
 
-<!-- eventtyp 9: 9x9 Matrix-->
+<!-- eventtyp 21: 9x9 Matrix-->
 <div class="matrixAllocationContainerStandard easyui-panel" data-options="fit:true,border:false">
  	<div class="bgimg">	
 			<div class="description"></div>

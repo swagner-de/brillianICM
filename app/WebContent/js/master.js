@@ -100,23 +100,23 @@ function showLocation () {
 	    					setTimeout(function(){
 	    							if(eventtype == '3'){
 	    								loadDialog();		
-	    							}else if (eventtype == '4' || eventtype == '5'){								
+	    							}else if (eventtype == '14' || eventtype == '15'){								
 	    								loadSelection();
-	    							}else if (eventtype == '6' || eventtype == '7'){
+	    							}else if (eventtype == '16' || eventtype == '17'){
 	    								loadAllocation();
-									}else if (eventtype == '8'){
+									}else if (eventtype == '18'){
 										loadAllocationTwo();	
-									}else if (eventtype == '9'){
+									}else if (eventtype == '19'){
 										loadAllocationThree();											
-									}else if (eventtype == '10'){
+									}else if (eventtype == '20'){
 										loadMatrixAllocationStandard();	
-									}else if (eventtype == '11'){
+									}else if (eventtype == '21'){
 										loadMatrixAllocation();											
-	    							}else if (eventtype == '12'){
+	    							}else if (eventtype == '22'){
 	    								showNotification();	
-									}else if (eventtype == '13'){
+									}else if (eventtype == '23'){
 	    								loadConversation();										
-	    							}else if (eventtype == '14'){
+	    							}else if (eventtype == '24'){
 	    								loadTextBox();										
 	    							}
 	    				//	},1500);					
@@ -235,14 +235,14 @@ function loadSelection () {
 			getXml(href);								        
 	    });		
 		
-		if (eventtype == 5){
+		if (eventtype == 15){
 			var img = 'images/' + $xml.find('option').eq(index).attr('img');
 			imgContainer.eq(index).attr('src', img);
 			$('.selectionContainer').find('.fancybox').eq(index).attr('href', img);
 			$('.selectionContainer').find('.fancybox').fancybox();
 		}
 	});
-	if (eventtype == 5){
+	if (eventtype == 15){
 		imgContainer.show();
 	}								
 	showSelection();
@@ -635,7 +635,7 @@ function loadConversation(){
 	var descriptionContainerConversation = containerConversation.find('.description');
 	descriptionContainerConversation.text(description);
 	//Lade den Dialog Hintergrund	
-	loadBackground();
+		 loadContentPicAsBackground();
 //globale Variablen
 	var indexAB =0;
 	
@@ -705,7 +705,7 @@ function loadTextBox(){
 	 var descriptioncontainerTextBox = containerTextBox.find('.description');
 	 descriptioncontainerTextBox.text(description);
 	//Lade den Dialog Hintergrund	
-	 loadBackground();
+	 loadContentPicAsBackground();
 	
 	 var messageBox = $xml.find('message').text();
 	 var messageContainerTest = containerTextBox.find('.messageBox');
@@ -1021,6 +1021,15 @@ function loadMatrixAllocationStandard () {
     });
 }
 
+function loadContentPicAsBackground(){
+	var background;
+	var backgroundWithPartnerUrl;
+	if ($xml.find('bgimg').text() != '') {
+		background = $xml.find('bgimg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setContentPicAsBackground(backgroundWithPartnerUrl, false);
+	}
+}
 
 function	loadBackground(){
 	var background;
@@ -1065,6 +1074,19 @@ function setDialogBackground (backgroundUrl, existsVideo) {
 						$('.bgimg').css('background-size', 'cover');
 			}
 	}	
+}
+function setContentPicAsBackground (backgroundUrl) {
+		document.getElementById('background-video').src = '';
+		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+			var eventtype = $xml.find('event').attr('eventtype');
+
+			backgroundPictureUrlOld = $('.bgimg').css('content');
+			if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+				$('.bgimg').css('content', backgroundPictureUrlNew);
+						$('.bgimg').css('width', '100%');
+						$('.bgimg').css('float', 'left');
+						$('.bgimg').css('z-index', '-1');
+			}
 }
 
 // function fancyImageLoading(imageUrl, element){
