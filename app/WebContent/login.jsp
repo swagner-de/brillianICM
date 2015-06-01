@@ -71,7 +71,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class=" page-scroll" href="#page-top">
-                    <div style="width:100px; hight:40px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
+                    <div style="width:120px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
                 </a>
             </div>
 
@@ -105,11 +105,11 @@
         <div class="intro intro-body">
             <div class="container">
             
-             <div class=" row">
-                    <div class="col-md-8" style="padding-top:20px; color: #000">
-                        <h1 class="brand-heading" style="text-transform:none; text-align: left;">brillianICM</h1>
-                        <p class="intro-text" style="text-align: left;">How brillian are you?</p>
-                        
+             <div class="row">
+                    <div class="col-md-8" style="padding-top:20px; color: #000; width: 32%;">
+                        <h1 class="brand-heading" style="text-transform:none; text-align: left;"></h1>
+                        <p class="intro-text" style="text-align: center;">The Management Game<br> for our<br> Intercultural Competencies</p>
+                       
                     </div>
                 </div>
             

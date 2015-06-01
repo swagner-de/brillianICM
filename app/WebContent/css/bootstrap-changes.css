@@ -27,3 +27,11 @@ body {
     border: 1px solid #63a8b7;
     background-color: #63a8b7;
 }
+.footer{
+	background-color: #63a8b7;
+	height: 100%;
+	overflow:hidden;
+	color: #ffffff;
+	border-color: #63a8b7;
+}
+
