@@ -298,7 +298,7 @@ function loadAllocation () {
 		draggableContainer.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
 	});
 	
-	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	// 
 	
 	var draggableItem = container.find('.drag');
 	
@@ -422,7 +422,7 @@ function loadAllocationTwo () {
 		draggableContainerTwo.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
 	});
 	
-	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
 	
 	var draggableItem = container.find('.drag');
 	
@@ -554,7 +554,7 @@ function loadAllocationThree () {
 		draggableContainerThree.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
 	});
 	
-	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
 	
 	var draggableItem = container.find('.drag');
 	
@@ -776,7 +776,7 @@ function loadMatrixAllocation () {
 		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '"' + itemHoverTitle +'>' + itemText + '</div>');
 	});
 	
-	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
 	
 	
 	//Auswahl aller Tiles die beweglich sind
@@ -927,7 +927,7 @@ function loadMatrixAllocationStandard () {
 		draggableTilesContainerStandard.append('<div class="dragTile bc bph" data-fdesc="' + itemDescription + '" rank="' + itemRank + '"' + itemHoverTitle +'>' + itemText + '</div>');
 	});
 	
-	$('.drag[title]').tooltip(); //jQuery tooltipp function for all drag div, that contain a titl attribute
+	
 	
 	
 	//Auswahl aller Tiles die beweglich sind
