@@ -32,7 +32,9 @@
 	<script type="text/javascript">	
 		userid = '${userid}';
 	</script>
-
+	
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
@@ -45,12 +47,17 @@
 		
 	<script type="text/javascript" src="js/master.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-
+	
+	<!--Framework changes -->
+    <link href="css/bootstrap-changes.css" rel="stylesheet">
+    <!-- Overwriting Font -->
+    <link href="css/font.css" rel="stylesheet">
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">
     <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
       <nav class="navbar navbar-center container">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -82,6 +89,7 @@
                 <img class="spieler"  src="img/default-avatar.png" alt="">  
             </a>     
         </div>
+        </div>
 	   </nav>
 	</div>
 	<div  class="center mainWindow clearfix" data-options="region:'center'">
@@ -108,10 +116,12 @@
 		
 		</div>
 	</div>
-	<div id="footer" class="container text-center" data-options="region:'south'" style="height:45px">
+	<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden;">
 		<footer>
-				<p>Copyright &copy; brillianICM 2015</p>
-		</footer>
+        <div class=" text-center">
+            <p>Copyright &copy; brillianICM 2015</p>
+        </div>
+        </footer>
 	</div>
 </body>
 </html>
