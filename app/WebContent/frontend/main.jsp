@@ -33,8 +33,6 @@
 		userid = '${userid}';
 	</script>
 
-   <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
@@ -47,15 +45,12 @@
 		
 	<script type="text/javascript" src="js/master.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	
-	 <!--Framework changes -->
-    <link href="css/bootstrap-changes.css" rel="stylesheet">
 
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">
     <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-center container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -65,9 +60,9 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-					<a class=" page-scroll" href="#page-top">
-                    <div style="width:100px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
-                </a>
+					<a class="player" href="#">
+                     <img   src="http://placehold.it/100x50&text=Logo" alt="">  
+					</a>
 			</div>
     <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse center container" id="navbarCollapse">
@@ -82,15 +77,18 @@
             <ul class="nav navbar-nav second-button">
                  <li><a href="#" id="account" onclick="window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank')"  data-options="plain:true"></a></li>   
 			</ul>
-			  
+			<a class="player second-button" data-options="plain:true">
+<!--image container für das Spielergesicht-->
+                <img class="spieler"  src="img/default-avatar.png" alt="">  
+            </a>     
         </div>
 	   </nav>
 	</div>
 	<div  class="center mainWindow clearfix" data-options="region:'center'">
 	
 	
-		<p class="bubble left" style="margin: 70px auto;">BrillianICM Rocks!</p>
-		<p class="bubble right" style="margin: 30px auto;">BrillianICM Rocks!</p>
+	<!--	<p class="bubble left" style="margin: 70px auto;">BrillianICM Rocks!</p>
+		<p class="bubble right" style="margin: 30px auto;">BrillianICM Rocks!</p> -->
 			
 			<!--		<div class="mainLocationButton easyui-linkbutton" id="4" >START</div>	 -->
 		<div class="mainEventContainer" data-options="inline:true, center:true, fit:true" ></div>
@@ -110,12 +108,10 @@
 		
 		</div>
 	</div>
-	<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden;">
+	<div id="footer" class="container text-center" data-options="region:'south'" style="height:45px">
 		<footer>
-        <div class=" text-center">
-            <p>Copyright &copy; brillianICM 2015</p>
-        </div>
-        </footer>
+				<p>Copyright &copy; brillianICM 2015</p>
+		</footer>
 	</div>
 </body>
 </html>
