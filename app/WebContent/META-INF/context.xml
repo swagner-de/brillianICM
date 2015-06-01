@@ -18,7 +18,7 @@
     <Resource name="jdbc/security" auth="Container" 
         username="root" password="" 
         driverClassName="com.mysql.jdbc.Driver" 
-        url="jdbc:mysql://localhost:3307/cake?autoReconnect=true" 
+        url="jdbc:mysql://localhost:3306/cake?autoReconnect=true"
         logAbandoned="true" removeAbandoned="true" 
         type="javax.sql.DataSource" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
         testWhileIdle="true"
