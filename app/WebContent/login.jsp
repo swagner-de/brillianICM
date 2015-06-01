@@ -41,6 +41,10 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">  
+    
+       <!-- Overwriting Font -->
+     <link href="css/font.css" rel="stylesheet">
+    
 
 <!-- <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
@@ -262,11 +266,14 @@ This game is webbased and should run in modern Browsers including mobile devices
  <!--<div id="map"></div>  -->  
 
     <!-- Footer -->
-    <footer>
-        <div class="container text-center">
+    <div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
+		<footer>
+        <div class=" text-center">
             <p>Copyright &copy; brillianICM 2015</p>
         </div>
-    </footer>
+        </footer>
+	</div>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
