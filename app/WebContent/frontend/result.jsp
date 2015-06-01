@@ -14,39 +14,49 @@
 <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="js/master.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+
+<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/full-slider.css" rel="stylesheet">  
+
+   
+ <!--Framework changes -->
+<link href="css/bootstrap-changes.css" rel="stylesheet">
+<link href="css/changes-master.css" rel="stylesheet">
+
 </head>
-<body>
-	<div class="easyui-layout" style="width: 100%; height: 100%;">
-		<div class="north" data-options="region:'north',border:false" style="border-bottom-width: 1px;">
+<body class="easyui-layout" style="height:100%">
+	
+		<!-- <div class="north" data-options="region:'north',border:false" style="border-bottom-width: 1px;">
 			<div class="div-header window">
 				<a id="logout" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
 				<a id="help" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a>
 				<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 				<div class="welcome"></div>
-			</div>
-		</div>
-		<div class="center" data-options="region:'center',border:false">
+			</div>-->
+		
+		<div class="center" data-options="region:'center'" style="background-color: #d5edf3;">
+		
 			<h1>You completed the game!</h1>
 			<h3>Check out how brilliant you have been:</h3>
 			<table>
 				<tr>
-					<td>
-						<div class="mainTCQContainer bc" style="float: left">
-							<div class="mainTCQ"></div>
-						</div>
-					</td>
+					
 					<td>
 						<table style="font-weight: bold;">
 							<tr>
-								<td>Cost:</td>
+								<td>Behaviour:</td>
 								<td style="float: right"><div id="cost"></div></td>
 							</tr>
 							<tr>
-								<td>Time:</td>
+								<td>Competence:</td>
 								<td style="float: right"><div id="time"></div></td>
 							</tr>
 							<tr>
-								<td>Quality:</td>
+								<td>Communication: </td>
 								<td style="float: right"><div id="quality"></div></td>
 							</tr>
 						</table>
@@ -56,16 +66,23 @@
 					<td colspan="2">
 						<p>
 							If you want to play again please press the button below. Be aware that this step cannot be undone!<br /><br />
-							<a class="easyui-linkbutton" href="javascript:void(0)" onclick="$('#dlg').dialog('open')">Restart game and start from the beginning</a>
+							<a class="btn btn-default" href="javascript:void(0)" onclick="$('#dlg').dialog('open')">Restart game and start from the beginning</a>
 						</p>
 					</td>
 				</tr>
 			</table>
-			<div id="dlg" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){window.location.href = '<%out.print(application.getContextPath());%>/ResetUserProgress';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+			<div id="" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){window.location.href = '<%out.print(application.getContextPath());%>/ResetUserProgress';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
 				Are you sure you want to restart your game? This step cannot be undone!
 			</div>
 		</div>
+		<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
+		<footer>
+        <div class=" text-center">
+            <p>Copyright &copy; brillianICM 2015</p>
+        </div>
+        </footer>
 	</div>
+	
 </body>
 </html>
 
