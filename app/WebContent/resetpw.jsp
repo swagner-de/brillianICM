@@ -60,6 +60,14 @@ If you forgot your password, you can reset it here. We will send you an email co
 <p><a href='login.jsp'>Back to Login</a></p>
 <div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 </div>
+<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
+		<footer>
+        <div class=" text-center">
+            <p>Copyright &copy; brillianICM 2015</p>
+        </div>
+        </footer>
+	</div>
+
 <script type="text/javascript">
 	$('body').show();
 	$('#imprint').bind('click', function() {
