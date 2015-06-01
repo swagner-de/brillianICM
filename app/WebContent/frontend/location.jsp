@@ -1,4 +1,3 @@
-
 <div class="locationBackgroundContainer easyui-panel" data-options="fit:true,border:false">
 	
 		<!-- eventtyp 3: Selection-->
@@ -244,10 +243,15 @@
 			</div>
 		</div>
 	</div>
+	<!--  eventtype 25 Worldmap -->
+	<div class="worldmap easyui-panel" data-options="fit:true,border:false" style="overflow-y:auto;">
+		<div style="height:900px; position:absolute;"></div>
+		<div class ="centerContainer" style="position:relative;">	
+			<div class="description"></div>
+			<div id="worldMap" class="worldmapImg" style="height: 853px;"></div>
+		</div>
+	</div>
 </div> 
-
-
-
 
 
 

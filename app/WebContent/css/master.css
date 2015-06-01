@@ -482,7 +482,7 @@ float:center;
 div.centerContainer{
 display:block;
 width: 98%;
-height:100%;
+/* height:100%; */
 margin: 0 auto;
 text-align:center;
 position:absolute;
@@ -1252,6 +1252,36 @@ float:right;
 border-color:transparent;
 }
 
+/*  worldmap */
 
+   #worldMap{
+	margin: 0 auto;
+	padding-top:119px !important;
+	padding-left:119px !important;
+	padding-bottom: 119px !important;
+	width:856px;
+   }
+   
+   
+	#b11, #b12, #b13, #b14, #b21, #b22, #b23, #b24, #b31, #b32, #b33, #b34, #b41, #b42, #b43, #b44{
+		
+	}
 	
-
+	.block{
+	 width:150px; 
+	 height:150px;
+	 display: block;
+	}
+      
+   .worldmap div:hover{
+   -moz-box-shadow: 0 0 20px #000;
+   -webkit-box-shadow: 0 0 20px #000;
+   box-shadow: 0 0 20px #000;
+   
+   }
+   
+   .worldmap {
+/*    height:inherit !important;
+   width:inherit !important; */
+   display:block;
+   }

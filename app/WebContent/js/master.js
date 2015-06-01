@@ -46,6 +46,7 @@ function getXml(id) {
 		hideMatrixAllocation();
 		hideConversation();
 		hideTextBox();
+		hideWorldmap();
 		
 		showLocation();
 if(id == lastEvent){
@@ -77,6 +78,7 @@ function showLocation () {
 		hideMatrixAllocationStandard();
 		hideConversation();
 		hideTextBox();
+		hideWorldmap();
 		
 	    			// Musik am Anfang
 					 if(eventtype=="1"){
@@ -118,6 +120,8 @@ function showLocation () {
 	    								loadConversation();										
 	    							}else if (eventtype == '24'){
 	    								loadTextBox();										
+	    							}else if (eventtype == '25'){
+	    								loadWorldMap();										
 	    							}
 	    				//	},1500);					
 	    			//	},1500);
@@ -126,6 +130,24 @@ function showLocation () {
 	});				
 }
 
+//Loading the Worldmapmatrix 4x4
+function loadWorldMap()
+{
+	// liest XML aus
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();	
+	loadWorldMapAsBackground();
+	loadQuadrants();
+	var positions = $xml.find('position');
+	var xPos = positions.attr('x');
+	var yPos = positions.attr('y');
+	var indexId='b'+xPos+yPos;
+	var targetQuadrant = document.getElementById(indexId);
+	targetQuadrant.innerHtml="";
+	targetQuadrant.setAttribute("onclick", "getXml('"+href+"')");
+	
+	
+}
 // Loading a dialog style event from the XML to perpare its content for display
 function loadDialog () {
 	var partner = $xml.find('partner').text();
@@ -1031,6 +1053,34 @@ function loadContentPicAsBackground(){
 	}
 }
 
+function loadWorldMapAsBackground(){
+	var background;
+	var backgroundWithPartnerUrl;
+	if ($xml.find('worldmapImg').text() != '') {
+		background = $xml.find('worldmapImg').text();
+		backgroundWithPartnerUrl = 'images/' + background;
+		setWorldMapBackground(backgroundWithPartnerUrl);
+	}
+	showWorldmap();
+}
+
+function setWorldMapBackground(backgroundUrl){
+		document.getElementById('background-video').src = '';
+		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
+			var eventtype = $xml.find('event').attr('eventtype');
+
+			backgroundPictureUrlOld = $('.worldmapImg').css('background-image');
+			if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
+				$('.worldmapImg').css('background-image', backgroundPictureUrlNew);
+						$('.worldmapImg').css('background-repeat', 'no-repeat');
+						$('.worldmapImg').css('margin', '0 auto');
+			}
+	}
+
+
+	
+
+
 function	loadBackground(){
 	var background;
 	var backgroundWithPartnerUrl;
@@ -1089,6 +1139,29 @@ function setContentPicAsBackground (backgroundUrl) {
 			}
 }
 
+function loadQuadrants(backgroundUrl) {
+			document.getElementById('worldMap').innerHTML = '<div id="b11" class="block" style="float:left;" onclick="wrongSelection()"></div>'+	
+				'<div id="b12" class="block" style="float:left; border-right:2px solid black;" onclick="wrongSelection()"></div>'+
+				'<div id="b21" class="block" style="float:left; border-left:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b22" class="block" style="float:left;"onclick="wrongSelection()"></div>'+
+				'<div id="b13" class="block" style="float:left; border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b14" class="block" style="float:left; border-right:2px solid black;border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b23" class="block" style="float:left; border-left:2px solid black; border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b24" class="block" style="float:left; border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b31" class="block" style="float:left; border-top:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b32" class="block" style="float:left; border-top:2px solid black; border-right:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b41" class="block" style="float:left; border-top:2px solid black; border-left:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b42" class="block" style="float:left;  border-top:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b33" class="block" style="float:left;"onclick="wrongSelection()"></div>'+
+				'<div id="b34" class="block" style="float:left; border-right:2px solid black;"onclick="wrongSelection()"></div>'+
+				'<div id="b43" class="block" style="float:left; border-left:2px solid black; "onclick="wrongSelection()"></div>'+
+				'<div id="b44" class="block" style="float:left;"onclick="wrongSelection()"></div>';		
+				
+}
+
+function wrongSelection(){
+	showMsg('Info', 'Incorrect Selection.');
+}
 // function fancyImageLoading(imageUrl, element){
 	// var img = new Array();
 	// img[0] = new Image();
@@ -1193,7 +1266,15 @@ function showPdf(pdfPath){
 		}
 }
 
+//Hides the worldmap elements
+function hideWorldmap(){
+	$('.worldmap').hide();
+}
 
+//Hides the worldmap elements
+function showWorldmap(){
+	$('.worldmap').show();
+}
 
 
 //Hides the dialog elements

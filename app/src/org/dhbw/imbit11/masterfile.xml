@@ -17,12 +17,21 @@
 	<!--	<date>2014-01-05 10:16:34</date>
 		<title>Call with CEO</title> -->
 		<content>Get started with a country!</content>  
-		<option href="l01e101">USA</option>
-		<option href="l01e101">Germany</option>
+		<option href="l101e101">USA</option>
+		<option href="l010e000">Germany</option>
 		<option href="l01e101">China</option>
 		<option href="l01e101">UK</option>
 			<bgimg>role3pic7.png</bgimg>
 			<bgvid>l002e000.mp4</bgvid>
+	</event>
+	
+	<event level="worldmap" element="0" id="l101e101" eventtype="25" imcost="0"
+		imqual="0" imtime="0" loc="0">
+		<title>WorldMap</title>
+		<position x="1" y="1">
+			<nextevent href="l01e101"/>
+		</position>
+		<worldmapImg>worldmap.jpg</worldmapImg>
 	</event>
 	
 	<!-- three column choose without picture-->
@@ -267,7 +276,7 @@
 		<content>You may connect your computer to our network. I have already
 			sent you an e-mail containing the project charter. </content>
 		<option href="l010e001">Next</option>
-		<bgimg>loc3a.png</bgimg>
+		<bgimg>avatarBackground.png</bgimg>
 		<bgvid>l010e000.mp4</bgvid>
 	</event>
 	
