@@ -118,6 +118,8 @@ function showLocation () {
 	    								loadConversation();										
 	    							}else if (eventtype == '24'){
 	    								loadTextBox();										
+	    							}else if (eventtype == '25'){
+	    								loadWorldMap();										
 	    							}
 	    				//	},1500);					
 	    			//	},1500);
@@ -126,6 +128,11 @@ function showLocation () {
 	});				
 }
 
+//Loading the Worldmapmatrix 4x4
+function loadWorldMap (newValue)
+{
+	document.getElementById('range').value=newValue;
+}
 // Loading a dialog style event from the XML to perpare its content for display
 function loadDialog () {
 	var partner = $xml.find('partner').text();
