@@ -178,9 +178,9 @@
 	<div class="description"></div>
 	<div class="bc dialogBox">	
 	</div>
-	<div class="buttonContainer">
+<!--	<div class="buttonContainer">
 		<div id="continueButtonMatrixConversation" class="easyui-linkbutton allocationButton">Done</div>
-	</div>
+	</div> -->
 	</div>
 </div>
 <!--eventtyp: 24 textBox-->
