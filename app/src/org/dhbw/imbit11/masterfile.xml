@@ -201,12 +201,6 @@
 			<messageBoxB>
 			I used to hang out with my friends a lot more. Unfortunately, I don't have much time these days. What did you use to do that you don't do much anymore?
 		</messageBoxB>
-		<messageBoxA>
-		I got a new job, and everything changed. What did you do to change things?
-		</messageBoxA>
-		<messageBoxB>
-		Oh well, I'm sure things will be different soon. I know things will change for the better when I get married! Will things change for you soon? If so, how will they change?
-		</messageBoxB>
 		<bgimg>gesichter.png</bgimg>
 	<!--	<bgvid>l002e000.mp4</bgvid> -->
 		<nextevent href="l999e998" />

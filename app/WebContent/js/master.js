@@ -676,7 +676,9 @@ function loadConversation(){
 		});
 				 function messageBoxA(){ 
 					var text = $xml.find('messageBoxA').eq(indexAB).text();
-					
+					// NEW LINE 657
+						var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
+						
 						//text to speech			
 	var tts = new SpeechSynthesisUtterance(text);
 	speechSynthesis.speak(tts);
@@ -688,12 +690,25 @@ function loadConversation(){
 					var messageBoxContainer = $('.dialogBox');
 					messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="bc messageBoxA"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
 					var messageBoxA = $('.messageBoxA').eq(indexAB).text(text);
-			
+					
+					// NEW LINE 672 - 681
+					var dialogButton = $('.messageBoxA').eq(indexAB);
+					
+					dialogButton.linkbutton({
+						text:text
+					});
+					dialogButton.bind('click', function(){				
+					getXml(href);
+						speechSynthesis.cancel();
+					});	
+					
 				 }
 				 
 				 
 			 	 function messageBoxB(){
 			var text = $xml.find('messageBoxB').eq(indexAB).text();
+			// NEW LINE 688
+			var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
 			
 	var tts = new SpeechSynthesisUtterance(text);
 	tts.native = false;
@@ -704,11 +719,23 @@ function loadConversation(){
 			messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
 			var messageBoxB = $('.messageBoxB').eq(indexAB);
 			messageBoxB.text(text);
-				 }
+			
+					// NEW LINE 700 - 709
+					var dialogButton = $('.messageBoxB').eq(indexAB);
+					
+					dialogButton.linkbutton({
+						text:text
+					});
+					dialogButton.bind('click', function(){				
+					getXml(href);
+						speechSynthesis.cancel();
+					});	
+				 } 
 				 
+				 	showConversation();
 	var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
 
-		showConversation();
+	
 		
 	continueButtonMatrixConversation.unbind('click');
 	continueButtonMatrixConversation.bind('click', function(){
@@ -716,7 +743,7 @@ function loadConversation(){
 			speechSynthesis.cancel();
 			containerConversation.window('close');
 	});
-} 
+}  
 
 function loadTextBox(){
 	// liest XML aus
