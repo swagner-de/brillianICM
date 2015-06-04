@@ -137,7 +137,6 @@ function loadWorldMap()
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();	
 	loadWorldMapAsBackground();
-	loadQuadrants();
 	var positions = $xml.find('position');
 	var xPos = positions.attr('x');
 	var yPos = positions.attr('y');
@@ -155,7 +154,7 @@ function loadDialog () {
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
 	
-		loadBackground();
+		loadContentPicAsBackground();
 	//Lade den Dialog Hintergrund
 
 	$('.dialogButton').remove();
@@ -788,7 +787,7 @@ function loadMatrixAllocation () {
 	var draggableTilesContainer = $('.draggableTilesContainer');
 
 	$('.dragTile').remove();
-		loadBackground();
+		loadContentPicAsBackground();
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
@@ -931,7 +930,7 @@ function loadMatrixAllocationStandard () {
 	var descriptionContainer = containerStandard.find('.description');
 	var xAxisDescriptionContainer = $('.xAxisDescription');
 	var yAxisDescriptionContainer = $('.yAxisDescription');
-		loadBackground();
+		loadContentPicAsBackground();
 	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptorStandard = containerStandard.find('.tileAcceptorStandard');
 	var continueButtonMatrixStandard = $('#continueButtonMatrixStandard');
@@ -1078,6 +1077,15 @@ function loadContentPicAsBackground(){
 		backgroundWithPartnerUrl = 'images/' + background;
 		setContentPicAsBackground(backgroundWithPartnerUrl, false);
 	}
+	videoEnabled=getCookie("video");
+	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
+		background = $xml.find('bgvid').text();
+		backgroundWithPartnerUrl=window.location.href;
+		position = backgroundWithPartnerUrl.lastIndexOf('/');
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
+		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
+		setDialogBackground(backgroundWithPartnerUrl, true);
+	} 
 }
 
 function loadWorldMapAsBackground(){
@@ -1166,25 +1174,6 @@ function setContentPicAsBackground (backgroundUrl) {
 			}
 }
 
-function loadQuadrants(backgroundUrl) {
-			document.getElementById('worldMap').innerHTML = '<div id="b11" class="block" style="float:left;" onclick="wrongSelection()"></div>'+	
-				'<div id="b12" class="block" style="float:left; border-right:2px solid black;" onclick="wrongSelection()"></div>'+
-				'<div id="b21" class="block" style="float:left; border-left:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b22" class="block" style="float:left;"onclick="wrongSelection()"></div>'+
-				'<div id="b13" class="block" style="float:left; border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b14" class="block" style="float:left; border-right:2px solid black;border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b23" class="block" style="float:left; border-left:2px solid black; border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b24" class="block" style="float:left; border-bottom:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b31" class="block" style="float:left; border-top:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b32" class="block" style="float:left; border-top:2px solid black; border-right:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b41" class="block" style="float:left; border-top:2px solid black; border-left:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b42" class="block" style="float:left;  border-top:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b33" class="block" style="float:left;"onclick="wrongSelection()"></div>'+
-				'<div id="b34" class="block" style="float:left; border-right:2px solid black;"onclick="wrongSelection()"></div>'+
-				'<div id="b43" class="block" style="float:left; border-left:2px solid black; "onclick="wrongSelection()"></div>'+
-				'<div id="b44" class="block" style="float:left;"onclick="wrongSelection()"></div>';		
-				
-}
 
 function wrongSelection(){
 	showMsg('Info', 'Incorrect Selection.');
@@ -1306,18 +1295,20 @@ function showWorldmap(){
 
 //Hides the dialog elements
 function hideDialog () {
+	// $('.centerContainer').hide();
+	// $('.dialogTextContainerFit').hide();
+	// $( '.dialogPartner').hide();
+	// $( '.dialogButton').hide();
 	$('.dialogContainer').hide();
-	$('.dialogTextContainerFit').hide();
-	$( '.dialogPartner').hide();
-	$( '.dialogButton').hide();
 }
 
 //Shows the dialog elements
 function showDialog () {
 	$('.dialogContainer').show();
-	$('.dialogTextContainerFit').show();
-	$('.dialogPartner').delay(500).fadeIn( 'slow', function() {});						    
-	$('.dialogButton').delay(1500).fadeIn( 'slow', function() {});
+	// $('.centerContainer').show();
+	// $('.dialogTextContainerFit').show();
+	// $('.dialogPartner').delay(500).fadeIn( 'slow', function() {});						    
+	// $('.dialogButton').delay(1500).fadeIn( 'slow', function() {});
 }
 
 function hideSelection () {

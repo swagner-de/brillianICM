@@ -1,28 +1,28 @@
 <div class="locationBackgroundContainer easyui-panel" data-options="fit:true,border:false">
 	
 		<!-- eventtyp 3: Selection-->
-	<div class="dialogContainer">
-	<div class="bgimg">
-		<video id="background-video">
-			<source src="" type="video/mp4">
-		</video>
-		<div class="dialogTextContainer bc easyui-panel" data-options="width:315,height:562,border:false">
-			<div class="dialogPartner panel-header">
-				<div class="dialogPartnerName panel-title"></div>
-				<div class="dialogPartnerText"></div>
+	<div class="dialogContainer easyui-panel panel-body" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer">	
+			<div class="dialogTextContainer easyui-panel" data-options="width:315,height:562,border:false">
+				<div class="dialogPartner panel-header">
+					<div class="dialogPartnerName panel-title"></div>
+					<div class="dialogPartnerText"></div>
 
+				</div>
+			</div>
+			<video id="background-video">
+				<source src="" type="video/mp4">
+			</video>		
+			<div class="dialogMoodContainer">
+			
+				<img class="dialogMood" />
 			</div>
 		</div>
-		<div class="dialogMoodContainer">
-		
-			<img class="dialogMood" />
-		</div>
-		
-	</div>
 	</div>
 	
 	<!-- eventtyp 14 & 15: choose ohne Bild und eventtype 5: choose mit Bild -->
-	<div class="selectionContainer easyui-panel" data-options="fit:true,border:false">
+	<div class="selectionContainer easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="container">
 			<div class="selectionTitle">
 				<div class="selectionTitleName"></div>
@@ -49,7 +49,7 @@
 	</div>
 	
 	<!-- eventtyp 16 & 17: vier Spalten mit drag und drop -->
-	<div class="allocationContainer easyui-panel" data-options="fit:true,border:false">
+	<div class="allocationContainer easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer margin-left">
 			<div class="description"></div>
@@ -77,7 +77,7 @@
 
 
 <!-- eventtyp 18: zwei Spalten mit drag und drop -->
-	<div class="allocationContainerTwo easyui-panel" data-options="fit:true,border:false">
+	<div class="allocationContainerTwo easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer margin-left">
 			<div class="description"></div>
@@ -100,7 +100,7 @@
 		</div>
 	</div>
 	<!-- eventtyp 19: zwei Zeilen mit drag und drop (iceberg) -->
-	<div class="allocationContainerThree easyui-panel" data-options="fit:true,border:false">
+	<div class="allocationContainerThree easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer margin-left">
 			<div class="description"></div>
@@ -121,8 +121,9 @@
 
 
 	<!-- eventtyp 20: 4 Ohren Modell -->
-<div class="matrixAllocationContainer easyui-panel" data-options="fit:true,border:false">
-			<div class="bgimg">	
+<div class="matrixAllocationContainer easyui-panel panel-body" data-options="fit:true,border:false">
+	<div class="bgimg"></div>
+	<div class="centerContainer">
 		<div class="description">conversation</div>	
 		<div class="tileAcceptorContainer">
 				<div class="bc BorderHorizontalVertical"></div>
@@ -169,10 +170,11 @@
 				<div id="continueButtonMatrix" class="easyui-linkbutton allocationButton">Done</div>
 			</div>
 		</div>
-				</div>
+	</div>
+				
 </div>
 <!--eventtyp: 23 Conversation-->
-<div class="conversation easyui-panel" data-options="fit:true,border:false">
+<div class="conversation easyui-panel panel-body" data-options="fit:true,border:false">
 	<div class="bgimg"></div>	
 	<div class ="centerContainer">
 	<div class="description"></div>
@@ -184,7 +186,7 @@
 	</div>
 </div>
 <!--eventtyp: 24 textBox-->
-<div class="textBox easyui-panel" data-options="fit:true,border:false">
+<div class="textBox easyui-panel panel-body" data-options="fit:true,border:false">
 	<div class="bgimg"></div>
 	<div class ="centerContainer">
 		<div class="description"></div>
@@ -196,46 +198,59 @@
 </div>
 
 <!-- eventtyp 21: 9x9 Matrix-->
-<div class="matrixAllocationContainerStandard easyui-panel" data-options="fit:true,border:false">
- 	<div class="bgimg">	
+<div class="matrixAllocationContainerStandard easyui-panel panel-body" data-options="fit:true,border:false">
+ 	<div class="bgimg">	</div>
+		<div class="centerContainer">
 			<div class="description"></div>
 			<div style="clear: both;"></div>
 			<!--<div class="yAxisDescription"></div> -->
 			<div class="tileAcceptorContainerStandard">
-				<div style="clear: both;"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div style="noshade: size='1'";></div>
-					<div style="clear: both;"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>	    
-				<div style="clear: both;"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
+
 				
-					<div style="clear: both;"></div>
-				
-			<!--	<div class="xAxisDescription"></div> -->
-				
+			<!--	<div class="xAxisDescription"></div> -->				
 			</div>
 			<div class="draggableTilesContainerStandard bc"></div>
 			
-				<div style="clear: both;"></div>
-				
 			<div class="buttonContainer">
 				<div id="continueButtonMatrixStandard" class="easyui-linkbutton allocationButton">Done</div>
 			</div>
 		</div>
 	</div>
+	
+	
 	<!--  eventtype 25 Worldmap -->
-	<div class="worldmap easyui-panel" data-options="fit:true,border:false" style="overflow-y:auto;">
+	<div class="worldmap easyui-panel panel-body" data-options="fit:true,border:false" style="overflow-y:auto;">
 		<div style="height:900px; position:absolute;"></div>
 		<div class ="centerContainer" style="position:relative;">	
 			<div class="description"></div>
-			<div id="worldMap" class="worldmapImg" style="height: 853px;"></div>
+			<div id="worldMap" class="worldmapImg" style="height: 853px;">
+				<div id="b11" class="block" style="float:left;" onclick="wrongSelection()"></div>	
+				<div id="b12" class="block" style="float:left; border-right:2px solid black;" onclick="wrongSelection()"></div>
+				<div id="b21" class="block" style="float:left; border-left:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b22" class="block" style="float:left;"onclick="wrongSelection()"></div>
+				<div id="b13" class="block" style="float:left; border-bottom:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b14" class="block" style="float:left; border-right:2px solid black;border-bottom:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b23" class="block" style="float:left; border-left:2px solid black; border-bottom:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b24" class="block" style="float:left; border-bottom:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b31" class="block" style="float:left; border-top:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b32" class="block" style="float:left; border-top:2px solid black; border-right:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b41" class="block" style="float:left; border-top:2px solid black; border-left:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b42" class="block" style="float:left;  border-top:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b33" class="block" style="float:left;"onclick="wrongSelection()"></div>
+				<div id="b34" class="block" style="float:left; border-right:2px solid black;"onclick="wrongSelection()"></div>
+				<div id="b43" class="block" style="float:left; border-left:2px solid black; "onclick="wrongSelection()"></div>
+				<div id="b44" class="block" style="float:left;"onclick="wrongSelection()"></div>
+			</div>
 		</div>
 	</div>
 </div> 

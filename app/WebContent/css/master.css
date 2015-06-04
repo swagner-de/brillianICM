@@ -154,8 +154,6 @@ div.center div.panel {
     margin-left:auto;
 }
 
-div.centerContainer {
-}
 
 div.mainLogoContainer {
 	height: 100%;
@@ -340,10 +338,11 @@ div.dialogMoodContainer {
 }
 
 div.dialogTextContainer {
-	opacity: 0.9;
+	opacity: 0.7;
 	line-height: 20px;
-	opacity: 0.9;
-	
+	float:left;
+	position:absolute;
+	display:block;
 }
 
 div.dialogTextContainerTwo {
@@ -356,7 +355,6 @@ div.dialogTextContainerTwo {
 }
 
 div.dialogPartner {
-	display: none;
 	padding: 10px;
 }
 
@@ -370,10 +368,10 @@ div.dialogPartnerText {
 }
 
 div.dialogButton {
-	display: none;
 	margin-top: 10px;
 	padding: 10px;
 	text-align: left;
+	display:block;
 }
 
 img.dialogMood {
@@ -408,14 +406,10 @@ body.dialogBody,body.mainBody {
 	position:absolute;
 	display:block;
 	float:left;
-	width: 100% !important;
 	height: 100% !important;
+	margin-left: 315px;
 }
 
-.dialogContainer div.panel {
-	margin-left: inherit !important;
-	margin-right: inherit !important;
-}
 div.bgimg{
 text-align:center;
 }
@@ -482,10 +476,11 @@ float:center;
 div.centerContainer{
 display:block;
 width: 98%;
-/* height:100%; */
+height:100%;
 margin: 0 auto;
 text-align:center;
 position:absolute;
+overflow-y: auto;
 }
 
 div.laptopContainer {
@@ -763,6 +758,10 @@ div.tileAcceptorContainer,.tileAcceptorContainerStandard{
 	/*Params needed for centering the stakeholder analysis*/
 	display: inline-block;
     text-align: center;
+}
+
+.tileAcceptorContainerStandard{
+	width:471px;
 }
 
 
@@ -1193,6 +1192,7 @@ div.transitionScreenImageContainer:hover {
 }
 div.dialogBox{
 	width: 50%;
+	height: inherit;
 	border-width: 0px;
 	margin-left: auto;
     margin-right: auto;
@@ -1294,10 +1294,11 @@ border-color:transparent;
 	 display: block;
 	}
       
-   .worldmap div:hover{
+   .worldmapImg div:hover{
    -moz-box-shadow: 0 0 20px #000;
    -webkit-box-shadow: 0 0 20px #000;
    box-shadow: 0 0 20px #000;
+   cursor:pointer;
    
    }
    
@@ -1306,3 +1307,4 @@ border-color:transparent;
    width:inherit !important; */
    display:block;
    }
+   
