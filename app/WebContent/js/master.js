@@ -154,8 +154,8 @@ function loadDialog () {
 	var dialogPartnerNameContainer = $('.dialogPartnerName');
 	var dialogPartnerTextContainer = $('.dialogPartnerText');
 	
-		loadContentPicAsBackground();
-	//Lade den Dialog Hintergrund
+		loadBackground();
+		loadVideo();
 
 	$('.dialogButton').remove();
 	dialogPartnerNameContainer.text(partner);
@@ -278,7 +278,7 @@ function loadAllocation () {
 	var phaseContainer = container.find('.phase');
 	var continueButton = $('#continueButton');
 	var draggableContainer = $('.draggableContainer');
-		loadContentPicAsBackground();
+		loadBackground();
 	$('.drag').remove();
 	
 	$xml.find('option').each(function(index){
@@ -400,7 +400,7 @@ function loadAllocationTwo () {
 	var phaseContainerTwo = container.find('.phaseTwo');
 	var continueButtonTwo = $('#continueButtonTwo');
 	var draggableContainerTwo = $('.draggableContainerTwo');
-		loadContentPicAsBackground();
+		loadBackground();
 	$('.drag').remove();
 	
 	$xml.find('option').each(function(index){
@@ -530,7 +530,7 @@ function loadAllocationThree () {
 
 		
 	//Lade den Dialog Hintergrund
-	loadContentPicAsBackground();
+	loadBackground();
 
 
 	$('.drag').remove();
@@ -656,7 +656,7 @@ function loadConversation(){
 	var descriptionContainerConversation = containerConversation.find('.description');
 	descriptionContainerConversation.text(description);
 	//Lade den Dialog Hintergrund	
-		 loadContentPicAsBackground();
+		 loadBackground();
 //globale Variablen
 	var indexAB =0;
 	
@@ -753,7 +753,7 @@ function loadTextBox(){
 	 var descriptioncontainerTextBox = containerTextBox.find('.description');
 	 descriptioncontainerTextBox.text(description);
 	//Lade den Dialog Hintergrund	
-	 loadContentPicAsBackground();
+	 loadBackground();
 	
 	 var messageBox = $xml.find('message').text();
 	 var messageContainerTest = containerTextBox.find('.messageBox');
@@ -787,7 +787,7 @@ function loadMatrixAllocation () {
 	var draggableTilesContainer = $('.draggableTilesContainer');
 
 	$('.dragTile').remove();
-		loadContentPicAsBackground();
+		loadBackground();
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemRank = $(this).attr('rank');
@@ -930,7 +930,7 @@ function loadMatrixAllocationStandard () {
 	var descriptionContainer = containerStandard.find('.description');
 	var xAxisDescriptionContainer = $('.xAxisDescription');
 	var yAxisDescriptionContainer = $('.yAxisDescription');
-		loadContentPicAsBackground();
+		loadBackground();
 	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptorStandard = containerStandard.find('.tileAcceptorStandard');
 	var continueButtonMatrixStandard = $('#continueButtonMatrixStandard');
@@ -1069,22 +1069,27 @@ function loadMatrixAllocationStandard () {
     });
 }
 
-function loadContentPicAsBackground(){
+function loadBackground(){
 	var background;
 	var backgroundWithPartnerUrl;
 	if ($xml.find('bgimg').text() != '') {
 		background = $xml.find('bgimg').text();
 		backgroundWithPartnerUrl = 'images/' + background;
-		setContentPicAsBackground(backgroundWithPartnerUrl, false);
+		setBackground(backgroundWithPartnerUrl, false);
 	}
-	videoEnabled=getCookie("video");
+}
+
+function loadVideo(){
+	var video;
+	var videoWithPartnerUrl;
+	var	videoEnabled=getCookie("video");
 	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
-		background = $xml.find('bgvid').text();
-		backgroundWithPartnerUrl=window.location.href;
-		position = backgroundWithPartnerUrl.lastIndexOf('/');
-		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
-		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
-		setDialogBackground(backgroundWithPartnerUrl, true);
+		video = $xml.find('bgvid').text();
+		videoWithPartnerUrl=window.location.href;
+		position = videoWithPartnerUrl.lastIndexOf('/');
+		videoWithPartnerUrl = videoWithPartnerUrl.slice(0, position+1);
+		videoWithPartnerUrl = videoWithPartnerUrl.concat("/videos/" + video);
+		setVideo(videoWithPartnerUrl);
 	} 
 }
 
@@ -1116,51 +1121,17 @@ function setWorldMapBackground(backgroundUrl){
 	
 
 
-function	loadBackground(){
-	var background;
-	var backgroundWithPartnerUrl;
-	if ($xml.find('bgimg').text() != '') {
-		background = $xml.find('bgimg').text();
-		backgroundWithPartnerUrl = 'images/' + background;
-		setDialogBackground(backgroundWithPartnerUrl, false);
-	}
-	
-	videoEnabled=getCookie("video");
-	if (($xml.find('bgvid').text() != '') && (videoEnabled == "true")){
-		background = $xml.find('bgvid').text();
-		backgroundWithPartnerUrl=window.location.href;
-		position = backgroundWithPartnerUrl.lastIndexOf('/');
-		backgroundWithPartnerUrl = backgroundWithPartnerUrl.slice(0, position+1);
-		backgroundWithPartnerUrl = backgroundWithPartnerUrl.concat("/videos/" + background);
-		setDialogBackground(backgroundWithPartnerUrl, true);
-	} 
-	}
-
-// Sets the background picture or video for the background
-function setDialogBackground (backgroundUrl, existsVideo) {
-
-	if (existsVideo == true) {
-		//since it will always be a different dialogue video no comparison with the old video is necessary
-		var vid = document.getElementById('background-video');
-		vid.src = backgroundUrl;
-		setTimeout(function(){
-			vid.play();
-		}, 2000);
-	}  else {
-		// if no video exists, the role picture is set
-		document.getElementById('background-video').src = '';
-		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
-			var eventtype = $xml.find('event').attr('eventtype');
-
-			backgroundPictureUrlOld = $('.bgimg').css('background-image');
-			if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
-				$('.bgimg').css('background-image', backgroundPictureUrlNew);
-						$('.bgimg').css('background-repeat', 'no-repeat');
-						$('.bgimg').css('background-size', 'cover');
-			}
-	}	
+function setVideo (backgroundUrl) {
+	//since it will always be a different dialogue video no comparison with the old video is necessary
+	var vid = document.getElementById('background-video');
+	vid.src = backgroundUrl;
+	setTimeout(function(){
+		vid.play();
+	}, 2000);		
 }
-function setContentPicAsBackground (backgroundUrl) {
+
+
+function setBackground (backgroundUrl) {
 		document.getElementById('background-video').src = '';
 		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
 			var eventtype = $xml.find('event').attr('eventtype');
