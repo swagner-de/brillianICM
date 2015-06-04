@@ -692,15 +692,17 @@ function loadConversation(){
 					
 					// NEW LINE 672 - 681
 					var dialogButton = $('.messageBoxA').eq(indexAB);
-					
+					if(href == undefined){
+								alert("undefined");
+					}else{
 					dialogButton.linkbutton({
 						text:text
 					});
-					dialogButton.bind('click', function(){				
+					dialogButton.bind('click', function(){	
 					getXml(href);
 						speechSynthesis.cancel();
 					});	
-					
+					} 
 				 }
 				 
 				 
@@ -720,16 +722,20 @@ function loadConversation(){
 			messageBoxB.text(text);
 			
 					// NEW LINE 700 - 709
-					var dialogButton = $('.messageBoxB').eq(indexAB);
-					
-					dialogButton.linkbutton({
-						text:text
-					});
-					dialogButton.bind('click', function(){				
-					getXml(href);
-						speechSynthesis.cancel();
-					});	
-				 } 
+			var dialogButton = $('.messageBoxB').eq(indexAB);
+			
+			if(href == undefined){
+							alert("undefined");
+				}else{
+				dialogButton.linkbutton({
+					text:text
+				});
+				dialogButton.bind('click', function(){	
+				getXml(href);
+					speechSynthesis.cancel();
+				});	
+				} 
+			 } 
 				 
 				 	showConversation();
 	var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
