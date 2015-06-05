@@ -404,7 +404,7 @@ body.dialogBody,body.mainBody {
 
 .dialogContainer video {
 	position:absolute;
-	display:block;
+	display:none;
 	float:left;
 	height: 100% !important;
 	margin-left: 315px;

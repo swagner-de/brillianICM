@@ -693,7 +693,7 @@ function loadConversation(){
 					// NEW LINE 672 - 681
 					var dialogButton = $('.messageBoxA').eq(indexAB);
 					if(href == undefined){
-								alert("undefined");
+							
 					}else{
 					dialogButton.linkbutton({
 						text:text
@@ -725,7 +725,7 @@ function loadConversation(){
 			var dialogButton = $('.messageBoxB').eq(indexAB);
 			
 			if(href == undefined){
-							alert("undefined");
+						
 				}else{
 				dialogButton.linkbutton({
 					text:text
@@ -1130,6 +1130,7 @@ function setWorldMapBackground(backgroundUrl){
 function setVideo (backgroundUrl) {
 	//since it will always be a different dialogue video no comparison with the old video is necessary
 	var vid = document.getElementById('background-video');
+	$('.dialogContainer video').css('display','block');
 	vid.src = backgroundUrl;
 	setTimeout(function(){
 		vid.play();
