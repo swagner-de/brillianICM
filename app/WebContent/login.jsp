@@ -247,17 +247,17 @@ This game is webbased and should run in modern Browsers including mobile devices
                 <p>Feel free to email us to provide some feedback on our game, or to just to say hello!</p>
                 <p><a href="mailto:HowBrillianAreYou">HowBrillianAreYou@brillianICM.com</a>
                 </p>
-                <ul class="list-inline banner-social-buttons">
+              <!--  <ul class="list-inline banner-social-buttons">
                     <li>
                         <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
-                   <!--  <li>
+                     <li>
                         <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </section>
