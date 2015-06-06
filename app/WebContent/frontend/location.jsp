@@ -4,7 +4,7 @@
 	<div class="dialogContainer easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer">	
-			<div class="dialogTextContainer easyui-panel" data-options="width:315,height:562,border:false">
+			<div class="dialogTextContainer easyui-panel" data-options="width: 315, border:false" style="height:inherit">
 				<div class="dialogPartner panel-header">
 					<div class="dialogPartnerName panel-title"></div>
 					<div class="dialogPartnerText"></div>
