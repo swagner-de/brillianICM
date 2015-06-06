@@ -47,6 +47,7 @@ function getXml(id) {
 		hideConversation();
 		hideTextBox();
 		hideWorldmap();
+		hideMatrixAllocationAlternate
 		
 		showLocation();
 if(id == lastEvent){
@@ -79,6 +80,7 @@ function showLocation () {
 		hideConversation();
 		hideTextBox();
 		hideWorldmap();
+		hideMatrixAllocationAlternate
 		
 	    			// Musik am Anfang
 					 if(eventtype=="1"){
@@ -122,7 +124,10 @@ function showLocation () {
 	    								loadTextBox();										
 	    							}else if (eventtype == '25'){
 	    								loadWorldMap();										
-	    							}
+	    							}else if (eventtype=='26'){
+										loadMatrixAllocationAlternate();
+									}
+									
 	    				//	},1500);					
 	    			//	},1500);
 	    			},0);
@@ -142,7 +147,6 @@ function loadWorldMap()
 	var yPos = positions.attr('y');
 	var indexId='b'+xPos+yPos;
 	var targetQuadrant = document.getElementById(indexId);
-	targetQuadrant.innerHtml="";
 	targetQuadrant.setAttribute("onclick", "getXml('"+href+"')");
 	
 	
@@ -822,14 +826,14 @@ function loadMatrixAllocation () {
 	
 	continueButtonMatrix.unbind('click');
 	continueButtonMatrix.bind('click', function(){
-		$('.tileAcceptor').css('background-color', '');
+		tileAcceptor.css('background-color', '');
 		var correct = true;
 		var allDragged = true;
 		
 		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
 		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
 		//mit dem rank "1"
-		$('.tileAcceptor').each(function(index) {
+		tileAcceptor.each(function(index) {
 			var correctTileRank = index+1;
 			if ($(this).find('.dragTile').attr('rank') != null){
 				var actualTileRank = $(this).find('.dragTile').attr('rank');
@@ -838,11 +842,12 @@ function loadMatrixAllocation () {
 					$(this).find('.dragTile').addClass('dragIncorrect');
 				}
 				
-				} else {
-					// Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
-					//--> XML überprüfen
-					showMsg("There has a been a problem with the validation!");
 				}
+				// else {
+					// // Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					// //--> XML überprüfen
+					// showMsg("There has a been a problem with the validation!");
+				// }
 			});
 		
 		
@@ -991,11 +996,12 @@ function loadMatrixAllocationStandard () {
 					$(this).find('.dragTile').addClass('dragIncorrect');
 				}
 				
-				} else {
-					// Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
-					//--> XML überprüfen
-					showMsg("There has a been a problem with the validation!");
-				}
+				} 
+				// else {
+					// // Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					// //--> XML überprüfen
+					// showMsg("There has a been a problem with the validation!");
+				// }
 			});
 		
 		//Check if all items have been dragged
@@ -1074,6 +1080,163 @@ function loadMatrixAllocationStandard () {
         }
     });
 }
+
+function loadMatrixAllocationAlternate () {
+	var href = $xml.find('nextevent').attr('href');
+	var description = $xml.find('description').text();
+	var container = $('.matrixAllocationContainerAlternate');
+	var infoContainer =  $('.infoContainer');
+	var descriptionContainer = container.find('.description');
+
+	
+	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	var tileAcceptor = container.find('.tileAcceptor');
+	var continueButtonMatrix = $('#continueButtonMatrixAlternate');
+	//Enthält zuzuordnende tiles
+	var draggableTilesContainer = $('.draggableTilesContainerAlternate');
+
+	$('.dragTile').remove();
+		loadBackground();
+	$xml.find('option').each(function(index){
+		var itemText = $(this).text();
+		var itemRank = $(this).attr('rank');
+		var itemMetaDescription = $(this).attr('fdesc');
+		var itemDescription =  $(this).attr('description');
+		setDescription(infoContainer, itemRank, itemDescription);
+		//***code needed for tooltip function
+		var itemTitle = $(this).attr('title');
+		var itemHoverTitle = '';
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			var itemHoverTitle = ' title="' + itemTitle + '"';
+		}
+		//***
+		draggableTilesContainer.append('<div class="dragTile bc bph" data-fdesc="' + itemMetaDescription + '" rank="' + itemRank + '"' + itemHoverTitle +'>' + itemText + '</div>');
+	});
+	
+	
+	
+	
+	//Auswahl aller Tiles die beweglich sind
+	var draggableItems = container.find('.dragTile');
+	descriptionContainer.text(description);
+	
+	//Might be reused to name axes --> Low to High Impact/Priority
+	//$xml.find('column').each(function(index){
+	//	phaseTitleContainer.eq(index).text($(this).html());
+	//});
+	
+	continueButtonMatrix.unbind('click');
+	continueButtonMatrix.bind('click', function(){
+		tileAcceptor.css('background-color', '');
+		var correct = true;
+		var allDragged = true;
+		
+		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
+		//mit dem rank "1"
+		tileAcceptor.each(function(index) {
+			var correctTileRank = index+1;
+			if ($(this).find('.dragTile').attr('rank') != null){
+				var actualTileRank = $(this).find('.dragTile').attr('rank');
+				if (actualTileRank != correctTileRank){
+					correct = false;
+					$(this).find('.dragTile').addClass('dragIncorrect');
+				}
+				
+				} 
+				// else {
+					// // Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
+					// //--> XML überprüfen
+					// showMsg("There has a been a problem with the validation!");
+				// }
+			});
+		
+		
+
+
+		//Check if all items have been dragged
+		$('.draggableTilesContainerAlternate').find('.dragTile').each(function() {
+				allDragged = false;
+		});
+		if (correct == true  && allDragged == true){
+			getXml(href);
+			container.window('close');
+		} else {	
+			if (allDragged == false){
+				showMsg('Info', 'You have not allocated all elements.'); //For Debugging
+			}
+			if (correct == false){
+				showMsg('Info', 'You have allocated one or more items incorrectly.'); //For Debugging
+			}					
+		}
+	});	
+	showMatrixAllocationAlternate();
+	
+	//Drag Funktionalität
+	draggableItems.draggable({
+        proxy:'clone',
+        revert:true,
+        cursor:'auto',
+        onStartDrag:function(){
+            $(this).draggable('options').cursor='not-allowed';
+            $(this).draggable('proxy').addClass('dp');            
+            $(this).removeClass('dragIncorrect');
+        },
+        onStopDrag:function(){
+            $(this).draggable('options').cursor='auto';
+        }
+    });
+	
+	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	tileAcceptor.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).removeClass('elementHighlight');
+            // Wurde dem Zielfeld bereits eine Kachel zugeordnet, wird die Funktion abgebrochen, die Kachel bleibt wo sie ist. 
+    		if (e.target.hasChildNodes()) { 
+    			return;
+    		}
+            $(this).append(source);
+        }
+    });
+	
+	draggableTilesContainer.droppable({
+        accept:'.dragTile',
+        onDragEnter:function(e,source){
+            $(source).draggable('options').cursor='auto';
+            $(source).draggable('proxy').css('border','1px solid red');
+            $(this).addClass('elementHighlight');
+        },
+        onDragLeave:function(e,source){
+            $(source).draggable('options').cursor='not-allowed';
+            $(source).draggable('proxy').css('border','1px solid #ccc');
+            // elementHighlight can be found in master.css
+            $(this).removeClass('elementHighlight');
+        },
+        onDrop:function(e,source){
+            $(this).append(source);
+            $(this).removeClass('elementHighlight');
+        }
+    });
+}
+
+function setDescription(container, itemRank, itemDescription){
+	var tdId='rank'+itemRank;
+	document.getElementById(tdId).innerHTML=itemDescription;
+	
+}
+
 
 function loadBackground(){
 	var background;
@@ -1268,6 +1431,14 @@ function hideWorldmap(){
 //Hides the worldmap elements
 function showWorldmap(){
 	$('.worldmap').show();
+}
+
+function hideMatrixAllocationAlternate(){
+	$('.matrixAllocationContainerAlternate').hide();
+}
+
+function showMatrixAllocationAlternate(){
+	$('.matrixAllocationContainerAlternate').show();
 }
 
 

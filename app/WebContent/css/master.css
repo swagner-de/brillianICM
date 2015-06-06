@@ -760,6 +760,45 @@ div.tileAcceptorContainer,.tileAcceptorContainerStandard{
     text-align: center;
 }
 
+div.eventContainer{
+	display: inline-block;
+    text-align: center;
+	margin-right: 20px;
+}
+
+div.infoContainer{
+	display:block;
+	width: 840px;
+	margin: 0 auto;
+}
+
+div .align-left{
+	float:right;
+}
+
+.eventInfoTable,.eventInfoTable tr{
+	border-width: 1px;
+
+}
+
+.eventInfoTable tr td.border_bottom{
+	border-bottom:1px solid #707a8f;
+
+}
+
+.eventInfoTable .elementNumber-header, .eventInfoTable .elementInfo-header{
+	font-weight:bold;
+}
+
+
+td.elementNumber{
+	width: 25px;
+}
+
+td.elementInfo{
+	width: 771px;
+}
+
 .tileAcceptorContainerStandard{
 	width:471px;
 }
@@ -931,7 +970,7 @@ div.outerrightMessage {
 	margin-right:15px;
 }
 
-div.draggableTilesContainer {
+div.draggableTilesContainer, div.draggableTilesContainerAlternate  {
 	border-width: 1px;
 	height: 135px !important;
 	width:820px;
@@ -941,6 +980,8 @@ div.draggableTilesContainer {
 	padding-left: 1px;
 	overflow-y: auto;
 }
+
+
 div.draggableTilesContainerStandard {
 	border-width: 1px;
 	height: 135px !important;

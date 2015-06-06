@@ -120,7 +120,7 @@
 	</div>
 
 
-	<!-- eventtyp 20: 4 Ohren Modell -->
+	<!-- eventtyp 21: 4 Ohren Modell -->
 <div class="matrixAllocationContainer easyui-panel panel-body" data-options="fit:true,border:false">
 	<div class="bgimg"></div>
 	<div class="centerContainer">
@@ -197,7 +197,7 @@
 	</div>
 </div>
 
-<!-- eventtyp 21: 9x9 Matrix-->
+<!-- eventtyp 20: 9x9 Matrix-->
 <div class="matrixAllocationContainerStandard easyui-panel panel-body" data-options="fit:true,border:false">
  	<div class="bgimg">	</div>
 		<div class="centerContainer">
@@ -250,6 +250,82 @@
 				<div id="b34" class="block" style="float:left; border-right:2px solid black;"onclick="wrongSelection()"></div>
 				<div id="b43" class="block" style="float:left; border-left:2px solid black; "onclick="wrongSelection()"></div>
 				<div id="b44" class="block" style="float:left;"onclick="wrongSelection()"></div>
+			</div>
+		</div>
+	</div>
+		
+		<!-- eventtyp 26: 4 Ohren Modell alternativ -->
+	<div class="matrixAllocationContainerAlternate easyui-panel panel-body" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer">
+			<div class="description">conversation</div>		
+			<div class="eventContainer">
+				<div class="bc BorderHorizontalVertical"></div>
+				<div class="bc BorderHorizontal"></div>
+				<div class="bc BorderHorizontal">Self Revelation Side</div>
+				<div class="bc BorderHorizontal"></div>
+				<div class="bc BorderHorizontalVertical"></div>
+			
+				<div style="clear: both;"></div>
+				
+				<div class="bc BorderVertical"></div>
+				<div class="bc tileAcceptorTransparent"></div>
+				<div class="bc tileAcceptor"></div>
+				<div class="bc tileAcceptorTransparent"></div>
+				<div class="bc BorderVertical"></div>
+				
+				<div style="clear: both;"></div>
+					
+				<div class="bc BorderVertical"><div class="outerrightMessage">Relationship</div></div>
+				<div class="bc tileAcceptor"></div>
+				<div class="bc tileAcceptorTransparent"><div class="Message">Message</div></div>
+				<div class="bc tileAcceptor"></div>	 
+				<div class="bc BorderVertical"><div class="outerleftMessage">Appeal</div></div>
+				
+				<div style="clear: both;"></div>
+				
+				<div class="bc BorderVertical"></div>
+				<div class="bc tileAcceptorTransparent"></div>
+				<div class="bc tileAcceptor"></div>
+				<div class="bc tileAcceptorTransparent"></div>
+				<div class="bc BorderVertical"></div>
+				
+				<div style="clear: both;"></div>
+				
+				<div class="bc BorderHorizontalVertical"></div>
+				<div class="bc BorderHorizontal"></div>
+				<div class="bc BorderHorizontal">Factual Information</div>
+				<div class="bc BorderHorizontal"></div>
+				<div class="bc BorderHorizontalVertical"></div>
+				
+				<div style="clear: both;"></div>	
+				<div class="draggableTilesContainerAlternate bc"></div>
+			</div>
+			<div class="infoContainer">
+				<table class="eventInfoTable bc">
+				<tr>
+						<td class="elementNumber-header border_bottom">Element</td>
+						<td class="elementInfo-header border_bottom">Description
+					<tr>
+						<td class="elementNumber border_bottom">1</td>
+						<td id="rank1" class="elementInfo border_bottom"></td>
+					</tr>
+						<tr>
+						<td class="elementNumber border_bottom">2</td>
+						<td id="rank2" class="elementInfo border_bottom"></td>
+					</tr>
+						<tr>
+						<td class="elementNumber border_bottom">3</td>
+						<td id="rank3" class="elementInfo border_bottom"></td>
+					</tr>
+						<tr>
+						<td class="elementNumber">4</td>
+						<td id="rank4" class="elementInfo "></td>
+					</tr>
+				</table>
+			</div>
+			<div class="buttonContainer">
+				<div id="continueButtonMatrixAlternate" class="easyui-linkbutton allocationButton">Done</div>
 			</div>
 		</div>
 	</div>
