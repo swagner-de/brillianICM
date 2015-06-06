@@ -47,7 +47,7 @@ function getXml(id) {
 		hideConversation();
 		hideTextBox();
 		hideWorldmap();
-		hideMatrixAllocationAlternate
+		hideMatrixAllocationAlternate();
 		
 		showLocation();
 if(id == lastEvent){
@@ -80,7 +80,7 @@ function showLocation () {
 		hideConversation();
 		hideTextBox();
 		hideWorldmap();
-		hideMatrixAllocationAlternate
+		hideMatrixAllocationAlternate();
 		
 	    			// Musik am Anfang
 					 if(eventtype=="1"){
