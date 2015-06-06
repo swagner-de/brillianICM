@@ -124,7 +124,7 @@ function showLocation () {
 	    								loadTextBox();										
 	    							}else if (eventtype == '25'){
 	    								loadWorldMap();										
-	    							}else if (eventtype=='26'){
+	    							}else if (eventtype=='27'){
 										loadMatrixAllocationAlternate();
 									}
 									

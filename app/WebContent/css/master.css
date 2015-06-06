@@ -864,8 +864,7 @@ div.tileAcceptor {
 	overflow: hidden;
 	margin-right: 0px;
 	margin-left:0px;
-	overflow-y: auto;
-	padding-bottom: 5px;
+	overflow-y: hidden;
 	display: table-cell;
 	text-align:center;
 }
@@ -880,7 +879,7 @@ div.tileAcceptorStandard {
 	overflow: hidden;
 	margin-right: 0px;
 	margin-left:0px;
-	overflow-y: auto;
+	overflow-y: hidden;
 	padding-bottom: 5px;
 	display: table-cell;
 	text-align:center;
@@ -976,7 +975,6 @@ div.draggableTilesContainer, div.draggableTilesContainerAlternate  {
 	width:820px;
 	margin-top: 10px;
 	margin-bottom: 15px;
-	padding-bottom: 5px;
 	padding-left: 1px;
 	overflow-y: auto;
 }
@@ -990,6 +988,7 @@ div.draggableTilesContainerStandard {
     margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 15px;
+	overflow-y: auto;
 
 }
 
@@ -1014,18 +1013,18 @@ div.messageBox{
 /* tiles to be dragged and dropped*/
 div.dragTile {
 	float: center;
-	width: 150px;
-	height: 144px;
+	width: 147px;
+	height: 147px;
 	padding: 0 0 0 0px;
 	vertical-align: baseline;
-	margin-top:5px;
 	border-width: 1px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	cursor: pointer !important;
-	display: inline-block;
-	text-align: left;
+	display: table-cell;
+	vertical-align:middle;
+	text-align: center;
 	
 	/* break line for different browsers*/
 	white-space: pre-wrap;    
