@@ -191,7 +191,7 @@
 	<div class ="centerContainer">
 		<div class="description"></div>
 		<div class="messageBox"></div>
-		<div class="buttonContainer">
+		<div class="buttonContainer button-bottom">
 		<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
 	</div>
 	</div>
