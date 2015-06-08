@@ -746,26 +746,26 @@ speechSynthesis.speak(tts);
 		var dialogButton = $('.messageBoxB').eq(indexAB);
 	
 		if(href == undefined){
-					
-			}else{
-				 if(i==0){
-				var nextButton = $('.buttonContainer');
-		
-				 nextButton.append('<div class="nextButton"></div>');
-				
-				  $('.nextButton').text("NEXT");
-	
-				  nextButton.linkbutton({
-				
-				 });
-				 nextButton.bind('click', function(){	
-				 getXml(href);
-					// // speechSynthesis.cancel();
-				  });
-					
-				 }
+			 if(i==0){
+					var nextButton = $('.buttonContainer');
 			
-			i++;
+					 nextButton.append('<div class="nextButton"></div>');
+					
+					  $('.nextButton').text("NEXT");
+		
+					  nextButton.linkbutton({
+					
+					 });
+					 nextButton.bind('click', function(){	
+					 getXml(href);
+						// // speechSynthesis.cancel();
+					  });
+						
+					 }
+				
+				i++;		
+			}else{
+		
 				$('.messageBoxB').eq(indexAB).css('border-color','#FF7700');
 				$('.messageBoxBTriangle').eq(indexAB).css('border','11px solid #FF7700');
 				$('.messageBoxBTriangle2').eq(indexAB).css('border','7px solid #FF7700');
