@@ -311,7 +311,11 @@ function loadAllocation () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
-		phaseTitleContainer.eq(index).text($(this).html());
+		var itemTitle = $(this).attr('title');
+		phaseTitleContainer.eq(index).text($(this).html()); 
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		phaseTitleContainer[index].setAttribute('title',itemTitle);
+		}
 	});
 	
 	continueButton.unbind('click');
@@ -435,7 +439,11 @@ function loadAllocationTwo () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
-		phaseTitleContainerTwo.eq(index).text($(this).html());
+		var itemTitle = $(this).attr('title');
+		phaseTitleContainerTwo.eq(index).text($(this).html()); 
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		phaseTitleContainerTwo[index].setAttribute('title',itemTitle);
+		}
 	});
 	
 	continueButtonTwo.unbind('click');
@@ -1594,9 +1602,9 @@ function saveGame (userid, gamePath, imtime, imcost, imqual) {
 // Shows that a screen is loading
 function showLoading () {	
 	var text = '';
-	var imageUrl = 'images/Gruppenfotos/Gruppenfoto_FINAL.png';
-	var imageUrl2 = 'images/Gruppenfotos/Logo_Ladescreen.png';	
-	var duration = 1000;
+	var imageUrl = '';
+	var imageUrl2 = '';	
+	var duration = 2;
 	
 	var window = $('.loadingScreen');
 	var imageContainer = $('.loadingScreenImageContainer');
