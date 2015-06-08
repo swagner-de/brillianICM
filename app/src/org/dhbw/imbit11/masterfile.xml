@@ -16,8 +16,8 @@
 	<partner>Get started with a country!</partner> 
 	<!--	<date>2014-01-05 10:16:34</date>
 		<title>Call with CEO</title> -->
-		<content>Get started with a country!</content>  
-		<option href="l101e101">USA</option>
+		<content>Get started with&lt;br /&gt; a country!</content>
+		<option href="l101e101">USA&lt;br /&gt;jetzt umgebrochen</option>
 		<option href="l010e000">Germany</option>
 		<option href="l999e997">China</option>
 		<option href="l032e001">UK</option>
