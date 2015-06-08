@@ -63,7 +63,7 @@
 					<span class="icon-bar"></span>
 				</button>
 					<a class="player">
-                      <div style="width:120px"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
+                      <div style="width:120px"> <img src="img/logo_klein.png" alt="" style="width:100%">  </div>
 					</a>
 			</div>
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -87,6 +87,20 @@
             <ul class="nav navbar-nav second-button">
                  <li><a href="#" id="account" onclick="window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank')"  data-options="plain:true"></a></li>   
 			</ul>
+				<svg height="50" width="40">
+					<circle cx="15" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" />
+					<text x="15" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="white">T</text>
+				</svg>
+			<svg height="50" width="40">
+				<circle cx="15" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" />
+				<text x="15" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="white">C</text>
+			</svg>
+			<svg height="50" width="40">
+				<circle cx="15" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" />
+				<text x="15" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="white">Q</text>
+
+			</svg>
+
 			
         </div>
         </div>
