@@ -80,7 +80,7 @@
 	<div class="allocationContainerTwo easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer margin-left">
-			<div class="description"></div>
+			<div class="description description_eventtype18"></div>
 			<div class="container">
 			<div class="phaseTitleContainerTwo">
 				<div class="phaseTitleTwo bc panel-header panel-title"></div>
