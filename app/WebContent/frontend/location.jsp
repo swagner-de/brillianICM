@@ -23,7 +23,7 @@
 	
 	<!-- eventtyp 14 & 15: choose ohne Bild und eventtype 5: choose mit Bild -->
 	<div class="selectionContainer easyui-panel panel-body" data-options="fit:true,border:false">
-		<div class="container">
+		<div class="centerContainer">
 			<div class="selectionTitle">
 				<div class="selectionTitleName"></div>
 				<div class="selectionTitleText"></div>

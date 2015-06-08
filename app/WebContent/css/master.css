@@ -436,7 +436,7 @@ text-align:center;
 	padding: 0px;
 	margin-right: 0px;
 	border-width: 0 1px 0 0;
-	width: 35.51%;
+	width: 33.33%;
 	height: 100%;
 }
 
@@ -446,7 +446,7 @@ float:center;
 }
 
 .selectionOptionContainer:nth-child(odd) {
-	width: 283px;
+	/* width: 283px; */
 }
 
 .selectionOptionContainer:last-child {
@@ -629,7 +629,7 @@ div.phaseTitle:last-child,div.phase:last-child {
 
 div.phaseTitleTwo {
 	border-width: 1px;
-	width: 23.8%;
+	width: 50%;
 	line-height:10px;
 	height: 20px;
 	float: left;
@@ -639,7 +639,7 @@ div.phaseTitleTwo {
 
 div.phaseTwo {
 	border-width: 1px;
-	width: 23.8%;
+	width: 50%;
 	height: 280px;
 	vertical-align: top;
 	float: left;
