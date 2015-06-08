@@ -664,6 +664,7 @@ function loadAllocationThree () {
 }
 
 function loadConversation(){
+	
 	// liest XML aus
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();
@@ -675,11 +676,20 @@ function loadConversation(){
 //globale Variablen
 	var indexAB =0;
 	
+	
+	
 //dynamischer Ansatz
 		$xml.find('messageBoxA, messageBoxB').each(function(index){	
 		indexAB = index;
 		  conversationElementAIndex = $xml.find('messageBoxA').eq(index).index();
 		  conversationElementBIndex = $xml.find('messageBoxB').eq(index).index();
+		  
+		  
+		 
+			
+
+		  
+		  
 	
 	if(conversationElementAIndex != "-1"){
 		messageBoxA();
@@ -690,6 +700,7 @@ function loadConversation(){
 		});
 				 function messageBoxA(){ 
 					var text = $xml.find('messageBoxA').eq(indexAB).text();
+					
 					// NEW LINE 657
 						var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
 						
@@ -702,9 +713,14 @@ function loadConversation(){
 				audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
 				audio.play(); */
 					var messageBoxContainer = $('.dialogBox');
-					messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="bc messageBoxA"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
-					var messageBoxA = $('.messageBoxA').eq(indexAB).text(text);
 					
+		
+			
+  			
+					messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
+					$('.messageBoxA').eq(indexAB).text(text);
+			
+			
 					// NEW LINE 672 - 681
 					var dialogButton = $('.messageBoxA').eq(indexAB);
 					if(href == undefined){
@@ -742,6 +758,10 @@ function loadConversation(){
 			if(href == undefined){
 						
 				}else{
+				
+					$('.messageBoxB').eq(indexAB).css('border-color','#FF7700');
+					$('.messageBoxBTriangle').eq(indexAB).css('border','11px solid #FF7700');
+					$('.messageBoxBTriangle2').eq(indexAB).css('border','7px solid #FF7700');
 				dialogButton.linkbutton({
 					text:text
 				});
@@ -763,7 +783,7 @@ function loadConversation(){
 			speechSynthesis.cancel();
 			containerConversation.window('close');
 	});
-}  
+}   
 
 function loadTextBox(){
 	// liest XML aus
