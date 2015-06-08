@@ -70,7 +70,15 @@
         <div class="collapse navbar-collapse center container" id="navbarCollapse">
        
             <ul class="nav navbar-nav">
-               
+               <li><a style="margin-left: 20px;"><div class="drop">
+   <select id="contry-list" onchange="changeFunc();">
+      <option selected="true" style="display:none;">Country</option>
+      <option>USA</option>
+      <option>GERMANY</option>
+      <option>CHINA</option>
+      <option>UK</option>
+   </select>
+</div></a></li>
                 <li><a href="#" id="help"  data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a></li>
                 <!--<li><a href="#" id="imprint" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a></li>-->
                 <li><a href="#"  class=" mainMailButton"  data-options="plain:true"><%=ApplicationConstants.LAPTOP_NAME%></a></li>

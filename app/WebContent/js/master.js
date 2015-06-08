@@ -237,6 +237,22 @@ function checkBrowserName(name)
 	} 
 	return false; 
 } 
+//Dropdown contry selection
+function changeFunc() {
+    var selectBox = document.getElementById("contry-list");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    
+    if(selectedValue == "USA")
+    getXml("l101e101");
+    else if(selectedValue == "GERMANY")
+    getXml("l010e000");	
+    else if(selectedValue == "CHINA")
+    getXml("l999e997");	
+    else if(selectedValue == "UK"){
+    getXml("l01e101");	
+    }
+    //alert(selectedValue);
+   }
 
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
