@@ -475,7 +475,7 @@ float:center;
 
 div.centerContainer{
 display:block;
-width: 98%;
+width: 100%;
 height:100%;
 margin: 0 auto;
 text-align:center;
@@ -695,6 +695,14 @@ div.draggableContainerThree {
 
  div.buttonContainer {
 	text-align:center;
+}
+
+div.button-bottom{
+	position:absolute;
+	margin: 0 auto;
+	display:block;
+	width:100%;
+	bottom: 1%;
 }
 
 
@@ -993,21 +1001,21 @@ div.draggableTilesContainerStandard {
 }
 
 div.description{
+ opacity: 0.7;
+ width: 300px;
+ margin-left: auto;
+ margin-right: auto;
 font-weight: bold;
 font-size: 35px;
 padding-bottom: 20px;
 padding-top: 20px;
-}
+background-color: white;
 
-div.description_eventtype18 {
-	background-color: #D4ECF2 !important;
-	opacity: 0.90 !important;
-	filter: alpha(opacity=90) !important; /* For IE8 and earlier */
 }
 
 div.messageBox{
 	width: 50%;
-	height:80%;
+	height:70%;
 	border-width: 0px;
 	margin-left: auto;
     margin-right: auto;
@@ -1260,7 +1268,7 @@ div.messageBoxB{
 		-webkit-border-radius: 20px;  
 		-moz-border-radius: 20px;
 	border-width: 2px;
-		border-color:#FF7700;
+	border-color:#63a8b7;
 	background-color: #d5edf3;
 
 }
@@ -1287,7 +1295,7 @@ div.messageBoxBTriangle{
  width: 0px;  
   height: 0px;  
   float: right;  
-  border: 11px solid  #FF7700;  
+  border: 11px solid #63a8b7;  
     margin-top:5px;
   margin-right:15px;
   border-radius: 100px;
@@ -1298,7 +1306,7 @@ div.messageBoxBTriangle2{
   width: 0px;  
   height: 0px;  
   float: right;  
-  border: 7px solid #FF7700;  
+  border: 7px solid #63a8b7;   
     margin-left:100%;
     border-radius: 20px;
 

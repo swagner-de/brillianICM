@@ -80,7 +80,7 @@
 	<div class="allocationContainerTwo easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer margin-left">
-			<div class="description description_eventtype18"></div>
+			<div class="description"></div>
 			<div class="container">
 			<div class="phaseTitleContainerTwo">
 				<div class="phaseTitleTwo bc panel-header panel-title"></div>
@@ -180,9 +180,9 @@
 	<div class="description"></div>
 	<div class="bc dialogBox">	
 	</div>
-<!--	<div class="buttonContainer">
-		<div id="continueButtonMatrixConversation" class="easyui-linkbutton allocationButton">Done</div>
-	</div> -->
+	<div class="buttonContainer">
+	<--	<div id="continueButtonMatrixConversation" class="easyui-linkbutton allocationButton">Done</div> -->
+	</div>
 	</div>
 </div>
 <!--eventtyp: 24 textBox-->
@@ -191,10 +191,11 @@
 	<div class ="centerContainer">
 		<div class="description"></div>
 		<div class="messageBox"></div>
-	</div>
-	<div class="buttonContainer">
+		<div class="buttonContainer button-bottom">
 		<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
 	</div>
+	</div>
+	
 </div>
 
 <!-- eventtyp 20: 9x9 Matrix-->

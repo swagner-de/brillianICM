@@ -32,18 +32,8 @@ function getXml(id) {
 		$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			firstFlag = true;
 		}else{
-			var imtime = $xml.find('event').attr('imtime');
-			var imcost = $xml.find('event').attr('imcost');
-			var imqual = $xml.find('event').attr('imqual');
-
-			//Update der Time Cost Quality Werte
-			updateTCQValues(imtime, imcost, imqual);
-
 			//Füge die neue Id zum GamePath hinzu
 			gameData.gamePath = gameData.gamePath + ';' + id;
-
-				saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
-
 		}
 		
 		//Verstecke alle Location Inhalte
@@ -175,8 +165,8 @@ function loadDialog () {
 		loadVideo();
 
 	$('.dialogButton').remove();
-	dialogPartnerNameContainer.text(partner);
-	dialogPartnerTextContainer.text(content);
+	dialogPartnerNameContainer.html(partner);
+	dialogPartnerTextContainer.html(content);
 	
 		$xml.find('option').each(function(index){
 		var text = $xml.find('option').eq(index).text();
@@ -337,7 +327,11 @@ function loadAllocation () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
-		phaseTitleContainer.eq(index).text($(this).html());
+		var itemTitle = $(this).attr('title');
+		phaseTitleContainer.eq(index).text($(this).html()); 
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		phaseTitleContainer[index].setAttribute('title',itemTitle);
+		}
 	});
 	
 	continueButton.unbind('click');
@@ -461,7 +455,11 @@ function loadAllocationTwo () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
-		phaseTitleContainerTwo.eq(index).text($(this).html());
+		var itemTitle = $(this).attr('title');
+		phaseTitleContainerTwo.eq(index).text($(this).html()); 
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		phaseTitleContainerTwo[index].setAttribute('title',itemTitle);
+		}
 	});
 	
 	continueButtonTwo.unbind('click');
@@ -682,105 +680,137 @@ function loadAllocationThree () {
 }
 
 function loadConversation(){
-	// liest XML aus
-	var href = $xml.find('nextevent').attr('href');
-	var description = $xml.find('description').text();
-	var containerConversation = $('.conversation');
-	var descriptionContainerConversation = containerConversation.find('.description');
-	descriptionContainerConversation.text(description);
-	//Lade den Dialog Hintergrund	
-		 loadBackground();
+	
+	var hrefNumber = $xml.find('messageBoxB').length;
+
+var i=0;
+//liest XML aus
+var href = $xml.find('nextevent').attr('href');
+var description = $xml.find('description').text();
+var containerConversation = $('.conversation');
+var descriptionContainerConversation = containerConversation.find('.description');
+descriptionContainerConversation.text(description);
+//Lade den Dialog Hintergrund	
+ loadBackground();
 //globale Variablen
-	var indexAB =0;
-	
+var indexAB =0;
+
+
 //dynamischer Ansatz
-		$xml.find('messageBoxA, messageBoxB').each(function(index){	
-		indexAB = index;
-		  conversationElementAIndex = $xml.find('messageBoxA').eq(index).index();
-		  conversationElementBIndex = $xml.find('messageBoxB').eq(index).index();
+$xml.find('messageBoxA, messageBoxB').each(function(index){	
+indexAB = index;
+  conversationElementAIndex = $xml.find('messageBoxA').eq(index).index();
+  conversationElementBIndex = $xml.find('messageBoxB').eq(index).index();
+  
+if(conversationElementAIndex != "-1"){
+messageBoxA();
+}
+if(conversationElementBIndex != "-1"){
+messageBoxB();
+}
+});
+		 function messageBoxA(){ 
+			var text = $xml.find('messageBoxA').eq(indexAB).text();
+			
+			// NEW LINE 657
+				var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
+				
+				//text to speech			
+var tts = new SpeechSynthesisUtterance(text);
+speechSynthesis.speak(tts);
 	
-	if(conversationElementAIndex != "-1"){
-		messageBoxA();
-		}
-		if(conversationElementBIndex != "-1"){
-		messageBoxB();
-		}
-		});
-				 function messageBoxA(){ 
-					var text = $xml.find('messageBoxA').eq(indexAB).text();
-					// NEW LINE 657
-						var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
-						
-						//text to speech			
-	var tts = new SpeechSynthesisUtterance(text);
-	speechSynthesis.speak(tts);
-			
-				// google voice
-			/*		var audio = new Audio();
-				audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
-				audio.play(); */
-					var messageBoxContainer = $('.dialogBox');
-					messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="bc messageBoxA"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
-					var messageBoxA = $('.messageBoxA').eq(indexAB).text(text);
-					
-					// NEW LINE 672 - 681
-					var dialogButton = $('.messageBoxA').eq(indexAB);
-					if(href == undefined){
-							
-					}else{
-					dialogButton.linkbutton({
-						text:text
-					});
-					dialogButton.bind('click', function(){	
-					getXml(href);
-						speechSynthesis.cancel();
-					});	
-					} 
-				 }
-				 
-				 
-			 	 function messageBoxB(){
-			var text = $xml.find('messageBoxB').eq(indexAB).text();
-			// NEW LINE 688
-			var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
-			
-	var tts = new SpeechSynthesisUtterance(text);
-	tts.native = false;
-	tts.lang = 'en-GB';
-	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
-	speechSynthesis.speak(tts);
+		// google voice
+	/*		var audio = new Audio();
+		audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
+		audio.play(); */
 			var messageBoxContainer = $('.dialogBox');
-			messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
-			var messageBoxB = $('.messageBoxB').eq(indexAB);
-			messageBoxB.text(text);
-			
-					// NEW LINE 700 - 709
-			var dialogButton = $('.messageBoxB').eq(indexAB);
-			
+		
+			messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
+			$('.messageBoxA').eq(indexAB).text(text);
+	
+	
+			// NEW LINE 672 - 681
+			var dialogButton = $('.messageBoxA').eq(indexAB);
+		
 			if(href == undefined){
-						
-				}else{
-				dialogButton.linkbutton({
-					text:text
-				});
-				dialogButton.bind('click', function(){	
-				getXml(href);
-					speechSynthesis.cancel();
-				});	
-				} 
-			 } 
-				 
-				 	showConversation();
-	var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
+					
+			}else{
+			dialogButton.linkbutton({
+				text:text
+			});
+			dialogButton.bind('click', function(){	
+			getXml(href);
+				speechSynthesis.cancel();
+			});	
+			} 
+		 }
+		 
+		 
+	 	 function messageBoxB(){
+	var text = $xml.find('messageBoxB').eq(indexAB).text();
+	// NEW LINE 688
+	var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
 
 	
+var tts = new SpeechSynthesisUtterance(text);
+tts.native = false;
+tts.lang = 'en-GB';
+tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+speechSynthesis.speak(tts);
+	var messageBoxContainer = $('.dialogBox');
+	messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
+	var messageBoxB = $('.messageBoxB').eq(indexAB);
+	messageBoxB.text(text);
+	
+			// NEW LINE 700 - 709
+	var dialogButton = $('.messageBoxB').eq(indexAB);
+
+	if(href == undefined){
+			i++;
+						 if(i==hrefNumber){
+			var nextButton = $('.buttonContainer');
+	
+			 nextButton.append('<div class="nextButton"></div>');
+			
+			  $('.nextButton').text("NEXT");
+
+			  nextButton.linkbutton({
+			
+			 });
+			 nextButton.bind('click', function(){	
+			 getXml(href);
+				// // speechSynthesis.cancel();
+			  });
+				
+			 }
 		
-	continueButtonMatrixConversation.unbind('click');
-	continueButtonMatrixConversation.bind('click', function(){
+			
+		}else{
+
+			$('.messageBoxB').eq(indexAB).css('border-color','#FF7700');
+			$('.messageBoxBTriangle').eq(indexAB).css('border','11px solid #FF7700');
+			$('.messageBoxBTriangle2').eq(indexAB).css('border','7px solid #FF7700');
+		dialogButton.linkbutton({
+			text:text
+		});
+		dialogButton.bind('click', function(){	
 		getXml(href);
 			speechSynthesis.cancel();
-			containerConversation.window('close');
-	});
+		});	
+		} 
+	 } 
+		 
+		 	showConversation();
+var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
+
+
+
+continueButtonMatrixConversation.unbind('click');
+continueButtonMatrixConversation.bind('click', function(){
+getXml(href);
+	speechSynthesis.cancel();
+	containerConversation.window('close');
+});
 }  
 
 function loadTextBox(){
@@ -1335,12 +1365,14 @@ function setBackground (backgroundUrl) {
 		backgroundPictureUrlNew = 'url('+backgroundUrl+')';
 			var eventtype = $xml.find('event').attr('eventtype');
 
-			backgroundPictureUrlOld = $('.bgimg').css('content');
+			backgroundPictureUrlOld = $('.bgimg').css('background');
 			if (backgroundPictureUrlOld.split("images/")[1] != backgroundPictureUrlNew.split("images/")[1]) {
 				$('.bgimg').css('content', backgroundPictureUrlNew);
 						$('.bgimg').css('width', '100%');
+						$('.bgimg').css('height', '100%');
 						$('.bgimg').css('float', 'left');
 						$('.bgimg').css('z-index', '-1');
+						$('.bgimg').css('image-size', 'cover');
 			}
 }
 
@@ -1618,9 +1650,9 @@ function saveGame (userid, gamePath, imtime, imcost, imqual) {
 // Shows that a screen is loading
 function showLoading () {	
 	var text = '';
-	var imageUrl = 'images/Gruppenfotos/Gruppenfoto_FINAL.png';
-	var imageUrl2 = 'images/Gruppenfotos/Logo_Ladescreen.png';	
-	var duration = 1000;
+	var imageUrl = '';
+	var imageUrl2 = '';	
+	var duration = 2;
 	
 	var window = $('.loadingScreen');
 	var imageContainer = $('.loadingScreenImageContainer');
@@ -1701,45 +1733,6 @@ function checkCookie()
     	return false;
     }
 }
-
-
-// Veränderung der TCQ WERTE
-function updateTCQValues (imtime, imcost, imqual) {
-	try {
-		if(imtime.charAt(0) == '+'){
-			gameData.imtime = parseInt(gameData.imtime, 10) + parseInt(imtime.substring(1), 10);
-		}else if (imtime.charAt(0) == '-'){
-			gameData.imtime = gameData.imtime - imtime.substring(1);
-		}
-	}catch(err){
-
-	}
-	try {
-		if(imcost.charAt(0) == '+'){
-			gameData.imcost = parseInt(gameData.imcost, 10) + parseInt(imcost.substring(1), 10);
-		}else if (imcost.charAt(0) == '-'){
-			gameData.imcost = gameData.imcost - imcost.substring(1);
-		}
-	}catch(err){
-
-	}
-	try {
-		if(imqual.charAt(0) == '+'){
-			gameData.imqual = parseInt(gameData.imqual, 10) + parseInt(imqual.substring(1), 10);
-		}else if (imqual.charAt(0) == '-'){
-			gameData.imqual = gameData.imqual - imqual.substring(1);
-		}
-	}catch(err){
-
-	}
-	if(gameData.imtime>100){gameData.imtime=100;}
-	else if(gameData.imtime<0){gameData.imtime=0;}
-	if(gameData.imcost>100){gameData.imcost=100;}
-	else if(gameData.imcost<0){gameData.imcost=0;}
-	if(gameData.imqual>100){gameData.imqual=100;}
-	else if(gameData.imqual<0){gameData.imqual=0;}
-}
-
 
 //Automatically executed when Browser-Window is resized
 $(window).resize(function() {
