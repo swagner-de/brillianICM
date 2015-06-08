@@ -47,9 +47,10 @@
 	href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
 <link type="text/css" rel="stylesheet" href="css/master.css" /> -->
 <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
 <script type="text/javascript" src="js/master.js"></script>
 
+<!-- Imprint function -->
 <!--  <script type="text/javascript">
 	$(document).ready(function(){
 		$('body').show();
@@ -58,6 +59,21 @@
 		});
 	});
 </script>-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+
+
 </head>
 <body  id="page-top"  data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -269,27 +285,7 @@ This game is webbased and should run in modern Browsers including mobile devices
         </footer>
 	</div>
 
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-     <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+    
 
 </body>
 
