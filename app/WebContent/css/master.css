@@ -475,7 +475,7 @@ float:center;
 
 div.centerContainer{
 display:block;
-width: 98%;
+width: 100%;
 height:100%;
 margin: 0 auto;
 text-align:center;
@@ -695,6 +695,11 @@ div.draggableContainerThree {
 
  div.buttonContainer {
 	text-align:center;
+	bottom: 1%;
+	position:absolute;
+	margin: 0 auto;
+	display:block;
+	width:100%;
 }
 
 
@@ -999,15 +1004,9 @@ padding-bottom: 20px;
 padding-top: 20px;
 }
 
-div.description_eventtype18 {
-	background-color: #D4ECF2 !important;
-	opacity: 0.90 !important;
-	filter: alpha(opacity=90) !important; /* For IE8 and earlier */
-}
-
 div.messageBox{
 	width: 50%;
-	height:80%;
+	height:70%;
 	border-width: 0px;
 	margin-left: auto;
     margin-right: auto;
