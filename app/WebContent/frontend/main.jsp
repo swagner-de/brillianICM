@@ -71,7 +71,7 @@
        
             <ul class="nav navbar-nav">
                <li><a style="margin-left: 20px;"><div class="drop">
-   <select id="contry-list" onchange="changeFunc();">
+   <select class="countryselect" id="contry-list" onchange="changeFunc();">
       <option selected="true" style="display:none;">Country</option>
       <option>USA</option>
       <option>GERMANY</option>
