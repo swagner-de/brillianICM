@@ -276,14 +276,7 @@ This game is webbased and should run in modern Browsers including mobile devices
     <!-- Map Section -->
  <!--<div id="map"></div>  -->  
 
-    <!-- Footer -->
-    <div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
-		<footer>
-        <div class=" text-center">
-            <p>Copyright &copy; brillianICM 2015</p>
-        </div>
-        </footer>
-	</div>
+    
 
     
 
