@@ -165,8 +165,8 @@ function loadDialog () {
 		loadVideo();
 
 	$('.dialogButton').remove();
-	dialogPartnerNameContainer.text(partner);
-	dialogPartnerTextContainer.text(content);
+	dialogPartnerNameContainer.html(partner);
+	dialogPartnerTextContainer.html(content);
 	
 		$xml.find('option').each(function(index){
 		var text = $xml.find('option').eq(index).text();
