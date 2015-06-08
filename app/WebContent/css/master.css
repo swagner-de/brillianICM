@@ -1262,7 +1262,7 @@ div.messageBoxB{
 		-webkit-border-radius: 20px;  
 		-moz-border-radius: 20px;
 	border-width: 2px;
-		border-color:#FF7700;
+	border-color:#63a8b7;
 	background-color: #d5edf3;
 
 }
@@ -1289,7 +1289,7 @@ div.messageBoxBTriangle{
  width: 0px;  
   height: 0px;  
   float: right;  
-  border: 11px solid  #FF7700;  
+  border: 11px solid #63a8b7;  
     margin-top:5px;
   margin-right:15px;
   border-radius: 100px;
@@ -1300,7 +1300,7 @@ div.messageBoxBTriangle2{
   width: 0px;  
   height: 0px;  
   float: right;  
-  border: 7px solid #FF7700;  
+  border: 7px solid #63a8b7;   
     margin-left:100%;
     border-radius: 20px;
 
