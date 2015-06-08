@@ -32,8 +32,18 @@ function getXml(id) {
 		$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			firstFlag = true;
 		}else{
+			var imtime = $xml.find('event').attr('imtime');
+			var imcost = $xml.find('event').attr('imcost');
+			var imqual = $xml.find('event').attr('imqual');
+
+			//Update der Time Cost Quality Werte
+			updateTCQValues(imtime, imcost, imqual);
+
 			//Füge die neue Id zum GamePath hinzu
 			gameData.gamePath = gameData.gamePath + ';' + id;
+
+				saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
+
 		}
 		
 		//Verstecke alle Location Inhalte
@@ -1675,6 +1685,45 @@ function checkCookie()
     	return false;
     }
 }
+
+
+// Veränderung der TCQ WERTE
+function updateTCQValues (imtime, imcost, imqual) {
+	try {
+		if(imtime.charAt(0) == '+'){
+			gameData.imtime = parseInt(gameData.imtime, 10) + parseInt(imtime.substring(1), 10);
+		}else if (imtime.charAt(0) == '-'){
+			gameData.imtime = gameData.imtime - imtime.substring(1);
+		}
+	}catch(err){
+
+	}
+	try {
+		if(imcost.charAt(0) == '+'){
+			gameData.imcost = parseInt(gameData.imcost, 10) + parseInt(imcost.substring(1), 10);
+		}else if (imcost.charAt(0) == '-'){
+			gameData.imcost = gameData.imcost - imcost.substring(1);
+		}
+	}catch(err){
+
+	}
+	try {
+		if(imqual.charAt(0) == '+'){
+			gameData.imqual = parseInt(gameData.imqual, 10) + parseInt(imqual.substring(1), 10);
+		}else if (imqual.charAt(0) == '-'){
+			gameData.imqual = gameData.imqual - imqual.substring(1);
+		}
+	}catch(err){
+
+	}
+	if(gameData.imtime>100){gameData.imtime=100;}
+	else if(gameData.imtime<0){gameData.imtime=0;}
+	if(gameData.imcost>100){gameData.imcost=100;}
+	else if(gameData.imcost<0){gameData.imcost=0;}
+	if(gameData.imqual>100){gameData.imqual=100;}
+	else if(gameData.imqual<0){gameData.imqual=0;}
+}
+
 
 //Automatically executed when Browser-Window is resized
 $(window).resize(function() {
