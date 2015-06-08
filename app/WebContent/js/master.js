@@ -1594,7 +1594,7 @@ function showLoading () {
 	var text = '';
 	var imageUrl = '';
 	var imageUrl2 = '';	
-	var duration = 1;
+	var duration = 2;
 	
 	var window = $('.loadingScreen');
 	var imageContainer = $('.loadingScreenImageContainer');
