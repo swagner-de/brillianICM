@@ -1592,9 +1592,9 @@ function saveGame (userid, gamePath, imtime, imcost, imqual) {
 // Shows that a screen is loading
 function showLoading () {	
 	var text = '';
-	var imageUrl = 'images/Gruppenfotos/Gruppenfoto_FINAL.png';
-	var imageUrl2 = 'images/Gruppenfotos/Logo_Ladescreen.png';	
-	var duration = 1000;
+	var imageUrl = '';
+	var imageUrl2 = '';	
+	var duration = 1;
 	
 	var window = $('.loadingScreen');
 	var imageContainer = $('.loadingScreenImageContainer');
