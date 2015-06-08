@@ -664,104 +664,58 @@ function loadAllocationThree () {
 }
 
 function loadConversation(){
-	
-	// liest XML aus
-	var href = $xml.find('nextevent').attr('href');
-	var description = $xml.find('description').text();
-	var containerConversation = $('.conversation');
-	var descriptionContainerConversation = containerConversation.find('.description');
-	descriptionContainerConversation.text(description);
-	//Lade den Dialog Hintergrund	
-		 loadBackground();
+	var i=0;
+// liest XML aus
+var href = $xml.find('nextevent').attr('href');
+var description = $xml.find('description').text();
+var containerConversation = $('.conversation');
+var descriptionContainerConversation = containerConversation.find('.description');
+descriptionContainerConversation.text(description);
+//Lade den Dialog Hintergrund	
+	 loadBackground();
 //globale Variablen
-	var indexAB =0;
-	
-	
-	
-//dynamischer Ansatz
-		$xml.find('messageBoxA, messageBoxB').each(function(index){	
-		indexAB = index;
-		  conversationElementAIndex = $xml.find('messageBoxA').eq(index).index();
-		  conversationElementBIndex = $xml.find('messageBoxB').eq(index).index();
-		  
-		  
-		 
-			
+var indexAB =0;
 
-		  
-		  
-	
-	if(conversationElementAIndex != "-1"){
-		messageBoxA();
-		}
-		if(conversationElementBIndex != "-1"){
-		messageBoxB();
-		}
-		});
-				 function messageBoxA(){ 
-					var text = $xml.find('messageBoxA').eq(indexAB).text();
+
+//dynamischer Ansatz
+	$xml.find('messageBoxA, messageBoxB').each(function(index){	
+	indexAB = index;
+	  conversationElementAIndex = $xml.find('messageBoxA').eq(index).index();
+	  conversationElementBIndex = $xml.find('messageBoxB').eq(index).index();
+	  
+if(conversationElementAIndex != "-1"){
+	messageBoxA();
+	}
+	if(conversationElementBIndex != "-1"){
+	messageBoxB();
+	}
+	});
+			 function messageBoxA(){ 
+				var text = $xml.find('messageBoxA').eq(indexAB).text();
+				
+				// NEW LINE 657
+					var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
 					
-					// NEW LINE 657
-						var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
-						
-						//text to speech			
-	var tts = new SpeechSynthesisUtterance(text);
-	speechSynthesis.speak(tts);
-			
-				// google voice
-			/*		var audio = new Audio();
-				audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
-				audio.play(); */
-					var messageBoxContainer = $('.dialogBox');
-					
+					//text to speech			
+var tts = new SpeechSynthesisUtterance(text);
+speechSynthesis.speak(tts);
 		
+			// google voice
+		/*		var audio = new Audio();
+			audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
+			audio.play(); */
+				var messageBoxContainer = $('.dialogBox');
 			
-  			
-					messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
-					$('.messageBoxA').eq(indexAB).text(text);
+				messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
+				$('.messageBoxA').eq(indexAB).text(text);
+		
+		
+				// NEW LINE 672 - 681
+				var dialogButton = $('.messageBoxA').eq(indexAB);
 			
-			
-					// NEW LINE 672 - 681
-					var dialogButton = $('.messageBoxA').eq(indexAB);
-					if(href == undefined){
-							
-					}else{
-					dialogButton.linkbutton({
-						text:text
-					});
-					dialogButton.bind('click', function(){	
-					getXml(href);
-						speechSynthesis.cancel();
-					});	
-					} 
-				 }
-				 
-				 
-			 	 function messageBoxB(){
-			var text = $xml.find('messageBoxB').eq(indexAB).text();
-			// NEW LINE 688
-			var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
-			
-	var tts = new SpeechSynthesisUtterance(text);
-	tts.native = false;
-	tts.lang = 'en-GB';
-	tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
-	speechSynthesis.speak(tts);
-			var messageBoxContainer = $('.dialogBox');
-			messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
-			var messageBoxB = $('.messageBoxB').eq(indexAB);
-			messageBoxB.text(text);
-			
-					// NEW LINE 700 - 709
-			var dialogButton = $('.messageBoxB').eq(indexAB);
-			
-			if(href == undefined){
+				if(href == undefined){
 						
 				}else{
-				
-					$('.messageBoxB').eq(indexAB).css('border-color','#FF7700');
-					$('.messageBoxBTriangle').eq(indexAB).css('border','11px solid #FF7700');
-					$('.messageBoxBTriangle2').eq(indexAB).css('border','7px solid #FF7700');
 				dialogButton.linkbutton({
 					text:text
 				});
@@ -770,20 +724,73 @@ function loadConversation(){
 					speechSynthesis.cancel();
 				});	
 				} 
-			 } 
-				 
-				 	showConversation();
-	var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
+			 }
+			 
+			 
+		 	 function messageBoxB(){
+		var text = $xml.find('messageBoxB').eq(indexAB).text();
+		// NEW LINE 688
+		var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
+		
+var tts = new SpeechSynthesisUtterance(text);
+tts.native = false;
+tts.lang = 'en-GB';
+tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Male'; });
+speechSynthesis.speak(tts);
+		var messageBoxContainer = $('.dialogBox');
+		messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
+		var messageBoxB = $('.messageBoxB').eq(indexAB);
+		messageBoxB.text(text);
+		
+				// NEW LINE 700 - 709
+		var dialogButton = $('.messageBoxB').eq(indexAB);
+	
+		if(href == undefined){
+					
+			}else{
+				 if(i==0){
+				var nextButton = $('.buttonContainer');
+		
+				 nextButton.append('<div class="nextButton"></div>');
+				
+				  $('.nextButton').text("NEXT");
+	
+				  nextButton.linkbutton({
+				
+				 });
+				 nextButton.bind('click', function(){	
+				 getXml(href);
+					// // speechSynthesis.cancel();
+				  });
+					
+				 }
+			
+			i++;
+				$('.messageBoxB').eq(indexAB).css('border-color','#FF7700');
+				$('.messageBoxBTriangle').eq(indexAB).css('border','11px solid #FF7700');
+				$('.messageBoxBTriangle2').eq(indexAB).css('border','7px solid #FF7700');
+			dialogButton.linkbutton({
+				text:text
+			});
+			dialogButton.bind('click', function(){	
+			getXml(href);
+				speechSynthesis.cancel();
+			});	
+			} 
+		 } 
+			 
+			 	showConversation();
+var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
+
 
 	
-		
-	continueButtonMatrixConversation.unbind('click');
-	continueButtonMatrixConversation.bind('click', function(){
-		getXml(href);
-			speechSynthesis.cancel();
-			containerConversation.window('close');
-	});
-}   
+continueButtonMatrixConversation.unbind('click');
+continueButtonMatrixConversation.bind('click', function(){
+	getXml(href);
+		speechSynthesis.cancel();
+		containerConversation.window('close');
+});
+}  
 
 function loadTextBox(){
 	// liest XML aus
