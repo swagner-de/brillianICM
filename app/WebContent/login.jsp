@@ -37,11 +37,6 @@
     <link href="css/grayscale.css" rel="stylesheet">
     <link href="css/bootstrap-changes.css" rel="stylesheet"> 
     
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">  
-    
        <!-- Overwriting Font -->
      <link href="css/font.css" rel="stylesheet">
     
@@ -52,9 +47,10 @@
 	href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
 <link type="text/css" rel="stylesheet" href="css/master.css" /> -->
 <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
 <script type="text/javascript" src="js/master.js"></script>
 
+<!-- Imprint function -->
 <!--  <script type="text/javascript">
 	$(document).ready(function(){
 		$('body').show();
@@ -63,6 +59,21 @@
 		});
 	});
 </script>-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+
+
 </head>
 <body  id="page-top"  data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -265,36 +276,9 @@ This game is webbased and should run in modern Browsers including mobile devices
     <!-- Map Section -->
  <!--<div id="map"></div>  -->  
 
-    <!-- Footer -->
-    <div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
-		<footer>
-        <div class=" text-center">
-            <p>Copyright &copy; brillianICM 2015</p>
-        </div>
-        </footer>
-	</div>
+    
 
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-     <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+    
 
 </body>
 

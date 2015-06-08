@@ -95,13 +95,7 @@
 		</div>
 		<!--  <div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>-->
 	</div>
-	<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
-		<footer>
-        <div class=" text-center">
-            <p>Copyright &copy; brillianICM 2015</p>
-        </div>
-        </footer>
-	</div>
+	
 </body>
 <script type="text/javascript">
 		$('body').show();

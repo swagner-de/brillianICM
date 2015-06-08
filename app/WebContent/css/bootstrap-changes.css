@@ -35,3 +35,25 @@ body {
 	border-color: #63a8b7;
 }
 
+select {
+    padding: 0 0 0 20px;
+	text-transform: uppercase;
+    border: 0;
+    width: 100%;
+    background-color: transparent;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    font-size:inherit;
+    
+}
+select option {
+     text-transform: uppercase;
+     text-align: center;
+     background-color: #63a8b7;
+}
+.drop
+  {
+  width:150px;
+  font-size: inherit;
+   }
+
+

@@ -39,11 +39,6 @@
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="css/speechboble.css" rel="stylesheet">
 		
 	<script type="text/javascript" src="js/master.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
@@ -75,7 +70,15 @@
         <div class="collapse navbar-collapse center container" id="navbarCollapse">
        
             <ul class="nav navbar-nav">
-               
+               <li><a style="margin-left: 20px;"><div class="drop">
+   <select id="contry-list" onchange="changeFunc();">
+      <option selected="true" style="display:none;">Country</option>
+      <option>USA</option>
+      <option>GERMANY</option>
+      <option>CHINA</option>
+      <option>UK</option>
+   </select>
+</div></a></li>
                 <li><a href="#" id="help"  data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a></li>
                 <!--<li><a href="#" id="imprint" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a></li>-->
                 <li><a href="#"  class=" mainMailButton"  data-options="plain:true"><%=ApplicationConstants.LAPTOP_NAME%></a></li>
@@ -113,12 +116,6 @@
 		
 		</div>
 	</div>
-	<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden;">
-		<footer>
-        <div class=" text-center">
-            <p>Copyright &copy; brillianICM 2015</p>
-        </div>
-        </footer>
-	</div>
+
 </body>
 </html>
