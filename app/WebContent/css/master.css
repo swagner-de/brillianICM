@@ -1020,7 +1020,7 @@ div.dragTile {
 	border-width: 1px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	white-space: normal;
 	cursor: pointer !important;
 	display: table-cell;
 	vertical-align:middle;

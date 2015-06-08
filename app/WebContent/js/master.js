@@ -141,6 +141,9 @@ function loadWorldMap()
 	// liest XML aus
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();	
+	var container = $('.worldmap');
+	var descriptionContainer =  container.find('.description');
+	descriptionContainer.text(description);
 	loadWorldMapAsBackground();
 	var positions = $xml.find('position');
 	var xPos = positions.attr('x');
