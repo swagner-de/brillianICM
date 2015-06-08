@@ -321,7 +321,11 @@ function loadAllocation () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
-		phaseTitleContainer.eq(index).text($(this).html());
+		var itemTitle = $(this).attr('title');
+		phaseTitleContainer.eq(index).text($(this).html()); 
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		phaseTitleContainer[index].setAttribute('title',itemTitle);
+		}
 	});
 	
 	continueButton.unbind('click');
@@ -445,7 +449,11 @@ function loadAllocationTwo () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
-		phaseTitleContainerTwo.eq(index).text($(this).html());
+		var itemTitle = $(this).attr('title');
+		phaseTitleContainerTwo.eq(index).text($(this).html()); 
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		phaseTitleContainerTwo[index].setAttribute('title',itemTitle);
+		}
 	});
 	
 	continueButtonTwo.unbind('click');
