@@ -1001,23 +1001,23 @@ div.draggableTilesContainerStandard {
 }
 
 div.description{
-  opacity: 0.7;
   display: inline-block;
   font-weight: bold;
   font-size: 35px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.8);
 }
 
 div.messageBox{
 	width: 50%;
 	height:70%;
+	   text-align: justify;
 	border-width: 0px;
 	margin-left: auto;
     margin-right: auto;
 	overflow: auto;
-	
+	background: rgba(255, 255, 255, 0.8);
 }
 
 
