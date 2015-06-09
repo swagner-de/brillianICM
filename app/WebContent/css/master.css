@@ -1011,8 +1011,7 @@ div.description{
 
 div.messageBox{
 	width: 50%;
-	height:70%;
-	   text-align: justify;
+	text-align: justify;
 	border-width: 0px;
 	margin-left: auto;
     margin-right: auto;
