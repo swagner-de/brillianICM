@@ -327,9 +327,11 @@ function loadAllocation () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
+		//*** Code needed for tooltip function
 		var itemTitle = $(this).attr('title');
 		phaseTitleContainer.eq(index).text($(this).html()); 
 		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		//***
 		phaseTitleContainer[index].setAttribute('title',itemTitle);
 		}
 	});
@@ -455,9 +457,11 @@ function loadAllocationTwo () {
 	descriptionContainer.text(description);
 	
 	$xml.find('column').each(function(index){
+		//*** code needed for tooltip finction
 		var itemTitle = $(this).attr('title');
 		phaseTitleContainerTwo.eq(index).text($(this).html()); 
 		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+		//***
 		phaseTitleContainerTwo[index].setAttribute('title',itemTitle);
 		}
 	});
