@@ -1820,3 +1820,15 @@ $.extend({
 		};
 	}
 });
+
+function ShowTooltip(evt)
+{
+	tooltip.setAttributeNS(null,"x",evt.clientX-8);
+	tooltip.setAttributeNS(null,"y",evt.clientY-5);
+	tooltip.setAttributeNS(null,"visibility","visible");
+}
+
+function HideTooltip()
+{
+	tooltip.setAttributeNS(null,"visibility","hidden");
+}
