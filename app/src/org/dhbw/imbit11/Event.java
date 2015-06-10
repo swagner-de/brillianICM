@@ -64,7 +64,6 @@ public class Event extends HttpServlet {
 		//accept POST variables from UI and return xml of node
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
-		
 		String id = request.getParameter("id");
 		String userid = request.getParameter("userid");
 		//TODO get parameters only if needed (safe only ?) #339
@@ -74,38 +73,37 @@ public class Event extends HttpServlet {
 		String gamePath = request.getParameter("gamePath");
 		String type = request.getParameter("type");
 		
-		String data = "";	
-		ArrayList<Object> list = null;	
+		String data = "";
+		ArrayList<Object> list = null;
 
-		EventExtractor eventExtractor = new EventExtractor();
-		if(type.equals("node")){			
-			data = eventExtractor.getNode(id);
-		}else if(type.equals("loadGame")){
-			UserRealm userRealm = new UserRealm();
-			try {	
-				list = userRealm.getUserProgress(userid);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		switch (type){
+			case "node": data = new EventExtractor().getNode(id); break;
+			case "saveGame":{
+				UserRealm userRealm = new UserRealm();
+				try {
+					userRealm.setUserProgress(userid, imcost, imqual, imtime, gamePath);
+					userRealm.setUserCountry(userid, id);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
 			}
-		}else if(type.equals("saveGame")){
-			UserRealm userRealm = new UserRealm();
-			try {
-				userRealm.setUserProgress(userid, imcost, imqual, imtime, gamePath);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			case "inbox": data = new EventExtractor().getMails(gamePath);break;
+			case "sent": //mailDrafts = eventExtractor.getMailDrafts(gamePath);break;
+			case "loadGame": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					list = userRealm.getUserProgress(userid);
+					data = list.toString();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
 			}
-		}else if(type.equals("inbox")){		
-			data = eventExtractor.getMails(gamePath);	
-		}else if(type.equals("sent")){
-			//mailDrafts = eventExtractor.getMailDrafts(gamePath);
-		}	
-		
-		if(type.equals("loadGame")){
-			response.getWriter().print(list);			
-		}else{
-			response.getWriter().print(data);
+			default: response.sendError(HttpServletResponse.SC_NOT_FOUND);
 		}
+		response.getWriter().print(data);
 	}
 }

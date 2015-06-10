@@ -42,6 +42,7 @@ public class UserRealm extends JdbcRealm {
 	protected String updatePasswordQuery = "UPDATE `user`SET `password`=? WHERE `email`=?";
 	protected String setProgressQuery = "UPDATE `user_progress` SET `cost`=?, `quality`=?, `time`=?, `path`=? WHERE `user_id` = ?";
 	protected String setLvlIdQuery = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
+	protected String setCountryTrueQuery = "UPDATE `user_progress` SET %%=true WHERE `user_id` = ?";
 	protected String getProgressQuery = "SELECT `last_name`, `first_name`, `gender`,`cost`, `quality`, `time`, `path` FROM `user_progress`, `user` WHERE `user_progress`.`user_id`= `user`.`user_id` AND `user_progress`.`user_id`=?";
 
 	protected String getStudentsForProfessorQuery = "SELECT `first_name`, `last_name`, `cost`, `quality`, `time` , `group_name`, `email`, `group`  FROM `user`, `user_progress` , `group` WHERE `user`.`user_id` = `user_progress`.`user_id` AND`user`.`group` IN (SELECT `group_id` FROM `group` WHERE `professor_id` = (SELECT `user_id` FROM`user` WHERE `email` = ?)) AND `user`.`group` = `group`.`group_id` ORDER BY `last_name` ASC";
@@ -582,6 +583,15 @@ public class UserRealm extends JdbcRealm {
 			JdbcUtils.closeStatement(ps);
 			conn.close();
 		}
+	}
+
+	public void setUserCountry(String userId, String id) throws SQLException{
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = conn.prepareStatement(setCountryTrueQuery.replace("%%", "`"+id.substring(0,2)+"`"));
+		ps.setString(1,userId);
+		ps.executeUpdate();
+		JdbcUtils.closeStatement(ps);
+		conn.close();
 	}
 
 	/**
