@@ -121,9 +121,9 @@
             <div class="container">
             
              <div class="row">
-                    <div class="col-md-8" style="padding-top:20px; color: #000; width: 32%;">
+                    <div class="col-md-8">
                         <h1 class="brand-heading" style="text-transform:none; text-align: left;"></h1>
-                        <p class="intro-text" style="text-align: center;">The Management Game<br> for our<br> Intercultural Competencies</p>
+                        <p class="intro-text" style="text-align: center;">The Management Game for Your<br> Intercultural Competencies</p>
                        
                     </div>
                 </div>
