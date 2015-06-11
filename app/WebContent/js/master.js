@@ -47,6 +47,7 @@ function getXml(id) {
 		hideConversation();
 		hideTextBox();
 		hideWorldmap();
+		hideScrollBar();
 		hideMatrixAllocationAlternate();
 		
 		showLocation();
@@ -79,6 +80,7 @@ function showLocation () {
 		hideMatrixAllocationStandard();
 		hideConversation();
 		hideTextBox();
+		hideScrollBar();
 		hideWorldmap();
 		hideMatrixAllocationAlternate();
 		
