@@ -51,23 +51,29 @@
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">
-  <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" >
-        <div class="container">
-             <!-- Brand and toggle get grouped for better mobile display -->
+  <script type="text/javascript" src="js/wz_tooltip.js"></script>
+
+    <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
+      <nav class="navbar navbar-custom navbar-fixed-top" >
+        <div class="container" style="margin: auto auto;">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class=" page-scroll" href="#page-top">
-                    <div style="width:120px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
-                </a>
-            </div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+					
+                      <div style="width:120px"> <img src="img/logo_klein.png" alt="" style="width:100%">  </div>
+					
+			</div>	
     <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse center container" id="navbarCollapse">
        
             <ul class="nav navbar-nav">
-               <li><a style="margin-left: 20px;"><div class="drop">
+               <li><a style="margin-left: 100px;"><div class="drop">
    <select class="countryselect" id="contry-list" onchange="changeFunc();">
       <option selected="true" style="display:none;">Country</option>
       <option>USA</option>
