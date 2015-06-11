@@ -20,7 +20,7 @@
 		<option href="l101e101">USA&lt;br /&gt;jetzt umgebrochen</option>
 		<option href="l010e000">Germany</option>
 		<option href="l999e997">China</option>
-		<option href="l032e001">UK</option>
+		<option href="l999e900">UK</option>
 			<bgimg>role3pic7.png</bgimg>
 			<bgvid>l002e000.mp4</bgvid>
 	</event>
@@ -255,6 +255,30 @@
 	<!--	<bgvid>l002e000.mp4</bgvid> -->
 		<nextevent href="l032e001" />
 	</event>
+	
+	<event level="p9" element="0" id="l999e900" eventtype="26" imcost="0"
+		imqual="0" imtime="0" loc="0">
+		<description>Globe Data Information</description>
+		<powerDistance>1</powerDistance>
+		<institutionalCollectivism>1.5</institutionalCollectivism>
+		<genderEgalitarism>2</genderEgalitarism>
+		<ingroupCollectivism>3</ingroupCollectivism>
+		<performanceOrientation>3.5</performanceOrientation>
+		<futureOrientation>4</futureOrientation>
+		<uncertaintyAvoidance>4.5</uncertaintyAvoidance>
+		<assertiveness>3.5</assertiveness>
+		<humaneOrientation>3</humaneOrientation> 
+		
+		<bgimg>content8pic1.png</bgimg> 
+	<!--	<bgvid>l002e000.mp4</bgvid> -->
+		<nextevent href="l999e999" />
+	</event>
+	
+	
+	
+	
+	
+	
 	
 	
 	<event level="300" element="0" id="l300e050" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">

@@ -1358,3 +1358,56 @@ border-color:transparent;
    display:block;
    }
    
+    /*Evventtyp: 26*/
+   div.inputRowPD,div.inputRowInsC,div.inputRowGE,div.inputRowIngC,div.inputRowPO,div.inputRowFO,div.inputRowUA,div.inputRowA, div.inputRowHO {
+   float:left;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   }
+   
+   input{
+   float:left;
+   }
+  
+   div.scrollBarContent{
+   background-color: white;
+   	margin-left: auto;
+    margin-right: auto;
+   width:530px;
+   height:550px;
+   opacity: 0.9
+   }
+  
+   div.solutionPD, div.solutionInsC, div.solutionGE, div.solutionIngC, div.solutionPO, div.solutionFO, div.solutionPOFO,div.solutionUA, div.solutionA, div.solutionHO{
+   width: 28px; 
+   float:right;  
+   text-align:right;
+   }
+   
+  input.text{
+  width:230px; 
+  border:none;
+  font-weight: bold;
+  font-size:25px;
+  }
+  
+    input.input{
+width:25px; 
+border:none;
+  font-size:25px;
+  }
+  
+  div.numberOne{
+  float:left;
+  }
+  
+ div.description2{
+ font-size:28px;
+ width:400px;
+ float:right;
+ background-color:white;
+ }
+  div.numberTwo{
+  float:right;
+  }
+   

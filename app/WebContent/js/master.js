@@ -123,7 +123,9 @@ function showLocation () {
 	    							}else if (eventtype == '24'){
 	    								loadTextBox();										
 	    							}else if (eventtype == '25'){
-	    								loadWorldMap();										
+	    								loadWorldMap();	
+	    							}else if (eventtype == '26'){
+	    								loadScrollBar();											
 	    							}else if (eventtype=='27'){
 										loadMatrixAllocationAlternate();
 									}
@@ -841,6 +843,74 @@ function loadTextBox(){
 		 getXml(href);
 			 speechSynthesis.cancel();
 			 containerTextBox.window('close');
+	 });
+} 
+
+
+function loadScrollBar(){
+
+	// liest XML aus		  
+	 var href = $xml.find('nextevent').attr('href');
+	 var description = $xml.find('description').text();
+	 var containerScrollBar = $('.scrollBar');
+	 var descriptioncontainerScrollBar = containerScrollBar.find('.description');
+	 descriptioncontainerScrollBar.text(description);
+	//Lade den Dialog Hintergrund	
+	 loadBackground();
+	 
+	 var humaneOrientationUserValue = document.getElementById("humaneOrientation").value;
+	 
+	 var powerDistance = $xml.find('powerDistance').text();
+	 var institutionalCollectivism = $xml.find('institutionalCollectivism').text();
+	 var genderEgalitarism = $xml.find('genderEgalitarism').text();
+	 var ingroupCollectivism = $xml.find('ingroupCollectivism').text();
+	 var performanceOrientation = $xml.find('performanceOrientation').text();
+	 var futureOrientation = $xml.find('futureOrientation').text();
+	 var uncertaintyAvoidance = $xml.find('uncertaintyAvoidance').text();
+	 var assertiveness = $xml.find('assertiveness').text();	 
+	 var humaneOrientation = $xml.find('humaneOrientation').text();
+
+ 	 
+	 var continueButtonScrollButton = $('#continueButtonScrollButton');
+	 	 continueButtonScrollButton.text("Solution");
+
+		showScrollBar();
+		
+	 continueButtonScrollButton.unbind('click');
+	  	var i =0;
+	 continueButtonScrollButton.bind('click', function(){
+	
+if(i=="0"){
+	var inputRow = $('.inputRowPD');
+			inputRow.append('<div class="solutionPD"/>'+powerDistance+'</div>');
+			var inputRow = $('.inputRowInsC');
+			inputRow.append('<div class="solutionInsC"/>'+institutionalCollectivism+'</div>');
+			var inputRow = $('.inputRowGE');
+			inputRow.append('<div class="solutionGE"/>'+genderEgalitarism+'</div>');
+			var inputRow = $('.inputRowIngC');
+			inputRow.append('<div class="solutionIngC"/>'+ingroupCollectivism+'</div>');
+			var inputRow = $('.inputRowPO');
+			inputRow.append('<div class="solutionPO"/>'+performanceOrientation+'</div>');
+			var inputRow = $('.inputRowFO');
+			inputRow.append('<div class="solutionFO"/>'+futureOrientation+'</div>');
+			var inputRow = $('.inputRowUA');
+			inputRow.append('<div class="solutionUA"/>'+uncertaintyAvoidance+'</div>');
+			var inputRow = $('.inputRowA');
+			inputRow.append('<div class="solutionA"/>'+assertiveness+'</div>');
+			var inputRow = $('.inputRowHO');
+			inputRow.append('<div class="solutionHO"/>'+humaneOrientation+'</div>');
+	// if(powerDistance != powerDistanceUserValue){
+	
+			// $('.solutionPD').css('background-color','#FF7700');
+	// }
+
+			continueButtonScrollButton.text("Done");
+	i++;
+}else{
+		 getXml(href);
+			 speechSynthesis.cancel();
+			 containerScrollBar.window('close');
+}
 	 });
 } 
 
@@ -1583,6 +1653,14 @@ function hideTextBox(){
 
 function showTextBox(){
 	$('.textBox').show();
+}
+
+function hideScrollBar(){
+	$('.scrollBar').hide();
+}
+
+function showScrollBar(){
+	$('.scrollBar').show();
 }
 
 function showEventContainer (container) {
