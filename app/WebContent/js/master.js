@@ -253,9 +253,9 @@ function changeFunc() {
     	getXml('l01e101');
     }else if (selectedValue=="UK") {
     	getXml("l01e101");
-    }else if (selectedValue=="GERMANY") {
+    }else if (selectedValue=="Germany") {
    	getXml("l01e101");
-   } else if (selectedValue=="CHINA") {
+   } else if (selectedValue=="China") {
    	getXml("l01e101");
    }
     //alert(selectedValue);

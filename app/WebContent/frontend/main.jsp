@@ -77,8 +77,8 @@
    <select class="countryselect" id="contry-list" onchange="changeFunc();">
       <option selected="true" style="display:none;">Country</option>
       <option>USA</option>
-      <option>GERMANY</option>
-      <option>CHINA</option>
+      <option>Germany</option>
+      <option>China</option>
       <option>UK</option>
    </select>
 </div></a></li>
