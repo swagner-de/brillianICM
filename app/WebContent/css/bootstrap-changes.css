@@ -41,6 +41,9 @@ body {
 	font-family: Georgia, Times, 'Times New Roman', serif !important;
 	background-color: transparent;
 }
+.countryselect option{
+	background-color: #63a8b7;
+}
 
 .tooltip{
 	opacity: 1;
