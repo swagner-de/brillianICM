@@ -51,24 +51,18 @@
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">
-<script type="text/javascript" src="js/wz_tooltip.js"></script>
-
-    <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
-      <nav class="navbar navbar-center container">
+  <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" >
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-					<a class="player">
-                      <div style="width:120px"> <img src="img/logo_klein.png" alt="" style="width:100%">  </div>
-					</a>
-			</div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class=" page-scroll" href="#page-top">
+                    <div style="width:120px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
+                </a>
+            </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse center container" id="navbarCollapse">
        
@@ -104,6 +98,7 @@
 			
         </div>
         </div>
+        <!-- /.container --> 
 	   </nav>
 	</div>
 	<div  class="center mainWindow clearfix" data-options="region:'center'">
