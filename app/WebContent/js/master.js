@@ -1808,7 +1808,7 @@ $.extend({
 	}
 });
 
-$.extend({	  
+$.extend({
 	// Arguments are image paths relative to the current page.
 	preLoadImages: function() {
 		var cache = [];
@@ -1821,14 +1821,15 @@ $.extend({
 	}
 });
 
-function ShowTooltip(evt)
-{
-	tooltip.setAttributeNS(null,"x",evt.clientX-8);
-	tooltip.setAttributeNS(null,"y",evt.clientY-5);
-	tooltip.setAttributeNS(null,"visibility","visible");
-}
 
-function HideTooltip()
+
+function tooltipInit(evt)
 {
-	tooltip.setAttributeNS(null,"visibility","hidden");
+	if ( window.svgDocument == null )
+	{
+		svgDocument = evt.target.ownerDocument;
+	}
+	tooltip = svgDocument.getElementById('tooltip');
+
+
 }
