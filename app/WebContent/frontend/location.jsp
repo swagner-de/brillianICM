@@ -20,6 +20,10 @@
 			</div>
 		</div>
 	</div>
+			<!-- eventtyp 2: Start Page -->
+	<div class="pictureContainer" style="background-color:#d5edf3; width:100%; height:100%;" data-options="fit:true,border:false">
+		<div class="bgimg" style=" width:50% !important;  float: right !important;"></div>
+	</div>
 	
 	<!-- eventtyp 14 & 15: choose ohne Bild und eventtype 5: choose mit Bild -->
 	<div class="selectionContainer easyui-panel panel-body" data-options="fit:true,border:false">
