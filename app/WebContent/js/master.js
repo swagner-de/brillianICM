@@ -807,6 +807,24 @@ speechSynthesis.speak(tts);
 		});	
 		} 
 	 } 
+	 	 
+			 if(hrefNumber == "0"){
+					var nextButton = $('.buttonContainer');
+			
+					 nextButton.append('<div class="nextButton">NEXT</div>');
+
+					  nextButton.linkbutton({
+					
+					 });
+					 nextButton.bind('click', function(){	
+					 getXml(href);
+						// // speechSynthesis.cancel();
+					  });
+					 }
+	 	 
+	 	 
+	 	 
+	 	 
 		 
 		 	showConversation();
 var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
