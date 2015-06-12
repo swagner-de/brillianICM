@@ -79,6 +79,7 @@ function showLocation () {
 		hideMatrixAllocation();
 		hideMatrixAllocationStandard();
 		hideConversation();
+		hidePictureContainer();
 		hideTextBox();
 		hideScrollBar();
 		hideWorldmap();
@@ -130,6 +131,8 @@ function showLocation () {
 	    								loadScrollBar();											
 	    							}else if (eventtype=='27'){
 										loadMatrixAllocationAlternate();
+									}else if (eventtype=='2'){
+										loadPictureContainer();
 									}
 									
 	    				//	},1500);					
@@ -260,7 +263,11 @@ function changeFunc() {
    }
     //alert(selectedValue);
    }
-
+function loadPictureContainer () {
+	var container = $('.pictureContainer');
+	loadBackground();
+	showPictureContainer();	
+}
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
 	var description = $xml.find('description').text();
@@ -1626,7 +1633,12 @@ function showSelection () {
 function hideAllocation () {
 	$('.allocationContainer').hide();
 }
-
+function showPictureContainer(){
+	$('.pictureContainer').show();
+}
+function hidePictureContainer () {
+	$('.pictureContainer').hide();
+}
 function showAllocation () {
 	$('.allocationContainer').show();
 }
