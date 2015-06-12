@@ -794,7 +794,7 @@ speechSynthesis.speak(tts);
 			 });
 			 nextButton.bind('click', function(){	
 			 getXml(href);
-				// // speechSynthesis.cancel();
+				 speechSynthesis.cancel();
 			  });
 				
 			 }
@@ -825,7 +825,7 @@ speechSynthesis.speak(tts);
 					 });
 					 nextButton.bind('click', function(){	
 					 getXml(href);
-						// // speechSynthesis.cancel();
+						 speechSynthesis.cancel();
 					  });
 					 }
 	 	 
