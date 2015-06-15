@@ -2,7 +2,7 @@ function getXml(id) {
 	//print name to into the "account" button
 	$("#account").html(gameData.firstName+' '+ gameData.lastName);
 	
-	$.get('Event', {id : id, type : 'node'}, function(xml) {
+	$.get('Event', {id : id, userid: userid, type : 'node'}, function(xml) {
 		//Fix XML
 		var str1 = '<events>';
 		var str2 = '</events>';
