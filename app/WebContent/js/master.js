@@ -32,18 +32,12 @@ function getXml(id) {
 		$('.welcome').text('Welcome ' + gameData.firstName + ' ' + gameData.lastName);
 			firstFlag = true;
 		}else{
-			var imtime = $xml.find('event').attr('imtime');
-			var imcost = $xml.find('event').attr('imcost');
-			var imqual = $xml.find('event').attr('imqual');
 
-			//Update der Time Cost Quality Werte
 			updateTCQValues(imtime, imcost, imqual);
-
-			//Füge die neue Id zum GamePath hinzu
 			gameData.gamePath = gameData.gamePath + ';' + id;
-
-				saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
-
+			setTCQImages(gameData.imtime, gameData.imcost, gameData.imqual);
+			saveGame(userid, gameData.gamePath, gameData.imtime, gameData.imcost, gameData.imqual);
+			//Füge die neue Id zum GamePath hinzu
 		}
 		
 		//Verstecke alle Location Inhalte
@@ -1858,45 +1852,6 @@ function checkCookie()
     }
 }
 
-
-// Veränderung der TCQ WERTE
-function updateTCQValues (imtime, imcost, imqual) {
-	try {
-		if(imtime.charAt(0) == '+'){
-			gameData.imtime = parseInt(gameData.imtime, 10) + parseInt(imtime.substring(1), 10);
-		}else if (imtime.charAt(0) == '-'){
-			gameData.imtime = gameData.imtime - imtime.substring(1);
-		}
-	}catch(err){
-
-	}
-	try {
-		if(imcost.charAt(0) == '+'){
-			gameData.imcost = parseInt(gameData.imcost, 10) + parseInt(imcost.substring(1), 10);
-		}else if (imcost.charAt(0) == '-'){
-			gameData.imcost = gameData.imcost - imcost.substring(1);
-		}
-	}catch(err){
-
-	}
-	try {
-		if(imqual.charAt(0) == '+'){
-			gameData.imqual = parseInt(gameData.imqual, 10) + parseInt(imqual.substring(1), 10);
-		}else if (imqual.charAt(0) == '-'){
-			gameData.imqual = gameData.imqual - imqual.substring(1);
-		}
-	}catch(err){
-
-	}
-	if(gameData.imtime>100){gameData.imtime=100;}
-	else if(gameData.imtime<0){gameData.imtime=0;}
-	if(gameData.imcost>100){gameData.imcost=100;}
-	else if(gameData.imcost<0){gameData.imcost=0;}
-	if(gameData.imqual>100){gameData.imqual=100;}
-	else if(gameData.imqual<0){gameData.imqual=0;}
-}
-
-
 //Automatically executed when Browser-Window is resized
 $(window).resize(function() {
 	$('.mainEventContainer').window('center');
@@ -1980,9 +1935,51 @@ $.extend({
 	}
 });
 
-function tooltipInit(evt) {
-	if (window.svgDocument == null) {
-		svgDocument = evt.target.ownerDocument;
+
+
+
+// Veränderung der TCQ IMAGES auf der Seite
+function setTCQImages (imtime, imcost, imqual) {
+	//Grenzen Rot:0-49 Grenzen Gelb 50-85 Grenzen Grün:86-100
+	var kpi_competence = imtime;
+	var kpi_behaviour = imcost;
+	var kpi_communication = imqual;
+	var svg_competence= document.getElementById("icon_competence");
+	var svg_communication= document.getElementById("icon_communication");
+	var svg_behaviour= document.getElementById("icon_behaviour");
+
+if(kpi_competence >85){
+	svg_competence.setAttribute("fill","green");
+
+}else if(kpi_competence<=85 && kpi_competence>49){
+	svg_competence.setAttribute("fill","orange");
+
+}else{
+	svg_competence.setAttribute("fill","red");
+
+}
+
+	if(kpi_communication >85){
+		svg_communication.setAttribute("fill","green");
+
+
+	}else if(kpi_communication<=85 && kpi_communication>49){
+		svg_communication.setAttribute("fill","orange");
+
+	}else{
+		svg_communication.setAttribute("fill","red");
+
 	}
-	tooltip = svgDocument.getElementById('tooltip');
+
+	if(kpi_behaviour >85){
+		svg_behaviour.setAttribute("fill","green");
+
+
+	}else if(kpi_behaviour<=85 && kpi_behaviour>49){
+		svg_behaviour.setAttribute("fill","orange");
+
+	}else{
+		svg_behaviour.setAttribute("fill","red");
+
+	}
 }
