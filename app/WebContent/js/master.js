@@ -79,6 +79,7 @@ function showLocation () {
 		hideMatrixAllocation();
 		hideMatrixAllocationStandard();
 		hideConversation();
+		hidePictureContainer();
 		hideTextBox();
 		hideScrollBar();
 		hideWorldmap();
@@ -130,6 +131,8 @@ function showLocation () {
 	    								loadScrollBar();											
 	    							}else if (eventtype=='27'){
 										loadMatrixAllocationAlternate();
+									}else if (eventtype=='2'){
+										loadPictureContainer();
 									}
 									
 	    				//	},1500);					
@@ -260,7 +263,11 @@ function changeFunc() {
    }
     //alert(selectedValue);
    }
-
+function loadPictureContainer () {
+	var container = $('.pictureContainer');
+	loadBackground();
+	showPictureContainer();	
+}
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
 	var description = $xml.find('description').text();
@@ -787,7 +794,7 @@ speechSynthesis.speak(tts);
 			 });
 			 nextButton.bind('click', function(){	
 			 getXml(href);
-				// // speechSynthesis.cancel();
+				 speechSynthesis.cancel();
 			  });
 				
 			 }
@@ -807,6 +814,24 @@ speechSynthesis.speak(tts);
 		});	
 		} 
 	 } 
+	 	 
+			 if(hrefNumber == "0"){
+					var nextButton = $('.buttonContainer');
+			
+					 nextButton.append('<div class="nextButton">NEXT</div>');
+
+					  nextButton.linkbutton({
+					
+					 });
+					 nextButton.bind('click', function(){	
+					 getXml(href);
+						 speechSynthesis.cancel();
+					  });
+					 }
+	 	 
+	 	 
+	 	 
+	 	 
 		 
 		 	showConversation();
 var continueButtonMatrixConversation = $('#continueButtonMatrixConversation');
@@ -1608,7 +1633,12 @@ function showSelection () {
 function hideAllocation () {
 	$('.allocationContainer').hide();
 }
-
+function showPictureContainer(){
+	$('.pictureContainer').show();
+}
+function hidePictureContainer () {
+	$('.pictureContainer').hide();
+}
 function showAllocation () {
 	$('.allocationContainer').show();
 }
