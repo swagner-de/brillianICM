@@ -1,4 +1,3 @@
-
 package org.dhbw.imbit11;
 
 import java.io.IOException;
@@ -77,12 +76,12 @@ public class Event extends HttpServlet {
 		ArrayList<Object> list = null;
 
 		switch (type){
-			case "node": data = new EventExtractor().getNode(id); break;
+			case "node": data = new EventExtractor().getNode(id, userid); break;
 			case "saveGame":{
 				UserRealm userRealm = new UserRealm();
 				try {
 					userRealm.setUserProgress(userid, imcost, imqual, imtime, gamePath);
-					userRealm.setUserCountry(userid, id);
+					userRealm.setUserCountry(userid, gamePath);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
