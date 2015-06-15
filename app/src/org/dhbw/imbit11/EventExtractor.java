@@ -87,6 +87,22 @@ public class EventExtractor {
 		return node;
 	}*/
 
+	public String getNode(String uniqueId) {
+		String nodeAsString = "";
+		Node node = null;
+		try {
+			node = getEventAsNode(uniqueId);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			nodeAsString = nodeToString(node);
+		} catch (TransformerException e) {
+			e.printStackTrace();
+			}
+		return nodeAsString;
+	}
+
 	public String getNode(String uniqueId, String userid) {
 		String nodeAsString = "";
 		Node node = null;
@@ -100,12 +116,11 @@ public class EventExtractor {
 			nodeAsString = nodeToString(node);
 		} catch (TransformerException e) {
 			e.printStackTrace();
-			}
+		}
 		return nodeAsString;
 	}
 
-
-	protected String getMails(String path){
+		protected String getMails(String path){
 		String nodes = "";
 		String[] ids =path.split(";");
 		for(String id : ids){
@@ -158,8 +173,8 @@ public class EventExtractor {
 		for (int i = 0; i < children.getLength(); i++)
 		{
 			Node currentItem = children.item(i);
-			if (currentItem.getAttributes().getNamedItem("href").getNodeValue().equalsIgnoreCase(l00e000));
-			System.out.println(key);
+			if (currentItem.getAttributes().getNamedItem("href").getNodeValue().equalsIgnoreCase("l00e000"));
+
 		}
 	}
 }

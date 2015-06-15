@@ -593,7 +593,7 @@ public class UserRealm extends JdbcRealm {
 		PreparedStatement ps = null;
 		String[] levels = new String[gamepath.split(";").length];
 		levels = gamepath.split(";");
-		Pattern p = Pattern.compile("l[0-6]+[0-9]{2}e[0-9]{3}");
+		Pattern p = Pattern.compile("l[0-6]9{2}e9{3}");
 		for (String level : levels){
 			if (p.matcher(level).matches()){
 				ps = conn.prepareStatement(setCountryTrueQuery.replace("%%", "`"+level.substring(0,2)+"`"));
