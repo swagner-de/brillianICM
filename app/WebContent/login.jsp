@@ -129,7 +129,7 @@
                 </div>
             
         
-            
+       <p style="color: red; text-align: left;">${error}</p>  
              <form action="LoginUser" method="post" >
 			<table style="width:30%; bottom:0px; padding:0; text-align:center">
 			<tr>
