@@ -66,6 +66,7 @@
    <a href='login.jsp' style="margin: 0 align;">Back to Login</a>
 </form>
 
+
 <!--<div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>
 </div>-->
 
