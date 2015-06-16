@@ -1,4 +1,16 @@
-﻿$(document).ready(function(){	
+﻿function modifyPathsDependingOnGender(xml){
+	if (gameData.gender == 1){
+		var countryStartingPointRegex = new RegExp('l[0-6]{1}0{2}e0{3}');
+		$(xml).find("option").each(function(){
+			var href = $(this).attr('href');
+			if (href.match(countryStartingPointRegex)){
+				$(this).attr('href', href.replace("e000", "e001"));
+			}
+		});
+	}
+}
+
+$(document).ready(function(){
 
 	if(userid == null){	
 		window.location.href = 'LogoutUser';		
@@ -131,7 +143,8 @@
 			data: {userid : userid, type : 'node', id :  "l000e000"},
 			async: true,
 			success: function(data) {
-				countrySelectionXml = $(data);
+				$countrySelectionXml = $(data);
+				modifyPathsDependingOnGender($countrySelectionXml)
 			}
 		});
 	}		

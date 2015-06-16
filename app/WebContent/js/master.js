@@ -1,7 +1,6 @@
 function getXml(id) {	
 	//print name to into the "account" button
 	$("#account").html(gameData.firstName+' '+ gameData.lastName);
-	
 	$.get('Event', {id : id, userid: userid, type : 'node'}, function(xml) {
 		//Fix XML
 		var str1 = '<events>';
@@ -16,7 +15,9 @@ function getXml(id) {
 		
 		//Create Jquery XML Element
 		$xml = $(xml);
-		
+		modifyPathsDependingOnGender($xml);
+
+
 		//General XML Event Variables
 		var id = $xml.find('event').attr('id');
 		var eventtype = $xml.find('event').attr('eventtype');
