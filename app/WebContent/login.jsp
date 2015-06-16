@@ -154,11 +154,6 @@
 					<a class="login" href='<%out.print(application.getContextPath());%>/Registration?g=000' >Register</a>
 				</td>				
 			</tr>
-			<tr>
-				<td align="right" style="padding-right: 28px;">
-					<a class="login" href="http://vimeo.com/96179581" target="_blank">Teaservideo</a>
-				</td>				
-			</tr>
 		</table>
 		</form>
       </div>  
