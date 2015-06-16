@@ -63,7 +63,7 @@
    <br><br/> 
    <a class="btn btn-default"  onclick="$('#resetPassword').trigger('click')">Reset my password</a>
    <br></br>
-   <a href='login.jsp' style="margin: 0 align;">Back to Login</a>
+   <a href='login.jsp' style="margin: 0 auto;">Back to Login</a>
 </form>
 
 
