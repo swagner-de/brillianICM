@@ -29,13 +29,13 @@
 		imqual="0" imtime="0" loc="0">
 		<description>WorldMap</description>
 		<position x="1" y="1">
-			<nextevent href="l01e101"/>
+			<nextevent href="l099e999"/>
 		</position>
 		<worldmapImg>worldmap.jpg</worldmapImg>
 	</event>
 	
 	<!-- three column choose without picture-->
-		<event level="p3" loc="0" imtime="0" imqual="0" imcost="0" eventtype="14" id="l01e101" element="0" >
+		<event level="p3" loc="0" imtime="0" imqual="0" imcost="0" eventtype="14" id="l099e999" element="0" >
 		<title>Major Risks</title>
 		<description>
 
@@ -286,6 +286,9 @@
 		<bgimg>CN_Facts_and_Figures_v2.png</bgimg>
 		<nextevent href="l300e051"/>
 	</event>
+	
+		<event level="" element="" id="l999e999" eventtype="" imcost=""
+		imqual="" imtime="" loc="" />
 
 	
 </events>

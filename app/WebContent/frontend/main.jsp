@@ -91,12 +91,12 @@
                  <li><a href="#" id="account" onclick="window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank')"  data-options="plain:true"></a></li>   
 			</ul>
 			<ul class="nav navbar-nav second-button">
-					<svg id= "iconsBox"height="50" width="200" onload="tooltipInit(evt)">
-					<circle cx="25" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" onmouseover="Tip('Some text about the first Dimension')" onmouseout="UnTip()" />
+					<svg id= "iconsBox"height="50" width="200" >
+					<circle id="icon_competence" cx="25" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" onmouseover="Tip('Some text about the first Dimension')" onmouseout="UnTip()" />
 						<text x="25" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black" onmouseover="Tip('Some text about the first Dimension')">C</text>
-				<circle cx="75" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" onmouseover="Tip('Here you are having the description of 2nd Dim')" onmouseout="UnTip()" />
+				<circle id="icon_communication" cx="75" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" onmouseover="Tip('Here you are having the description of 2nd Dim')" onmouseout="UnTip()" />
 						<text x="75" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('Here you are having the description of 2nd Dim')">C</text>
-				<circle cx="125" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" onmouseover="Tip('...and third')" onmouseout="UnTip()"/>
+				<circle id="icon_behaviour" cx="125" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" onmouseover="Tip('...and third')" onmouseout="UnTip()"/>
 						<text x="125" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('...and third')">B</text>
 			</svg>
 

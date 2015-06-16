@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,6 +21,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.dhbw.imbit11.backend.UserRealm;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -34,7 +36,7 @@ import org.xml.sax.SAXException;
 public class EventExtractor {
 
 	String node = "Node not found.";
-	File masterfile = null;
+	static File masterfile = null;
 
 	public EventExtractor() {
 		// Calculate absolute workspace path
@@ -46,10 +48,10 @@ public class EventExtractor {
 		}
 	}
 
-	public String getNode(String level, String element) {
+/*	public String getNode(String level, String element) {
 		// search with level and element
 		String expression = "/events/event[@level ='" + level
-				+ "' and @option ='" + element + "']/*";
+				+ "' and @option ='" + element + "']*//*";
 
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory
@@ -83,46 +85,42 @@ public class EventExtractor {
 					+ masterfile.getAbsolutePath() + " with " + expression;
 		}
 		return node;
-	}
+	}*/
 
 	public String getNode(String uniqueId) {
-		// calls node from masterfile according to unique ID
-		String expression = "/events/event[@id = '" + uniqueId + "']";
-
+		String nodeAsString = "";
+		Node node = null;
 		try {
-			DocumentBuilderFactory factory = DocumentBuilderFactory
-					.newInstance();
-			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document doc = builder.parse(masterfile);
-			XPathFactory xPathfactory = XPathFactory.newInstance();
-			XPath xpath = xPathfactory.newXPath();
-			XPathExpression expr = xpath.compile(expression);
-
-			node = "";
-
-			NodeList nodes = (NodeList) expr.evaluate(doc,
-					XPathConstants.NODESET);
-			for (int i = 0; i < nodes.getLength(); i++) {
-				node += nodeToString(nodes.item(i));
-			}
-
-		} catch (SAXException | IOException e) {
-			return "Error while transforming the File! "
-					+ masterfile.getAbsolutePath();
-		} catch (ParserConfigurationException e) {
-			return "Error while parsing the File! "
-					+ masterfile.getAbsolutePath();
-		} catch (XPathExpressionException e) {
-			return "Error while calling XPath the File! "
-					+ masterfile.getAbsolutePath() + " with " + expression;
-		} catch (TransformerException e) {
-			return "Error while transforming XML File! "
-					+ masterfile.getAbsolutePath() + " with " + expression;
+			node = getEventAsNode(uniqueId);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		return node;
+		try {
+			nodeAsString = nodeToString(node);
+		} catch (TransformerException e) {
+			e.printStackTrace();
+			}
+		return nodeAsString;
 	}
 
-	protected String getMails(String path){
+	public String getNode(String uniqueId, String userid) {
+		String nodeAsString = "";
+		Node node = null;
+		try {
+			node = getEventAsNode(uniqueId);
+			if (node.getAttributes().getNamedItem("id").getNodeValue().equalsIgnoreCase("l000e000")) markVisitedCountries(node, userid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			nodeAsString = nodeToString(node);
+		} catch (TransformerException e) {
+			e.printStackTrace();
+		}
+		return nodeAsString;
+	}
+
+		protected String getMails(String path){
 		String nodes = "";
 		String[] ids =path.split(";");
 		for(String id : ids){
@@ -145,12 +143,38 @@ public class EventExtractor {
 		}
 		return nodes;
 	}
-	
+
+	private static Node getEventAsNode(String uniqueId) throws Exception{
+		// calls node from masterfile according to unique ID
+		String expression = "/events/event[@id = '" + uniqueId + "']";
+		DocumentBuilderFactory factory = DocumentBuilderFactory
+				.newInstance();
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		Document doc = builder.parse(masterfile);
+		XPathFactory xPathfactory = XPathFactory.newInstance();
+		XPath xpath = xPathfactory.newXPath();
+		XPathExpression expr = xpath.compile(expression);
+		NodeList nodelist = (NodeList) expr.evaluate(doc,XPathConstants.NODESET);
+		return nodelist.item(0);
+	}
+
 	private static String nodeToString(Node node) throws TransformerException {
 		StringWriter buf = new StringWriter();
 		Transformer xform = TransformerFactory.newInstance().newTransformer();
 		xform.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 		xform.transform(new DOMSource(node), new StreamResult(buf));
 		return (buf.toString());
+	}
+
+	private static void markVisitedCountries(Node node, String userid){
+		UserRealm userRealm = new UserRealm();
+		ArrayList<String> visitedCountries = userRealm.getVisitedCountries(userid);
+		NodeList children = node.getChildNodes();
+		for (int i = 0; i < children.getLength(); i++)
+		{
+			Node currentItem = children.item(i);
+			if (currentItem.getAttributes().getNamedItem("href").getNodeValue().equalsIgnoreCase("l00e000"));
+
+		}
 	}
 }

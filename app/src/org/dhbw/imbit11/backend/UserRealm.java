@@ -14,6 +14,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Main class that provides functions to interact with the user database
@@ -44,6 +46,7 @@ public class UserRealm extends JdbcRealm {
 	protected String setLvlIdQuery = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setCountryTrueQuery = "UPDATE `user_progress` SET %%=true WHERE `user_id` = ?";
 	protected String getProgressQuery = "SELECT `last_name`, `first_name`, `gender`,`cost`, `quality`, `time`, `path` FROM `user_progress`, `user` WHERE `user_progress`.`user_id`= `user`.`user_id` AND `user_progress`.`user_id`=?";
+	protected String getVisitedCountriesQuery =  "SELECT l0, l1, l2, l3, l4, l5, l6 FROM `user_progress`, `user` WHERE `user_progress`.`user_id`= `user`.`user_id` AND `user_progress`.`user_id`=?";
 
 	protected String getStudentsForProfessorQuery = "SELECT `first_name`, `last_name`, `cost`, `quality`, `time` , `group_name`, `email`, `group`  FROM `user`, `user_progress` , `group` WHERE `user`.`user_id` = `user_progress`.`user_id` AND`user`.`group` IN (SELECT `group_id` FROM `group` WHERE `professor_id` = (SELECT `user_id` FROM`user` WHERE `email` = ?)) AND `user`.`group` = `group`.`group_id` ORDER BY `last_name` ASC";
 	protected String getGroupsForProfessorQuery = "SELECT * FROM `group`WHERE `professor_id`= (SELECT `user_id` FROM `user` WHERE `email` = ?)ORDER BY `group_name` ASC";
@@ -585,11 +588,21 @@ public class UserRealm extends JdbcRealm {
 		}
 	}
 
-	public void setUserCountry(String userId, String id) throws SQLException{
+	public void setUserCountry(String userId, String gamepath) throws SQLException{
 		Connection conn = dataSource.getConnection();
-		PreparedStatement ps = conn.prepareStatement(setCountryTrueQuery.replace("%%", "`"+id.substring(0,2)+"`"));
-		ps.setString(1,userId);
-		ps.executeUpdate();
+		PreparedStatement ps = null;
+		String[] levels = new String[gamepath.split(";").length];
+		levels = gamepath.split(";");
+		Pattern p = Pattern.compile("l[0-6]9{2}e9{3}");
+		for (String level : levels){
+			if (p.matcher(level).matches()){
+				ps = conn.prepareStatement(setCountryTrueQuery.replace("%%", "`"+level.substring(0,2)+"`"));
+				ps.setString(1,userId);
+				ps.executeUpdate();
+			}
+		}
+
+
 		JdbcUtils.closeStatement(ps);
 		conn.close();
 	}
@@ -810,6 +823,26 @@ public class UserRealm extends JdbcRealm {
 			conn.close();
 		}
 		return progress;
+	}
+
+	public ArrayList<String> getVisitedCountries(String userid) {
+		ArrayList<String> visitedCountries = null;
+		PreparedStatement ps;
+		ResultSet rs;
+		try {
+			Connection conn = dataSource.getConnection();
+			ps = conn.prepareStatement(getVisitedCountriesQuery);
+			ps.setString(1, userid);
+			rs = ps.executeQuery();
+			while (rs.next()){
+				for (int l=0; l<7; l++){
+					if (rs.getBoolean(l+1)) visitedCountries.add("l"+l);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return visitedCountries;
 	}
 
 	/**
