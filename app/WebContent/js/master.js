@@ -92,7 +92,7 @@ function showLocation () {
 		hideMatrixAllocationAlternate();
 		
 	    			// Musik am Anfang
-					 if(eventtype=="1"){
+					/* if(eventtype=="1"){
 	    			var audioElement = document.createElement('audio');	
 	    			audioElement.setAttribute('src', 'audio/location.mp3');
 					//Gotta love that melody!
@@ -100,7 +100,7 @@ function showLocation () {
 					audiosetting=getCookie("audio");
 					if (audiosetting == "true") {
 					audioElement.play();	}
-					}
+					}*/
 	    			
 	    			/* Loads background images in a row and finally loads Dialog or alike. 
 	    			 * @author Laluz
@@ -1742,12 +1742,12 @@ function showResult () {
 		href:tag,
 		
 		onLoad: function(){
-			var audioElement = document.createElement('audio');	
+			/*var audioElement = document.createElement('audio');	
 			audioElement.setAttribute('src', 'audio/location.mp3');
 			var audiosetting="false";
 			audiosetting=getCookie("audio");
 			if (audiosetting == "true") {
-			audioElement.play();	}
+			audioElement.play();	}*/
 			
 			document.getElementById("cost").innerHTML="100%";
 			document.getElementById("time").innerHTML="100%";
@@ -1789,12 +1789,12 @@ function showLoading () {
 	
 	// Hier wird die Audio-Datei abgespielt 
 	// (Vielleicht kann man hier noch einen Filter einbauen??)
-	var audioElement = document.createElement('audio');	
+	/*var audioElement = document.createElement('audio');	
 	audioElement.setAttribute('src', 'audio/location.mp3');
 	var audiosetting="false";
 	audiosetting=getCookie("audio");
 	if (audiosetting == "true") {
-	audioElement.play();	}
+	audioElement.play();	}*/
 	
 	//Um hässliche Ladeartefakte zu verhindern
 	$('body').show();
