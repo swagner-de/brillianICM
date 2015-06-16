@@ -85,7 +85,8 @@
 					gamePath = list[6];
 					idArray = gamePath.split(';');
 					id = idArray[idArray.length-1];
-					
+					setTCQImages(imtime, imcost, imqual);
+
 				}catch(err){
 					lastName = 'Mustermann';
 					firstName = 'Max';

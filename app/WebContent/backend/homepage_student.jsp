@@ -31,38 +31,55 @@
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="js/master.js"></script>
+ 
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/bootstrap-changes.css" rel="stylesheet"> 
+    
+    <!--Framework changes -->
+<link href="css/changes-master.css" rel="stylesheet">
+<link href="css/bootstrap-changes.css" rel="stylesheet">
+    
+       <!-- Overwriting Font -->
+     <link href="css/font.css" rel="stylesheet">
 
 </head>
 <body class="easyui-layout">
-	<div class="north" data-options="region:'north',border:false">
+	<!--  <div class="north" data-options="region:'north',border:false">
 		<div class="div-header window">
 			
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
 			
 		</div>
-	</div>
+	</div> -->
 
 
 	<div class="center studentHomepage" data-options="region:'center'">
 	<div class="studentHomepageContainer">
 			<div>
-				<h4>Change Password.</h4>
-					<p style="color: red; padding-left: 32px;">${error}</p>
+				<h4 style="text-align:center">Change Password</h4>
+					<p style="color: red; padding-left: 32px; ">${error}</p>
 				<form action="ResetPassword" method="post">				
-					<input type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
-					<input type="text" name="role" maxlength="50" value="student" style="display: none"/><br /><br />
+					<input class="form-control" type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
+					<input class="form-control" type="text" name="role" maxlength="50" value="student" style="display: none"/><br /><br />
 					<!--  Password check -->
-					<div class="formLabel">Old Password:</div>
-					<input type="password" name="oldpassword" maxlength="50"/><br /><br />
-					<div class="formLabel">Password:</div>
-					<input type="password" name="password" maxlength="50"/><br /><br />
-					<div class="formLabel">Repeat Password:</div>
-					<input type="password" name="password_repeat" maxlength="50" /><br /><br />
+					<div >Old Password:</div>
+					<input class="form-control" type="password" name="oldpassword" maxlength="50"/><br /><br />
+					<div >Password:</div>
+					<input class="form-control" type="password" name="password" maxlength="50"/><br /><br />
+					<div>Repeat Password:</div>
+					<input class="form-control" type="password" name="password_repeat" maxlength="50" /><br /><br />
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
-					<a class="easyui-linkbutton studentButton" onclick=confirmPasswordChange()>Update Password</a>
+					<a  class="btn btn-default" onclick=confirmPasswordChange()>Update Password</a>
+					<br></br>
+					<a href='login.jsp'>Back to Login</a>
 				</form>
 			</div>
+			
 			<!-- Hidden Button on Nose of Background to show Level Jump Dropdown -->
 			<div style="height:40px; width:32px; position:absolute; top:110px; left:780px" onclick="changeViewUserProgress()"></div>
 			<div id="setUserProgressForm" style=display:none>

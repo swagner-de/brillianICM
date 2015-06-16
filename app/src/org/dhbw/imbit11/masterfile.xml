@@ -286,6 +286,9 @@
 		<bgimg>CN_Facts_and_Figures_v2.png</bgimg>
 		<nextevent href="l300e051"/>
 	</event>
+	
+		<event level="" element="" id="l999e999" eventtype="" imcost=""
+		imqual="" imtime="" loc="" />
 
 	
 </events>

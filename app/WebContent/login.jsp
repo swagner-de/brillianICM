@@ -129,7 +129,7 @@
                 </div>
             
         
-            
+       <p style="color: red; text-align: left;">${error}</p>  
              <form action="LoginUser" method="post" >
 			<table style="width:30%; bottom:0px; padding:0; text-align:center">
 			<tr>
@@ -154,35 +154,32 @@
 					<a class="login" href='<%out.print(application.getContextPath());%>/Registration?g=000' >Register</a>
 				</td>				
 			</tr>
-			<tr>
-				<td align="right" style="padding-right: 28px;">
-					<a class="login" href="http://vimeo.com/96179581" target="_blank">Teaservideo</a>
-				</td>				
-			</tr>
 		</table>
 		</form>
       </div>  
    </div>     
     </header>
         
-
-    <!-- About Section -->
+   <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>brillianCRM Project Management Game &ndash; how brilliant are you?</h2>
+                <h2>BRILLIANICM PROJECT MANAGEMENT GAME &ndash; HOW BRILLIANT ARE YOU</h2>
 
-brillianCRM was developed by <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank">IMBIT</a> students, who started to study &ldquo;International Management for Business and Information Technology&rdquo; at the Baden-Wuerttemberg Cooperative State University in Mannheim in 2011.
-As part of our education we realized ambitious IT projects: In cooperation with SAP we worked on the new technology SAP HANA. Moreover we developed a mobile guided tour for the city of <a href = "http://www.m-ladenburg.de/" target="_blank">Ladenburg</a>. <br />
-brillianCRM is our latest project made feasible by <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-dr-harald-bendl/" target="_blank">Prof. Dr. Harald Bendl</a> and <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-peter-mayr/" target="_blank">Prof. Peter Mayr</a>.<br />
-This game is webbased and should run in modern Browsers including mobile devices. We tested it with Google Chrome.
+brillianICM was developed by  <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank">IMBIT</a> students,
+ who started to study “International Management for Business and Information Technology” at 
+ the Baden-Wuerttemberg Cooperative State University in Mannheim in 2012. As part of our education
+  we realized ambitious IT projects: In cooperation with SAP we worked on the new technology SAP HANA. 
+  brillianICM is our latest project made feasible by <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-dr-harald-bendl/" target="_blank">Prof. Dr. Harald Bendl</a> and <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-peter-mayr/" target="_blank">Prof. Peter Mayr</a>.<br />
+
+This game is webbased and should run in modern browsers including mobile devices. 
+We tested it with Google Chrome and Safari (iPad).
 <br />
-<h3>We, the WIMBIT11B class, kept working hard to make a dream come true:</h3>
+<h3>We, the WIMBIT12A & WIBIT12B classes,are proud to present our game:</h3>
 
-<img src="images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
+<!-- <img src="images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
 <p>Jubly Anand, Ayleen Bocretsion, Michaela Brandl, Clemens Buchert, Sönke Cramme, Moritz Döring, Benedikt Esser, Hannah Fidora, Kathrin Fitzner, Malte Hake, Marius Kaiser, Mario Wares Khan, Martin Knipf, Dorothea Langer, Philipp Ludwig, Jonas Müller, Katrin Nagel, Dajana Pirke, Saskia Polenske, Benjamin Schäfer, Simon Schlephorst, Kevin Schork, Alexander Schrödinger, Sonja Seidel, Lukas Steigerwald, Max Steimle, Veronika Trübe, Antonia Vetter, Nadine Winkler and our lecturers Prof. Dr. Harald Bendl, Prof. Peter Mayr</p>
-<a href="http://vimeo.com/96179581" target="_blank">brillianCRM Teaser Video</a>
-
+-->
 </div>
             </div>
         </div>
@@ -206,6 +203,20 @@ This game is webbased and should run in modern Browsers including mobile devices
 	Alle Angebote sind freibleibend und unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ank&uuml;ndigung zu ver&auml;ndern, zu erg&auml;nzen, zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen.</p>
 	<p>Bei direkten oder indirekten Verweisen auf fremde Webseiten (Hyperlinks), die au&szlig;erhalb des Verantwortungsbereiches des Autors liegen, w&uuml;rde eine Haftungsverpflichtung ausschlie&szlig;lich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch m&ouml;glich und zumutbar w&auml;re, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.<br>
 	Der Autor erkl&auml;rt hiermit ausdr&uuml;cklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zuk&uuml;nftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verkn&uuml;pften Seiten hat der Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdr&uuml;cklich von allen Inhalten aller verlinkten/verkn&uuml;pften Seiten, die nach der Linksetzung ver&auml;ndert wurden. F&uuml;r illegale, fehlerhafte oder unvollst&auml;ndige Inhalte und insbesondere f&uuml;r Sch&auml;den, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der &uuml;ber Links auf die jeweilige Ver&ouml;ffentlichung lediglich verweist.</p>
+	
+	
+	<h3>Informationen über Cookies</h3>
+
+
+<p>Zur Optimierung unseres Internetauftritts setzen wir Cookies ein. Es handelt sich dabei um Textdateien, die im Speicher Ihres Computers gespeichert werden. Diese Cookies werden nach dem Schließen des Browsers gelöscht. Andere Cookies bleiben auf Ihrem Rechner (Langzeit Cookies) und erkennen Sie bei ihrem nächsten Besuch wieder. Dadurch können wir Ihnen einen besseren Zugang auf unsere Seite ermöglichen.
+
+Das Speichern von Cookies können Sie verhindern, indem Sie in den Einstellungen ihres Browsers "Cookies blockieren" wählen. Dies kann aber eine Funktionseinschränkung unserer Website zur Folge haben.</p>
+
+	
+<h3>Auskunft</h3>
+<p>Nach dem Bundesdatenschutzgesetz haben Sie das Recht auf eine unentgeltliche Auskunft über Ihre gespeicherten Daten. Zudem haben Sie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Fragen hierzu können über die im Impressum angegebenen Kontaktdaten stellen.</p>
+
+	
 	
 	<h3>Urheberrecht</h3>
 	<p>Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zur&uuml;ckzugreifen.<br>
