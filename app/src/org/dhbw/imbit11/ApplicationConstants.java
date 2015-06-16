@@ -17,7 +17,7 @@ public interface ApplicationConstants {
 	public static  String LOCATION4_NAME = "Conference Room";
 	public static  String LOCATION5_NAME = "Hotel Bar";
 	
-	public static  String LAPTOP_NAME = "Mail";
+	public static  String LAPTOP_NAME = "Archiv";
 	
 	public static  String SELECTION_BUTTON = "Do It!";
 	public static  String ALLOCATION_BUTTON = "Done";
@@ -32,14 +32,14 @@ public interface ApplicationConstants {
 	public static  String CHANGE_PW_BUTTON_TEXT = "Change Password";
 	public static  String ACCOUNT_BUTTON_TEXT = "Account";
 	
-	public static  String PAGETITLE_MAIN = "brillianCRM Game";
-	public static  String PAGETITLE_RESETPW = "brillianCRM Reset Password";
-	public static  String PAGETITLE_LOGIN = "brillianCRM Login";
-	public static  String PAGETITLE_STUDENT = "brillianCRM Student";
-	public static  String PAGETITLE_PROFESSOR = "brillianCRM Lecturer";
-	public static  String PAGETITLE_ADMIN = "brillianCRM Administrator";
-	public static  String PAGETITLE_REGISTRATION_LANDING = "brillianCRM Registration";
-	public static  String PAGETITLE_REGISTRATION_COMPLETE = "brillianCRM Registration";
-	public static  String PAGETITLE_REGISTRATION= "brillianCRM Registration";
+	public static  String PAGETITLE_MAIN = "brillianICM Game";
+	public static  String PAGETITLE_RESETPW = "brillianICM Reset Password";
+	public static  String PAGETITLE_LOGIN = "brillianICM Login";
+	public static  String PAGETITLE_STUDENT = "brillianICM Student";
+	public static  String PAGETITLE_PROFESSOR = "brillianICM Lecturer";
+	public static  String PAGETITLE_ADMIN = "brillianICM Administrator";
+	public static  String PAGETITLE_REGISTRATION_LANDING = "brillianICM Registration";
+	public static  String PAGETITLE_REGISTRATION_COMPLETE = "brillianICM Registration";
+	public static  String PAGETITLE_REGISTRATION= "brillianICM Registration";
 	
 }

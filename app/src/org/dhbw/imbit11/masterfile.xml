@@ -4,38 +4,45 @@
 	<!-- Startwerte auf jeweils 50 gesetzt, bei l000e002 +21 addiert, um mit grünen Werten zu beginnen -->
 
 	<!-- JobOffer Bild und Accept Job offer Button -->
-<!--	<event level="p1" element="0" id="l000e000" eventtype="1" imcost="0"
-		imqual="0" imtime="0" loc="4">
-		<content />
-		<bgimg>content9pic1.png</bgimg>
-		<nextevent href="l017e001" />
-	</event> -->
+	<!--	<event level="p1" element="0" id="l000e000" eventtype="1" imcost="0"
+            imqual="0" imtime="0" loc="4">
+            <content />
+            <bgimg>content9pic1.png</bgimg>
+            <nextevent href="l017e001" />
+        </event> -->
 	<!-- selection panel left-->
 	<event level="barpng" element="0" id="l000e000" eventtype="3" imcost="0"
-		imqual="0" imtime="0" loc="0">
-	<partner>Get started with a country!</partner> 
-	<!--	<date>2014-01-05 10:16:34</date>
-		<title>Call with CEO</title> -->
+		   imqual="0" imtime="0" loc="0">
+		<partner>Get started with a country!</partner>
+		<!--	<date>2014-01-05 10:16:34</date>
+            <title>Call with CEO</title> -->
 		<content>Get started with&lt;br /&gt; a country!</content>
-		<option href="l101e101">USA&lt;br /&gt;jetzt umgebrochen</option>
-		<option href="l010e000">Germany</option>
-		<option href="l999e997">China</option>
-		<option href="l999e900">UK</option>
-			<bgimg>role3pic7.png</bgimg>
-			<bgvid>l002e000.mp4</bgvid>
+		<option href="l000e000">Basics</option>
+		<option href="l100e000">Brasil</option>
+		<option href="l200e000">Spain</option>
+		<option href="l300e000">China</option>
+		<option href="l400e000">USA</option>
+		<option href="l500e000">Sweden</option>
+		<option href="l600e000">India</option>
+		<option href="l101e101">Case 1</option>
+		<option href="l010e000">Case 2</option>
+		<option href="l999e997">Case 3</option>
+		<option href="l999e900">Case 4</option>
+		<bgimg>role3pic7.png</bgimg>
+		<bgvid>l002e000.mp4</bgvid>
 	</event>
-	
+
 	<event level="worldmap" element="0" id="l101e101" eventtype="25" imcost="0"
-		imqual="0" imtime="0" loc="0">
+		   imqual="0" imtime="0" loc="0">
 		<description>WorldMap</description>
 		<position x="1" y="1">
-			<nextevent href="l099e999"/>
+			<nextevent href="l01e101"/>
 		</position>
 		<worldmapImg>worldmap.jpg</worldmapImg>
 	</event>
-	
+
 	<!-- three column choose without picture-->
-		<event level="p3" loc="0" imtime="0" imqual="0" imcost="0" eventtype="14" id="l099e999" element="0" >
+	<event level="p3" loc="0" imtime="0" imqual="0" imcost="0" eventtype="14" id="l01e101" element="0" >
 		<title>Major Risks</title>
 		<description>
 
@@ -44,7 +51,7 @@
 
 			Kind regards,
 			Thomas Zimmermann
-		
+
 		</description>
 		<option href="l300e011">
 			Measures for “Project is out of scope” , “Budget is out of
@@ -91,10 +98,10 @@
 			reported to the project manager.
 			<br />
 		</option>
-			<bgimg>role3pic7.png</bgimg>
+		<bgimg>role3pic7.png</bgimg>
 	</event>
 	<!-- three column choose with picture-->
-		<event level="p4" element="0" id="l300e011" eventtype="15" imcost="0" imqual="0" imtime="0" loc="0">
+	<event level="p4" element="0" id="l300e011" eventtype="15" imcost="0" imqual="0" imtime="0" loc="0">
 		<titel>Choice of your outfit</titel>
 		<content>You go to your room. Take a shower and change. Which outfit would you choose?</content>
 		<option href="l009e012" img="BackgroundStudentLandingpage.png">I want the white outfit!</option>
@@ -102,7 +109,7 @@
 		<option href="l009e012" img="BackgroundStudentLandingpage.png">I want the blue outfit!</option>
 	</event>
 	<!-- four column game-->
-		<event level="p5" loc="0" imtime="0" imqual="0" imcost="0" eventtype="16" id="l009e012" element="0" >
+	<event level="p5" loc="0" imtime="0" imqual="0" imcost="0" eventtype="16" id="l009e012" element="0" >
 		<title>Project Management Tasks</title>
 		<description>Please assign the tasks to each deliverable of the project management phase:</description>
 		<column>Project Initiation</column>
@@ -113,11 +120,11 @@
 			the business">Change Management</option>
 		<option column="1" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
 			begin work">Project Charter</option>
-			<nextevent href="l011e000" />
-				<bgimg>background.png</bgimg>
+		<nextevent href="l011e000" />
+		<bgimg>background.png</bgimg>
 	</event>
 	<!-- four column game-->
-		<event level="p11" loc="0" imtime="0" imqual="0" imcost="0" eventtype="18" id="l011e000" element="0" >
+	<event level="p11" loc="0" imtime="0" imqual="0" imcost="0" eventtype="18" id="l011e000" element="0" >
 		<title>Project Management Tasks</title>
 		<description>Please assign the tasks to each deliverable of the project management phase:</description>
 		<column>Project Initiation</column>
@@ -127,11 +134,11 @@
 			the business">Change Management</option>
 		<option column="1" rank="2" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
 			begin work">Project Charter</option>
-			<nextevent href="l011e001" />
-				<bgimg>background.png</bgimg>
+		<nextevent href="l011e001" />
+		<bgimg>background.png</bgimg>
 	</event>
-		<!-- iceberg-->
-			<event level="p6" loc="0" imtime="0" imqual="0" imcost="0" eventtype="19" id="l011e001" element="0" >
+	<!-- iceberg-->
+	<event level="p6" loc="0" imtime="0" imqual="0" imcost="0" eventtype="19" id="l011e001" element="0" >
 		<title>Project Management Tasks</title>
 		<description>Iceberg</description>
 		<column>Project Initiation</column>
@@ -140,10 +147,10 @@
 			the business">Change Management</option>
 		<option column="2" rank="1" finfo="Arbeitspakete/Glossary.pdf" fdesc="Glossary" title="a document that describes the project at a high level of detail and is used to authorize the project manager to
 			begin work">Project Charter</option>
-					<bgimg>iceberg.jpg</bgimg>
-			<nextevent href="l032e000" />
+		<bgimg>iceberg.jpg</bgimg>
+		<nextevent href="l032e000" />
 	</event>
-	
+
 	<!--Drag and Drop der Risk Matrix -->
 	<event level="p7" loc="0" imtime="0" imqual="0" imcost="0" eventtype="20" id="l032e000" element="0" >
 		<title>Risk Analysis</title>
@@ -154,8 +161,8 @@
 		<nextevent href="l999e996" />
 		<bgimg>background.png</bgimg>
 	</event>
-	
-		<!--vie ohren alternativ-->
+
+	<!--vie ohren alternativ-->
 	<event level="p7" loc="0" imtime="0" imqual="0" imcost="0" eventtype="27" id="l032e001" element="0" >
 		<title>Risk Analysis</title>
 		<description><b>Risk Analysis</b></description>
@@ -167,7 +174,7 @@
 		<nextevent href="l999e999" />
 		<bgimg>	</bgimg>
 	</event>
-	
+
 	<!-- vier ohren modell -->
 	<event level="p8" loc="0" imtime="0" imqual="0" imcost="0" eventtype="21" id="l999e996" element="0" >
 		<title>Risk Analysis</title>
@@ -176,88 +183,88 @@
 		<option rank="1" fdesc="conversation">Clothing</option>
 		<option rank="2" fdesc="conversation">Norms</option>
 		<nextevent href="l999e997" />
-			<bgimg>white.png</bgimg>
+		<bgimg>white.png</bgimg>
 	</event>
-	
+
 	<!-- conversation -->
-		<event level="p9" element="0" id="l999e997" eventtype="23" imcost="0"
-		imqual="0" imtime="0" loc="0">
+	<event level="p9" element="0" id="l999e997" eventtype="23" imcost="0"
+		   imqual="0" imtime="0" loc="0">
 		<description>Conversation</description>
 		<messageBoxA href="l999e998">
-		<br />
-	Hello, how are you today?
-		<br />
+			<br />
+			Hello, how are you today?
+			<br />
 		</messageBoxA>
 		<messageBoxB href="l999e998">
 			It's good to see you. How long has it been since we last saw each other?
 		</messageBoxB>
 		<messageBoxA>
-		Yes, that's right. So, since we last talked, I've got a new job and moved into a new apartment. What about you? What have you done since we last talked?
+			Yes, that's right. So, since we last talked, I've got a new job and moved into a new apartment. What about you? What have you done since we last talked?
 			<br />
 		</messageBoxA>
-			<messageBoxB>
-		Ah, that's interesting. I've been working hard on a project at work lately. What have you been doing lately?
+		<messageBoxB>
+			Ah, that's interesting. I've been working hard on a project at work lately. What have you been doing lately?
 		</messageBoxB>
 		<messageBoxA>
-		If I had more free time, I'd play some golf.
+			If I had more free time, I'd play some golf.
 		</messageBoxA>
 		<messageBoxB>
-		What about you?
+			What about you?
 		</messageBoxB>
-				<messageBoxA>
-		I wish I could remember the name of your friend. You know the tall one with dark hair. Are you still hanging out together?
+		<messageBoxA>
+			I wish I could remember the name of your friend. You know the tall one with dark hair. Are you still hanging out together?
 		</messageBoxA>
-			<messageBoxB>
+		<messageBoxB>
 			I used to hang out with my friends a lot more. Unfortunately, I don't have much time these days. What did you use to do that you don't do much anymore?
 		</messageBoxB>
 		<messageBoxA>
-		I got a new job, and everything changed. What did you do to change things?
+			I got a new job, and everything changed. What did you do to change things?
 		</messageBoxA>
 		<messageBoxB>
-		Oh well, I'm sure things will be different soon. I know things will change for the better when I get married! Will things change for you soon? If so, how will they change?
+			Oh well, I'm sure things will be different soon. I know things will change for the better when I get married! Will things change for you soon? If so, how will they change?
 		</messageBoxB>
 		<bgimg>gesichter.png</bgimg>
-	<!--	<bgvid>l002e000.mp4</bgvid> -->
+		<!--	<bgvid>l002e000.mp4</bgvid> -->
 		<nextevent href="l999e998" />
 	</event>
-	
-		<!-- conversation -->
-		<event level="p9" element="0" id="l999e998" eventtype="24" imcost="0"
-		imqual="0" imtime="0" loc="0">
+
+	<!-- conversation -->
+	<event level="p9" element="0" id="l999e998" eventtype="24" imcost="0"
+		   imqual="0" imtime="0" loc="0">
 		<description>Conversation</description>
 		<message>
 
-	Hello, how are you today?
+			Hello, how are you today?
 
-	
+
 			It's good to see you. How long has it been since we last saw each other?
-	
-		Yes, that's right. So, since we last talked, I've got a new job and moved into a new apartment. What about you? What have you done since we last talked?
-		
-	
-		Ah, that's interesting. I've been working hard on a project at work lately. What have you been doing lately?
-	
-		If I had more free time, I'd play some golf.
-	
-		What about you?
-	
-		I wish I could remember the name of your friend. You know the tall one with dark hair. Are you still hanging out together?
-		
+
+			Yes, that's right. So, since we last talked, I've got a new job and moved into a new apartment. What about you? What have you done since we last talked?
+
+
+			Ah, that's interesting. I've been working hard on a project at work lately. What have you been doing lately?
+
+			If I had more free time, I'd play some golf.
+
+			What about you?
+
+			I wish I could remember the name of your friend. You know the tall one with dark hair. Are you still hanging out together?
+
 			I used to hang out with my friends a lot more. Unfortunately, I don't have much time these days. What did you use to do that you don't do much anymore?
-	
-		I got a new job, and everything changed. What did you do to change things?
-	
-		Oh well, I'm sure things will be different soon. I know things will change for the better when I get married! Will things change for you soon? If so, how will they change?
+
+			I got a new job, and everything changed. What did you do to change things?
+
+			Oh well, I'm sure things will be different soon. I know things will change for the better when I get married! Will things change for you soon? If so, how will they change?
 
 		</message>
-	
-		<bgimg>gesichter.png</bgimg> 
-	<!--	<bgvid>l002e000.mp4</bgvid> -->
+
+		<bgimg>gesichter.png</bgimg>
+		<!--	<bgvid>l002e000.mp4</bgvid> -->
 		<nextevent href="l032e001" />
 	</event>
-	
+
 	<event level="p9" element="0" id="l999e900" eventtype="26" imcost="0"
-		imqual="0" imtime="0" loc="0">
+		   imqual="0" imtime="0" loc="0">
 		<description>Globe Data Information</description>
 		<powerDistance>1</powerDistance>
 		<institutionalCollectivism>1.5</institutionalCollectivism>
@@ -267,20 +274,20 @@
 		<futureOrientation>4</futureOrientation>
 		<uncertaintyAvoidance>4.5</uncertaintyAvoidance>
 		<assertiveness>3.5</assertiveness>
-		<humaneOrientation>3</humaneOrientation> 
-		
-		<bgimg>content8pic1.png</bgimg> 
-	<!--	<bgvid>l002e000.mp4</bgvid> -->
+		<humaneOrientation>3</humaneOrientation>
+
+		<bgimg>content8pic1.png</bgimg>
+		<!--	<bgvid>l002e000.mp4</bgvid> -->
 		<nextevent href="l999e999" />
 	</event>
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 	<event level="300" element="0" id="l300e050" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
 		<message />
 		<bgimg>CN_Facts_and_Figures_v2.png</bgimg>
@@ -290,7 +297,7 @@
 		<event level="" element="" id="l999e999" eventtype="" imcost=""
 		imqual="" imtime="" loc="" />
 
-	
+
 </events>
 	
 	

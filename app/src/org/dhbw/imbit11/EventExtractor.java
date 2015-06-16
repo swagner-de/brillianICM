@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -23,8 +25,10 @@ import javax.xml.xpath.XPathFactory;
 
 import org.dhbw.imbit11.backend.UserRealm;
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 /**
  * @author Erik
@@ -167,14 +171,26 @@ public class EventExtractor {
 	}
 
 	private static void markVisitedCountries(Node node, String userid){
+		Pattern p = Pattern.compile("l[0-6]{1}");
 		UserRealm userRealm = new UserRealm();
 		ArrayList<String> visitedCountries = userRealm.getVisitedCountries(userid);
 		NodeList children = node.getChildNodes();
 		for (int i = 0; i < children.getLength(); i++)
 		{
 			Node currentItem = children.item(i);
-			if (currentItem.getAttributes().getNamedItem("href").getNodeValue().equalsIgnoreCase("l00e000"));
-
+			if(currentItem.getNodeName().equalsIgnoreCase("option")){
+				String href = currentItem.getAttributes().getNamedItem("href").toString();
+				Matcher m = p.matcher(href);
+				if (m.find()) {
+					Element e = (Element) currentItem;
+					if (visitedCountries.contains(m.group(0))){
+						e.setAttribute("completed","true");
+					}
+					else{
+						e.setAttribute("completed","false");
+					}
+				}
+			}
 		}
 	}
 }

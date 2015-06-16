@@ -826,7 +826,7 @@ public class UserRealm extends JdbcRealm {
 	}
 
 	public ArrayList<String> getVisitedCountries(String userid) {
-		ArrayList<String> visitedCountries = null;
+		ArrayList<String> visitedCountries = new ArrayList<String>();
 		PreparedStatement ps;
 		ResultSet rs;
 		try {
