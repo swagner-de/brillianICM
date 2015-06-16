@@ -122,6 +122,16 @@
 				//Der Ladebildschirm
 				showLoading();				
 			} 
-		});	
+		});
+		$.ajax({
+			url: 'Event',
+			type: 'get',
+			dataType: 'html',
+			data: {userid : userid, type : 'node', id :  "l000e000"},
+			async: true,
+			success: function(data) {
+				countrySelectionXml = $(data);
+			}
+		});
 	}		
 });
