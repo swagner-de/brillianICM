@@ -1,6 +1,6 @@
 ﻿function modifyPathsDependingOnGender(xml){
 	if (gameData.gender == 1){
-		var countryStartingPointRegex = new RegExp('l[0-7]{1}0{2}e0{3}');
+		var countryStartingPointRegex = new RegExp('l[1-7]{1}0{2}e0{3}');
 		$(xml).find("opt" +
 		"" +
 		"ion").each(function(){
