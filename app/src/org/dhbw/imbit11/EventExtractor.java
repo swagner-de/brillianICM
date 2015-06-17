@@ -171,7 +171,7 @@ public class EventExtractor {
 	}
 
 	private static void markVisitedCountries(Node node, String userid){
-		Pattern p = Pattern.compile("l[0-6]{1}");
+		Pattern p = Pattern.compile("l[1-7]{1}");
 		UserRealm userRealm = new UserRealm();
 		ArrayList<String> visitedCountries = userRealm.getVisitedCountries(userid);
 		NodeList children = node.getChildNodes();
