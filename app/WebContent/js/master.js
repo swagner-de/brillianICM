@@ -701,11 +701,6 @@ function loadAllocationThree () {
 
 function loadConversation(){
 	
-	var ttsSettings="false";
-	ttsSettings=getCookie("tts");
-	//Checks if Cookie has TTS-settings on "true" & if Browser supports standard HTML5 text-to-speech (SpeechSynthesisUtterance)
-	if (ttsSettings == "true") {
-	
 	var hrefNumber = $xml.find('messageBoxB').length;
 
 	var i=0;
@@ -739,8 +734,8 @@ function loadConversation(){
 				
 				// NEW LINE 657
 					var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
-					var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');
-					
+				
+	var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');				
 					//text to speech			
 	if(readVoice =="male"){
 	var tts = new SpeechSynthesisUtterance(text);
@@ -784,9 +779,9 @@ function loadConversation(){
 		 	 function messageBoxB(){
 		var text = $xml.find('messageBoxB').eq(indexAB).text();
 		// NEW LINE 688
-		var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
+		var hrefB = $xml.find('messageBoxB').eq(indexAB).attr('href');
+		
 		var readVoice = $xml.find('messageBoxB').eq(indexAB).attr('voice');
-
 		if(readVoice =="male"){
 	var tts = new SpeechSynthesisUtterance(text);
 	tts.native = false;
@@ -807,16 +802,12 @@ function loadConversation(){
 		
 				// NEW LINE 700 - 709
 		var dialogButton = $('.messageBoxB').eq(indexAB);
-
-		if(href == undefined){
+		if(hrefB == undefined){
 				i++;
-							 if(i==hrefNumber){
+				if(i==hrefNumber){
 				var nextButton = $('.buttonContainer');
-		
 				 nextButton.append('<div class="nextButton">NEXT</div>');
-
-				  nextButton.linkbutton({
-				
+				 nextButton.linkbutton({
 				 });
 				 nextButton.bind('click', function(){	
 				 getXml(href);
@@ -839,7 +830,7 @@ function loadConversation(){
 		 } 
 		 
 		 
-		 						 if(hrefNumber == "0"){
+		 		if(hrefNumber == "0"){
 				var nextButton = $('.buttonContainer');
 		
 				 nextButton.append('<div class="nextButton">NEXT</div>');
@@ -864,8 +855,7 @@ function loadConversation(){
 		speechSynthesis.cancel();
 		containerConversation.window('close');
 	});
-	}   
-}
+	} 
 
 function loadTextBox(){
 	// liest XML aus
