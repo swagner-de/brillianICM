@@ -22,7 +22,7 @@ function loadDropDown(xml){
 		var completed = $(this).attr('completed');
 		if(completed == "true"){
 			 opt.style.backgroundColor = 'red' ;	
-		}else {}
+		}else { }
 
 		
 	});
