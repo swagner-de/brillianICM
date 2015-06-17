@@ -15,8 +15,9 @@ function getXml(id) {
 		
 		//Create Jquery XML Element
 		$xml = $(xml);
-		modifyPathsDependingOnGender($xml);
-
+		if (id=="l000e000") {
+			modifyPathsDependingOnGender($xml);
+		}
 
 		//General XML Event Variables
 		var id = $xml.find('event').attr('id');
