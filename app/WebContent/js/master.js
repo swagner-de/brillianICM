@@ -262,7 +262,6 @@ function changeFunc() {
 		var country = $(this).text();
 		
 		if (selectedValue == country){
-			//console.log(country);
 			var nexrEvent = $(this).attr('href');
 			getXml(nexrEvent);
 		}
