@@ -28,7 +28,7 @@
 <link href="css/changes-master.css" rel="stylesheet">
 
 </head>
-<body class="easyui-layout" style="height:100%">
+<body class="easyui-layout">
 	
 		<!-- <div class="north" data-options="region:'north',border:false" style="border-bottom-width: 1px;">
 			<div class="div-header window">
@@ -38,7 +38,7 @@
 				<div class="welcome"></div>
 			</div>-->
 		
-		<div class="center" data-options="region:'center'" style="background-color: #d5edf3;">
+		<div class="center" data-options="region:'center'" style="background-color: #d5edf3; height:100%">
 		
 			<h1>You completed the game!</h1>
 			<h3>Check out how brilliant you have been:</h3>
