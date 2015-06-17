@@ -946,7 +946,7 @@ function tt_Show()
 	var css = tt_aElt[0].style;
 
 	// Override the z-index of the topmost wz_dragdrop.js D&D item
-	css.zIndex = Math.max((window.dd && dd.z) ? (dd.z + 2) : 0, 1010);
+	css.zIndex = Math.max((window.dd && dd.z) ? (dd.z + 2) : 0, 9999);
 	if(tt_aV[STICKY] || !tt_aV[FOLLOWMOUSE])
 		tt_iState &= ~0x4;
 	if(tt_aV[EXCLUSIVE])
