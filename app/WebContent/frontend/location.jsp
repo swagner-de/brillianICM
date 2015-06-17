@@ -335,7 +335,7 @@
 		
 		
 		
-		<!-- eventtyp 26: 4 Ohren Modell alternativ -->
+		<!-- eventtyp 27: 4 Ohren Modell alternativ -->
 	<div class="matrixAllocationContainerAlternate easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer">

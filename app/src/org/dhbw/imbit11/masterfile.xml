@@ -11,30 +11,27 @@
             <nextevent href="l017e001" />
         </event> -->
 	<!-- selection panel left-->
-	<event level="barpng" element="0" id="l000e001" eventtype="3" imcost="0"
+	<event level="barpng" element="0" id="l000e000" eventtype="2" imcost="0"
 		   imqual="0" imtime="0" loc="0">
 		<partner>Get started with a country!</partner>
 		<!--	<date>2014-01-05 10:16:34</date>
             <title>Call with CEO</title> -->
 		<content>Get started with&lt;br /&gt; a country!</content>
-		<option href="l000e000">Basics</option>
+		<option href="l700e000">Basics</option>
 		<option href="l100e000">Brasil</option>
 		<option href="l200e000">Spain</option>
 		<option href="l300e000">China</option>
 		<option href="l400e000">USA</option>
 		<option href="l500e000">Sweden</option>
 		<option href="l600e000">India</option>
+		<option href="l999e999">End game</option>
 		<option href="l101e101">Case 1</option>
 		<option href="l010e000">Case 2</option>
 		<option href="l999e997">Case 3</option>
 		<option href="l999e900">Case 4</option>
-		<bgimg>role3pic7.png</bgimg>
-		<bgvid>l002e000.mp4</bgvid>
-	</event>
-	<!-- Only Background -->
-	<event level="p8" loc="0" imtime="0" imqual="0" imcost="0" eventtype="2" id="l000e000" element="0" >
 		<bgimg>Web_Background.png</bgimg>
 	</event>
+
 	<event level="worldmap" element="0" id="l101e101" eventtype="25" imcost="0"
 		   imqual="0" imtime="0" loc="0">
 		<description>WorldMap</description>

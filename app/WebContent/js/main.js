@@ -1,6 +1,6 @@
 ﻿function modifyPathsDependingOnGender(xml){
 	if (gameData.gender == 1){
-		var countryStartingPointRegex = new RegExp('l[0-6]{1}0{2}e0{3}');
+		var countryStartingPointRegex = new RegExp('l[1-7]{1}0{2}e0{3}');
 		$(xml).find("option").each(function(){
 			var href = $(this).attr('href');
 			if (href.match(countryStartingPointRegex)){
@@ -19,6 +19,12 @@ function loadDropDown(xml){
 		var opt = document.createElement("option");
 		opt.innerHTML = country;
 		selectBox.appendChild(opt);
+		var completed = $(this).attr('completed');
+		if(completed == "true"){
+			 opt.style.backgroundColor = 'red' ;	
+		}else { }
+
+		
 	});
 }
 $(document).ready(function(){
@@ -151,7 +157,7 @@ $(document).ready(function(){
 			url: 'Event',
 			type: 'get',
 			dataType: 'html',
-			data: {userid : userid, type : 'node', id :  "l000e001"},
+			data: {userid : userid, type : 'node', id :  "l000e000"},
 			async: true,
 			success: function(data) {
 				$countrySelectionXml = $(data);
