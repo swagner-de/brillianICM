@@ -1960,39 +1960,46 @@ function setTCQImages (imtime, imcost, imqual) {
 	var svg_competence= document.getElementById("icon_competence");
 	var svg_communication= document.getElementById("icon_communication");
 	var svg_behaviour= document.getElementById("icon_behaviour");
+	//grün: 49D26D
+	//orange: FFAB58
+	//rot: FF6C58
 
+
+	var color_green="#49D26D";
+	var color_orange="#FFAB58";
+	var color_red="#FF6C58";
 if(kpi_competence >85){
-	svg_competence.setAttribute("fill","green");
+	svg_competence.setAttribute("fill",color_green);
 
 }else if(kpi_competence<=85 && kpi_competence>49){
-	svg_competence.setAttribute("fill","orange");
+	svg_competence.setAttribute("fill",color_orange);
 
 }else{
-	svg_competence.setAttribute("fill","red");
+	svg_competence.setAttribute("fill",color_red);
 
 }
 
 	if(kpi_communication >85){
-		svg_communication.setAttribute("fill","green");
+		svg_communication.setAttribute("fill",color_green);
 
 
 	}else if(kpi_communication<=85 && kpi_communication>49){
-		svg_communication.setAttribute("fill","orange");
+		svg_communication.setAttribute("fill",color_orange);
 
 	}else{
-		svg_communication.setAttribute("fill","red");
+		svg_communication.setAttribute("fill",color_red);
 
 	}
 
 	if(kpi_behaviour >85){
-		svg_behaviour.setAttribute("fill","green");
+		svg_behaviour.setAttribute("fill",color_green);
 
 
 	}else if(kpi_behaviour<=85 && kpi_behaviour>49){
-		svg_behaviour.setAttribute("fill","orange");
+		svg_behaviour.setAttribute("fill",color_orange);
 
 	}else{
-		svg_behaviour.setAttribute("fill","red");
+		svg_behaviour.setAttribute("fill",color_red);
 
 	}
 }
