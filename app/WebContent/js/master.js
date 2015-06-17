@@ -258,18 +258,16 @@ function checkBrowserName(name)
 function changeFunc() {
     var selectBox = document.getElementById("contry-list");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    
-    if(selectedValue =="USA"){
-    	getXml('l01e101');
-    }else if (selectedValue=="UK") {
-    	getXml("l01e101");
-    }else if (selectedValue=="Germany") {
-   	getXml("l01e101");
-   } else if (selectedValue=="China") {
-   	getXml("l01e101");
-   }
-    //alert(selectedValue);
-   }
+	var x=$countrySelectionXml.find('option').each(function(){
+		var country = $(this).text();
+		
+		if (selectedValue == country){
+			var nexrEvent = $(this).attr('href');
+			getXml(nexrEvent);
+		}
+	});
+}
+
 function loadPictureContainer () {
 	var container = $('.pictureContainer');
 	loadBackground();
@@ -736,8 +734,8 @@ function loadConversation(){
 				
 				// NEW LINE 657
 					var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
-					var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');
-					
+				
+	var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');				
 					//text to speech			
 	if(readVoice =="male"){
 	var tts = new SpeechSynthesisUtterance(text);
@@ -781,9 +779,9 @@ function loadConversation(){
 		 	 function messageBoxB(){
 		var text = $xml.find('messageBoxB').eq(indexAB).text();
 		// NEW LINE 688
-		var href = $xml.find('messageBoxB').eq(indexAB).attr('href');
+		var hrefB = $xml.find('messageBoxB').eq(indexAB).attr('href');
+		
 		var readVoice = $xml.find('messageBoxB').eq(indexAB).attr('voice');
-
 		if(readVoice =="male"){
 	var tts = new SpeechSynthesisUtterance(text);
 	tts.native = false;
@@ -804,16 +802,12 @@ function loadConversation(){
 		
 				// NEW LINE 700 - 709
 		var dialogButton = $('.messageBoxB').eq(indexAB);
-
-		if(href == undefined){
+		if(hrefB == undefined){
 				i++;
-							 if(i==hrefNumber){
+				if(i==hrefNumber){
 				var nextButton = $('.buttonContainer');
-		
 				 nextButton.append('<div class="nextButton">NEXT</div>');
-
-				  nextButton.linkbutton({
-				
+				 nextButton.linkbutton({
 				 });
 				 nextButton.bind('click', function(){	
 				 getXml(href);
@@ -836,7 +830,7 @@ function loadConversation(){
 		 } 
 		 
 		 
-		 						 if(hrefNumber == "0"){
+		 		if(hrefNumber == "0"){
 				var nextButton = $('.buttonContainer');
 		
 				 nextButton.append('<div class="nextButton">NEXT</div>');
@@ -861,7 +855,7 @@ function loadConversation(){
 		speechSynthesis.cancel();
 		containerConversation.window('close');
 	});
-	}   
+	} 
 
 function loadTextBox(){
 	// liest XML aus
