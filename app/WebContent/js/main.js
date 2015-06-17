@@ -21,6 +21,12 @@ function loadDropDown(xml){
 		var opt = document.createElement("option");
 		opt.innerHTML = country;
 		selectBox.appendChild(opt);
+		var completed = $(this).attr('completed');
+		if(completed == "true"){
+			 opt.style.backgroundColor = 'red' ;	
+		}else {}
+
+		
 	});
 }
 $(document).ready(function(){
