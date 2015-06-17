@@ -1,7 +1,9 @@
 ﻿function modifyPathsDependingOnGender(xml){
 	if (gameData.gender == 1){
-		var countryStartingPointRegex = new RegExp('l[0-6]{1}0{2}e0{3}');
-		$(xml).find("option").each(function(){
+		var countryStartingPointRegex = new RegExp('l[0-7]{1}0{2}e0{3}');
+		$(xml).find("opt" +
+		"" +
+		"ion").each(function(){
 			var href = $(this).attr('href');
 			if (href.match(countryStartingPointRegex)){
 				$(this).attr('href', href.replace("e000", "e001"));
@@ -151,7 +153,7 @@ $(document).ready(function(){
 			url: 'Event',
 			type: 'get',
 			dataType: 'html',
-			data: {userid : userid, type : 'node', id :  "l000e001"},
+			data: {userid : userid, type : 'node', id :  "l000e000"},
 			async: true,
 			success: function(data) {
 				$countrySelectionXml = $(data);
