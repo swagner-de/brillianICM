@@ -900,9 +900,12 @@ function loadScrollBar(){
 	// liest XML aus		  
 	 var href = $xml.find('nextevent').attr('href');
 	 var description = $xml.find('description').text();
+	 var description26 = $xml.find('description26').text();
 	 var containerScrollBar = $('.scrollBar');
 	 var descriptioncontainerScrollBar = containerScrollBar.find('.description');
+	 var descriptioncontainerScrollBar26 = containerScrollBar.find('.description26');
 	 descriptioncontainerScrollBar.text(description);
+	 descriptioncontainerScrollBar26.text(description26);
 	//Lade den Dialog Hintergrund	
 	 loadBackground();
 	 

@@ -264,60 +264,62 @@
 	<div class="bgimg"></div>
 	<div class ="centerContainer">
 		<div class="description"></div>
+		<div class="description26"></div>
 	
 		<div class="scrollBarContent">
-			<div class="description2">  1 (weak)  to  7 (strong)</div >
+			<div class="description2">1 (weak) &nbsp;&nbsp; &nbsp; to&nbsp; &nbsp;&nbsp; 7 (strong)</div >
+			<div class="description3">Solution</div >
 				<div class="inputRowPD">
-					<input class="text" type="textbox" value="Power Distance:"/>
-					<input class="input" type="textbox" id="powerDistance" value="1" />
+					<input class="text" type="textbox" value="Power Distance:" readonly />
+					<input class="input" type="textbox" id="powerDistance" value="1" readonly />
 					<input class="value" type="range" id="powerDistanceUserValue" min="1" max="7" value="1" step=".5" onchange="document.getElementById('powerDistance').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowInsC">
-					<input class="text" type="textbox" value="Institutional Collectivism:"/>
-					<input class="input" type="textbox" id="institutionalCollectivism" value="1"/>
+					<input class="text" type="textbox" value="Institutional Collectivism:" readonly />
+					<input class="input" type="textbox" id="institutionalCollectivism" value="1" readonly />
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('institutionalCollectivism').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowGE">
-					<input class="text" type="textbox" value="Gender Egalitarism:"/>
-					<input class="input" type="textbox" id="genderEgalitarism" value="1"/>
+					<input class="text" type="textbox" value="Gender Egalitarism:" readonly/>
+					<input class="input" type="textbox" id="genderEgalitarism" value="1" readonly/>
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('genderEgalitarism').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowIngC">
-					<input class="text" type="textbox" value="Ingroup Collectivism:"/>
-					<input class="input" type="textbox" id="ingroupCollectivism" value="1"/>
+					<input class="text" type="textbox" value="Ingroup Collectivism:" readonly/>
+					<input class="input" type="textbox" id="ingroupCollectivism" value="1"readonly/>
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('ingroupCollectivism').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowPO">
-					<input class="text" type="textbox" value="Performance Orientation:"/>
-					<input class="input" type="textbox" id="performanceOrientation" value="1"/>
+					<input class="text" type="textbox" value="Performance Orientation:"readonly/>
+					<input class="input" type="textbox" id="performanceOrientation" value="1"readonly/>
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('performanceOrientation').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowFO">
-					<input class="text" type="textbox" value="Future Orientation:"/>
-					<input class="input" type="textbox" id="futureOrientation" value="1"/>
+					<input class="text" type="textbox" value="Future Orientation:" readonly/>
+					<input class="input" type="textbox" id="futureOrientation" value="1"readonly/>
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('futureOrientation').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowUA">
-					<input class="text" type="textbox" value="Uncertainty Avoidance:"/>
-					<input class="input" type="textbox" id="uncertaintyAvoidance" value="1"/>
+					<input class="text" type="textbox" value="Uncertainty Avoidance:"readonly/>
+					<input class="input" type="textbox" id="uncertaintyAvoidance" value="1"readonly/>
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('uncertaintyAvoidance').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowA">
-					<input class="text" type="textbox" value="Assertiveness:" />
-					<input class="input" type="textbox" id="assertiveness" value="1" />
+					<input class="text" type="textbox" value="Assertiveness:"readonly />
+					<input class="input" type="textbox" id="assertiveness" value="1" readonly/>
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('assertiveness').value = this.value" style="width: 250px;"/>
 				</div>
 				
 				<div class="inputRowHO">
-					<input class="text" type="textbox" id="text" value="Humane Orientation:" />
-					<input class="input" type="textbox" id="humaneOrientation" value="1" />
+					<input class="text" type="textbox" id="text" value="Humane Orientation:" readonly />
+					<input class="input" type="textbox" id="humaneOrientation" value="1"readonly />
 					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('humaneOrientation').value = this.value" style="width: 250px;"/>
 				</div>
 		</div>
