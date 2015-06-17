@@ -75,13 +75,6 @@
 				Are you sure you want to restart your game? This step cannot be undone!
 			</div>
 		</div>
-		<div class=" footer container text-center" data-options="region:'south'" style="height:45px; overflow:hidden; width:100%">
-		<footer>
-        <div class=" text-center">
-            <p>Copyright &copy; brillianICM 2015</p>
-        </div>
-        </footer>
-	</div>
 	
 </body>
 </html>
