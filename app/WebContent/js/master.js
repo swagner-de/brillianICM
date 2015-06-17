@@ -703,6 +703,11 @@ function loadAllocationThree () {
 
 function loadConversation(){
 	
+	var ttsSettings="false";
+	ttsSettings=getCookie("tts");
+	//Checks if Cookie has TTS-settings on "true" & if Browser supports standard HTML5 text-to-speech (SpeechSynthesisUtterance)
+	if (ttsSettings == "true") {
+	
 	var hrefNumber = $xml.find('messageBoxB').length;
 
 	var i=0;
@@ -862,6 +867,7 @@ function loadConversation(){
 		containerConversation.window('close');
 	});
 	}   
+}
 
 function loadTextBox(){
 	// liest XML aus
