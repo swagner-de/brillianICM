@@ -9,7 +9,18 @@
 		});
 	}
 }
-
+function loadDropDown(xml){
+	
+	var selectBox = document.getElementById("contry-list");
+	
+	$countrySelectionXml.find("option").each(function(){
+		var country = $(this).text();
+		//console.log(country);
+		var opt = document.createElement("option");
+		opt.innerHTML = country;
+		selectBox.appendChild(opt);
+	});
+}
 $(document).ready(function(){
 
 	if(userid == null){	
@@ -140,11 +151,12 @@ $(document).ready(function(){
 			url: 'Event',
 			type: 'get',
 			dataType: 'html',
-			data: {userid : userid, type : 'node', id :  "l000e000"},
+			data: {userid : userid, type : 'node', id :  "l000e001"},
 			async: true,
 			success: function(data) {
 				$countrySelectionXml = $(data);
-				modifyPathsDependingOnGender($countrySelectionXml)
+				modifyPathsDependingOnGender($countrySelectionXml);
+				loadDropDown();
 			}
 		});
 	}		

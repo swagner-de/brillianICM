@@ -258,18 +258,17 @@ function checkBrowserName(name)
 function changeFunc() {
     var selectBox = document.getElementById("contry-list");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    
-    if(selectedValue =="USA"){
-    	getXml('l01e101');
-    }else if (selectedValue=="UK") {
-    	getXml("l01e101");
-    }else if (selectedValue=="Germany") {
-   	getXml("l01e101");
-   } else if (selectedValue=="China") {
-   	getXml("l01e101");
-   }
-    //alert(selectedValue);
-   }
+	var x=$countrySelectionXml.find('option').each(function(){
+		var country = $(this).text();
+		
+		if (selectedValue == country){
+			//console.log(country);
+			var nexrEvent = $(this).attr('href');
+			getXml(nexrEvent);
+		}
+	});
+}
+
 function loadPictureContainer () {
 	var container = $('.pictureContainer');
 	loadBackground();

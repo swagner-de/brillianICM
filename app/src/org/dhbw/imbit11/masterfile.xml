@@ -11,7 +11,7 @@
             <nextevent href="l017e001" />
         </event> -->
 	<!-- selection panel left-->
-	<event level="barpng" element="0" id="l000e000" eventtype="3" imcost="0"
+	<event level="barpng" element="0" id="l000e001" eventtype="3" imcost="0"
 		   imqual="0" imtime="0" loc="0">
 		<partner>Get started with a country!</partner>
 		<!--	<date>2014-01-05 10:16:34</date>
@@ -31,7 +31,10 @@
 		<bgimg>role3pic7.png</bgimg>
 		<bgvid>l002e000.mp4</bgvid>
 	</event>
-
+	<!-- Only Background -->
+	<event level="p8" loc="0" imtime="0" imqual="0" imcost="0" eventtype="2" id="l000e000" element="0" >
+		<bgimg>Web_Background.png</bgimg>
+	</event>
 	<event level="worldmap" element="0" id="l101e101" eventtype="25" imcost="0"
 		   imqual="0" imtime="0" loc="0">
 		<description>WorldMap</description>
