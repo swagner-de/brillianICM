@@ -15,8 +15,9 @@ function getXml(id) {
 		
 		//Create Jquery XML Element
 		$xml = $(xml);
-		modifyPathsDependingOnGender($xml);
-
+		if (id=="l000e000") {
+			modifyPathsDependingOnGender($xml);
+		}
 
 		//General XML Event Variables
 		var id = $xml.find('event').attr('id');
@@ -258,14 +259,15 @@ function checkBrowserName(name)
 function changeFunc() {
     var selectBox = document.getElementById("contry-list");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-	var x=$countrySelectionXml.find('option').each(function(){
+	var nextEvent="";
+	$countrySelectionXml.find('option').each(function(){
 		var country = $(this).text();
 		
 		if (selectedValue == country){
-			var nexrEvent = $(this).attr('href');
-			getXml(nexrEvent);
+			nextEvent = $(this).attr('href');
 		}
 	});
+	getXml(nextEvent);
 }
 
 function loadPictureContainer () {
