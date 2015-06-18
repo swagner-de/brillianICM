@@ -76,10 +76,6 @@
                <li><a style="margin-left: 100px;"><div class="drop">
    <select class="countryselect" id="contry-list" onchange="changeFunc();">
       <option selected="true" style="display:none;">Country</option>
-      <option>USA</option>
-      <option>Germany</option>
-      <option>China</option>
-      <option>UK</option>
    </select>
 </div></a></li>
                 <li><a href="#" id="help"  data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a></li>
