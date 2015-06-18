@@ -813,7 +813,7 @@ function loadConversation(){
 				 });
 				 nextButton.bind('click', function(){	
 				 getXml(href);
-					// // speechSynthesis.cancel();
+				 speechSynthesis.cancel();
 				  });
 				 }
 			}else{
@@ -825,7 +825,7 @@ function loadConversation(){
 				text:text
 			});
 			dialogButton.bind('click', function(){	
-			getXml(href);
+			getXml(hrefB);
 				speechSynthesis.cancel();
 			});	
 			} 
