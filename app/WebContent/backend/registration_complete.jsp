@@ -61,7 +61,7 @@
 		</div>
 	</div>
 <div class="center" data-options="region:'center'">
-<h3>Welcome to brillianCRM</h3>
+<h3>Welcome to brillianICM</h3>
 <p>Your registration was successful.</p>
 <p>You can now <a href='<%out.print(application.getContextPath());%>/LoginUser'>log in</a> to start your project.</p>
 <div class="mainEventContainerImprint easyui-window" data-options="closed:true,width:863,height:576"></div>

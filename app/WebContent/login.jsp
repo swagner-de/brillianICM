@@ -174,8 +174,8 @@ brillianICM was developed by  <a href = "http://www.imbit.dhbw-mannheim.de/" tar
 
 This game is webbased and should run in modern browsers including mobile devices. 
 We tested it with Google Chrome and Safari (iPad).
-<br />
-<h3>We, the WIMBIT12A & WIBIT12B classes,are proud to present our game:</h3>
+<br><br>
+<h3>We, the WIMBIT12A & WIBIT12B classes, are proud to present our game:</h3>
 
 <!-- <img src="images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
 <p>Jubly Anand, Ayleen Bocretsion, Michaela Brandl, Clemens Buchert, Sönke Cramme, Moritz Döring, Benedikt Esser, Hannah Fidora, Kathrin Fitzner, Malte Hake, Marius Kaiser, Mario Wares Khan, Martin Knipf, Dorothea Langer, Philipp Ludwig, Jonas Müller, Katrin Nagel, Dajana Pirke, Saskia Polenske, Benjamin Schäfer, Simon Schlephorst, Kevin Schork, Alexander Schrödinger, Sonja Seidel, Lukas Steigerwald, Max Steimle, Veronika Trübe, Antonia Vetter, Nadine Winkler and our lecturers Prof. Dr. Harald Bendl, Prof. Peter Mayr</p>
@@ -199,7 +199,7 @@ We tested it with Google Chrome and Safari (iPad).
 	</div>
 	
 	<h3>Haftungsausschluss</h3>
-	<p>Der Autor &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Aktualit&auml;t, Richtigkeit und Vollst&auml;ndigkeit der bereitgestellten Informationen auf der brillianCRM Website. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden vorliegt.<br>
+	<p>Der Autor &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Aktualit&auml;t, Richtigkeit und Vollst&auml;ndigkeit der bereitgestellten Informationen auf der brillianICM Website. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden vorliegt.<br>
 	Alle Angebote sind freibleibend und unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ank&uuml;ndigung zu ver&auml;ndern, zu erg&auml;nzen, zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen.</p>
 	<p>Bei direkten oder indirekten Verweisen auf fremde Webseiten (Hyperlinks), die au&szlig;erhalb des Verantwortungsbereiches des Autors liegen, w&uuml;rde eine Haftungsverpflichtung ausschlie&szlig;lich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch m&ouml;glich und zumutbar w&auml;re, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.<br>
 	Der Autor erkl&auml;rt hiermit ausdr&uuml;cklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zuk&uuml;nftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verkn&uuml;pften Seiten hat der Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdr&uuml;cklich von allen Inhalten aller verlinkten/verkn&uuml;pften Seiten, die nach der Linksetzung ver&auml;ndert wurden. F&uuml;r illegale, fehlerhafte oder unvollst&auml;ndige Inhalte und insbesondere f&uuml;r Sch&auml;den, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der &uuml;ber Links auf die jeweilige Ver&ouml;ffentlichung lediglich verweist.</p>
