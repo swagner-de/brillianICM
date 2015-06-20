@@ -89,7 +89,8 @@
 				
 				<input style="display:none"  id="registrationButton" type="submit" value="Register now!"></input>
 				<a class="btn btn-default" style="margin-left: auto; margin-right: auto" onclick="$('#registrationButton').trigger('click')">Register now!</a>
-			
+			<br/><br/>
+			  <a href='login.jsp' style="margin: 0 auto;">Back to Login</a>
 			
 			</form>
 		</div>
