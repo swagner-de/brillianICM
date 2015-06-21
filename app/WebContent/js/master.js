@@ -731,25 +731,30 @@ function loadConversation(){
 	messageBoxB();
 	}
 	});
+		
 			 function messageBoxA(){ 
+					//check for tts-cookie
+					var ttsSettings="false";
+					ttsSettings=getCookie("tts");
+					
 				var text = $xml.find('messageBoxA').eq(indexAB).text();
 				
 				// NEW LINE 657
 					var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
 				
 	var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');				
-					//text to speech			
-	if(readVoice =="male"){
-	var tts = new SpeechSynthesisUtterance(text);
-	tts.native = false;
-	tts.lang = 'en-GB';
-	//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
-	speechSynthesis.speak(tts);
-		}
-		if(readVoice =="female"){
+	//text to speech for HTML5 support
+	if(ttsSettings == "true" && readVoice =="male" && typeof SpeechSynthesisUtterance !== 'undefined') {	
+		var tts = new SpeechSynthesisUtterance(text);
+		tts.native = false;
+		tts.lang = 'en-GB';
+		//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
+		speechSynthesis.speak(tts);
+	}
+	if(ttsSettings == "true" && readVoice =="female" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 			var tts = new SpeechSynthesisUtterance(text);
-	speechSynthesis.speak(tts);
-		}
+			speechSynthesis.speak(tts);
+	}
 		
 			// google voice
 		/*		var audio = new Audio();
@@ -772,28 +777,36 @@ function loadConversation(){
 				});
 				dialogButton.bind('click', function(){	
 				getXml(href);
+				if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 					speechSynthesis.cancel();
+				}
 				});	
 				} 
 			 }
 			 
 			 
 		 	 function messageBoxB(){
+					//check for tts-cookie
+					var ttsSettings="false";
+					ttsSettings=getCookie("tts");
+					
 		var text = $xml.find('messageBoxB').eq(indexAB).text();
 		// NEW LINE 688
 		var hrefB = $xml.find('messageBoxB').eq(indexAB).attr('href');
 		
 		var readVoice = $xml.find('messageBoxB').eq(indexAB).attr('voice');
-		if(readVoice =="male"){
-	var tts = new SpeechSynthesisUtterance(text);
-	tts.native = false;
-	tts.lang = 'en-GB';
-	//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
-	speechSynthesis.speak(tts);
-		}
-		if(readVoice =="female"){
+		
+		//text to speech for HTML5 support
+		if(ttsSettings == "true" && readVoice =="male" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 			var tts = new SpeechSynthesisUtterance(text);
-	speechSynthesis.speak(tts);
+			tts.native = false;
+			tts.lang = 'en-GB';
+			//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
+			speechSynthesis.speak(tts);
+		}
+		if(ttsSettings == "true" && readVoice =="female" && typeof SpeechSynthesisUtterance !== 'undefined') {	
+				var tts = new SpeechSynthesisUtterance(text);
+				speechSynthesis.speak(tts);
 		}
 		
 
@@ -813,7 +826,9 @@ function loadConversation(){
 				 });
 				 nextButton.bind('click', function(){	
 				 getXml(href);
-				 speechSynthesis.cancel();
+				 if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
+					speechSynthesis.cancel();
+				 }
 				  });
 				 }
 			}else{
@@ -826,7 +841,9 @@ function loadConversation(){
 			});
 			dialogButton.bind('click', function(){	
 			getXml(hrefB);
+			if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 				speechSynthesis.cancel();
+			}
 			});	
 			} 
 		 } 
@@ -854,7 +871,9 @@ function loadConversation(){
 	continueButtonMatrixConversation.unbind('click');
 	continueButtonMatrixConversation.bind('click', function(){
 	getXml(href);
+	if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 		speechSynthesis.cancel();
+	}
 		containerConversation.window('close');
 	});
 	} 
