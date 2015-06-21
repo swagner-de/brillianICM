@@ -21,7 +21,7 @@ function loadDropDown(xml){
 		selectBox.appendChild(opt);
 		var completed = $(this).attr('completed');
 		if(completed == "true"){
-			 opt.style.backgroundColor = 'red' ;	
+			 opt.style.backgroundColor = 'green' ;	
 		}else { }
 
 		
