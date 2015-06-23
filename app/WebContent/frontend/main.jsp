@@ -88,12 +88,12 @@
 			</ul>
 			<ul class="nav navbar-nav second-button">
 				<svg id= "iconsBox"height="50" width="200" >
-					<circle id="icon_competence" cx="25" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" onmouseover="Tip('Some text about the first Dimension')" onmouseout="UnTip()" />
-					<text x="25" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black" onmouseover="Tip('Some text about the first Dimension')"  onmouseout="UnTip()">C</text>
-					<circle id="icon_communication" cx="75" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" onmouseover="Tip('Here you are having the description of 2nd Dim')" onmouseout="UnTip()" />
-					<text x="75" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('Here you are having the description of 2nd Dim')" onmouseout="UnTip()">C</text>
-					<circle id="icon_behaviour" cx="125" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" onmouseover="Tip('...and third')" onmouseout="UnTip()"/>
-					<text x="125" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('...and third') onmouseout="UnTip()"">B</text>
+					<circle id="icon_competence" cx="25" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" onmouseover="Tip('Competence:&lt;&#47;br&gt;  WHY &lt;&#47;br&gt; This KPI is all about knowing WHY something is done &lt;&#47;br&gt; in a particular way respectively knowing according reasons why the answer was the right one. &lt;&#47;br&gt; This is based especially on knowledge that comes from the 9 cultural dimensions.')" onmouseout="UnTip()" />
+						<text x="25" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black" onmouseover="Tip('Competence: &lt;&#47;br&gt;  WHY &lt;&#47;br&gt; This KPI is all about knowing WHY something is done &lt;&#47;br&gt; in a particular way respectively knowing according reasons why the answer was the right one. &lt;&#47;br&gt; This is based especially on knowledge that comes from the 9 cultural dimensions.')" onmouseout="UnTip()">C</text>
+				<circle id="icon_communication" cx="75" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" onmouseover="Tip('Communications: &lt;&#47;br&gt; HOW &lt;&#47;br&gt; It’s about how individuals communicate &lt;&#47;br&gt; with each other based on known models, such as „iceberg model“ or „4-ears model“')" onmouseout="UnTip()" />
+						<text x="75" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('Communications: &lt;&#47;br&gt; HOW &lt;&#47;br&gt; It’s about how individuals communicate &lt;&#47;br&gt; with each other based on known models, such as „iceberg model“ or „4-ears model“')"onmouseout="UnTip()">C</text>
+				<circle id="icon_behaviour" cx="125" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" onmouseover="Tip('Behavior: &lt;&#47;br&gt;  WHAT &lt;&#47;br&gt; Behavior (Verhalten) is about WHAT was/is going on. &lt;&#47;br&gt; This is about what to do or how to behave in a certain situation. It includes Do’s & Dont’s. ')" onmouseout="UnTip()"/>
+						<text x="125" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('Behavior: &lt;&#47;br&gt;  WHAT &lt;&#47;br&gt; Behavior (Verhalten) is about WHAT was/is going on. &lt;&#47;br&gt; This is about what to do or how to behave in a certain situation. It includes Do’s & Dont’s. ')"onmouseout="UnTip()">B</text>
 			</svg>
 
 				</ul>
