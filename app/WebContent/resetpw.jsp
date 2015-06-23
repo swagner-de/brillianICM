@@ -15,13 +15,6 @@
 <link type="text/css" rel="stylesheet" href="css/master.css" />
 
 	
-
-<!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
   
     
     <!-- Custom Fonts -->

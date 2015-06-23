@@ -9,11 +9,7 @@
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
 <link type="text/css" rel="stylesheet" href="css/master.css" />
-<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script type="text/javascript" src="js/master.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+
 
 
 <!-- Bootstrap Core CSS -->
@@ -26,6 +22,24 @@
  <!--Framework changes -->
 <link href="css/bootstrap-changes.css" rel="stylesheet">
 <link href="css/changes-master.css" rel="stylesheet">
+
+
+
+	<!--Framework JS -->
+	<script type="text/javascript" src="js/frameworks/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easing.min"></script>
+	<script type="text/javascript" src="js/frameworks/bootstrap.min"></script>
+
+	
+	<!--Custom JS -->	
+	<script type="text/javascript" src="js/master.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/serverFunctions.js"></script>
+	<script type="text/javascript" src="js/grayscale.js"></script>
+	
 
 </head>
 <body class="easyui-layout">
