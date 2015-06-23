@@ -312,7 +312,9 @@ function loadSelection () {
 
 function loadAllocation () {
 	var href = $xml.find('nextevent').attr('href');
-	var description = $xml.find('description').text();	
+	var description = $xml.find('description').text();
+	var itemInfo = $xml.find('option').attr('finfo');
+	var itemDescription = $xml.find('option').attr('fdesc');
 	var container = $('.allocationContainer');
 	var descriptionContainer = container.find('.description');
 	var phaseTitleContainer = container.find('.phaseTitle');
@@ -325,8 +327,6 @@ function loadAllocation () {
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemColumn = $(this).attr('column');
-		var itemInfo = $(this).attr('finfo');
-		var itemDescription = $(this).attr('fdesc');
 		var itemRank = $(this).attr('rank');	
 		//***code needed for tooltip function
 		var itemTitle = $(this).attr('title');
@@ -397,18 +397,11 @@ function loadAllocation () {
             $(this).draggable('proxy').addClass('dp');
             
         	$('.dragInfoContainer').html('');
-        	$('.dragInfoContainer').append('<div class="fbutton"><span class="fdescription"></span></div>');
+			if ((itemInfo !== '') && (itemInfo !== undefined)) {
+				loadInfoButton($('.dragInfoContainer'),itemInfo,itemDescription);
+			};
+	
         	
-        	var infoButton = $('.fbutton');        	
-        	var info = $(this).attr('data-finfo');
-        	var description = $(this).attr('data-fdesc');
-        	
-        	infoButton.linkbutton({
-        		text: description,
-        		onClick: function(){
-        			showPdf('documents/' + info);
-        		}
-        	});
             
             $(this).removeClass('dragIncorrect');
         },
@@ -441,6 +434,8 @@ function loadAllocation () {
 function loadAllocationTwo () {
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();	
+	var itemInfo = $xml.find('option').attr('finfo');
+	var itemDescription = $xml.find('option').attr('fdesc');
 	var container = $('.allocationContainerTwo');
 	var descriptionContainer = container.find('.description');
 	var phaseTitleContainerTwo = container.find('.phaseTitleTwo');
@@ -454,8 +449,6 @@ function loadAllocationTwo () {
 		var itemText = $(this).text();
 		var itemColumn = $(this).attr('column');
 
-		var itemInfo = $(this).attr('finfo');
-		var itemDescription = $(this).attr('fdesc');
 		var itemRank = $(this).attr('rank');	
 
 		//***code needed for tooltip function
@@ -528,18 +521,9 @@ function loadAllocationTwo () {
             $(this).draggable('proxy').addClass('dp');
             
         	$('.dragInfoContainerTwo').html('');
-        	$('.dragInfoContainerTwo').append('<div class="fbutton"><span class="fdescription"></span></div>');
-        	
-        	var infoButton = $('.fbutton');        	
-        	var info = $(this).attr('data-finfo');
-        	var description = $(this).attr('data-fdesc');
-        	
-        	infoButton.linkbutton({
-        		text: description,
-        		onClick: function(){
-        			showPdf('documents/' + info);
-        		}
-        	});
+			if ((itemInfo !== '') && (itemInfo !== undefined)) {
+				loadInfoButton($('.dragInfoContainerTwo'),itemInfo,itemDescription);
+			};
             
             $(this).removeClass('dragIncorrect');
         },
@@ -573,6 +557,8 @@ function loadAllocationThree () {
 
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();	
+	var itemInfo = $xml.find('option').attr('finfo');
+	var itemDescription = $xml.find('option').attr('fdesc');
 	var container = $('.allocationContainerThree');
 	var descriptionContainer = container.find('.description');
 	var phaseTitleContainerThree = container.find('.phaseTitleThree');
@@ -591,17 +577,13 @@ function loadAllocationThree () {
 	$xml.find('option').each(function(index){
 		var itemText = $(this).text();
 		var itemColumn = $(this).attr('column');
-
-		var itemInfo = $(this).attr('finfo');
-		var itemDescription = $(this).attr('fdesc');
-		var itemRank = $(this).attr('rank');	
-
+		var itemRank = $(this).attr('rank');
 		//***code needed for tooltip function
 		var itemTitle = $(this).attr('title');
 		var itemHoverTitle = '';
 		if ((itemTitle !== '') && (itemTitle !== undefined)) {
 			var itemHoverTitle = ' title="' + itemTitle + '"';
-		}
+		};
 		//***
 		draggableContainerThree.append('<div class="drag bc bph" data-column="' + itemColumn + '" data-finfo="' + itemInfo + '" data-fdesc="' + itemDescription + '" data-rank="' + itemRank + '"' + itemHoverTitle + '>' + itemText + '</div>');
 	});
@@ -660,18 +642,9 @@ function loadAllocationThree () {
             $(this).draggable('proxy').addClass('dp');
             
         	$('.dragInfoContainerThree').html('');
-        	$('.dragInfoContainerThree').append('<div class="fbutton"><span class="fdescription"></span></div>');
-        	
-        	var infoButton = $('.fbutton');        	
-        	var info = $(this).attr('data-finfo');
-        	var description = $(this).attr('data-fdesc');
-        	
-        	infoButton.linkbutton({
-        		text: description,
-        		onClick: function(){
-        			showPdf('documents/' + info);
-        		}
-        	});
+			if ((itemInfo !== '') && (itemInfo !== undefined)) {
+				loadInfoButton($('.dragInfoContainerThree'),itemInfo,itemDescription);
+			};
             
             $(this).removeClass('dragIncorrect');
         },
@@ -701,6 +674,19 @@ function loadAllocationThree () {
     });
 }
 
+function loadInfoButton(dragInfoContainerDiv, info, description){
+	dragInfoContainerDiv.append('<div class="fbutton"><span class="fdescription"></span></div>');
+        	
+	var infoButton = $('.fbutton');        	
+	
+	infoButton.linkbutton({
+		text: description,
+		onClick: function(){
+			showPdf('documents/' + info);
+		}
+	});
+};
+			
 function loadConversation(){
 	
 	var hrefNumber = $xml.find('messageBoxB').length;
