@@ -21,33 +21,46 @@
 <link rel="icon" type="image/png" href="images/favicons/logo32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="images/favicons/logo144.png">
-	<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
-	<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/master.css" />	
-	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	
+
 	<script type="text/javascript">	
 		userid = '${userid}';
 	</script>
 
 
-   <!-- Bootstrap Core CSS -->
+   <!-- Framework CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
+	<link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-
-		
-	<script type="text/javascript" src="js/master.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/master.css" />	
 	
 	<!--Framework changes -->
     <link href="css/bootstrap-changes.css" rel="stylesheet">
     <!-- Overwriting Font -->
     <link href="css/font.css" rel="stylesheet">
+
+	<!--Framework JS -->
+	<script type="text/javascript" src="js/frameworks/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easing.min"></script>
+	<script type="text/javascript" src="js/frameworks/bootstrap.min"></script>
+	<script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
+	
+	<!--Custom JS -->	
+	<script type="text/javascript" src="js/master.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/serverFunctions.js"></script>
+	<script type="text/javascript" src="js/greyscale.js"></script>
+	
+
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">

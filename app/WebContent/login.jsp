@@ -61,8 +61,8 @@
 	<script type="text/javascript" src="js/frameworks/jquery-2.0.0.min.js"></script>
 	<script type="text/javascript" src="js/frameworks/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="js/frameworks/jquery.fancybox.pack.js?v=2.1.5"></script>
-	<script type="text/javascript" src="js/frameworks/jquery.easing.min"></script>
-	<script type="text/javascript" src="js/frameworks/bootstrap.min"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
 	
 	<!--Custom JS -->	
@@ -70,7 +70,7 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/events.js"></script>
 	<script type="text/javascript" src="js/serverFunctions.js"></script>
-	<script type="text/javascript" src="js/greyscale.js"></script>
+	<script type="text/javascript" src="js/grayscale.js"></script>
 
 
 </head>
