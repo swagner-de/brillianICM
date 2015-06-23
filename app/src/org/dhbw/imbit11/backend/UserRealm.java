@@ -835,7 +835,7 @@ public class UserRealm extends JdbcRealm {
 			ps.setString(1, userid);
 			rs = ps.executeQuery();
 			while (rs.next()){
-				for (int l=0; l<7; l++){
+				for (int l=1; l<0; l++){
 					if (rs.getBoolean(l+1)) visitedCountries.add("l"+l);
 				}
 			}
