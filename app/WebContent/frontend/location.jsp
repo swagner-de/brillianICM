@@ -23,6 +23,8 @@
 			<!-- eventtyp 2: Start Page -->
 	<div class="pictureContainer" style="background-color:#d5edf3; width:100%; height:100%;" data-options="fit:true,border:false">
 		<div class="bgimg" style=" width:60% !important;  float: right !important;"></div>
+		     <h4 style="text-transform:none; text-align: center; <!--  position: relative;
+top: 50%;-->">Please select the country from the drop-down list above</h4>
 	</div>
 	
 	<!-- eventtyp 14 & 15: choose ohne Bild und eventtype 5: choose mit Bild -->
