@@ -46,9 +46,6 @@
 <link rel="stylesheet" type="text/css"
 	href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
 <link type="text/css" rel="stylesheet" href="css/master.css" /> -->
-<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-
-<script type="text/javascript" src="js/master.js"></script>
 
 <!-- Imprint function -->
 <!--  <script type="text/javascript">
@@ -60,18 +57,20 @@
 	});
 </script>-->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
+<!--Framework JS -->
+	<script type="text/javascript" src="js/frameworks/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<script type="text/javascript" src="js/frameworks/jquery.easing.min"></script>
+	<script type="text/javascript" src="js/frameworks/bootstrap.min"></script>
+	<script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
+	
+	<!--Custom JS -->	
+	<script type="text/javascript" src="js/master.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/serverFunctions.js"></script>
+	<script type="text/javascript" src="js/greyscale.js"></script>
 
 
 </head>
