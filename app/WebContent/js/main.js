@@ -16,6 +16,7 @@
 		//Create Jquery XML Element
 		$xml = $(xml);
 		if (id=="l000e000") {
+			$countrySelectionXml = $xml
 			modifyPathsDependingOnGender($xml);
 		}
 
