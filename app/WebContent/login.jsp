@@ -63,7 +63,7 @@
 	<script type="text/javascript" src="js/frameworks/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<script type="text/javascript" src="js/frameworks/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/frameworks/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
+
 	
 	<!--Custom JS -->	
 	<script type="text/javascript" src="js/master.js"></script>
@@ -75,7 +75,7 @@
 
 </head>
 <body  id="page-top"  data-spy="scroll" data-target=".navbar-fixed-top">
-
+	<script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
     <!-- Navigation -->
        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" >
         <div class="container">
