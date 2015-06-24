@@ -18,6 +18,7 @@
 		if (id=="l000e000") {
 			$countrySelectionXml = $xml
 			modifyPathsDependingOnGender($xml);
+			loadDropDown($xml);
 		}
 
 		//General XML Event Variables
@@ -80,9 +81,13 @@ function modifyPathsDependingOnGender(xml){
 	}
 }
 function loadDropDown(xml){
-	
+	$('#contry-list').empty();
 	var selectBox = document.getElementById("contry-list");
-	
+	opt = document.createElement("option");
+	opt.innerHTML = "Select"
+	selectBox.appendChild(opt);
+	opt = null;
+
 	$countrySelectionXml.find("option").each(function(){
 		var country = $(this).text();
 		//console.log(country);
