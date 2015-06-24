@@ -136,7 +136,7 @@ $(document).ready(function(){
 		});
 	
 		$('#help').bind('click', function(){
-			showPdf('documents/Help.pdf');
+			showPdf('documents/BA_notizblock.pdf');
 		});
 	
 		$('#logout').bind('click', function(){
