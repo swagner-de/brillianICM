@@ -443,7 +443,7 @@ function showResult () {
 			});
 
 			$(this).find('#help').bind('click', function(){
-				showPdf('documents/help.pdf');
+				showPdf('documents/BA_notizblock.pdf');
 			});
 
 			$(this).find('#logout').bind('click', function(){

@@ -91,7 +91,7 @@
       <option selected="true" style="display:none;">Country</option>
    </select>
 </div></a></li>
-                <!--<li><a href="#" id="help"  data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a></li>-->
+                <li><a href="#" id="help"  data-options="plain:true"><%=ApplicationConstants.HELP_BUTTON_TEXT%></a></li>
                 <!--<li><a href="#" id="imprint" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a></li>-->
                 <li><a href="#"  class=" mainMailButton"  data-options="plain:true"><%=ApplicationConstants.LAPTOP_NAME%></a></li>
                 <li><a href="#" id="logout"  data-options="plain:true"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a></li>
