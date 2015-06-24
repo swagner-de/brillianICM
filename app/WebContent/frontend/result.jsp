@@ -85,7 +85,7 @@
 					</td>
 				</tr>
 			</table>
-			<div id="" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){window.location.href = '<%out.print(application.getContextPath());%>/ResetUserProgress';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+			<div id="dlg" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){window.location.href = '<%out.print(application.getContextPath());%>/ResetUserProgress';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
 				Are you sure you want to restart your game? This step cannot be undone!
 			</div>
 		</div>
