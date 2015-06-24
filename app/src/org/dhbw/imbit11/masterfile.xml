@@ -14,7 +14,7 @@
 		<option href="l500e000">Sweden</option>
 		<option href="l400e000">USA</option>
 		<option href="l999e999">End Game</option>
-		<bgimg>Web_Background.png</bgimg>
+		<bgimg>default_colour.jpg</bgimg>
 	</event>
 
 
@@ -9454,7 +9454,7 @@
 		<title>A short video ... </title>
 		<content>A short introduction video ... </content>
 		<option href="l433e001">Next</option>
-		<bgimg>400000.jpg</bgimg>
+		<bgimg>US_400000.jpg</bgimg>
 		<bgvid>US_intro.mp4</bgvid>
 	</event>
 
@@ -9462,7 +9462,7 @@
 	<event level="1" element="0" id="l433e001" eventtype="23" imcost="0"
 		   imqual="0" imtime="0" loc="4">
 		<message></message>
-		<bgimg>facts.jpg</bgimg>
+		<bgimg>US_facts.jpg</bgimg>
 		<nextevent href="l433e003"/>
 	</event>
 
@@ -9491,7 +9491,7 @@
 		<assertiveness>4,5</assertiveness>
 		<humaneOrientation>4</humaneOrientation>
 		<nextevent href="l433e007" />
-		<bgimg>400000.jpg</bgimg>
+		<bgimg>US_400000.jpg</bgimg>
 	</event>
 
 
@@ -9500,7 +9500,7 @@
 	<event level="1" element="0" id="l433e007" eventtype="23" imcost="0"
 		   imqual="0" imtime="0" loc="4">
 		<message></message>
-		<bgimg>dimensions.jpg</bgimg>
+		<bgimg>US_dimensions.jpg</bgimg>
 		<nextevent href="l400e002"/>
 	</event>
 
@@ -9519,7 +9519,7 @@
 			is waiting for you in the waiting area at the airport with a welcome
 			sign and your name on it. While you greet him, James is helping you
 			with your luggage. </message>
-		<bgimg>400002.jpg</bgimg>
+		<bgimg>US_400002.jpg</bgimg>
 		<nextevent href="l400e003"/>
 	</event>
 
@@ -9541,7 +9541,7 @@
 			but still on time.
 		</message>
 		<nextevent href="l400e004"/>
-		<bgimg>400003.jpg</bgimg>
+		<bgimg>US_400003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e004" eventtype="24" imcost="0"
@@ -9551,7 +9551,7 @@
 			right next to your car.
 		</message>
 		<nextevent href="l400e005"/>
-		<bgimg>400004.jpg</bgimg>
+		<bgimg>US_400004.jpg</bgimg>
 	</event>
 
 
@@ -9572,7 +9572,7 @@
 		</messageBoxB>
 		<messageBoxB href="l400e011"> Thanks, I’m fine. Here are the keys. See you
 			later. </messageBoxB>
-		<bgimg>400005.jpg</bgimg>
+		<bgimg>US_400005.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e007" eventtype="23" imcost="-5"
@@ -9584,7 +9584,7 @@
 			get them back later.
 		</messageBoxA>
 		<nextevent href="l400e013"/>
-		<bgimg>400005.jpg</bgimg>
+		<bgimg>US_400005.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e009" eventtype="23" imcost="-5"
@@ -9593,7 +9593,7 @@
 		<messageBoxA>You reached the right restaurant, but keep it cool, you’ll be
 			fine. </messageBoxA>
 		<nextevent href="l400e013"/>
-		<bgimg>400005.jpg</bgimg>
+		<bgimg>US_400005.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e011" eventtype="23" imcost="0"
@@ -9601,7 +9601,7 @@
 		<partner>John</partner>
 		<messageBoxA>See you later.</messageBoxA>
 		<nextevent href="l400e013"/>
-		<bgimg>400005.jpg</bgimg>
+		<bgimg>US_400005.jpg</bgimg>
 	</event>
 
 
@@ -9620,7 +9620,7 @@
 			grandfather was a Chinese. 
 		</message>
 		<nextevent href="l400e015"/>
-		<bgimg>400013.jpg</bgimg>
+		<bgimg>US_400013.jpg</bgimg>
 	</event>
 
 
@@ -9638,7 +9638,7 @@
 		<messageBoxB href="l400e019"> Yes, I am %gender% %surname%. Nice to meet you too.
 		</messageBoxB>
 		<messageBoxB href="l400e021"> Yes, that’s me. </messageBoxB>
-		<bgimg>400015.jpg</bgimg>
+		<bgimg>US_400015.jpg</bgimg>
 	</event>
 
 
@@ -9654,7 +9654,7 @@
 			a waiter appears confronting you nicely. 
 		</message>
 		<nextevent href="l400e023"/>
-		<bgimg>400017.jpg</bgimg>
+		<bgimg>US_400017.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e019" eventtype="24" imcost="0"
@@ -9667,7 +9667,7 @@
 			a waiter appears confronting you nicely. 
 		</message>
 		<nextevent href="l400e023"/>
-		<bgimg>400019.jpg</bgimg>
+		<bgimg>US_400019.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e021" eventtype="24" imcost="0"
@@ -9680,7 +9680,7 @@
 			a waiter appears confronting you nicely.
 		</message>
 		<nextevent href="l400e023"/>
-		<bgimg>400021.jpg</bgimg>
+		<bgimg>US_400021.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e023" eventtype="23" imcost="0"
@@ -9697,7 +9697,7 @@
 			but I, %prename% %surname%, booked that table.
 		</messageBoxB>
 		<messageBoxB href="l400e029"> I'm sorry my fault, I am going back to wait in the queue. </messageBoxB>
-		<bgimg>400023.jpg</bgimg>
+		<bgimg>US_400023.jpg</bgimg>
 	</event>
 
 
@@ -9712,7 +9712,7 @@
 			time for some small talk.
 		</message>
 		<nextevent href="l400e031"/>
-		<bgimg>400025.jpg</bgimg>
+		<bgimg>US_400025.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e027" eventtype="24" imcost="-5"
@@ -9726,7 +9726,7 @@
 			time for some small talk.
 		</message>
 		<nextevent href="l400e031"/>
-		<bgimg>400025.jpg</bgimg>
+		<bgimg>US_400025.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e029" eventtype="24" imcost="+5"
@@ -9740,7 +9740,7 @@
 			time for some small talk.
 		</message>
 		<nextevent href="l400e031"/>
-		<bgimg>400025.jpg</bgimg>
+		<bgimg>US_400025.jpg</bgimg>
 	</event>
 
 
@@ -9762,7 +9762,7 @@
 		<messageBoxB href="l400e037"> I love to travel and the States have always been
 			a place to be for myself.
 		</messageBoxB>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e033" eventtype="23" imcost="0"
@@ -9771,7 +9771,7 @@
 		<messageBoxA>I’m sure you’ll earn lots of money in this position.
 		</messageBoxA>
 		<nextevent href="l400e040"/>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e035" eventtype="23" imcost="0"
@@ -9782,7 +9782,7 @@
 			in the future.
 		</messageBoxA>
 		<nextevent href="l400e040"/>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e037" eventtype="23" imcost="0"
@@ -9792,7 +9792,7 @@
 			to me but unfortunately I’ve never made it that far.
 		</messageBoxA>
 		<nextevent href="l400e040"/>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e040" eventtype="23" imcost="0"
@@ -9806,7 +9806,7 @@
 		<messageBoxB href="l400e044"> No, I’m really busy working. </messageBoxB>
 		<messageBoxB href="l400e046"> I like the outdoors and meeting with friends.
 		</messageBoxB>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 
@@ -9819,7 +9819,7 @@
 			you want me to.
 		</messageBoxA>
 		<nextevent href="l400e049"/>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 
@@ -9832,7 +9832,7 @@
 			and life in general.
 		</messageBoxA>
 		<nextevent href="l400e049"/>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e046" eventtype="23" imcost="0"
@@ -9841,7 +9841,7 @@
 		<messageBoxA>We could go out for a walk sometimes if you want to.
 		</messageBoxA>
 		<nextevent href="l400e049"/>
-		<bgimg>400031.jpg</bgimg>
+		<bgimg>US_400031.jpg</bgimg>
 	</event>
 
 
@@ -9867,7 +9867,7 @@
 			your
 			team since you were able to chat with Mr. Zhao-Li.
 		</option>
-		<bgimg>400025.jpg</bgimg>
+		<bgimg>US_400025.jpg</bgimg>
 	</event>
 
 
@@ -9882,7 +9882,7 @@
 			wants to order a complete Barbecue plate for all of them. 
 		</message>
 		<nextevent href="l400e058"/>
-		<bgimg>400051.jpg</bgimg>
+		<bgimg>US_400051.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e053" eventtype="24" imcost="-5"
@@ -9896,7 +9896,7 @@
 			wants to order a complete Barbecue plate for all of them. 
 		</message>
 		<nextevent href="l400e058"/>
-		<bgimg>400053.jpg</bgimg>
+		<bgimg>US_400053.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e055" eventtype="24" imcost="+5"
@@ -9910,7 +9910,7 @@
 			wants to order a complete Barbecue plate for all of them. 
 		</message>
 		<nextevent href="l400e058"/>
-		<bgimg>400055.jpg</bgimg>
+		<bgimg>US_400055.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e058" eventtype="23" imcost="0"
@@ -9935,7 +9935,7 @@
 			be a
 			fantastic evening!
 		</messageBoxB>
-		<bgimg>400058.jpg</bgimg>
+		<bgimg>US_400058.jpg</bgimg>
 	</event>
 
 
@@ -9947,7 +9947,7 @@
 			closer quickly while making small talk.
 		</message>
 		<nextevent href="l400e067"/>
-		<bgimg>400060.jpg</bgimg>
+		<bgimg>US_400060.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e062" eventtype="24" imcost="0"
@@ -9958,7 +9958,7 @@
 			closer quickly while making small talk.
 		</message>
 		<nextevent href="l400e067"/>
-		<bgimg>400062.jpg</bgimg>
+		<bgimg>US_400062.jpg</bgimg>
 	</event>
 
 
@@ -9971,7 +9971,7 @@
 			closer quickly while making small talk.
 		</message>
 		<nextevent href="l400e067"/>
-		<bgimg>400064.jpg</bgimg>
+		<bgimg>US_400064.jpg</bgimg>
 	</event>
 
 
@@ -9994,7 +9994,7 @@
 			but sure,
 			everyone is responsible for what he or she is doing.
 		</messageBoxB>
-		<bgimg>400067.jpg</bgimg>
+		<bgimg>US_400067.jpg</bgimg>
 	</event>
 
 
@@ -10004,7 +10004,7 @@
 		<message>Smalltalk continues ...
 		</message>
 		<nextevent href="l400e075"/>
-		<bgimg>400060.jpg</bgimg>
+		<bgimg>US_400060.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e072" eventtype="24" imcost="0"
@@ -10012,7 +10012,7 @@
 		<message>Smalltalk continues ...
 		</message>
 		<nextevent href="l400e075"/>
-		<bgimg>400060.jpg</bgimg>
+		<bgimg>US_400060.jpg</bgimg>
 	</event>
 
 
@@ -10031,7 +10031,7 @@
 			automatic, four-wheel drive and sports line. That think is so fast, runs more
 			than 150 miles per hour.
 		</messageBoxB>
-		<bgimg>400075.jpg</bgimg>
+		<bgimg>US_400075.jpg</bgimg>
 	</event>
 
 
@@ -10049,7 +10049,7 @@
 			saving to extra sporty?
 		</messageBoxB>
 		<messageBoxB href="l400e099"> Thanks! No thanks, I’m just fine. </messageBoxB>
-		<bgimg>400080.jpg</bgimg>
+		<bgimg>US_400080.jpg</bgimg>
 	</event>
 
 
@@ -10064,7 +10064,7 @@
 			sporty option.
 			This will be a completely new experience for you.
 		</messageBoxB>
-		<bgimg>400082.jpg</bgimg>
+		<bgimg>US_400082.jpg</bgimg>
 
 	</event>
 
@@ -10074,14 +10074,14 @@
 		   imqual="-5" imtime="0" loc="4">
 		<message> Finally, the food arrives. </message>
 		<nextevent href="l400e105"/>
-		<bgimg>400085.jpg</bgimg>
+		<bgimg>US_400085.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e099" eventtype="24" imcost="+5"
 		   imqual="+5" imtime="0" loc="4">
 		<message> Finally, the food arrives. </message>
 		<nextevent href="l400e105"/>
-		<bgimg>400099.jpg</bgimg>
+		<bgimg>US_400099.jpg</bgimg>
 	</event>
 
 
@@ -10091,7 +10091,7 @@
 		<option href="l400e109"> ... good hunger everyone. </option>
 		<option href="l400e111"> ... this looks delicious. </option>
 		<option href="l400e113"> ... good appetite to all of you! </option>
-		<bgimg>400105.jpg</bgimg>
+		<bgimg>US_400105.jpg</bgimg>
 	</event>
 
 
@@ -10104,7 +10104,7 @@
 			the planning details.
 		</message>
 		<nextevent href="l400e120"/>
-		<bgimg>400060.jpg</bgimg>
+		<bgimg>US_400060.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e111" eventtype="24" imcost="0"
@@ -10115,7 +10115,7 @@
 			the planning details.
 		</message>
 		<nextevent href="l400e120"/>
-		<bgimg>400060.jpg</bgimg>
+		<bgimg>US_400060.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e113" eventtype="24" imcost="-5"
@@ -10126,7 +10126,7 @@
 			the planning details.
 		</message>
 		<nextevent href="l400e120"/>
-		<bgimg>400060.jpg</bgimg>
+		<bgimg>US_400060.jpg</bgimg>
 	</event>
 
 
@@ -10141,7 +10141,7 @@
 		<option href="l400e124"> ... the whole detailed plan for the next months.
 		</option>
 		<option href="l400e126"> ... the next 6 months in detail. </option>
-		<bgimg>400105.jpg</bgimg>
+		<bgimg>US_400105.jpg</bgimg>
 	</event>
 
 
@@ -10149,21 +10149,21 @@
 		   imqual="0" imtime="0" loc="4">
 		<message> You smoke cigarettes on a daily basis. </message>
 		<nextevent href="l400e130"/>
-		<bgimg>400122.jpg</bgimg>
+		<bgimg>US_400122.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e124" eventtype="24" imcost="-10"
 		   imqual="0" imtime="0" loc="4">
 		<message> You smoke cigarettes on a daily basis. </message>
 		<nextevent href="l400e130"/>
-		<bgimg>400124.jpg</bgimg>
+		<bgimg>US_400124.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e126" eventtype="24" imcost="-15"
 		   imqual="0" imtime="0" loc="4">
 		<message> You smoke cigarettes on a daily basis. </message>
 		<nextevent href="l400e130"/>
-		<bgimg>400126.jpg</bgimg>
+		<bgimg>US_400126.jpg</bgimg>
 	</event>
 
 
@@ -10175,7 +10175,7 @@
 		<option href="l400e132"> I need to smoke a cigarette. Anyone who wants to
 			join? </option>
 		<option href="l400e134"> I have to get some air. Be right back. </option>
-		<bgimg>400130.jpg</bgimg>
+		<bgimg>US_400130.jpg</bgimg>
 	</event>
 
 
@@ -10185,7 +10185,7 @@
 			about some colleague's honeymoon to Bora Bora.
 		</message>
 		<nextevent href="l400e137"/>
-		<bgimg>400085.jpg</bgimg>
+		<bgimg>US_400085.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e134" eventtype="24" imcost="+5"
@@ -10194,7 +10194,7 @@
 			about some colleague's honeymoon to Bora Bora.
 		</message>
 		<nextevent href="l400e137"/>
-		<bgimg>400085.jpg</bgimg>
+		<bgimg>US_400085.jpg</bgimg>
 	</event>
 
 
@@ -10209,7 +10209,7 @@
 		<option href="l400e144"> Sounds like a hell of a trip. I’m really envious
 			of you.
 		</option>
-		<bgimg>400105.jpg</bgimg>
+		<bgimg>US_400105.jpg</bgimg>
 	</event>
 
 
@@ -10218,7 +10218,7 @@
 		<message> With part of the team still eating, you just finished your
 			plate. </message>
 		<nextevent href="l400e147"/>
-		<bgimg>400140.jpg</bgimg>
+		<bgimg>US_400140.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e142" eventtype="24" imcost="-5"
@@ -10226,7 +10226,7 @@
 		<message> With part of the team still eating, you just finished your
 			plate. </message>
 		<nextevent href="l400e147"/>
-		<bgimg>400142.jpg</bgimg>
+		<bgimg>US_400142.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e144" eventtype="24" imcost="-5"
@@ -10234,7 +10234,7 @@
 		<message> With part of the team still eating, you just finished your
 			plate. </message>
 		<nextevent href="l400e147"/>
-		<bgimg>400144.jpg</bgimg>
+		<bgimg>US_400144.jpg</bgimg>
 	</event>
 
 
@@ -10252,7 +10252,7 @@
 			a
 			bit longer?
 		</option>
-		<bgimg>400147.jpg</bgimg>
+		<bgimg>US_400147.jpg</bgimg>
 	</event>
 
 
@@ -10265,7 +10265,7 @@
 			you are thinking about not or at least giving fewer tips than usual.
 		</message>
 		<nextevent href="l400e157"/>
-		<bgimg>400140.jpg</bgimg>
+		<bgimg>US_400140.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e152" eventtype="24" imcost="+5"
@@ -10277,7 +10277,7 @@
 			you are thinking about not or at least giving fewer tips than usual.
 		</message>
 		<nextevent href="l400e157"/>
-		<bgimg>400140.jpg</bgimg>
+		<bgimg>US_400140.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e154" eventtype="24" imcost="-10"
@@ -10289,7 +10289,7 @@
 			you are thinking about not or at least giving fewer tips than usual.
 		</message>
 		<nextevent href="l400e157"/>
-		<bgimg>400140.jpg</bgimg>
+		<bgimg>US_400140.jpg</bgimg>
 	</event>
 
 
@@ -10308,7 +10308,7 @@
 			of a conversation?
 		</messageBoxB>
 		<messageBoxB href="l400e164"> Thank you. It was a pleasure! </messageBoxB>
-		<bgimg>400157.jpg</bgimg>
+		<bgimg>US_400157.jpg</bgimg>
 	</event>
 
 
@@ -10320,7 +10320,7 @@
 			rude and you don’t want your team to think you're a jerk.
 		</message>
 		<nextevent href="l400e167"/>
-		<bgimg>400160.jpg</bgimg>
+		<bgimg>US_400160.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e162" eventtype="24" imcost="-5"
@@ -10330,7 +10330,7 @@
 			rude and you don’t want your team to think you're a jerk.
 		</message>
 		<nextevent href="l400e167"/>
-		<bgimg>400162.jpg</bgimg>
+		<bgimg>US_400162.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e164" eventtype="24" imcost="0"
@@ -10340,7 +10340,7 @@
 			rude and you don’t want your team to think you're a jerk.
 		</message>
 		<nextevent href="l400e167"/>
-		<bgimg>400164.jpg</bgimg>
+		<bgimg>US_400164.jpg</bgimg>
 	</event>
 
 
@@ -10353,7 +10353,7 @@
 			amount you should spend? How about $270? </option>
 		<option href="l400e174" img="US_money3.jpg"> The receipt represents the amount $235, 15. What is the
 			amount you should spend? How about $282? </option>
-		<bgimg>400167.jpg</bgimg>
+		<bgimg>US_400167.jpg</bgimg>
 	</event>
 
 
@@ -10365,7 +10365,7 @@
 		<message> After you signes the bill you and the whole team are on its way home.
 		</message>
 		<nextevent href="l403e003"/>
-		<bgimg>400170.jpg</bgimg>
+		<bgimg>US_400170.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e172" eventtype="24" imcost="+5"
@@ -10373,7 +10373,7 @@
 		<message> After you signes the bill you and the whole team are on its way home.
 		</message>
 		<nextevent href="l403e003"/>
-		<bgimg>400172.jpg</bgimg>
+		<bgimg>US_400172.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l400e174" eventtype="24" imcost="+10"
@@ -10381,7 +10381,7 @@
 		<message> After you signes the bill you and the whole team are on its way home.
 		</message>
 		<nextevent href="l403e003"/>
-		<bgimg>400174.jpg</bgimg>
+		<bgimg>US_400174.jpg</bgimg>
 	</event>
 
 
@@ -10405,7 +10405,7 @@
 		   imqual="0" imtime="0" loc="4">
 		<message> What should you normally do? Rethink the whole situations. </message>
 		<nextevent href="l403e005"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l403e005" eventtype="3" imcost="0"
@@ -10420,7 +10420,7 @@
 			true or not)
 			and ask about him/her.
 		</option>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10431,14 +10431,14 @@
 			and ask about him/her.
 		</message>
 		<nextevent href="l403e010"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l403e009" eventtype="24" imcost="0"
 		   imqual="0" imtime="+5" loc="4">
 		<message> That's right, %prename%. </message>
 		<nextevent href="l403e010"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10454,7 +10454,7 @@
 		</option>
 		<option href="l403e014"> You introduce yourself with your full name.
 		</option>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10463,14 +10463,14 @@
 		<message> That's wrong, %prename%. You introduce yourself with your full name.
 		</message>
 		<nextevent href="l403e015"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l403e014" eventtype="24" imcost="0"
 		   imqual="0" imtime="+5" loc="4">
 		<message> That's right, %prename%. </message>
 		<nextevent href="l403e015"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10488,7 +10488,7 @@
 		<option href="l403e019"> You take the chance to rest since it's not work
 			related!
 		</option>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10497,7 +10497,7 @@
 		<message> That's right, %prename%.
 		</message>
 		<nextevent href="l403e020"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l403e019" eventtype="24" imcost="0"
@@ -10507,7 +10507,7 @@
 			to increase team spirit and motivation.
 		</message>
 		<nextevent href="l403e020"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10531,7 +10531,7 @@
 			sure he
 			gets that. How else will he learn from his mistakes?
 		</option>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10540,7 +10540,7 @@
 		<message> That's right, %prename%.
 		</message>
 		<nextevent href="l403e025"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l403e024" eventtype="24" imcost="0"
@@ -10552,7 +10552,7 @@
 			you try to put the critic positively.
 		</message>
 		<nextevent href="l403e025"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10569,7 +10569,7 @@
 		<option href="l403e029"> Since waiters rely on tips, you still tip him,
 			but less
 			than 15-20%. </option>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 
@@ -10580,14 +10580,14 @@
 			than 15-20%.
 		</message>
 		<nextevent href="l402e001"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l403e029" eventtype="24" imcost="0"
 		   imqual="0" imtime="+5" loc="4">
 		<message> That's right, %prename%.  </message>
 		<nextevent href="l402e001"/>
-		<bgimg>403003.jpg</bgimg>
+		<bgimg>US_403003.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l402e001" eventtype="24" imcost="0"
@@ -10652,7 +10652,7 @@
 			you use their delay to grab another cup of coffee and have another look over your
 			topics. 10 minutes later, the whole team arrives and you are about to start. </message>
 		<nextevent href="l407e005"/>
-		<bgimg>407001.jpg</bgimg>
+		<bgimg>US_407001.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e005" eventtype="3" imcost="0"
@@ -10664,7 +10664,7 @@
 			for the next few weeks.' </option>
 		<option href="l407e012"> ... 'How are you? I hope you all got home safely?' </option>
 		<option href="l407e014"> ... 'Enough said, let’s talk some business.' </option>
-		<bgimg>407005.jpg</bgimg>
+		<bgimg>US_407005.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e010" eventtype="24" imcost="-10"
@@ -10676,7 +10676,7 @@
 			meeting. So your expectations for this meeting are to keep it short and simple,
 			to catch up with the team and to get everyone on the same page. </message>
 		<nextevent href="l407e017"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e012" eventtype="24" imcost="+5"
@@ -10688,7 +10688,7 @@
 			meeting. So your expectations for this meeting are to keep it short and simple,
 			to catch up with the team and to get everyone on the same page. </message>
 		<nextevent href="l407e017"/>
-		<bgimg>407012.jpg</bgimg>
+		<bgimg>US_407012.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e014" eventtype="24" imcost="0"
@@ -10700,7 +10700,7 @@
 			meeting. So your expectations for this meeting are to keep it short and simple,
 			to catch up with the team and to get everyone on the same page. </message>
 		<nextevent href="l407e017"/>
-		<bgimg>407014.jpg</bgimg>
+		<bgimg>US_407014.jpg</bgimg>
 	</event>
 
 
@@ -10712,7 +10712,7 @@
 			everyone on the same page. So you asked Aang to prepare a status update on
 			all the given information he has so far for the upcoming project. </content>
 		<option href="l407e019"> Next </option>
-		<bgimg>407017.jpg</bgimg>
+		<bgimg>US_407017.jpg</bgimg>
 	</event>
 
 
@@ -10731,7 +10731,7 @@
 			Now back to you, %prename%!
 		</messageBoxA>
 		<nextevent href="l407e020"/>
-		<bgimg>407019.jpg</bgimg>
+		<bgimg>US_407019.jpg</bgimg>
 	</event>
 
 
@@ -10747,7 +10747,7 @@
 		<option href="l407e024"> 'Thank you, Aang for your preparation. There are some
 			more questions from my side which are still not answered yet, but I guess we
 			don't need the whole team for that.' </option>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10757,7 +10757,7 @@
 		<message> While steadying yourself again you get an idea to bypass
 			the remaining time set for the meeting. </message>
 		<nextevent href="l407e027"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e022" eventtype="24" imcost="-5"
@@ -10765,7 +10765,7 @@
 		<message> While steadying yourself again you get an idea to bypass
 			the remaining time set for the meeting. </message>
 		<nextevent href="l407e027"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e024" eventtype="24" imcost="0"
@@ -10773,7 +10773,7 @@
 		<message> While steadying yourself again you get an idea to bypass
 			the remaining time set for the meeting. </message>
 		<nextevent href="l407e027"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e027" eventtype="3" imcost="0"
@@ -10782,7 +10782,7 @@
 		<content> You say: 'Since we all are here. I want to know everyone’s expectations for this
 			project. Let’s start with you, Lisa.' Now it's up to Lisa. </content>
 		<option href="l407e030"> Next </option>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e030" eventtype="23" imcost="0"
@@ -10793,7 +10793,7 @@
 			my own. I hope I get help if I need it and give advice as well if needed.
 			Is that possible? </messageBoxA>
 		<nextevent href="l407e033"/>
-		<bgimg>407030.jpg</bgimg>
+		<bgimg>US_407030.jpg</bgimg>
 	</event>
 
 
@@ -10805,7 +10805,7 @@
 			There’s no time for solo actions.' </option>
 		<option href="l407e037"> 'Of course, I want everyone to feel as comfortable
 			as possible. How else are we about to come up with innovative and great ideas?' </option>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10817,7 +10817,7 @@
 			for every given idea. But how about the seating arrangements? Since we all
 			are from other teams we don’t normally sit right next to each other? </messageBoxA>
 		<nextevent href="l407e040"/>
-		<bgimg>407035.jpg</bgimg>
+		<bgimg>US_407035.jpg</bgimg>
 	</event>
 
 
@@ -10830,7 +10830,7 @@
 			Since we all are from other teams we don’t normally sit right next to each
 			other? </messageBoxA>
 		<nextevent href="l407e040"/>
-		<bgimg>407037.jpg</bgimg>
+		<bgimg>US_407037.jpg</bgimg>
 	</event>
 
 
@@ -10842,7 +10842,7 @@
 			so no external fellows will be able to interrupt us.' </option>
 		<option href="l407e045"> 'Of course I requested one already. What do you
 			think I’m here for??' </option>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10852,7 +10852,7 @@
 			you want to set some ground rules. You have two opportunities to do so.
 		</message>
 		<nextevent href="l407e050"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l407e045" eventtype="24" imcost="0"
@@ -10861,7 +10861,7 @@
 			you want to set some ground rules. You have two opportunities to do so.
 		</message>
 		<nextevent href="l407e050"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10872,7 +10872,7 @@
 			so everybody will feel respected and valuable in the process. </option>
 		<option href="l407e055"> You set those before the meeting and tell the team
 			since you’re the boss. </option>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10883,7 +10883,7 @@
 		<message>You thank all for coming, and you will go talk to each individually
 			over a cup of coffee. </message>
 		<nextevent href="l410e001"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10892,7 +10892,7 @@
 		<message>You thank all for coming, and you will go talk to each individually
 			over a cup of coffee.</message>
 		<nextevent href="l410e001"/>
-		<bgimg>407010.jpg</bgimg>
+		<bgimg>US_407010.jpg</bgimg>
 	</event>
 
 
@@ -10912,7 +10912,7 @@
 			The next day you get a call from him.
 		</message>
 		<nextevent href="l410e005"/>
-		<bgimg>410001.jpg</bgimg>
+		<bgimg>US_410001.jpg</bgimg>
 	</event>
 
 	<event level="100" element="0" id="l410e005" eventtype="23" imcost="0" imqual="0" imtime="0"
@@ -10921,7 +10921,7 @@
 		<messageBoxA>Hello Mr. Lindner, thanks for your call! How are you?</messageBoxA>
 		<messageBoxB href="l410e007"> Hello %prename%, I’m fine and you? How’s the project working?
 			I hope you have great news for me. That’s why you called, right? </messageBoxB>
-		<bgimg>410005.jpg</bgimg>
+		<bgimg>US_410005.jpg</bgimg>
 		<nextevent href="l410e007"/>
 	</event>
 
@@ -10933,7 +10933,7 @@
 			than in Germany. The process doesn’t get tested as much as in Germany
 			and there are way less rules for them to follow</messageBoxA>
 		<messageBoxB href="l410e009">How should I understand that? </messageBoxB>
-		<bgimg>410005.jpg</bgimg>
+		<bgimg>US_410005.jpg</bgimg>
 		<nextevent href="l410e009"/>
 	</event>
 
@@ -10961,7 +10961,7 @@
 			that in mind! Thank you for the update. This project has top priority
 			and has to work; we have a high cost pressure! Is there anything else?
 		</messageBoxB>
-		<bgimg>410005.jpg</bgimg>
+		<bgimg>US_410005.jpg</bgimg>
 		<nextevent href="l410e012"/>
 	</event>
 
@@ -10972,7 +10972,7 @@
 		<messageBoxA> No, that’s it. Thank you for the call and I will call you back
 			as soon as there’s news. Have a nice day, bye! </messageBoxA>
 		<messageBoxB href="l410e015"> Thank you %prename%, bye! </messageBoxB>
-		<bgimg>410005.jpg</bgimg>
+		<bgimg>US_410005.jpg</bgimg>
 		<nextevent href="l410e015"/>
 	</event>
 
@@ -10986,7 +10986,7 @@
 		<option rank="3" fdesc="Beschreibung">You have to ensure that the project continues successfully. </option>
 		<option rank="1" fdesc="Beschreibung">If the project fails, there are high costs for Mr. Lindner and his company.</option>
 		<nextevent href="l499e999"/>
-		<bgimg>410015.jpg</bgimg>
+		<bgimg>US_410015.jpg</bgimg>
 	</event>
 
 	<!-- rank1 fuer self revelation side -->
@@ -10998,7 +10998,7 @@
 		   loc="4">
 		<message>Your trip ends here ... </message>
 		<nextevent href="l000e000"/>
-		<bgimg>410020.jpg</bgimg>
+		<bgimg>US_400002.jpg</bgimg>
 	</event>
 
 	<!-- End male -->
