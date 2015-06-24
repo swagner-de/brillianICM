@@ -26,8 +26,8 @@
 <!-- <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />-->
 <link type="text/css" rel="stylesheet" href="css/master.css" />
-<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/frameworks/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="js/frameworks/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/master.js"></script>
 
 <!-- Bootstrap Core CSS -->
@@ -40,8 +40,8 @@
     
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
  <!--Framework changes -->
 <link href="css/changes-master.css" rel="stylesheet">

@@ -28,10 +28,10 @@
 <link rel="stylesheet" type="text/css"
 	href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
 <link type="text/css" rel="stylesheet" href="css/master.css" />
-<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script type="text/javascript" src="js/master.js"></script>
+<script type="text/javascript" src="js/frameworks/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="js/frameworks/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/frameworks/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="js/frameworks/master.js"></script>
 
 <!-- Overwriting Font -->
      <link href="css/font.css" rel="stylesheet">
