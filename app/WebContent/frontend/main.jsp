@@ -60,7 +60,23 @@
 	<script type="text/javascript" src="js/serverFunctions.js"></script>
 	<script type="text/javascript" src="js/grayscale.js"></script>
 	
-
+	<script type="text/javascript">
+function changeSelect() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+   if (selectedValue=='Account'){
+	   window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank');
+	   
+   }else if (selectedValue=='<%=ApplicationConstants.LOGOUT_BUTTON_TEXT%>'){
+	  
+	   $('#logout').trigger('click');
+	   
+   } else if (selectedValue=='Imprint')
+       
+	   window.location = "login.jsp#imprint";
+    
+   }
+   </script>	
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">
@@ -95,11 +111,28 @@
                 <!--<li><a href="#" id="imprint" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a></li>-->
                 <li><a href="#"  class=" mainMailButton"  data-options="plain:true"><%=ApplicationConstants.LAPTOP_NAME%></a></li>
                 <li><a href="#" id="logout"  data-options="plain:true"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a></li>
-            </ul> 
-            <ul class="nav navbar-nav second-button">
+           
+            
+            
+            
+            
+                 <li><a style=""><div class="drop">
+   <select class="countryselect" id="selectBox" style="width:200px" onchange="changeSelect();">
+      <option id="account" selected="true" style="display:none;"></option>
+      <option ><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></option>
+      <option > Imprint</option>
+       <option>Account</option>
+      
+   </select>
+</div></a></li> 
+             </ul> 
+          
+            <!-- </ul> 
+            <ul class="nav navbar-nav second-button">            
                  <li><a href="#" id="account" onclick="window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank')"  data-options="plain:true"></a></li>   
-			</ul>
-			<ul class="nav navbar-nav second-button">
+			</ul> -->
+		
+			<ul class="nav navbar-nav second-button" style="margin-left: 100px">
 				<svg id= "iconsBox"height="50" width="200" >
 					<circle id="icon_competence" cx="25" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" onmouseover="Tip('Competence:&lt;&#47;br&gt;  WHY &lt;&#47;br&gt; This KPI is all about knowing WHY something is done &lt;&#47;br&gt; in a particular way respectively knowing according reasons why the answer was the right one. &lt;&#47;br&gt; This is based especially on knowledge that comes from the 9 cultural dimensions.')" onmouseout="UnTip()" />
 						<text x="25" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black" onmouseover="Tip('Competence: &lt;&#47;br&gt;  WHY &lt;&#47;br&gt; This KPI is all about knowing WHY something is done &lt;&#47;br&gt; in a particular way respectively knowing according reasons why the answer was the right one. &lt;&#47;br&gt; This is based especially on knowledge that comes from the 9 cultural dimensions.')" onmouseout="UnTip()">C</text>
