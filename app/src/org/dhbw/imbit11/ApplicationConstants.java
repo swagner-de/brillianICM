@@ -17,7 +17,7 @@ public interface ApplicationConstants {
 	public static  String LOCATION4_NAME = "Conference Room";
 	public static  String LOCATION5_NAME = "Hotel Bar";
 	
-	public static  String LAPTOP_NAME = "Archiv";
+	public static  String LAPTOP_NAME = "Archive";
 	
 	public static  String SELECTION_BUTTON = "Do It!";
 	public static  String ALLOCATION_BUTTON = "Done";
