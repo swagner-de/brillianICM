@@ -1,4 +1,5 @@
 //Loading the Worldmapmatrix 4x4
+// eventtype 25
 function loadWorldMap()
 {
 	// liest XML aus
@@ -18,6 +19,7 @@ function loadWorldMap()
 	
 }
 // Loading a dialog style event from the XML to perpare its content for display
+// evventtype 3
 function loadDialog () {
 	var partner = $xml.find('partner').text();
 	var content = $xml.find('content').text();
@@ -92,14 +94,14 @@ function loadDialog () {
 	//Opens the dialog:
 	showDialog();
 }
-
+// eventtype 2
 function loadPictureContainer () {
 	var container = $('.pictureContainer');
 	loadBackground();
 	showPictureContainer();	
 }
 
-
+// eventtype 14 oder 15
 function loadSelection () {
 	var eventtype = $xml.find('event').attr('eventtype');
 	var description = $xml.find('description').text();
@@ -134,7 +136,7 @@ function loadSelection () {
 	}								
 	showSelection();
 }
-
+// eventtype 16 oder 17
 function loadAllocation () {
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();
@@ -212,7 +214,7 @@ function loadAllocation () {
 	});	
 	showAllocation();
 	
-	//Drag Funktionalität
+	//Drag Funktionalitï¿½t
 	draggableItem.draggable({
         proxy:'clone',
         revert:true,
@@ -235,7 +237,7 @@ function loadAllocation () {
         }
     });
 	
-	//Drop Funktionalität
+	//Drop Funktionalitï¿½t
 	phaseContainer.droppable({
         accept:'.drag',
         onDragEnter:function(e,source){
@@ -255,7 +257,7 @@ function loadAllocation () {
         }
     });
 }
-
+// eventtype 18
 function loadAllocationTwo () {
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();	
@@ -336,7 +338,7 @@ function loadAllocationTwo () {
 	});	
 	showAllocationTwo();
 	
-	//Drag Funktionalität
+	//Drag Funktionalitï¿½t
 	draggableItem.draggable({
         proxy:'clone',
         revert:true,
@@ -357,7 +359,7 @@ function loadAllocationTwo () {
         }
     });
 	
-	//Drop Funktionalität
+	//Drop Funktionalitï¿½t
 	phaseContainerTwo.droppable({
         accept:'.drag',
         onDragEnter:function(e,source){
@@ -377,7 +379,7 @@ function loadAllocationTwo () {
         }
     });
 }
-
+// eventtype 19
 function loadAllocationThree () {
 
 	var href = $xml.find('nextevent').attr('href');
@@ -457,7 +459,7 @@ function loadAllocationThree () {
 	});	
 	showAllocationThree();
 	
-	//Drag Funktionalität
+	//Drag Funktionalitï¿½t
 	draggableItem.draggable({
         proxy:'clone',
         revert:true,
@@ -478,7 +480,7 @@ function loadAllocationThree () {
         }
     });
 	
-	//Drop Funktionalität
+	//Drop Funktionalitï¿½t
 	phaseContainerThree.droppable({
         accept:'.drag',
         onDragEnter:function(e,source){
@@ -514,7 +516,7 @@ function loadInfoButton(dragInfoContainerDiv, info, description){
 };
 
 
-			
+		// eventtyp 23	
 function loadConversation(){
 	
 	var hrefNumber = $xml.find('messageBoxB').length;
@@ -691,7 +693,7 @@ function loadConversation(){
 		containerConversation.window('close');
 	});
 }; 
-
+// eventtype 24
 function loadTextBox(){
 	// liest XML aus
 	 var href = $xml.find('nextevent').attr('href');
@@ -719,7 +721,7 @@ function loadTextBox(){
 	 });
 };
 
-
+// eventtype 26
 function loadScrollBar(){
 
 	// liest XML aus		  
@@ -790,7 +792,7 @@ if(i=="0"){
 	 });
 } 
 
-
+// eventtype 21
 function loadMatrixAllocation () {
 
 	var href = $xml.find('nextevent').attr('href');
@@ -799,10 +801,10 @@ function loadMatrixAllocation () {
 	var descriptionContainer = container.find('.description');
 
 	
-	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	//Auswahl des Divs welches die "Zielflï¿½chen" des Matrixspiels enthï¿½lt um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptor = container.find('.tileAcceptor');
 	var continueButtonMatrix = $('#continueButtonMatrix');
-	//Enthält zuzuordnende tiles
+	//Enthï¿½lt zuzuordnende tiles
 	var draggableTilesContainer = $('.draggableTilesContainer');
 
 	$('.dragTile').remove();
@@ -839,7 +841,7 @@ function loadMatrixAllocation () {
 		var correct = true;
 		var allDragged = true;
 		
-		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//Iteriere durch TileAcceptors, fï¿½r jeden TitleAcceptor prï¿½fe, ob der Rank des sich in ihm befindlichen
 		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
 		//mit dem rank "1"
 		tileAcceptor.each(function(index) {
@@ -854,7 +856,7 @@ function loadMatrixAllocation () {
 				}
 				// else {
 					// // Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
-					// //--> XML überprüfen
+					// //--> XML ï¿½berprï¿½fen
 					// showMsg("There has a been a problem with the validation!");
 				// }
 			});
@@ -880,7 +882,7 @@ function loadMatrixAllocation () {
 	});	
 	showMatrixAllocation();
 	
-	//Drag Funktionalität
+	//Drag Funktionalitï¿½t
 	draggableItems.draggable({
         proxy:'clone',
         revert:true,
@@ -895,7 +897,7 @@ function loadMatrixAllocation () {
         }
     });
 	
-	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	//Drop Funktionalitï¿½t fï¿½r Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurï¿½ckgelegt werden kï¿½nnen
 	tileAcceptor.droppable({
         accept:'.dragTile',
         onDragEnter:function(e,source){
@@ -938,7 +940,7 @@ function loadMatrixAllocation () {
         }
     });
 }
-
+// eventtype 20
 function loadMatrixAllocationStandard () {
 
 	var href = $xml.find('nextevent').attr('href');
@@ -951,10 +953,10 @@ function loadMatrixAllocationStandard () {
 	var xAxisDescriptionContainer = $('.xAxisDescription');
 	var yAxisDescriptionContainer = $('.yAxisDescription');
 		loadBackground();
-	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	//Auswahl des Divs welches die "Zielflï¿½chen" des Matrixspiels enthï¿½lt um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptorStandard = containerStandard.find('.tileAcceptorStandard');
 	var continueButtonMatrixStandard = $('#continueButtonMatrixStandard');
-	//Enthält zuzuordnende tiles
+	//Enthï¿½lt zuzuordnende tiles
 	var draggableTilesContainerStandard = $('.draggableTilesContainerStandard');
 
 	$('.dragTile').remove();
@@ -993,7 +995,7 @@ function loadMatrixAllocationStandard () {
 		var correct = true;
 		var allDragged = true;
 		
-		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//Iteriere durch TileAcceptors, fï¿½r jeden TitleAcceptor prï¿½fe, ob der Rank des sich in ihm befindlichen
 		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
 		//mit dem rank "1"
 		$('.tileAcceptorStandard').each(function(index) {
@@ -1008,7 +1010,7 @@ function loadMatrixAllocationStandard () {
 				} 
 				// else {
 					// // Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
-					// //--> XML überprüfen
+					// //--> XML ï¿½berprï¿½fen
 					// showMsg("There has a been a problem with the validation!");
 				// }
 			});
@@ -1031,7 +1033,7 @@ function loadMatrixAllocationStandard () {
 	});	
 	showMatrixAllocationStandard();
 	
-	//Drag Funktionalität
+	//Drag Funktionalitï¿½t
 	draggableItems.draggable({
         proxy:'clone',
         revert:true,
@@ -1046,7 +1048,7 @@ function loadMatrixAllocationStandard () {
         }
     });
 	
-	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	//Drop Funktionalitï¿½t fï¿½r Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurï¿½ckgelegt werden kï¿½nnen
 	tileAcceptorStandard.droppable({
         accept:'.dragTile',
         onDragEnter:function(e,source){
@@ -1089,7 +1091,7 @@ function loadMatrixAllocationStandard () {
         }
     });
 }
-
+// Eventtype 27
 function loadMatrixAllocationAlternate () {
 	var href = $xml.find('nextevent').attr('href');
 	var description = $xml.find('description').text();
@@ -1098,10 +1100,10 @@ function loadMatrixAllocationAlternate () {
 	var descriptionContainer = container.find('.description');
 
 	
-	//Auswahl des Divs welches die "Zielflächen" des Matrixspiels enthält um ihn droppable zu machen (akzeptieren von divs erlauben)
+	//Auswahl des Divs welches die "Zielflï¿½chen" des Matrixspiels enthï¿½lt um ihn droppable zu machen (akzeptieren von divs erlauben)
 	var tileAcceptor = container.find('.tileAcceptor');
 	var continueButtonMatrix = $('#continueButtonMatrixAlternate');
-	//Enthält zuzuordnende tiles
+	//Enthï¿½lt zuzuordnende tiles
 	var draggableTilesContainer = $('.draggableTilesContainerAlternate');
 
 	$('.dragTile').remove();
@@ -1140,7 +1142,7 @@ function loadMatrixAllocationAlternate () {
 		var correct = true;
 		var allDragged = true;
 		
-		//Iteriere durch TileAcceptors, für jeden TitleAcceptor prüfe, ob der Rank des sich in ihm befindlichen
+		//Iteriere durch TileAcceptors, fï¿½r jeden TitleAcceptor prï¿½fe, ob der Rank des sich in ihm befindlichen
 		//dragTiles dem Iterator index entspricht. Im Idealfall befindet sich im ersten TileAcceptor das dragTile
 		//mit dem rank "1"
 		tileAcceptor.each(function(index) {
@@ -1155,7 +1157,7 @@ function loadMatrixAllocationAlternate () {
 				} 
 				// else {
 					// // Wird angezeigt wenn "rank" nicht als Attribut der dragTiles gefunden werden konnte
-					// //--> XML überprüfen
+					// //--> XML ï¿½berprï¿½fen
 					// showMsg("There has a been a problem with the validation!");
 				// }
 			});
@@ -1181,7 +1183,7 @@ function loadMatrixAllocationAlternate () {
 	});	
 	showMatrixAllocationAlternate();
 	
-	//Drag Funktionalität
+	//Drag Funktionalitï¿½t
 	draggableItems.draggable({
         proxy:'clone',
         revert:true,
@@ -1196,7 +1198,7 @@ function loadMatrixAllocationAlternate () {
         }
     });
 	
-	//Drop Funktionalität für Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurückgelegt werden können
+	//Drop Funktionalitï¿½t fï¿½r Platzhalter in Matrix und Ursprungscontainer, sodass teile wieder zurï¿½ckgelegt werden kï¿½nnen
 	tileAcceptor.droppable({
         accept:'.dragTile',
         onDragEnter:function(e,source){
