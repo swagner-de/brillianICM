@@ -32,7 +32,7 @@ public class UserRealm extends JdbcRealm {
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
-	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,50,50,50,'l000e000')";
+	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,50,50,50,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
 
 	protected String deleteUserQuery = "DELETE FROM `user` WHERE `email`=?";
 	protected String deleteGroupQuery = "DELETE FROM `group` WHERE `group_id`=?";

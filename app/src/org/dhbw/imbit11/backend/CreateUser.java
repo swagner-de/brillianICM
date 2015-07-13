@@ -168,7 +168,8 @@ import javax.servlet.http.HttpServletResponse;
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			request.setAttribute("status",
+					"An error occured while interacting with the database");
 			e.printStackTrace();
 			// System.out.println("creating user failed");
 		}
