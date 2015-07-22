@@ -161,24 +161,24 @@
     </header>
         
    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+     <section id="about" class="container content-section ">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>BRILLIANICM PROJECT MANAGEMENT GAME &ndash; HOW BRILLIANT ARE YOU</h2>
 
-brillianICM was developed by  <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank">IMBIT</a> students,
+<p>brillianICM was developed by  <a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank">IMBIT</a> students,
  who started to study “International Management for Business and Information Technology” at 
  the Baden-Wuerttemberg Cooperative State University in Mannheim in 2012. As part of our education
   we realized ambitious IT projects: In cooperation with SAP we worked on the new technology SAP HANA. 
   brillianICM is our latest project made feasible by <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-dr-harald-bendl/" target="_blank">Prof. Dr. Harald Bendl</a> and <a href = "http://www.imbit.dhbw-mannheim.de/ansprechpartner/prof-peter-mayr/" target="_blank">Prof. Peter Mayr</a>.<br />
 
 This game is webbased and should run in modern browsers including mobile devices. 
-We tested it with Google Chrome and Safari (iPad).
+We tested it with Google Chrome and Safari (iPad).</p>
 <br><br>
-<h3>We, the WIMBIT12A & WIBIT12B classes, are proud to present our game:</h3>
+<h3>We, the WIMBIT12A & WIBIT12B classes,are proud to present our game:</h3>
 
-<!-- <img src="images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
-<p>Jubly Anand, Ayleen Bocretsion, Michaela Brandl, Clemens Buchert, Sönke Cramme, Moritz Döring, Benedikt Esser, Hannah Fidora, Kathrin Fitzner, Malte Hake, Marius Kaiser, Mario Wares Khan, Martin Knipf, Dorothea Langer, Philipp Ludwig, Jonas Müller, Katrin Nagel, Dajana Pirke, Saskia Polenske, Benjamin Schäfer, Simon Schlephorst, Kevin Schork, Alexander Schrödinger, Sonja Seidel, Lukas Steigerwald, Max Steimle, Veronika Trübe, Antonia Vetter, Nadine Winkler and our lecturers Prof. Dr. Harald Bendl, Prof. Peter Mayr</p>
+<img src="img/IMG_0838.JPG" style="width:100%">
+<!-- <p>Jubly Anand, Ayleen Bocretsion, Michaela Brandl, Clemens Buchert, Sönke Cramme, Moritz Döring, Benedikt Esser, Hannah Fidora, Kathrin Fitzner, Malte Hake, Marius Kaiser, Mario Wares Khan, Martin Knipf, Dorothea Langer, Philipp Ludwig, Jonas Müller, Katrin Nagel, Dajana Pirke, Saskia Polenske, Benjamin Schäfer, Simon Schlephorst, Kevin Schork, Alexander Schrödinger, Sonja Seidel, Lukas Steigerwald, Max Steimle, Veronika Trübe, Antonia Vetter, Nadine Winkler and our lecturers Prof. Dr. Harald Bendl, Prof. Peter Mayr</p>
 -->
 </div>
             </div>
@@ -186,19 +186,20 @@ We tested it with Google Chrome and Safari (iPad).
     </section>
     
     
-    <!-- Imprint Section -->
-    <section id="imprint" class="container content-section text-center">
+   <!-- Imprint Section -->
+    <section id="imprint" class="container content-section ">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h3>Impressum</h3>
 	<div>
-		Studiengang IMBIT, DHBW Mannheim, Prof. Dr. Harald Bendl<br />
+	<p>	Studiengang IMBIT, DHBW Mannheim, Prof. Dr. Harald Bendl<br />
 		Coblitzallee 1 &ndash; 9, D-68163 Mannheim<br />
 		Tel. +49 621 4105-1719, Fax +49 621 4105-1289, harald.bendl@dhbw-mannheim.de,
-		<a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank" >www.IMBIT.dhbw-mannheim.de</a>
+		<a href = "http://www.imbit.dhbw-mannheim.de/" target="_blank" >www.IMBIT.dhbw-mannheim.de</a><p/>
 	</div>
-	
+
 	<h3>Haftungsausschluss</h3>
+	
 	<p>Der Autor &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Aktualit&auml;t, Richtigkeit und Vollst&auml;ndigkeit der bereitgestellten Informationen auf der brillianICM Website. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden vorliegt.<br>
 	Alle Angebote sind freibleibend und unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ank&uuml;ndigung zu ver&auml;ndern, zu erg&auml;nzen, zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen.</p>
 	<p>Bei direkten oder indirekten Verweisen auf fremde Webseiten (Hyperlinks), die au&szlig;erhalb des Verantwortungsbereiches des Autors liegen, w&uuml;rde eine Haftungsverpflichtung ausschlie&szlig;lich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch m&ouml;glich und zumutbar w&auml;re, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.<br>
@@ -231,7 +232,7 @@ Das Speichern von Cookies können Sie verhindern, indem Sie in den Einstellungen
 	<hr />
 	
 	<h3>Verwendete Frameworks und Icons</h3>
-	<a href = "http://tomcat.apache.org/" target="_blank" >Apache Tomcat</a>, <a href = "http://shiro.apache.org/" target="_blank" >Apache Shiro</a>, <a href = "http://www.mysql.com/" target="_blank" >mySQL</a> <a href = "http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" >inkl. JDBC Adapter</a>,
+	<a href = "http://tomcat.apache.org/" target="_blank" >Apache Tomcat</a>, <a href = "http://shiro.apache.org/" target="_blank" >Apache Shiro</a>,<a href = "http://getbootstrap.com/" target="_blank" >Bootstrap</a>, <a href = "http://www.mysql.com/" target="_blank" >mySQL</a> <a href = "http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" >inkl. JDBC Adapter</a>,
 	<a href = "http://commons.apache.org/proper/commons-io/" target="_blank" >Apache Commons IO</a>, <a href = "http://jquery.com/" target="_blank" >jQuery</a>, <a href = "http://www.jeasyui.com/" target="_blank" >jQuery EasyUI</a> und <a href = "http://fancybox.net/" target="_blank" >fancybox</a> <a href= "https://www.yworks.com/de/products_ydoc.html" target= "_blank">yWorks UML Doclet</a>.
 	Die verwendeten Icons wurden von <a href="http://www.freepik.com" title="Freepik" target="_blank" >Freepik</a> entworfen und k&ouml;nnen von <a href="http://www.flaticon.com" title="Flaticon" target="_blank" >Flaticon</a> kostenlos heruntergeladen werden. In dem Spiel wurden folgende Icons verwendet: <br />
 	<a href="http://www.flaticon.com/free-icon/chart-gantt_31970" target="_blank" title="Flaticon">Chart Gantt</a>, 
@@ -262,7 +263,7 @@ Das Speichern von Cookies können Sie verhindern, indem Sie in den Einstellungen
   
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+    <section id="contact" class="container content-section ">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact BrillianICM Team</h2>
